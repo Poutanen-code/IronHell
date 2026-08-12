@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/balance_targets",
+  "type": "object",
+  "required": ["version", "combat", "progression", "economy"],
+  "properties": {
+    "version": { "type": "string" },
+    "combat": { "type": "object" },
+    "progression": { "type": "object" },
+    "economy": { "type": "object" }
+  }
+}

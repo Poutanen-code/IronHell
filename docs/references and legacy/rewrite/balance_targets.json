@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "combat": {
+    "targetHitRateByDepth": [
+      { "minDepth": 1, "maxDepth": 10, "playerVsNormal": 0.72, "normalVsPlayer": 0.58 },
+      { "minDepth": 11, "maxDepth": 30, "playerVsNormal": 0.66, "normalVsPlayer": 0.62 }
+    ],
+    "targetTimeToKillByDepth": [
+      { "minDepth": 1, "maxDepth": 10, "normalMonsterRounds": 2.5, "eliteMonsterRounds": 5.0 },
+      { "minDepth": 11, "maxDepth": 30, "normalMonsterRounds": 3.5, "eliteMonsterRounds": 6.5 }
+    ]
+  },
+  "progression": {
+    "targetLevelsPerHour": [
+      { "levelRange": [1, 10], "value": 3.0 },
+      { "levelRange": [11, 20], "value": 1.2 }
+    ]
+  },
+  "economy": {
+    "targetGoldPerDepth": [
+      { "depth": 1, "meanGold": 120 },
+      { "depth": 10, "meanGold": 600 }
+    ]
+  }
+}

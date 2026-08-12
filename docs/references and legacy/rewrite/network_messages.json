@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "messages": [
+    {
+      "id": "action",
+      "direction": "client_to_server",
+      "reliable": true,
+      "schemaRef": "#/definitions/action",
+      "deprecated": false
+    },
+    {
+      "id": "world_state",
+      "direction": "server_to_client",
+      "reliable": true,
+      "schemaRef": "#/definitions/world_state",
+      "deprecated": false
+    }
+  ]
+}

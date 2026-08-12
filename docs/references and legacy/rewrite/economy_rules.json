@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "goldSources": [
+    { "id": "monster_drops", "enabled": true, "multiplier": 1.0 },
+    { "id": "vault_treasure", "enabled": true, "multiplier": 1.0 }
+  ],
+  "goldSinks": [
+    { "id": "shop_purchases", "enabled": true, "multiplier": 1.0 },
+    { "id": "house_purchase", "enabled": true, "multiplier": 1.0 }
+  ],
+  "inflation": {
+    "enabled": false,
+    "windowTicks": 10000,
+    "targetGoldPerPlayer": 50000
+  },
+  "sellFloorRules": {
+    "minimumSellPrice": 1,
+    "blackMarketMinValue": 40
+  }
+}

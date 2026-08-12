@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "effects": [
+    {
+      "id": "cure_light_wounds",
+      "effect_id": "heal",
+      "dice": { "count": 2, "sides": 7 },
+      "flat_bonus": 7
+    },
+    {
+      "id": "cure_serious_wounds",
+      "effect_id": "heal",
+      "dice": { "count": 4, "sides": 7 },
+      "flat_bonus": 7
+    },
+    {
+      "id": "cure_critical_wounds",
+      "effect_id": "heal",
+      "dice": { "count": 4, "sides": 8 }
+    },
+    {
+      "id": "heal_500",
+      "effect_id": "heal",
+      "flat_bonus": 500
+    },
+    {
+      "id": "heal_1000",
+      "effect_id": "heal",
+      "flat_bonus": 1000
+    },
+    {
+      "id": "restore_life_levels",
+      "effect_id": "restore_life"
+    },
+    {
+      "id": "restore_strength",
+      "effect_id": "restore_stat",
+      "stat": "strength"
+    },
+    {
+      "id": "restore_intelligence",
+      "effect_id": "restore_stat",
+      "stat": "intelligence"
+    },
+    {
+      "id": "restore_wisdom",
+      "effect_id": "restore_stat",
+      "stat": "wisdom"
+    },
+    {
+      "id": "restore_dexterity",
+      "effect_id": "restore_stat",
+      "stat": "dexterity"
+    },
+    {
+      "id": "restore_constitution",
+      "effect_id": "restore_stat",
+      "stat": "constitution"
+    },
+    {
+      "id": "restore_charisma",
+      "effect_id": "restore_stat",
+      "stat": "charisma"
+    },
+    {
+      "id": "restore_all_stats",
+      "effect_id": "restore_all_stats"
+    },
+    {
+      "id": "apply_haste_short",
+      "effect_id": "apply_status",
+      "status_id": "haste",
+      "duration": { "base": 10, "dice": { "count": 1, "sides": 10 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_haste_medium",
+      "effect_id": "apply_status",
+      "status_id": "haste",
+      "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_heroism",
+      "effect_id": "apply_status",
+      "status_id": "heroism",
+      "duration": { "base": 25, "dice": { "count": 1, "sides": 25 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_berserk",
+      "effect_id": "apply_status",
+      "status_id": "berserk",
+      "duration": { "base": 25, "dice": { "count": 1, "sides": 25 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_blessed",
+      "effect_id": "apply_status",
+      "status_id": "blessed",
+      "duration": { "base": 12, "dice": { "count": 1, "sides": 12 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_elemental_resistance",
+      "effect_id": "apply_status",
+      "status_id": "elemental_resistance",
+      "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
+      "target": "self"
+    },
+    {
+      "id": "apply_confused_to_target",
+      "effect_id": "apply_status",
+      "status_id": "confused",
+      "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } },
+      "target": "target"
+    },
+    {
+      "id": "apply_sleep_all_nearby",
+      "effect_id": "apply_status",
+      "status_id": "sleeping",
+      "duration": { "base": 0, "dice": { "count": 1, "sides": 4 } },
+      "target": "all_nearby"
+    },
+    {
+      "id": "cure_poison",
+      "effect_id": "cure_status",
+      "status_id": "poisoned"
+    },
+    {
+      "id": "cure_blindness",
+      "effect_id": "cure_status",
+      "status_id": "blinded"
+    },
+    {
+      "id": "cure_confusion",
+      "effect_id": "cure_status",
+      "status_id": "confused"
+    },
+    {
+      "id": "cure_fear",
+      "effect_id": "cure_status",
+      "status_id": "afraid"
+    },
+    {
+      "id": "teleport_self_100",
+      "effect_id": "teleport",
+      "distance": 100
+    },
+    {
+      "id": "teleport_other",
+      "effect_id": "teleport_other",
+      "distance": 0
+    },
+    {
+      "id": "phase_door_standard",
+      "effect_id": "phase_door",
+      "distance": 10
+    },
+    {
+      "id": "word_of_recall",
+      "effect_id": "word_of_recall"
+    },
+    {
+      "id": "identify_one",
+      "effect_id": "identify",
+      "identify_all": false
+    },
+    {
+      "id": "identify_all",
+      "effect_id": "identify",
+      "identify_all": true
+    },
+    {
+      "id": "recharge_standard",
+      "effect_id": "recharge",
+      "power": 60
+    },
+    {
+      "id": "detect_monsters",
+      "effect_id": "detect",
+      "targets": ["monsters"]
+    },
+    {
+      "id": "detect_all",
+      "effect_id": "detect",
+      "targets": ["all"]
+    },
+    {
+      "id": "detect_traps_doors_stairs",
+      "effect_id": "detect",
+      "targets": ["traps", "doors", "stairs"]
+    },
+    {
+      "id": "detect_evil",
+      "effect_id": "detect",
+      "targets": ["evil"]
+    },
+    {
+      "id": "mapping_full_level",
+      "effect_id": "mapping",
+      "radius": 0
+    },
+    {
+      "id": "light_area_standard",
+      "effect_id": "light_area",
+      "radius": 2,
+      "type": "torch"
+    },
+    {
+      "id": "illumination_starlight",
+      "effect_id": "light_area",
+      "radius": 0,
+      "type": "starlight",
+      "damage_undead": true,
+      "ray_count": 8
+    },
+    {
+      "id": "probe_monsters",
+      "effect_id": "probe"
+    },
+    {
+      "id": "haste_short",
+      "effect_id": "haste",
+      "duration": { "base": 10, "dice": { "count": 1, "sides": 10 } }
+    },
+    {
+      "id": "haste_medium",
+      "effect_id": "haste",
+      "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } }
+    },
+    {
+      "id": "berserk_standard",
+      "effect_id": "berserk",
+      "duration": { "base": 25, "dice": { "count": 1, "sides": 25 } }
+    },
+    {
+      "id": "protection_from_evil_standard",
+      "effect_id": "protection_from_evil",
+      "duration": { "base": 0, "dice": { "count": 3, "sides": 1 } }
+    },
+    {
+      "id": "banish_evil",
+      "effect_id": "banish",
+      "target": "evil"
+    },
+    {
+      "id": "banish_non_unique",
+      "effect_id": "banish",
+      "target": "non_unique"
+    },
+    {
+      "id": "stone_to_mud",
+      "effect_id": "stone_to_mud"
+    },
+    {
+      "id": "destroy_traps_and_doors",
+      "effect_id": "destroy_traps_doors"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/social_actions",
+  "type": "object",
+  "required": ["version", "actions"],
+  "properties": {
+    "version": { "type": "string" },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "minDistance", "noTargetLines", "targetLines"],
+        "properties": {
+          "id": { "type": "string" },
+          "minDistance": { "type": "integer" },
+          "noTargetLines": { "type": "array", "items": { "type": "string" } },
+          "targetLines": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

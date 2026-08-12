@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/spell_progression_by_class",
+  "type": "object",
+  "required": ["version", "progressionByClass"],
+  "properties": {
+    "version": { "type": "string" },
+    "progressionByClass": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["spellIndex", "spellName", "level", "mana", "fail", "exp"],
+          "properties": {
+            "spellIndex": { "type": "integer" },
+            "spellName": { "type": "string" },
+            "level": { "type": "integer" },
+            "mana": { "type": "integer" },
+            "fail": { "type": "integer" },
+            "exp": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}

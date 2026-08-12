@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "world": {
+    "width": 128,
+    "height": 128,
+    "centerX": 64,
+    "centerY": 64
+  },
+  "terrainTypes": [
+    {
+      "id": "grassland",
+      "baseDensities": { "grass": 0.9, "tree": 0.05, "water": 0.02, "evilTree": 0.0 },
+      "depthModel": "ring_times_type",
+      "ringRules": { "minRing": 1, "maxRing": 127 }
+    },
+    {
+      "id": "forest",
+      "baseDensities": { "grass": 0.5, "tree": 0.4, "water": 0.05, "evilTree": 0.0 },
+      "depthModel": "ring_times_type",
+      "ringRules": { "minRing": 2, "maxRing": 127 }
+    }
+  ]
+}

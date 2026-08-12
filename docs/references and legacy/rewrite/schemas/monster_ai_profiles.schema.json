@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/monster_ai_profiles",
+  "type": "object",
+  "required": ["version", "profiles"],
+  "properties": {
+    "version": { "type": "string" },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "tactics", "aggroRules", "retreatRules", "targetingRules", "spellPolicy"],
+        "properties": {
+          "id": { "type": "string" },
+          "tactics": { "type": "array", "items": { "type": "string" } },
+          "aggroRules": { "type": "object" },
+          "retreatRules": { "type": "object" },
+          "targetingRules": { "type": "object" },
+          "spellPolicy": { "type": "object" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/simulation_limits",
+  "type": "object",
+  "required": ["version", "limits"],
+  "properties": {
+    "version": { "type": "string" },
+    "limits": { "type": "object" }
+  }
+}

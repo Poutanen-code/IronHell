@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "hotspotRules": [
+    {
+      "id": "forest_clearing",
+      "terrainType": "forest",
+      "shape": "ellipse",
+      "chance": 0.35,
+      "minRadius": 2,
+      "maxRadius": 6,
+      "tileFactory": "clearing"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/wilderness_hotspots",
+  "type": "object",
+  "required": ["version", "hotspotRules"],
+  "properties": {
+    "version": { "type": "string" },
+    "hotspotRules": { "type": "array" }
+  }
+}

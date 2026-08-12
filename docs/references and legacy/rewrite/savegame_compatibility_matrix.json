@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "currentSaveVersion": "1.0.0",
+  "compatibility": [
+    {
+      "fromVersion": "1.0.0",
+      "toVersion": "1.0.0",
+      "strategy": "direct_load"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+﻿{
+    "schema_version": 1,
+    "capabilities": [
+        {
+            "id": "light",
+            "source_flag": "LITE",
+            "name": "Permanent Light",
+            "description": "Bearer emits permanent light.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ignore_acid",
+            "source_flag": "IGNORE_ACID",
+            "name": "Ignore Acid",
+            "description": "Item is not destroyed by acid attacks.",
+            "scope": "item_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ignore_elec",
+            "source_flag": "IGNORE_ELEC",
+            "name": "Ignore Lightning",
+            "description": "Item is not destroyed by lightning attacks.",
+            "scope": "item_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ignore_fire",
+            "source_flag": "IGNORE_FIRE",
+            "name": "Ignore Fire",
+            "description": "Item is not destroyed by fire attacks.",
+            "scope": "item_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ignore_cold",
+            "source_flag": "IGNORE_COLD",
+            "name": "Ignore Cold",
+            "description": "Item is not destroyed by cold attacks.",
+            "scope": "item_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "regeneration",
+            "source_flag": "REGEN",
+            "name": "Regeneration",
+            "description": "Bearer regenerates hit points and mana faster.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_acid",
+            "source_flag": "RES_ACID",
+            "name": "Resist Acid",
+            "description": "Bearer resists acid damage.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_elec",
+            "source_flag": "RES_ELEC",
+            "name": "Resist Lightning",
+            "description": "Bearer resists lightning damage.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_fire",
+            "source_flag": "RES_FIRE",
+            "name": "Resist Fire",
+            "description": "Bearer resists fire damage.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_cold",
+            "source_flag": "RES_COLD",
+            "name": "Resist Cold",
+            "description": "Bearer resists cold damage.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_pois",
+            "source_flag": "RES_POIS",
+            "name": "Resist Poison",
+            "description": "Bearer resists poison.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_lite",
+            "source_flag": "RES_LITE",
+            "name": "Resist Light",
+            "description": "Bearer resists light-based attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_dark",
+            "source_flag": "RES_DARK",
+            "name": "Resist Darkness",
+            "description": "Bearer resists darkness-based attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_blind",
+            "source_flag": "RES_BLIND",
+            "name": "Resist Blindness",
+            "description": "Bearer resists blindness attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_confu",
+            "source_flag": "RES_CONFU",
+            "name": "Resist Confusion",
+            "description": "Bearer resists confusion.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_sound",
+            "source_flag": "RES_SOUND",
+            "name": "Resist Sound",
+            "description": "Bearer resists sound-based attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_shard",
+            "source_flag": "RES_SHARD",
+            "name": "Resist Shards",
+            "description": "Bearer resists shard attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_nexus",
+            "source_flag": "RES_NEXUS",
+            "name": "Resist Nexus",
+            "description": "Bearer resists nexus attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_nethr",
+            "source_flag": "RES_NETHR",
+            "name": "Resist Nether",
+            "description": "Bearer resists nether attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_chaos",
+            "source_flag": "RES_CHAOS",
+            "name": "Resist Chaos",
+            "description": "Bearer resists chaos attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_disen",
+            "source_flag": "RES_DISEN",
+            "name": "Resist Disenchantment",
+            "description": "Bearer resists disenchantment attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "res_fear",
+            "source_flag": "RES_FEAR",
+            "name": "Resist Fear",
+            "description": "Bearer resists magical fear.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "slay_undead",
+            "source_flag": "SLAY_UNDEAD",
+            "name": "Slay Undead",
+            "description": "Deals extra damage to undead creatures.",
+            "scope": "weapon_active",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "stealth",
+            "source_flag": "STEALTH",
+            "name": "Stealth",
+            "description": "Improves bearer stealth rating.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "free_act",
+            "source_flag": "FREE_ACT",
+            "name": "Free Action",
+            "description": "Bearer is immune to paralysis.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "see_invis",
+            "source_flag": "SEE_INVIS",
+            "name": "See Invisible",
+            "description": "Bearer can see invisible creatures.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "slow_digest",
+            "source_flag": "SLOW_DIGEST",
+            "name": "Slow Digestion",
+            "description": "Bearer consumes food more slowly.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "feather",
+            "source_flag": "FEATHER",
+            "name": "Feather Falling",
+            "description": "Bearer takes no damage from falling into pits.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "hold_life",
+            "source_flag": "HOLD_LIFE",
+            "name": "Hold Life",
+            "description": "Bearer is resistant to experience drain attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "searching",
+            "source_flag": "SEARCH",
+            "name": "Searching",
+            "description": "Improves automatic trap and secret door detection.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_str",
+            "source_flag": "SUST_STR",
+            "name": "Sustain Strength",
+            "description": "Bearer\u0027s Strength cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_int",
+            "source_flag": "SUST_INT",
+            "name": "Sustain Intelligence",
+            "description": "Bearer\u0027s Intelligence cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_wis",
+            "source_flag": "SUST_WIS",
+            "name": "Sustain Wisdom",
+            "description": "Bearer\u0027s Wisdom cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_dex",
+            "source_flag": "SUST_DEX",
+            "name": "Sustain Dexterity",
+            "description": "Bearer\u0027s Dexterity cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_con",
+            "source_flag": "SUST_CON",
+            "name": "Sustain Constitution",
+            "description": "Bearer\u0027s Constitution cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "sust_chr",
+            "source_flag": "SUST_CHR",
+            "name": "Sustain Charisma",
+            "description": "Bearer\u0027s Charisma cannot be reduced by attacks.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "teleportation",
+            "source_flag": "TELEPORT",
+            "name": "Random Teleportation",
+            "description": "Bearer is randomly teleported.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "aggravate_monsters",
+            "source_flag": "AGGRAVATE",
+            "name": "Aggravate Monsters",
+            "description": "Nearby monsters are awakened and angered by the bearer.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "telepathy",
+            "source_flag": "TELEPATHY",
+            "name": "Telepathy",
+            "description": "Bearer senses minds at range.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "infravision",
+            "source_flag": "INFRA",
+            "name": "Infravision",
+            "description": "Bearer gains enhanced heat-based perception.",
+            "scope": "bearer_passive",
+            "provenance_status": "verified"
+        }
+    ]
+}

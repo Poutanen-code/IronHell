@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "metadata": {
+    "saveVersion": "1.0.0",
+    "minimumLoaderVersion": "1.0.0"
+  },
+  "sections": {
+    "player": {
+      "requiredFields": ["id", "name", "raceId", "classId", "level", "baseStats", "inventory"]
+    },
+    "world": {
+      "requiredFields": ["worldId", "masterSeed", "globalTick", "visitedLevels"]
+    },
+    "entities": {
+      "requiredFields": ["players", "monsters", "items"]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/character_history_charts",
+  "type": "object",
+  "required": ["version", "templates", "raceStartNodes", "charts"],
+  "properties": {
+    "version": { "type": "string" },
+    "templates": { "type": "object" },
+    "raceStartNodes": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "charts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "fromNode", "toNode", "rollCeiling", "socialClass", "text"],
+        "properties": {
+          "id": { "type": "string" },
+          "fromNode": { "type": "integer" },
+          "toNode": { "type": "integer" },
+          "rollCeiling": { "type": "integer" },
+          "socialClass": { "type": "integer" },
+          "text": { "type": "string" }
+        }
+      }
+    }
+  }
+}

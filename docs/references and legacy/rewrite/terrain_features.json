@@ -1,0 +1,899 @@
+{
+  "version": "0.1.0",
+  "features": [
+    {
+      "id": "darkness",
+      "index": 0,
+      "name": "darkness",
+      "symbol": " ",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": false
+    },
+    {
+      "id": "open_floor",
+      "index": 1,
+      "name": "open floor",
+      "symbol": ".",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "invisible_trap",
+      "index": 2,
+      "name": "invisible trap",
+      "symbol": ".",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "open_floor"
+    },
+    {
+      "id": "glyph_of_warding",
+      "index": 3,
+      "name": "glyph of warding",
+      "symbol": ";",
+      "color": "y",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "open_door",
+      "index": 4,
+      "name": "open door",
+      "symbol": "'",
+      "color": "U",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "broken_door",
+      "index": 5,
+      "name": "broken door",
+      "symbol": "'",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "up_staircase",
+      "index": 6,
+      "name": "up staircase",
+      "symbol": "<",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "down_staircase",
+      "index": 7,
+      "name": "down staircase",
+      "symbol": ">",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "shop_general_store",
+      "index": 8,
+      "name": "General Store",
+      "symbol": "1",
+      "color": "U",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "general"
+    },
+    {
+      "id": "shop_armory",
+      "index": 9,
+      "name": "Armory",
+      "symbol": "2",
+      "color": "s",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "armor"
+    },
+    {
+      "id": "shop_weapon_smith",
+      "index": 10,
+      "name": "Weapon Smiths",
+      "symbol": "3",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "weapons"
+    },
+    {
+      "id": "shop_temple",
+      "index": 11,
+      "name": "Temple",
+      "symbol": "4",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "temple"
+    },
+    {
+      "id": "shop_alchemy",
+      "index": 12,
+      "name": "Alchemy Shop",
+      "symbol": "5",
+      "color": "b",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "alchemy"
+    },
+    {
+      "id": "shop_magic",
+      "index": 13,
+      "name": "Magic Shop",
+      "symbol": "6",
+      "color": "r",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "magic"
+    },
+    {
+      "id": "shop_black_market",
+      "index": 14,
+      "name": "Black Market",
+      "symbol": "7",
+      "color": "D",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "black_market"
+    },
+    {
+      "id": "shop_home",
+      "index": 15,
+      "name": "Tavern",
+      "symbol": "8",
+      "color": "y",
+      "blocksLos": false,
+      "walkable": true,
+      "shopType": "home"
+    },
+    {
+      "id": "trap_door",
+      "index": 16,
+      "name": "trap door",
+      "symbol": "^",
+      "color": "w",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "trap_door"
+    },
+    {
+      "id": "pit",
+      "index": 17,
+      "name": "pit",
+      "symbol": "^",
+      "color": "s",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "pit"
+    },
+    {
+      "id": "spiked_pit",
+      "index": 18,
+      "name": "pit",
+      "symbol": "^",
+      "color": "s",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "pit_spiked"
+    },
+    {
+      "id": "poison_pit",
+      "index": 19,
+      "name": "pit",
+      "symbol": "^",
+      "color": "s",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "pit_poison"
+    },
+    {
+      "id": "summon_rune",
+      "index": 20,
+      "name": "strange rune",
+      "symbol": "^",
+      "color": "o",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "summon"
+    },
+    {
+      "id": "teleport_rune",
+      "index": 21,
+      "name": "strange rune",
+      "symbol": "^",
+      "color": "o",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "teleport"
+    },
+    {
+      "id": "fire_spot",
+      "index": 22,
+      "name": "discolored spot",
+      "symbol": "^",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "fire"
+    },
+    {
+      "id": "acid_spot",
+      "index": 23,
+      "name": "discolored spot",
+      "symbol": "^",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "acid"
+    },
+    {
+      "id": "dart_slow",
+      "index": 24,
+      "name": "dart trap",
+      "symbol": "^",
+      "color": "r",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "dart_slow"
+    },
+    {
+      "id": "dart_strength",
+      "index": 25,
+      "name": "dart trap",
+      "symbol": "^",
+      "color": "r",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "dart_strength"
+    },
+    {
+      "id": "dart_dexterity",
+      "index": 26,
+      "name": "dart trap",
+      "symbol": "^",
+      "color": "r",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "dart_dexterity"
+    },
+    {
+      "id": "dart_constitution",
+      "index": 27,
+      "name": "dart trap",
+      "symbol": "^",
+      "color": "r",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "dart_constitution"
+    },
+    {
+      "id": "gas_blind",
+      "index": 28,
+      "name": "gas trap",
+      "symbol": "^",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "blind"
+    },
+    {
+      "id": "gas_confuse",
+      "index": 29,
+      "name": "gas trap",
+      "symbol": "^",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "confuse"
+    },
+    {
+      "id": "gas_poison",
+      "index": 30,
+      "name": "gas trap",
+      "symbol": "^",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "poison"
+    },
+    {
+      "id": "gas_sleep",
+      "index": 31,
+      "name": "gas trap",
+      "symbol": "^",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "trapType": "sleep"
+    },
+    {
+      "id": "door_closed_base",
+      "index": 32,
+      "name": "door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_1",
+      "index": 33,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_2",
+      "index": 34,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_3",
+      "index": 35,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_4",
+      "index": 36,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_5",
+      "index": 37,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_6",
+      "index": 38,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "locked_door_7",
+      "index": 39,
+      "name": "locked door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_0",
+      "index": 40,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_1",
+      "index": 41,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_2",
+      "index": 42,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_3",
+      "index": 43,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_4",
+      "index": 44,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_5",
+      "index": 45,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_6",
+      "index": 46,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "jammed_door_7",
+      "index": 47,
+      "name": "jammed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "secret_door",
+      "index": 48,
+      "name": "secret door",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "granite_wall_basic"
+    },
+    {
+      "id": "pile_of_rubble",
+      "index": 49,
+      "name": "pile of rubble",
+      "symbol": ":",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "magma_vein",
+      "index": 50,
+      "name": "magma vein",
+      "symbol": "%",
+      "color": "s",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "quartz_vein",
+      "index": 51,
+      "name": "quartz vein",
+      "symbol": "%",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "magma_vein_treasure_hidden",
+      "index": 52,
+      "name": "magma vein",
+      "symbol": "%",
+      "color": "s",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "magma_vein"
+    },
+    {
+      "id": "quartz_vein_treasure_hidden",
+      "index": 53,
+      "name": "quartz vein",
+      "symbol": "%",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "quartz_vein"
+    },
+    {
+      "id": "magma_vein_treasure_known",
+      "index": 54,
+      "name": "magma vein with treasure",
+      "symbol": "*",
+      "color": "o",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "quartz_vein_treasure_known",
+      "index": 55,
+      "name": "quartz vein with treasure",
+      "symbol": "*",
+      "color": "o",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "granite_wall_basic",
+      "index": 56,
+      "name": "granite wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "granite_wall_inner",
+      "index": 57,
+      "name": "granite wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "granite_wall_basic"
+    },
+    {
+      "id": "granite_wall_outer",
+      "index": 58,
+      "name": "granite wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "granite_wall_basic"
+    },
+    {
+      "id": "granite_wall_solid",
+      "index": 59,
+      "name": "granite wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "granite_wall_basic"
+    },
+    {
+      "id": "permanent_wall_basic",
+      "index": 60,
+      "name": "permanent wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "permanent_wall_inner",
+      "index": 61,
+      "name": "permanent wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "permanent_wall_basic"
+    },
+    {
+      "id": "permanent_wall_outer",
+      "index": 62,
+      "name": "permanent wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "permanent_wall_basic"
+    },
+    {
+      "id": "permanent_wall_solid",
+      "index": 63,
+      "name": "permanent wall",
+      "symbol": "#",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "permanent_wall_basic"
+    },
+    {
+      "id": "packed_dirt",
+      "index": 64,
+      "name": "packed dirt",
+      "symbol": ".",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "grass",
+      "index": 65,
+      "name": "grass",
+      "symbol": ".",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "crops",
+      "index": 66,
+      "name": "crops",
+      "symbol": ".",
+      "color": "G",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "loose_dirt",
+      "index": 68,
+      "name": "loose dirt",
+      "symbol": "%",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "mud",
+      "index": 72,
+      "name": "mud",
+      "symbol": "~",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "water",
+      "index": 76,
+      "name": "water",
+      "symbol": "~",
+      "color": "b",
+      "blocksLos": false,
+      "walkable": false
+    },
+    {
+      "id": "drawbridge",
+      "index": 80,
+      "name": "drawbridge",
+      "symbol": "=",
+      "color": "u",
+      "blocksLos": false,
+      "walkable": true
+    },
+    {
+      "id": "opened_home_door",
+      "index": 81,
+      "name": "opened door",
+      "symbol": "'",
+      "color": "U",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "open_door"
+    },
+    {
+      "id": "arena_entrance",
+      "index": 95,
+      "name": "arena entrance",
+      "symbol": "#",
+      "color": "b",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "log",
+      "index": 96,
+      "name": "log",
+      "symbol": "=",
+      "color": "u",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "tree",
+      "index": 97,
+      "name": "tree",
+      "symbol": "*",
+      "color": "g",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "dark_tree",
+      "index": 98,
+      "name": "dark tree",
+      "symbol": "*",
+      "color": "D",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "wilderness_border_wall",
+      "index": 112,
+      "name": "border permawall",
+      "symbol": " ",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false
+    },
+    {
+      "id": "home_door_strength_1",
+      "index": 113,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "U",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_2",
+      "index": 114,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "s",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_3",
+      "index": 115,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "w",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_4",
+      "index": 116,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "g",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_5",
+      "index": 117,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "b",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_6",
+      "index": 118,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "r",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_7",
+      "index": 119,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "D",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "home_door_strength_8",
+      "index": 120,
+      "name": "closed door",
+      "symbol": "+",
+      "color": "y",
+      "blocksLos": true,
+      "walkable": false,
+      "appearsAsFeatureId": "door_closed_base"
+    },
+    {
+      "id": "potato_crops",
+      "index": 129,
+      "name": "potato crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "cabbage_crops",
+      "index": 130,
+      "name": "cabbage crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "carrot_crops",
+      "index": 131,
+      "name": "carrot crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "beet_crops",
+      "index": 132,
+      "name": "beet crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "squash_crops",
+      "index": 133,
+      "name": "squash crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "corn_crops",
+      "index": 134,
+      "name": "corn crops",
+      "symbol": "%",
+      "color": "g",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    },
+    {
+      "id": "mushroom_field",
+      "index": 135,
+      "name": "mushroom field",
+      "symbol": "%",
+      "color": "G",
+      "blocksLos": false,
+      "walkable": true,
+      "appearsAsFeatureId": "crops"
+    }
+  ]
+}

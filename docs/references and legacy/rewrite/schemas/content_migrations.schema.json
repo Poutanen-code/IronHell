@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/content_migrations",
+  "type": "object",
+  "required": ["version", "migrations"],
+  "properties": {
+    "version": { "type": "string" },
+    "migrations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "fromVersion", "toVersion", "kind", "steps"],
+        "properties": {
+          "id": { "type": "string" },
+          "fromVersion": { "type": "string" },
+          "toVersion": { "type": "string" },
+          "kind": { "type": "string" },
+          "steps": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

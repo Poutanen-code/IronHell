@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0",
+  "actions": [
+    {
+      "id": "accuse",
+      "minDistance": 5,
+      "noTargetLines": [],
+      "targetLines": [
+        "You look accusingly at %s.",
+        "%s looks accusingly at %s.",
+        "%s looks accusingly at you."
+      ]
+    },
+    {
+      "id": "applaud",
+      "minDistance": 0,
+      "noTargetLines": [
+        "You give a round of applause.",
+        "%s gives a round of applause."
+      ],
+      "targetLines": []
+    },
+    {
+      "id": "bow",
+      "minDistance": 5,
+      "noTargetLines": [
+        "You bow deeply.",
+        "%s bows deeply."
+      ],
+      "targetLines": [
+        "You bow before %s.",
+        "%s bows before %s.",
+        "%s bows before you."
+      ]
+    },
+    {
+      "id": "beg",
+      "minDistance": 2,
+      "noTargetLines": [
+        "You beg the gods for mercy.",
+        "The gods fall down laughing at %s's request for mercy."
+      ],
+      "targetLines": [
+        "You desperately try to squeeze a few coins from %s.",
+        "%s begs %s for a dime or two -- or twenty!",
+        "%s begs you for money."
+      ]
+    },
+    {
+      "id": "blush",
+      "minDistance": 0,
+      "noTargetLines": [
+        "Your cheeks are burning.",
+        "%s blushes."
+      ],
+      "targetLines": []
+    },
+    {
+      "id": "gasp",
+      "minDistance": 0,
+      "noTargetLines": [
+        "You gasp in astonishment.",
+        "%s gasps in astonishment."
+      ],
+      "targetLines": []
+    },
+    {
+      "id": "glare",
+      "minDistance": 5,
+      "noTargetLines": [
+        "You glare at nothing in particular.",
+        "%s glares around."
+      ],
+      "targetLines": [
+        "You glare icily at %s.",
+        "%s glares at %s.",
+        "%s glares icily at you, you feel cold to your bones."
+      ]
+    },
+    {
+      "id": "hug",
+      "minDistance": 1,
+      "noTargetLines": [],
+      "targetLines": [
+        "You hug %s.",
+        "%s hugs %s.",
+        "%s hugs you."
+      ]
+    }
+  ]
+}

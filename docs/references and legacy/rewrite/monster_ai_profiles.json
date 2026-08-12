@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "profiles": [
+    {
+      "id": "aggressive_melee",
+      "tactics": ["close_distance", "attack_adjacent"],
+      "aggroRules": { "sight": true, "hearing": false, "pursuitTurns": 20 },
+      "retreatRules": { "enabled": false },
+      "targetingRules": { "targetLowestHp": false, "preferSummoner": false },
+      "spellPolicy": { "allowSpells": false }
+    },
+    {
+      "id": "aggressive_ranged",
+      "tactics": ["maintain_line_of_sight", "kite_when_adjacent", "cast_when_safe"],
+      "aggroRules": { "sight": true, "hearing": true, "pursuitTurns": 30 },
+      "retreatRules": { "enabled": true, "hpThreshold": 0.2 },
+      "targetingRules": { "targetLowestHp": true, "preferSummoner": true },
+      "spellPolicy": { "allowSpells": true, "preferredRange": [3, 7] }
+    }
+  ]
+}

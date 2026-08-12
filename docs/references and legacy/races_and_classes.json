@@ -1,0 +1,592 @@
+{
+  "races": [
+    {
+      "id": "human",
+      "name": "Human",
+      "description": "The most common race, humans are versatile and adaptable. They have no particular strengths or weaknesses.",
+      "stat_modifiers": { "strength": 0, "intelligence": 0, "wisdom": 0, "dexterity": 0, "constitution": 0, "charisma": 0 },
+      "skill_modifiers": { "disarming": 0, "magic_device": 0, "saving_throw": 0, "stealth": 0, "searching": 0, "search_frequency": 10, "melee_to_hit": 0, "ranged_to_hit": 0 },
+      "hit_die": 10,
+      "exp_factor": 100,
+      "infravision": 0,
+      "age_base": 14, "age_mod": 6,
+      "male_height": 72, "male_height_mod": 6, "female_height": 66, "female_height_mod": 4,
+      "male_weight": 180, "male_weight_mod": 25, "female_weight": 150, "female_weight_mod": 20,
+      "racial_flags": [],
+      "allowed_class_ids": ["warrior", "mage", "priest", "rogue", "ranger", "paladin"],
+      "racial_abilities": [],
+      "size": "medium",
+      "vision_type": "normal",
+      "lore": "Humans are the most numerous and diverse inhabitants of the realm. Though they lack the specialized traits of other races, their adaptability and ambition drive them to excel in any field they pursue."
+    },
+    {
+      "id": "half_elf",
+      "name": "Half-Elf",
+      "description": "Half-elves combine some of the better qualities of both races, possessing elven grace with human ambition.",
+      "stat_modifiers": { "strength": 0, "intelligence": 1, "wisdom": -1, "dexterity": 1, "constitution": -1, "charisma": 1 },
+      "skill_modifiers": { "disarming": 2, "magic_device": 3, "saving_throw": 3, "stealth": 1, "searching": 6, "search_frequency": 11, "melee_to_hit": -1, "ranged_to_hit": 5 },
+      "hit_die": 10,
+      "exp_factor": 110,
+      "infravision": 2,
+      "age_base": 24, "age_mod": 16,
+      "male_height": 66, "male_height_mod": 6, "female_height": 62, "female_height_mod": 6,
+      "male_weight": 130, "male_weight_mod": 15, "female_weight": 100, "female_weight_mod": 10,
+      "racial_flags": ["SUST_DEX"],
+      "allowed_class_ids": ["warrior", "mage", "priest", "rogue", "ranger", "paladin"],
+      "racial_abilities": [
+        { "name": "Sustain Dexterity", "description": "Dexterity cannot be reduced by attacks" }
+      ],
+      "size": "medium",
+      "vision_type": "infravision",
+      "lore": "Half-elves inherit the best of both races—elven grace and human drive. Though sometimes caught between two cultures, they forge unique paths all their own."
+    },
+    {
+      "id": "elf",
+      "name": "Elf",
+      "description": "Elves are brilliant at magic but somewhat frail. They have excellent eyesight and resist light-based attacks.",
+      "stat_modifiers": { "strength": -1, "intelligence": 2, "wisdom": -1, "dexterity": 1, "constitution": -2, "charisma": 1 },
+      "skill_modifiers": { "disarming": 5, "magic_device": 6, "saving_throw": 6, "stealth": 1, "searching": 8, "search_frequency": 12, "melee_to_hit": -5, "ranged_to_hit": 15 },
+      "hit_die": 9,
+      "exp_factor": 120,
+      "infravision": 3,
+      "age_base": 75, "age_mod": 75,
+      "male_height": 60, "male_height_mod": 4, "female_height": 54, "female_height_mod": 4,
+      "male_weight": 100, "male_weight_mod": 6, "female_weight": 80, "female_weight_mod": 6,
+      "racial_flags": ["SUST_DEX", "RES_LITE"],
+      "allowed_class_ids": ["warrior", "mage", "rogue", "ranger"],
+      "racial_abilities": [
+        { "name": "Sustain Dexterity", "description": "Dexterity cannot be reduced by attacks" },
+        { "name": "Resist Light", "description": "Resistant to light-based attacks" }
+      ],
+      "size": "medium",
+      "vision_type": "infravision",
+      "lore": "Elves have walked the world for millennia, perfecting the arts of magic and archery. Their connection to the natural and arcane worlds makes them formidable spellcasters and scouts."
+    },
+    {
+      "id": "hobbit",
+      "name": "Hobbit",
+      "description": "Hobbits are small but surprisingly hardy. They are excellent at stealth and ranged combat but weak in melee.",
+      "stat_modifiers": { "strength": -2, "intelligence": 2, "wisdom": 1, "dexterity": 3, "constitution": 2, "charisma": 1 },
+      "skill_modifiers": { "disarming": 15, "magic_device": 18, "saving_throw": 18, "stealth": 4, "searching": 12, "search_frequency": 15, "melee_to_hit": -10, "ranged_to_hit": 20 },
+      "hit_die": 7,
+      "exp_factor": 110,
+      "infravision": 4,
+      "age_base": 21, "age_mod": 12,
+      "male_height": 36, "male_height_mod": 3, "female_height": 33, "female_height_mod": 3,
+      "male_weight": 60, "male_weight_mod": 3, "female_weight": 50, "female_weight_mod": 3,
+      "racial_flags": ["HOLD_LIFE"],
+      "allowed_class_ids": ["warrior", "rogue", "ranger"],
+      "racial_abilities": [
+        { "name": "Hold Life", "description": "Resistant to experience drain attacks" }
+      ],
+      "size": "small",
+      "vision_type": "infravision",
+      "lore": "Hobbits are a cheerful and adventurous people, often underestimated by larger races. Their luck and stealth make them excellent rogues and scouts."
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "description": "Gnomes are smaller than dwarves but more magical. They are excellent tinkerers and resist paralysis.",
+      "stat_modifiers": { "strength": -1, "intelligence": 2, "wisdom": 0, "dexterity": 2, "constitution": 1, "charisma": -2 },
+      "skill_modifiers": { "disarming": 10, "magic_device": 12, "saving_throw": 12, "stealth": 3, "searching": 6, "search_frequency": 13, "melee_to_hit": -8, "ranged_to_hit": 12 },
+      "hit_die": 8,
+      "exp_factor": 125,
+      "infravision": 4,
+      "age_base": 50, "age_mod": 40,
+      "male_height": 42, "male_height_mod": 3, "female_height": 39, "female_height_mod": 3,
+      "male_weight": 90, "male_weight_mod": 6, "female_weight": 75, "female_weight_mod": 3,
+      "racial_flags": ["FREE_ACT"],
+      "allowed_class_ids": ["warrior", "mage", "priest", "rogue"],
+      "racial_abilities": [
+        { "name": "Free Action", "description": "Immune to paralysis" }
+      ],
+      "size": "small",
+      "vision_type": "infravision",
+      "lore": "Gnomes are curious inventors and pranksters, their minds always racing with new ideas. They excel at combining magic and technology in unexpected ways."
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "description": "Dwarves are strong and hardy miners and warriors. They resist blindness but are poor at magic and stealth.",
+      "stat_modifiers": { "strength": 2, "intelligence": -3, "wisdom": 2, "dexterity": -2, "constitution": 2, "charisma": -3 },
+      "skill_modifiers": { "disarming": 2, "magic_device": 9, "saving_throw": 9, "stealth": -1, "searching": 7, "search_frequency": 10, "melee_to_hit": 15, "ranged_to_hit": 0 },
+      "hit_die": 11,
+      "exp_factor": 120,
+      "infravision": 5,
+      "age_base": 35, "age_mod": 15,
+      "male_height": 48, "male_height_mod": 3, "female_height": 46, "female_height_mod": 3,
+      "male_weight": 150, "male_weight_mod": 10, "female_weight": 120, "female_weight_mod": 10,
+      "racial_flags": ["RES_BLIND"],
+      "allowed_class_ids": ["warrior", "priest", "paladin"],
+      "racial_abilities": [
+        { "name": "Resist Blindness", "description": "Resistant to blindness attacks" }
+      ],
+      "size": "medium",
+      "vision_type": "infravision",
+      "lore": "Born of stone and fire, dwarves are renowned for their unbreakable will and masterful craftsmanship. Their mountain halls contain treasures that rival even the deepest dungeons."
+    },
+    {
+      "id": "half_orc",
+      "name": "Half-Orc",
+      "description": "Half-orcs are strong fighters but poor at magic. They resist darkness but are frightening to look at.",
+      "stat_modifiers": { "strength": 2, "intelligence": -1, "wisdom": 0, "dexterity": 0, "constitution": 1, "charisma": -4 },
+      "skill_modifiers": { "disarming": -3, "magic_device": -3, "saving_throw": -3, "stealth": -1, "searching": 0, "search_frequency": 7, "melee_to_hit": 12, "ranged_to_hit": -5 },
+      "hit_die": 10,
+      "exp_factor": 110,
+      "infravision": 3,
+      "age_base": 11, "age_mod": 4,
+      "male_height": 66, "male_height_mod": 1, "female_height": 62, "female_height_mod": 1,
+      "male_weight": 150, "male_weight_mod": 5, "female_weight": 120, "female_weight_mod": 5,
+      "racial_flags": ["RES_DARK"],
+      "allowed_class_ids": ["warrior", "priest", "rogue"],
+      "racial_abilities": [
+        { "name": "Resist Darkness", "description": "Resistant to darkness-based attacks" }
+      ],
+      "size": "medium",
+      "vision_type": "infravision",
+      "lore": "Half-orcs struggle for acceptance in both human and orc societies, forging their own path through strength and determination. Many find purpose as warriors and adventurers."
+    },
+    {
+      "id": "half_troll",
+      "name": "Half-Troll",
+      "description": "Half-trolls are immensely strong and regenerate quickly, but are very slow learners and poor at magic.",
+      "stat_modifiers": { "strength": 4, "intelligence": -4, "wisdom": -2, "dexterity": -4, "constitution": 3, "charisma": -6 },
+      "skill_modifiers": { "disarming": -5, "magic_device": -8, "saving_throw": -8, "stealth": -2, "searching": -1, "search_frequency": 5, "melee_to_hit": 20, "ranged_to_hit": -10 },
+      "hit_die": 12,
+      "exp_factor": 120,
+      "infravision": 3,
+      "age_base": 20, "age_mod": 10,
+      "male_height": 96, "male_height_mod": 10, "female_height": 84, "female_height_mod": 8,
+      "male_weight": 250, "male_weight_mod": 50, "female_weight": 225, "female_weight_mod": 40,
+      "racial_flags": ["SUST_STR", "REGEN"],
+      "allowed_class_ids": ["warrior", "priest"],
+      "racial_abilities": [
+        { "name": "Sustain Strength", "description": "Strength cannot be reduced by attacks" },
+        { "name": "Regeneration", "description": "Regenerates hit points faster than normal" }
+      ],
+      "size": "large",
+      "vision_type": "infravision",
+      "lore": "Half-trolls are the result of troll and human crossbreeding. Their immense physical power and regenerative abilities make them fearsome warriors, though they struggle with magic and subtlety."
+    },
+    {
+      "id": "dunadan",
+      "name": "Dúnadan",
+      "description": "Dúnedain are a superior race of humans with excellent stats in all areas, but they require much more experience to advance.",
+      "stat_modifiers": { "strength": 1, "intelligence": 2, "wisdom": 2, "dexterity": 2, "constitution": 3, "charisma": 2 },
+      "skill_modifiers": { "disarming": 4, "magic_device": 5, "saving_throw": 5, "stealth": 2, "searching": 3, "search_frequency": 13, "melee_to_hit": 15, "ranged_to_hit": 10 },
+      "hit_die": 10,
+      "exp_factor": 180,
+      "infravision": 0,
+      "age_base": 50, "age_mod": 20,
+      "male_height": 82, "male_height_mod": 5, "female_height": 78, "female_height_mod": 6,
+      "male_weight": 190, "male_weight_mod": 20, "female_weight": 180, "female_weight_mod": 15,
+      "racial_flags": ["SUST_CON"],
+      "allowed_class_ids": ["warrior", "mage", "priest", "ranger", "paladin"],
+      "racial_abilities": [
+        { "name": "Sustain Constitution", "description": "Constitution cannot be reduced by attacks" }
+      ],
+      "size": "medium",
+      "vision_type": "normal",
+      "lore": "The Dúnedain are the last descendants of the ancient kings, blessed with long life and exceptional abilities. Their presence inspires allies and strikes fear into the hearts of evil."
+    },
+    {
+      "id": "high_elf",
+      "name": "High-Elf",
+      "description": "High-elves are the most powerful elven race, with great stats and abilities, but they level incredibly slowly.",
+      "stat_modifiers": { "strength": 1, "intelligence": 3, "wisdom": -1, "dexterity": 3, "constitution": 1, "charisma": 5 },
+      "skill_modifiers": { "disarming": 4, "magic_device": 20, "saving_throw": 20, "stealth": 3, "searching": 3, "search_frequency": 14, "melee_to_hit": 10, "ranged_to_hit": 25 },
+      "hit_die": 10,
+      "exp_factor": 200,
+      "infravision": 4,
+      "age_base": 100, "age_mod": 30,
+      "male_height": 90, "male_height_mod": 10, "female_height": 82, "female_height_mod": 10,
+      "male_weight": 190, "male_weight_mod": 20, "female_weight": 180, "female_weight_mod": 15,
+      "racial_flags": ["RES_LITE", "SEE_INVIS"],
+      "allowed_class_ids": ["warrior", "mage", "priest", "ranger"],
+      "racial_abilities": [
+        { "name": "Resist Light", "description": "Resistant to light-based attacks" },
+        { "name": "See Invisible", "description": "Can see invisible creatures" }
+      ],
+      "size": "medium",
+      "vision_type": "infravision",
+      "lore": "High-elves are the noblest and most powerful of the elven kindred. Their ancient bloodline grants them incredible magical aptitude and keen senses that pierce even invisibility."
+    },
+    {
+      "id": "kobold",
+      "name": "Kobold",
+      "description": "Kobolds are small, sneaky reptilian creatures. They resist poison and are surprisingly stealthy.",
+      "stat_modifiers": { "strength": -1, "intelligence": -1, "wisdom": 0, "dexterity": 2, "constitution": 2, "charisma": -2 },
+      "skill_modifiers": { "disarming": 10, "magic_device": 5, "saving_throw": 0, "stealth": 4, "searching": 15, "search_frequency": 15, "melee_to_hit": -5, "ranged_to_hit": 10 },
+      "hit_die": 8,
+      "exp_factor": 115,
+      "infravision": 5,
+      "age_base": 15, "age_mod": 10,
+      "male_height": 38, "male_height_mod": 4, "female_height": 36, "female_height_mod": 3,
+      "male_weight": 70, "male_weight_mod": 5, "female_weight": 60, "female_weight_mod": 4,
+      "racial_flags": ["RES_POIS"],
+      "allowed_class_ids": ["warrior", "priest", "rogue", "ranger"],
+      "racial_abilities": [
+        { "name": "Resist Poison", "description": "Resistant to poison attacks" }
+      ],
+      "size": "small",
+      "vision_type": "infravision",
+      "lore": "Kobolds are small, cunning reptilian creatures that thrive in the dark tunnels and caverns of the world. Their resistance to poison and natural stealth make them surprisingly effective adventurers."
+    }
+  ],
+
+  "classes": [
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "description": "Warriors are the strongest fighters in melee combat. They have no magic but excellent hit points and combat skills.",
+      "primary_role": "Tank / Melee DPS",
+      "primary_stats": ["strength", "constitution"],
+      "secondary_stats": ["dexterity"],
+      "stat_modifiers": { "strength": 5, "intelligence": -2, "wisdom": -2, "dexterity": 2, "constitution": 2, "charisma": -1 },
+      "base_skills": { "disarming": 25, "magic_device": 18, "saving_throw": 18, "stealth": 1, "searching": 14, "search_frequency": 2, "melee_to_hit": 70, "ranged_to_hit": 55 },
+      "skill_growth": { "disarming": 10, "magic_device": 7, "saving_throw": 10, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 45, "ranged_to_hit": 45 },
+      "hit_die": 9,
+      "exp_factor": 0,
+      "sense_base": 9000, "sense_div": 40,
+      "max_attacks": 6,
+      "min_weight": 30,
+      "attack_multiplier": 5,
+      "spell_stat": null,
+      "first_spell_level": 0,
+      "class_flags": ["BRAVERY_30", "PSEUDO_ID_HEAVY", "PSEUDO_ID_IMPROV"],
+      "titles": ["Rookie", "Soldier", "Swordsman", "Swashbuckler", "Veteran", "Myrmidon", "Commando", "Champion", "Hero", "Lord"],
+      "hp_per_level": 9,
+      "mana_per_level": 0,
+      "equipment_proficiency": {
+        "armor": ["cloth", "leather", "mail", "plate"],
+        "weapons": ["swords", "axes", "maces", "polearms", "shields"]
+      },
+      "starting_equipment": ["Broad Sword", "Hard Leather Armor", "Ration of Food", "Wooden Torch", "Potion of Berserk Strength", "Scroll of Word of Recall"],
+      "lore": "Warriors are the backbone of any adventuring party, trained in all forms of martial combat. Their discipline and physical prowess make them nearly unstoppable on the battlefield."
+    },
+    {
+      "id": "mage",
+      "name": "Mage",
+      "description": "Mages are the weakest in combat but the most powerful spellcasters. They learn arcane magic from spellbooks.",
+      "primary_role": "Ranged Magic DPS",
+      "primary_stats": ["intelligence"],
+      "secondary_stats": ["dexterity"],
+      "stat_modifiers": { "strength": -5, "intelligence": 3, "wisdom": 0, "dexterity": 1, "constitution": -2, "charisma": 1 },
+      "base_skills": { "disarming": 30, "magic_device": 36, "saving_throw": 30, "stealth": 2, "searching": 16, "search_frequency": 20, "melee_to_hit": 34, "ranged_to_hit": 20 },
+      "skill_growth": { "disarming": 7, "magic_device": 13, "saving_throw": 9, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 15, "ranged_to_hit": 15 },
+      "hit_die": 0,
+      "exp_factor": 30,
+      "sense_base": 240000, "sense_div": 5,
+      "max_attacks": 4,
+      "min_weight": 40,
+      "attack_multiplier": 2,
+      "spell_stat": "intelligence",
+      "first_spell_level": 1,
+      "class_flags": ["CUMBER_GLOVE", "ZERO_FAIL", "BEAM", "CHOOSE_SPELLS", "HP_BONUS"],
+      "titles": ["Novice", "Apprentice", "Trickster", "Illusionist", "Spellbinder", "Evoker", "Conjurer", "Warlock", "Sorcerer", "Arch-Mage"],
+      "hp_per_level": 0,
+      "mana_per_level": 6,
+      "equipment_proficiency": {
+        "armor": ["cloth"],
+        "weapons": ["daggers", "staves", "wands"]
+      },
+      "starting_equipment": ["Magic-User's Spellbook", "Dagger", "Robe", "Wooden Torch", "Ration of Food", "Potion of Cure Critical Wounds", "Scroll of Word of Recall"],
+      "lore": "Mages dedicate their lives to mastering the arcane arts. Through years of study, they wield destructive elemental forces that can turn the tide of any battle."
+    },
+    {
+      "id": "priest",
+      "name": "Priest",
+      "description": "Priests are divine spellcasters who serve the gods. They are decent fighters and excellent healers.",
+      "primary_role": "Healer / Support",
+      "primary_stats": ["wisdom"],
+      "secondary_stats": ["constitution"],
+      "stat_modifiers": { "strength": -1, "intelligence": -3, "wisdom": 3, "dexterity": -1, "constitution": 0, "charisma": 2 },
+      "base_skills": { "disarming": 25, "magic_device": 30, "saving_throw": 32, "stealth": 2, "searching": 16, "search_frequency": 8, "melee_to_hit": 48, "ranged_to_hit": 35 },
+      "skill_growth": { "disarming": 7, "magic_device": 10, "saving_throw": 12, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 20, "ranged_to_hit": 20 },
+      "hit_die": 2,
+      "exp_factor": 20,
+      "sense_base": 10000, "sense_div": 40,
+      "max_attacks": 4,
+      "min_weight": 35,
+      "attack_multiplier": 3,
+      "spell_stat": "wisdom",
+      "first_spell_level": 1,
+      "class_flags": ["BLESS_WEAPON", "ZERO_FAIL", "PSEUDO_ID_IMPROV"],
+      "titles": ["Believer", "Acolyte", "Adept", "Evangelist", "Priest", "Curate", "Canon", "Bishop", "Prophet", "Patriarch"],
+      "hp_per_level": 2,
+      "mana_per_level": 5,
+      "equipment_proficiency": {
+        "armor": ["cloth", "mail"],
+        "weapons": ["maces", "staves"]
+      },
+      "starting_equipment": ["Beginners Handbook", "Club", "Robe", "Wooden Torch", "Ration of Food", "Potion of Healing", "Scroll of Word of Recall"],
+      "lore": "Priests channel divine energy to heal wounds and shield allies from harm. Their faith is their strength, and their prayers can banish undead and evil."
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "description": "Rogues are stealthy thieves and assassins. They can pick locks, disarm traps, and backstab sleeping creatures.",
+      "primary_role": "Melee DPS / Utility",
+      "primary_stats": ["dexterity"],
+      "secondary_stats": ["intelligence"],
+      "stat_modifiers": { "strength": 2, "intelligence": 1, "wisdom": -2, "dexterity": 3, "constitution": 1, "charisma": -1 },
+      "base_skills": { "disarming": 45, "magic_device": 32, "saving_throw": 28, "stealth": 5, "searching": 32, "search_frequency": 24, "melee_to_hit": 60, "ranged_to_hit": 66 },
+      "skill_growth": { "disarming": 15, "magic_device": 10, "saving_throw": 10, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 40, "ranged_to_hit": 30 },
+      "hit_die": 6,
+      "exp_factor": 25,
+      "sense_base": 20000, "sense_div": 40,
+      "max_attacks": 5,
+      "min_weight": 30,
+      "attack_multiplier": 3,
+      "spell_stat": "intelligence",
+      "first_spell_level": 5,
+      "class_flags": ["CUMBER_GLOVE", "CHOOSE_SPELLS", "PSEUDO_ID_HEAVY", "PSEUDO_ID_IMPROV", "BACK_STAB", "STEALING_IMPROV", "SPEED_BONUS", "STEALTH_MODE"],
+      "titles": ["Vagabond", "Cutpurse", "Footpad", "Robber", "Burglar", "Filcher", "Sharper", "Rogue", "Thief", "Master Thief"],
+      "hp_per_level": 6,
+      "mana_per_level": 3,
+      "equipment_proficiency": {
+        "armor": ["cloth", "leather"],
+        "weapons": ["daggers", "swords"]
+      },
+      "starting_equipment": ["Magic-User's Spellbook", "Main Gauche", "Soft Leather Armor", "Wooden Torch", "Ration of Food", "Scroll of Word of Recall"],
+      "lore": "Rogues thrive in the shadows, striking when enemies least expect it. Their mastery of stealth, lockpicking, and trap-disabling makes them essential for any dungeon delve."
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "description": "Rangers are skilled fighters who also learn arcane magic. They are experts with ranged weapons and nature.",
+      "primary_role": "Ranged DPS / Hybrid",
+      "primary_stats": ["strength", "intelligence"],
+      "secondary_stats": ["dexterity", "constitution"],
+      "stat_modifiers": { "strength": 2, "intelligence": 2, "wisdom": 0, "dexterity": 1, "constitution": 1, "charisma": 1 },
+      "base_skills": { "disarming": 30, "magic_device": 32, "saving_throw": 28, "stealth": 3, "searching": 24, "search_frequency": 16, "melee_to_hit": 56, "ranged_to_hit": 72 },
+      "skill_growth": { "disarming": 8, "magic_device": 10, "saving_throw": 10, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 30, "ranged_to_hit": 45 },
+      "hit_die": 4,
+      "exp_factor": 30,
+      "sense_base": 30000, "sense_div": 40,
+      "max_attacks": 5,
+      "min_weight": 35,
+      "attack_multiplier": 4,
+      "spell_stat": "intelligence",
+      "first_spell_level": 3,
+      "class_flags": ["CUMBER_GLOVE", "EXTRA_SHOT", "CHOOSE_SPELLS", "PSEUDO_ID_IMPROV"],
+      "titles": ["Runner", "Strider", "Scout", "Courser", "Tracker", "Guide", "Explorer", "Pathfinder", "Ranger", "Ranger Lord"],
+      "hp_per_level": 4,
+      "mana_per_level": 4,
+      "equipment_proficiency": {
+        "armor": ["cloth", "leather", "mail"],
+        "weapons": ["swords", "bows", "daggers"]
+      },
+      "starting_equipment": ["Magic-User's Spellbook", "Broad Sword", "Long Bow", "Arrows", "Wooden Torch", "Ration of Food", "Scroll of Word of Recall"],
+      "lore": "Rangers are masters of the wild, equally at home in dense forests or deep dungeons. Their keen eyes and combat prowess combined with magical talent make them versatile adventurers."
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "description": "Paladins are holy warriors who combine martial skill with divine magic. They are strong fighters who can also heal and bless.",
+      "primary_role": "Tank / Healer Hybrid",
+      "primary_stats": ["strength", "wisdom"],
+      "secondary_stats": ["constitution", "charisma"],
+      "stat_modifiers": { "strength": 3, "intelligence": -3, "wisdom": 1, "dexterity": 0, "constitution": 2, "charisma": 2 },
+      "base_skills": { "disarming": 20, "magic_device": 24, "saving_throw": 25, "stealth": 1, "searching": 12, "search_frequency": 2, "melee_to_hit": 68, "ranged_to_hit": 40 },
+      "skill_growth": { "disarming": 7, "magic_device": 10, "saving_throw": 11, "stealth": 0, "searching": 0, "search_frequency": 0, "melee_to_hit": 35, "ranged_to_hit": 30 },
+      "hit_die": 6,
+      "exp_factor": 35,
+      "sense_base": 80000, "sense_div": 40,
+      "max_attacks": 5,
+      "min_weight": 30,
+      "attack_multiplier": 5,
+      "spell_stat": "wisdom",
+      "first_spell_level": 1,
+      "class_flags": ["PSEUDO_ID_HEAVY", "PSEUDO_ID_IMPROV"],
+      "titles": ["Gallant", "Keeper", "Protector", "Defender", "Warder", "Knight", "Guardian", "Chevalier", "Paladin", "Paladin Lord"],
+      "hp_per_level": 6,
+      "mana_per_level": 4,
+      "equipment_proficiency": {
+        "armor": ["cloth", "leather", "mail", "plate"],
+        "weapons": ["swords", "maces", "shields"]
+      },
+      "starting_equipment": ["Beginners Handbook", "Broad Sword", "Iron Helm", "Wooden Torch", "Ration of Food", "Scroll of Protection from Evil", "Scroll of Word of Recall"],
+      "lore": "Paladins are champions of justice, blessed by divine powers. They combine martial skill with holy magic to protect the innocent and smite evil wherever it lurks."
+    }
+  ],
+
+  "race_class_combos": [
+    {
+      "race_id": "human", "class_id": "warrior",
+      "lore": "The most common sight in any dungeon expedition: a human warrior with a sharp blade and a sharper will. Unburdened by ancient tradition or racial obligation, Human Warriors answer only to coin, glory, and the call of battle. A thousand dead heroes walked this road before you. Most of them thought they were different."
+    },
+    {
+      "race_id": "human", "class_id": "mage",
+      "lore": "Humans make surprisingly gifted mages — not through natural talent, but through sheer obsessive dedication. Where an elf might spend centuries perfecting a spell, a Human Mage throws themselves at the arcane in a single desperate lifetime. Fragile, brilliant, and almost certainly doomed. The truly great ones don't notice the difference."
+    },
+    {
+      "race_id": "human", "class_id": "priest",
+      "lore": "Devout to the point of stubbornness, Human Priests carry their faith into the deepest pits of the earth. No divine bloodline, no elven grace — just raw belief hammered into holy power. The gods seem to reward this kind of desperate sincerity. Either that, or they have a sense of humour."
+    },
+    {
+      "race_id": "human", "class_id": "rogue",
+      "lore": "Every city has one: the Human Rogue who grew up in the gutter and decided the dungeon's riches were easier to steal than earn. Supremely adaptable, entirely unscrupulous, and cursed with just enough curiosity to keep going deeper. The fastest way to die — or to become very, very rich."
+    },
+    {
+      "race_id": "human", "class_id": "ranger",
+      "lore": "Human Rangers were forged on the borderlands, where civilization ends and the wilderness does not. They carry maps of places that don't appear on any official chart and scars that no official healer will acknowledge. Patient, precise, and dangerous at any range."
+    },
+    {
+      "race_id": "human", "class_id": "paladin",
+      "lore": "A human in gleaming armor, shield bearing a sacred symbol, voice ringing with divine conviction — the Human Paladin is exactly as impressive as they look. And as infuriating. Equal parts warrior and preacher, they are perhaps the dungeon's most effective — if most self-righteous — champions."
+    },
+    {
+      "race_id": "half_elf", "class_id": "warrior",
+      "lore": "Half-Elf Warriors carry the elven grace of their heritage into the brutal trade of swordsmanship. Faster than their human peers, more durable than their elven kin — neither fully accepted by either world. They fight with something to prove, and that chip on the shoulder is worth at least two extra attacks per round."
+    },
+    {
+      "race_id": "half_elf", "class_id": "mage",
+      "lore": "Half-Elves who turn to magic stand at a fascinating threshold: sharp enough to master the arcane arts, yet robust enough to survive long enough to use them. They lack the pure genius of a High-Elf, but what they lack in raw talent they make up for in grit and improvisation. A dangerous combination."
+    },
+    {
+      "race_id": "half_elf", "class_id": "priest",
+      "lore": "Caught between two faiths and two peoples, Half-Elf Priests often emerge as the most compassionate of healers — they have experienced enough rejection to truly understand suffering. Their prayers are coloured by an aching awareness of impermanence, and the gods seem to listen all the more closely for it."
+    },
+    {
+      "race_id": "half_elf", "class_id": "rogue",
+      "lore": "The perfect blend of elven stealth and human cunning. Half-Elf Rogues can talk their way into a noble's vault, slip through the shadows undetected, and vanish before anyone thinks to ask questions. They are charming, unreliable, and absolutely indispensable — until the moment they're not."
+    },
+    {
+      "race_id": "half_elf", "class_id": "ranger",
+      "lore": "Half-Elf Rangers are perhaps the most natural-born dungeon scouts in existence — elven senses honed by a human need to adapt. They read a monster's tracks the way others read a map, and they move through the dark with the uncanny ease of someone who has always belonged to the in-between places."
+    },
+    {
+      "race_id": "half_elf", "class_id": "paladin",
+      "lore": "Half-Elf Paladins must forge their own spiritual identity, drawing on both elven reverence for ancient things and human urgency to act. The result is a holy warrior with unusual depth: serene in crisis, ferocious in defence of the weak, and deeply aware that sacred oaths outlast the people who swear them."
+    },
+    {
+      "race_id": "elf", "class_id": "warrior",
+      "lore": "An Elf taking up the sword is a rare and often poignant sight. Lighter than any human warrior, slower to tire than almost any other race, an Elf Warrior brings centuries of martial discipline to bear — but bleeds far more easily for it. They fight with a cold precision that seems almost indifferent to danger. It is not indifference. It is grief."
+    },
+    {
+      "race_id": "elf", "class_id": "mage",
+      "lore": "This is what elves were made for. Generations of memory and intuition crystallised into arcane mastery so refined it barely looks like effort. An Elf Mage does not study magic — they *remember* it, as if the spells were always there waiting to be sung back into existence. The dungeon walls glow faintly when they walk by."
+    },
+    {
+      "race_id": "elf", "class_id": "rogue",
+      "lore": "Elven rogues carry an air of profound irony: the most ancient race on earth, skulking through dungeons for gold. But none move more silently, and none read a trapped corridor with sharper eyes. They are meticulous thieves who regard careless adventuring as something close to a moral failing."
+    },
+    {
+      "race_id": "elf", "class_id": "ranger",
+      "lore": "The Elf Ranger is perhaps the closest thing to a natural force walking on two legs. Centuries of wandering vast wildernesses translate directly into dungeon mastery: every passage is read like a forest trail, every shadow interrogated like wind in the treetops. Their arrows do not miss. They simply arrive."
+    },
+    {
+      "race_id": "hobbit", "class_id": "warrior",
+      "lore": "The Hobbit Warrior is a reminder that size is not the measure of danger. Smaller than any foe they face, quicker than almost all of them, Hobbit Warriors survive through tenacity, luck, and an almost supernaturally high pain tolerance for creatures that look so cheerful. Do not let the smile fool you."
+    },
+    {
+      "race_id": "hobbit", "class_id": "rogue",
+      "lore": "Hobbits were practically invented for this. Small enough to vanish into a shadow that would barely hide a boot, quick-fingered beyond all reasonable expectation, and possessed of a cheerful willingness to take things that don't belong to them. The Hobbit Rogue is the dungeon's most underestimated professional. Several dragons have learned this the hard way."
+    },
+    {
+      "race_id": "hobbit", "class_id": "ranger",
+      "lore": "Hobbit Rangers are deceptively effective scouts — they can slip into places no human could fit, read the dungeon floor for tracks, and fire a sling with unnerving accuracy before the target even realises it should be alarmed. Small, hardy, and utterly unpredictable. Perfect dungeon companions, if you can keep up."
+    },
+    {
+      "race_id": "gnome", "class_id": "warrior",
+      "lore": "The Gnome Warrior is an act of pure spite directed at every creature that ever laughed at their stature. They fight with disproportionate aggression, immune to paralysis, endlessly inventive with improvised tactics, and deeply motivated by the need to prove that the size of the fighter is entirely unrelated to the depth of the damage. They are right."
+    },
+    {
+      "race_id": "gnome", "class_id": "mage",
+      "lore": "A Gnome Mage is a contained catastrophe in search of an audience. Their natural affinity for tinkering and puzzle-solving aligns perfectly with arcane study — every spell is a mechanism to be taken apart and reassembled better. They are immune to paralysis, which matters: a stunned Gnome Mage mid-incantation is a terrifying prospect for everyone in the room."
+    },
+    {
+      "race_id": "gnome", "class_id": "priest",
+      "lore": "Gnome Priests bring an unexpected sincerity to the divine vocation. Their gods, they insist, are simply the biggest and most interesting puzzles in existence. Their prayers are slightly too literal to be comfortable, but the miracles that result are genuine. Monsters find it strangely unsettling to be smited by someone this small and cheerful."
+    },
+    {
+      "race_id": "gnome", "class_id": "rogue",
+      "lore": "The Gnome Rogue was born for this specific career. Tiny, quick, immune to paralytic traps, and constitutionally unable to leave a locked door unexplored. They vanish into spaces that should not fit a living creature, and they return with the most inexplicable collection of other people's belongings. A Gnome Rogue's lockpicks are priceless; their alibi is impenetrable."
+    },
+    {
+      "race_id": "dwarf", "class_id": "warrior",
+      "lore": "If a dungeon is a stone tomb to be conquered, then a Dwarf Warrior is precisely the instrument required. Born in the mountains that teach patience and endurance, trained in the halls that demand perfection or death, a Dwarf Warrior does not charge into battle. They march. They plant their feet. And they do not stop until the enemy is gone or they are."
+    },
+    {
+      "race_id": "dwarf", "class_id": "priest",
+      "lore": "Dwarf Priests are singular figures — the stubbornness of their race turned entirely toward divine devotion. They argue with their gods like they argue with mine-shaft supports: persistently, knowledgeably, and in full expectation that both will hold. When a Dwarf Priest refuses to let a companion die, the universe generally finds it easier to comply."
+    },
+    {
+      "race_id": "dwarf", "class_id": "paladin",
+      "lore": "The Dwarf Paladin is an ancient archetype: the sacred warrior who guards the deep places. They carry their faith like a second suit of armor, and their axe has blessed more foes than any ceremony. Where other paladins inspire with words, a Dwarf Paladin inspires by being absolutely, immovably there. A mountain of conviction with a weapon."
+    },
+    {
+      "race_id": "half_orc", "class_id": "warrior",
+      "lore": "The Half-Orc Warrior has never been offered anything except the hard path. Shunned by society, underestimated by enemies, they have learned to meet violence with a ferocity that borders on the philosophical. They are not angry — they are *focused*. The difference is everything. Their darkness resistance is a small mercy in dungeons that have seen far darker things."
+    },
+    {
+      "race_id": "half_orc", "class_id": "priest",
+      "lore": "Half-Orc Priests are living contradictions that the gods evidently find interesting. The most unlikely divine servants, they carry a brutal honesty about suffering that the softer races cannot manufacture. Their healing is rough, their blessings are clipped, and their faith is absolutely unbreakable. The gods do not choose the deserving. They choose the useful."
+    },
+    {
+      "race_id": "half_orc", "class_id": "rogue",
+      "lore": "The Half-Orc Rogue embodies the philosophy that the best disguise is one no one looks twice at because they're too uncomfortable to make eye contact. Raw strength in a job that rewards subtlety, coupled with a dark-resistance that turns any unlit corridor into a home field advantage. Crude, effective, and quietly devastating when underestimated."
+    },
+    {
+      "race_id": "half_troll", "class_id": "warrior",
+      "lore": "Imagine a wall that has decided to fight back. The Half-Troll Warrior is a force of nature in mortal form — regenerating wounds that would fell a lesser creature, swinging weapons with the unconstrained fury of a creature that has nothing to prove because nothing could possibly argue. Tactically unsophisticated. Emphatically effective."
+    },
+    {
+      "race_id": "half_troll", "class_id": "priest",
+      "lore": "The Half-Troll Priest is a profound mystery to everyone, including themselves. Their god has chosen them for reasons no theological college has satisfactorily explained. What is certain: their prayers work, their regeneration means they survive long enough to keep praying, and the monsters that laugh at them rarely get a second chance to."
+    },
+    {
+      "race_id": "dunadan", "class_id": "warrior",
+      "lore": "To be a Dúnadan Warrior is to carry a legacy heavier than any armor: the blood of ancient kings, the memory of a fallen kingdom, the obligation to be worthy of what your ancestors built and lost. They do not merely fight — they stand as proof that something of the old world still endures. Level for level, perhaps the finest warriors alive. Worth every experience point."
+    },
+    {
+      "race_id": "dunadan", "class_id": "mage",
+      "lore": "Dúnadan Mages carry arcane knowledge measured not in years but in generations of accumulated scholarship. Their minds are deep archives, cross-referencing ancient lore at speeds that make elves look like students. Slow to level, agonisingly slow — but each level is a masterwork. The dungeon has never encountered something this well-prepared and this patient."
+    },
+    {
+      "race_id": "dunadan", "class_id": "priest",
+      "lore": "A Dúnadan Priest stands as one of the most formidable divine servants in existence: ancient bloodline, exceptional wisdom, and the unshakeable faith of a lineage that has watched empires fall and endured regardless. They do not petition their god. They converse with it. The healing that follows is exceptional."
+    },
+    {
+      "race_id": "dunadan", "class_id": "ranger",
+      "lore": "The Dúnadan Ranger is something out of legend: a wanderer of royal blood who has chosen the wilderness over any throne. They read the dungeon like scripture, track monsters through corridors they haven't personally walked in centuries, and loose arrows with the eerie precision of someone who has done this before — because their lineage has. Many times."
+    },
+    {
+      "race_id": "dunadan", "class_id": "paladin",
+      "lore": "If there is a more iconic image of holy might than the Dúnadan Paladin, no bard has ever captured it. Royal blood, divine blessing, and constitution that endures curses that would wither most mortal champions. They are what the dungeon's darkest lords fear most: someone ancient enough to remember when they were first defeated, and patient enough to do it again."
+    },
+    {
+      "race_id": "high_elf", "class_id": "warrior",
+      "lore": "A High-Elf choosing the warrior's path is either a great tragedy or a great statement, depending on whom you ask. They carry millennia of martial tradition and the ability to see through any invisibility trick their opponents might try. Their progress is legendarily slow — but then, they have the time, and the dungeon does not."
+    },
+    {
+      "race_id": "high_elf", "class_id": "mage",
+      "lore": "This is the pinnacle of arcane potential walking on two legs. A High-Elf Mage does not learn magic — they *are* magic, condensed into a form that requires rest and food. The experience cost is staggering. The result is worth it. They see invisible things before they become problems and unravel spells that would confound a human savant entirely."
+    },
+    {
+      "race_id": "high_elf", "class_id": "priest",
+      "lore": "High-Elf Priests have prayed longer than most civilisations have existed. Their faith is not a comfort — it is a geological force, patient and deep as stone. Their healing is immaculate. Their divine wrath, when finally kindled, is the kind of event that gets recorded in the historical record as 'the incident'. The dungeon has been warned."
+    },
+    {
+      "race_id": "high_elf", "class_id": "ranger",
+      "lore": "The High-Elf Ranger is a figure from the oldest of songs: the immortal warden of the deep places, bow singing in the dark, seeing what others cannot even dream of. They have hunted the dungeon's inhabitants across an age of the world. The dungeon's inhabitants have not yet fully processed the implications of this. Their first arrow enlightens them."
+    },
+    {
+      "race_id": "kobold", "class_id": "warrior",
+      "lore": "Kobold Warriors receive exactly as much respect as it takes to not get bitten. Scrappy, tenacious, immune to the poison traps that devastate other adventurers, and motivated by a chip on their scaly shoulder the size of a small geological feature. They are frequently underestimated. They have learned to use this as a strategy."
+    },
+    {
+      "race_id": "kobold", "class_id": "priest",
+      "lore": "The Kobold Priest occupies a fascinating theological niche: divine servant of a race that every other religion considers, at best, a nuisance. Their god, whatever it may be, has an excellent sense of irony and a high tolerance for chaos. Kobold Priests channel this divine chaos into surprisingly effective healing and, when provoked, spectacular retribution."
+    },
+    {
+      "race_id": "kobold", "class_id": "rogue",
+      "lore": "The Kobold Rogue is the dungeon's most efficient scavenger: small enough to fit through passages others ignore, resistant to the poison cached in every interesting trap, and possessed of a survival instinct so finely honed it practically counts as a magic item. They steal things, find things, and occasionally detonate things. Always on purpose. Usually."
+    },
+    {
+      "race_id": "kobold", "class_id": "ranger",
+      "lore": "Kobold Rangers have turned their natural paranoia into a profession. Masters of ambush tactics, able to navigate poison-laced areas where other races falter, they are devastating scouts and deadly archers at distances that seem improbable for their size. Every dungeon expedition goes better with a Kobold Ranger. They will tell you this themselves. Repeatedly."
+    }
+  ]
+}

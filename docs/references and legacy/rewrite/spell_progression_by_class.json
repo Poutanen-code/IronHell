@@ -1,0 +1,2575 @@
+{
+  "version": "0.1.0",
+  "progressionByClass": {
+    "mage": [
+      {
+        "spellIndex": 0,
+        "spellName": "Magic Missile",
+        "level": 1,
+        "mana": 1,
+        "fail": 22,
+        "exp": 4
+      },
+      {
+        "spellIndex": 1,
+        "spellName": "Detect Monsters",
+        "level": 1,
+        "mana": 1,
+        "fail": 23,
+        "exp": 4
+      },
+      {
+        "spellIndex": 2,
+        "spellName": "Phase Door",
+        "level": 1,
+        "mana": 2,
+        "fail": 24,
+        "exp": 4
+      },
+      {
+        "spellIndex": 3,
+        "spellName": "Light Area",
+        "level": 1,
+        "mana": 2,
+        "fail": 26,
+        "exp": 4
+      },
+      {
+        "spellIndex": 4,
+        "spellName": "Find Hidden Traps/Doors",
+        "level": 3,
+        "mana": 3,
+        "fail": 25,
+        "exp": 2
+      },
+      {
+        "spellIndex": 5,
+        "spellName": "Cure Light Wounds",
+        "level": 3,
+        "mana": 3,
+        "fail": 25,
+        "exp": 3
+      },
+      {
+        "spellIndex": 6,
+        "spellName": "Detect Treasure",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 7,
+        "spellName": "Detect Objects",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 8,
+        "spellName": "Identify",
+        "level": 11,
+        "mana": 7,
+        "fail": 25,
+        "exp": 6
+      },
+      {
+        "spellIndex": 9,
+        "spellName": "Detect Invisible",
+        "level": 15,
+        "mana": 5,
+        "fail": 40,
+        "exp": 6
+      },
+      {
+        "spellIndex": 10,
+        "spellName": "Detect Enchantment",
+        "level": 30,
+        "mana": 10,
+        "fail": 70,
+        "exp": 10
+      },
+      {
+        "spellIndex": 11,
+        "spellName": "Stinking Cloud",
+        "level": 3,
+        "mana": 3,
+        "fail": 27,
+        "exp": 3
+      },
+      {
+        "spellIndex": 12,
+        "spellName": "Lightning Bolt",
+        "level": 5,
+        "mana": 4,
+        "fail": 30,
+        "exp": 4
+      },
+      {
+        "spellIndex": 13,
+        "spellName": "Confuse Monster",
+        "level": 5,
+        "mana": 4,
+        "fail": 30,
+        "exp": 4
+      },
+      {
+        "spellIndex": 14,
+        "spellName": "Sleep Monster",
+        "level": 7,
+        "mana": 5,
+        "fail": 30,
+        "exp": 4
+      },
+      {
+        "spellIndex": 15,
+        "spellName": "Wonder",
+        "level": 7,
+        "mana": 10,
+        "fail": 50,
+        "exp": 5
+      },
+      {
+        "spellIndex": 16,
+        "spellName": "Frost Bolt",
+        "level": 7,
+        "mana": 6,
+        "fail": 40,
+        "exp": 6
+      },
+      {
+        "spellIndex": 17,
+        "spellName": "Acid Bolt",
+        "level": 15,
+        "mana": 9,
+        "fail": 50,
+        "exp": 8
+      },
+      {
+        "spellIndex": 18,
+        "spellName": "Fire Bolt",
+        "level": 10,
+        "mana": 7,
+        "fail": 50,
+        "exp": 7
+      },
+      {
+        "spellIndex": 19,
+        "spellName": "Trap/Door Destruction",
+        "level": 5,
+        "mana": 5,
+        "fail": 30,
+        "exp": 6
+      },
+      {
+        "spellIndex": 20,
+        "spellName": "Spear of Light",
+        "level": 7,
+        "mana": 6,
+        "fail": 30,
+        "exp": 5
+      },
+      {
+        "spellIndex": 21,
+        "spellName": "Turn Stone to Mud",
+        "level": 9,
+        "mana": 7,
+        "fail": 44,
+        "exp": 8
+      },
+      {
+        "spellIndex": 22,
+        "spellName": "Door Creation",
+        "level": 13,
+        "mana": 9,
+        "fail": 40,
+        "exp": 12
+      },
+      {
+        "spellIndex": 23,
+        "spellName": "Earthquake",
+        "level": 20,
+        "mana": 18,
+        "fail": 60,
+        "exp": 20
+      },
+      {
+        "spellIndex": 24,
+        "spellName": "Stair Creation",
+        "level": 24,
+        "mana": 20,
+        "fail": 50,
+        "exp": 20
+      },
+      {
+        "spellIndex": 25,
+        "spellName": "Cure Poison",
+        "level": 5,
+        "mana": 5,
+        "fail": 35,
+        "exp": 4
+      },
+      {
+        "spellIndex": 26,
+        "spellName": "Satisfy Hunger",
+        "level": 9,
+        "mana": 7,
+        "fail": 45,
+        "exp": 8
+      },
+      {
+        "spellIndex": 27,
+        "spellName": "Heroism",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 28,
+        "spellName": "Berserker",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 29,
+        "spellName": "Haste Self",
+        "level": 25,
+        "mana": 12,
+        "fail": 65,
+        "exp": 10
+      },
+      {
+        "spellIndex": 30,
+        "spellName": "Teleport Self",
+        "level": 7,
+        "mana": 6,
+        "fail": 35,
+        "exp": 5
+      },
+      {
+        "spellIndex": 31,
+        "spellName": "Slow Monster",
+        "level": 17,
+        "mana": 9,
+        "fail": 50,
+        "exp": 7
+      },
+      {
+        "spellIndex": 32,
+        "spellName": "Teleport Other",
+        "level": 23,
+        "mana": 12,
+        "fail": 60,
+        "exp": 8
+      },
+      {
+        "spellIndex": 33,
+        "spellName": "Teleport Level",
+        "level": 28,
+        "mana": 17,
+        "fail": 65,
+        "exp": 20
+      },
+      {
+        "spellIndex": 34,
+        "spellName": "Word of Recall",
+        "level": 30,
+        "mana": 25,
+        "fail": 75,
+        "exp": 15
+      },
+      {
+        "spellIndex": 35,
+        "spellName": "Polymorph Other",
+        "level": 11,
+        "mana": 7,
+        "fail": 45,
+        "exp": 9
+      },
+      {
+        "spellIndex": 36,
+        "spellName": "Shock Wave",
+        "level": 16,
+        "mana": 10,
+        "fail": 40,
+        "exp": 6
+      },
+      {
+        "spellIndex": 37,
+        "spellName": "Explosion",
+        "level": 20,
+        "mana": 20,
+        "fail": 50,
+        "exp": 10
+      },
+      {
+        "spellIndex": 38,
+        "spellName": "Cloudkill",
+        "level": 20,
+        "mana": 9,
+        "fail": 50,
+        "exp": 8
+      },
+      {
+        "spellIndex": 39,
+        "spellName": "Mass Sleep",
+        "level": 25,
+        "mana": 7,
+        "fail": 50,
+        "exp": 6
+      },
+      {
+        "spellIndex": 40,
+        "spellName": "Bedlam",
+        "level": 25,
+        "mana": 15,
+        "fail": 60,
+        "exp": 24
+      },
+      {
+        "spellIndex": 41,
+        "spellName": "Rend Soul",
+        "level": 25,
+        "mana": 30,
+        "fail": 80,
+        "exp": 30
+      },
+      {
+        "spellIndex": 42,
+        "spellName": "Word of Destruction",
+        "level": 33,
+        "mana": 21,
+        "fail": 80,
+        "exp": 35
+      },
+      {
+        "spellIndex": 43,
+        "spellName": "Chaos Strike",
+        "level": 38,
+        "mana": 35,
+        "fail": 90,
+        "exp": 40
+      },
+      {
+        "spellIndex": 44,
+        "spellName": "Resist Cold",
+        "level": 10,
+        "mana": 5,
+        "fail": 50,
+        "exp": 10
+      },
+      {
+        "spellIndex": 45,
+        "spellName": "Resist Fire",
+        "level": 10,
+        "mana": 5,
+        "fail": 50,
+        "exp": 10
+      },
+      {
+        "spellIndex": 46,
+        "spellName": "Resist Poison",
+        "level": 25,
+        "mana": 10,
+        "fail": 45,
+        "exp": 20
+      },
+      {
+        "spellIndex": 47,
+        "spellName": "Resistance",
+        "level": 28,
+        "mana": 20,
+        "fail": 65,
+        "exp": 30
+      },
+      {
+        "spellIndex": 48,
+        "spellName": "Shield",
+        "level": 32,
+        "mana": 24,
+        "fail": 75,
+        "exp": 30
+      },
+      {
+        "spellIndex": 49,
+        "spellName": "Rune of Protection",
+        "level": 36,
+        "mana": 60,
+        "fail": 70,
+        "exp": 40
+      },
+      {
+        "spellIndex": 50,
+        "spellName": "Lesser Recharging",
+        "level": 9,
+        "mana": 7,
+        "fail": 75,
+        "exp": 10
+      },
+      {
+        "spellIndex": 51,
+        "spellName": "Enchant Armor",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 52,
+        "spellName": "Enchant Weapon",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 53,
+        "spellName": "Greater Recharging",
+        "level": 30,
+        "mana": 30,
+        "fail": 95,
+        "exp": 100
+      },
+      {
+        "spellIndex": 54,
+        "spellName": "Elemental Brand",
+        "level": 32,
+        "mana": 60,
+        "fail": 95,
+        "exp": 120
+      },
+      {
+        "spellIndex": 55,
+        "spellName": "Frost Ball",
+        "level": 19,
+        "mana": 12,
+        "fail": 55,
+        "exp": 8
+      },
+      {
+        "spellIndex": 56,
+        "spellName": "Acid Ball",
+        "level": 20,
+        "mana": 15,
+        "fail": 70,
+        "exp": 20
+      },
+      {
+        "spellIndex": 57,
+        "spellName": "Fire Ball",
+        "level": 26,
+        "mana": 18,
+        "fail": 65,
+        "exp": 12
+      },
+      {
+        "spellIndex": 58,
+        "spellName": "Ice Storm",
+        "level": 27,
+        "mana": 22,
+        "fail": 75,
+        "exp": 24
+      },
+      {
+        "spellIndex": 59,
+        "spellName": "Banishment",
+        "level": 30,
+        "mana": 45,
+        "fail": 95,
+        "exp": 25
+      },
+      {
+        "spellIndex": 60,
+        "spellName": "Meteor Swarm",
+        "level": 30,
+        "mana": 25,
+        "fail": 85,
+        "exp": 34
+      },
+      {
+        "spellIndex": 61,
+        "spellName": "Mass Banishment",
+        "level": 35,
+        "mana": 75,
+        "fail": 90,
+        "exp": 100
+      },
+      {
+        "spellIndex": 62,
+        "spellName": "Rift",
+        "level": 35,
+        "mana": 30,
+        "fail": 60,
+        "exp": 25
+      },
+      {
+        "spellIndex": 63,
+        "spellName": "Mana Storm",
+        "level": 42,
+        "mana": 30,
+        "fail": 95,
+        "exp": 200
+      }
+    ],
+    "priest": [
+      {
+        "spellIndex": 0,
+        "spellName": "Detect Evil",
+        "level": 1,
+        "mana": 1,
+        "fail": 10,
+        "exp": 4
+      },
+      {
+        "spellIndex": 1,
+        "spellName": "Cure Light Wounds",
+        "level": 1,
+        "mana": 2,
+        "fail": 15,
+        "exp": 4
+      },
+      {
+        "spellIndex": 2,
+        "spellName": "Bless",
+        "level": 1,
+        "mana": 2,
+        "fail": 20,
+        "exp": 4
+      },
+      {
+        "spellIndex": 3,
+        "spellName": "Remove Fear",
+        "level": 1,
+        "mana": 2,
+        "fail": 25,
+        "exp": 4
+      },
+      {
+        "spellIndex": 4,
+        "spellName": "Call Light",
+        "level": 3,
+        "mana": 2,
+        "fail": 25,
+        "exp": 1
+      },
+      {
+        "spellIndex": 5,
+        "spellName": "Find Traps",
+        "level": 3,
+        "mana": 3,
+        "fail": 27,
+        "exp": 2
+      },
+      {
+        "spellIndex": 6,
+        "spellName": "Detect Doors/Stairs",
+        "level": 3,
+        "mana": 3,
+        "fail": 27,
+        "exp": 2
+      },
+      {
+        "spellIndex": 7,
+        "spellName": "Slow Poison",
+        "level": 3,
+        "mana": 3,
+        "fail": 28,
+        "exp": 4
+      },
+      {
+        "spellIndex": 8,
+        "spellName": "Scare Monster",
+        "level": 5,
+        "mana": 4,
+        "fail": 29,
+        "exp": 3
+      },
+      {
+        "spellIndex": 9,
+        "spellName": "Portal",
+        "level": 5,
+        "mana": 4,
+        "fail": 30,
+        "exp": 4
+      },
+      {
+        "spellIndex": 10,
+        "spellName": "Cure Serious Wounds",
+        "level": 5,
+        "mana": 4,
+        "fail": 32,
+        "exp": 4
+      },
+      {
+        "spellIndex": 11,
+        "spellName": "Chant",
+        "level": 5,
+        "mana": 5,
+        "fail": 34,
+        "exp": 4
+      },
+      {
+        "spellIndex": 12,
+        "spellName": "Sanctuary",
+        "level": 7,
+        "mana": 5,
+        "fail": 36,
+        "exp": 3
+      },
+      {
+        "spellIndex": 13,
+        "spellName": "Satisfy Hunger",
+        "level": 7,
+        "mana": 5,
+        "fail": 38,
+        "exp": 4
+      },
+      {
+        "spellIndex": 14,
+        "spellName": "Remove Curse",
+        "level": 7,
+        "mana": 6,
+        "fail": 38,
+        "exp": 5
+      },
+      {
+        "spellIndex": 15,
+        "spellName": "Resist Heat and Cold",
+        "level": 7,
+        "mana": 7,
+        "fail": 38,
+        "exp": 5
+      },
+      {
+        "spellIndex": 16,
+        "spellName": "Neutralize Poison",
+        "level": 9,
+        "mana": 6,
+        "fail": 38,
+        "exp": 4
+      },
+      {
+        "spellIndex": 17,
+        "spellName": "Orb of Draining",
+        "level": 9,
+        "mana": 7,
+        "fail": 40,
+        "exp": 4
+      },
+      {
+        "spellIndex": 18,
+        "spellName": "Cure Critical Wounds",
+        "level": 9,
+        "mana": 7,
+        "fail": 38,
+        "exp": 4
+      },
+      {
+        "spellIndex": 19,
+        "spellName": "Sense Invisible",
+        "level": 11,
+        "mana": 8,
+        "fail": 42,
+        "exp": 4
+      },
+      {
+        "spellIndex": 20,
+        "spellName": "Protection from Evil",
+        "level": 11,
+        "mana": 8,
+        "fail": 42,
+        "exp": 4
+      },
+      {
+        "spellIndex": 21,
+        "spellName": "Earthquake",
+        "level": 11,
+        "mana": 9,
+        "fail": 55,
+        "exp": 5
+      },
+      {
+        "spellIndex": 22,
+        "spellName": "Sense Surroundings",
+        "level": 13,
+        "mana": 10,
+        "fail": 45,
+        "exp": 4
+      },
+      {
+        "spellIndex": 23,
+        "spellName": "Cure Mortal Wounds",
+        "level": 13,
+        "mana": 11,
+        "fail": 45,
+        "exp": 4
+      },
+      {
+        "spellIndex": 24,
+        "spellName": "Turn Undead",
+        "level": 15,
+        "mana": 12,
+        "fail": 50,
+        "exp": 5
+      },
+      {
+        "spellIndex": 25,
+        "spellName": "Prayer",
+        "level": 15,
+        "mana": 14,
+        "fail": 50,
+        "exp": 5
+      },
+      {
+        "spellIndex": 26,
+        "spellName": "Dispel Undead",
+        "level": 17,
+        "mana": 14,
+        "fail": 55,
+        "exp": 7
+      },
+      {
+        "spellIndex": 27,
+        "spellName": "Heal",
+        "level": 21,
+        "mana": 16,
+        "fail": 60,
+        "exp": 7
+      },
+      {
+        "spellIndex": 28,
+        "spellName": "Dispel Evil",
+        "level": 25,
+        "mana": 20,
+        "fail": 70,
+        "exp": 12
+      },
+      {
+        "spellIndex": 29,
+        "spellName": "Glyph of Warding",
+        "level": 33,
+        "mana": 55,
+        "fail": 90,
+        "exp": 15
+      },
+      {
+        "spellIndex": 30,
+        "spellName": "Holy Word",
+        "level": 39,
+        "mana": 32,
+        "fail": 95,
+        "exp": 20
+      },
+      {
+        "spellIndex": 31,
+        "spellName": "Detect Monsters",
+        "level": 3,
+        "mana": 3,
+        "fail": 50,
+        "exp": 2
+      },
+      {
+        "spellIndex": 32,
+        "spellName": "Detection",
+        "level": 10,
+        "mana": 10,
+        "fail": 80,
+        "exp": 20
+      },
+      {
+        "spellIndex": 33,
+        "spellName": "Perception",
+        "level": 20,
+        "mana": 20,
+        "fail": 80,
+        "exp": 20
+      },
+      {
+        "spellIndex": 34,
+        "spellName": "Probing",
+        "level": 25,
+        "mana": 10,
+        "fail": 80,
+        "exp": 150
+      },
+      {
+        "spellIndex": 35,
+        "spellName": "Clairvoyance",
+        "level": 35,
+        "mana": 50,
+        "fail": 80,
+        "exp": 230
+      },
+      {
+        "spellIndex": 36,
+        "spellName": "Cure Serious Wounds",
+        "level": 15,
+        "mana": 5,
+        "fail": 50,
+        "exp": 25
+      },
+      {
+        "spellIndex": 37,
+        "spellName": "Cure Mortal Wounds",
+        "level": 17,
+        "mana": 7,
+        "fail": 60,
+        "exp": 45
+      },
+      {
+        "spellIndex": 38,
+        "spellName": "Healing",
+        "level": 30,
+        "mana": 50,
+        "fail": 80,
+        "exp": 130
+      },
+      {
+        "spellIndex": 39,
+        "spellName": "Life Restoration",
+        "level": 35,
+        "mana": 70,
+        "fail": 90,
+        "exp": 230
+      },
+      {
+        "spellIndex": 40,
+        "spellName": "Remembrance",
+        "level": 35,
+        "mana": 70,
+        "fail": 90,
+        "exp": 250
+      },
+      {
+        "spellIndex": 41,
+        "spellName": "Dispel Undead",
+        "level": 15,
+        "mana": 7,
+        "fail": 70,
+        "exp": 25
+      },
+      {
+        "spellIndex": 42,
+        "spellName": "Dispel Evil",
+        "level": 20,
+        "mana": 10,
+        "fail": 75,
+        "exp": 60
+      },
+      {
+        "spellIndex": 43,
+        "spellName": "Banish Evil",
+        "level": 25,
+        "mana": 25,
+        "fail": 80,
+        "exp": 250
+      },
+      {
+        "spellIndex": 44,
+        "spellName": "Word of Destruction",
+        "level": 35,
+        "mana": 35,
+        "fail": 80,
+        "exp": 115
+      },
+      {
+        "spellIndex": 45,
+        "spellName": "Annihilation",
+        "level": 45,
+        "mana": 60,
+        "fail": 75,
+        "exp": 250
+      },
+      {
+        "spellIndex": 46,
+        "spellName": "Unbarring Ways",
+        "level": 5,
+        "mana": 6,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 47,
+        "spellName": "Recharging",
+        "level": 15,
+        "mana": 20,
+        "fail": 80,
+        "exp": 25
+      },
+      {
+        "spellIndex": 48,
+        "spellName": "Dispel Curse",
+        "level": 25,
+        "mana": 40,
+        "fail": 80,
+        "exp": 160
+      },
+      {
+        "spellIndex": 49,
+        "spellName": "Enchant Weapon",
+        "level": 35,
+        "mana": 50,
+        "fail": 80,
+        "exp": 230
+      },
+      {
+        "spellIndex": 50,
+        "spellName": "Enchant Armor",
+        "level": 37,
+        "mana": 60,
+        "fail": 85,
+        "exp": 250
+      },
+      {
+        "spellIndex": 51,
+        "spellName": "Elemental Brand",
+        "level": 45,
+        "mana": 95,
+        "fail": 85,
+        "exp": 250
+      },
+      {
+        "spellIndex": 52,
+        "spellName": "Blink",
+        "level": 3,
+        "mana": 3,
+        "fail": 50,
+        "exp": 6
+      },
+      {
+        "spellIndex": 53,
+        "spellName": "Teleport Self",
+        "level": 10,
+        "mana": 10,
+        "fail": 50,
+        "exp": 8
+      },
+      {
+        "spellIndex": 54,
+        "spellName": "Teleport Other",
+        "level": 20,
+        "mana": 20,
+        "fail": 80,
+        "exp": 16
+      },
+      {
+        "spellIndex": 55,
+        "spellName": "Teleport Level",
+        "level": 30,
+        "mana": 40,
+        "fail": 75,
+        "exp": 133
+      },
+      {
+        "spellIndex": 56,
+        "spellName": "Word of Recall",
+        "level": 35,
+        "mana": 50,
+        "fail": 75,
+        "exp": 11
+      },
+      {
+        "spellIndex": 57,
+        "spellName": "Alter Reality",
+        "level": 40,
+        "mana": 60,
+        "fail": 75,
+        "exp": 250
+      },
+      {
+        "spellIndex": 58,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 59,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 60,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 61,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 62,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 63,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      }
+    ],
+    "rogue": [
+      {
+        "spellIndex": 0,
+        "spellName": "Magic Missile",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 1,
+        "spellName": "Detect Monsters",
+        "level": 5,
+        "mana": 1,
+        "fail": 50,
+        "exp": 1
+      },
+      {
+        "spellIndex": 2,
+        "spellName": "Phase Door",
+        "level": 7,
+        "mana": 2,
+        "fail": 55,
+        "exp": 1
+      },
+      {
+        "spellIndex": 3,
+        "spellName": "Light Area",
+        "level": 9,
+        "mana": 3,
+        "fail": 60,
+        "exp": 1
+      },
+      {
+        "spellIndex": 4,
+        "spellName": "Find Hidden Traps/Doors",
+        "level": 8,
+        "mana": 3,
+        "fail": 50,
+        "exp": 1
+      },
+      {
+        "spellIndex": 5,
+        "spellName": "Cure Light Wounds",
+        "level": 11,
+        "mana": 4,
+        "fail": 65,
+        "exp": 1
+      },
+      {
+        "spellIndex": 6,
+        "spellName": "Detect Treasure",
+        "level": 10,
+        "mana": 3,
+        "fail": 60,
+        "exp": 1
+      },
+      {
+        "spellIndex": 7,
+        "spellName": "Detect Objects",
+        "level": 12,
+        "mana": 4,
+        "fail": 65,
+        "exp": 1
+      },
+      {
+        "spellIndex": 8,
+        "spellName": "Identify",
+        "level": 18,
+        "mana": 18,
+        "fail": 60,
+        "exp": 2
+      },
+      {
+        "spellIndex": 9,
+        "spellName": "Detect Invisible",
+        "level": 20,
+        "mana": 10,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 10,
+        "spellName": "Detect Enchantment",
+        "level": 27,
+        "mana": 10,
+        "fail": 50,
+        "exp": 10
+      },
+      {
+        "spellIndex": 11,
+        "spellName": "Stinking Cloud",
+        "level": 21,
+        "mana": 12,
+        "fail": 50,
+        "exp": 10
+      },
+      {
+        "spellIndex": 12,
+        "spellName": "Lightning Bolt",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 13,
+        "spellName": "Confuse Monster",
+        "level": 15,
+        "mana": 6,
+        "fail": 75,
+        "exp": 1
+      },
+      {
+        "spellIndex": 14,
+        "spellName": "Sleep Monster",
+        "level": 19,
+        "mana": 8,
+        "fail": 85,
+        "exp": 1
+      },
+      {
+        "spellIndex": 15,
+        "spellName": "Wonder",
+        "level": 20,
+        "mana": 10,
+        "fail": 70,
+        "exp": 20
+      },
+      {
+        "spellIndex": 16,
+        "spellName": "Frost Bolt",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 17,
+        "spellName": "Acid Bolt",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 18,
+        "spellName": "Fire Bolt",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 19,
+        "spellName": "Trap/Door Destruction",
+        "level": 14,
+        "mana": 7,
+        "fail": 60,
+        "exp": 2
+      },
+      {
+        "spellIndex": 20,
+        "spellName": "Spear of Light",
+        "level": 23,
+        "mana": 10,
+        "fail": 95,
+        "exp": 1
+      },
+      {
+        "spellIndex": 21,
+        "spellName": "Turn Stone to Mud",
+        "level": 24,
+        "mana": 11,
+        "fail": 70,
+        "exp": 1
+      },
+      {
+        "spellIndex": 22,
+        "spellName": "Door Creation",
+        "level": 17,
+        "mana": 7,
+        "fail": 30,
+        "exp": 15
+      },
+      {
+        "spellIndex": 23,
+        "spellName": "Earthquake",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 24,
+        "spellName": "Stair Creation",
+        "level": 25,
+        "mana": 12,
+        "fail": 40,
+        "exp": 25
+      },
+      {
+        "spellIndex": 25,
+        "spellName": "Cure Poison",
+        "level": 21,
+        "mana": 9,
+        "fail": 90,
+        "exp": 1
+      },
+      {
+        "spellIndex": 26,
+        "spellName": "Satisfy Hunger",
+        "level": 25,
+        "mana": 12,
+        "fail": 95,
+        "exp": 1
+      },
+      {
+        "spellIndex": 27,
+        "spellName": "Heroism",
+        "level": 26,
+        "mana": 15,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 28,
+        "spellName": "Berserker",
+        "level": 28,
+        "mana": 20,
+        "fail": 60,
+        "exp": 60
+      },
+      {
+        "spellIndex": 29,
+        "spellName": "Haste Self",
+        "level": 32,
+        "mana": 25,
+        "fail": 70,
+        "exp": 6
+      },
+      {
+        "spellIndex": 30,
+        "spellName": "Teleport Self",
+        "level": 22,
+        "mana": 9,
+        "fail": 50,
+        "exp": 1
+      },
+      {
+        "spellIndex": 31,
+        "spellName": "Slow Monster",
+        "level": 28,
+        "mana": 20,
+        "fail": 70,
+        "exp": 2
+      },
+      {
+        "spellIndex": 32,
+        "spellName": "Teleport Other",
+        "level": 31,
+        "mana": 25,
+        "fail": 70,
+        "exp": 3
+      },
+      {
+        "spellIndex": 33,
+        "spellName": "Teleport Level",
+        "level": 25,
+        "mana": 20,
+        "fail": 60,
+        "exp": 20
+      },
+      {
+        "spellIndex": 34,
+        "spellName": "Word of Recall",
+        "level": 36,
+        "mana": 40,
+        "fail": 80,
+        "exp": 18
+      },
+      {
+        "spellIndex": 35,
+        "spellName": "Polymorph Other",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 36,
+        "spellName": "Shock Wave",
+        "level": 35,
+        "mana": 25,
+        "fail": 80,
+        "exp": 50
+      },
+      {
+        "spellIndex": 37,
+        "spellName": "Explosion",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 38,
+        "spellName": "Cloudkill",
+        "level": 25,
+        "mana": 20,
+        "fail": 60,
+        "exp": 15
+      },
+      {
+        "spellIndex": 39,
+        "spellName": "Mass Sleep",
+        "level": 24,
+        "mana": 15,
+        "fail": 80,
+        "exp": 10
+      },
+      {
+        "spellIndex": 40,
+        "spellName": "Bedlam",
+        "level": 29,
+        "mana": 20,
+        "fail": 70,
+        "exp": 20
+      },
+      {
+        "spellIndex": 41,
+        "spellName": "Rend Soul",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 42,
+        "spellName": "Word of Destruction",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 43,
+        "spellName": "Chaos Strike",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 44,
+        "spellName": "Resist Cold",
+        "level": 16,
+        "mana": 12,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 45,
+        "spellName": "Resist Fire",
+        "level": 19,
+        "mana": 12,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 46,
+        "spellName": "Resist Poison",
+        "level": 30,
+        "mana": 25,
+        "fail": 75,
+        "exp": 60
+      },
+      {
+        "spellIndex": 47,
+        "spellName": "Resistance",
+        "level": 31,
+        "mana": 30,
+        "fail": 85,
+        "exp": 80
+      },
+      {
+        "spellIndex": 48,
+        "spellName": "Shield",
+        "level": 34,
+        "mana": 20,
+        "fail": 75,
+        "exp": 80
+      },
+      {
+        "spellIndex": 49,
+        "spellName": "Rune of Protection",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 50,
+        "spellName": "Lesser Recharging",
+        "level": 27,
+        "mana": 15,
+        "fail": 99,
+        "exp": 1
+      },
+      {
+        "spellIndex": 51,
+        "spellName": "Enchant Armor",
+        "level": 31,
+        "mana": 50,
+        "fail": 95,
+        "exp": 90
+      },
+      {
+        "spellIndex": 52,
+        "spellName": "Enchant Weapon",
+        "level": 33,
+        "mana": 55,
+        "fail": 90,
+        "exp": 90
+      },
+      {
+        "spellIndex": 53,
+        "spellName": "Greater Recharging",
+        "level": 35,
+        "mana": 40,
+        "fail": 95,
+        "exp": 100
+      },
+      {
+        "spellIndex": 54,
+        "spellName": "Elemental Brand",
+        "level": 37,
+        "mana": 60,
+        "fail": 80,
+        "exp": 120
+      },
+      {
+        "spellIndex": 55,
+        "spellName": "Frost Ball",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 56,
+        "spellName": "Acid Ball",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 57,
+        "spellName": "Fire Ball",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 58,
+        "spellName": "Ice Storm",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 59,
+        "spellName": "Banishment",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 60,
+        "spellName": "Meteor Swarm",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 61,
+        "spellName": "Mass Banishment",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 62,
+        "spellName": "Rift",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 63,
+        "spellName": "Mana Storm",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      }
+    ],
+    "ranger": [
+      {
+        "spellIndex": 0,
+        "spellName": "Magic Missile",
+        "level": 3,
+        "mana": 1,
+        "fail": 30,
+        "exp": 1
+      },
+      {
+        "spellIndex": 1,
+        "spellName": "Detect Monsters",
+        "level": 3,
+        "mana": 2,
+        "fail": 35,
+        "exp": 2
+      },
+      {
+        "spellIndex": 2,
+        "spellName": "Phase Door",
+        "level": 3,
+        "mana": 2,
+        "fail": 35,
+        "exp": 2
+      },
+      {
+        "spellIndex": 3,
+        "spellName": "Light Area",
+        "level": 5,
+        "mana": 3,
+        "fail": 35,
+        "exp": 1
+      },
+      {
+        "spellIndex": 4,
+        "spellName": "Find Hidden Traps/Doors",
+        "level": 5,
+        "mana": 4,
+        "fail": 45,
+        "exp": 2
+      },
+      {
+        "spellIndex": 5,
+        "spellName": "Cure Light Wounds",
+        "level": 5,
+        "mana": 3,
+        "fail": 40,
+        "exp": 1
+      },
+      {
+        "spellIndex": 6,
+        "spellName": "Detect Treasure",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 7,
+        "spellName": "Detect Objects",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 8,
+        "spellName": "Identify",
+        "level": 23,
+        "mana": 25,
+        "fail": 90,
+        "exp": 3
+      },
+      {
+        "spellIndex": 9,
+        "spellName": "Detect Invisible",
+        "level": 25,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 10,
+        "spellName": "Detect Enchantment",
+        "level": 35,
+        "mana": 20,
+        "fail": 70,
+        "exp": 10
+      },
+      {
+        "spellIndex": 11,
+        "spellName": "Stinking Cloud",
+        "level": 7,
+        "mana": 5,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 12,
+        "spellName": "Lightning Bolt",
+        "level": 9,
+        "mana": 7,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 13,
+        "spellName": "Confuse Monster",
+        "level": 7,
+        "mana": 6,
+        "fail": 40,
+        "exp": 2
+      },
+      {
+        "spellIndex": 14,
+        "spellName": "Sleep Monster",
+        "level": 11,
+        "mana": 8,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 15,
+        "spellName": "Wonder",
+        "level": 15,
+        "mana": 18,
+        "fail": 80,
+        "exp": 10
+      },
+      {
+        "spellIndex": 16,
+        "spellName": "Frost Bolt",
+        "level": 15,
+        "mana": 12,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 17,
+        "spellName": "Acid Bolt",
+        "level": 20,
+        "mana": 16,
+        "fail": 50,
+        "exp": 6
+      },
+      {
+        "spellIndex": 18,
+        "spellName": "Fire Bolt",
+        "level": 25,
+        "mana": 20,
+        "fail": 60,
+        "exp": 3
+      },
+      {
+        "spellIndex": 19,
+        "spellName": "Trap/Door Destruction",
+        "level": 9,
+        "mana": 8,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 20,
+        "spellName": "Spear of Light",
+        "level": 13,
+        "mana": 11,
+        "fail": 55,
+        "exp": 4
+      },
+      {
+        "spellIndex": 21,
+        "spellName": "Turn Stone to Mud",
+        "level": 15,
+        "mana": 13,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 22,
+        "spellName": "Door Creation",
+        "level": 20,
+        "mana": 17,
+        "fail": 20,
+        "exp": 25
+      },
+      {
+        "spellIndex": 23,
+        "spellName": "Earthquake",
+        "level": 30,
+        "mana": 28,
+        "fail": 60,
+        "exp": 16
+      },
+      {
+        "spellIndex": 24,
+        "spellName": "Stair Creation",
+        "level": 32,
+        "mana": 32,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 25,
+        "spellName": "Cure Poison",
+        "level": 11,
+        "mana": 9,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 26,
+        "spellName": "Satisfy Hunger",
+        "level": 17,
+        "mana": 17,
+        "fail": 55,
+        "exp": 3
+      },
+      {
+        "spellIndex": 27,
+        "spellName": "Heroism",
+        "level": 18,
+        "mana": 15,
+        "fail": 50,
+        "exp": 40
+      },
+      {
+        "spellIndex": 28,
+        "spellName": "Berserker",
+        "level": 23,
+        "mana": 30,
+        "fail": 80,
+        "exp": 35
+      },
+      {
+        "spellIndex": 29,
+        "spellName": "Haste Self",
+        "level": 33,
+        "mana": 25,
+        "fail": 75,
+        "exp": 4
+      },
+      {
+        "spellIndex": 30,
+        "spellName": "Teleport Self",
+        "level": 13,
+        "mana": 10,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 31,
+        "spellName": "Slow Monster",
+        "level": 25,
+        "mana": 21,
+        "fail": 65,
+        "exp": 3
+      },
+      {
+        "spellIndex": 32,
+        "spellName": "Teleport Other",
+        "level": 31,
+        "mana": 25,
+        "fail": 70,
+        "exp": 3
+      },
+      {
+        "spellIndex": 33,
+        "spellName": "Teleport Level",
+        "level": 34,
+        "mana": 27,
+        "fail": 60,
+        "exp": 15
+      },
+      {
+        "spellIndex": 34,
+        "spellName": "Word of Recall",
+        "level": 35,
+        "mana": 35,
+        "fail": 75,
+        "exp": 16
+      },
+      {
+        "spellIndex": 35,
+        "spellName": "Polymorph Other",
+        "level": 21,
+        "mana": 19,
+        "fail": 60,
+        "exp": 3
+      },
+      {
+        "spellIndex": 36,
+        "spellName": "Shock Wave",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 37,
+        "spellName": "Explosion",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 38,
+        "spellName": "Cloudkill",
+        "level": 22,
+        "mana": 19,
+        "fail": 60,
+        "exp": 6
+      },
+      {
+        "spellIndex": 39,
+        "spellName": "Mass Sleep",
+        "level": 23,
+        "mana": 20,
+        "fail": 60,
+        "exp": 4
+      },
+      {
+        "spellIndex": 40,
+        "spellName": "Bedlam",
+        "level": 32,
+        "mana": 30,
+        "fail": 70,
+        "exp": 12
+      },
+      {
+        "spellIndex": 41,
+        "spellName": "Rend Soul",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 42,
+        "spellName": "Word of Destruction",
+        "level": 37,
+        "mana": 30,
+        "fail": 95,
+        "exp": 30
+      },
+      {
+        "spellIndex": 43,
+        "spellName": "Chaos Strike",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 44,
+        "spellName": "Resist Cold",
+        "level": 8,
+        "mana": 15,
+        "fail": 50,
+        "exp": 30
+      },
+      {
+        "spellIndex": 45,
+        "spellName": "Resist Fire",
+        "level": 8,
+        "mana": 15,
+        "fail": 50,
+        "exp": 30
+      },
+      {
+        "spellIndex": 46,
+        "spellName": "Resist Poison",
+        "level": 26,
+        "mana": 25,
+        "fail": 75,
+        "exp": 50
+      },
+      {
+        "spellIndex": 47,
+        "spellName": "Resistance",
+        "level": 31,
+        "mana": 40,
+        "fail": 85,
+        "exp": 70
+      },
+      {
+        "spellIndex": 48,
+        "spellName": "Shield",
+        "level": 35,
+        "mana": 30,
+        "fail": 75,
+        "exp": 80
+      },
+      {
+        "spellIndex": 49,
+        "spellName": "Rune of Protection",
+        "level": 40,
+        "mana": 75,
+        "fail": 80,
+        "exp": 80
+      },
+      {
+        "spellIndex": 50,
+        "spellName": "Lesser Recharging",
+        "level": 29,
+        "mana": 17,
+        "fail": 90,
+        "exp": 4
+      },
+      {
+        "spellIndex": 51,
+        "spellName": "Enchant Armor",
+        "level": 33,
+        "mana": 45,
+        "fail": 90,
+        "exp": 50
+      },
+      {
+        "spellIndex": 52,
+        "spellName": "Enchant Weapon",
+        "level": 34,
+        "mana": 50,
+        "fail": 90,
+        "exp": 60
+      },
+      {
+        "spellIndex": 53,
+        "spellName": "Greater Recharging",
+        "level": 35,
+        "mana": 50,
+        "fail": 95,
+        "exp": 115
+      },
+      {
+        "spellIndex": 54,
+        "spellName": "Elemental Brand",
+        "level": 31,
+        "mana": 60,
+        "fail": 95,
+        "exp": 180
+      },
+      {
+        "spellIndex": 55,
+        "spellName": "Frost Ball",
+        "level": 27,
+        "mana": 21,
+        "fail": 65,
+        "exp": 6
+      },
+      {
+        "spellIndex": 56,
+        "spellName": "Acid Ball",
+        "level": 30,
+        "mana": 24,
+        "fail": 70,
+        "exp": 6
+      },
+      {
+        "spellIndex": 57,
+        "spellName": "Fire Ball",
+        "level": 34,
+        "mana": 28,
+        "fail": 80,
+        "exp": 9
+      },
+      {
+        "spellIndex": 58,
+        "spellName": "Ice Storm",
+        "level": 35,
+        "mana": 35,
+        "fail": 70,
+        "exp": 10
+      },
+      {
+        "spellIndex": 59,
+        "spellName": "Banishment",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 60,
+        "spellName": "Meteor Swarm",
+        "level": 36,
+        "mana": 45,
+        "fail": 80,
+        "exp": 35
+      },
+      {
+        "spellIndex": 61,
+        "spellName": "Mass Banishment",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 62,
+        "spellName": "Rift",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 63,
+        "spellName": "Mana Storm",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      }
+    ],
+    "paladin": [
+      {
+        "spellIndex": 0,
+        "spellName": "Detect Evil",
+        "level": 1,
+        "mana": 1,
+        "fail": 30,
+        "exp": 4
+      },
+      {
+        "spellIndex": 1,
+        "spellName": "Cure Light Wounds",
+        "level": 2,
+        "mana": 2,
+        "fail": 35,
+        "exp": 4
+      },
+      {
+        "spellIndex": 2,
+        "spellName": "Bless",
+        "level": 3,
+        "mana": 3,
+        "fail": 35,
+        "exp": 4
+      },
+      {
+        "spellIndex": 3,
+        "spellName": "Remove Fear",
+        "level": 5,
+        "mana": 3,
+        "fail": 35,
+        "exp": 4
+      },
+      {
+        "spellIndex": 4,
+        "spellName": "Call Light",
+        "level": 5,
+        "mana": 4,
+        "fail": 35,
+        "exp": 4
+      },
+      {
+        "spellIndex": 5,
+        "spellName": "Find Traps",
+        "level": 7,
+        "mana": 5,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 6,
+        "spellName": "Detect Doors/Stairs",
+        "level": 7,
+        "mana": 5,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 7,
+        "spellName": "Slow Poison",
+        "level": 9,
+        "mana": 7,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 8,
+        "spellName": "Scare Monster",
+        "level": 9,
+        "mana": 7,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 9,
+        "spellName": "Portal",
+        "level": 9,
+        "mana": 8,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 10,
+        "spellName": "Cure Serious Wounds",
+        "level": 11,
+        "mana": 9,
+        "fail": 40,
+        "exp": 3
+      },
+      {
+        "spellIndex": 11,
+        "spellName": "Chant",
+        "level": 11,
+        "mana": 10,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 12,
+        "spellName": "Sanctuary",
+        "level": 11,
+        "mana": 10,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 13,
+        "spellName": "Satisfy Hunger",
+        "level": 13,
+        "mana": 10,
+        "fail": 45,
+        "exp": 3
+      },
+      {
+        "spellIndex": 14,
+        "spellName": "Remove Curse",
+        "level": 13,
+        "mana": 11,
+        "fail": 45,
+        "exp": 4
+      },
+      {
+        "spellIndex": 15,
+        "spellName": "Resist Heat and Cold",
+        "level": 15,
+        "mana": 13,
+        "fail": 45,
+        "exp": 4
+      },
+      {
+        "spellIndex": 16,
+        "spellName": "Neutralize Poison",
+        "level": 15,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 17,
+        "spellName": "Orb of Draining",
+        "level": 17,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 18,
+        "spellName": "Cure Critical Wounds",
+        "level": 17,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 19,
+        "spellName": "Sense Invisible",
+        "level": 19,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 20,
+        "spellName": "Protection from Evil",
+        "level": 19,
+        "mana": 15,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 21,
+        "spellName": "Earthquake",
+        "level": 21,
+        "mana": 17,
+        "fail": 50,
+        "exp": 3
+      },
+      {
+        "spellIndex": 22,
+        "spellName": "Sense Surroundings",
+        "level": 23,
+        "mana": 17,
+        "fail": 50,
+        "exp": 3
+      },
+      {
+        "spellIndex": 23,
+        "spellName": "Cure Mortal Wounds",
+        "level": 25,
+        "mana": 20,
+        "fail": 50,
+        "exp": 3
+      },
+      {
+        "spellIndex": 24,
+        "spellName": "Turn Undead",
+        "level": 27,
+        "mana": 21,
+        "fail": 50,
+        "exp": 3
+      },
+      {
+        "spellIndex": 25,
+        "spellName": "Prayer",
+        "level": 29,
+        "mana": 22,
+        "fail": 50,
+        "exp": 3
+      },
+      {
+        "spellIndex": 26,
+        "spellName": "Dispel Undead",
+        "level": 31,
+        "mana": 24,
+        "fail": 60,
+        "exp": 3
+      },
+      {
+        "spellIndex": 27,
+        "spellName": "Heal",
+        "level": 33,
+        "mana": 28,
+        "fail": 60,
+        "exp": 3
+      },
+      {
+        "spellIndex": 28,
+        "spellName": "Dispel Evil",
+        "level": 35,
+        "mana": 32,
+        "fail": 70,
+        "exp": 4
+      },
+      {
+        "spellIndex": 29,
+        "spellName": "Glyph of Warding",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 30,
+        "spellName": "Holy Word",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 31,
+        "spellName": "Detect Monsters",
+        "level": 5,
+        "mana": 5,
+        "fail": 50,
+        "exp": 1
+      },
+      {
+        "spellIndex": 32,
+        "spellName": "Detection",
+        "level": 15,
+        "mana": 15,
+        "fail": 80,
+        "exp": 12
+      },
+      {
+        "spellIndex": 33,
+        "spellName": "Perception",
+        "level": 25,
+        "mana": 25,
+        "fail": 80,
+        "exp": 16
+      },
+      {
+        "spellIndex": 34,
+        "spellName": "Probing",
+        "level": 30,
+        "mana": 15,
+        "fail": 80,
+        "exp": 135
+      },
+      {
+        "spellIndex": 35,
+        "spellName": "Clairvoyance",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 36,
+        "spellName": "Cure Serious Wounds",
+        "level": 17,
+        "mana": 15,
+        "fail": 50,
+        "exp": 25
+      },
+      {
+        "spellIndex": 37,
+        "spellName": "Cure Mortal Wounds",
+        "level": 23,
+        "mana": 25,
+        "fail": 60,
+        "exp": 35
+      },
+      {
+        "spellIndex": 38,
+        "spellName": "Healing",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 39,
+        "spellName": "Life Restoration",
+        "level": 45,
+        "mana": 80,
+        "fail": 90,
+        "exp": 250
+      },
+      {
+        "spellIndex": 40,
+        "spellName": "Remembrance",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 41,
+        "spellName": "Dispel Undead",
+        "level": 20,
+        "mana": 13,
+        "fail": 70,
+        "exp": 20
+      },
+      {
+        "spellIndex": 42,
+        "spellName": "Dispel Evil",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 43,
+        "spellName": "Banish Evil",
+        "level": 30,
+        "mana": 35,
+        "fail": 80,
+        "exp": 200
+      },
+      {
+        "spellIndex": 44,
+        "spellName": "Word of Destruction",
+        "level": 40,
+        "mana": 40,
+        "fail": 80,
+        "exp": 100
+      },
+      {
+        "spellIndex": 45,
+        "spellName": "Annihilation",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 46,
+        "spellName": "Unbarring Ways",
+        "level": 10,
+        "mana": 16,
+        "fail": 50,
+        "exp": 20
+      },
+      {
+        "spellIndex": 47,
+        "spellName": "Recharging",
+        "level": 25,
+        "mana": 30,
+        "fail": 80,
+        "exp": 15
+      },
+      {
+        "spellIndex": 48,
+        "spellName": "Dispel Curse",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 49,
+        "spellName": "Enchant Weapon",
+        "level": 40,
+        "mana": 70,
+        "fail": 80,
+        "exp": 200
+      },
+      {
+        "spellIndex": 50,
+        "spellName": "Enchant Armor",
+        "level": 42,
+        "mana": 80,
+        "fail": 85,
+        "exp": 250
+      },
+      {
+        "spellIndex": 51,
+        "spellName": "Elemental Brand",
+        "level": 47,
+        "mana": 95,
+        "fail": 85,
+        "exp": 250
+      },
+      {
+        "spellIndex": 52,
+        "spellName": "Blink",
+        "level": 7,
+        "mana": 7,
+        "fail": 50,
+        "exp": 2
+      },
+      {
+        "spellIndex": 53,
+        "spellName": "Teleport Self",
+        "level": 20,
+        "mana": 20,
+        "fail": 50,
+        "exp": 4
+      },
+      {
+        "spellIndex": 54,
+        "spellName": "Teleport Other",
+        "level": 25,
+        "mana": 25,
+        "fail": 80,
+        "exp": 12
+      },
+      {
+        "spellIndex": 55,
+        "spellName": "Teleport Level",
+        "level": 35,
+        "mana": 50,
+        "fail": 75,
+        "exp": 115
+      },
+      {
+        "spellIndex": 56,
+        "spellName": "Word of Recall",
+        "level": 40,
+        "mana": 60,
+        "fail": 75,
+        "exp": 10
+      },
+      {
+        "spellIndex": 57,
+        "spellName": "Alter Reality",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 58,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 59,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 60,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 61,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 62,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      },
+      {
+        "spellIndex": 63,
+        "spellName": "(blank)",
+        "level": 99,
+        "mana": 0,
+        "fail": 0,
+        "exp": 0
+      }
+    ]
+  }
+}

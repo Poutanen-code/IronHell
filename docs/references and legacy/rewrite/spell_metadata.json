@@ -1,0 +1,3496 @@
+{
+  "version": "0.2.0",
+  "meta": {
+    "contract": "spell-metadata-runtime",
+    "idFormat": "<realm>-<index>",
+    "linkKey": "spellId",
+    "pairedWith": "spell_books.json",
+    "sources": {
+      "mangbandCompendia": [
+        "compendia/MAGIC_COMPENDIUM.md",
+        "compendia/PRAYERS_COMPENDIUM.md"
+      ],
+      "ironhellCode": [
+        "src/game/systems/spells/spellProgression.ts",
+        "src/game/data/spellEffectCatalog.ts",
+        "data/rewrite/spell_progression_by_class.json"
+      ]
+    },
+    "notes": [
+      "Removed fields that do not affect spell effect execution (sourceRefs, aiHints, allocation/store provenance, duplicate category labels).",
+      "Uses canonical spellId links compatible with spell_books.json."
+    ]
+  },
+  "spells": [
+    {
+      "spellId": "mage-0",
+      "realm": "mage",
+      "spellIndex": 0,
+      "name": "Magic Missile",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 1,
+        "sfail": 22
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "magic_missile",
+            "damageType": "arcane",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 12,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "reduced"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-1",
+      "realm": "mage",
+      "spellIndex": 1,
+      "name": "Detect Monsters",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 1,
+        "sfail": 23
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-2",
+      "realm": "mage",
+      "spellIndex": 2,
+      "name": "Phase Door",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 2,
+        "sfail": 24
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-3",
+      "realm": "mage",
+      "spellIndex": 3,
+      "name": "Light Area",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 2,
+        "sfail": 26
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-4",
+      "realm": "mage",
+      "spellIndex": 4,
+      "name": "Find Hidden Traps/Doors",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 25
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-5",
+      "realm": "mage",
+      "spellIndex": 5,
+      "name": "Cure Light Wounds",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 25
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-6",
+      "realm": "mage",
+      "spellIndex": 6,
+      "name": "Detect Treasure",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-7",
+      "realm": "mage",
+      "spellIndex": 7,
+      "name": "Detect Objects",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-8",
+      "realm": "mage",
+      "spellIndex": 8,
+      "name": "Identify",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 11,
+        "smana": 7,
+        "sfail": 25
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-9",
+      "realm": "mage",
+      "spellIndex": 9,
+      "name": "Detect Invisible",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 5,
+        "sfail": 40
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-10",
+      "realm": "mage",
+      "spellIndex": 10,
+      "name": "Detect Enchantment",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 10,
+        "sfail": 70
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-11",
+      "realm": "mage",
+      "spellIndex": 11,
+      "name": "Stinking Cloud",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 27
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_poison",
+            "damageType": "poison",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 15,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-12",
+      "realm": "mage",
+      "spellIndex": 12,
+      "name": "Lightning Bolt",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 4,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "lightning_beam",
+            "damageType": "lightning",
+            "shape": "beam",
+            "radius": 0,
+            "baseDamage": 14,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "always"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-13",
+      "realm": "mage",
+      "spellIndex": 13,
+      "name": "Confuse Monster",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 4,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-14",
+      "realm": "mage",
+      "spellIndex": 14,
+      "name": "Sleep Monster",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 5,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-15",
+      "realm": "mage",
+      "spellIndex": 15,
+      "name": "Wonder",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 10,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-16",
+      "realm": "mage",
+      "spellIndex": 16,
+      "name": "Frost Bolt",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 6,
+        "sfail": 40
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_cold",
+            "damageType": "ice",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 33,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "reduced"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-17",
+      "realm": "mage",
+      "spellIndex": 17,
+      "name": "Acid Bolt",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 9,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_acid",
+            "damageType": "acid",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 39,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-18",
+      "realm": "mage",
+      "spellIndex": 18,
+      "name": "Fire Bolt",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 10,
+        "smana": 7,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_fire",
+            "damageType": "fire",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 33,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-19",
+      "realm": "mage",
+      "spellIndex": 19,
+      "name": "Trap/Door Destruction",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 5,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-20",
+      "realm": "mage",
+      "spellIndex": 20,
+      "name": "Spear of Light",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 6,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "spear_of_light",
+            "damageType": "light",
+            "shape": "beam",
+            "radius": 0,
+            "baseDamage": 27,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "always"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-21",
+      "realm": "mage",
+      "spellIndex": 21,
+      "name": "Turn Stone to Mud",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 7,
+        "sfail": 44
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_physical",
+            "damageType": "physical",
+            "shape": "beam",
+            "radius": 0,
+            "baseDamage": 35,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "always"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-22",
+      "realm": "mage",
+      "spellIndex": 22,
+      "name": "Door Creation",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 13,
+        "smana": 9,
+        "sfail": 40
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-23",
+      "realm": "mage",
+      "spellIndex": 23,
+      "name": "Earthquake",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 18,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-24",
+      "realm": "mage",
+      "spellIndex": 24,
+      "name": "Stair Creation",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 24,
+        "smana": 20,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-25",
+      "realm": "mage",
+      "spellIndex": 25,
+      "name": "Cure Poison",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 5,
+        "sfail": 35
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-26",
+      "realm": "mage",
+      "spellIndex": 26,
+      "name": "Satisfy Hunger",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 7,
+        "sfail": 45
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-27",
+      "realm": "mage",
+      "spellIndex": 27,
+      "name": "Heroism",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-28",
+      "realm": "mage",
+      "spellIndex": 28,
+      "name": "Berserker",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-29",
+      "realm": "mage",
+      "spellIndex": 29,
+      "name": "Haste Self",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 12,
+        "sfail": 65
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-30",
+      "realm": "mage",
+      "spellIndex": 30,
+      "name": "Teleport Self",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 6,
+        "sfail": 35
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-31",
+      "realm": "mage",
+      "spellIndex": 31,
+      "name": "Slow Monster",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 17,
+        "smana": 9,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-32",
+      "realm": "mage",
+      "spellIndex": 32,
+      "name": "Teleport Other",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 23,
+        "smana": 12,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-33",
+      "realm": "mage",
+      "spellIndex": 33,
+      "name": "Teleport Level",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 28,
+        "smana": 17,
+        "sfail": 65
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-34",
+      "realm": "mage",
+      "spellIndex": 34,
+      "name": "Word of Recall",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 25,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-35",
+      "realm": "mage",
+      "spellIndex": 35,
+      "name": "Polymorph Other",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 11,
+        "smana": 7,
+        "sfail": 45
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-36",
+      "realm": "mage",
+      "spellIndex": 36,
+      "name": "Shock Wave",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 16,
+        "smana": 10,
+        "sfail": 40
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_arcane",
+            "damageType": "arcane",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 24,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-37",
+      "realm": "mage",
+      "spellIndex": 37,
+      "name": "Explosion",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 20,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_physical",
+            "damageType": "physical",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 47,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-38",
+      "realm": "mage",
+      "spellIndex": 38,
+      "name": "Cloudkill",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 9,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_poison_large",
+            "damageType": "poison",
+            "shape": "ball",
+            "radius": 3,
+            "baseDamage": 35,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-39",
+      "realm": "mage",
+      "spellIndex": 39,
+      "name": "Mass Sleep",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 7,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-40",
+      "realm": "mage",
+      "spellIndex": 40,
+      "name": "Bedlam",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 15,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-41",
+      "realm": "mage",
+      "spellIndex": 41,
+      "name": "Rend Soul",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 30,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_shadow",
+            "damageType": "shadow",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 97,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "low"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-42",
+      "realm": "mage",
+      "spellIndex": 42,
+      "name": "Word of Destruction",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 33,
+        "smana": 21,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-43",
+      "realm": "mage",
+      "spellIndex": 43,
+      "name": "Chaos Strike",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 38,
+        "smana": 35,
+        "sfail": 90
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_arcane",
+            "damageType": "arcane",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 114,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-44",
+      "realm": "mage",
+      "spellIndex": 44,
+      "name": "Resist Cold",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 10,
+        "smana": 5,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-45",
+      "realm": "mage",
+      "spellIndex": 45,
+      "name": "Resist Fire",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 10,
+        "smana": 5,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-46",
+      "realm": "mage",
+      "spellIndex": 46,
+      "name": "Resist Poison",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 10,
+        "sfail": 45
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-47",
+      "realm": "mage",
+      "spellIndex": 47,
+      "name": "Resistance",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 28,
+        "smana": 20,
+        "sfail": 65
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-48",
+      "realm": "mage",
+      "spellIndex": 48,
+      "name": "Shield",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 32,
+        "smana": 24,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-49",
+      "realm": "mage",
+      "spellIndex": 49,
+      "name": "Rune of Protection",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 36,
+        "smana": 60,
+        "sfail": 70
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-50",
+      "realm": "mage",
+      "spellIndex": 50,
+      "name": "Lesser Recharging",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 7,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-51",
+      "realm": "mage",
+      "spellIndex": 51,
+      "name": "Enchant Armor",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-52",
+      "realm": "mage",
+      "spellIndex": 52,
+      "name": "Enchant Weapon",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-53",
+      "realm": "mage",
+      "spellIndex": 53,
+      "name": "Greater Recharging",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 30,
+        "sfail": 95
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-54",
+      "realm": "mage",
+      "spellIndex": 54,
+      "name": "Elemental Brand",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 32,
+        "smana": 60,
+        "sfail": 95
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-55",
+      "realm": "mage",
+      "spellIndex": 55,
+      "name": "Frost Ball",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 19,
+        "smana": 12,
+        "sfail": 55
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_cold",
+            "damageType": "ice",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 37,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-56",
+      "realm": "mage",
+      "spellIndex": 56,
+      "name": "Acid Ball",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 15,
+        "sfail": 70
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_acid",
+            "damageType": "acid",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 44,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-57",
+      "realm": "mage",
+      "spellIndex": 57,
+      "name": "Fire Ball",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 26,
+        "smana": 18,
+        "sfail": 65
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_fire",
+            "damageType": "fire",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 54,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-58",
+      "realm": "mage",
+      "spellIndex": 58,
+      "name": "Ice Storm",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 27,
+        "smana": 22,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_cold_large",
+            "damageType": "ice",
+            "shape": "ball",
+            "radius": 3,
+            "baseDamage": 68,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-59",
+      "realm": "mage",
+      "spellIndex": 59,
+      "name": "Banishment",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 45,
+        "sfail": 95
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-60",
+      "realm": "mage",
+      "spellIndex": 60,
+      "name": "Meteor Swarm",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 25,
+        "sfail": 85
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "meteor_swarm",
+            "damageType": "fire",
+            "shape": "multi_impact",
+            "radius": 2,
+            "baseDamage": 29,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-61",
+      "realm": "mage",
+      "spellIndex": 61,
+      "name": "Mass Banishment",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 75,
+        "sfail": 90
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "mage-62",
+      "realm": "mage",
+      "spellIndex": 62,
+      "name": "Rift",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 30,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "spear_of_light",
+            "damageType": "light",
+            "shape": "beam",
+            "radius": 0,
+            "baseDamage": 86,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "always"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "mage-63",
+      "realm": "mage",
+      "spellIndex": 63,
+      "name": "Mana Storm",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 42,
+        "smana": 30,
+        "sfail": 95
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_arcane_large",
+            "damageType": "arcane",
+            "shape": "ball",
+            "radius": 4,
+            "baseDamage": 236,
+            "scalingStat": "intelligence",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-0",
+      "realm": "priest",
+      "spellIndex": 0,
+      "name": "Detect Evil",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 1,
+        "sfail": 10
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-1",
+      "realm": "priest",
+      "spellIndex": 1,
+      "name": "Cure Light Wounds",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 2,
+        "sfail": 15
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-2",
+      "realm": "priest",
+      "spellIndex": 2,
+      "name": "Bless",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 2,
+        "sfail": 20
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-3",
+      "realm": "priest",
+      "spellIndex": 3,
+      "name": "Remove Fear",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 1,
+        "smana": 2,
+        "sfail": 25
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-4",
+      "realm": "priest",
+      "spellIndex": 4,
+      "name": "Call Light",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 2,
+        "sfail": 25
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-5",
+      "realm": "priest",
+      "spellIndex": 5,
+      "name": "Find Traps",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 27
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-6",
+      "realm": "priest",
+      "spellIndex": 6,
+      "name": "Detect Doors/Stairs",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 27
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-7",
+      "realm": "priest",
+      "spellIndex": 7,
+      "name": "Slow Poison",
+      "bookIndex": 0,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 28
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-8",
+      "realm": "priest",
+      "spellIndex": 8,
+      "name": "Scare Monster",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 4,
+        "sfail": 29
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-9",
+      "realm": "priest",
+      "spellIndex": 9,
+      "name": "Portal",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 4,
+        "sfail": 30
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-10",
+      "realm": "priest",
+      "spellIndex": 10,
+      "name": "Cure Serious Wounds",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 4,
+        "sfail": 32
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-11",
+      "realm": "priest",
+      "spellIndex": 11,
+      "name": "Chant",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 5,
+        "sfail": 34
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-12",
+      "realm": "priest",
+      "spellIndex": 12,
+      "name": "Sanctuary",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 5,
+        "sfail": 36
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-13",
+      "realm": "priest",
+      "spellIndex": 13,
+      "name": "Satisfy Hunger",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 5,
+        "sfail": 38
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-14",
+      "realm": "priest",
+      "spellIndex": 14,
+      "name": "Remove Curse",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 6,
+        "sfail": 38
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-15",
+      "realm": "priest",
+      "spellIndex": 15,
+      "name": "Resist Heat and Cold",
+      "bookIndex": 1,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 7,
+        "smana": 7,
+        "sfail": 38
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-16",
+      "realm": "priest",
+      "spellIndex": 16,
+      "name": "Neutralize Poison",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 6,
+        "sfail": 38
+      },
+      "effects": [
+        {
+          "effectType": "utility",
+          "summary": "utility effect with custom runtime handling"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-17",
+      "realm": "priest",
+      "spellIndex": 17,
+      "name": "Orb of Draining",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 7,
+        "sfail": 40
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 33,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-18",
+      "realm": "priest",
+      "spellIndex": 18,
+      "name": "Cure Critical Wounds",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 9,
+        "smana": 7,
+        "sfail": 38
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-19",
+      "realm": "priest",
+      "spellIndex": 19,
+      "name": "Sense Invisible",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 11,
+        "smana": 8,
+        "sfail": 42
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-20",
+      "realm": "priest",
+      "spellIndex": 20,
+      "name": "Protection from Evil",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 11,
+        "smana": 8,
+        "sfail": 42
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-21",
+      "realm": "priest",
+      "spellIndex": 21,
+      "name": "Earthquake",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 11,
+        "smana": 9,
+        "sfail": 55
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-22",
+      "realm": "priest",
+      "spellIndex": 22,
+      "name": "Sense Surroundings",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 13,
+        "smana": 10,
+        "sfail": 45
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-23",
+      "realm": "priest",
+      "spellIndex": 23,
+      "name": "Cure Mortal Wounds",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 13,
+        "smana": 11,
+        "sfail": 45
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-24",
+      "realm": "priest",
+      "spellIndex": 24,
+      "name": "Turn Undead",
+      "bookIndex": 2,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 12,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "status",
+          "summary": "applies crowd-control or disruptive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-25",
+      "realm": "priest",
+      "spellIndex": 25,
+      "name": "Prayer",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 14,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-26",
+      "realm": "priest",
+      "spellIndex": 26,
+      "name": "Dispel Undead",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 17,
+        "smana": 14,
+        "sfail": 55
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 60,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-27",
+      "realm": "priest",
+      "spellIndex": 27,
+      "name": "Heal",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 21,
+        "smana": 16,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-28",
+      "realm": "priest",
+      "spellIndex": 28,
+      "name": "Dispel Evil",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 20,
+        "sfail": 70
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 60,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-29",
+      "realm": "priest",
+      "spellIndex": 29,
+      "name": "Glyph of Warding",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 33,
+        "smana": 55,
+        "sfail": 90
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-30",
+      "realm": "priest",
+      "spellIndex": 30,
+      "name": "Holy Word",
+      "bookIndex": 3,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 39,
+        "smana": 32,
+        "sfail": 95
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-31",
+      "realm": "priest",
+      "spellIndex": 31,
+      "name": "Detect Monsters",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-32",
+      "realm": "priest",
+      "spellIndex": 32,
+      "name": "Detection",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 10,
+        "smana": 10,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-33",
+      "realm": "priest",
+      "spellIndex": 33,
+      "name": "Perception",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 20,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-34",
+      "realm": "priest",
+      "spellIndex": 34,
+      "name": "Probing",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 10,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-35",
+      "realm": "priest",
+      "spellIndex": 35,
+      "name": "Clairvoyance",
+      "bookIndex": 5,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 50,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "detect",
+          "summary": "reveals entities, traps, doors, or map information"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-36",
+      "realm": "priest",
+      "spellIndex": 36,
+      "name": "Cure Serious Wounds",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 5,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-37",
+      "realm": "priest",
+      "spellIndex": 37,
+      "name": "Cure Mortal Wounds",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 17,
+        "smana": 7,
+        "sfail": 60
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-38",
+      "realm": "priest",
+      "spellIndex": 38,
+      "name": "Healing",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 50,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-39",
+      "realm": "priest",
+      "spellIndex": 39,
+      "name": "Life Restoration",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 70,
+        "sfail": 90
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-40",
+      "realm": "priest",
+      "spellIndex": 40,
+      "name": "Remembrance",
+      "bookIndex": 6,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 70,
+        "sfail": 90
+      },
+      "effects": [
+        {
+          "effectType": "heal",
+          "summary": "restores hit points or recovery resources"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-41",
+      "realm": "priest",
+      "spellIndex": 41,
+      "name": "Dispel Undead",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 7,
+        "sfail": 70
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 60,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-42",
+      "realm": "priest",
+      "spellIndex": 42,
+      "name": "Dispel Evil",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 10,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 60,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-43",
+      "realm": "priest",
+      "spellIndex": 43,
+      "name": "Banish Evil",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 25,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "ball_holy",
+            "damageType": "holy",
+            "shape": "ball",
+            "radius": 2,
+            "baseDamage": 60,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-44",
+      "realm": "priest",
+      "spellIndex": 44,
+      "name": "Word of Destruction",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 35,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "world",
+          "summary": "changes dungeon/world state or environment"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-45",
+      "realm": "priest",
+      "spellIndex": 45,
+      "name": "Annihilation",
+      "bookIndex": 8,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 45,
+        "smana": 60,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "damage",
+          "summary": "applies direct or area damage; use damageModel when present",
+          "damageModel": {
+            "effectKey": "bolt_shadow",
+            "damageType": "shadow",
+            "shape": "bolt",
+            "radius": 0,
+            "baseDamage": 120,
+            "scalingStat": "wisdom",
+            "scalingRatio": 0.3,
+            "beamMode": "none"
+          }
+        }
+      ]
+    },
+    {
+      "spellId": "priest-46",
+      "realm": "priest",
+      "spellIndex": 46,
+      "name": "Unbarring Ways",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 5,
+        "smana": 6,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-47",
+      "realm": "priest",
+      "spellIndex": 47,
+      "name": "Recharging",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 15,
+        "smana": 20,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-48",
+      "realm": "priest",
+      "spellIndex": 48,
+      "name": "Dispel Curse",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "area",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 25,
+        "smana": 40,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-49",
+      "realm": "priest",
+      "spellIndex": 49,
+      "name": "Enchant Weapon",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 50,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-50",
+      "realm": "priest",
+      "spellIndex": 50,
+      "name": "Enchant Armor",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 37,
+        "smana": 60,
+        "sfail": 85
+      },
+      "effects": [
+        {
+          "effectType": "buff",
+          "summary": "applies temporary positive status effects"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-51",
+      "realm": "priest",
+      "spellIndex": 51,
+      "name": "Elemental Brand",
+      "bookIndex": 7,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 45,
+        "smana": 95,
+        "sfail": 85
+      },
+      "effects": [
+        {
+          "effectType": "item",
+          "summary": "interacts with item state such as enchant/recharge/curse"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-52",
+      "realm": "priest",
+      "spellIndex": 52,
+      "name": "Blink",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 3,
+        "smana": 3,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-53",
+      "realm": "priest",
+      "spellIndex": 53,
+      "name": "Teleport Self",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 10,
+        "smana": 10,
+        "sfail": 50
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-54",
+      "realm": "priest",
+      "spellIndex": 54,
+      "name": "Teleport Other",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "directional",
+        "requiresLineOfSight": true,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": true
+      },
+      "casting": {
+        "slevel": 20,
+        "smana": 20,
+        "sfail": 80
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-55",
+      "realm": "priest",
+      "spellIndex": 55,
+      "name": "Teleport Level",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 30,
+        "smana": 40,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-56",
+      "realm": "priest",
+      "spellIndex": 56,
+      "name": "Word of Recall",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 35,
+        "smana": 50,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-57",
+      "realm": "priest",
+      "spellIndex": 57,
+      "name": "Alter Reality",
+      "bookIndex": 4,
+      "targeting": {
+        "mode": "self",
+        "requiresLineOfSight": false,
+        "canTargetSelf": true,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 40,
+        "smana": 60,
+        "sfail": 75
+      },
+      "effects": [
+        {
+          "effectType": "teleport",
+          "summary": "moves caster or target between positions/levels"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-58",
+      "realm": "priest",
+      "spellIndex": 58,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-59",
+      "realm": "priest",
+      "spellIndex": 59,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-60",
+      "realm": "priest",
+      "spellIndex": 60,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-61",
+      "realm": "priest",
+      "spellIndex": 61,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-62",
+      "realm": "priest",
+      "spellIndex": 62,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    },
+    {
+      "spellId": "priest-63",
+      "realm": "priest",
+      "spellIndex": 63,
+      "name": "(blank)",
+      "bookIndex": null,
+      "targeting": {
+        "mode": "none",
+        "requiresLineOfSight": false,
+        "canTargetSelf": false,
+        "canTargetAlly": false,
+        "canTargetEnemy": false
+      },
+      "casting": {
+        "slevel": 99,
+        "smana": 0,
+        "sfail": 0
+      },
+      "effects": [
+        {
+          "effectType": "none",
+          "summary": "unassigned slot"
+        }
+      ]
+    }
+  ]
+}

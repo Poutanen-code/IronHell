@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/dungeon_generation_rules",
+  "type": "object",
+  "required": ["version", "constants", "stairs", "roomTypeWeightsByDepth", "trapDistributionByDepth"],
+  "properties": {
+    "version": { "type": "string" },
+    "constants": { "type": "object" },
+    "stairs": { "type": "object" },
+    "roomTypeWeightsByDepth": { "type": "array" },
+    "trapDistributionByDepth": { "type": "array" }
+  }
+}

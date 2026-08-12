@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "limits": {
+    "maxFeatureTypes": 136,
+    "maxObjectKinds": 531,
+    "maxArtifacts": 137,
+    "maxEgoItemTypes": 136,
+    "maxMonsterRaces": 618,
+    "maxVaults": 152,
+    "maxPlayerRaces": 11,
+    "maxPlayerClasses": 6,
+    "maxFlavors": 305,
+    "maxObjectsOnLevel": 512,
+    "maxMonstersOnLevel": 1024
+  }
+}

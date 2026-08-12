@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/item_templates.schema.json",
+  "title": "Item Templates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_categories",
+    "weapon_templates",
+    "armor_templates",
+    "accessory_templates",
+    "consumable_templates",
+    "material_templates",
+    "chest_templates"
+  ],
+  "properties": {
+    "item_categories": { "type": "object" },
+    "weapon_templates": { "type": "array", "items": { "$ref": "#/$defs/baseItem" } },
+    "armor_templates": { "type": "array", "items": { "$ref": "#/$defs/baseItem" } },
+    "accessory_templates": { "type": "array", "items": { "$ref": "#/$defs/baseItem" } },
+    "consumable_templates": { "type": "array", "items": { "$ref": "#/$defs/consumableItem" } },
+    "material_templates": { "type": "array", "items": { "$ref": "#/$defs/materialItem" } },
+    "chest_templates": { "type": "array", "items": { "$ref": "#/$defs/chestItem" } }
+  },
+  "$defs": {
+    "allocationEntry": {
+      "type": "object",
+      "required": ["depth", "rarity"],
+      "properties": {
+        "depth": { "type": "integer" },
+        "rarity": { "type": "integer" }
+      }
+    },
+    "baseItem": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "name", "type", "rarity", "sell_value", "description"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "subtype": { "type": "string" },
+        "rarity": { "type": "string" },
+        "required_stats": { "type": "object" },
+        "stats": { "type": "object" },
+        "damage_dice": { "type": "string" },
+        "affixes": { "type": "array", "items": { "type": "object" } },
+        "tval": { "type": "integer" },
+        "sval": { "type": "integer" },
+        "dungeon_depth": { "type": "integer" },
+        "dungeon_rarity": { "type": "integer" },
+        "weight": { "type": ["integer", "number"] },
+        "to_hit_bonus": { "type": "integer" },
+        "to_damage_bonus": { "type": "integer" },
+        "to_ac_bonus": { "type": "integer" },
+        "sell_value": { "type": "integer" },
+        "description": { "type": "string" },
+        "allocation_table": { "type": "array", "items": { "$ref": "#/$defs/allocationEntry" } }
+      }
+    },
+    "consumableItem": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "name", "type", "rarity", "cooldown_ticks", "stack_size", "sell_value", "weight", "description"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "rarity": { "type": "string" },
+        "effect": { "type": "object" },
+        "cooldown_ticks": { "type": "integer" },
+        "stack_size": { "type": "integer" },
+        "sell_value": { "type": "integer" },
+        "weight": { "type": ["integer", "number"] },
+        "description": { "type": "string" }
+      }
+    },
+    "materialItem": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "name", "type", "rarity", "stack_size", "sell_value", "description"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "rarity": { "type": "string" },
+        "stack_size": { "type": "integer" },
+        "sell_value": { "type": "integer" },
+        "description": { "type": "string" }
+      }
+    },
+    "chestItem": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "id", "name", "tval", "sval", "dungeon_depth", "dungeon_rarity", "weight",
+        "trap_chance", "lock_difficulty", "gold_multiplier", "sell_value", "description"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "tval": { "type": "integer" },
+        "sval": { "type": "integer" },
+        "dungeon_depth": { "type": "integer" },
+        "dungeon_rarity": { "type": "integer" },
+        "weight": { "type": ["integer", "number"] },
+        "trap_chance": { "type": "number" },
+        "lock_difficulty": { "type": "integer" },
+        "gold_multiplier": { "type": "integer" },
+        "sell_value": { "type": "integer" },
+        "description": { "type": "string" },
+        "allocation_table": { "type": "array", "items": { "$ref": "#/$defs/allocationEntry" } }
+      }
+    }
+  }
+}

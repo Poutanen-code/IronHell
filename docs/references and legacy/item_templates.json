@@ -1,0 +1,5381 @@
+{
+  "item_categories": {
+    "weapons": [
+      "sword",
+      "axe",
+      "mace",
+      "dagger",
+      "staff",
+      "bow",
+      "crossbow",
+      "wand"
+    ],
+    "armor": [
+      "helmet",
+      "chest",
+      "legs",
+      "boots",
+      "gloves"
+    ],
+    "accessories": [
+      "ring",
+      "amulet",
+      "belt"
+    ],
+    "consumables": [
+      "potion",
+      "scroll",
+      "food"
+    ]
+  },
+  "weapon_templates": [
+    {
+      "id": "broken_dagger",
+      "name": "Broken Dagger",
+      "type": "dagger",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 6
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 1.25,
+        "durability_max": 40
+      },
+      "damage_dice": "1d1",
+      "tval": 23,
+      "sval": 1,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 40,
+      "weight": 5,
+      "to_hit_bonus": -2,
+      "to_damage_bonus": -4,
+      "sell_value": 1,
+      "description": "Cracked edge, but still pointy enough for close work."
+    },
+    {
+      "id": "dagger",
+      "name": "Dagger",
+      "type": "dagger",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 8
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 4,
+        "attack_speed": 1.2,
+        "durability_max": 60
+      },
+      "damage_dice": "1d4",
+      "tval": 23,
+      "sval": 4,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 4,
+      "weight": 12,
+      "sell_value": 10,
+      "description": "A short, quick blade favored by scouts and thieves."
+    },
+    {
+      "id": "main_gauche",
+      "name": "Main Gauche",
+      "type": "dagger",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 10
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 5,
+        "attack_speed": 1.18,
+        "durability_max": 70
+      },
+      "damage_dice": "1d5",
+      "tval": 23,
+      "sval": 5,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 5,
+      "weight": 30,
+      "sell_value": 25,
+      "description": "A broad parrying dagger with a wicked thrust."
+    },
+    {
+      "id": "rapier",
+      "name": "Rapier",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 12
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 6,
+        "attack_speed": 1.12,
+        "durability_max": 85
+      },
+      "damage_dice": "1d6",
+      "tval": 23,
+      "sval": 7,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 8,
+      "weight": 40,
+      "sell_value": 42,
+      "description": "Narrow and elegant, made for precision strikes."
+    },
+    {
+      "id": "small_sword",
+      "name": "Small Sword",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 10
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 6,
+        "attack_speed": 1.08,
+        "durability_max": 95
+      },
+      "damage_dice": "1d6",
+      "tval": 23,
+      "sval": 8,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 10,
+      "weight": 75,
+      "sell_value": 48,
+      "description": "A dependable sidearm for militia and delvers alike."
+    },
+    {
+      "id": "short_sword",
+      "name": "Short Sword",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 11
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 7,
+        "attack_speed": 1.05,
+        "durability_max": 100
+      },
+      "damage_dice": "1d7",
+      "tval": 23,
+      "sval": 10,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 10,
+      "weight": 80,
+      "sell_value": 90,
+      "description": "Compact and balanced, ideal in cramped corridors."
+    },
+    {
+      "id": "sabre",
+      "name": "Sabre",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 13
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 7,
+        "attack_speed": 1.04,
+        "durability_max": 105
+      },
+      "damage_dice": "1d7",
+      "tval": 23,
+      "sval": 11,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 10,
+      "weight": 50,
+      "sell_value": 50,
+      "description": "Curved steel made for fast cutting strokes."
+    },
+    {
+      "id": "cutlass",
+      "name": "Cutlass",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 12
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 7,
+        "attack_speed": 1,
+        "durability_max": 110
+      },
+      "damage_dice": "1d7",
+      "tval": 23,
+      "sval": 12,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 8,
+      "weight": 110,
+      "sell_value": 85,
+      "description": "A heavy naval blade that bites deep."
+    },
+    {
+      "id": "tulwar",
+      "name": "Tulwar",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 15,
+        "dexterity": 14
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 8,
+        "attack_speed": 1,
+        "durability_max": 125
+      },
+      "damage_dice": "2d4",
+      "tval": 23,
+      "sval": 13,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 10,
+      "weight": 100,
+      "sell_value": 200,
+      "description": "A broad curved sword prized by caravan guards."
+    },
+    {
+      "id": "broad_sword",
+      "name": "Broad Sword",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 17
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 10,
+        "attack_speed": 0.96,
+        "durability_max": 135
+      },
+      "damage_dice": "2d5",
+      "tval": 23,
+      "sval": 16,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 8,
+      "weight": 150,
+      "sell_value": 255,
+      "description": "A wide blade with brutal chopping force."
+    },
+    {
+      "id": "long_sword",
+      "name": "Long Sword",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 10,
+        "attack_speed": 0.95,
+        "durability_max": 145
+      },
+      "damage_dice": "2d5",
+      "tval": 23,
+      "sval": 17,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 8,
+      "weight": 130,
+      "sell_value": 300,
+      "description": "A knightly standard with excellent reach and weight."
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 22,
+        "dexterity": 24
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 12,
+        "attack_speed": 0.9,
+        "durability_max": 165
+      },
+      "damage_dice": "3d4",
+      "tval": 23,
+      "sval": 20,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 10,
+      "weight": 120,
+      "sell_value": 400,
+      "description": "A masterwork curved blade with a terrifying draw-cut."
+    },
+    {
+      "id": "bastard_sword",
+      "name": "Bastard Sword",
+      "type": "sword",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 26
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 12,
+        "attack_speed": 0.9,
+        "durability_max": 180
+      },
+      "damage_dice": "3d4",
+      "tval": 23,
+      "sval": 21,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 8,
+      "weight": 140,
+      "sell_value": 350,
+      "description": "Versatile and heavy, used by veterans in deep halls."
+    },
+    {
+      "id": "two_handed_sword",
+      "name": "Two-Handed Sword",
+      "type": "sword",
+      "subtype": "two_handed",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 30
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 18,
+        "attack_speed": 0.86,
+        "durability_max": 195
+      },
+      "damage_dice": "3d6",
+      "tval": 23,
+      "sval": 25,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "sell_value": 775,
+      "description": "A great slab of steel that ends fights quickly."
+    },
+    {
+      "id": "battle_axe",
+      "name": "Battle Axe",
+      "type": "axe",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 16,
+        "attack_speed": 0.9,
+        "durability_max": 150
+      },
+      "damage_dice": "2d8",
+      "tval": 22,
+      "sval": 22,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "weight": 170,
+      "sell_value": 334,
+      "description": "Built for split mail and shattered shields."
+    },
+    {
+      "id": "great_axe",
+      "name": "Great Axe",
+      "type": "axe",
+      "subtype": "two_handed",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 32
+      },
+      "stats": {
+        "damage_min": 4,
+        "damage_max": 16,
+        "attack_speed": 0.82,
+        "durability_max": 190
+      },
+      "damage_dice": "4d4",
+      "tval": 22,
+      "sval": 25,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 8,
+      "weight": 230,
+      "sell_value": 500,
+      "description": "A towering axehead that can fell ogres in two swings."
+    },
+    {
+      "id": "whip",
+      "name": "Whip",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 12
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 3,
+        "attack_speed": 1.15,
+        "durability_max": 70
+      },
+      "damage_dice": "1d3",
+      "tval": 21,
+      "sval": 2,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 4,
+      "weight": 30,
+      "sell_value": 30,
+      "description": "Snaps fast and stings through light armor."
+    },
+    {
+      "id": "war_hammer",
+      "name": "War Hammer",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 9,
+        "attack_speed": 0.92,
+        "durability_max": 150
+      },
+      "damage_dice": "3d3",
+      "tval": 21,
+      "sval": 8,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 6,
+      "weight": 120,
+      "sell_value": 225,
+      "description": "Dense iron head for crushing plate and bone alike."
+    },
+    {
+      "id": "flail",
+      "name": "Flail",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 12,
+        "attack_speed": 0.9,
+        "durability_max": 160
+      },
+      "damage_dice": "2d6",
+      "tval": 21,
+      "sval": 13,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 150,
+      "sell_value": 353,
+      "description": "A chained head that punishes those behind shields."
+    },
+    {
+      "id": "sling",
+      "name": "Sling",
+      "type": "bow",
+      "subtype": "ranged",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 8
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 1.1,
+        "range": 20,
+        "durability_max": 65
+      },
+      "tval": 19,
+      "sval": 2,
+      "dungeon_depth": 1,
+      "dungeon_rarity": 4,
+      "weight": 5,
+      "sell_value": 5,
+      "description": "A simple sling. In skilled hands, stones become lethal."
+    },
+    {
+      "id": "short_bow",
+      "name": "Short Bow",
+      "type": "bow",
+      "subtype": "ranged",
+      "rarity": "common",
+      "required_stats": {
+        "dexterity": 10
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 1,
+        "range": 20,
+        "durability_max": 80
+      },
+      "tval": 19,
+      "sval": 12,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 6,
+      "weight": 30,
+      "sell_value": 50,
+      "description": "A basic short bow. Fast and dependable for dungeon skirmishes."
+    },
+    {
+      "id": "long_bow",
+      "name": "Long Bow",
+      "type": "bow",
+      "subtype": "ranged",
+      "rarity": "uncommon",
+      "required_stats": {
+        "dexterity": 16
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 0.95,
+        "range": 25,
+        "durability_max": 110
+      },
+      "tval": 19,
+      "sval": 13,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 40,
+      "sell_value": 120,
+      "description": "A long bow with stronger draw and better range."
+    },
+    {
+      "id": "light_crossbow",
+      "name": "Light Crossbow",
+      "type": "crossbow",
+      "subtype": "ranged",
+      "tval": 19,
+      "sval": 23,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "rarity": "uncommon",
+      "required_stats": {
+        "dexterity": 16
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 0.9,
+        "range": 25,
+        "durability_max": 140
+      },
+      "weight": 110,
+      "sell_value": 140,
+      "description": "A light crossbow that fires bolts with strong penetration."
+    },
+    {
+      "id": "heavy_crossbow",
+      "name": "Heavy Crossbow",
+      "type": "crossbow",
+      "subtype": "ranged",
+      "tval": 19,
+      "sval": 24,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 8,
+      "rarity": "rare",
+      "required_stats": {
+        "dexterity": 20,
+        "strength": 16
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 1,
+        "attack_speed": 0.78,
+        "range": 30,
+        "durability_max": 190
+      },
+      "weight": 200,
+      "sell_value": 300,
+      "description": "A heavy crossbow with tremendous draw force and reach."
+    },
+    {
+      "id": "rounded_pebble",
+      "name": "Rounded Pebble",
+      "type": "shot",
+      "subtype": "ammo",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 2,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "1d2",
+      "tval": 16,
+      "sval": 0,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 4,
+      "weight": 4,
+      "sell_value": 1,
+      "description": "A smooth pebble for sling fire."
+    },
+    {
+      "id": "iron_shot",
+      "name": "Iron Shot",
+      "type": "shot",
+      "subtype": "ammo",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 4,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "1d4",
+      "tval": 16,
+      "sval": 1,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 4,
+      "weight": 5,
+      "sell_value": 2,
+      "description": "Dense metal shot for slings."
+    },
+    {
+      "id": "arrow",
+      "name": "Arrow",
+      "type": "arrow",
+      "subtype": "ammo",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 4,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "1d4",
+      "tval": 17,
+      "sval": 1,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 4,
+      "weight": 2,
+      "sell_value": 1,
+      "description": "Standard wooden arrow for bows."
+    },
+    {
+      "id": "seeker_arrow",
+      "name": "Seeker Arrow",
+      "type": "arrow",
+      "subtype": "ammo",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 4,
+        "damage_max": 16,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "4d4",
+      "tval": 17,
+      "sval": 2,
+      "dungeon_depth": 55,
+      "dungeon_rarity": 10,
+      "weight": 2,
+      "sell_value": 20,
+      "description": "A heavier war arrow designed for deep penetration."
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "type": "bolt",
+      "subtype": "ammo",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 5,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "1d5",
+      "tval": 18,
+      "sval": 1,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 4,
+      "weight": 3,
+      "sell_value": 2,
+      "description": "A standard quarrel for crossbows."
+    },
+    {
+      "id": "seeker_bolt",
+      "name": "Seeker Bolt",
+      "type": "bolt",
+      "subtype": "ammo",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 4,
+        "damage_max": 20,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "damage_dice": "4d5",
+      "tval": 18,
+      "sval": 2,
+      "dungeon_depth": 65,
+      "dungeon_rarity": 10,
+      "weight": 3,
+      "sell_value": 25,
+      "description": "A heavy bolt built to pierce thick hides and plate."
+    },
+    {
+      "id": "mithril_shot",
+      "name": "Mithril Shot",
+      "type": "shot",
+      "subtype": "ammo",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 8,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "weight": 1,
+      "sell_value": 20,
+      "description": "Mithril shot that carries force with uncanny consistency."
+    },
+    {
+      "id": "mithril_arrow",
+      "name": "Mithril Arrow",
+      "type": "arrow",
+      "subtype": "ammo",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 12,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "weight": 1,
+      "sell_value": 25,
+      "description": "A mithril arrow with exceptional flight and impact."
+    },
+    {
+      "id": "mithril_bolt",
+      "name": "Mithril Bolt",
+      "type": "bolt",
+      "subtype": "ammo",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 15,
+        "attack_speed": 1,
+        "durability_max": 1
+      },
+      "weight": 1,
+      "sell_value": 30,
+      "description": "A mithril bolt for elite crossbowmen."
+    },
+    {
+      "id": "broken_sword",
+      "name": "Broken Sword",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 2,
+        "attack_speed": 1.2,
+        "durability_max": 30
+      },
+      "damage_dice": "1d2",
+      "tval": 23,
+      "sval": 2,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 40,
+      "weight": 30,
+      "to_hit_bonus": -2,
+      "to_damage_bonus": -4,
+      "sell_value": 2,
+      "description": "A blade snapped near the hilt — still useful as a last resort."
+    },
+    {
+      "id": "scimitar",
+      "name": "Scimitar",
+      "type": "sword",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 17
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 10,
+        "attack_speed": 0.96,
+        "durability_max": 135
+      },
+      "damage_dice": "2d5",
+      "tval": 23,
+      "sval": 18,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 8,
+      "weight": 130,
+      "sell_value": 250,
+      "description": "A sweeping curved blade favored by desert raiders."
+    },
+    {
+      "id": "executioners_sword",
+      "name": "Executioner's Sword",
+      "type": "sword",
+      "subtype": "two_handed",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 35
+      },
+      "stats": {
+        "damage_min": 4,
+        "damage_max": 20,
+        "attack_speed": 0.8,
+        "durability_max": 200
+      },
+      "damage_dice": "4d5",
+      "tval": 23,
+      "sval": 28,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 10,
+      "weight": 260,
+      "sell_value": 850,
+      "description": "A massive blade designed for finishing blows."
+    },
+    {
+      "id": "blade_of_chaos",
+      "name": "Blade of Chaos",
+      "type": "sword",
+      "subtype": "two_handed",
+      "rarity": "very_rare",
+      "required_stats": {
+        "strength": 40
+      },
+      "stats": {
+        "damage_min": 6,
+        "damage_max": 30,
+        "attack_speed": 0.85,
+        "durability_max": 220
+      },
+      "damage_dice": "6d5",
+      "tval": 23,
+      "sval": 30,
+      "dungeon_depth": 70,
+      "dungeon_rarity": 15,
+      "weight": 180,
+      "sell_value": 4000,
+      "ability_flags": [
+        "RES_CHAOS"
+      ],
+      "description": "Forged in the pits of Chaos — potent but perilous.",
+      "flags": [
+        "RES_CHAOS"
+      ]
+    },
+    {
+      "id": "mace",
+      "name": "Mace",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 8,
+        "attack_speed": 1,
+        "durability_max": 120
+      },
+      "damage_dice": "2d4",
+      "tval": 21,
+      "sval": 5,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 6,
+      "weight": 120,
+      "sell_value": 130,
+      "description": "A solid iron head that crushes with each swing."
+    },
+    {
+      "id": "quarterstaff",
+      "name": "Quarterstaff",
+      "type": "staff",
+      "subtype": "two_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 9,
+        "attack_speed": 1,
+        "durability_max": 120
+      },
+      "damage_dice": "1d9",
+      "tval": 21,
+      "sval": 3,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 150,
+      "sell_value": 200,
+      "description": "A double-ended fighting staff for monks and scholars."
+    },
+    {
+      "id": "ball_and_chain",
+      "name": "Ball-and-Chain",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 8,
+        "attack_speed": 0.95,
+        "durability_max": 155
+      },
+      "damage_dice": "2d4",
+      "tval": 21,
+      "sval": 6,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 8,
+      "weight": 150,
+      "sell_value": 200,
+      "description": "A spiked iron ball on a chain — difficult to parry."
+    },
+    {
+      "id": "morning_star",
+      "name": "Morning Star",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 12,
+        "attack_speed": 0.95,
+        "durability_max": 155
+      },
+      "damage_dice": "2d6",
+      "tval": 21,
+      "sval": 12,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 150,
+      "sell_value": 396,
+      "description": "Flanged and spiked, penetrating mail with ease."
+    },
+    {
+      "id": "lucerne_hammer",
+      "name": "Lucerne Hammer",
+      "type": "mace",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 10,
+        "attack_speed": 0.92,
+        "durability_max": 155
+      },
+      "damage_dice": "2d5",
+      "tval": 21,
+      "sval": 10,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 120,
+      "sell_value": 376,
+      "description": "A polearm hybrid with hammerhead and spike."
+    },
+    {
+      "id": "lead_filled_mace",
+      "name": "Lead-Filled Mace",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 22
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 12,
+        "attack_speed": 0.88,
+        "durability_max": 175
+      },
+      "damage_dice": "3d4",
+      "tval": 21,
+      "sval": 15,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 8,
+      "weight": 180,
+      "sell_value": 502,
+      "description": "Filled with lead for devastating skull-cracking weight."
+    },
+    {
+      "id": "two_handed_flail",
+      "name": "Two-Handed Flail",
+      "type": "mace",
+      "subtype": "two_handed",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 28
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 18,
+        "attack_speed": 0.84,
+        "durability_max": 195
+      },
+      "damage_dice": "3d6",
+      "tval": 21,
+      "sval": 18,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 8,
+      "weight": 280,
+      "sell_value": 590,
+      "description": "Swings with lethal momentum, impossible to deflect."
+    },
+    {
+      "id": "mace_of_disruption",
+      "name": "Mace of Disruption",
+      "type": "mace",
+      "subtype": "one_handed",
+      "rarity": "very_rare",
+      "required_stats": {
+        "strength": 28
+      },
+      "stats": {
+        "damage_min": 5,
+        "damage_max": 40,
+        "attack_speed": 0.88,
+        "durability_max": 240
+      },
+      "damage_dice": "5d8",
+      "tval": 21,
+      "sval": 20,
+      "dungeon_depth": 80,
+      "dungeon_rarity": 12,
+      "weight": 400,
+      "sell_value": 4300,
+      "slay_flags": [
+        "SLAY_UNDEAD"
+      ],
+      "description": "Holy wrath made iron — undeads dissolve before its strike.",
+      "flags": [
+        "SLAY_UNDEAD"
+      ]
+    },
+    {
+      "id": "spear",
+      "name": "Spear",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 12
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 6,
+        "attack_speed": 1,
+        "durability_max": 90
+      },
+      "damage_dice": "1d6",
+      "tval": 22,
+      "sval": 2,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 6,
+      "weight": 50,
+      "sell_value": 36,
+      "description": "Reach and speed — a classic infantry weapon."
+    },
+    {
+      "id": "trident",
+      "name": "Trident",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 8,
+        "attack_speed": 0.96,
+        "durability_max": 105
+      },
+      "damage_dice": "1d8",
+      "tval": 22,
+      "sval": 5,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 8,
+      "weight": 70,
+      "sell_value": 120,
+      "description": "Three-pronged, capable of trapping and piercing."
+    },
+    {
+      "id": "awl_pike",
+      "name": "Awl-Pike",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 16
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 8,
+        "attack_speed": 0.93,
+        "durability_max": 120
+      },
+      "damage_dice": "1d8",
+      "tval": 22,
+      "sval": 4,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 6,
+      "weight": 160,
+      "sell_value": 340,
+      "description": "A pole-mounted spike designed to pierce heavy armor."
+    },
+    {
+      "id": "pike",
+      "name": "Pike",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 16
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 10,
+        "attack_speed": 0.9,
+        "durability_max": 125
+      },
+      "damage_dice": "2d5",
+      "tval": 22,
+      "sval": 8,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "weight": 160,
+      "sell_value": 358,
+      "description": "A long thrusting weapon used in formation combat."
+    },
+    {
+      "id": "beaked_axe",
+      "name": "Beaked Axe",
+      "type": "axe",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 12,
+        "attack_speed": 0.9,
+        "durability_max": 140
+      },
+      "damage_dice": "2d6",
+      "tval": 22,
+      "sval": 10,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "weight": 180,
+      "sell_value": 408,
+      "description": "Hook-shaped pick for rending mail."
+    },
+    {
+      "id": "broad_axe",
+      "name": "Broad Axe",
+      "type": "axe",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 12,
+        "attack_speed": 0.9,
+        "durability_max": 140
+      },
+      "damage_dice": "2d6",
+      "tval": 22,
+      "sval": 11,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "weight": 160,
+      "sell_value": 304,
+      "description": "Wide-bladed for powerful cleaving strikes."
+    },
+    {
+      "id": "glaive",
+      "name": "Glaive",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 12,
+        "attack_speed": 0.88,
+        "durability_max": 145
+      },
+      "damage_dice": "2d6",
+      "tval": 22,
+      "sval": 13,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 6,
+      "weight": 190,
+      "sell_value": 363,
+      "description": "A single-edged blade mounted on a long pole."
+    },
+    {
+      "id": "scythe",
+      "name": "Scythe",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "damage_min": 5,
+        "damage_max": 15,
+        "attack_speed": 0.85,
+        "durability_max": 160
+      },
+      "damage_dice": "5d3",
+      "tval": 22,
+      "sval": 17,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 10,
+      "weight": 250,
+      "sell_value": 800,
+      "description": "Repurposed harvest blade, terrifying in close quarters."
+    },
+    {
+      "id": "lance",
+      "name": "Lance",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "damage_min": 2,
+        "damage_max": 16,
+        "attack_speed": 0.88,
+        "durability_max": 145
+      },
+      "damage_dice": "2d8",
+      "tval": 22,
+      "sval": 20,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 8,
+      "weight": 300,
+      "sell_value": 230,
+      "description": "Made for mounted charges — unwieldy underground."
+    },
+    {
+      "id": "halberd",
+      "name": "Halberd",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 22
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 15,
+        "attack_speed": 0.86,
+        "durability_max": 165
+      },
+      "damage_dice": "3d5",
+      "tval": 22,
+      "sval": 15,
+      "dungeon_depth": 25,
+      "dungeon_rarity": 6,
+      "weight": 190,
+      "sell_value": 430,
+      "description": "Axe, spike, and hook combined into one vicious weapon."
+    },
+    {
+      "id": "lochaber_axe",
+      "name": "Lochaber Axe",
+      "type": "axe",
+      "subtype": "two_handed",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 28
+      },
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 24,
+        "attack_speed": 0.82,
+        "durability_max": 195
+      },
+      "damage_dice": "3d8",
+      "tval": 22,
+      "sval": 28,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 8,
+      "weight": 250,
+      "sell_value": 750,
+      "description": "A highland war-axe with hook for pulling riders down."
+    },
+    {
+      "id": "scythe_of_slicing",
+      "name": "Scythe of Slicing",
+      "type": "polearm",
+      "subtype": "two_handed",
+      "rarity": "very_rare",
+      "required_stats": {
+        "strength": 38
+      },
+      "stats": {
+        "damage_min": 8,
+        "damage_max": 32,
+        "attack_speed": 0.8,
+        "durability_max": 220
+      },
+      "damage_dice": "8d4",
+      "tval": 22,
+      "sval": 30,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 12,
+      "weight": 250,
+      "sell_value": 3500,
+      "description": "An artifact-grade harvest blade that cuts through almost anything."
+    },
+    {
+      "id": "shovel",
+      "name": "Shovel",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 2,
+        "attack_speed": 1,
+        "tunnel_power": 1,
+        "durability_max": 80
+      },
+      "damage_dice": "1d2",
+      "tval": 20,
+      "sval": 1,
+      "dungeon_depth": 1,
+      "dungeon_rarity": 4,
+      "weight": 60,
+      "sell_value": 10,
+      "description": "Can move rubble and dig through soft earth."
+    },
+    {
+      "id": "gnomish_shovel",
+      "name": "Gnomish Shovel",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 2,
+        "attack_speed": 1,
+        "tunnel_power": 2,
+        "durability_max": 100
+      },
+      "damage_dice": "1d2",
+      "tval": 20,
+      "sval": 2,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 5,
+      "weight": 60,
+      "sell_value": 100,
+      "description": "Gnomish engineering for faster tunnel work."
+    },
+    {
+      "id": "dwarven_shovel",
+      "name": "Dwarven Shovel",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 3,
+        "attack_speed": 1,
+        "tunnel_power": 3,
+        "durability_max": 140
+      },
+      "damage_dice": "1d3",
+      "tval": 20,
+      "sval": 3,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 8,
+      "weight": 120,
+      "sell_value": 200,
+      "description": "Dwarven-forged to cut through solid granite."
+    },
+    {
+      "id": "pick",
+      "name": "Pick",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 3,
+        "attack_speed": 1,
+        "tunnel_power": 1,
+        "durability_max": 120
+      },
+      "damage_dice": "1d3",
+      "tval": 20,
+      "sval": 4,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 5,
+      "weight": 150,
+      "sell_value": 50,
+      "description": "A mining pick — slow but effective against stone."
+    },
+    {
+      "id": "orcish_pick",
+      "name": "Orcish Pick",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 3,
+        "attack_speed": 1,
+        "tunnel_power": 2,
+        "durability_max": 150
+      },
+      "damage_dice": "1d3",
+      "tval": 20,
+      "sval": 5,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 8,
+      "weight": 180,
+      "sell_value": 300,
+      "description": "Crude orcish tool but surprisingly effective at digging."
+    },
+    {
+      "id": "dwarven_pick",
+      "name": "Dwarven Pick",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 4,
+        "attack_speed": 1,
+        "tunnel_power": 3,
+        "durability_max": 180
+      },
+      "damage_dice": "1d4",
+      "tval": 20,
+      "sval": 6,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 10,
+      "weight": 200,
+      "sell_value": 600,
+      "description": "Master dwarven craft that chews through bedrock."
+    },
+    {
+      "id": "mattock",
+      "name": "Mattock",
+      "type": "digger",
+      "subtype": "digging",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 16
+      },
+      "stats": {
+        "damage_min": 1,
+        "damage_max": 8,
+        "attack_speed": 0.9,
+        "tunnel_power": 3,
+        "durability_max": 180
+      },
+      "damage_dice": "1d8",
+      "tval": 20,
+      "sval": 7,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 10,
+      "weight": 250,
+      "sell_value": 700,
+      "description": "Heavy digging blade — also viable as a weapon in desperation."
+    },
+    {
+      "id": "mighty_hammer",
+      "name": "Mighty Hammer",
+      "type": "mace",
+      "subtype": "two_handed",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "damage_min": 3,
+        "damage_max": 27,
+        "attack_speed": 0.85,
+        "durability_max": 120
+      },
+      "damage_dice": "3d9",
+      "tval": 21,
+      "sval": 50,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 6,
+      "weight": 200,
+      "sell_value": 1000,
+      "description": "Mighty Hammer."
+    }
+  ],
+  "armor_templates": [
+    {
+      "id": "robe",
+      "name": "Robe",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 4,
+        "durability_max": 40
+      },
+      "sell_value": 4,
+      "tval": 36,
+      "sval": 2,
+      "dungeon_depth": 1,
+      "description": "A simple cloth robe offering minimal protection."
+    },
+    {
+      "id": "soft_leather_armor",
+      "name": "Soft Leather Armor",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 12,
+        "durability_max": 70
+      },
+      "sell_value": 18,
+      "tval": 36,
+      "sval": 4,
+      "dungeon_depth": 3,
+      "description": "Pliable hide armor favored by novice delvers."
+    },
+    {
+      "id": "hard_leather_armor",
+      "name": "Hard Leather Armor",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 10
+      },
+      "stats": {
+        "armor": 18,
+        "durability_max": 80
+      },
+      "sell_value": 150,
+      "tval": 36,
+      "sval": 6,
+      "dungeon_depth": 5,
+      "description": "Boiled leather plates stitched over a tunic."
+    },
+    {
+      "id": "hard_studded_leather",
+      "name": "Hard Studded Leather",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 12
+      },
+      "stats": {
+        "armor": 22,
+        "durability_max": 90
+      },
+      "sell_value": 200,
+      "tval": 36,
+      "sval": 7,
+      "dungeon_depth": 10,
+      "description": "Studded leather reinforced with metal rivets."
+    },
+    {
+      "id": "leather_scale_mail",
+      "name": "Leather Scale Mail",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "armor": 26,
+        "durability_max": 95
+      },
+      "sell_value": 450,
+      "tval": 36,
+      "sval": 11,
+      "dungeon_depth": 15,
+      "description": "Overlapping leather scales sewn to a sturdy backing."
+    },
+    {
+      "id": "hard_leather_cap",
+      "name": "Hard Leather Cap",
+      "type": "helmet",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 6,
+        "durability_max": 55
+      },
+      "sell_value": 12,
+      "tval": 32,
+      "sval": 2,
+      "dungeon_depth": 3,
+      "description": "A boiled leather cap that turns glancing blows."
+    },
+    {
+      "id": "metal_cap",
+      "name": "Metal Cap",
+      "type": "helmet",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 10
+      },
+      "stats": {
+        "armor": 11,
+        "durability_max": 90
+      },
+      "sell_value": 30,
+      "tval": 32,
+      "sval": 3,
+      "dungeon_depth": 10,
+      "description": "Simple ironwork for protecting the brow."
+    },
+    {
+      "id": "iron_helm",
+      "name": "Iron Helm",
+      "type": "helmet",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 16
+      },
+      "stats": {
+        "armor": 20,
+        "durability_max": 120
+      },
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 2
+        }
+      ],
+      "sell_value": 75,
+      "tval": 32,
+      "sval": 5,
+      "dungeon_depth": 20,
+      "description": "A proven helm common among line fighters."
+    },
+    {
+      "id": "chain_mail",
+      "name": "Chain Mail",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "armor": 34,
+        "durability_max": 110
+      },
+      "sell_value": 750,
+      "tval": 37,
+      "sval": 4,
+      "dungeon_depth": 25,
+      "description": "Linked iron rings with solid stopping power."
+    },
+    {
+      "id": "augmented_chain_mail",
+      "name": "Augmented Chain Mail",
+      "type": "chest",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 26
+      },
+      "stats": {
+        "armor": 72,
+        "durability_max": 170
+      },
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 6
+        },
+        {
+          "type": "armor",
+          "value": 8
+        }
+      ],
+      "sell_value": 900,
+      "tval": 37,
+      "sval": 6,
+      "dungeon_depth": 30,
+      "description": "Augmented plates stitched into heavy chain."
+    },
+    {
+      "id": "bar_chain_mail",
+      "name": "Bar Chain Mail",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 20
+      },
+      "stats": {
+        "armor": 42,
+        "durability_max": 130
+      },
+      "sell_value": 950,
+      "tval": 37,
+      "sval": 8,
+      "dungeon_depth": 35,
+      "description": "Thick vertical bars woven through chain links."
+    },
+    {
+      "id": "double_chain_mail",
+      "name": "Double Chain Mail",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 22
+      },
+      "stats": {
+        "armor": 48,
+        "durability_max": 140
+      },
+      "sell_value": 850,
+      "tval": 37,
+      "sval": 7,
+      "dungeon_depth": 30,
+      "description": "Two layers of interlocking chain for double the coverage."
+    },
+    {
+      "id": "metal_brigandine_armor",
+      "name": "Metal Brigandine Armor",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 24
+      },
+      "stats": {
+        "armor": 56,
+        "durability_max": 155
+      },
+      "sell_value": 1100,
+      "tval": 37,
+      "sval": 9,
+      "dungeon_depth": 35,
+      "description": "Small metal plates riveted inside a leather shell."
+    },
+    {
+      "id": "set_of_leather_gloves",
+      "name": "Set of Leather Gloves",
+      "type": "gloves",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 4,
+        "durability_max": 60
+      },
+      "affixes": [
+        {
+          "type": "dexterity",
+          "value": 1
+        }
+      ],
+      "sell_value": 3,
+      "tval": 31,
+      "sval": 1,
+      "dungeon_depth": 1,
+      "description": "Simple gloves that improve grip and finger speed."
+    },
+    {
+      "id": "gauntlets",
+      "name": "Gauntlets",
+      "type": "gloves",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "armor": 12,
+        "durability_max": 110
+      },
+      "affixes": [
+        {
+          "type": "attack_power",
+          "value": 6
+        }
+      ],
+      "sell_value": 35,
+      "tval": 31,
+      "sval": 2,
+      "dungeon_depth": 10,
+      "description": "Steel gauntlets for hard parries and crushing grips."
+    },
+    {
+      "id": "pair_of_soft_leather_boots",
+      "name": "Pair of Soft Leather Boots",
+      "type": "boots",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 5,
+        "durability_max": 55
+      },
+      "affixes": [
+        {
+          "type": "speed",
+          "value": 1
+        }
+      ],
+      "sell_value": 7,
+      "tval": 30,
+      "sval": 2,
+      "dungeon_depth": 3,
+      "description": "Soft soles and good tread for dungeon stone."
+    },
+    {
+      "id": "pair_of_hard_leather_boots",
+      "name": "Pair of Hard Leather Boots",
+      "type": "boots",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 10,
+        "durability_max": 90
+      },
+      "sell_value": 12,
+      "tval": 30,
+      "sval": 3,
+      "dungeon_depth": 5,
+      "description": "Stiffened boots for rough terrain and rubble."
+    },
+    {
+      "id": "metal_shod_boots",
+      "name": "Metal Shod Boots",
+      "type": "boots",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 15
+      },
+      "stats": {
+        "armor": 18,
+        "durability_max": 125
+      },
+      "affixes": [
+        {
+          "type": "armor",
+          "value": 4
+        }
+      ],
+      "sell_value": 210,
+      "description": "Reinforced toes for kicking through tight fights."
+    },
+    {
+      "id": "partial_plate_armor",
+      "name": "Partial Plate Armor",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 22
+      },
+      "stats": {
+        "armor": 68,
+        "durability_max": 165
+      },
+      "sell_value": 360,
+      "description": "Heavy partial harness favored by deep guards."
+    },
+    {
+      "id": "metal_scale_mail",
+      "name": "Metal Scale Mail",
+      "type": "chest",
+      "rarity": "rare",
+      "required_stats": {
+        "strength": 28
+      },
+      "stats": {
+        "armor": 86,
+        "durability_max": 185
+      },
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 8
+        }
+      ],
+      "sell_value": 550,
+      "tval": 37,
+      "sval": 3,
+      "dungeon_depth": 25,
+      "description": "Layered scales deflect claws and jagged blades alike."
+    },
+    {
+      "id": "adamantite_plate_mail",
+      "name": "Adamantite Plate Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {
+        "strength": 44
+      },
+      "stats": {
+        "armor": 138,
+        "durability_max": 270
+      },
+      "affixes": [
+        {
+          "type": "armor_percent",
+          "value": 0.12
+        },
+        {
+          "type": "hp",
+          "value": 160
+        }
+      ],
+      "sell_value": 3200,
+      "description": "Near-black plates forged for the deepest war fronts."
+    },
+    {
+      "id": "cesti",
+      "name": "Cesti",
+      "type": "gloves",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "armor": 14,
+        "durability_max": 120
+      },
+      "affixes": [
+        {
+          "type": "attack_power",
+          "value": 10
+        },
+        {
+          "type": "critical_chance",
+          "value": 0.02
+        }
+      ],
+      "sell_value": 260,
+      "description": "Spiked fist-guards that turn punches into weapons."
+    },
+    {
+      "id": "small_leather_shield",
+      "name": "Small Leather Shield",
+      "type": "shield",
+      "armor_weight": "leather",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 8
+      },
+      "stats": {
+        "armor": 7,
+        "durability_max": 80
+      },
+      "weight": 50,
+      "sell_value": 30,
+      "tval": 34,
+      "sval": 2,
+      "dungeon_depth": 3,
+      "description": "A light starter shield used by recruits."
+    },
+    {
+      "id": "small_metal_shield",
+      "name": "Small Metal Shield",
+      "type": "shield",
+      "armor_weight": "mail",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 12
+      },
+      "stats": {
+        "armor": 13,
+        "durability_max": 100
+      },
+      "weight": 65,
+      "sell_value": 50,
+      "tval": 34,
+      "sval": 3,
+      "dungeon_depth": 10,
+      "description": "Forged plate over hardwood backing."
+    },
+    {
+      "id": "large_leather_shield",
+      "name": "Large Leather Shield",
+      "type": "shield",
+      "armor_weight": "leather",
+      "rarity": "common",
+      "required_stats": {
+        "strength": 14
+      },
+      "stats": {
+        "armor": 18,
+        "durability_max": 115
+      },
+      "weight": 100,
+      "sell_value": 120,
+      "tval": 34,
+      "sval": 4,
+      "dungeon_depth": 15,
+      "description": "Broad hide shield that covers most of the torso."
+    },
+    {
+      "id": "large_metal_shield",
+      "name": "Large Metal Shield",
+      "type": "shield",
+      "armor_weight": "mail",
+      "rarity": "uncommon",
+      "required_stats": {
+        "strength": 18
+      },
+      "stats": {
+        "armor": 26,
+        "durability_max": 135
+      },
+      "weight": 120,
+      "sell_value": 165,
+      "description": "Reliable front-line shield with heavy rim reinforcement."
+    },
+    {
+      "id": "shield_of_deflection",
+      "name": "Shield of Deflection",
+      "type": "shield",
+      "armor_weight": "plate",
+      "rarity": "epic",
+      "required_stats": {
+        "strength": 34
+      },
+      "stats": {
+        "armor": 68,
+        "durability_max": 250
+      },
+      "affixes": [
+        {
+          "type": "dodge_chance",
+          "value": 0.04
+        },
+        {
+          "type": "critical_damage",
+          "value": 0.1
+        }
+      ],
+      "weight": 100,
+      "sell_value": 1880,
+      "description": "Its face angles send blows glancing wide."
+    },
+    {
+      "id": "cloak",
+      "name": "Cloak",
+      "type": "cloak",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 3,
+        "durability_max": 45
+      },
+      "sell_value": 12,
+      "description": "A plain traveling cloak that keeps out rain and turns light blows."
+    },
+    {
+      "id": "pair_of_metal_shod_boots",
+      "name": "Pair of Metal Shod Boots",
+      "type": "boots",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "armor": 15,
+        "durability_max": 78
+      },
+      "sell_value": 50,
+      "tval": 30,
+      "sval": 6,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "weight": 80,
+      "description": "Pair of Metal Shod Boots.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "steel_helm",
+      "name": "Steel Helm",
+      "type": "helmet",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 15,
+        "durability_max": 78
+      },
+      "sell_value": 200,
+      "tval": 32,
+      "sval": 6,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 1,
+      "weight": 60,
+      "description": "Steel Helm.",
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "iron_crown",
+      "name": "Iron Crown",
+      "type": "crown",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 2,
+        "durability_max": 40
+      },
+      "sell_value": 500,
+      "tval": 33,
+      "sval": 10,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 20,
+      "description": "Iron Crown.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "golden_crown",
+      "name": "Golden Crown",
+      "type": "crown",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 2,
+        "durability_max": 40
+      },
+      "sell_value": 1000,
+      "tval": 33,
+      "sval": 11,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 30,
+      "description": "Golden Crown.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "jewel_encrusted_crown",
+      "name": "Jewel Encrusted Crown",
+      "type": "crown",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 2,
+        "durability_max": 40
+      },
+      "sell_value": 2000,
+      "tval": 33,
+      "sval": 12,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 1,
+      "weight": 40,
+      "description": "Jewel Encrusted Crown.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "filthy_rag",
+      "name": "Filthy Rag",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 3,
+        "durability_max": 40
+      },
+      "sell_value": 1,
+      "tval": 36,
+      "sval": 1,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 1,
+      "weight": 20,
+      "description": "Filthy Rag.",
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "leather",
+      "to_armor_bonus": -1
+    },
+    {
+      "id": "soft_studded_leather",
+      "name": "Soft Studded Leather",
+      "type": "chest",
+      "rarity": "common",
+      "required_stats": {},
+      "stats": {
+        "armor": 13,
+        "durability_max": 70
+      },
+      "sell_value": 35,
+      "tval": 36,
+      "sval": 5,
+      "dungeon_depth": 3,
+      "dungeon_rarity": 1,
+      "weight": 90,
+      "description": "Soft Studded Leather.",
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "leather"
+    },
+    {
+      "id": "rusty_chain_mail",
+      "name": "Rusty Chain Mail",
+      "type": "chest",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "armor": 35,
+        "durability_max": 142
+      },
+      "sell_value": 550,
+      "tval": 37,
+      "sval": 1,
+      "dungeon_depth": 25,
+      "dungeon_rarity": 1,
+      "weight": 200,
+      "description": "Rusty Chain Mail.",
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "mail",
+      "to_armor_bonus": -8
+    },
+    {
+      "id": "partial_plate_armor",
+      "name": "Partial Plate Armor",
+      "type": "chest",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 55,
+        "durability_max": 206
+      },
+      "sell_value": 1200,
+      "tval": 37,
+      "sval": 12,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 260,
+      "description": "Partial Plate Armor.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "plate"
+    },
+    {
+      "id": "metal_lamellar_armor",
+      "name": "Metal Lamellar Armor",
+      "type": "chest",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 58,
+        "durability_max": 214
+      },
+      "sell_value": 1250,
+      "tval": 37,
+      "sval": 13,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 340,
+      "description": "Metal Lamellar Armor.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "plate"
+    },
+    {
+      "id": "full_plate_armor",
+      "name": "Full Plate Armor",
+      "type": "chest",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 63,
+        "durability_max": 230
+      },
+      "sell_value": 1350,
+      "tval": 37,
+      "sval": 15,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 380,
+      "description": "Full Plate Armor.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "plate"
+    },
+    {
+      "id": "ribbed_plate_armor",
+      "name": "Ribbed Plate Armor",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 70,
+        "durability_max": 254
+      },
+      "sell_value": 1500,
+      "tval": 37,
+      "sval": 18,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 1,
+      "weight": 380,
+      "description": "Ribbed Plate Armor.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "armor_weight": "plate"
+    },
+    {
+      "id": "mithril_plate_mail",
+      "name": "Mithril Plate Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 88,
+        "durability_max": 300
+      },
+      "sell_value": 15000,
+      "tval": 37,
+      "sval": 25,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 3,
+      "weight": 300,
+      "description": "Mithril Plate Mail.",
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 3
+        }
+      ],
+      "armor_weight": "plate",
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "mithril_chain_mail",
+      "name": "Mithril Chain Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 70,
+        "durability_max": 254
+      },
+      "sell_value": 7000,
+      "tval": 37,
+      "sval": 20,
+      "dungeon_depth": 55,
+      "dungeon_rarity": 3,
+      "weight": 150,
+      "description": "Mithril Chain Mail.",
+      "allocation_table": [
+        {
+          "depth": 55,
+          "rarity": 3
+        }
+      ],
+      "armor_weight": "plate",
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "shadow_cloak",
+      "name": "Shadow Cloak",
+      "type": "cloak",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 15,
+        "durability_max": 78
+      },
+      "sell_value": 4000,
+      "tval": 35,
+      "sval": 6,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 2,
+      "weight": 5,
+      "description": "Shadow Cloak.",
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 2
+        }
+      ],
+      "to_armor_bonus": 4
+    },
+    {
+      "id": "set_of_cesti",
+      "name": "Set of Cesti",
+      "type": "gloves",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 13,
+        "durability_max": 70
+      },
+      "sell_value": 100,
+      "tval": 31,
+      "sval": 5,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 1,
+      "weight": 40,
+      "description": "Set of Cesti.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "black_dragon_scale_mail",
+      "name": "Black Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 1,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Black Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "blue_dragon_scale_mail",
+      "name": "Blue Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 2,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Blue Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "white_dragon_scale_mail",
+      "name": "White Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 3,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "White Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "red_dragon_scale_mail",
+      "name": "Red Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 4,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Red Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "green_dragon_scale_mail",
+      "name": "Green Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 60000,
+      "tval": 38,
+      "sval": 5,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Green Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "multi_hued_dragon_scale_mail",
+      "name": "Multi-Hued Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 150000,
+      "tval": 38,
+      "sval": 6,
+      "dungeon_depth": 90,
+      "dungeon_rarity": 32,
+      "weight": 200,
+      "description": "Multi-Hued Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 90,
+          "rarity": 32
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "pseudo_dragon_scale_mail",
+      "name": "Pseudo-Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 60000,
+      "tval": 38,
+      "sval": 10,
+      "dungeon_depth": 65,
+      "dungeon_rarity": 16,
+      "weight": 200,
+      "description": "Pseudo-Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 16
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "law_dragon_scale_mail",
+      "name": "Law Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 80000,
+      "tval": 38,
+      "sval": 12,
+      "dungeon_depth": 80,
+      "dungeon_rarity": 16,
+      "weight": 200,
+      "description": "Law Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 16
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "bronze_dragon_scale_mail",
+      "name": "Bronze Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 14,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Bronze Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "gold_dragon_scale_mail",
+      "name": "Gold Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 40000,
+      "tval": 38,
+      "sval": 16,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "weight": 200,
+      "description": "Gold Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "chaos_dragon_scale_mail",
+      "name": "Chaos Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 80000,
+      "tval": 38,
+      "sval": 18,
+      "dungeon_depth": 80,
+      "dungeon_rarity": 16,
+      "weight": 200,
+      "description": "Chaos Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 16
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "RES_CHAOS",
+        "RES_DISEN"
+      ]
+    },
+    {
+      "id": "balance_dragon_scale_mail",
+      "name": "Balance Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 75,
+        "durability_max": 270
+      },
+      "sell_value": 100000,
+      "tval": 38,
+      "sval": 20,
+      "dungeon_depth": 95,
+      "dungeon_rarity": 32,
+      "weight": 200,
+      "description": "Balance Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 95,
+          "rarity": 32
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 10,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "RES_SOUND",
+        "RES_SHARD",
+        "RES_CHAOS",
+        "RES_DISEN"
+      ]
+    },
+    {
+      "id": "power_dragon_scale_mail",
+      "name": "Power Dragon Scale Mail",
+      "type": "chest",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 100,
+        "durability_max": 300
+      },
+      "sell_value": 300000,
+      "tval": 38,
+      "sval": 30,
+      "dungeon_depth": 100,
+      "dungeon_rarity": 64,
+      "weight": 200,
+      "description": "Power Dragon Scale Mail.",
+      "allocation_table": [
+        {
+          "depth": 100,
+          "rarity": 64
+        }
+      ],
+      "armor_weight": "plate",
+      "to_armor_bonus": 15,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "RES_ACID",
+        "RES_FIRE",
+        "RES_COLD",
+        "RES_ELEC",
+        "RES_POIS",
+        "RES_CONFU",
+        "RES_DISEN",
+        "RES_SOUND",
+        "RES_SHARD",
+        "RES_BLIND",
+        "RES_LITE",
+        "RES_DARK",
+        "RES_NEXUS",
+        "RES_NETHR",
+        "RES_CHAOS"
+      ]
+    },
+    {
+      "id": "massive_iron_crown",
+      "name": "Massive Iron Crown",
+      "type": "crown",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 2,
+        "durability_max": 40
+      },
+      "sell_value": 1000,
+      "tval": 33,
+      "sval": 50,
+      "dungeon_depth": 44,
+      "dungeon_rarity": 6,
+      "weight": 20,
+      "description": "Massive Iron Crown."
+    },
+    {
+      "id": "orcish_shield",
+      "name": "Orcish Shield",
+      "type": "shield",
+      "rarity": "rare",
+      "required_stats": {},
+      "stats": {
+        "armor": 13,
+        "durability_max": 70
+      },
+      "sell_value": 12500,
+      "tval": 34,
+      "sval": 7,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 4,
+      "weight": 100,
+      "description": "Orcish Shield.",
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        }
+      ],
+      "to_armor_bonus": 5,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "kolla",
+      "name": "Kolla",
+      "type": "cloak",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 8,
+        "durability_max": 54
+      },
+      "sell_value": 40000,
+      "tval": 35,
+      "sval": 3,
+      "dungeon_depth": 65,
+      "dungeon_rarity": 4,
+      "weight": 5,
+      "description": "Kolla.",
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 4
+        }
+      ],
+      "to_armor_bonus": 4
+    },
+    {
+      "id": "pair_of_witan_boots",
+      "name": "Pair of Witan Boots",
+      "type": "boots",
+      "rarity": "epic",
+      "required_stats": {},
+      "stats": {
+        "armor": 20,
+        "durability_max": 94
+      },
+      "sell_value": 4000,
+      "tval": 30,
+      "sval": 8,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 1,
+      "weight": 80,
+      "description": "Pair of Witan Boots.",
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 1
+        }
+      ],
+      "to_armor_bonus": 5,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "STEALTH"
+      ]
+    },
+    {
+      "id": "set_of_elven_gloves",
+      "name": "Set of Elven Gloves",
+      "type": "gloves",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "stats": {
+        "armor": 3,
+        "durability_max": 40
+      },
+      "sell_value": 4000,
+      "tval": 31,
+      "sval": 4,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 16,
+      "weight": 40,
+      "description": "Set of Elven Gloves.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 16
+        }
+      ]
+    },
+    {
+      "id": "adamantite_plate_mail_37_30",
+      "name": "Adamantite Plate Mail",
+      "type": "chest",
+      "armor_weight": "plate",
+      "rarity": "legendary",
+      "required_stats": {},
+      "stats": {
+        "armor": 100,
+        "durability_max": 320
+      },
+      "sell_value": 20000,
+      "tval": 37,
+      "sval": 30,
+      "dungeon_depth": 75,
+      "dungeon_rarity": 4,
+      "weight": 420,
+      "description": "Adamantite Plate Mail.",
+      "allocation_table": [
+        {
+          "depth": 75,
+          "rarity": 4
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID"
+      ],
+      "to_hit_bonus": -4
+    }
+  ],
+  "accessory_templates": [
+    {
+      "id": "ring_of_protection",
+      "name": "Ring of Protection",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "armor",
+          "value": 3
+        }
+      ],
+      "sell_value": 500,
+      "description": "A staple ring for cautious beginners.",
+      "tval": 45,
+      "sval": 16,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_searching",
+      "name": "Ring of Searching",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "wisdom",
+          "value": 2
+        }
+      ],
+      "sell_value": 250,
+      "description": "Heightens awareness of hidden doors and traps.",
+      "tval": 45,
+      "sval": 23,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_feather_falling",
+      "name": "Ring of Feather Falling",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "speed",
+          "value": 1
+        }
+      ],
+      "sell_value": 200,
+      "description": "Softens landings from sudden drops and pits.",
+      "tval": 45,
+      "sval": 7,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_damage",
+      "name": "Ring of Damage",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "attack_power",
+          "value": 8
+        }
+      ],
+      "sell_value": 500,
+      "description": "Simple rune-work that sharpens killing power.",
+      "tval": 45,
+      "sval": 29,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_accuracy",
+      "name": "Ring of Accuracy",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "critical_chance",
+          "value": 0.03
+        },
+        {
+          "type": "attack_power",
+          "value": 6
+        }
+      ],
+      "sell_value": 500,
+      "description": "A true-strike ring favored by archers and duelists.",
+      "tval": 45,
+      "sval": 28,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_strength",
+      "name": "Ring of Strength",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "strength",
+          "value": 5
+        }
+      ],
+      "sell_value": 500,
+      "description": "A heavy gold ring that hums with bodily might.",
+      "tval": 45,
+      "sval": 24,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_dexterity",
+      "name": "Ring of Dexterity",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "dexterity",
+          "value": 5
+        },
+        {
+          "type": "dodge_chance",
+          "value": 0.02
+        }
+      ],
+      "sell_value": 500,
+      "description": "A polished band that lightens movement and timing.",
+      "tval": 45,
+      "sval": 26,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_speed",
+      "name": "Ring of Speed",
+      "type": "ring",
+      "rarity": "rare",
+      "required_stats": {
+        "dexterity": 20
+      },
+      "affixes": [
+        {
+          "type": "speed",
+          "value": 3
+        },
+        {
+          "type": "dodge_chance",
+          "value": 0.03
+        }
+      ],
+      "sell_value": 100000,
+      "description": "Among the most prized delver rings in old records.",
+      "tval": 45,
+      "sval": 31,
+      "dungeon_depth": 75,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 75,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_flames",
+      "name": "Ring of Flames",
+      "type": "ring",
+      "rarity": "rare",
+      "required_stats": {
+        "intelligence": 18
+      },
+      "affixes": [
+        {
+          "type": "fire_damage_percent",
+          "value": 0.12
+        },
+        {
+          "type": "spell_power",
+          "value": 10
+        }
+      ],
+      "sell_value": 3000,
+      "description": "Warm red runes dance across its inside edge.",
+      "tval": 45,
+      "sval": 18,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 2,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        }
+      ],
+      "to_armor_bonus": 15,
+      "flags": [
+        "IGNORE_FIRE"
+      ]
+    },
+    {
+      "id": "ring_of_free_action",
+      "name": "Ring of Free Action",
+      "type": "ring",
+      "rarity": "epic",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 8
+        },
+        {
+          "type": "dodge_chance",
+          "value": 0.04
+        }
+      ],
+      "special_effect": {
+        "name": "Free Action",
+        "description": "Greatly reduces slowing and immobilizing effects.",
+        "trigger": "on_hit"
+      },
+      "sell_value": 1500,
+      "description": "An old adventurer's favorite against webbers and shamans.",
+      "tval": 45,
+      "sval": 21,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_wisdom",
+      "name": "Amulet of Wisdom",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "wisdom",
+          "value": 6
+        },
+        {
+          "type": "mana_regen",
+          "value": 2
+        }
+      ],
+      "sell_value": 500,
+      "description": "A calm blue stone that aids disciplined casting.",
+      "tval": 40,
+      "sval": 6,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "weight": 3,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_charisma",
+      "name": "Amulet of Charisma",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "charisma",
+          "value": 6
+        },
+        {
+          "type": "hp_regen",
+          "value": 2
+        }
+      ],
+      "sell_value": 500,
+      "description": "Silver filigree and a bright-cut topaz centerpiece.",
+      "tval": 40,
+      "sval": 7,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "weight": 3,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_slow_digestion",
+      "name": "Amulet of Slow Digestion",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 3
+        }
+      ],
+      "sell_value": 180,
+      "description": "Reduces the wearer's need for food during long delves."
+    },
+    {
+      "id": "amulet_of_resist_acid",
+      "name": "Amulet of Resist Acid",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "armor",
+          "value": 4
+        }
+      ],
+      "sell_value": 300,
+      "description": "Warding runes protect against corrosive splashes.",
+      "tval": 40,
+      "sval": 4,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "weight": 3,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "ring_of_resist_fire",
+      "name": "Ring of Resist Fire",
+      "type": "ring",
+      "rarity": "rare",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "fire_resistance",
+          "value": 24
+        }
+      ],
+      "sell_value": 250,
+      "description": "A warm band that shrugs off furnace heat.",
+      "tval": 45,
+      "sval": 8,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_FIRE"
+      ]
+    },
+    {
+      "id": "ring_of_resist_cold",
+      "name": "Ring of Resist Cold",
+      "type": "ring",
+      "rarity": "rare",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "ice_resistance",
+          "value": 24
+        }
+      ],
+      "sell_value": 250,
+      "description": "Frost-glass lines the inner edge of this ring.",
+      "tval": 45,
+      "sval": 9,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "ring_of_resist_poison",
+      "name": "Ring of Resist Poison",
+      "type": "ring",
+      "rarity": "epic",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "poison_resistance",
+          "value": 30
+        },
+        {
+          "type": "constitution",
+          "value": 6
+        }
+      ],
+      "sell_value": 16000,
+      "description": "An antidotal ring prized in spider and drake nests.",
+      "tval": 45,
+      "sval": 20,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 2,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 2
+        }
+      ]
+    },
+    {
+      "id": "ring_of_ice",
+      "name": "Ring of Ice",
+      "type": "ring",
+      "rarity": "epic",
+      "required_stats": {
+        "intelligence": 26
+      },
+      "affixes": [
+        {
+          "type": "ice_damage_percent",
+          "value": 0.16
+        },
+        {
+          "type": "ice_resistance",
+          "value": 20
+        },
+        {
+          "type": "spell_power",
+          "value": 14
+        }
+      ],
+      "sell_value": 3000,
+      "description": "An ego ring rimed in eternal cold.",
+      "tval": 45,
+      "sval": 19,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 2,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        }
+      ],
+      "to_armor_bonus": 15,
+      "flags": [
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "ring_of_acid",
+      "name": "Ring of Acid",
+      "type": "ring",
+      "rarity": "epic",
+      "required_stats": {
+        "intelligence": 26
+      },
+      "affixes": [
+        {
+          "type": "poison_damage",
+          "value": 18
+        },
+        {
+          "type": "poison_resistance",
+          "value": 20
+        },
+        {
+          "type": "spell_power",
+          "value": 14
+        }
+      ],
+      "sell_value": 3000,
+      "description": "Corrosive sigils crawl around this viridian band.",
+      "tval": 45,
+      "sval": 17,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 2,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        }
+      ],
+      "to_armor_bonus": 15,
+      "flags": [
+        "IGNORE_ACID"
+      ]
+    },
+    {
+      "id": "ring_of_lightning",
+      "name": "Ring of Lightning",
+      "type": "ring",
+      "rarity": "epic",
+      "required_stats": {
+        "intelligence": 26
+      },
+      "affixes": [
+        {
+          "type": "lightning_damage_percent",
+          "value": 0.16
+        },
+        {
+          "type": "lightning_resistance",
+          "value": 20
+        },
+        {
+          "type": "spell_power",
+          "value": 14
+        }
+      ],
+      "sell_value": 5000,
+      "description": "Static arcs dance between its rune knots.",
+      "tval": 45,
+      "sval": 38,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 2,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        }
+      ],
+      "flags": [
+        "IGNORE_ELEC"
+      ]
+    },
+    {
+      "id": "ring_of_see_invisible",
+      "name": "Ring of See Invisible",
+      "type": "ring",
+      "rarity": "legendary",
+      "required_stats": {
+        "wisdom": 30
+      },
+      "affixes": [
+        {
+          "type": "light_radius",
+          "value": 3
+        },
+        {
+          "type": "wisdom",
+          "value": 10
+        }
+      ],
+      "special_effect": {
+        "name": "See Invisible",
+        "description": "Reveals hidden and phase-shifted enemies nearby.",
+        "trigger": "on_hit"
+      },
+      "sell_value": 340,
+      "description": "One of the most sought rings in old Angband lore.",
+      "tval": 45,
+      "sval": 22,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "weight": 2,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_searching",
+      "name": "Amulet of Searching",
+      "type": "amulet",
+      "rarity": "rare",
+      "required_stats": {
+        "wisdom": 16
+      },
+      "affixes": [
+        {
+          "type": "wisdom",
+          "value": 8
+        },
+        {
+          "type": "light_radius",
+          "value": 2
+        }
+      ],
+      "sell_value": 640,
+      "description": "Favored by trapfinders and treasure-seekers."
+    },
+    {
+      "id": "amulet_of_the_magi",
+      "name": "Amulet of the Magi",
+      "type": "amulet",
+      "rarity": "legendary",
+      "required_stats": {
+        "intelligence": 34
+      },
+      "affixes": [
+        {
+          "type": "intelligence",
+          "value": 16
+        },
+        {
+          "type": "mana",
+          "value": 180
+        },
+        {
+          "type": "mana_regen",
+          "value": 8
+        },
+        {
+          "type": "spell_power",
+          "value": 26
+        }
+      ],
+      "sell_value": 30000,
+      "description": "An iconic caster relic in many veteran builds.",
+      "tval": 40,
+      "sval": 8,
+      "dungeon_depth": 70,
+      "dungeon_rarity": 8,
+      "weight": 3,
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 8
+        }
+      ],
+      "to_armor_bonus": 3,
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "ring_of_constitution",
+      "name": "Ring of Constitution",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "constitution",
+          "value": 1
+        }
+      ],
+      "sell_value": 500,
+      "weight": 2,
+      "description": "A ring of Constitution.",
+      "tval": 45,
+      "sval": 27,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_intelligence",
+      "name": "Ring of Intelligence",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "intelligence",
+          "value": 1
+        }
+      ],
+      "sell_value": 500,
+      "weight": 2,
+      "description": "A ring of Intelligence.",
+      "tval": 45,
+      "sval": 25,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_teleportation",
+      "name": "Ring of Teleportation",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 0,
+      "weight": 2,
+      "description": "A ring of Teleportation.",
+      "tval": 45,
+      "sval": 4,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "is_cursed": true
+    },
+    {
+      "id": "ring_of_slow_digestion",
+      "name": "Ring of Slow Digestion",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 250,
+      "weight": 2,
+      "description": "A ring of Slow Digestion.",
+      "tval": 45,
+      "sval": 6,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_woe",
+      "name": "Ring of Woe",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "wisdom",
+          "value": -5
+        },
+        {
+          "type": "charisma",
+          "value": -5
+        }
+      ],
+      "sell_value": 0,
+      "weight": 2,
+      "description": "A ring of Woe.",
+      "tval": 45,
+      "sval": 0,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "is_cursed": true
+    },
+    {
+      "id": "ring_of_aggravate_monster",
+      "name": "Ring of Aggravate Monster",
+      "type": "ring",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 0,
+      "weight": 2,
+      "description": "A ring of Aggravate Monster.",
+      "tval": 45,
+      "sval": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "is_cursed": true
+    },
+    {
+      "id": "ring_of_sustain_strength",
+      "name": "Ring of Sustain Strength",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Strength.",
+      "tval": 45,
+      "sval": 10,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_sustain_intelligence",
+      "name": "Ring of Sustain Intelligence",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Intelligence.",
+      "tval": 45,
+      "sval": 11,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_sustain_wisdom",
+      "name": "Ring of Sustain Wisdom",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Wisdom.",
+      "tval": 45,
+      "sval": 12,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_sustain_constitution",
+      "name": "Ring of Sustain Constitution",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Constitution.",
+      "tval": 45,
+      "sval": 13,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_sustain_dexterity",
+      "name": "Ring of Sustain Dexterity",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Dexterity.",
+      "tval": 45,
+      "sval": 14,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_sustain_charisma",
+      "name": "Ring of Sustain Charisma",
+      "type": "ring",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 400,
+      "weight": 2,
+      "description": "A ring of Sustain Charisma.",
+      "tval": 45,
+      "sval": 15,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ring_of_slaying",
+      "name": "Ring of Slaying",
+      "type": "ring",
+      "rarity": "rare",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 1000,
+      "weight": 2,
+      "description": "It boosts your to-hit and to-dam values.",
+      "tval": 45,
+      "sval": 30,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_adornment",
+      "name": "Amulet of Adornment",
+      "type": "amulet",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 20,
+      "weight": 3,
+      "description": "A amulet of Adornment.",
+      "tval": 40,
+      "sval": 2,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_sustenance",
+      "name": "Amulet of Sustenance",
+      "type": "amulet",
+      "rarity": "epic",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 20000,
+      "weight": 3,
+      "description": "A amulet of Sustenance.",
+      "tval": 40,
+      "sval": 9,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 6,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 6
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "amulet_of_doom",
+      "name": "Amulet of DOOM",
+      "type": "amulet",
+      "rarity": "common",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "strength",
+          "value": -5
+        },
+        {
+          "type": "intelligence",
+          "value": -5
+        },
+        {
+          "type": "wisdom",
+          "value": -5
+        },
+        {
+          "type": "dexterity",
+          "value": -5
+        },
+        {
+          "type": "constitution",
+          "value": -5
+        },
+        {
+          "type": "charisma",
+          "value": -5
+        }
+      ],
+      "sell_value": 0,
+      "weight": 3,
+      "description": "A amulet of DOOM.",
+      "tval": 40,
+      "sval": 0,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "is_cursed": true
+    },
+    {
+      "id": "amulet_of_esp",
+      "name": "Amulet of ESP",
+      "type": "amulet",
+      "rarity": "epic",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 25000,
+      "weight": 3,
+      "description": "A amulet of ESP.",
+      "tval": 40,
+      "sval": 13,
+      "dungeon_depth": 50,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 8
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "amulet_of_resistance",
+      "name": "Amulet of Resistance",
+      "type": "amulet",
+      "rarity": "epic",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "fire_resistance",
+          "value": 30
+        },
+        {
+          "type": "ice_resistance",
+          "value": 30
+        },
+        {
+          "type": "acid_resistance",
+          "value": 30
+        }
+      ],
+      "sell_value": 20000,
+      "weight": 3,
+      "description": "A amulet of Resistance.",
+      "tval": 40,
+      "sval": 14,
+      "dungeon_depth": 60,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 8
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "amulet_of_regeneration",
+      "name": "Amulet of Regeneration",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 600,
+      "weight": 3,
+      "description": "A amulet of Regeneration.",
+      "tval": 40,
+      "sval": 15,
+      "dungeon_depth": 30,
+      "dungeon_rarity": 3,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 3
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_devotion",
+      "name": "Amulet of Devotion",
+      "type": "amulet",
+      "rarity": "legendary",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "wisdom",
+          "value": 1
+        },
+        {
+          "type": "charisma",
+          "value": 1
+        },
+        {
+          "type": "fire_resistance",
+          "value": 30
+        }
+      ],
+      "sell_value": 30000,
+      "weight": 3,
+      "description": "A amulet of Devotion.",
+      "tval": 40,
+      "sval": 18,
+      "dungeon_depth": 70,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 8
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_weaponmastery",
+      "name": "Amulet of Weaponmastery",
+      "type": "amulet",
+      "rarity": "legendary",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "strength",
+          "value": 1
+        }
+      ],
+      "sell_value": 30000,
+      "weight": 3,
+      "description": "A amulet of Weaponmastery.",
+      "tval": 40,
+      "sval": 19,
+      "dungeon_depth": 70,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 8
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_trickery",
+      "name": "Amulet of Trickery",
+      "type": "amulet",
+      "rarity": "legendary",
+      "required_stats": {},
+      "affixes": [
+        {
+          "type": "dexterity",
+          "value": 1
+        },
+        {
+          "type": "speed",
+          "value": 1
+        },
+        {
+          "type": "poison_resistance",
+          "value": 30
+        }
+      ],
+      "sell_value": 30000,
+      "weight": 3,
+      "description": "A amulet of Trickery.",
+      "tval": 40,
+      "sval": 20,
+      "dungeon_depth": 70,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 8
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_infravision",
+      "name": "Amulet of Infravision",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 200,
+      "weight": 3,
+      "description": "A amulet of Infravision.",
+      "tval": 40,
+      "sval": 21,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 2,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 2
+        }
+      ]
+    },
+    {
+      "id": "amulet_of_resist_lightning",
+      "name": "Amulet of Resist Lightning",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 300,
+      "weight": 3,
+      "description": "A amulet of Resist Lightning.",
+      "tval": 40,
+      "sval": 22,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "flags": [
+        "IGNORE_ELEC"
+      ]
+    },
+    {
+      "id": "amulet_of_the_moon",
+      "name": "Amulet of the Moon",
+      "type": "amulet",
+      "rarity": "rare",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 30000,
+      "weight": 3,
+      "description": "A amulet of the Moon.",
+      "tval": 40,
+      "sval": 23,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 8
+        },
+        {
+          "depth": 60,
+          "rarity": 4
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    },
+    {
+      "id": "amulet_of_terken",
+      "name": "Amulet of Terken",
+      "type": "amulet",
+      "rarity": "rare",
+      "required_stats": {},
+      "affixes": [],
+      "sell_value": 30000,
+      "weight": 3,
+      "description": "A amulet of Terken.",
+      "tval": 40,
+      "sval": 24,
+      "dungeon_depth": 40,
+      "dungeon_rarity": 8,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 8
+        },
+        {
+          "depth": 60,
+          "rarity": 4
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ]
+    }
+  ],
+  "consumable_templates": [
+    {
+      "id": "mana_potion",
+      "name": "Mana Potion",
+      "type": "potion",
+      "rarity": "common",
+      "effect": {
+        "type": "restore_mana",
+        "value": 100,
+        "instant": true
+      },
+      "cooldown_ticks": 3,
+      "stack_size": 20,
+      "sell_value": 25,
+      "weight": 0.4,
+      "description": "Restores 100 mana instantly."
+    },
+    {
+      "id": "scroll_teleport",
+      "name": "Scroll of Teleport",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "effect": {
+        "type": "teleport_town",
+        "cast_time_ticks": 5,
+        "interruptible": true
+      },
+      "cooldown_ticks": 0,
+      "stack_size": 5,
+      "sell_value": 100,
+      "weight": 0.4,
+      "description": "Teleport back to town after 5 seconds. Interrupted by damage."
+    },
+    {
+      "id": "scroll_identify",
+      "name": "Scroll of *Identify*",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "effect": {
+        "type": "identify"
+      },
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "sell_value": 50,
+      "weight": 0.4,
+      "description": "Identifies all items in your inventory and equipment."
+    },
+    {
+      "id": "scroll_curse_weapon",
+      "name": "Scroll of Curse Weapon",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "effect": {
+        "type": "curse_equipped_weapon"
+      },
+      "cooldown_ticks": 0,
+      "stack_size": 5,
+      "sell_value": 10,
+      "weight": 0.4,
+      "description": "Places a dark curse upon one of your equipped weapons at random."
+    },
+    {
+      "id": "scroll_curse_armor",
+      "name": "Scroll of Curse Armor",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "effect": {
+        "type": "curse_equipped_armor"
+      },
+      "cooldown_ticks": 0,
+      "stack_size": 5,
+      "sell_value": 10,
+      "weight": 0.4,
+      "description": "Places a dark curse upon one piece of your worn armor at random."
+    },
+    {
+      "id": "scroll_identify_single",
+      "name": "Scroll of Identify",
+      "type": "scroll",
+      "rarity": "common",
+      "effect": {
+        "type": "identify_one"
+      },
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "sell_value": 25,
+      "weight": 0.4,
+      "description": "Identifies one item of your choice from your inventory."
+    },
+    {
+      "id": "mushroom_blindness",
+      "name": "Mushroom of Blindness",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 1,
+      "description": "It causes blindness that lasts for 199+1d200 turns, unless you have resistance to blindness.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_paranoia",
+      "name": "Mushroom of Paranoia",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 2,
+      "description": "It induces fear that lasts for 9+1d10 turns, unless you have resistance to fear.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_confusion",
+      "name": "Mushroom of Confusion",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 3,
+      "description": "It induces confusion that lasts for 9+1d10 turns, unless you have resistance to confusion.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_hallucination",
+      "name": "Mushroom of Hallucination",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 4,
+      "description": "It causes you to hallucinate for 249+1d250 turns, unless you have resistance to chaos.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_poison",
+      "name": "Mushroom of Cure Poison",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 60,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 12,
+      "description": "It neutralizes poison.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_blindness",
+      "name": "Mushroom of Cure Blindness",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 50,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 13,
+      "description": "It cures blindness.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_paranoia",
+      "name": "Mushroom of Cure Paranoia",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 25,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 14,
+      "description": "It removes your fear.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_confusion",
+      "name": "Mushroom of Cure Confusion",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 50,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 15,
+      "description": "It cures confusion.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_weakness",
+      "name": "Mushroom of Weakness",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 6,
+      "description": "It inflicts 6d6 points of damage, and also reduces strength unless you have sustain strength.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_unhealth",
+      "name": "Mushroom of Unhealth",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 50,
+      "weight": 1,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 10,
+      "description": "It inflicts 10d10 points of damage, and also reduces constitution unless you have sustain constitution. It may also be thrown to inflict 10d10 points of damage.",
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restore_constitution",
+      "name": "Mushroom of Restore Constitution",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 350,
+      "weight": 1,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 18,
+      "description": "It restores constitution to maximum if it is currently below maximum.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restoring",
+      "name": "Mushroom of Restoring",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 1000,
+      "weight": 1,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 8,
+      "tval": 80,
+      "sval": 19,
+      "description": "It restores to maximum all stats that are currently below maximum.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 8
+        },
+        {
+          "depth": 30,
+          "rarity": 4
+        },
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_stupidity",
+      "name": "Mushroom of Stupidity",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 8,
+      "description": "It inflicts 8d8 points of damage, and also reduces intelligence unless you have sustain intelligence.",
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_naivety",
+      "name": "Mushroom of Naivety",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 9,
+      "description": "It inflicts 8d8 points of damage, and also reduces wisdom unless you have sustain wisdom.",
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_poison",
+      "name": "Mushroom of Poison",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 0,
+      "description": "It poisons you (adding 9+1d10 points to the poison counter), unless you have resistance to poison.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_sickness",
+      "name": "Mushroom of Sickness",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 10,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 7,
+      "description": "It inflicts 6d6 points of damage, and also reduces constitution unless you have sustain constitution.",
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_paralysis",
+      "name": "Mushroom of Paralysis",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 0,
+      "weight": 1,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 5,
+      "description": "It induces paralysis that lasts for 9+1d10 turns, unless you have free action.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restore_strength",
+      "name": "Mushroom of Restore Strength",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 350,
+      "weight": 1,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 17,
+      "description": "It restores strength to maximum if it is currently below maximum.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_disease",
+      "name": "Mushroom of Disease",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 50,
+      "weight": 1,
+      "dungeon_depth": 20,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 11,
+      "description": "It inflicts 10d10 points of damage, and also reduces strength unless you have sustain strength. It may also be thrown to inflict 10d10 points of damage.",
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_serious_wounds",
+      "name": "Mushroom of Cure Serious Wounds",
+      "type": "mushroom",
+      "rarity": "common",
+      "consumable_type": "mushroom",
+      "sell_value": 75,
+      "weight": 1,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 16,
+      "description": "It cures 4d8 points of damage.",
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ration_of_food",
+      "name": "Ration of Food",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 3,
+      "weight": 10,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 35,
+      "description": "Ration of Food.",
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "hard_biscuit",
+      "name": "Hard Biscuit",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 1,
+      "weight": 2,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 32,
+      "description": "Hard Biscuit."
+    },
+    {
+      "id": "strip_of_beef_jerky",
+      "name": "Strip of Beef Jerky",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 2,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 33,
+      "description": "Strip of Beef Jerky."
+    },
+    {
+      "id": "slime_mold",
+      "name": "Slime Mold",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 5,
+      "dungeon_depth": 1,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 36,
+      "description": "Slime Mold.",
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "piece_of_elvish_waybread",
+      "name": "Piece of Elvish Waybread",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 10,
+      "weight": 3,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "tval": 80,
+      "sval": 37,
+      "description": "It cures 4d8 points of damage and neutralizes poison.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "pint_of_fine_ale",
+      "name": "Pint of Fine Ale",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 1,
+      "weight": 5,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 38,
+      "description": "Pint of Fine Ale."
+    },
+    {
+      "id": "pint_of_fine_wine",
+      "name": "Pint of Fine Wine",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 10,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 39,
+      "description": "Pint of Fine Wine."
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 1,
+      "weight": 2,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 20,
+      "description": "It cures 1d4 points of damage."
+    },
+    {
+      "id": "head_of_cabbage",
+      "name": "Head of Cabbage",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 1,
+      "weight": 3,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 21,
+      "description": "It cures 1d4 points of damage."
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 1,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 22,
+      "description": "It cures 1d4 points of damage."
+    },
+    {
+      "id": "beet",
+      "name": "Beet",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 1,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 23,
+      "description": "It cures 1d4 points of damage."
+    },
+    {
+      "id": "squash",
+      "name": "Squash",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 1,
+      "weight": 3,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 24,
+      "description": "It cures 1d4 points of damage."
+    },
+    {
+      "id": "ear_of_corn",
+      "name": "Ear of Corn",
+      "type": "food",
+      "rarity": "common",
+      "consumable_type": "food",
+      "sell_value": 2,
+      "weight": 2,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 6,
+      "tval": 80,
+      "sval": 25,
+      "description": "It cures 1d4 points of damage."
+    }
+  ],
+  "chest_templates": [
+    {
+      "id": "small_wooden_chest",
+      "name": "Small wooden chest",
+      "tval": 7,
+      "sval": 1,
+      "dungeon_depth": 5,
+      "dungeon_rarity": 1,
+      "weight": 250,
+      "trap_chance": 0.15000000000000002,
+      "lock_difficulty": 0,
+      "gold_multiplier": 2,
+      "sell_value": 20,
+      "description": "A small wooden chest.",
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "large_wooden_chest",
+      "name": "Large wooden chest",
+      "tval": 7,
+      "sval": 5,
+      "dungeon_depth": 15,
+      "dungeon_rarity": 1,
+      "weight": 500,
+      "trap_chance": 0.25,
+      "lock_difficulty": 5,
+      "gold_multiplier": 3,
+      "sell_value": 60,
+      "description": "A large wooden chest.",
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "small_iron_chest",
+      "name": "Small iron chest",
+      "tval": 7,
+      "sval": 2,
+      "dungeon_depth": 25,
+      "dungeon_rarity": 1,
+      "weight": 300,
+      "trap_chance": 0.35,
+      "lock_difficulty": 15,
+      "gold_multiplier": 2,
+      "sell_value": 100,
+      "description": "A small iron chest.",
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "large_iron_chest",
+      "name": "Large iron chest",
+      "tval": 7,
+      "sval": 6,
+      "dungeon_depth": 35,
+      "dungeon_rarity": 1,
+      "weight": 1000,
+      "trap_chance": 0.44999999999999996,
+      "lock_difficulty": 25,
+      "gold_multiplier": 3,
+      "sell_value": 150,
+      "description": "A large iron chest.",
+      "allocation_table": [
+        {
+          "depth": 35,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "small_steel_chest",
+      "name": "Small steel chest",
+      "tval": 7,
+      "sval": 3,
+      "dungeon_depth": 45,
+      "dungeon_rarity": 1,
+      "weight": 500,
+      "trap_chance": 0.55,
+      "lock_difficulty": 35,
+      "gold_multiplier": 2,
+      "sell_value": 200,
+      "description": "A small steel chest.",
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "large_steel_chest",
+      "name": "Large steel chest",
+      "tval": 7,
+      "sval": 7,
+      "dungeon_depth": 55,
+      "dungeon_rarity": 1,
+      "weight": 1000,
+      "trap_chance": 0.65,
+      "lock_difficulty": 45,
+      "gold_multiplier": 3,
+      "sell_value": 250,
+      "description": "A large steel chest.",
+      "allocation_table": [
+        {
+          "depth": 55,
+          "rarity": 1
+        }
+      ]
+    },
+    {
+      "id": "ruined_chest",
+      "name": "Ruined chest",
+      "tval": 7,
+      "sval": 0,
+      "dungeon_depth": 0,
+      "dungeon_rarity": 1,
+      "weight": 250,
+      "trap_chance": 0.1,
+      "lock_difficulty": 0,
+      "gold_multiplier": 2,
+      "sell_value": 0,
+      "description": "A ruined chest.",
+      "allocation_table": [
+        {
+          "depth": 75,
+          "rarity": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "version": "0.1.0",
+  "templates": {
+    "pronouns": {
+      "$u": { "male": "He", "female": "She", "neutral": "You" },
+      "$r": { "male": "His", "female": "Her", "neutral": "Your" }
+    }
+  },
+  "raceStartNodes": {
+    "human": 1,
+    "half_elf": 4,
+    "elf": 5,
+    "high_elf": 7,
+    "hobbit": 10,
+    "gnome": 13,
+    "dwarf": 16,
+    "half_orc": 19,
+    "half_troll": 21,
+    "kobold": 23,
+    "dunadan": 1
+  },
+  "charts": [
+    {
+      "id": "hist_1",
+      "fromNode": 1,
+      "toNode": 2,
+      "rollCeiling": 10,
+      "socialClass": 25,
+      "text": "$u are the illegitimate and unacknowledged child"
+    },
+    {
+      "id": "hist_2",
+      "fromNode": 1,
+      "toNode": 2,
+      "rollCeiling": 20,
+      "socialClass": 35,
+      "text": "$u are the illegitimate but acknowledged child"
+    },
+    {
+      "id": "hist_3",
+      "fromNode": 1,
+      "toNode": 2,
+      "rollCeiling": 95,
+      "socialClass": 45,
+      "text": "$u are one of several children"
+    },
+    {
+      "id": "hist_4",
+      "fromNode": 1,
+      "toNode": 2,
+      "rollCeiling": 100,
+      "socialClass": 50,
+      "text": "$u are the first child"
+    },
+    {
+      "id": "hist_5",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 40,
+      "socialClass": 65,
+      "text": "of a Serf."
+    },
+    {
+      "id": "hist_6",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 65,
+      "socialClass": 80,
+      "text": "of a Yeoman."
+    },
+    {
+      "id": "hist_7",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 80,
+      "socialClass": 90,
+      "text": "of a Townsman."
+    },
+    {
+      "id": "hist_8",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 90,
+      "socialClass": 105,
+      "text": "of a Guildsman."
+    },
+    {
+      "id": "hist_9",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 96,
+      "socialClass": 120,
+      "text": "of a Landed Knight."
+    },
+    {
+      "id": "hist_10",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 99,
+      "socialClass": 130,
+      "text": "of a Titled Noble."
+    },
+    {
+      "id": "hist_11",
+      "fromNode": 2,
+      "toNode": 3,
+      "rollCeiling": 100,
+      "socialClass": 140,
+      "text": "of a Royal Blood Line."
+    },
+    {
+      "id": "hist_12",
+      "fromNode": 3,
+      "toNode": 50,
+      "rollCeiling": 20,
+      "socialClass": 20,
+      "text": "$u are the black sheep of the family."
+    },
+    {
+      "id": "hist_13",
+      "fromNode": 3,
+      "toNode": 50,
+      "rollCeiling": 80,
+      "socialClass": 55,
+      "text": "$u are a credit to the family."
+    },
+    {
+      "id": "hist_14",
+      "fromNode": 3,
+      "toNode": 50,
+      "rollCeiling": 100,
+      "socialClass": 60,
+      "text": "$u are a well liked child."
+    },
+    {
+      "id": "hist_15",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 15,
+      "socialClass": 40,
+      "text": "$r mother was of the Avari."
+    },
+    {
+      "id": "hist_16",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 30,
+      "socialClass": 45,
+      "text": "$r father was of the Avari."
+    },
+    {
+      "id": "hist_17",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 50,
+      "socialClass": 50,
+      "text": "$r mother was of the Nandor."
+    },
+    {
+      "id": "hist_18",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 70,
+      "socialClass": 55,
+      "text": "$r father was of the Nandor."
+    },
+    {
+      "id": "hist_19",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 85,
+      "socialClass": 60,
+      "text": "$r mother was of the Sindar."
+    },
+    {
+      "id": "hist_20",
+      "fromNode": 4,
+      "toNode": 1,
+      "rollCeiling": 95,
+      "socialClass": 65,
+      "text": "$r father was of the Sindar."
+    },
+    {
+      "id": "hist_21",
+      "fromNode": 9,
+      "toNode": 54,
+      "rollCeiling": 95,
+      "socialClass": 125,
+      "text": "Mage."
+    },
+    {
+      "id": "hist_22",
+      "fromNode": 9,
+      "toNode": 54,
+      "rollCeiling": 99,
+      "socialClass": 140,
+      "text": "Prince."
+    },
+    {
+      "id": "hist_23",
+      "fromNode": 9,
+      "toNode": 54,
+      "rollCeiling": 100,
+      "socialClass": 145,
+      "text": "King."
+    },
+    {
+      "id": "hist_24",
+      "fromNode": 10,
+      "toNode": 11,
+      "rollCeiling": 85,
+      "socialClass": 45,
+      "text": "$u are one of several children of a Hobbit"
+    },
+    {
+      "id": "hist_25",
+      "fromNode": 10,
+      "toNode": 11,
+      "rollCeiling": 100,
+      "socialClass": 55,
+      "text": "$u are the only child of a Hobbit"
+    },
+    {
+      "id": "hist_26",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 20,
+      "socialClass": 55,
+      "text": "Burglar."
+    },
+    {
+      "id": "hist_27",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 30,
+      "socialClass": 80,
+      "text": "Miller."
+    },
+    {
+      "id": "hist_28",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 40,
+      "socialClass": 90,
+      "text": "Tavern Owner."
+    },
+    {
+      "id": "hist_29",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 50,
+      "socialClass": 100,
+      "text": "Archer."
+    },
+    {
+      "id": "hist_30",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 80,
+      "socialClass": 110,
+      "text": "Warrior."
+    },
+    {
+      "id": "hist_31",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 95,
+      "socialClass": 115,
+      "text": "Shirriff."
+    },
+    {
+      "id": "hist_32",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 99,
+      "socialClass": 125,
+      "text": "Mayor."
+    },
+    {
+      "id": "hist_33",
+      "fromNode": 11,
+      "toNode": 3,
+      "rollCeiling": 100,
+      "socialClass": 140,
+      "text": "Clan Elder."
+    },
+    {
+      "id": "hist_34",
+      "fromNode": 13,
+      "toNode": 14,
+      "rollCeiling": 85,
+      "socialClass": 45,
+      "text": "$u are one of several children of a Gnome"
+    },
+    {
+      "id": "hist_35",
+      "fromNode": 13,
+      "toNode": 14,
+      "rollCeiling": 100,
+      "socialClass": 55,
+      "text": "$u are the only child of a Gnome"
+    },
+    {
+      "id": "hist_36",
+      "fromNode": 14,
+      "toNode": 3,
+      "rollCeiling": 20,
+      "socialClass": 55,
+      "text": "Beggar."
+    },
+    {
+      "id": "hist_37",
+      "fromNode": 14,
+      "toNode": 3,
+      "rollCeiling": 50,
+      "socialClass": 70,
+      "text": "Braggart."
+    },
+    {
+      "id": "hist_38",
+      "fromNode": 14,
+      "toNode": 3,
+      "rollCeiling": 75,
+      "socialClass": 85,
+      "text": "Prankster."
+    },
+    {
+      "id": "hist_39",
+      "fromNode": 14,
+      "toNode": 3,
+      "rollCeiling": 95,
+      "socialClass": 100,
+      "text": "Warrior."
+    },
+    {
+      "id": "hist_40",
+      "fromNode": 14,
+      "toNode": 3,
+      "rollCeiling": 100,
+      "socialClass": 125,
+      "text": "Mage."
+    }
+  ]
+}

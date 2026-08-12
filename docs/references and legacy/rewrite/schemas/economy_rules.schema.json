@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/economy_rules",
+  "type": "object",
+  "required": ["version", "goldSources", "goldSinks", "inflation", "sellFloorRules"],
+  "properties": {
+    "version": { "type": "string" },
+    "goldSources": { "type": "array" },
+    "goldSinks": { "type": "array" },
+    "inflation": { "type": "object" },
+    "sellFloorRules": { "type": "object" }
+  }
+}
