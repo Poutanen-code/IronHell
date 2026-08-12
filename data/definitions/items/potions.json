@@ -861,8 +861,9 @@
           "action_id": "HealHP",
           "parameters": {
             "amount": {
-              "kind": "flat",
-              "value": 15
+              "kind": "dice",
+              "count": 2,
+              "sides": 10
             },
             "target_mode": "self"
           }

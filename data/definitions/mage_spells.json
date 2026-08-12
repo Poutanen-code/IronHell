@@ -139,8 +139,9 @@
           "action_id": "HealHP",
           "parameters": {
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_cure_light_wounds"
+              "kind": "dice",
+              "count": 2,
+              "sides": 10
             },
             "target_mode": "self"
           }

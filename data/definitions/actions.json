@@ -176,7 +176,7 @@
       "description": "Applies a timed beneficial status to the resolved target set.",
       "category": "status",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "activation"],
+      "allowed_source_families": ["spell", "prayer", "potion", "activation", "scroll", "rod", "staff"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
