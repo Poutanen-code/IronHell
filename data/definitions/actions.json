@@ -16,7 +16,7 @@
             "description": "Damage channel delivered by the bolt.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy_orb"]
           },
           {
             "id": "amount",
@@ -57,7 +57,7 @@
             "description": "Damage channel delivered by the ball effect.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy_orb"]
           },
           {
             "id": "amount",
@@ -189,7 +189,7 @@
           },
           {
             "id": "duration",
-            "description": "Duration expression for the granted timed status.",
+            "description": "Duration expression for the granted timed status. Can be explicit (base + dice), or policy_default to use the status's default_duration.",
             "value_type": "duration",
             "required": true
           },
@@ -231,7 +231,7 @@
           },
           {
             "id": "duration",
-            "description": "Duration expression for the oppose state.",
+            "description": "Duration expression for the oppose state. Can be explicit (base + dice) or policy_default.",
             "value_type": "duration",
             "required": true
           },
@@ -681,7 +681,7 @@
             "description": "Damage channel delivered by the beam.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy_orb"]
           },
           {
             "id": "amount",
@@ -910,7 +910,7 @@
             "description": "Declared terrain or feature operation.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["stone_to_mud", "destroy_trap_or_door", "create_door", "create_stair", "rune_of_protection", "destruction_field", "glyph_of_warding", "unbar_paths", "glyph", "create_object"]
+            "allowed_values": ["stone_to_mud", "destroy_trap_or_door", "create_door", "create_stair", "rune_of_protection", "destruction_field", "glyph_of_warding", "unbar_paths", "glyph"]
           },
           {
             "id": "target_mode",
@@ -942,7 +942,7 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass."
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values trimmed to core set and formatted for parity."
       }
     },
     {
@@ -1012,14 +1012,15 @@
             "minimum": 1
           },
           {
-            "id": "duration",
-            "description": "Optional duration expression when fear is directly timed.",
-            "value_type": "duration",
-            "required": false
+            "id": "radius",
+            "description": "Area radius when target_mode is area-like.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
           },
           {
             "id": "entity_filter",
-            "description": "Restricts the fear effect to entities matching this tag. Omit to affect all entities. undead is required for Turn Undead semantics.",
+            "description": "Restricts the fear effect to entities matching this tag. Omit to affect all entities.",
             "value_type": "enum",
             "required": false,
             "allowed_values": ["all", "evil", "undead", "demon"]
@@ -1033,261 +1034,38 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. all_in_los target_mode and entity_filter added in Action Catalog Stabilization Pass."
-      }
-    },
-    {
-      "action_id": "ParalyzeControl",
-      "name": "Paralyze Control",
-      "description": "Applies paralysis control to one or more targets.",
-      "category": "control",
-      "confidence": "medium",
-      "allowed_source_families": ["monster_spell", "trap"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "target_mode",
-            "description": "Targeting envelope for the control payload.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["target", "area"]
-          },
-          {
-            "id": "duration",
-            "description": "Duration expression for the applied paralysis.",
-            "value_type": "duration",
-            "required": true
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
-      }
-    },
-    {
-      "action_id": "BanishByRule",
-      "name": "Banish By Rule",
-      "description": "Removes entities according to a declared banishment rule.",
-      "category": "control",
-      "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "staff"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "banish_rule",
-            "description": "Rule used to select entities for removal.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["evil", "targeted_non_unique", "mass_non_unique", "evil_only", "non_unique", "all"]
-          },
-          {
-            "id": "target_mode",
-            "description": "Scope in which banishment is resolved.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["self", "area", "level"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
-      }
-    },
-    {
-      "action_id": "SummonEntities",
-      "name": "Summon Entities",
-      "description": "Creates one or more entities of a declared summon family.",
-      "category": "summoning",
-      "confidence": "medium",
-      "allowed_source_families": ["monster_spell", "staff", "activation", "trap"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "summon_family",
-            "description": "Entity family used by the summon payload.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["monster", "animal", "undead", "demon", "dragon", "spider", "hound", "unique"]
-          },
-          {
-            "id": "count",
-            "description": "Number of entities requested by the summon payload.",
-            "value_type": "integer",
-            "required": true,
-            "minimum": 1
-          },
-          {
-            "id": "target_mode",
-            "description": "Where or around whom summoned entities are created.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["self", "near_target", "area"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
-      }
-    },
-    {
-      "action_id": "InspectEntity",
-      "name": "Inspect Entity",
-      "description": "Reveals detailed runtime state (current HP, lore flags, resistances) for entities within range. Distinct from DetectEntities which only reveals entity positions.",
-      "category": "information",
-      "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "scope",
-            "description": "Which information is revealed about the resolved entity set.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["hp", "known_lore", "probing"]
-          },
-          {
-            "id": "target_mode",
-            "description": "Target selection envelope for entity inspection.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["all_in_sight", "target", "area"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_PROBING semantics. Reusable across prayer, scroll, and device sources."
-      }
-    },
-    {
-      "action_id": "RestoreAttributes",
-      "name": "Restore Attributes",
-      "description": "Restores drained stats and/or lost experience levels according to the selected scope.",
-      "category": "healing",
-      "confidence": "medium",
-      "allowed_source_families": ["prayer", "potion", "scroll", "activation"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "restore_scope",
-            "description": "Which attributes are restored by this payload.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["all_stats", "experience_level", "single_stat"]
-          },
-          {
-            "id": "stat_id",
-            "description": "Required when restore_scope is single_stat.",
-            "value_type": "enum",
-            "required": false,
-            "allowed_values": [
-              "strength",
-              "intelligence",
-              "wisdom",
-              "dexterity",
-              "constitution",
-              "charisma"
-            ]
-          },
-          {
-            "id": "target_mode",
-            "description": "Who receives the restoration payload.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["self", "target", "area"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_RESTORATION and PRAYER_REMEMBRANCE. Covers do_res_stat (single_stat and all_stats) and restore_level (experience_level) semantics."
-      }
-    },
-    {
-      "action_id": "RemoveCurse",
-      "name": "Remove Curse",
-      "description": "Removes one or all curses from the actor's equipped items.",
-      "category": "item",
-      "confidence": "medium",
-      "allowed_source_families": ["prayer", "scroll", "activation"],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "scope",
-            "description": "Whether one curse or all curses are removed. single covers remove_curse; all covers remove_all_curse.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["single", "all"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_REMOVE_CURSE (scope=single) and PRAYER_DISPEL_CURSE (scope=all). Reusable by scroll sources."
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. entity_filter added for selective fear targeting."
       }
     },
     {
       "action_id": "ModifyResourceMeter",
       "name": "Modify Resource Meter",
-      "description": "Sets or adjusts a named actor resource meter such as the food satiation counter.",
-      "category": "utility",
-      "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "potion", "scroll", "consumable"],
+      "description": "Adjusts a character resource meter such as food, sanity, or mana.",
+      "category": "survival",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "potion", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
           {
             "id": "meter",
-            "description": "The named resource meter to modify.",
+            "description": "The resource meter to modify.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["food", "mana"]
+            "allowed_values": ["food", "sanity", "mana"]
           },
           {
             "id": "mode",
-            "description": "How the meter value is changed.",
+            "description": "The modification operation on the meter.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["set_max", "set_near_max", "add", "set_value"]
+            "allowed_values": ["set_max", "set_near_max", "replenish", "drain"]
+          },
+          {
+            "id": "amount",
+            "description": "Optional amount for replenish/drain modes.",
+            "value_type": "integer",
+            "required": false
           }
         ]
       },
@@ -1298,79 +1076,25 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for Satisfy Hunger semantics. set_food(PY_FOOD_MAX-1) maps to mode=set_near_max. Reusable across spell and consumable sources."
+        "summary": "Canonical action for satisfying hunger and mana restoration. Added in MAngband Parity Pass."
       }
     },
     {
-      "action_id": "ModifyAttribute",
-      "name": "Modify Attribute",
-      "description": "Applies a canonical attribute modification operation using MAngband stat progression semantics.",
-      "category": "attribute",
-      "confidence": "medium",
-      "allowed_source_families": [
-        "potion",
-        "monster_blow",
-        "monster_spell",
-        "trap",
-        "spell",
-        "prayer"
-      ],
+      "action_id": "RemoveCurse",
+      "name": "Remove Curse",
+      "description": "Removes curse status from a selected item or set of items.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
           {
             "id": "scope",
-            "description": "Whether a single attribute or all attributes are modified.",
+            "description": "How many items are affected by curse removal.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": [
-              "single_stat",
-              "all_stats"
-            ]
-          },
-          {
-            "id": "stat_id",
-            "description": "Required when scope is single_stat.",
-            "value_type": "enum",
-            "required": false,
-            "allowed_values": [
-              "strength",
-              "intelligence",
-              "wisdom",
-              "dexterity",
-              "constitution",
-              "charisma"
-            ]
-          },
-          {
-            "id": "operation",
-            "description": "The attribute operation to perform.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": [
-              "increase",
-              "decrease"
-            ]
-          },
-          {
-            "id": "modification_mode",
-            "description": "Whether the modification is permanent or restorable.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": [
-              "permanent",
-              "restorable"
-            ]
-          },
-          {
-            "id": "target_mode",
-            "description": "Who receives the attribute modification.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": [
-              "self",
-              "target"
-            ]
+            "allowed_values": ["single", "all_equipped", "comprehensive"]
           }
         ]
       },
@@ -1381,81 +1105,38 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Canonical action for MAngband attribute gain and attribute drain semantics. Uses native stat progression algorithms rather than explicit numeric adjustments. Attribute restoration remains represented by RestoreAttributes."
-      }
-    },
-    {
-      "action_id": "ModifyExperience",
-      "name": "Modify Experience",
-      "description": "Adjusts experience by a specified amount.",
-      "category": "progression",
-      "confidence": "medium",
-      "allowed_source_families": [
-        "monster_blow",
-        "monster_spell",
-        "potion",
-        "spell",
-        "prayer",
-        "consumable"
-      ],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "amount",
-            "description": "Signed experience adjustment.",
-            "value_type": "structured_amount",
-            "required": true
-          },
-          {
-            "id": "modification_mode",
-            "description": "Nature of the experience adjustment.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["permanent", "restorable"]
-          },
-          {
-            "id": "target_mode",
-            "description": "Who receives the experience adjustment.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["self", "target"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Canonical action for experience gain and experience drain semantics. Experience restoration remains represented by RestoreAttributes(experience_level)."
+        "summary": "Canonical action for removing item curses. Added in MAngband Parity Pass for prayer_remove_curse."
       }
     },
     {
       "action_id": "TransformEntity",
       "name": "Transform Entity",
-      "description": "Replaces the resolved target entity with a randomly selected entity of the same class.",
+      "description": "Transforms or polymorph a targeted entity to another form or random type.",
       "category": "control",
-      "confidence": "medium",
-      "allowed_source_families": ["spell", "monster_spell"],
+      "confidence": "high",
+      "allowed_source_families": ["spell", "wand", "rod"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
           {
             "id": "transform_rule",
-            "description": "Rule governing the selection of the replacement entity.",
+            "description": "Type of transformation applied.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["polymorph_other"]
+            "allowed_values": ["random_monster", "random_gentle", "specific"]
           },
           {
             "id": "target_mode",
-            "description": "Target selection mode for the transformation payload.",
+            "description": "How the target entity is selected.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area"]
+            "allowed_values": ["target", "self"]
+          },
+          {
+            "id": "target_type",
+            "description": "Optional specific target type when transform_rule is specific.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -1466,7 +1147,43 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for SPELL_POLYMORPH_OTHER. poly_monster replaces target with a random monster of the same approximate depth."
+        "summary": "Canonical action for polymorph effects. Added in MAngband Parity Pass for magic_polymorph_other."
+      }
+    },
+    {
+      "action_id": "InspectEntity",
+      "name": "Inspect Entity",
+      "description": "Reveals detailed information about one or more entities.",
+      "category": "information",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "scope",
+            "description": "What information to reveal about the entity.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["hp_only", "hp_and_lore", "full"]
+          },
+          {
+            "id": "target_mode",
+            "description": "How many entities are inspected.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "all_in_sight", "all_nearby"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action for probing and entity inspection. Added in MAngband Parity Pass for prayer_probing."
       }
     }
   ]
