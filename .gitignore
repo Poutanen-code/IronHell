@@ -1,0 +1,38 @@
+# Build output
+**/bin/
+**/obj/
+node_modules/
+dist/
+build/
+.env
+.env.local
+.DS_Store
+.vscode/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.idea/
+*.log
+
+reference-*/
+
+# Additional ignores added by assistant
+release/
+# VS Code
+.vscode/
+
+# User-specific fil**
+*.user
+*.suo
+
+# Test results
+**/TestResults/
+
+# Rider.idea/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

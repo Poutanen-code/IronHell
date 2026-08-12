@@ -1,0 +1,15 @@
+{
+  "name": "ironhell-schema-validation",
+  "version": "1.0.0",
+  "description": "Schema validation tests for IronHell data definitions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/schema-validation/validate.test.js",
+    "test:watch": "node --test --watch tests/schema-validation/validate.test.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
