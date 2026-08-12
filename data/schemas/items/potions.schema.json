@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/potions.schema.json",
+  "title": "Potions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "potions"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "potions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/PotionItem" }
+    }
+  },
+  "$defs": {
+    "PotionItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "tval", "sval",
+        "weight", "sell_value",
+        "allocation_table", "description", "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "common_item.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
+        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
+        "weight": { "type": "integer", "minimum": 0 },
+        "sell_value": { "type": "integer", "minimum": 0 },
+        "is_harmful": { "type": "boolean" },
+        "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "effects": { "$ref": "common_item.schema.json#/$defs/Effects" },
+        "description": { "type": "string", "minLength": 1 },
+        "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
+      }
+    }
+  }
+}

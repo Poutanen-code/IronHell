@@ -1,0 +1,1220 @@
+{
+  "artifacts": [
+    {
+      "serial": 1,
+      "name": "The Phial of Galadriel",
+      "tval": 39, "sval": 4, "pval": 0,
+      "depth": 5, "rarity": 5, "weight": 10, "cost": 10000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["ACTIVATE", "INSTA_ART"],
+      "activation": "ILLUMINATION", "recharge_base": 10, "recharge_dice": 10,
+      "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure."
+    },
+    {
+      "serial": 2,
+      "name": "The Star of Elendil",
+      "tval": 39, "sval": 5, "pval": 0,
+      "depth": 30, "rarity": 25, "weight": 5, "cost": 30000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["ACTIVATE", "SEE_INVIS", "INSTA_ART"],
+      "activation": "MAGIC_MAP", "recharge_base": 50, "recharge_dice": 50,
+      "description": "The shining Star of the West, a treasured heirloom of Elendil's house."
+    },
+    {
+      "serial": 3,
+      "name": "The Arkenstone of Thrain",
+      "tval": 39, "sval": 6, "pval": 0,
+      "depth": 50, "rarity": 50, "weight": 5, "cost": 50000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["ACTIVATE", "SEE_INVIS", "HOLD_LIFE", "RES_LITE", "RES_DARK", "INSTA_ART"],
+      "activation": "DETECT", "recharge_base": 30, "recharge_dice": 30,
+      "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain."
+    },
+    {
+      "serial": 4,
+      "name": "The Amulet of Carlammas",
+      "tval": 40, "sval": 10, "pval": 2,
+      "depth": 50, "rarity": 10, "weight": 3, "cost": 60000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["CON", "HIDE_TYPE", "ACTIVATE", "RES_FIRE", "INSTA_ART"],
+      "activation": "PROT_EVIL", "recharge_base": 225, "recharge_dice": 225,
+      "description": "A fiery circle of bronze, with mighty spells to ward off and banish evil."
+    },
+    {
+      "serial": 5,
+      "name": "The Amulet of Ingwe",
+      "tval": 40, "sval": 11, "pval": 3,
+      "depth": 65, "rarity": 30, "weight": 3, "cost": 90000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["INT", "WIS", "CHR", "INFRA", "HIDE_TYPE", "SEE_INVIS", "FREE_ACT", "ACTIVATE", "RES_ACID", "RES_COLD", "RES_ELEC", "INSTA_ART"],
+      "activation": "DISP_EVIL", "recharge_base": 50, "recharge_dice": 50,
+      "description": "The ancient heirloom of Ingwe, high lord of the Vanyar, against whom nothing of evil could stand."
+    },
+    {
+      "serial": 6,
+      "name": "The Necklace of the Dwarves",
+      "tval": 40, "sval": 12, "pval": 3,
+      "depth": 70, "rarity": 50, "weight": 3, "cost": 75000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["STR", "CON", "INFRA", "HIDE_TYPE", "SEE_INVIS", "FREE_ACT", "REGEN", "LITE", "RES_FEAR", "INSTA_ART"],
+      "description": "The Nauglamir; a carencet of gold set with a multitude of shining gems of Valinor."
+    },
+    {
+      "serial": 8,
+      "name": "The Ring of Barahir",
+      "tval": 45, "sval": 32, "pval": 1,
+      "depth": 50, "rarity": 25, "weight": 2, "cost": 65000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "STEALTH", "HIDE_TYPE", "RES_POIS", "RES_DARK", "INSTA_ART"],
+      "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers."
+    },
+    {
+      "serial": 9,
+      "name": "The Ring of Tulkas",
+      "tval": 45, "sval": 33, "pval": 4,
+      "depth": 70, "rarity": 50, "weight": 2, "cost": 150000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "CON", "HIDE_TYPE", "RES_FEAR", "ACTIVATE", "INSTA_ART"],
+      "activation": "HASTE2", "recharge_base": 150, "recharge_dice": 150,
+      "description": "The treasure of Tulkas, most fleet and wrathful of the Valar."
+    },
+    {
+      "serial": 10,
+      "name": "The Ring of Power 'Narya'",
+      "tval": 45, "sval": 34, "pval": 1,
+      "depth": 70, "rarity": 60, "weight": 2, "cost": 100000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 6, "plus_to_dam": 6, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "SPEED", "HIDE_TYPE", "ACTIVATE", "FREE_ACT", "SEE_INVIS", "SLOW_DIGEST", "REGEN", "SUST_STR", "SUST_CON", "SUST_WIS", "SUST_CHR", "IM_FIRE", "RES_FIRE", "RES_NETHR", "RES_FEAR", "INSTA_ART"],
+      "activation": "FIRE3", "recharge_base": 20, "recharge_dice": 20,
+      "description": "The Ring of Fire, set with a ruby that glows like flame."
+    },
+    {
+      "serial": 13,
+      "name": "The Ring of Power 'The One Ring'",
+      "tval": 45, "sval": 37, "pval": 5,
+      "depth": 100, "rarity": 100, "weight": 2, "cost": 5000000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 15, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "SPEED", "HIDE_TYPE", "ACTIVATE", "LIGHT_CURSE", "HEAVY_CURSE", "PERMA_CURSE", "AGGRAVATE", "DRAIN_EXP", "SEE_INVIS", "REGEN", "IM_FIRE", "IM_COLD", "IM_ELEC", "IM_ACID", "RES_POIS", "RES_NETHR", "TELEPATHY", "RES_BLIND", "RES_DISEN", "RES_FEAR", "SUST_STR", "SUST_DEX", "SUST_CON", "SUST_INT", "SUST_WIS", "SUST_CHR", "INSTA_ART"],
+      "activation": "BIZZARE", "recharge_base": 30, "recharge_dice": 30,
+      "description": "One Ring to rule them all. Made of massive gold, set with runes in the foul speech of Mordor."
+    },
+    {
+      "serial": 19,
+      "name": "The Adamantite Plate Mail 'Soulkeeper'",
+      "tval": 37, "sval": 30, "pval": 2,
+      "depth": 75, "rarity": 9, "weight": 420, "cost": 300000,
+      "base_ac": 40, "damage": "2d4", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["CON", "HOLD_LIFE", "SUST_CON", "RES_ACID", "RES_COLD", "RES_DARK", "RES_NETHR", "RES_NEXUS", "RES_CHAOS", "RES_CONFU", "RES_FEAR", "ACTIVATE"],
+      "activation": "HEAL2", "recharge_base": 444, "recharge_dice": 0,
+      "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics."
+    },
+    {
+      "serial": 20,
+      "name": "The Full Plate Armor of Isildur",
+      "tval": 37, "sval": 15, "pval": 1,
+      "depth": 30, "rarity": 3, "weight": 300, "cost": 50000,
+      "base_ac": 25, "damage": "2d4", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["CON", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_SOUND", "RES_CONFU", "RES_NEXUS"],
+      "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability."
+    },
+    {
+      "serial": 22,
+      "name": "The Mithril Chain Mail 'Belegennon'",
+      "tval": 37, "sval": 20, "pval": 4,
+      "depth": 40, "rarity": 3, "weight": 150, "cost": 105000,
+      "base_ac": 28, "damage": "1d4", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STEALTH", "HIDE_TYPE", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_POIS", "ACTIVATE"],
+      "activation": "PHASE", "recharge_base": 2, "recharge_dice": 0,
+      "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver."
+    },
+    {
+      "serial": 27,
+      "name": "The Soft Leather Armor 'Hithlomir'",
+      "tval": 36, "sval": 4, "pval": 4,
+      "depth": 20, "rarity": 3, "weight": 80, "cost": 45000,
+      "base_ac": 4, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STEALTH", "HIDE_TYPE", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_DARK"],
+      "description": "Familiar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears."
+    },
+    {
+      "serial": 28,
+      "name": "The Leather Scale Mail 'Thalkettoth'",
+      "tval": 36, "sval": 11, "pval": 3,
+      "depth": 20, "rarity": 3, "weight": 60, "cost": 25000,
+      "base_ac": 11, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["DEX", "SPEED", "HIDE_TYPE", "RES_ACID", "RES_SHARD"],
+      "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather."
+    },
+    {
+      "serial": 50,
+      "name": "The Long Sword 'Narsil'",
+      "tval": 23, "sval": 23, "pval": 1,
+      "depth": 20, "rarity": 10, "weight": 30, "cost": 100000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 10, "plus_to_dam": 10, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "SLAY_ORC", "SLAY_TROLL", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "activation": "STAR_LIGHT",
+      "recharge_base": 100,
+      "recharge_dice": 8,
+      "description": "A great sword of Westernesse, long thought lost. Its blade gleams with an inner light."
+    },
+    {
+      "serial": 60,
+      "name": "The Spear of Gil-galad",
+      "tval": 22, "sval": 3, "pval": 4,
+      "depth": 30, "rarity": 15, "weight": 20, "cost": 180000,
+      "base_ac": 0, "damage": "2d6", "plus_to_hit": 13, "plus_to_dam": 13, "plus_to_ac": 10,
+      "flags": ["WIS", "ELEC_BRAND", "KILL_DRAGON", "SLAY_UNDEAD", "FREE_ACT", "SEE_INVIS", "INSTA_ART"],
+      "activation": "SHARD",
+      "recharge_base": 50,
+      "recharge_dice": 6,
+      "description": "The spear of the last High King of the Eldar, whose light scattered Sauron's servants."
+    },
+    {
+      "serial": 64,
+      "name": "Main Gauche of Maedhros",
+      "tval": 23, "sval": 5, "pval": 3,
+      "depth": 15, "rarity": 30, "weight": 30, "cost": 50000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 12, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["INT", "DEX", "SPEED", "HIDE_TYPE", "SLAY_TROLL", "SLAY_GIANT", "FREE_ACT", "SEE_INVIS", "INSTA_ART"],
+      "description": "The sword of the eldest son of Feanor, forged for swift and merciless work."
+    },
+    {
+      "serial": 65,
+      "name": "Dagger 'Angrist'",
+      "tval": 23, "sval": 4, "pval": 4,
+      "depth": 20, "rarity": 80, "weight": 12, "cost": 40000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 10, "plus_to_dam": 15, "plus_to_ac": 5,
+      "flags": ["DEX", "SPEED", "BRAND_ACID", "SLAY_EVIL", "SLAY_TROLL", "SLAY_ORC", "FREE_ACT", "RES_ACID", "RES_DARK", "SUST_DEX", "INSTA_ART"],
+      "description": "The dagger of Beren, carved from a splinter of Grond \u2014 the only blade that ever cut a Silmaril."
+    },
+    {
+      "serial": 66,
+      "name": "Dagger 'Narthanc'",
+      "tval": 23, "sval": 4, "pval": 0,
+      "depth": 4, "rarity": 3, "weight": 12, "cost": 12000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 4, "plus_to_dam": 6, "plus_to_ac": 0,
+      "flags": ["BRAND_FIRE", "RES_FIRE", "INSTA_ART"],
+      "activation": "FIRE1",
+      "recharge_base": 8, "recharge_dice": 0,
+      "description": "A flame-kissed blade that ignites with a breath of fire."
+    },
+    {
+      "serial": 67,
+      "name": "Dagger 'Nimthanc'",
+      "tval": 23, "sval": 4, "pval": 0,
+      "depth": 4, "rarity": 3, "weight": 12, "cost": 12000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 4, "plus_to_dam": 6, "plus_to_ac": 0,
+      "flags": ["BRAND_COLD", "RES_COLD", "INSTA_ART"],
+      "activation": "FROST1",
+      "recharge_base": 7, "recharge_dice": 0,
+      "description": "A frost-edged blade that breathes killing cold."
+    },
+    {
+      "serial": 68,
+      "name": "Dagger 'Dethanc'",
+      "tval": 23, "sval": 4, "pval": 0,
+      "depth": 4, "rarity": 3, "weight": 12, "cost": 12000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 4, "plus_to_dam": 6, "plus_to_ac": 0,
+      "flags": ["BRAND_ELEC", "RES_ELEC", "INSTA_ART"],
+      "activation": "LIGHTNING_BOLT",
+      "recharge_base": 6, "recharge_dice": 0,
+      "description": "An crackling blade that strikes with stored lightning."
+    },
+    {
+      "serial": 69,
+      "name": "Dagger of Rilia",
+      "tval": 23, "sval": 4, "pval": 0,
+      "depth": 5, "rarity": 40, "weight": 12, "cost": 15000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 4, "plus_to_dam": 3, "plus_to_ac": 0,
+      "flags": ["SLAY_ORC", "BRAND_POIS", "RES_POIS", "RES_DISEN", "INSTA_ART"],
+      "activation": "STINKING_CLOUD",
+      "recharge_base": 4, "recharge_dice": 0,
+      "description": "Venomed blade of a great rogue; the blade reeks of poison."
+    },
+    {
+      "serial": 70,
+      "name": "Dagger 'Belangil'",
+      "tval": 23, "sval": 4, "pval": 2,
+      "depth": 10, "rarity": 40, "weight": 12, "cost": 20000,
+      "base_ac": 0, "damage": "2d4", "plus_to_hit": 6, "plus_to_dam": 9, "plus_to_ac": 0,
+      "flags": ["DEX", "BRAND_COLD", "RES_COLD", "SEE_INVIS", "SLOW_DIGEST", "REGEN", "INSTA_ART"],
+      "activation": "FROST2",
+      "recharge_base": 5, "recharge_dice": 0,
+      "description": "An ancient cold-forged blade that heals its bearer slowly."
+    },
+    {
+      "serial": 71,
+      "name": "Bastard Sword 'Calris'",
+      "tval": 23, "sval": 21, "pval": 5,
+      "depth": 30, "rarity": 15, "weight": 140, "cost": 30000,
+      "base_ac": 0, "damage": "5d4", "plus_to_hit": -20, "plus_to_dam": 20, "plus_to_ac": 0,
+      "flags": ["CON", "KILL_DRAGON", "SLAY_EVIL", "SLAY_DEMON", "SLAY_TROLL", "RES_DISEN", "AGGRAVATE", "HEAVY_CURSE", "LIGHT_CURSE", "INSTA_ART"],
+      "description": "A cursed blade of terrible power \u2014 the -20 to-hit conceals a trap for the unwary."
+    },
+    {
+      "serial": 72,
+      "name": "Broad Sword 'Arunruth'",
+      "tval": 23, "sval": 16, "pval": 4,
+      "depth": 20, "rarity": 45, "weight": 150, "cost": 80000,
+      "base_ac": 0, "damage": "3d5", "plus_to_hit": 20, "plus_to_dam": 12, "plus_to_ac": 0,
+      "flags": ["DEX", "SLAY_DEMON", "SLAY_ORC", "FREE_ACT", "RES_COLD", "FEATHER", "SLOW_DIGEST", "INSTA_ART"],
+      "activation": "FROST4",
+      "recharge_base": 50, "recharge_dice": 0,
+      "description": "Thingol's 'King's Ire'; 3d5 on a Broad Sword base is extraordinary."
+    },
+    {
+      "serial": 73,
+      "name": "Broad Sword 'Glamdring'",
+      "tval": 23, "sval": 16, "pval": 0,
+      "depth": 20, "rarity": 20, "weight": 150, "cost": 75000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 10, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["SEARCH", "BLESSED", "LITE", "SLAY_EVIL", "BRAND_FIRE", "SLAY_ORC", "SLAY_DEMON", "RES_FIRE", "RES_LITE", "SLOW_DIGEST", "INSTA_ART"],
+      "description": "Gandalf's Beater \u2014 gleams with blue light when orcs draw near."
+    },
+    {
+      "serial": 74,
+      "name": "Broad Sword 'Aeglin'",
+      "tval": 23, "sval": 16, "pval": 0,
+      "depth": 20, "rarity": 30, "weight": 150, "cost": 70000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 12, "plus_to_dam": 16, "plus_to_ac": 0,
+      "flags": ["SEARCH", "BLESSED", "LITE", "SLAY_ORC", "SLAY_TROLL", "SLAY_GIANT", "BRAND_ELEC", "RES_ELEC", "RES_BLIND", "SLOW_DIGEST", "INSTA_ART"],
+      "description": "The Elven blade of roots and sap \u2014 its lightning brand thrums with natural power."
+    },
+    {
+      "serial": 75,
+      "name": "Broad Sword 'Orcrist'",
+      "tval": 23, "sval": 16, "pval": 0,
+      "depth": 20, "rarity": 20, "weight": 150, "cost": 75000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 10, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["SEARCH", "BLESSED", "LITE", "SLAY_EVIL", "BRAND_COLD", "SLAY_ORC", "SLAY_DRAGON", "RES_COLD", "RES_DARK", "SLOW_DIGEST", "INSTA_ART"],
+      "description": "The Elven Biter; Thorin's blade that glows at the scent of orcs."
+    },
+    {
+      "serial": 76,
+      "name": "Two-Handed Sword 'Gurthang'",
+      "tval": 23, "sval": 25, "pval": 2,
+      "depth": 30, "rarity": 30, "weight": 200, "cost": 90000,
+      "base_ac": 0, "damage": "3d6", "plus_to_hit": 13, "plus_to_dam": 17, "plus_to_ac": 0,
+      "flags": ["STR", "RES_FIRE", "RES_POIS", "BRAND_FIRE", "BRAND_POIS", "KILL_DRAGON", "FREE_ACT", "SLOW_DIGEST", "REGEN", "INSTA_ART"],
+      "description": "Turin's Black Sword reforged \u2014 dual fire and poison brands with dragonbane."
+    },
+    {
+      "serial": 77,
+      "name": "Two-Handed Sword 'Zarcuthra'",
+      "tval": 23, "sval": 25, "pval": 4,
+      "depth": 30, "rarity": 180, "weight": 200, "cost": 200000,
+      "base_ac": 0, "damage": "4d6", "plus_to_hit": 19, "plus_to_dam": 21, "plus_to_ac": 0,
+      "flags": ["STR", "CHR", "INFRA", "AGGRAVATE", "KILL_DRAGON", "SLAY_ANIMAL", "SLAY_EVIL", "BRAND_FIRE", "SLAY_UNDEAD", "SLAY_DEMON", "SLAY_TROLL", "SLAY_GIANT", "SLAY_ORC", "RES_FIRE", "RES_CHAOS", "FREE_ACT", "SEE_INVIS", "INSTA_ART"],
+      "description": "Perhaps the most damaging sword in the game; rarity 180 makes it near-impossible to find."
+    },
+    {
+      "serial": 78,
+      "name": "Two-Handed Sword 'Mormegil'",
+      "tval": 23, "sval": 25, "pval": 0,
+      "depth": 30, "rarity": 15, "weight": 200, "cost": 20000,
+      "base_ac": 0, "damage": "3d6", "plus_to_hit": -15, "plus_to_dam": -15, "plus_to_ac": -10,
+      "flags": ["BRAND_POIS", "KILL_DRAGON", "SLAY_UNDEAD", "SPEED", "SEE_INVIS", "HOLD_LIFE", "AGGRAVATE", "DRAIN_EXP", "HEAVY_CURSE", "LIGHT_CURSE", "INSTA_ART"],
+      "description": "The Black Sword \u2014 seductive but deeply cursed; drains experience with every kill."
+    },
+    {
+      "serial": 79,
+      "name": "Cutlass 'Gondricam'",
+      "tval": 23, "sval": 12, "pval": 3,
+      "depth": 20, "rarity": 8, "weight": 110, "cost": 28000,
+      "base_ac": 0, "damage": "1d7", "plus_to_hit": 10, "plus_to_dam": 11, "plus_to_ac": 0,
+      "flags": ["DEX", "STEALTH", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "FEATHER", "SEE_INVIS", "REGEN", "INSTA_ART"],
+      "description": "A rogue's prized blade; full elemental resists in a fast cutlass frame."
+    },
+    {
+      "serial": 80,
+      "name": "Executioner's Sword 'Crisdurian'",
+      "tval": 23, "sval": 28, "pval": 0,
+      "depth": 40, "rarity": 25, "weight": 260, "cost": 95000,
+      "base_ac": 0, "damage": "4d5", "plus_to_hit": 18, "plus_to_dam": 19, "plus_to_ac": 0,
+      "flags": ["SLAY_DRAGON", "SLAY_EVIL", "SLAY_UNDEAD", "SLAY_TROLL", "SLAY_GIANT", "SLAY_ORC", "SEE_INVIS", "INSTA_ART"],
+      "description": "An all-purpose slayer that is outstanding against every major monster category."
+    },
+    {
+      "serial": 81,
+      "name": "Katana 'Aglarang'",
+      "tval": 23, "sval": 20, "pval": 5,
+      "depth": 30, "rarity": 25, "weight": 120, "cost": 60000,
+      "base_ac": 0, "damage": "8d4", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["DEX", "SPEED", "SUST_DEX", "INSTA_ART"],
+      "description": "Remarkable 8d4 base damage; no combat bonuses but speed makes it lethal."
+    },
+    {
+      "serial": 82,
+      "name": "Long Sword 'Ringil'",
+      "tval": 23, "sval": 17, "pval": 10,
+      "depth": 20, "rarity": 120, "weight": 130, "cost": 300000,
+      "base_ac": 0, "damage": "4d5", "plus_to_hit": 22, "plus_to_dam": 25, "plus_to_ac": 0,
+      "flags": ["SPEED", "RES_FEAR", "BLESSED", "SLAY_EVIL", "BRAND_COLD", "SLAY_UNDEAD", "KILL_DEMON", "SLAY_TROLL", "FREE_ACT", "RES_COLD", "RES_LITE", "LITE", "SEE_INVIS", "SLOW_DIGEST", "REGEN", "INSTA_ART"],
+      "activation": "FROST3",
+      "recharge_base": 40, "recharge_dice": 0,
+      "description": "Fingolfin's legendary blade; 4d5 on a Long Sword is among the very best swords in the game."
+    },
+    {
+      "serial": 83,
+      "name": "Long Sword 'Anduril'",
+      "tval": 23, "sval": 17, "pval": 4,
+      "depth": 20, "rarity": 40, "weight": 130, "cost": 150000,
+      "base_ac": 0, "damage": "3d5", "plus_to_hit": 10, "plus_to_dam": 15, "plus_to_ac": 10,
+      "flags": ["STR", "DEX", "RES_FEAR", "FREE_ACT", "BLESSED", "SLAY_EVIL", "BRAND_FIRE", "SLAY_TROLL", "SLAY_ORC", "SLAY_UNDEAD", "RES_FIRE", "RES_DISEN", "SUST_STR", "SUST_DEX", "SEE_INVIS", "INSTA_ART"],
+      "activation": "FIRE2",
+      "recharge_base": 40, "recharge_dice": 0,
+      "description": "Aragorn's Flame of the West; 3d5 on a Long Sword base."
+    },
+    {
+      "serial": 84,
+      "name": "Long Sword 'Anguirel'",
+      "tval": 23, "sval": 17, "pval": 2,
+      "depth": 20, "rarity": 30, "weight": 130, "cost": 55000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 8, "plus_to_dam": 12, "plus_to_ac": 0,
+      "flags": ["STR", "CON", "SPEED", "AGGRAVATE", "SLAY_EVIL", "BRAND_POIS", "SLAY_DEMON", "FREE_ACT", "RES_ELEC", "RES_LITE", "RES_DARK", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "description": "Eol's second blade \u2014 powerful but AGGRAVATE wakes every monster in the dungeon."
+    },
+    {
+      "serial": 85,
+      "name": "Long Sword 'Elvagil'",
+      "tval": 23, "sval": 17, "pval": 2,
+      "depth": 20, "rarity": 8, "weight": 130, "cost": 30000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 2, "plus_to_dam": 7, "plus_to_ac": 0,
+      "flags": ["DEX", "CHR", "STEALTH", "SLAY_TROLL", "SLAY_ORC", "FEATHER", "SEE_INVIS", "INSTA_ART"],
+      "description": "A graceful Elven longsword for scouts and wanderers."
+    },
+    {
+      "serial": 86,
+      "name": "Rapier 'Forasgil'",
+      "tval": 23, "sval": 7, "pval": 0,
+      "depth": 15, "rarity": 8, "weight": 40, "cost": 20000,
+      "base_ac": 0, "damage": "1d6", "plus_to_hit": 12, "plus_to_dam": 19, "plus_to_ac": 0,
+      "flags": ["SLAY_ANIMAL", "BRAND_COLD", "RES_COLD", "RES_LITE", "LITE", "INSTA_ART"],
+      "description": "A swift rapier that gleams with cold light."
+    },
+    {
+      "serial": 87,
+      "name": "Sabre 'Careth Asdriag'",
+      "tval": 23, "sval": 11, "pval": 1,
+      "depth": 15, "rarity": 8, "weight": 50, "cost": 25000,
+      "base_ac": 0, "damage": "1d7", "plus_to_hit": 6, "plus_to_dam": 8, "plus_to_ac": 0,
+      "flags": ["BLOWS", "SLAY_DRAGON", "SLAY_ANIMAL", "SLAY_TROLL", "SLAY_GIANT", "SLAY_ORC", "INSTA_ART"],
+      "description": "An extra attack makes this sabre terrifying against scaled and brutish foes."
+    },
+    {
+      "serial": 88,
+      "name": "Small Sword 'Sting'",
+      "tval": 23, "sval": 8, "pval": 2,
+      "depth": 20, "rarity": 15, "weight": 75, "cost": 60000,
+      "base_ac": 0, "damage": "1d6", "plus_to_hit": 7, "plus_to_dam": 8, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "CON", "BLOWS", "SPEED", "RES_FEAR", "SLAY_EVIL", "SLAY_UNDEAD", "SLAY_ORC", "SLAY_ANIMAL", "FREE_ACT", "RES_LITE", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "description": "Bilbo Baggins' blade; exceptional for its size \u2014 glows blue near orcs."
+    },
+    {
+      "serial": 89,
+      "name": "Scimitar 'Haradekket'",
+      "tval": 23, "sval": 18, "pval": 2,
+      "depth": 20, "rarity": 15, "weight": 130, "cost": 35000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 9, "plus_to_dam": 11, "plus_to_ac": 0,
+      "flags": ["DEX", "BLOWS", "SLAY_ANIMAL", "SLAY_EVIL", "SLAY_UNDEAD", "SEE_INVIS", "INSTA_ART"],
+      "description": "A desert war blade favored by the Haradrim \u2014 two blows and undead-bane."
+    },
+    {
+      "serial": 90,
+      "name": "Short Sword 'Dagmor'",
+      "tval": 23, "sval": 10, "pval": 2,
+      "depth": 20, "rarity": 8, "weight": 80, "cost": 20000,
+      "base_ac": 0, "damage": "1d7", "plus_to_hit": 3, "plus_to_dam": 7, "plus_to_ac": 0,
+      "flags": ["BLOWS", "BRAND_POIS", "SLAY_ANIMAL", "SLOW_DIGEST", "REGEN", "INSTA_ART"],
+      "description": "A swift poisoned blade with regeneration \u2014 favored by rogues."
+    },
+    {
+      "serial": 91,
+      "name": "Blade of Chaos 'Doomcaller'",
+      "tval": 23, "sval": 30, "pval": 0,
+      "depth": 70, "rarity": 25, "weight": 180, "cost": 95000,
+      "base_ac": 0, "damage": "6d5", "plus_to_hit": 18, "plus_to_dam": 28, "plus_to_ac": -50,
+      "flags": ["KILL_DRAGON", "SLAY_ANIMAL", "SLAY_EVIL", "BRAND_COLD", "SLAY_TROLL", "SLAY_DEMON", "FREE_ACT", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_CHAOS", "SEE_INVIS", "TELEPATHY", "AGGRAVATE", "INSTA_ART"],
+      "description": "The wielder falls under the shadow of death; -50 AC is the price of chaos mastery."
+    },
+    {
+      "serial": 92,
+      "name": "Spear of Melkor",
+      "tval": 22, "sval": 2, "pval": -4,
+      "depth": 65, "rarity": 45, "weight": 50, "cost": 5000,
+      "base_ac": 0, "damage": "4d6", "plus_to_hit": -12, "plus_to_dam": 20, "plus_to_ac": 0,
+      "flags": ["STEALTH", "WIS", "BRAND_POIS", "RES_DARK", "RES_BLIND", "RES_LITE", "RES_NETHR", "HEAVY_CURSE", "LIGHT_CURSE", "INSTA_ART"],
+      "description": "Morgoth's original weapon; cursed and stat-draining but 4d6 on a Spear base."
+    },
+    {
+      "serial": 93,
+      "name": "Beaked Axe of Theoden",
+      "tval": 22, "sval": 10, "pval": 3,
+      "depth": 20, "rarity": 15, "weight": 180, "cost": 40000,
+      "base_ac": 0, "damage": "2d6", "plus_to_hit": 8, "plus_to_dam": 10, "plus_to_ac": 0,
+      "flags": ["WIS", "CON", "SLAY_DRAGON", "TELEPATHY", "SLOW_DIGEST", "INSTA_ART"],
+      "activation": "DRAIN_LIFE2",
+      "recharge_base": 40, "recharge_dice": 0,
+      "description": "The axe of the King of Rohan; Telepathy and dragon-bane."
+    },
+    {
+      "serial": 94,
+      "name": "Glaive of Pain",
+      "tval": 22, "sval": 13, "pval": 0,
+      "depth": 30, "rarity": 25, "weight": 190, "cost": 50000,
+      "base_ac": 0, "damage": "9d6", "plus_to_hit": 0, "plus_to_dam": 30, "plus_to_ac": 0,
+      "flags": ["RES_FEAR", "INSTA_ART"],
+      "description": "9d6 is the highest polearm damage dice; raw +30 to-dam with RES_FEAR."
+    },
+    {
+      "serial": 95,
+      "name": "Halberd 'Osondir'",
+      "tval": 22, "sval": 15, "pval": 3,
+      "depth": 20, "rarity": 8, "weight": 190, "cost": 30000,
+      "base_ac": 0, "damage": "3d5", "plus_to_hit": 6, "plus_to_dam": 9, "plus_to_ac": 0,
+      "flags": ["CHR", "BRAND_FIRE", "SLAY_UNDEAD", "SLAY_GIANT", "RES_FIRE", "RES_SOUND", "FEATHER", "SEE_INVIS", "INSTA_ART"],
+      "description": "A halberd of elvish grace, burning with sacred fire."
+    },
+    {
+      "serial": 96,
+      "name": "Pike 'Til-i-arc'",
+      "tval": 22, "sval": 8, "pval": 2,
+      "depth": 20, "rarity": 15, "weight": 160, "cost": 45000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 10, "plus_to_dam": 12, "plus_to_ac": 10,
+      "flags": ["INT", "SUST_INT", "SLOW_DIGEST", "BRAND_COLD", "BRAND_FIRE", "SLAY_DEMON", "SLAY_TROLL", "SLAY_GIANT", "RES_FIRE", "RES_COLD", "INSTA_ART"],
+      "description": "A dual-branded pike with remarkable intellect bonus."
+    },
+    {
+      "serial": 97,
+      "name": "Spear 'Aeglos'",
+      "tval": 22, "sval": 2, "pval": 4,
+      "depth": 15, "rarity": 45, "weight": 50, "cost": 140000,
+      "base_ac": 0, "damage": "3d6", "plus_to_hit": 15, "plus_to_dam": 25, "plus_to_ac": 5,
+      "flags": ["WIS", "DEX", "RES_FEAR", "BLESSED", "BRAND_COLD", "RES_COLD", "SLAY_EVIL", "SLAY_TROLL", "SLAY_ORC", "KILL_UNDEAD", "FREE_ACT", "SLOW_DIGEST", "INSTA_ART"],
+      "activation": "FROST3",
+      "recharge_base": 35, "recharge_dice": 0,
+      "description": "Gil-galad's Snow-point; remarkably powerful with KILL_UNDEAD."
+    },
+    {
+      "serial": 98,
+      "name": "Spear of Orome",
+      "tval": 22, "sval": 2, "pval": 4,
+      "depth": 15, "rarity": 45, "weight": 50, "cost": 120000,
+      "base_ac": 0, "damage": "4d6", "plus_to_hit": 15, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["INT", "SPEED", "INFRA", "BLESSED", "BRAND_FIRE", "SLAY_GIANT", "SLAY_ANIMAL", "RES_FIRE", "RES_LITE", "FEATHER", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "activation": "STONE_TO_MUD",
+      "recharge_base": 5, "recharge_dice": 0,
+      "description": "The Vala's hunting spear; 4d6 on a Spear base is extraordinary."
+    },
+    {
+      "serial": 99,
+      "name": "Spear 'Nimloth'",
+      "tval": 22, "sval": 2, "pval": 3,
+      "depth": 15, "rarity": 12, "weight": 50, "cost": 40000,
+      "base_ac": 0, "damage": "1d6", "plus_to_hit": 11, "plus_to_dam": 13, "plus_to_ac": 0,
+      "flags": ["STEALTH", "SPEED", "BLESSED", "BRAND_COLD", "SLAY_UNDEAD", "RES_COLD", "SEE_INVIS", "INSTA_ART"],
+      "description": "A blessed cold spear of stealth and undead-bane."
+    },
+    {
+      "serial": 100,
+      "name": "Lance of Eorlingas",
+      "tval": 22, "sval": 20, "pval": 2,
+      "depth": 20, "rarity": 23, "weight": 300, "cost": 50000,
+      "base_ac": 0, "damage": "3d8", "plus_to_hit": 13, "plus_to_dam": 21, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "SPEED", "RES_FEAR", "SLAY_EVIL", "SLAY_TROLL", "SLAY_ORC", "SEE_INVIS", "INSTA_ART"],
+      "description": "The lance of the Riders of Rohan; 3d8 cavalry charge power."
+    },
+    {
+      "serial": 101,
+      "name": "Great Axe of Durin",
+      "tval": 22, "sval": 25, "pval": 3,
+      "depth": 30, "rarity": 90, "weight": 230, "cost": 150000,
+      "base_ac": 0, "damage": "4d4", "plus_to_hit": 10, "plus_to_dam": 20, "plus_to_ac": 15,
+      "flags": ["STR", "CON", "TUNNEL", "BRAND_ACID", "BRAND_FIRE", "KILL_DRAGON", "SLAY_DEMON", "SLAY_TROLL", "SLAY_ORC", "FREE_ACT", "RES_CONFU", "RES_FEAR", "RES_ACID", "RES_FIRE", "RES_LITE", "RES_DARK", "RES_CHAOS", "INSTA_ART"],
+      "description": "The Dwarven king's axe with exceptional resistances and dual brands."
+    },
+    {
+      "serial": 102,
+      "name": "Great Axe of Eonwe",
+      "tval": 22, "sval": 25, "pval": 2,
+      "depth": 30, "rarity": 120, "weight": 230, "cost": 250000,
+      "base_ac": 0, "damage": "5d4", "plus_to_hit": 15, "plus_to_dam": 18, "plus_to_ac": 8,
+      "flags": ["STR", "DEX", "CON", "INT", "WIS", "CHR", "RES_FEAR", "BLESSED", "SLAY_EVIL", "BRAND_COLD", "SLAY_UNDEAD", "KILL_DEMON", "SLAY_ORC", "FREE_ACT", "IM_COLD", "RES_COLD", "SEE_INVIS", "INSTA_ART"],
+      "activation": "MASS_BANISHMENT",
+      "recharge_base": 1000, "recharge_dice": 0,
+      "description": "Maia-level weapon; IM_COLD and MASS_BANISHMENT are extraordinarily rare abilities."
+    },
+    {
+      "serial": 103,
+      "name": "Battle Axe of Balli Stonehand",
+      "tval": 22, "sval": 22, "pval": 3,
+      "depth": 30, "rarity": 15, "weight": 170, "cost": 75000,
+      "base_ac": 0, "damage": "3d8", "plus_to_hit": 8, "plus_to_dam": 11, "plus_to_ac": 5,
+      "flags": ["STR", "CON", "STEALTH", "SLAY_DEMON", "SLAY_TROLL", "SLAY_ORC", "FREE_ACT", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_BLIND", "FEATHER", "SEE_INVIS", "REGEN", "INSTA_ART"],
+      "description": "Full elemental coverage and REGEN in a 3d8 battle axe frame."
+    },
+    {
+      "serial": 104,
+      "name": "Battle Axe 'Lotharang'",
+      "tval": 22, "sval": 22, "pval": 1,
+      "depth": 30, "rarity": 15, "weight": 170, "cost": 25000,
+      "base_ac": 0, "damage": "2d8", "plus_to_hit": 4, "plus_to_dam": 3, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "SLAY_TROLL", "SLAY_ORC", "INSTA_ART"],
+      "activation": "CURE_WOUNDS",
+      "recharge_base": 3, "recharge_dice": 0,
+      "description": "A reliable battle axe with a minor healing activation."
+    },
+    {
+      "serial": 105,
+      "name": "Lochaber Axe 'Mundwine'",
+      "tval": 22, "sval": 28, "pval": 0,
+      "depth": 30, "rarity": 8, "weight": 250, "cost": 30000,
+      "base_ac": 0, "damage": "3d8", "plus_to_hit": 12, "plus_to_dam": 17, "plus_to_ac": 0,
+      "flags": ["SLAY_EVIL", "SLAY_ANIMAL", "SLAY_DEMON", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "INSTA_ART"],
+      "description": "A highland war-axe with full elemental resists and broad slaying."
+    },
+    {
+      "serial": 106,
+      "name": "Broad Axe 'Barukkheled'",
+      "tval": 22, "sval": 11, "pval": 3,
+      "depth": 20, "rarity": 8, "weight": 160, "cost": 25000,
+      "base_ac": 0, "damage": "2d6", "plus_to_hit": 13, "plus_to_dam": 19, "plus_to_ac": 0,
+      "flags": ["CON", "SLAY_EVIL", "SLAY_TROLL", "SLAY_GIANT", "SLAY_ORC", "SEE_INVIS", "INSTA_ART"],
+      "description": "A dwarven broad axe \u2014 constitution and broad orc-slaying."
+    },
+    {
+      "serial": 107,
+      "name": "Trident of Wrath",
+      "tval": 22, "sval": 5, "pval": 2,
+      "depth": 15, "rarity": 35, "weight": 70, "cost": 55000,
+      "base_ac": 0, "damage": "3d8", "plus_to_hit": 16, "plus_to_dam": 18, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "BLESSED", "BRAND_POIS", "SLAY_EVIL", "KILL_UNDEAD", "RES_LITE", "RES_DARK", "SEE_INVIS", "INSTA_ART"],
+      "description": "Holy fury in a trident; KILL_UNDEAD with poison brand."
+    },
+    {
+      "serial": 108,
+      "name": "Trident of Ulmo",
+      "tval": 22, "sval": 5, "pval": 4,
+      "depth": 30, "rarity": 90, "weight": 70, "cost": 120000,
+      "base_ac": 0, "damage": "4d8", "plus_to_hit": 15, "plus_to_dam": 19, "plus_to_ac": 0,
+      "flags": ["DEX", "BLESSED", "SLAY_DRAGON", "SLAY_ANIMAL", "FREE_ACT", "HOLD_LIFE", "IM_ACID", "RES_ACID", "RES_NETHR", "SEE_INVIS", "SLOW_DIGEST", "REGEN", "INSTA_ART"],
+      "activation": "TELE_AWAY",
+      "recharge_base": 50, "recharge_dice": 0,
+      "description": "Ulmo's weapon; IM_ACID is rare and invaluable; 4d8 trident."
+    },
+    {
+      "serial": 109,
+      "name": "Scythe 'Avavir'",
+      "tval": 22, "sval": 17, "pval": 3,
+      "depth": 40, "rarity": 8, "weight": 250, "cost": 45000,
+      "base_ac": 0, "damage": "5d3", "plus_to_hit": 8, "plus_to_dam": 8, "plus_to_ac": 10,
+      "flags": ["DEX", "CHR", "BRAND_COLD", "BRAND_FIRE", "FREE_ACT", "RES_FIRE", "RES_COLD", "RES_LITE", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "activation": "WORD_OF_RECALL",
+      "recharge_base": 200, "recharge_dice": 0,
+      "description": "A harvest blade with dual brands and Word of Recall activation."
+    },
+    {
+      "serial": 110,
+      "name": "Beaked Axe of Hurin",
+      "tval": 22, "sval": 10, "pval": 2,
+      "depth": 20, "rarity": 15, "weight": 180, "cost": 60000,
+      "base_ac": 0, "damage": "3d6", "plus_to_hit": 12, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["STR", "CON", "KILL_DEMON", "BRAND_ACID", "RES_ACID", "RES_DARK", "RES_FIRE", "LITE", "SLAY_DRAGON", "SLAY_TROLL", "INSTA_ART"],
+      "activation": "BERSERKER",
+      "recharge_base": 80, "recharge_dice": 0,
+      "description": "Hurin's final stand weapon; Berserk activation for those dire moments."
+    },
+    {
+      "serial": 111,
+      "name": "Mighty Hammer 'Grond'",
+      "tval": 21, "sval": 50, "pval": 0,
+      "depth": 100, "rarity": 1, "weight": 900, "cost": 500000,
+      "base_ac": 0, "damage": "9d9", "plus_to_hit": 5, "plus_to_dam": 25, "plus_to_ac": 10,
+      "flags": ["KILL_DRAGON", "SLAY_ANIMAL", "SLAY_EVIL", "KILL_UNDEAD", "KILL_DEMON", "SLAY_TROLL", "SLAY_ORC", "IMPACT", "SEE_INVIS", "TELEPATHY", "AGGRAVATE", "INSTA_ART"],
+      "description": "The Hammer of the Underworld; 9d9 (avg 45) is the highest in the game. Dropped by Morgoth."
+    },
+    {
+      "serial": 112,
+      "name": "Flail 'Totila'",
+      "tval": 21, "sval": 13, "pval": 2,
+      "depth": 20, "rarity": 8, "weight": 150, "cost": 25000,
+      "base_ac": 0, "damage": "3d6", "plus_to_hit": 6, "plus_to_dam": 8, "plus_to_ac": 0,
+      "flags": ["STEALTH", "SLAY_EVIL", "BRAND_FIRE", "RES_FIRE", "RES_CONFU", "INSTA_ART"],
+      "activation": "CONFUSE",
+      "recharge_base": 15, "recharge_dice": 0,
+      "description": "A confusing flail that radiates fire and stealth."
+    },
+    {
+      "serial": 113,
+      "name": "Two-Handed Flail 'Thunderfist'",
+      "tval": 21, "sval": 18, "pval": 4,
+      "depth": 45, "rarity": 38, "weight": 280, "cost": 70000,
+      "base_ac": 0, "damage": "4d6", "plus_to_hit": 5, "plus_to_dam": 18, "plus_to_ac": 0,
+      "flags": ["STR", "CON", "RES_FEAR", "SLAY_ANIMAL", "BRAND_FIRE", "BRAND_ELEC", "SLAY_TROLL", "SLAY_ORC", "RES_ELEC", "RES_FIRE", "RES_DARK", "INSTA_ART"],
+      "description": "Dual fire and lightning brands in a massive two-handed frame."
+    },
+    {
+      "serial": 114,
+      "name": "Morning Star 'Bloodspike'",
+      "tval": 21, "sval": 12, "pval": 4,
+      "depth": 20, "rarity": 30, "weight": 150, "cost": 40000,
+      "base_ac": 0, "damage": "2d6", "plus_to_hit": 8, "plus_to_dam": 22, "plus_to_ac": 0,
+      "flags": ["STR", "BRAND_POIS", "SLAY_ANIMAL", "SLAY_TROLL", "SLAY_ORC", "RES_NEXUS", "SEE_INVIS", "INSTA_ART"],
+      "description": "A spiked morning star dripping with venom."
+    },
+    {
+      "serial": 115,
+      "name": "Morning Star 'Firestar'",
+      "tval": 21, "sval": 12, "pval": 0,
+      "depth": 20, "rarity": 15, "weight": 150, "cost": 20000,
+      "base_ac": 0, "damage": "2d6", "plus_to_hit": 5, "plus_to_dam": 7, "plus_to_ac": 2,
+      "flags": ["BRAND_FIRE", "RES_FIRE", "INSTA_ART"],
+      "activation": "FIRE_BALL_2",
+      "recharge_base": 20, "recharge_dice": 0,
+      "description": "A fiery morning star with fireball activation."
+    },
+    {
+      "serial": 116,
+      "name": "Mace 'Taratol'",
+      "tval": 21, "sval": 5, "pval": 0,
+      "depth": 20, "rarity": 15, "weight": 120, "cost": 50000,
+      "base_ac": 0, "damage": "3d4", "plus_to_hit": 12, "plus_to_dam": 12, "plus_to_ac": 0,
+      "flags": ["KILL_DRAGON", "BRAND_ELEC", "IM_ELEC", "RES_ELEC", "INSTA_ART"],
+      "activation": "HASTE",
+      "recharge_base": 100, "recharge_dice": 100,
+      "description": "KILL_DRAGON and IM_ELEC on a Mace; Haste activation."
+    },
+    {
+      "serial": 117,
+      "name": "War Hammer of Aule",
+      "tval": 21, "sval": 8, "pval": 4,
+      "depth": 40, "rarity": 75, "weight": 120, "cost": 200000,
+      "base_ac": 0, "damage": "9d3", "plus_to_hit": 19, "plus_to_dam": 21, "plus_to_ac": 5,
+      "flags": ["WIS", "TUNNEL", "RES_FEAR", "KILL_DRAGON", "SLAY_EVIL", "BRAND_ACID", "SLAY_UNDEAD", "SLAY_DEMON", "FREE_ACT", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_NEXUS", "SEE_INVIS", "INSTA_ART"],
+      "description": "9d3 on a War Hammer; full elemental coverage; a Vala's forging."
+    },
+    {
+      "serial": 118,
+      "name": "Quarterstaff 'Nar-i-vagil'",
+      "tval": 21, "sval": 3, "pval": 3,
+      "depth": 20, "rarity": 18, "weight": 150, "cost": 30000,
+      "base_ac": 0, "damage": "1d9", "plus_to_hit": 10, "plus_to_dam": 20, "plus_to_ac": 0,
+      "flags": ["INT", "SLAY_ANIMAL", "BRAND_FIRE", "RES_FIRE", "INSTA_ART"],
+      "description": "A fiery staff for mage-warriors with exceptional to-dam."
+    },
+    {
+      "serial": 119,
+      "name": "Quarterstaff 'Eriril'",
+      "tval": 21, "sval": 3, "pval": 4,
+      "depth": 20, "rarity": 18, "weight": 150, "cost": 35000,
+      "base_ac": 0, "damage": "1d9", "plus_to_hit": 3, "plus_to_dam": 5, "plus_to_ac": 0,
+      "flags": ["INT", "WIS", "SLAY_EVIL", "RES_LITE", "LITE", "SEE_INVIS", "INSTA_ART"],
+      "activation": "IDENTIFY",
+      "recharge_base": 10, "recharge_dice": 0,
+      "description": "Identify-on-demand makes this utility staff invaluable for explorers."
+    },
+    {
+      "serial": 120,
+      "name": "Quarterstaff of Olorin",
+      "tval": 21, "sval": 3, "pval": 4,
+      "depth": 30, "rarity": 105, "weight": 150, "cost": 130000,
+      "base_ac": 0, "damage": "2d9", "plus_to_hit": 10, "plus_to_dam": 13, "plus_to_ac": 0,
+      "flags": ["INT", "WIS", "CHR", "KILL_DEMON", "SLAY_EVIL", "BRAND_FIRE", "SLAY_TROLL", "SLAY_ORC", "HOLD_LIFE", "RES_FIRE", "RES_NETHR", "SEE_INVIS", "INSTA_ART"],
+      "activation": "PROBE",
+      "recharge_base": 20, "recharge_dice": 0,
+      "description": "Gandalf's staff; unique 2d9 damage base; one of the finest mage/priest weapons."
+    },
+    {
+      "serial": 121,
+      "name": "Mace of Disruption 'Deathwreaker'",
+      "tval": 21, "sval": 20, "pval": 6,
+      "depth": 80, "rarity": 38, "weight": 400, "cost": 200000,
+      "base_ac": 0, "damage": "7d8", "plus_to_hit": 18, "plus_to_dam": 18, "plus_to_ac": 0,
+      "flags": ["STR", "TUNNEL", "AGGRAVATE", "SLAY_DRAGON", "SLAY_ANIMAL", "SLAY_EVIL", "KILL_UNDEAD", "BRAND_FIRE", "IM_FIRE", "RES_FIRE", "RES_DARK", "RES_CHAOS", "RES_DISEN", "INSTA_ART"],
+      "description": "7d8 on the Mace of Disruption base; IM_FIRE is exceptional but AGGRAVATE is punishing."
+    },
+    {
+      "serial": 122,
+      "name": "Lucerne Hammer 'Turmil'",
+      "tval": 21, "sval": 10, "pval": 4,
+      "depth": 20, "rarity": 15, "weight": 120, "cost": 35000,
+      "base_ac": 0, "damage": "2d5", "plus_to_hit": 10, "plus_to_dam": 6, "plus_to_ac": 8,
+      "flags": ["WIS", "INFRA", "BRAND_COLD", "SLAY_ORC", "RES_COLD", "RES_LITE", "LITE", "REGEN", "INSTA_ART"],
+      "activation": "DRAIN_LIFE1",
+      "recharge_base": 40, "recharge_dice": 0,
+      "description": "A beautiful Elven polearm with cold brand and life drain activation."
+    },
+    {
+      "serial": 123,
+      "name": "Whip of Gothmog",
+      "tval": 21, "sval": 2, "pval": -3,
+      "depth": 60, "rarity": 25, "weight": 30, "cost": 10000,
+      "base_ac": 0, "damage": "6d3", "plus_to_hit": 13, "plus_to_dam": 15, "plus_to_ac": 0,
+      "flags": ["INT", "DEX", "WIS", "AGGRAVATE", "HEAVY_CURSE", "LIGHT_CURSE", "BRAND_FIRE", "IM_FIRE", "RES_ELEC", "RES_DARK", "LITE", "SLAY_ANIMAL", "KILL_DRAGON", "SLAY_TROLL", "SLAY_GIANT", "INSTA_ART"],
+      "activation": "FIRE3",
+      "recharge_base": 15, "recharge_dice": 0,
+      "description": "The Balrog lord's weapon; cursed with AGGRAVATE but IM_FIRE and exceptional activation."
+    },
+    {
+      "serial": 7,
+      "name": "The Palantir of Westernesse",
+      "tval": 39, "sval": 7, "pval": 2,
+      "depth": 75, "rarity": 60, "weight": 200, "cost": 100000,
+      "base_ac": 0, "damage": "10d10", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["INT", "WIS", "SEARCH", "INFRA", "SEE_INVIS", "TELEPATHY", "RES_CHAOS", "RES_BLIND", "AGGRAVATE", "DRAIN_EXP", "ACTIVATE", "INSTA_ART", "HIDE_TYPE"],
+      "activation": "CLAIRVOYANCE", "recharge_base": 50, "recharge_dice": 50,
+      "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it."
+    },
+    {
+      "serial": 11,
+      "name": "The Ring of Power 'Nenya'",
+      "tval": 45, "sval": 35, "pval": 2,
+      "depth": 80, "rarity": 70, "weight": 2, "cost": 200000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 8, "plus_to_dam": 8, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "SPEED", "HIDE_TYPE", "ACTIVATE", "HOLD_LIFE", "FREE_ACT", "SEE_INVIS", "FEATHER", "REGEN", "SUST_INT", "SUST_WIS", "SUST_CHR", "IM_COLD", "RES_COLD", "RES_BLIND", "TELEPATHY", "INSTA_ART"],
+      "activation": "FROST5", "recharge_base": 20, "recharge_dice": 20,
+      "description": "The Ring of Adamant, with a pure white stone as centerpiece. Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
+    },
+    {
+      "serial": 12,
+      "name": "The Ring of Power 'Vilya'",
+      "tval": 45, "sval": 36, "pval": 3,
+      "depth": 90, "rarity": 80, "weight": 2, "cost": 300000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 10, "plus_to_dam": 10, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "SPEED", "HIDE_TYPE", "ACTIVATE", "HOLD_LIFE", "FREE_ACT", "SEE_INVIS", "FEATHER", "SLOW_DIGEST", "REGEN", "SUST_STR", "SUST_DEX", "SUST_CON", "IM_ELEC", "RES_ELEC", "RES_POIS", "RES_DISEN", "INSTA_ART"],
+      "activation": "ELEC2", "recharge_base": 20, "recharge_dice": 20,
+      "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought. Vilya is the mightiest of the Three."
+    },
+    {
+      "serial": 14,
+      "name": "The Elfstone 'Elessar'",
+      "tval": 40, "sval": 16, "pval": 2,
+      "depth": 60, "rarity": 60, "weight": 3, "cost": 40000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 7, "plus_to_dam": 7, "plus_to_ac": 10,
+      "flags": ["STR", "WIS", "CHR", "SPEED", "RES_FEAR", "RES_FIRE", "RES_POIS", "HIDE_TYPE", "ACTIVATE", "INSTA_ART"],
+      "activation": "HEAL1", "recharge_base": 200, "recharge_dice": 0,
+      "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle."
+    },
+    {
+      "serial": 15,
+      "name": "The Jewel 'Evenstar'",
+      "tval": 40, "sval": 17, "pval": 0,
+      "depth": 40, "rarity": 40, "weight": 3, "cost": 25000,
+      "base_ac": 0, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["HOLD_LIFE", "SUST_CON", "SUST_WIS", "SUST_INT", "RES_DARK", "RES_COLD", "ACTIVATE", "INSTA_ART"],
+      "activation": "RESTORE_LIFE", "recharge_base": 150, "recharge_dice": 0,
+      "description": "A plain white jewel, given by Queen Arwen to Frodo Baggins before his return to the Shire."
+    },
+    {
+      "serial": 16,
+      "name": "The Multi-Hued Dragon Scale Mail 'Razorback'",
+      "tval": 38, "sval": 6, "pval": 0,
+      "depth": 90, "rarity": 9, "weight": 500, "cost": 400000,
+      "base_ac": 30, "damage": "2d4", "plus_to_hit": -4, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["FREE_ACT", "IM_ELEC", "RES_ELEC", "RES_ACID", "RES_FIRE", "RES_COLD", "RES_POIS", "RES_LITE", "RES_DARK", "LITE", "SEE_INVIS", "AGGRAVATE", "ACTIVATE"],
+      "activation": "STAR_BALL", "recharge_base": 50, "recharge_dice": 0,
+      "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on."
+    },
+    {
+      "serial": 17,
+      "name": "The Power Dragon Scale Mail 'Bladeturner'",
+      "tval": 38, "sval": 30, "pval": 0,
+      "depth": 100, "rarity": 16, "weight": 600, "cost": 500000,
+      "base_ac": 50, "damage": "2d4", "plus_to_hit": -8, "plus_to_dam": 0, "plus_to_ac": 35,
+      "flags": ["HOLD_LIFE", "REGEN", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_POIS", "RES_FEAR", "RES_LITE", "RES_DARK", "RES_BLIND", "RES_CONFU", "RES_SOUND", "RES_SHARD", "RES_NETHR", "RES_NEXUS", "RES_CHAOS", "RES_DISEN", "ACTIVATE"],
+      "activation": "RAGE_BLESS_RESIST", "recharge_base": 400, "recharge_dice": 0,
+      "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly mastered powers elemental and ethereal."
+    },
+    {
+      "serial": 18,
+      "name": "The Balance Dragon Scale Mail 'Mediator'",
+      "tval": 38, "sval": 20, "pval": 0,
+      "depth": 95, "rarity": 12, "weight": 500, "cost": 400000,
+      "base_ac": 30, "damage": "2d4", "plus_to_hit": -4, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["RES_CHAOS", "RES_DISEN", "RES_SHARD", "RES_SOUND", "RES_CONFU", "RES_NEXUS", "AGGRAVATE", "FREE_ACT", "SLOW_DIGEST", "REGEN", "ACTIVATE"],
+      "activation": "STAR_BALL", "recharge_base": 50, "recharge_dice": 0,
+      "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer."
+    },
+    {
+      "serial": 21,
+      "name": "The Metal Brigandine Armor of the Rohirrim",
+      "tval": 37, "sval": 9, "pval": 2,
+      "depth": 30, "rarity": 3, "weight": 200, "cost": 30000,
+      "base_ac": 19, "damage": "1d4", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["STR", "DEX", "HIDE_TYPE", "RES_FEAR", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_CONFU", "RES_SOUND"],
+      "description": "Small metal plates cover an inner layer of sturdy canvas, bearing scenes of hunting and war. You feel the spirit of Eorl the Young around you."
+    },
+    {
+      "serial": 23,
+      "name": "The Mithril Plate Mail of Celeborn",
+      "tval": 37, "sval": 25, "pval": 4,
+      "depth": 40, "rarity": 3, "weight": 250, "cost": 150000,
+      "base_ac": 35, "damage": "2d4", "plus_to_hit": -3, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["STR", "CHR", "HIDE_TYPE", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_DARK", "RES_DISEN", "ACTIVATE"],
+      "activation": "BANISHMENT", "recharge_base": 500, "recharge_dice": 0,
+      "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend. It gleams with purest white, and mighty are its powers to protect and banish."
+    },
+    {
+      "serial": 24,
+      "name": "The Chain Mail of Arvedui",
+      "tval": 37, "sval": 4, "pval": 2,
+      "depth": 20, "rarity": 3, "weight": 220, "cost": 32000,
+      "base_ac": 14, "damage": "1d4", "plus_to_hit": -2, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["STR", "CHR", "HIDE_TYPE", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_SHARD", "RES_NEXUS"],
+      "description": "A hauberk, leggings, and sleeves of interlocking steel rings. You feel as strong and tall as Arvedui, last king of Arnor, as you put it on."
+    },
+    {
+      "serial": 25,
+      "name": "The Augmented Chain Mail of Caspanion",
+      "tval": 37, "sval": 6, "pval": 3,
+      "depth": 25, "rarity": 9, "weight": 270, "cost": 40000,
+      "base_ac": 16, "damage": "1d4", "plus_to_hit": -2, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["INT", "WIS", "CON", "HIDE_TYPE", "RES_ACID", "RES_POIS", "RES_CONFU", "ACTIVATE"],
+      "activation": "TRAP_DOOR_DEST", "recharge_base": 10, "recharge_dice": 0,
+      "description": "A hauberk strategically reinforced with a second layer of chain. Magics to enhance body and mind lie within, and no door can bar the wearer's path."
+    },
+    {
+      "serial": 26,
+      "name": "The Hard Leather Armor of Himring",
+      "tval": 36, "sval": 6, "pval": 0,
+      "depth": 50, "rarity": 20, "weight": 100, "cost": 35000,
+      "base_ac": 6, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_CHAOS", "RES_NETHR", "RES_POIS", "ACTIVATE"],
+      "activation": "PROT_EVIL", "recharge_base": 100, "recharge_dice": 100,
+      "description": "Contained within is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth."
+    },
+    {
+      "serial": 29,
+      "name": "The Shield of Deflection of Gil-galad",
+      "tval": 34, "sval": 10, "pval": 5,
+      "depth": 70, "rarity": 4, "weight": 80, "cost": 65000,
+      "base_ac": 10, "damage": "1d3", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["WIS", "CHR", "HIDE_TYPE", "LITE", "RES_ELEC", "RES_ACID", "RES_DISEN", "RES_DARK", "SUST_WIS", "SUST_DEX", "SUST_CHR", "ACTIVATE"],
+      "activation": "STAR_LIGHT", "recharge_base": 100, "recharge_dice": 0,
+      "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth."
+    },
+    {
+      "serial": 30,
+      "name": "The Small Metal Shield of Thorin",
+      "tval": 34, "sval": 3, "pval": 4,
+      "depth": 40, "rarity": 6, "weight": 65, "cost": 60000,
+      "base_ac": 3, "damage": "1d2", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 25,
+      "flags": ["STR", "CON", "HIDE_TYPE", "RES_FEAR", "FREE_ACT", "IM_ACID", "RES_SOUND", "RES_CHAOS"],
+      "description": "Invoking the strength of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth."
+    },
+    {
+      "serial": 31,
+      "name": "The Large Leather Shield of Celegorm",
+      "tval": 34, "sval": 4, "pval": 0,
+      "depth": 30, "rarity": 3, "weight": 60, "cost": 12000,
+      "base_ac": 4, "damage": "1d2", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_LITE", "RES_DARK"],
+      "description": "Once protected Celegorm, Lord of Himlad; a mystic balance of the elements lies around it."
+    },
+    {
+      "serial": 32,
+      "name": "The Large Metal Shield of Anarion",
+      "tval": 34, "sval": 5, "pval": 0,
+      "depth": 40, "rarity": 9, "weight": 120, "cost": 160000,
+      "base_ac": 5, "damage": "1d3", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "SUST_STR", "SUST_INT", "SUST_WIS", "SUST_DEX", "SUST_CON", "SUST_CHR"],
+      "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish."
+    },
+    {
+      "serial": 33,
+      "name": "The Metal Cap of Celebrimbor",
+      "tval": 32, "sval": 3, "pval": 3,
+      "depth": 55, "rarity": 12, "weight": 20, "cost": 45000,
+      "base_ac": 3, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 18,
+      "flags": ["INT", "DEX", "CHR", "SEARCH", "RES_FIRE", "RES_ACID", "RES_DISEN", "RES_SHARD"],
+      "description": "Forged by the greatest Noldorin smith of the Second Age; its enchantment will never be diminished."
+    },
+    {
+      "serial": 34,
+      "name": "The Massive Iron Crown of Morgoth",
+      "tval": 33, "sval": 50, "pval": 125,
+      "depth": 100, "rarity": 1, "weight": 400, "cost": 10000000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 0,
+      "flags": ["STR", "INT", "WIS", "DEX", "CON", "CHR", "INFRA", "HIDE_TYPE", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_POIS", "RES_LITE", "RES_DARK", "RES_CONFU", "RES_NEXUS", "RES_NETHR", "LITE", "SEE_INVIS", "TELEPATHY", "RES_FEAR", "LIGHT_CURSE", "HEAVY_CURSE", "PERMA_CURSE", "INSTA_ART"],
+      "description": "Containing much of the power of the mightiest Ainur; mounted with the two remaining Silmarils."
+    },
+    {
+      "serial": 35,
+      "name": "The Iron Crown of Beruthiel",
+      "tval": 33, "sval": 10, "pval": -5,
+      "depth": 40, "rarity": 12, "weight": 20, "cost": 1,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STR", "DEX", "CON", "HIDE_TYPE", "FREE_ACT", "SEE_INVIS", "TELEPATHY", "LIGHT_CURSE", "HEAVY_CURSE"],
+      "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel \u2014 grants extraordinary powers of sight and awareness at a terrible physical cost."
+    },
+    {
+      "serial": 36,
+      "name": "The Hard Leather Cap of Thranduil",
+      "tval": 32, "sval": 2, "pval": 2,
+      "depth": 20, "rarity": 2, "weight": 15, "cost": 50000,
+      "base_ac": 2, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 10,
+      "flags": ["INT", "WIS", "HIDE_TYPE", "RES_BLIND", "TELEPATHY"],
+      "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain."
+    },
+    {
+      "serial": 37,
+      "name": "The Metal Cap of Thengel",
+      "tval": 32, "sval": 3, "pval": 3,
+      "depth": 10, "rarity": 2, "weight": 20, "cost": 22000,
+      "base_ac": 3, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 12,
+      "flags": ["WIS", "CHR", "RES_CONFU", "HIDE_TYPE"],
+      "description": "Embossed with scenes of valor in fine-engraved silver. Grants the wearer nobility and understanding."
+    },
+    {
+      "serial": 38,
+      "name": "The Steel Helm of Hammerhand",
+      "tval": 32, "sval": 6, "pval": 3,
+      "depth": 20, "rarity": 8, "weight": 60, "cost": 45000,
+      "base_ac": 6, "damage": "1d3", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STR", "DEX", "CON", "HIDE_TYPE", "SUST_STR", "SUST_DEX", "SUST_CON", "AGGRAVATE", "RES_ACID", "RES_NEXUS", "RES_COLD", "RES_DARK"],
+      "description": "As steady and as distinctive as the hero of the Westdike."
+    },
+    {
+      "serial": 39,
+      "name": "The Iron Helm of Dor-Lomin",
+      "tval": 32, "sval": 5, "pval": 4,
+      "depth": 40, "rarity": 20, "weight": 75, "cost": 300000,
+      "base_ac": 5, "damage": "1d3", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STR", "DEX", "CON", "HIDE_TYPE", "RES_FEAR", "RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "LITE", "SEE_INVIS", "TELEPATHY"],
+      "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth."
+    },
+    {
+      "serial": 40,
+      "name": "The Iron Helm 'Holhenneth'",
+      "tval": 32, "sval": 5, "pval": 2,
+      "depth": 20, "rarity": 5, "weight": 75, "cost": 100000,
+      "base_ac": 5, "damage": "1d3", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 10,
+      "flags": ["INT", "WIS", "SEARCH", "HIDE_TYPE", "RES_BLIND", "RES_CONFU", "SEE_INVIS", "ACTIVATE"],
+      "activation": "DETECT", "recharge_base": 55, "recharge_dice": 55,
+      "description": "A famous helm granting extraordinary powers of mind and awareness."
+    },
+    {
+      "serial": 41,
+      "name": "The Iron Helm of Gorlim",
+      "tval": 32, "sval": 5, "pval": -5,
+      "depth": 20, "rarity": 5, "weight": 75, "cost": 1,
+      "base_ac": 5, "damage": "1d3", "plus_to_hit": 8, "plus_to_dam": 8, "plus_to_ac": 10,
+      "flags": ["INT", "WIS", "SEARCH", "HIDE_TYPE", "RES_FEAR", "SEE_INVIS", "FREE_ACT", "AGGRAVATE", "LIGHT_CURSE", "HEAVY_CURSE"],
+      "description": "A headpiece that betrayed a warrior when he most needed succor."
+    },
+    {
+      "serial": 42,
+      "name": "The Golden Crown of Gondor",
+      "tval": 33, "sval": 11, "pval": 3,
+      "depth": 40, "rarity": 40, "weight": 30, "cost": 100000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["STR", "WIS", "CON", "SPEED", "HIDE_TYPE", "RES_COLD", "RES_FIRE", "RES_LITE", "RES_BLIND", "RES_CONFU", "RES_SOUND", "RES_CHAOS", "LITE", "SEE_INVIS", "REGEN", "ACTIVATE"],
+      "activation": "HEAL1", "recharge_base": 250, "recharge_dice": 0,
+      "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world."
+    },
+    {
+      "serial": 43,
+      "name": "The Jewel Encrusted Crown of Numenor",
+      "tval": 33, "sval": 12, "pval": 3,
+      "depth": 60, "rarity": 30, "weight": 40, "cost": 50000,
+      "base_ac": 0, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 18,
+      "flags": ["INT", "DEX", "CHR", "SEARCH", "SPEED", "HIDE_TYPE", "SEE_INVIS", "FREE_ACT", "RES_SHARD", "RES_SOUND", "RES_COLD", "RES_LITE", "RES_DARK", "RES_BLIND", "LITE"],
+      "description": "A crown of massive gold set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor."
+    },
+    {
+      "serial": 44,
+      "name": "The Cloak 'Colluin'",
+      "tval": 35, "sval": 1, "pval": 0,
+      "depth": 5, "rarity": 45, "weight": 10, "cost": 50000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_ACID", "RES_ELEC", "RES_FIRE", "RES_COLD", "RES_POIS", "ACTIVATE"],
+      "activation": "RESIST", "recharge_base": 111, "recharge_dice": 0,
+      "description": "Worn by a hero from Valinor, a land utterly beyond the strife of Elements."
+    },
+    {
+      "serial": 45,
+      "name": "The Cloak 'Holcolleth'",
+      "tval": 35, "sval": 1, "pval": 2,
+      "depth": 5, "rarity": 25, "weight": 10, "cost": 18000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 4,
+      "flags": ["INT", "WIS", "SPEED", "STEALTH", "HIDE_TYPE", "RES_ACID", "ACTIVATE"],
+      "activation": "SLEEP", "recharge_base": 55, "recharge_dice": 0,
+      "description": "An elven-grey mantle possessing great powers of tranquility and concealment."
+    },
+    {
+      "serial": 46,
+      "name": "The Cloak of Thingol",
+      "tval": 35, "sval": 1, "pval": 3,
+      "depth": 5, "rarity": 50, "weight": 10, "cost": 35000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 18,
+      "flags": ["DEX", "CHR", "HIDE_TYPE", "FREE_ACT", "RES_ACID", "RES_FIRE", "RES_COLD", "ACTIVATE"],
+      "activation": "RECHARGE1", "recharge_base": 70, "recharge_dice": 0,
+      "description": "Translucent pearly grey, with glowing elven-runes to restore magic."
+    },
+    {
+      "serial": 47,
+      "name": "The Cloak of Thorongil",
+      "tval": 35, "sval": 1, "pval": 0,
+      "depth": 5, "rarity": 10, "weight": 10, "cost": 8000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 10,
+      "flags": ["FREE_ACT", "RES_ACID", "RES_FEAR", "SEE_INVIS"],
+      "description": "Once worn by the young Aragorn, a keen-eyed captain of Gondor."
+    },
+    {
+      "serial": 48,
+      "name": "The Cloak 'Colannon'",
+      "tval": 35, "sval": 1, "pval": 3,
+      "depth": 5, "rarity": 20, "weight": 10, "cost": 20000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["STEALTH", "SPEED", "HIDE_TYPE", "RES_NEXUS", "ACTIVATE"],
+      "activation": "TELEPORT", "recharge_base": 45, "recharge_dice": 0,
+      "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law."
+    },
+    {
+      "serial": 49,
+      "name": "The Shadow Cloak of Luthien",
+      "tval": 35, "sval": 6, "pval": 2,
+      "depth": 40, "rarity": 40, "weight": 5, "cost": 45000,
+      "base_ac": 6, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["INT", "WIS", "CHR", "SPEED", "STEALTH", "HIDE_TYPE", "RES_ACID", "RES_FIRE", "RES_COLD", "ACTIVATE"],
+      "activation": "RESTORE_LIFE", "recharge_base": 250, "recharge_dice": 0,
+      "description": "The opaque midnight folds, inset with diamonds \u2014 a fragment of Luthien's power to restore."
+    },
+    {
+      "serial": 124,
+      "name": "The Shadow Cloak of Tuor",
+      "tval": 35, "sval": 6, "pval": 4,
+      "depth": 40, "rarity": 40, "weight": 5, "cost": 35000,
+      "base_ac": 6, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 12,
+      "flags": ["STEALTH", "DEX", "HIDE_TYPE", "FREE_ACT", "IM_ACID", "RES_ACID", "SEE_INVIS"],
+      "description": "From the ruin of Gondolin did Tuor escape, mantled by sea-commanding Ulmo's kingly gift."
+    },
+    {
+      "serial": 51,
+      "name": "The Gauntlets of Eol",
+      "tval": 31, "sval": 2, "pval": 3,
+      "depth": 55, "rarity": 35, "weight": 25, "cost": 40000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": -5, "plus_to_dam": -5, "plus_to_ac": 15,
+      "flags": ["INT", "FREE_ACT", "FEATHER", "RES_ELEC", "RES_DARK", "RES_POIS", "AGGRAVATE", "ACTIVATE"],
+      "activation": "MANA_BOLT", "recharge_base": 30, "recharge_dice": 30,
+      "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics he could channel in battle."
+    },
+    {
+      "serial": 52,
+      "name": "The Set of Leather Gloves 'Cambeleg'",
+      "tval": 31, "sval": 1, "pval": 2,
+      "depth": 10, "rarity": 6, "weight": 5, "cost": 36000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 8, "plus_to_dam": 8, "plus_to_ac": 15,
+      "flags": ["STR", "CON", "HIDE_TYPE", "FREE_ACT", "SHOW_MODS"],
+      "description": "A hero's handgear that lends great prowess in battle."
+    },
+    {
+      "serial": 53,
+      "name": "The Set of Leather Gloves 'Cammithrim'",
+      "tval": 31, "sval": 1, "pval": 0,
+      "depth": 10, "rarity": 3, "weight": 5, "cost": 30000,
+      "base_ac": 1, "damage": "0d0", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 10,
+      "flags": ["FREE_ACT", "RES_LITE", "SUST_CON", "LITE", "ACTIVATE"],
+      "activation": "MISSILE", "recharge_base": 2, "recharge_dice": 0,
+      "description": "These gloves glow so brightly as to light the way and cast magical bolts with great frequency."
+    },
+    {
+      "serial": 54,
+      "name": "The Set of Gauntlets 'Paurhach'",
+      "tval": 31, "sval": 2, "pval": 0,
+      "depth": 10, "rarity": 3, "weight": 25, "cost": 15000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_FIRE", "REGEN", "ACTIVATE"],
+      "activation": "FIRE1", "recharge_base": 8, "recharge_dice": 8,
+      "description": "A set of gauntlets that smoulder with unnatural heat."
+    },
+    {
+      "serial": 55,
+      "name": "The Set of Gauntlets 'Paurnimmen'",
+      "tval": 31, "sval": 2, "pval": 0,
+      "depth": 10, "rarity": 3, "weight": 25, "cost": 13000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_COLD", "SLOW_DIGEST", "ACTIVATE"],
+      "activation": "FROST1", "recharge_base": 7, "recharge_dice": 7,
+      "description": "Freezing with unnatural cold."
+    },
+    {
+      "serial": 56,
+      "name": "The Set of Gauntlets 'Pauraegen'",
+      "tval": 31, "sval": 2, "pval": 0,
+      "depth": 10, "rarity": 3, "weight": 25, "cost": 11000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_ELEC", "LITE", "ACTIVATE"],
+      "activation": "LIGHTNING_BOLT", "recharge_base": 6, "recharge_dice": 6,
+      "description": "Sparks crackle across its knuckleguards."
+    },
+    {
+      "serial": 57,
+      "name": "The Set of Gauntlets 'Paurnen'",
+      "tval": 31, "sval": 2, "pval": 0,
+      "depth": 10, "rarity": 3, "weight": 25, "cost": 12000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["RES_ACID", "FEATHER", "ACTIVATE"],
+      "activation": "ACID1", "recharge_base": 5, "recharge_dice": 5,
+      "description": "Gives off a foul acrid odour yet remains untarnished."
+    },
+    {
+      "serial": 58,
+      "name": "The Set of Gauntlets 'Camlost'",
+      "tval": 31, "sval": 2, "pval": -3,
+      "depth": 10, "rarity": 20, "weight": 25, "cost": 0,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": -12, "plus_to_dam": -12, "plus_to_ac": 0,
+      "flags": ["STR", "DEX", "HIDE_TYPE", "RES_FIRE", "RES_DISEN", "FREE_ACT", "DRAIN_EXP", "AGGRAVATE", "LIGHT_CURSE", "HEAVY_CURSE", "SHOW_MODS"],
+      "description": "Named after the empty hand of Beren that once clasped a Silmaril."
+    },
+    {
+      "serial": 59,
+      "name": "The Set of Cesti of Fingolfin",
+      "tval": 31, "sval": 5, "pval": 4,
+      "depth": 40, "rarity": 15, "weight": 40, "cost": 110000,
+      "base_ac": 5, "damage": "1d1", "plus_to_hit": 10, "plus_to_dam": 10, "plus_to_ac": 20,
+      "flags": ["DEX", "HIDE_TYPE", "FREE_ACT", "RES_ACID", "ACTIVATE", "SHOW_MODS"],
+      "activation": "ARROW", "recharge_base": 30, "recharge_dice": 30,
+      "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds."
+    },
+    {
+      "serial": 125,
+      "name": "The Pair of Hard Leather Boots of Feanor",
+      "tval": 30, "sval": 3, "pval": 15,
+      "depth": 40, "rarity": 120, "weight": 40, "cost": 300000,
+      "base_ac": 3, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["SPEED", "HIDE_TYPE", "RES_NEXUS", "ACTIVATE"],
+      "activation": "HASTE1", "recharge_base": 200, "recharge_dice": 0,
+      "description": "The boots of Feanor, creator of the Silmarils and mightiest of the Eldar. Once sped him to do battle for Middle-Earth."
+    },
+    {
+      "serial": 61,
+      "name": "The Pair of Soft Leather Boots 'Dal-i-thalion'",
+      "tval": 30, "sval": 2, "pval": 5,
+      "depth": 10, "rarity": 25, "weight": 20, "cost": 40000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 15,
+      "flags": ["DEX", "HIDE_TYPE", "ACTIVATE", "FREE_ACT", "RES_NETHR", "RES_CHAOS", "RES_CONFU", "SUST_CON"],
+      "activation": "REM_FEAR_POIS", "recharge_base": 5, "recharge_dice": 0,
+      "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant extraordinary agility."
+    },
+    {
+      "serial": 62,
+      "name": "The Pair of Metal Shod Boots of Thror",
+      "tval": 30, "sval": 6, "pval": 3,
+      "depth": 30, "rarity": 25, "weight": 80, "cost": 12000,
+      "base_ac": 6, "damage": "1d1", "plus_to_hit": 0, "plus_to_dam": 0, "plus_to_ac": 20,
+      "flags": ["STR", "CON", "SPEED", "HIDE_TYPE", "RES_FEAR"],
+      "description": "Sturdy footwear as enduring as the Dwarven king-in-exile."
+    },
+    {
+      "serial": 63,
+      "name": "The Pair of Soft Leather Boots of Wormtongue",
+      "tval": 30, "sval": 2, "pval": 3,
+      "depth": 10, "rarity": 15, "weight": 20, "cost": 17000,
+      "base_ac": 2, "damage": "1d1", "plus_to_hit": -8, "plus_to_dam": -8, "plus_to_ac": 0,
+      "flags": ["INT", "DEX", "STEALTH", "SPEED", "FEATHER", "LIGHT_CURSE", "HIDE_TYPE", "ACTIVATE"],
+      "activation": "PHASE", "recharge_base": 20, "recharge_dice": 0,
+      "description": "Running shoes of the treacherous Grima Wormtongue \u2014 suited for a spy, or a coward."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/weapons.schema.json",
+  "title": "Weapons",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "weapons"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "weapons": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/WeaponItem" }
+    }
+  },
+  "$defs": {
+    "WeaponItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "type", "subtype", "tval", "sval",
+        "damage_dice", "to_hit_bonus", "to_damage_bonus",
+        "weight", "sell_value", "stats",
+        "allocation_table", "capability_ids", "description", "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "common_item.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["sword", "dagger", "axe", "mace", "polearm", "staff", "bow", "crossbow", "shot", "arrow", "bolt", "digger"]
+        },
+        "subtype": {
+          "type": "string",
+          "enum": ["one_handed", "two_handed", "ranged", "ammo", "digging"]
+        },
+        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
+        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
+        "damage_dice": {
+          "anyOf": [
+            { "type": "null" },
+            { "$ref": "common_item.schema.json#/$defs/DamageDice" }
+          ]
+        },
+        "to_hit_bonus": { "type": "integer" },
+        "to_damage_bonus": { "type": "integer" },
+        "weight": { "type": "integer", "minimum": 0 },
+        "sell_value": { "type": "integer", "minimum": 0 },
+        "stats": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attack_speed": { "type": "number", "exclusiveMinimum": 0 },
+            "range": { "type": "integer", "minimum": 1 },
+            "tunnel_power": { "type": "integer", "minimum": 0 },
+            "durability_max": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
+      }
+    }
+  }
+}

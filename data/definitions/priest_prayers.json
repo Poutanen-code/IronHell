@@ -1,0 +1,1504 @@
+{
+  "schema_version": 1,
+  "realm": "prayer",
+  "spells": [
+    {
+      "id": "prayer_detect_evil",
+      "name": "Detect Evil",
+      "policy": {
+        "level": 1,
+        "mana": 1,
+        "fail_rate": 10,
+        "experience_value": 4,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "evil"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_light_wounds",
+      "name": "Cure Light Wounds",
+      "policy": {
+        "level": 1,
+        "mana": 2,
+        "fail_rate": 15,
+        "experience_value": 4,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "cut"
+            ],
+            "cure_mode": "halve",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_bless",
+      "name": "Bless",
+      "policy": {
+        "level": 1,
+        "mana": 2,
+        "fail_rate": 20,
+        "experience_value": 4,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_remove_fear",
+      "name": "Remove Fear",
+      "policy": {
+        "level": 1,
+        "mana": 2,
+        "fail_rate": 25,
+        "experience_value": 4,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_call_light",
+      "name": "Call Light",
+      "policy": {
+        "level": 3,
+        "mana": 2,
+        "fail_rate": 25,
+        "experience_value": 1,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 0,
+            "light_style": "room",
+            "damage_light_sensitive": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_call_light"
+            }
+          }
+        }
+      ],
+      "notes": "lite_area() — same semantics as magic_light_area. Damages light-sensitive monsters and permanently illuminates current room.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_find_traps",
+      "name": "Find Traps",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 27,
+        "experience_value": 2,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "traps"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_detect_doors_stairs",
+      "name": "Detect Doors/Stairs",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 27,
+        "experience_value": 2,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "doors",
+              "stairs"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_slow_poison",
+      "name": "Slow Poison",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 28,
+        "experience_value": 4,
+        "book_id": "beginners_handbook",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "cure_mode": "halve",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Corrected from CureStatus(full). set_poisoned(poisoned/2) halves the counter, not cures it.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_scare_monster",
+      "name": "Scare Monster",
+      "policy": {
+        "level": 5,
+        "mana": 4,
+        "fail_rate": 29,
+        "experience_value": 3,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "FearControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_portal",
+      "name": "Portal",
+      "policy": {
+        "level": 5,
+        "mana": 4,
+        "fail_rate": 30,
+        "experience_value": 4,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 0,
+            "teleport_mode": "phase"
+          }
+        }
+      ],
+      "notes": "teleport_player(plev*3). Distance is policy-defined by caster level; distance=0 marks level-dependent.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_serious_wounds",
+      "name": "Cure Serious Wounds",
+      "policy": {
+        "level": 5,
+        "mana": 4,
+        "fail_rate": 32,
+        "experience_value": 4,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 8
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "cut"
+            ],
+            "cure_mode": "halve",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_chant",
+      "name": "Chant",
+      "policy": {
+        "level": 5,
+        "mana": 5,
+        "fail_rate": 34,
+        "experience_value": 4,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_sanctuary",
+      "name": "Sanctuary",
+      "policy": {
+        "level": 7,
+        "mana": 5,
+        "fail_rate": 36,
+        "experience_value": 3,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "SleepControl",
+          "parameters": {
+            "target_mode": "area",
+            "potency": 1,
+            "radius": 1
+          }
+        }
+      ],
+      "notes": "Corrected from ApplyTimedBuff(protected_from_evil). sleep_monsters_touch() projects GF_OLD_SLEEP radius=1.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_satisfy_hunger",
+      "name": "Satisfy Hunger",
+      "policy": {
+        "level": 7,
+        "mana": 5,
+        "fail_rate": 38,
+        "experience_value": 4,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_remove_curse",
+      "name": "Remove Curse",
+      "policy": {
+        "level": 7,
+        "mana": 6,
+        "fail_rate": 38,
+        "experience_value": 5,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "single"
+          }
+        }
+      ],
+      "notes": "Corrected from IdentifyItem placeholder. remove_curse() removes one curse.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_resist_heat_cold",
+      "name": "Resist Heat and Cold",
+      "policy": {
+        "level": 7,
+        "mana": 7,
+        "fail_rate": 38,
+        "experience_value": 5,
+        "book_id": "words_of_wisdom",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": [
+              "fire",
+              "cold"
+            ],
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_neutralize_poison",
+      "name": "Neutralize Poison",
+      "policy": {
+        "level": 9,
+        "mana": 6,
+        "fail_rate": 38,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_orb_of_draining",
+      "name": "Orb of Draining",
+      "policy": {
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 40,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "holy_orb",
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_orb_of_draining"
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "notes": "GF_HOLY_ORB: doubles damage to evil monsters, destroys cursed non-artifact items in blast. Radius increases to 3 at level 30+.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_critical_wounds",
+      "name": "Cure Critical Wounds",
+      "policy": {
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 38,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_sense_invisible",
+      "name": "Sense Invisible",
+      "policy": {
+        "level": 11,
+        "mana": 8,
+        "fail_rate": 42,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "see_invisible",
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "set_tim_invis() — a timed buff, unlike SPELL_DETECT_INVISIBLE which is a one-time scan.",
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_protection_from_evil",
+      "name": "Protection from Evil",
+      "policy": {
+        "level": 11,
+        "mana": 8,
+        "fail_rate": 42,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "protected_from_evil",
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_earthquake",
+      "name": "Earthquake",
+      "policy": {
+        "level": 11,
+        "mana": 9,
+        "fail_rate": 55,
+        "experience_value": 5,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "Earthquake",
+          "parameters": {
+            "radius": 10,
+            "center_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_sense_surroundings",
+      "name": "Sense Surroundings",
+      "policy": {
+        "level": 13,
+        "mana": 10,
+        "fail_rate": 45,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_mortal_wounds",
+      "name": "Cure Mortal Wounds",
+      "policy": {
+        "level": 13,
+        "mana": 11,
+        "fail_rate": 45,
+        "experience_value": 4,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "stunned",
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_turn_undead",
+      "name": "Turn Undead",
+      "policy": {
+        "level": 15,
+        "mana": 12,
+        "fail_rate": 50,
+        "experience_value": 5,
+        "book_id": "chants_and_blessings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "FearControl",
+          "parameters": {
+            "target_mode": "all_in_los",
+            "potency": 1,
+            "entity_filter": "undead"
+          }
+        }
+      ],
+      "notes": "Corrected: turn_undead() uses GF_TURN_UNDEAD which only applies fear to undead. No damage. DispelByTag was a spurious addition.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_prayer",
+      "name": "Prayer",
+      "policy": {
+        "level": 15,
+        "mana": 14,
+        "fail_rate": 50,
+        "experience_value": 5,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "kind": "policy_default"
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_dispel_undead",
+      "name": "Dispel Undead",
+      "policy": {
+        "level": 17,
+        "mana": 14,
+        "fail_rate": 55,
+        "experience_value": 7,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "undead"
+            ],
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_dispel_undead"
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_heal",
+      "name": "Heal",
+      "policy": {
+        "level": 21,
+        "mana": 16,
+        "fail_rate": 60,
+        "experience_value": 7,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 300
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "stunned",
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_dispel_evil",
+      "name": "Dispel Evil",
+      "policy": {
+        "level": 25,
+        "mana": 20,
+        "fail_rate": 70,
+        "experience_value": 12,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "evil"
+            ],
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_dispel_evil"
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_glyph_of_warding",
+      "name": "Glyph of Warding",
+      "policy": {
+        "level": 33,
+        "mana": 55,
+        "fail_rate": 90,
+        "experience_value": 15,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "glyph_of_warding",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_holy_word",
+      "name": "Holy Word",
+      "policy": {
+        "level": 39,
+        "mana": 32,
+        "fail_rate": 95,
+        "experience_value": 20,
+        "book_id": "exorcism_and_dispelling",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "evil"
+            ],
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_holy_word"
+            }
+          }
+        },
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 1000
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid",
+              "poisoned",
+              "stunned",
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Corrected: added cure_poison, cure_stun, cure_cut. Source: dispel_evil + hp_player(1000) + set_afraid(0) + set_poisoned(0) + set_stun(0) + set_cut(0).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_detect_monsters",
+      "name": "Detect Monsters",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 50,
+        "experience_value": 2,
+        "book_id": "godly_insights",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "monsters"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_detection",
+      "name": "Detection",
+      "policy": {
+        "level": 10,
+        "mana": 10,
+        "fail_rate": 80,
+        "experience_value": 20,
+        "book_id": "godly_insights",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "all"
+            ]
+          }
+        }
+      ],
+      "notes": "Corrected: detection() detects treasure, objects, traps, doors, monsters, invisible monsters. No map_area() call.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_perception",
+      "name": "Perception",
+      "policy": {
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 80,
+        "experience_value": 20,
+        "book_id": "godly_insights",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_probing",
+      "name": "Probing",
+      "policy": {
+        "level": 25,
+        "mana": 10,
+        "fail_rate": 80,
+        "experience_value": 150,
+        "book_id": "godly_insights",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "InspectEntity",
+          "parameters": {
+            "scope": "hp_and_lore",
+            "target_mode": "all_in_sight"
+          }
+        }
+      ],
+      "notes": "probing() reveals current HP and all lore flags for every monster within MAX_SIGHT. Distinct from DetectEntities.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_clairvoyance",
+      "name": "Clairvoyance",
+      "policy": {
+        "level": 35,
+        "mana": 50,
+        "fail_rate": 80,
+        "experience_value": 230,
+        "book_id": "godly_insights",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "full_level_illuminate"
+          }
+        }
+      ],
+      "notes": "Corrected: wiz_lite() permanently illuminates entire level and memorizes all terrain/objects. Monster visibility follows from illumination, not an explicit detect call.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_serious_wounds2",
+      "name": "Cure Serious Wounds",
+      "policy": {
+        "level": 15,
+        "mana": 5,
+        "fail_rate": 50,
+        "experience_value": 25,
+        "book_id": "purifications_and_healing",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_cure_mortal_wounds2",
+      "name": "Cure Mortal Wounds",
+      "policy": {
+        "level": 17,
+        "mana": 7,
+        "fail_rate": 60,
+        "experience_value": 45,
+        "book_id": "purifications_and_healing",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "stunned",
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_healing",
+      "name": "Healing",
+      "policy": {
+        "level": 30,
+        "mana": 50,
+        "fail_rate": 80,
+        "experience_value": 130,
+        "book_id": "purifications_and_healing",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 2000
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "stunned",
+              "cut"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_restoration",
+      "name": "Life Restoration",
+      "policy": {
+        "level": 35,
+        "mana": 70,
+        "fail_rate": 90,
+        "experience_value": 230,
+        "book_id": "purifications_and_healing",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "all_stats",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "MAngband: resurrects ghost if player is dead ghost, else do_res_stat x6 restores all drained stats.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_remembrance",
+      "name": "Remembrance",
+      "policy": {
+        "level": 35,
+        "mana": 70,
+        "fail_rate": 90,
+        "experience_value": 250,
+        "book_id": "purifications_and_healing",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "MAngband: restores XP of another player (multiplayer) or restore_level() which restores drained experience.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_dispel_undead2",
+      "name": "Dispel Undead",
+      "policy": {
+        "level": 15,
+        "mana": 7,
+        "fail_rate": 70,
+        "experience_value": 25,
+        "book_id": "wrath_of_god",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "undead"
+            ],
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_dispel_undead2"
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_dispel_evil2",
+      "name": "Dispel Evil",
+      "policy": {
+        "level": 20,
+        "mana": 10,
+        "fail_rate": 75,
+        "experience_value": 60,
+        "book_id": "wrath_of_god",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "evil"
+            ],
+            "amount": {
+              "kind": "runtime_formula",
+              "spell_id": "prayer_dispel_evil2"
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_banish_evil",
+      "name": "Banish Evil",
+      "policy": {
+        "level": 25,
+        "mana": 25,
+        "fail_rate": 80,
+        "experience_value": 250,
+        "book_id": "wrath_of_god",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "evil_only",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_word_of_destruction",
+      "name": "Word of Destruction",
+      "policy": {
+        "level": 35,
+        "mana": 35,
+        "fail_rate": 80,
+        "experience_value": 115,
+        "book_id": "wrath_of_god",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destruction_field",
+            "target_mode": "self",
+            "entity_effect": "remove_all_in_radius"
+          }
+        }
+      ],
+      "notes": "destroy_area(full=TRUE): destroys terrain and removes all monsters in radius 15.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_annihilation",
+      "name": "Annihilation",
+      "policy": {
+        "level": 45,
+        "mana": 60,
+        "fail_rate": 75,
+        "experience_value": 250,
+        "book_id": "wrath_of_god",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "DrainLife",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 200
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_unbarring_ways",
+      "name": "Unbarring Ways",
+      "policy": {
+        "level": 5,
+        "mana": 6,
+        "fail_rate": 50,
+        "experience_value": 40,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "unbar_paths",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "destroy_doors_touch() removes doors and traps in an area around the caster.",
+      "provenance_status": "derived"
+    },
+    {
+      "id": "prayer_recharging",
+      "name": "Recharging",
+      "policy": {
+        "level": 15,
+        "mana": 20,
+        "fail_rate": 80,
+        "experience_value": 25,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RechargeItem",
+          "parameters": {
+            "power": 2,
+            "item_kind_filter": "rechargeable"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_dispel_curse",
+      "name": "Dispel Curse",
+      "policy": {
+        "level": 25,
+        "mana": 40,
+        "fail_rate": 80,
+        "experience_value": 160,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "all"
+          }
+        }
+      ],
+      "notes": "Corrected from IdentifyItem placeholder. remove_all_curse() removes all curses from equipment.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_enchant_weapon",
+      "name": "Enchant Weapon",
+      "policy": {
+        "level": 35,
+        "mana": 50,
+        "fail_rate": 80,
+        "experience_value": 230,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "weapon",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_enchant_armor",
+      "name": "Enchant Armor",
+      "policy": {
+        "level": 37,
+        "mana": 60,
+        "fail_rate": 85,
+        "experience_value": 250,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "armor",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_elemental_brand",
+      "name": "Elemental Brand",
+      "policy": {
+        "level": 45,
+        "mana": 95,
+        "fail_rate": 85,
+        "experience_value": 250,
+        "book_id": "holy_infusions",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "BrandWeapon",
+          "parameters": {
+            "brand_type": "elemental",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_blink",
+      "name": "Blink",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 50,
+        "experience_value": 6,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 10,
+            "teleport_mode": "phase"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_teleport_self",
+      "name": "Teleport Self",
+      "policy": {
+        "level": 10,
+        "mana": 10,
+        "fail_rate": 50,
+        "experience_value": 8,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 0,
+            "teleport_mode": "teleport"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_teleport_other",
+      "name": "Teleport Other",
+      "policy": {
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 80,
+        "experience_value": 16,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportTarget",
+          "parameters": {
+            "distance": 0,
+            "target_mode": "target"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_teleport_level",
+      "name": "Teleport Level",
+      "policy": {
+        "level": 30,
+        "mana": 40,
+        "fail_rate": 75,
+        "experience_value": 133,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "teleport_level"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_word_of_recall",
+      "name": "Word of Recall",
+      "policy": {
+        "level": 35,
+        "mana": 50,
+        "fail_rate": 75,
+        "experience_value": 11,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "prayer_alter_reality",
+      "name": "Alter Reality",
+      "policy": {
+        "level": 40,
+        "mana": 60,
+        "fail_rate": 75,
+        "experience_value": 250,
+        "book_id": "ethereal_openings",
+        "realm": "prayer"
+      },
+      "action_refs": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "alter_reality"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    }
+  ]
+}

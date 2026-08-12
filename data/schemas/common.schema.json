@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/common.schema.json",
+  "title": "Common Schema Definitions",
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "ProvenanceStatus": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "observed",
+        "derived",
+        "inferred",
+        "ironhell_specific",
+        "unresolved"
+      ]
+    },
+    "StatName": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "intelligence",
+        "wisdom",
+        "dexterity",
+        "constitution",
+        "charisma"
+      ]
+    },
+    "StatModifiers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strength",
+        "intelligence",
+        "wisdom",
+        "dexterity",
+        "constitution",
+        "charisma"
+      ],
+      "properties": {
+        "strength": { "type": "integer" },
+        "intelligence": { "type": "integer" },
+        "wisdom": { "type": "integer" },
+        "dexterity": { "type": "integer" },
+        "constitution": { "type": "integer" },
+        "charisma": { "type": "integer" }
+      }
+    },
+    "SkillModifiers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "disarming",
+        "magic_device",
+        "saving_throw",
+        "stealth",
+        "searching",
+        "search_frequency",
+        "melee_to_hit",
+        "ranged_to_hit"
+      ],
+      "properties": {
+        "disarming": { "type": "integer" },
+        "magic_device": { "type": "integer" },
+        "saving_throw": { "type": "integer" },
+        "stealth": { "type": "integer" },
+        "searching": { "type": "integer" },
+        "search_frequency": { "type": "integer" },
+        "melee_to_hit": { "type": "integer" },
+        "ranged_to_hit": { "type": "integer" }
+      }
+    },
+    "CapabilityReference": {
+      "$ref": "#/$defs/Id"
+    }
+  }
+}

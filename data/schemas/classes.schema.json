@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/classes.schema.json",
+  "title": "Classes",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "classes"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "description",
+          "primary_stats",
+          "secondary_stats",
+          "stat_modifiers",
+          "base_skills",
+          "skill_growth",
+          "hit_die",
+          "exp_factor",
+          "sense_base",
+          "sense_div",
+          "max_attacks",
+          "min_weight",
+          "attack_multiplier",
+          "spell_stat",
+          "first_spell_level",
+          "capability_ids",
+          "titles",
+          "spell_weight",
+          "equipment_proficiency",
+          "starting_equipment",
+          "lore",
+          "provenance_status"
+        ],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/Id" },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "primary_stats": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "$ref": "common.schema.json#/$defs/StatName" }
+          },
+          "secondary_stats": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "$ref": "common.schema.json#/$defs/StatName" }
+          },
+          "stat_modifiers": { "$ref": "common.schema.json#/$defs/StatModifiers" },
+          "base_skills": { "$ref": "common.schema.json#/$defs/SkillModifiers" },
+          "skill_growth": { "$ref": "common.schema.json#/$defs/SkillModifiers" },
+          "hit_die": { "type": "integer", "minimum": 0 },
+          "exp_factor": { "type": "integer", "minimum": 0 },
+          "sense_base": { "type": "integer", "minimum": 0 },
+          "sense_div": { "type": "integer", "minimum": 1 },
+          "max_attacks": { "type": "integer", "minimum": 1 },
+          "min_weight": { "type": "integer", "minimum": 0 },
+          "attack_multiplier": { "type": "integer", "minimum": 0 },
+          "spell_stat": {
+            "anyOf": [
+              { "type": "null" },
+              {
+                "type": "string",
+                "enum": [
+                  "strength",
+                  "intelligence",
+                  "wisdom",
+                  "dexterity",
+                  "constitution",
+                  "charisma"
+                ]
+              }
+            ]
+          },
+          "first_spell_level": { "type": "integer", "minimum": 0 },
+          "capability_ids": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/$defs/CapabilityReference" },
+            "uniqueItems": true
+          },
+          "titles": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "spell_weight": { "type": "integer", "minimum": 0 },
+          "equipment_proficiency": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["armor", "weapons"],
+            "properties": {
+              "armor": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "common.schema.json#/$defs/Id" },
+                "uniqueItems": true
+              },
+              "weapons": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "common.schema.json#/$defs/Id" },
+                "uniqueItems": true
+              }
+            }
+          },
+          "starting_equipment": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "min", "max"],
+              "properties": {
+                "id": { "$ref": "common.schema.json#/$defs/Id" },
+                "min": { "type": "integer", "minimum": 0 },
+                "max": { "type": "integer", "minimum": 0 }
+              }
+            }
+          },
+          "lore": { "type": "string", "minLength": 1 },
+          "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+        }
+      }
+    }
+  }
+}

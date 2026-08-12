@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/flavors.schema.json",
+  "title": "Flavors",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["flavors"],
+  "properties": {
+    "flavors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "tval", "character", "color", "text"],
+        "properties": {
+          "id": { "type": "integer" },
+          "tval": { "type": "integer" },
+          "sval": { "type": "integer" },
+          "character": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "color": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "text": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1274 @@
+{
+  "schema_version": 1,
+  "scrolls": [
+    {
+      "id": "scroll_of_darkness",
+      "name": "Scroll of Darkness",
+      "tval": 70,
+      "sval": 0,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It darkens all squares within 3 squares of you, plus the entire room if you are currently in one; and blinds you for 3+1d5 turns unless you have resistance to blindness.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DarkenArea",
+          "parameters": {
+            "radius": 3,
+            "darkness_mode": "self_centered"
+          }
+        },
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": {
+              "base": 3,
+              "dice": {
+                "count": 1,
+                "sides": 5
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+    },
+    {
+      "id": "scroll_of_aggravate_monster",
+      "name": "Scroll of Aggravate Monster",
+      "tval": 70,
+      "sval": 1,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It awakens all sleeping monsters within 40 squares of you, and hastes all monsters within line of sight unless they are already hasted.",
+      "provenance_status": "unresolved",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "monsters"
+            ]
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: DetectEntities.unresolved_mapping=\"aggravate_not_modeled\""
+    },
+    {
+      "id": "scroll_curse_armor",
+      "name": "Scroll of Curse Armor",
+      "tval": 70,
+      "sval": 2,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "description": "It curses the currently equipped body armor, removing all of its special powers, reducing the base AC to 0, and changing the magical AC bonus to -2d5. Artifacts have a 1 in 2 chance to resist.",
+      "provenance_status": "unresolved",
+      "effects": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "single"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: RemoveCurse.unresolved_mapping=\"inverse_behavior_curse_not_modeled\"; RemoveCurse.target=\"armor\"; RemoveCurse.target_mode=\"armor\""
+    },
+    {
+      "id": "scroll_curse_weapon",
+      "name": "Scroll of Curse Weapon",
+      "tval": 70,
+      "sval": 3,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "description": "It curses the currently wielded melee weapon, removing all of its special powers and changing the weapon's to-hit and to-dam bonuses both to -2d5. Artifacts have a 1 in 2 chance to resist.",
+      "provenance_status": "unresolved",
+      "effects": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "single"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: RemoveCurse.unresolved_mapping=\"inverse_behavior_curse_not_modeled\"; RemoveCurse.target=\"weapon\"; RemoveCurse.target_mode=\"weapon\""
+    },
+    {
+      "id": "scroll_of_summon_monster",
+      "name": "Scroll of Summon Monster",
+      "tval": 70,
+      "sval": 4,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It summons 1d3 monsters generated at the current dungeon level.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "monster",
+            "count": 3,
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_summon_undead",
+      "name": "Scroll of Summon Undead",
+      "tval": 70,
+      "sval": 5,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It summons 1d3 non-unique undead monsters generated at the current dungeon level.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "undead",
+            "count": 3,
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_artifact_creation",
+      "name": "Scroll of Artifact Creation",
+      "tval": 70,
+      "sval": 6,
+      "weight": 5,
+      "sell_value": 1000000,
+      "allocation_table": [],
+      "description": "Creates a new artifact.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "create_object",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"great\"; AlterTerrain.count=1"
+    },
+    {
+      "id": "scroll_of_trap_creation",
+      "name": "Scroll of Trap Creation",
+      "tval": 70,
+      "sval": 7,
+      "weight": 5,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It creates traps on all empty squares within a 1-square radius of you.",
+      "provenance_status": "unresolved",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "glyph",
+            "target_mode": "area",
+            "radius": 1
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.unresolved_mapping=\"create_traps_not_modeled\""
+    },
+    {
+      "id": "scroll_of_phase_door",
+      "name": "Scroll of Phase Door",
+      "tval": 70,
+      "sval": 8,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It teleports you randomly up to 10 squares away.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 10,
+            "teleport_mode": "phase"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_teleport",
+      "name": "Scroll of Teleportation",
+      "tval": 70,
+      "sval": 9,
+      "weight": 5,
+      "sell_value": 40,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It teleports you randomly up to 100 squares away.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 100,
+            "teleport_mode": "teleport"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_teleport_level",
+      "name": "Scroll of Teleport Level",
+      "tval": 70,
+      "sval": 10,
+      "weight": 5,
+      "sell_value": 50,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It teleports you 1 level up or down, chosen at random. Always goes down from the town level.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "teleport_level"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_word_of_recall",
+      "name": "Scroll of Word of Recall",
+      "tval": 70,
+      "sval": 11,
+      "weight": 5,
+      "sell_value": 150,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It invokes the spell of recall, which takes you from the dungeon to the town or from the town to the deepest level you have visited. It takes a while for the spell to act; until then, it can be canceled by reading a second scroll.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_identify_single",
+      "name": "Scroll of Identify",
+      "tval": 70,
+      "sval": 12,
+      "weight": 5,
+      "sell_value": 50,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        },
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It reveals all normal (magical but non-hidden) powers of one object. The spell may be aborted without using up the scroll.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_identify",
+      "name": "Scroll of *Identify*",
+      "tval": 70,
+      "sval": 13,
+      "weight": 5,
+      "sell_value": 1000,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        },
+        {
+          "depth": 40,
+          "rarity": 1
+        },
+        {
+          "depth": 70,
+          "rarity": 1
+        }
+      ],
+      "description": "It reveals all normal and hidden powers of one object, and permanently implants this knowledge into your mind.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "comprehensive"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_remove_curse",
+      "name": "Scroll of Remove Curse",
+      "tval": 70,
+      "sval": 14,
+      "weight": 5,
+      "sell_value": 100,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It removes all ordinary curses from all equipped items. Heavy or permanent curses are unaffected.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "single"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_remove_curse_heavy",
+      "name": "Scroll of *Remove Curse*",
+      "tval": 70,
+      "sval": 15,
+      "weight": 5,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        },
+        {
+          "depth": 95,
+          "rarity": 1
+        }
+      ],
+      "description": "It removes all ordinary and heavy curses from all equipped objects. Permanent curses are unaffected.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "all"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_enchant_armor",
+      "name": "Scroll of Enchant Armor",
+      "tval": 70,
+      "sval": 16,
+      "weight": 5,
+      "sell_value": 125,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It attempts to magically enchant a piece of armor once.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "armor",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+    },
+    {
+      "id": "scroll_of_enchant_weapon_to_hit",
+      "name": "Scroll of Enchant Weapon To-Hit",
+      "tval": 70,
+      "sval": 17,
+      "weight": 5,
+      "sell_value": 125,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It attempts to magically enhance a weapon's to-hit bonus once.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "weapon_to_hit",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+    },
+    {
+      "id": "scroll_of_enchant_weapon_to_dam",
+      "name": "Scroll of Enchant Weapon To-Dam",
+      "tval": 70,
+      "sval": 18,
+      "weight": 5,
+      "sell_value": 125,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It attempts to magically enhance a weapon's to-dam bonus once.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "weapon_to_dam",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+    },
+    {
+      "id": "scroll_of_enchant_armor_heavy",
+      "name": "Scroll of *Enchant Armor*",
+      "tval": 70,
+      "sval": 20,
+      "weight": 5,
+      "sell_value": 500,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        },
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "description": "It attempts to enchant a piece of armor 2+1d3 times.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "armor",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts_base=2; EnchantEquipment.attempts_dice={\"count\":1,\"sides\":3}"
+    },
+    {
+      "id": "scroll_of_enchant_weapon_heavy",
+      "name": "Scroll of *Enchant Weapon*",
+      "tval": 70,
+      "sval": 21,
+      "weight": 5,
+      "sell_value": 500,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "description": "It attempts to magically enhance a weapon's to-dam and to-hit bonuses 1d3 times each.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "weapon_both",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts_dice={\"count\":1,\"sides\":3}"
+    },
+    {
+      "id": "scroll_of_recharging",
+      "name": "Scroll of Recharging",
+      "tval": 70,
+      "sval": 22,
+      "weight": 5,
+      "sell_value": 200,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It recharges a wand or staff. Success adds 2+1d(60/(level+2)+1) charges; failure uncharges the item.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RechargeItem",
+          "parameters": {
+            "power": 60,
+            "item_kind_filter": [
+              "wand",
+              "staff",
+              "device",
+              "rechargeable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_light",
+      "name": "Scroll of Light",
+      "tval": 70,
+      "sval": 24,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 3,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It lights up an area with radius 2 plus the entire room if you are in one. Inflicts 2d8 damage on light-sensitive creatures within the radius.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 2,
+            "light_style": "torch",
+            "damage_light_sensitive": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_magic_mapping",
+      "name": "Scroll of Magic Mapping",
+      "tval": 70,
+      "sval": 25,
+      "weight": 5,
+      "sell_value": 40,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It maps out a portion of the level centered on you.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_treasure_detection",
+      "name": "Scroll of Treasure Detection",
+      "tval": 70,
+      "sval": 26,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It detects all treasure in the immediate area.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "objects"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_object_detection",
+      "name": "Scroll of Object Detection",
+      "tval": 70,
+      "sval": 27,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It detects all objects in the immediate area.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "objects"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_trap_detection",
+      "name": "Scroll of Trap Detection",
+      "tval": 70,
+      "sval": 28,
+      "weight": 5,
+      "sell_value": 35,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It detects all traps in the immediate area.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "traps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_door_stair_location",
+      "name": "Scroll of Door/Stair Location",
+      "tval": 70,
+      "sval": 29,
+      "weight": 5,
+      "sell_value": 35,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It detects all stairs and doors in the immediate area.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "doors",
+              "stairs"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_detect_invisible",
+      "name": "Scroll of Detect Invisible",
+      "tval": 70,
+      "sval": 30,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It detects all invisible monsters in the immediate area.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "invisible_monsters"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_satisfy_hunger",
+      "name": "Scroll of Satisfy Hunger",
+      "tval": 70,
+      "sval": 32,
+      "weight": 5,
+      "sell_value": 10,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It magically renders you well-fed but not satiated. Also cures a bloated stomach.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_blessing",
+      "name": "Scroll of Blessing",
+      "tval": 70,
+      "sval": 33,
+      "weight": 5,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It blesses you (+5 to AC, +10 to-hit) for 6+1d12 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "base": 6,
+              "dice": {
+                "count": 1,
+                "sides": 12
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_holy_chant",
+      "name": "Scroll of Holy Chant",
+      "tval": 70,
+      "sval": 34,
+      "weight": 5,
+      "sell_value": 40,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It blesses you (+5 to AC, +10 to-hit) for 12+1d24 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "base": 12,
+              "dice": {
+                "count": 1,
+                "sides": 24
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_holy_prayer",
+      "name": "Scroll of Holy Prayer",
+      "tval": 70,
+      "sval": 35,
+      "weight": 5,
+      "sell_value": 80,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It blesses you (+5 to AC, +10 to-hit) for 24+1d48 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "base": 24,
+              "dice": {
+                "count": 1,
+                "sides": 48
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_monster_confusion",
+      "name": "Scroll of Monster Confusion",
+      "tval": 70,
+      "sval": 36,
+      "weight": 5,
+      "sell_value": 30,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It enchants you with an aura of confusion. When you next strike a monster, an attempt is made to confuse it.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ConfuseControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ConfuseControl.condition={\"on_next_melee_hit\":true}"
+    },
+    {
+      "id": "scroll_of_protection_from_evil",
+      "name": "Scroll of Protection from Evil",
+      "tval": 70,
+      "sval": 37,
+      "weight": 5,
+      "sell_value": 50,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It grants the enchantment of protection from evil for a duration equal to 1d25 plus three times your character level.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "protected_from_evil",
+            "duration": {
+              "base": 0,
+              "dice": {
+                "count": 3,
+                "sides": 1
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_rune_of_protection",
+      "name": "Scroll of Rune of Protection",
+      "tval": 70,
+      "sval": 38,
+      "weight": 5,
+      "sell_value": 500,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 4
+        },
+        {
+          "depth": 90,
+          "rarity": 1
+        }
+      ],
+      "description": "It inscribes a glyph of warding beneath you. Monsters cannot move onto the glyph; they have a (monster level in 550) chance of breaking it when they try.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "glyph_of_warding",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_trap_door_destruction",
+      "name": "Scroll of Trap/Door Destruction",
+      "tval": 70,
+      "sval": 39,
+      "weight": 5,
+      "sell_value": 50,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It destroys all traps and doors within a 1-square radius of you.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destroy_trap_or_door",
+            "target_mode": "direction"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_destruction",
+      "name": "Scroll of *Destruction*",
+      "tval": 70,
+      "sval": 41,
+      "weight": 5,
+      "sell_value": 250,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It destroys a circular area of radius 15 centered on you, randomly placing new walls and floor. All monsters and non-artifact objects are removed. Causes blindness for 10+1d10 turns unless you have resistance to blindness or light.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destruction_field",
+            "target_mode": "self",
+            "radius": 15,
+            "entity_effect": "remove_all_in_radius"
+          }
+        },
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+    },
+    {
+      "id": "scroll_of_dispel_undead",
+      "name": "Scroll of Dispel Undead",
+      "tval": 70,
+      "sval": 42,
+      "weight": 5,
+      "sell_value": 200,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 60 points of damage on all undead creatures within line of sight.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "undead"
+            ],
+            "amount": {
+              "kind": "flat",
+              "value": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_banishment",
+      "name": "Scroll of Banishment",
+      "tval": 70,
+      "sval": 44,
+      "weight": 5,
+      "sell_value": 750,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        },
+        {
+          "depth": 80,
+          "rarity": 2
+        }
+      ],
+      "description": "It removes all monsters represented by a chosen symbol from the level. Uniques are unaffected. You take 1d4 damage for every monster removed.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "targeted_non_unique",
+            "target_mode": "level"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_mass_banishment",
+      "name": "Scroll of Mass Banishment",
+      "tval": 70,
+      "sval": 45,
+      "weight": 5,
+      "sell_value": 1000,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 4
+        },
+        {
+          "depth": 95,
+          "rarity": 4
+        }
+      ],
+      "description": "It removes all monsters within 20 squares of you. Uniques are unaffected. You take 1d3 damage for every monster removed.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "mass_non_unique",
+            "target_mode": "area"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_acquirement",
+      "name": "Scroll of Acquirement",
+      "tval": 70,
+      "sval": 46,
+      "weight": 5,
+      "sell_value": 100000,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 8
+        }
+      ],
+      "description": "It creates one good object on the floor near you.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "create_object",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"good\"; AlterTerrain.count=1"
+    },
+    {
+      "id": "scroll_of_great_acquirement",
+      "name": "Scroll of *Acquirement*",
+      "tval": 70,
+      "sval": 47,
+      "weight": 5,
+      "sell_value": 200000,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 16
+        }
+      ],
+      "description": "It creates 1+1d2 good objects on the ground near you.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "create_object",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"great\"; AlterTerrain.count=1; AlterTerrain.count_dice={\"count\":1,\"sides\":2}"
+    },
+    {
+      "id": "scroll_of_life",
+      "name": "Scroll of Life",
+      "tval": 70,
+      "sval": 48,
+      "weight": 5,
+      "sell_value": 500,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores life to a ghost character standing next to the player who reads it. Restores experience to maximum if there is no adjacent ghost.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scroll_of_house_creation",
+      "name": "Scroll of House Creation",
+      "tval": 70,
+      "sval": 49,
+      "weight": 5,
+      "sell_value": 1000000,
+      "allocation_table": [
+        {
+          "depth": 99,
+          "rarity": 40
+        }
+      ],
+      "description": "It creates a new house starting at the House Foundation Stone you are standing at, expanding in all directions until no more Foundation Stones are found.",
+      "provenance_status": "verified",
+      "effects": [],
+      "notes": "Multiplayer-only: creates a player house at the marked Foundation Stone. No standard effect type."
+    }
+  ]
+}

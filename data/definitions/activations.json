@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "activations": [
+    {
+      "activation_id": "ILLUMINATION",
+      "name": "Illumination",
+      "description": "The light blazes out, illuminating the area with brilliant starlight that harms the undead.",
+      "effects": [
+        {
+          "effect_id": "light_area",
+          "radius": 0,
+          "type": "starlight",
+          "damage_undead": true,
+          "ray_count": 8
+        }
+      ]
+    },
+    {
+      "activation_id": "MAGIC_MAP",
+      "name": "Magic Mapping",
+      "description": "The entire level is revealed in your mind's eye.",
+      "effects": [
+        {
+          "effect_id": "mapping",
+          "radius": 0
+        }
+      ]
+    },
+    {
+      "activation_id": "DETECT",
+      "name": "Detection",
+      "description": "You sense all creatures, objects, traps, and paths nearby.",
+      "effects": [
+        {
+          "effect_id": "detect",
+          "targets": ["all"]
+        }
+      ]
+    },
+    {
+      "activation_id": "PROT_EVIL",
+      "name": "Protection from Evil",
+      "description": "A holy aura wards off evil creatures.",
+      "effects": [
+        {
+          "effect_id": "protection_from_evil",
+          "duration": { "base": 0, "dice": { "count": 3, "sides": 1 } }
+        }
+      ],
+      "notes": "Duration base is 0; the runtime multiplies dice.count by player level (3*level ticks)."
+    },
+    {
+      "activation_id": "DISP_EVIL",
+      "name": "Dispel Evil",
+      "description": "Holy light blasts all evil creatures in sight.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "holy",
+          "shape": "burst",
+          "flat_bonus": 0
+        }
+      ],
+      "notes": "Damage scales with player level at runtime (3 * player_level). flat_bonus=0 is a placeholder; runtime replaces it."
+    },
+    {
+      "activation_id": "HASTE2",
+      "name": "Haste II",
+      "description": "Your body quickens to incredible speed.",
+      "effects": [
+        {
+          "effect_id": "haste",
+          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } }
+        }
+      ]
+    },
+    {
+      "activation_id": "FIRE3",
+      "name": "Ball of Fire",
+      "description": "A massive fireball erupts from the artifact.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "fire",
+          "shape": "ball",
+          "flat_bonus": 120,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "BIZZARE",
+      "name": "Bizarre",
+      "description": "The One Ring pulses with terrible power, producing an utterly unpredictable effect.",
+      "effects": [
+        {
+          "effect_id": "bizarre"
+        }
+      ],
+      "notes": "The One Ring's unique activation. Runtime selects randomly from a pool of drastic effects."
+    },
+    {
+      "activation_id": "HEAL2",
+      "name": "Heal II",
+      "description": "Powerful magic knits your wounds, restoring a great deal of health.",
+      "effects": [
+        {
+          "effect_id": "heal",
+          "flat_bonus": 1000
+        }
+      ]
+    },
+    {
+      "activation_id": "PHASE",
+      "name": "Phase Door",
+      "description": "You blink a short distance to an adjacent open area.",
+      "effects": [
+        {
+          "effect_id": "phase_door",
+          "distance": 10
+        }
+      ]
+    },
+    {
+      "activation_id": "STAR_LIGHT",
+      "name": "Starlight",
+      "description": "Eight beams of starlight streak outward, burning undead.",
+      "effects": [
+        {
+          "effect_id": "light_area",
+          "radius": 0,
+          "type": "starlight",
+          "damage_undead": true,
+          "ray_count": 8
+        }
+      ]
+    },
+    {
+      "activation_id": "SHARD",
+      "name": "Shard Bolt",
+      "description": "A jagged bolt of razor shards screams toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "shard",
+          "shape": "bolt",
+          "flat_bonus": 120
+        }
+      ]
+    },
+    {
+      "activation_id": "FIRE1",
+      "name": "Fire Bolt",
+      "description": "A bolt of fire leaps from the artifact toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "fire",
+          "shape": "bolt",
+          "dice": { "count": 9, "sides": 8 }
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST1",
+      "name": "Frost Bolt",
+      "description": "A bolt of intense cold streaks toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "cold",
+          "shape": "bolt",
+          "dice": { "count": 12, "sides": 8 }
+        }
+      ]
+    },
+    {
+      "activation_id": "LIGHTNING_BOLT",
+      "name": "Lightning Bolt",
+      "description": "A bolt of lightning crackles outward.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "lightning",
+          "shape": "bolt",
+          "dice": { "count": 6, "sides": 6 }
+        }
+      ]
+    },
+    {
+      "activation_id": "STINKING_CLOUD",
+      "name": "Stinking Cloud",
+      "description": "A noxious cloud of poison gas billows outward.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "poison",
+          "shape": "ball",
+          "flat_bonus": 12,
+          "radius": 3
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST2",
+      "name": "Frost Ball",
+      "description": "A ball of intense cold erupts from the artifact.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "cold",
+          "shape": "ball",
+          "flat_bonus": 48,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST4",
+      "name": "Frost Ball IV",
+      "description": "A devastating ball of freezing cold annihilates everything nearby.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "cold",
+          "shape": "ball",
+          "flat_bonus": 200,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST3",
+      "name": "Frost Ball III",
+      "description": "A powerful ball of freezing cold erupts outward.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "cold",
+          "shape": "ball",
+          "flat_bonus": 100,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST5",
+      "name": "Frost Ball V",
+      "description": "An enormous ball of killing cold detonates, chilling all in its radius.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "cold",
+          "shape": "ball",
+          "flat_bonus": 130,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "FIRE2",
+      "name": "Fire Ball",
+      "description": "A ball of roaring fire blossoms from the artifact.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "fire",
+          "shape": "ball",
+          "flat_bonus": 55,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "FIRE_BALL_2",
+      "name": "Fire Ball II",
+      "description": "A large fireball detonates with tremendous force.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "fire",
+          "shape": "ball",
+          "flat_bonus": 80,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "ELEC2",
+      "name": "Lightning Ball",
+      "description": "A ball of crackling lightning explodes outward from the artifact.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "lightning",
+          "shape": "ball",
+          "flat_bonus": 100,
+          "radius": 2
+        }
+      ]
+    },
+    {
+      "activation_id": "ACID1",
+      "name": "Acid Bolt",
+      "description": "A bolt of sizzling acid arcs toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "acid",
+          "shape": "bolt",
+          "dice": { "count": 5, "sides": 8 }
+        }
+      ]
+    },
+    {
+      "activation_id": "DRAIN_LIFE1",
+      "name": "Drain Life",
+      "description": "Dark energy drains the life-force of your target, healing you in return.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "nether",
+          "shape": "bolt",
+          "flat_bonus": 90,
+          "is_drain": true
+        }
+      ]
+    },
+    {
+      "activation_id": "DRAIN_LIFE2",
+      "name": "Drain Life II",
+      "description": "A powerful drain tears vital essence from your target, restoring your own health.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "nether",
+          "shape": "bolt",
+          "flat_bonus": 120,
+          "is_drain": true
+        }
+      ]
+    },
+    {
+      "activation_id": "STAR_BALL",
+      "name": "Star Ball",
+      "description": "Eight balls of brilliant starlight streak outward, each scorching enemies with holy radiance.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "light",
+          "shape": "ball",
+          "dice": { "count": 6, "sides": 7 },
+          "radius": 3,
+          "count": 8
+        }
+      ],
+      "notes": "Fires 8 individual light balls. Each deals 6d7 damage."
+    },
+    {
+      "activation_id": "MISSILE",
+      "name": "Magic Missile",
+      "description": "A bolt of pure arcane force speeds toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "arcane",
+          "shape": "bolt",
+          "dice": { "count": 2, "sides": 6 }
+        }
+      ]
+    },
+    {
+      "activation_id": "MANA_BOLT",
+      "name": "Mana Bolt",
+      "description": "A bolt of raw magical force blasts toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "mana",
+          "shape": "bolt",
+          "flat_bonus": 120
+        }
+      ]
+    },
+    {
+      "activation_id": "ARROW",
+      "name": "Magical Arrow",
+      "description": "A magical arrow of great force speeds toward your target.",
+      "effects": [
+        {
+          "effect_id": "damage",
+          "damage_type": "physical",
+          "shape": "bolt",
+          "flat_bonus": 150
+        }
+      ]
+    },
+    {
+      "activation_id": "HEAL1",
+      "name": "Heal",
+      "description": "Powerful healing magic restores a significant portion of your health.",
+      "effects": [
+        {
+          "effect_id": "heal",
+          "flat_bonus": 500
+        }
+      ]
+    },
+    {
+      "activation_id": "CURE_WOUNDS",
+      "name": "Cure Wounds",
+      "description": "Minor healing magic mends your wounds.",
+      "effects": [
+        {
+          "effect_id": "heal",
+          "dice": { "count": 4, "sides": 8 }
+        }
+      ]
+    },
+    {
+      "activation_id": "RESTORE_LIFE",
+      "name": "Restore Life Levels",
+      "description": "The artifact restores life levels drained by undead and demons.",
+      "effects": [
+        {
+          "effect_id": "restore_life"
+        }
+      ]
+    },
+    {
+      "activation_id": "HASTE",
+      "name": "Haste",
+      "description": "You move with supernatural speed.",
+      "effects": [
+        {
+          "effect_id": "haste",
+          "duration": { "base": 10, "dice": { "count": 1, "sides": 10 } }
+        }
+      ]
+    },
+    {
+      "activation_id": "HASTE1",
+      "name": "Haste I",
+      "description": "You move with sustained supernatural speed.",
+      "effects": [
+        {
+          "effect_id": "haste",
+          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } }
+        }
+      ]
+    },
+    {
+      "activation_id": "BERSERKER",
+      "name": "Berserk Strength",
+      "description": "Battle-rage floods through you; your blows land with terrible force.",
+      "effects": [
+        {
+          "effect_id": "berserk",
+          "duration": { "base": 25, "dice": { "count": 1, "sides": 25 } }
+        }
+      ]
+    },
+    {
+      "activation_id": "IDENTIFY",
+      "name": "Identify",
+      "description": "The artifact reveals the true nature of an item.",
+      "effects": [
+        {
+          "effect_id": "identify",
+          "identify_all": false
+        }
+      ]
+    },
+    {
+      "activation_id": "PROBE",
+      "name": "Probe",
+      "description": "The artifact reveals the true nature and remaining health of all nearby creatures.",
+      "effects": [
+        {
+          "effect_id": "probe"
+        }
+      ]
+    },
+    {
+      "activation_id": "CLAIRVOYANCE",
+      "name": "Clairvoyance",
+      "description": "Your mind expands to encompass the entire level, detecting all creatures, objects, traps, and passages.",
+      "effects": [
+        {
+          "effect_id": "mapping",
+          "radius": 0
+        },
+        {
+          "effect_id": "detect",
+          "targets": ["all"]
+        }
+      ]
+    },
+    {
+      "activation_id": "CONFUSE",
+      "name": "Confuse Monster",
+      "description": "A blast of disorienting magic befuddles your target.",
+      "effects": [
+        {
+          "effect_id": "apply_status",
+          "status_id": "confused",
+          "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } },
+          "target": "target"
+        }
+      ]
+    },
+    {
+      "activation_id": "SLEEP",
+      "name": "Sleep Monsters",
+      "description": "Soothing magic lulls nearby monsters into a deep slumber.",
+      "effects": [
+        {
+          "effect_id": "apply_status",
+          "status_id": "sleeping",
+          "duration": { "base": 0, "dice": { "count": 1, "sides": 4 } },
+          "target": "all_nearby"
+        }
+      ]
+    },
+    {
+      "activation_id": "REM_FEAR_POIS",
+      "name": "Remove Fear and Poison",
+      "description": "The artifact cleanses you of fear and neutralizes all poison in your blood.",
+      "effects": [
+        {
+          "effect_id": "cure_status",
+          "status_id": "afraid"
+        },
+        {
+          "effect_id": "cure_status",
+          "status_id": "poisoned"
+        }
+      ]
+    },
+    {
+      "activation_id": "RESIST",
+      "name": "Elemental Resistance",
+      "description": "A protective aura wards off fire, cold, acid, and lightning.",
+      "effects": [
+        {
+          "effect_id": "apply_status",
+          "status_id": "elemental_resistance",
+          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
+          "target": "self"
+        }
+      ]
+    },
+    {
+      "activation_id": "RAGE_BLESS_RESIST",
+      "name": "Rage, Bless, and Resist",
+      "description": "You are flooded with battle-fury, divine blessing, and elemental protection simultaneously.",
+      "effects": [
+        {
+          "effect_id": "berserk",
+          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } }
+        },
+        {
+          "effect_id": "apply_status",
+          "status_id": "blessed",
+          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
+          "target": "self"
+        },
+        {
+          "effect_id": "apply_status",
+          "status_id": "elemental_resistance",
+          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
+          "target": "self"
+        }
+      ]
+    },
+    {
+      "activation_id": "TELEPORT",
+      "name": "Teleport",
+      "description": "You are whisked away to a random location on the level.",
+      "effects": [
+        {
+          "effect_id": "teleport",
+          "distance": 100
+        }
+      ]
+    },
+    {
+      "activation_id": "TELE_AWAY",
+      "name": "Teleport Away",
+      "description": "A directed force hurls your target to a distant part of the dungeon.",
+      "effects": [
+        {
+          "effect_id": "teleport_other",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "activation_id": "WORD_OF_RECALL",
+      "name": "Word of Recall",
+      "description": "After a short delay, you are recalled to the surface.",
+      "effects": [
+        {
+          "effect_id": "word_of_recall"
+        }
+      ]
+    },
+    {
+      "activation_id": "BANISHMENT",
+      "name": "Banishment",
+      "description": "A wave of holy power banishes all evil creatures from the level.",
+      "effects": [
+        {
+          "effect_id": "banish",
+          "target": "evil"
+        }
+      ]
+    },
+    {
+      "activation_id": "MASS_BANISHMENT",
+      "name": "Mass Banishment",
+      "description": "Every non-unique creature on the level is banished to the void.",
+      "effects": [
+        {
+          "effect_id": "banish",
+          "target": "non_unique"
+        }
+      ]
+    },
+    {
+      "activation_id": "STONE_TO_MUD",
+      "name": "Stone to Mud",
+      "description": "The artifact dissolves rock walls to muddy rubble with a touch.",
+      "effects": [
+        {
+          "effect_id": "stone_to_mud"
+        }
+      ]
+    },
+    {
+      "activation_id": "TRAP_DOOR_DEST",
+      "name": "Destroy Traps and Doors",
+      "description": "All traps and doors in the area are instantly destroyed.",
+      "effects": [
+        {
+          "effect_id": "destroy_traps_doors"
+        }
+      ]
+    },
+    {
+      "activation_id": "RECHARGE1",
+      "name": "Recharge",
+      "description": "The artifact channels magical energy into an exhausted device, restoring its charges.",
+      "effects": [
+        {
+          "effect_id": "recharge",
+          "power": 60
+        }
+      ]
+    }
+  ]
+}

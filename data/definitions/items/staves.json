@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "staves": [
+    {
+      "id": "staff_of_darkness",
+      "name": "Darkness",
+      "tval": 55,
+      "sval": 0,
+      "weight": 50,
+      "sell_value": 0,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DarkenArea",
+          "parameters": {
+            "radius": 3,
+            "darkness_mode": "self_centered"
+          }
+        }
+      ],
+      "description": "A magical staff of darkness.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_slowness",
+      "name": "Slowness",
+      "tval": 55,
+      "sval": 1,
+      "weight": 50,
+      "sell_value": 0,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "slowed",
+            "duration": {
+              "base": 15,
+              "dice": {
+                "count": 1,
+                "sides": 30
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical staff of slowness.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_haste_monsters",
+      "name": "Haste Monsters",
+      "tval": 55,
+      "sval": 2,
+      "weight": 50,
+      "sell_value": 0,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "haste",
+            "duration": {
+              "base": 20,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical staff of haste monsters.",
+      "provenance_status": "unresolved",
+      "notes": "MAngband uses speed_monsters() (monster-targeted haste sweep), but current action catalog has no explicit monster-haste area control action."
+    },
+    {
+      "id": "staff_of_summoning",
+      "name": "Summoning",
+      "tval": 55,
+      "sval": 3,
+      "weight": 50,
+      "sell_value": 0,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "monster",
+            "count": 2,
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical staff of summoning.",
+      "provenance_status": "derived"
+    },
+    {
+      "id": "staff_of_teleportation",
+      "name": "Teleportation",
+      "tval": 55,
+      "sval": 4,
+      "weight": 50,
+      "sell_value": 2000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 0,
+            "teleport_mode": "teleport"
+          }
+        }
+      ],
+      "description": "A magical staff of teleportation.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_perception",
+      "name": "Perception",
+      "tval": 55,
+      "sval": 5,
+      "weight": 50,
+      "sell_value": 400,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
+        }
+      ],
+      "description": "A magical staff of perception.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_remove_curse",
+      "name": "Remove Curse",
+      "tval": 55,
+      "sval": 6,
+      "weight": 50,
+      "sell_value": 500,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "RemoveCurse",
+          "parameters": {
+            "scope": "single"
+          }
+        }
+      ],
+      "description": "A magical staff of remove curse.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_light",
+      "name": "Light",
+      "tval": 55,
+      "sval": 8,
+      "weight": 50,
+      "sell_value": 250,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 2,
+            "light_style": "torch",
+            "damage_light_sensitive": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 8
+            }
+          }
+        }
+      ],
+      "description": "A magical staff of light.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_enlightenment",
+      "name": "Enlightenment",
+      "tval": 55,
+      "sval": 9,
+      "weight": 50,
+      "sell_value": 750,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local"
+          }
+        }
+      ],
+      "description": "A magical staff of enlightenment.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_treasure_location",
+      "name": "Treasure Location",
+      "tval": 55,
+      "sval": 10,
+      "weight": 50,
+      "sell_value": 200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "objects"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of treasure location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_object_location",
+      "name": "Object Location",
+      "tval": 55,
+      "sval": 11,
+      "weight": 50,
+      "sell_value": 200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "objects"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of object location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_trap_location",
+      "name": "Trap Location",
+      "tval": 55,
+      "sval": 12,
+      "weight": 50,
+      "sell_value": 350,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "traps"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of trap location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_door_stair_location",
+      "name": "Door/Stair Location",
+      "tval": 55,
+      "sval": 13,
+      "weight": 50,
+      "sell_value": 350,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "doors",
+              "stairs"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of door/stair location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "staff_of_detect_invisible",
+      "name": "Detect Invisible",
+      "tval": 55,
+      "sval": 14,
+      "weight": 50,
+      "sell_value": 200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "invisible_monsters"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of detect invisible.",
+      "provenance_status": "derived",
+      "notes": "Detect invisible creatures requires monsters detection"
+    },
+    {
+      "id": "staff_of_detect_evil",
+      "name": "Detect Evil",
+      "tval": 55,
+      "sval": 15,
+      "weight": 50,
+      "sell_value": 350,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "evil"
+            ]
+          }
+        }
+      ],
+      "description": "A magical staff of detect evil.",
+      "provenance_status": "derived",
+      "notes": "Detect evil creatures; uses evil detection target"
+    },
+    {
+      "id": "staff_of_cure_light_wounds",
+      "name": "Cure Light Wounds",
+      "tval": 55,
+      "sval": 16,
+      "weight": 50,
+      "sell_value": 350,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 8
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical staff of cure light wounds.",
+      "provenance_status": "verified",
+      "notes": "Healing value verified from MAngband use-obj.c (SV_STAFF_CURE_LIGHT -> hp_player(p_ptr, randint1(8)))."
+    },
+    {
+      "id": "staff_of_curing",
+      "name": "Curing",
+      "tval": 55,
+      "sval": 17,
+      "weight": 50,
+      "sell_value": 1000,
+      "pval": 999,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded",
+              "poisoned",
+              "confused",
+              "stunned",
+              "cut"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ],
+      "description": "A magical staff of curing.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (SV_STAFF_CURING)."
+    },
+    {
+      "id": "staff_of_healing",
+      "name": "Healing",
+      "tval": 55,
+      "sval": 18,
+      "weight": 50,
+      "sell_value": 5000,
+      "pval": 999,
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 300
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical staff of healing.",
+      "provenance_status": "verified",
+      "notes": "Healing value verified from MAngband use-obj.c (SV_STAFF_HEALING -> hp_player(p_ptr, 300))."
+    }
+  ]
+}

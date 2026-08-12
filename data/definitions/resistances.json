@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "resistances": [
+    {
+      "id": "res_acid",
+      "name": "Resist Acid",
+      "description": "Permanent bearer mitigation for acid damage.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "acid",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_elec",
+      "name": "Resist Lightning",
+      "description": "Permanent bearer mitigation for lightning damage.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "elec",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_fire",
+      "name": "Resist Fire",
+      "description": "Permanent bearer mitigation for fire damage.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "fire",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_cold",
+      "name": "Resist Cold",
+      "description": "Permanent bearer mitigation for cold damage.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "cold",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_pois",
+      "name": "Resist Poison",
+      "description": "Permanent bearer mitigation for poison effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "pois",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_lite",
+      "name": "Resist Light",
+      "description": "Permanent bearer mitigation for light effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "lite",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_dark",
+      "name": "Resist Darkness",
+      "description": "Permanent bearer mitigation for darkness effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "dark",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_blind",
+      "name": "Resist Blindness",
+      "description": "Permanent bearer mitigation for blindness effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "blind",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_confu",
+      "name": "Resist Confusion",
+      "description": "Permanent bearer mitigation for confusion effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "confu",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_sound",
+      "name": "Resist Sound",
+      "description": "Permanent bearer mitigation for sound effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "sound",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_shard",
+      "name": "Resist Shards",
+      "description": "Permanent bearer mitigation for shard effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "shard",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_nexus",
+      "name": "Resist Nexus",
+      "description": "Permanent bearer mitigation for nexus effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "nexus",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_nethr",
+      "name": "Resist Nether",
+      "description": "Permanent bearer mitigation for nether effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "nethr",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_chaos",
+      "name": "Resist Chaos",
+      "description": "Permanent bearer mitigation for chaos effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "chaos",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_disen",
+      "name": "Resist Disenchantment",
+      "description": "Permanent bearer mitigation for disenchantment effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "disen",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "res_fear",
+      "name": "Resist Fear",
+      "description": "Permanent bearer mitigation for fear effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "fear",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_acid",
+      "name": "Oppose Acid",
+      "description": "Timed oppose mitigation for acid.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "acid",
+      "status_id": "oppose_acid",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_elec",
+      "name": "Oppose Lightning",
+      "description": "Timed oppose mitigation for lightning.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "elec",
+      "status_id": "oppose_elec",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_fire",
+      "name": "Oppose Fire",
+      "description": "Timed oppose mitigation for fire.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "fire",
+      "status_id": "oppose_fire",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_cold",
+      "name": "Oppose Cold",
+      "description": "Timed oppose mitigation for cold.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "cold",
+      "status_id": "oppose_cold",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_pois",
+      "name": "Oppose Poison",
+      "description": "Timed oppose mitigation for poison.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "pois",
+      "status_id": "oppose_pois",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "oppose_elemental_bundle",
+      "name": "Oppose Elemental Bundle",
+      "description": "Compatibility oppose bundle used by legacy elemental resistance payloads.",
+      "semantic_kind": "oppose",
+      "target_scope": "bearer",
+      "channel": "elemental_bundle",
+      "status_id": "elemental_resistance",
+      "notes": "Retained for parity compatibility with existing content while explicit oppose_* timers are canonical.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_acid",
+      "name": "Immunity Acid",
+      "description": "Permanent bearer immunity to acid damage.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "acid",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_elec",
+      "name": "Immunity Lightning",
+      "description": "Permanent bearer immunity to lightning damage.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "elec",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_fire",
+      "name": "Immunity Fire",
+      "description": "Permanent bearer immunity to fire damage.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "fire",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_cold",
+      "name": "Immunity Cold",
+      "description": "Permanent bearer immunity to cold damage.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "cold",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "ignore_acid",
+      "name": "Ignore Acid",
+      "description": "Item-self protection against acid destruction.",
+      "semantic_kind": "ignore",
+      "target_scope": "item_self",
+      "channel": "acid",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "ignore_elec",
+      "name": "Ignore Lightning",
+      "description": "Item-self protection against lightning destruction.",
+      "semantic_kind": "ignore",
+      "target_scope": "item_self",
+      "channel": "elec",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "ignore_fire",
+      "name": "Ignore Fire",
+      "description": "Item-self protection against fire destruction.",
+      "semantic_kind": "ignore",
+      "target_scope": "item_self",
+      "channel": "fire",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "ignore_cold",
+      "name": "Ignore Cold",
+      "description": "Item-self protection against cold destruction.",
+      "semantic_kind": "ignore",
+      "target_scope": "item_self",
+      "channel": "cold",
+      "provenance_status": "verified"
+    }
+  ]
+}

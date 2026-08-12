@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/armor.schema.json",
+  "title": "Armor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "armor"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "armor": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/ArmorItem" }
+    }
+  },
+  "$defs": {
+    "ArmorItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "type", "armor_weight", "tval", "sval",
+        "base_ac", "to_ac_bonus", "to_hit_bonus",
+        "weight", "sell_value", "stats",
+        "allocation_table", "capability_ids", "affixes",
+        "description", "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "common_item.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["chest", "helmet", "crown", "gloves", "boots", "shield", "cloak"]
+        },
+        "armor_weight": {
+          "type": "string",
+          "enum": ["cloth", "leather", "mail", "plate"]
+        },
+        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
+        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
+        "base_ac": { "type": "integer", "minimum": 0 },
+        "to_ac_bonus": { "type": "integer" },
+        "to_hit_bonus": { "type": "integer" },
+        "weight": { "type": "integer", "minimum": 0 },
+        "sell_value": { "type": "integer", "minimum": 0 },
+        "stats": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "durability_max": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "affixes": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Affix" }
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
+      }
+    }
+  }
+}

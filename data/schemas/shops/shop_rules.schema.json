@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/shop_rules",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "restock", "pricing", "stockPools"],
+  "properties": {
+    "version": { "type": "string" },
+    "restock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["turns", "minKeep", "maxKeep", "turnover", "shuffleChance"],
+      "properties": {
+        "turns": { "type": "integer" },
+        "minKeep": { "type": "integer" },
+        "maxKeep": { "type": "integer" },
+        "turnover": { "type": "integer" },
+        "shuffleChance": { "type": "integer" }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blackMarketMinValue", "baseGreed", "priceAdjustmentModel"],
+      "properties": {
+        "blackMarketMinValue": { "type": "integer" },
+        "baseGreed": { "type": "integer" },
+        "priceAdjustmentModel": { "type": "string" }
+      }
+    },
+    "stockPools": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "templateId", "selectionWeight"],
+              "properties": {
+                "kind": { "const": "template" },
+                "templateId": { "type": "string" },
+                "selectionWeight": { "type": "integer" }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "consumableType", "name", "selectionWeight"],
+              "properties": {
+                "kind": { "const": "consumable" },
+                "consumableType": { "type": "string" },
+                "name": { "type": "string" },
+                "selectionWeight": { "type": "integer" }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

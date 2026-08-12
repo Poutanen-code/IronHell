@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/race_class_rules.schema.json",
+  "title": "Race Class Rules",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "race_class_rules"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "race_class_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["race_id", "class_id", "lore", "provenance_status"],
+        "properties": {
+          "race_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "class_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "lore": { "type": "string", "minLength": 1 },
+          "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+        }
+      }
+    }
+  }
+}

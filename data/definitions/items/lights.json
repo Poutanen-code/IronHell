@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "lights": [
+    {
+      "id": "wooden_torch",
+      "name": "Wooden Torch",
+      "type": "torch",
+      "tval": 39,
+      "sval": 0,
+      "fuel_pval": 4000,
+      "light_radius": 1,
+      "stack_size": 7,
+      "weight": 30,
+      "sell_value": 2,
+      "capability_ids": [],
+      "allocation_table": [
+        { "depth": 0, "rarity": 1 },
+        { "depth": 5, "rarity": 1 }
+      ],
+      "description": "A wooden torch with a radius of 1. Can refuel another torch up to a maximum of 5000 turns of light.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "brass_lantern",
+      "name": "Brass Lantern",
+      "type": "lantern",
+      "tval": 39,
+      "sval": 1,
+      "fuel_pval": 7500,
+      "light_radius": 2,
+      "stack_size": 1,
+      "weight": 50,
+      "sell_value": 35,
+      "capability_ids": [],
+      "allocation_table": [
+        { "depth": 3, "rarity": 1 }
+      ],
+      "description": "A brass lantern with a radius of 2. Can refuel another lantern using flasks of oil.",
+      "provenance_status": "verified"
+    }
+  ]
+}

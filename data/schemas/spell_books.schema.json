@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/spell_books.schema.json",
+  "title": "Gameplay Architecture V2 Spell Book Definition Layer",
+  "description": "Spell book catalog. Books reference spells by ID and declare verified realm and tval/sval metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "books"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "books": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/SpellBookDefinition"
+      }
+    }
+  },
+  "$defs": {
+    "Realm": {
+      "type": "string",
+      "enum": ["magic", "prayer"]
+    },
+    "SpellBookDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "realm",
+        "book_tval",
+        "book_sval",
+        "spell_ids",
+        "provenance_status"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "realm": {
+          "$ref": "#/$defs/Realm"
+        },
+        "book_tval": {
+          "type": "integer",
+          "enum": [90, 91]
+        },
+        "book_sval": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "spell_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/Id"
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "provenance_status": {
+          "$ref": "common.schema.json#/$defs/ProvenanceStatus"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "realm": {
+                "const": "magic"
+              }
+            },
+            "required": ["realm"]
+          },
+          "then": {
+            "properties": {
+              "book_tval": {
+                "const": 90
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "realm": {
+                "const": "prayer"
+              }
+            },
+            "required": ["realm"]
+          },
+          "then": {
+            "properties": {
+              "book_tval": {
+                "const": 91
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

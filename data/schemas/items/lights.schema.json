@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/lights.schema.json",
+  "title": "Lights",
+  "description": "Light source equipment (TV_LITE = 39). Equipped in the light slot. Fuel is tracked via pval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "lights"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "lights": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/LightItem" }
+    }
+  },
+  "$defs": {
+    "LightItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "type", "tval", "sval",
+        "fuel_pval", "light_radius", "stack_size",
+        "weight", "sell_value",
+        "capability_ids", "allocation_table",
+        "description", "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "common_item.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["torch", "lantern"]
+        },
+        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
+        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
+        "fuel_pval": { "type": "integer", "minimum": 0, "description": "Default fuel level when found. Max torch fuel is 5000; max lantern fuel is 7500." },
+        "light_radius": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "stack_size": { "type": "integer", "minimum": 1 },
+        "weight": { "type": "integer", "minimum": 0 },
+        "sell_value": { "type": "integer", "minimum": 0 },
+        "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "description": { "type": "string", "minLength": 1 },
+        "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
+      }
+    }
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "schema_version": 1,
+  "consumables": [
+    {
+      "id": "mushroom_blindness",
+      "name": "Mushroom of Blindness",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 1,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It causes blindness that lasts for 199+1d200 turns, unless you have resistance to blindness.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": {
+              "base": 199,
+              "dice": {
+                "count": 1,
+                "sides": 200
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "mushroom_paranoia",
+      "name": "Mushroom of Paranoia",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 2,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces fear that lasts for 9+1d10 turns, unless you have resistance to fear.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "afraid",
+            "duration": {
+              "base": 9,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "mushroom_confusion",
+      "name": "Mushroom of Confusion",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 3,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces confusion that lasts for 9+1d10 turns, unless you have resistance to confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "confused",
+            "duration": {
+              "base": 9,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "mushroom_hallucination",
+      "name": "Mushroom of Hallucination",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 4,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It causes you to hallucinate for 249+1d250 turns, unless you have resistance to chaos.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "hallucinating",
+            "duration": {
+              "base": 249,
+              "dice": {
+                "count": 1,
+                "sides": 250
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "mushroom_paralysis",
+      "name": "Mushroom of Paralysis",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 5,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces paralysis that lasts for 9+1d10 turns, unless you have free action.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "paralyzed",
+            "duration": {
+              "base": 9,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "mushroom_weakness",
+      "name": "Mushroom of Weakness",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 6,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 6d6 points of damage, and also reduces strength unless you have sustain strength.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 6
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "strength",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_sickness",
+      "name": "Mushroom of Sickness",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 7,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 6d6 points of damage, and also reduces constitution unless you have sustain constitution.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 6
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "constitution",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_stupidity",
+      "name": "Mushroom of Stupidity",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 8,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 8d8 points of damage, and also reduces intelligence unless you have sustain intelligence.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 8
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "intelligence",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_naivety",
+      "name": "Mushroom of Naivety",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 9,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 8d8 points of damage, and also reduces wisdom unless you have sustain wisdom.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 8
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "wisdom",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_unhealth",
+      "name": "Mushroom of Unhealth",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 10,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 50,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 10d10 points of damage, and also reduces constitution unless you have sustain constitution. It may also be thrown to inflict 10d10 points of damage.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "constitution",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
+            "direction": "thrown"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self); thrown_damage->BoltDamage(thrown). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_disease",
+      "name": "Mushroom of Disease",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 11,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 50,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It inflicts 10d10 points of damage, and also reduces strength unless you have sustain strength. It may also be thrown to inflict 10d10 points of damage.",
+      "provenance_status": "derived",
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
+            "direction": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "strength",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
+            "direction": "thrown"
+          }
+        }
+      ],
+      "notes": "Legacy effect conversion: damage->BoltDamage(self); thrown_damage->BoltDamage(thrown). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+    },
+    {
+      "id": "mushroom_cure_poison",
+      "name": "Mushroom of Cure Poison",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 12,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 60,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It neutralizes poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_blindness",
+      "name": "Mushroom of Cure Blindness",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 13,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 50,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures blindness.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_paranoia",
+      "name": "Mushroom of Cure Paranoia",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 14,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 25,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It removes your fear.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_confusion",
+      "name": "Mushroom of Cure Confusion",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 15,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 50,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "confused"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_cure_serious_wounds",
+      "name": "Mushroom of Cure Serious Wounds",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 16,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 75,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 4d8 points of damage.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 8
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restore_strength",
+      "name": "Mushroom of Restore Strength",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 17,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 350,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores strength to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "strength",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restore_constitution",
+      "name": "Mushroom of Restore Constitution",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 18,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 350,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores constitution to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "constitution",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_restoring",
+      "name": "Mushroom of Restoring",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 19,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 1000,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 8
+        },
+        {
+          "depth": 30,
+          "rarity": 4
+        },
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores to maximum all stats that are currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "all_stats",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mushroom_poison",
+      "name": "Mushroom of Poison",
+      "type": "mushroom",
+      "tval": 80,
+      "sval": 0,
+      "cooldown_ticks": 0,
+      "stack_size": 1,
+      "weight": 1,
+      "sell_value": 0,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It poisons you (adding 9+1d10 points to the poison counter), unless you have resistance to poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "poisoned",
+            "duration": {
+              "base": 9,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+    },
+    {
+      "id": "ration_of_food",
+      "name": "Ration of Food",
+      "type": "food",
+      "tval": 80,
+      "sval": 35,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 10,
+      "sell_value": 3,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "Ration of Food.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hard_biscuit",
+      "name": "Hard Biscuit",
+      "type": "food",
+      "tval": 80,
+      "sval": 32,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 2,
+      "sell_value": 1,
+      "capability_ids": [],
+      "allocation_table": [],
+      "description": "Hard Biscuit.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "strip_of_beef_jerky",
+      "name": "Strip of Beef Jerky",
+      "type": "food",
+      "tval": 80,
+      "sval": 33,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 2,
+      "sell_value": 2,
+      "capability_ids": [],
+      "allocation_table": [],
+      "description": "Strip of Beef Jerky.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slime_mold",
+      "name": "Slime Mold",
+      "type": "food",
+      "tval": 80,
+      "sval": 36,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 5,
+      "sell_value": 2,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "Slime Mold.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "piece_of_elvish_waybread",
+      "name": "Piece of Elvish Waybread",
+      "type": "food",
+      "tval": 80,
+      "sval": 37,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 3,
+      "sell_value": 10,
+      "capability_ids": [],
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 4d8 points of damage and neutralizes poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 8
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pint_of_fine_ale",
+      "name": "Pint of Fine Ale",
+      "type": "food",
+      "tval": 80,
+      "sval": 38,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 5,
+      "sell_value": 1,
+      "capability_ids": [],
+      "allocation_table": [],
+      "description": "Pint of Fine Ale.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pint_of_fine_wine",
+      "name": "Pint of Fine Wine",
+      "type": "food",
+      "tval": 80,
+      "sval": 39,
+      "cooldown_ticks": 0,
+      "stack_size": 10,
+      "weight": 10,
+      "sell_value": 2,
+      "capability_ids": [],
+      "allocation_table": [],
+      "description": "Pint of Fine Wine.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/ego_items.schema.json",
+  "title": "Ego Items",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["_meta", "ego_items"],
+  "properties": {
+    "_meta": { "type": "object" },
+    "ego_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "serial", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
+          "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
+          "slots", "item_categories", "flags"
+        ],
+        "properties": {
+          "serial": { "type": "integer" },
+          "name": { "type": "string" },
+          "rating": { "type": "integer" },
+          "xtra": { "type": "integer" },
+          "max_to_hit": { "type": "integer" },
+          "max_to_dam": { "type": "integer" },
+          "max_to_ac": { "type": "integer" },
+          "pval": { "type": "integer" },
+          "depth": { "type": "integer" },
+          "rarity": { "type": "integer" },
+          "cost": { "type": "integer" },
+          "applicable_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["tval", "minSval", "maxSval"],
+              "properties": {
+                "tval": { "type": "integer" },
+                "minSval": { "type": "integer" },
+                "maxSval": { "type": "integer" }
+              }
+            }
+          },
+          "slots": { "type": "array", "items": { "type": "string" } },
+          "item_categories": { "type": "array", "items": { "type": "string" } },
+          "flags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

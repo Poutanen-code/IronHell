@@ -1,0 +1,4769 @@
+{
+  "_meta": {
+    "source": "MAngband 1.5.3 lib/edit/ego_item.txt",
+    "generated_from": "reference-mangband-1_5_3/lib/edit/ego_item.txt",
+    "description": "Ego item templates. Each entry describes modifiers applied to a base item when it rolls as \"great\" quality during generation. Fields: serial (MAngband ego index), name (suffix/prefix added to item name), rating (affects dungeon level \"feeling\" score), xtra (0=none, 1-3=random bonus pool), max_to_hit/dam/ac (max random bonus; not yet applied at runtime), pval (magnitude for stat/skill flags), depth/rarity/cost (generation parameters), applicable_types (tval+sval range filter), slots (derived equipment slots), item_categories (derived category), flags (MAngband flag strings).",
+    "tval_names": {
+      "16": "shot",
+      "17": "arrow",
+      "18": "bolt",
+      "19": "bow",
+      "20": "digger",
+      "21": "hafted",
+      "22": "polearm",
+      "23": "sword",
+      "30": "boots",
+      "31": "gloves",
+      "32": "helm",
+      "33": "crown",
+      "34": "shield",
+      "35": "cloak",
+      "36": "soft_armor",
+      "37": "hard_armor"
+    },
+    "xtra_pools": {
+      "0": "No random bonus",
+      "1": "Random sustain: one of SUST_STR/DEX/CON/INT/WIS/CHR chosen at item generation",
+      "2": "Random resistance: one of RES_BLIND/CONFU/SOUND/SHARD/NEXUS/NETHR/CHAOS/DISEN/LITE/DARK",
+      "3": "Random ability: one of FREE_ACT/HOLD_LIFE/FEATHER/LITE/SEE_INVIS/TELEPATHY/SLOW_DIGEST/REGEN"
+    },
+    "flag_effects": {
+      "STR": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Strength"
+      },
+      "DEX": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Dexterity"
+      },
+      "CON": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Constitution"
+      },
+      "INT": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Intelligence"
+      },
+      "WIS": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Wisdom"
+      },
+      "CHR": {
+        "effect": "stat_bonus",
+        "desc": "+pval to Charisma"
+      },
+      "SPEED": {
+        "effect": "stat_bonus",
+        "desc": "+pval to speed (each point = +10 speed above 110 base)"
+      },
+      "STEALTH": {
+        "effect": "stat_bonus",
+        "desc": "+pval to stealth skill"
+      },
+      "INFRA": {
+        "effect": "stat_bonus",
+        "desc": "+pval to infravision range (in feet)"
+      },
+      "TUNNEL": {
+        "effect": "stat_bonus",
+        "desc": "+pval to digging power"
+      },
+      "SEARCH": {
+        "effect": "stat_bonus",
+        "desc": "+pval to searching skill"
+      },
+      "BLOWS": {
+        "effect": "stat_bonus",
+        "desc": "+pval extra melee blows per round"
+      },
+      "MIGHT": {
+        "effect": "stat_bonus",
+        "desc": "+pval to launcher damage multiplier (e.g. Short Bow ×2 → ×3)",
+        "inert_in_runtime": true
+      },
+      "SHOTS": {
+        "effect": "stat_bonus",
+        "desc": "+pval extra ranged shots per round",
+        "inert_in_runtime": true
+      },
+      "SUST_STR": {
+        "effect": "sustain",
+        "desc": "Prevents Strength from being drained by monster blows"
+      },
+      "SUST_DEX": {
+        "effect": "sustain",
+        "desc": "Prevents Dexterity from being drained"
+      },
+      "SUST_CON": {
+        "effect": "sustain",
+        "desc": "Prevents Constitution from being drained"
+      },
+      "SUST_INT": {
+        "effect": "sustain",
+        "desc": "Prevents Intelligence from being drained"
+      },
+      "SUST_WIS": {
+        "effect": "sustain",
+        "desc": "Prevents Wisdom from being drained"
+      },
+      "SUST_CHR": {
+        "effect": "sustain",
+        "desc": "Prevents Charisma from being drained"
+      },
+      "RES_FIRE": {
+        "effect": "resistance",
+        "desc": "Reduces fire damage by ÷3 (min 1)"
+      },
+      "RES_COLD": {
+        "effect": "resistance",
+        "desc": "Reduces cold damage by ÷3 (min 1)"
+      },
+      "RES_ELEC": {
+        "effect": "resistance",
+        "desc": "Reduces lightning damage by ÷3 (min 1)"
+      },
+      "RES_ACID": {
+        "effect": "resistance",
+        "desc": "Reduces acid damage by ÷3 (min 1)"
+      },
+      "RES_POIS": {
+        "effect": "resistance",
+        "desc": "Reduces poison damage by ÷3 (min 1)"
+      },
+      "RES_FEAR": {
+        "effect": "resistance",
+        "desc": "Immunity to fear effects"
+      },
+      "RES_LITE": {
+        "effect": "resistance",
+        "desc": "Reduces light/holy damage by ÷3"
+      },
+      "RES_DARK": {
+        "effect": "resistance",
+        "desc": "Reduces darkness/shadow damage by ÷3"
+      },
+      "RES_BLIND": {
+        "effect": "resistance",
+        "desc": "Immunity to blindness"
+      },
+      "RES_CONFU": {
+        "effect": "resistance",
+        "desc": "Immunity to confusion"
+      },
+      "RES_SOUND": {
+        "effect": "resistance",
+        "desc": "Reduces sound/shockwave damage by ÷3"
+      },
+      "RES_SHARD": {
+        "effect": "resistance",
+        "desc": "Reduces shards/fragmentation damage by ÷3"
+      },
+      "RES_NEXUS": {
+        "effect": "resistance",
+        "desc": "Reduces nexus damage; prevents teleportation by monsters"
+      },
+      "RES_NETHR": {
+        "effect": "resistance",
+        "desc": "Reduces nether damage by ÷3"
+      },
+      "RES_CHAOS": {
+        "effect": "resistance",
+        "desc": "Reduces chaos damage by ÷3; prevents hallucination"
+      },
+      "RES_DISEN": {
+        "effect": "resistance",
+        "desc": "Prevents disenchantment of bonuses"
+      },
+      "IM_FIRE": {
+        "effect": "immunity",
+        "desc": "Complete immunity to fire damage"
+      },
+      "IM_COLD": {
+        "effect": "immunity",
+        "desc": "Complete immunity to cold damage"
+      },
+      "IM_ELEC": {
+        "effect": "immunity",
+        "desc": "Complete immunity to lightning damage"
+      },
+      "IM_ACID": {
+        "effect": "immunity",
+        "desc": "Complete immunity to acid damage"
+      },
+      "REGEN": {
+        "effect": "ability",
+        "desc": "Doubles HP and mana regeneration rate"
+      },
+      "FREE_ACT": {
+        "effect": "ability",
+        "desc": "Immunity to paralysis and slowing from monster blows"
+      },
+      "SEE_INVIS": {
+        "effect": "ability",
+        "desc": "Can see invisible monsters"
+      },
+      "HOLD_LIFE": {
+        "effect": "ability",
+        "desc": "Halves experience drain; sustains experience levels"
+      },
+      "FEATHER": {
+        "effect": "ability",
+        "desc": "Feather falling; reduces fall damage"
+      },
+      "TELEPATHY": {
+        "effect": "ability",
+        "desc": "ESP: detects nearby monsters through walls"
+      },
+      "SLOW_DIGEST": {
+        "effect": "ability",
+        "desc": "Halves food consumption rate"
+      },
+      "LITE": {
+        "effect": "ability",
+        "desc": "+1 to light radius"
+      },
+      "BLESSED": {
+        "effect": "ability",
+        "desc": "Priests can wield without penalty; minor bonus to spells"
+      },
+      "IMPACT": {
+        "effect": "ability",
+        "desc": "Melee hits can cause earthquakes"
+      },
+      "ACTIVATE": {
+        "effect": "ability",
+        "desc": "Item has a special activation effect (hardcoded per serial)",
+        "inert_in_runtime": true
+      },
+      "SLAY_EVIL": {
+        "effect": "slay",
+        "desc": "×2 damage vs evil monsters"
+      },
+      "SLAY_UNDEAD": {
+        "effect": "slay",
+        "desc": "×3 damage vs undead monsters"
+      },
+      "SLAY_DEMON": {
+        "effect": "slay",
+        "desc": "×3 damage vs demons"
+      },
+      "SLAY_ORC": {
+        "effect": "slay",
+        "desc": "×3 damage vs orcs"
+      },
+      "SLAY_TROLL": {
+        "effect": "slay",
+        "desc": "×3 damage vs trolls"
+      },
+      "SLAY_GIANT": {
+        "effect": "slay",
+        "desc": "×3 damage vs giants"
+      },
+      "SLAY_DRAGON": {
+        "effect": "slay",
+        "desc": "×3 damage vs dragons"
+      },
+      "SLAY_ANIMAL": {
+        "effect": "slay",
+        "desc": "×2 damage vs animals"
+      },
+      "KILL_UNDEAD": {
+        "effect": "slay",
+        "desc": "×5 damage vs undead (overrides SLAY_UNDEAD)"
+      },
+      "KILL_DEMON": {
+        "effect": "slay",
+        "desc": "×5 damage vs demons (overrides SLAY_DEMON)"
+      },
+      "KILL_DRAGON": {
+        "effect": "slay",
+        "desc": "×5 damage vs dragons (overrides SLAY_DRAGON)"
+      },
+      "BRAND_ACID": {
+        "effect": "brand",
+        "desc": "×3 damage unless monster immune to acid"
+      },
+      "BRAND_ELEC": {
+        "effect": "brand",
+        "desc": "×3 damage unless monster immune to lightning"
+      },
+      "BRAND_FIRE": {
+        "effect": "brand",
+        "desc": "×3 damage unless monster immune to fire"
+      },
+      "BRAND_COLD": {
+        "effect": "brand",
+        "desc": "×3 damage unless monster immune to cold"
+      },
+      "BRAND_POIS": {
+        "effect": "brand",
+        "desc": "×3 damage unless monster immune to poison"
+      },
+      "IGNORE_ACID": {
+        "effect": "item_preservation",
+        "desc": "Item cannot be destroyed by acid",
+        "inert_in_runtime": true
+      },
+      "IGNORE_ELEC": {
+        "effect": "item_preservation",
+        "desc": "Item cannot be destroyed by lightning",
+        "inert_in_runtime": true
+      },
+      "IGNORE_FIRE": {
+        "effect": "item_preservation",
+        "desc": "Item cannot be destroyed by fire",
+        "inert_in_runtime": true
+      },
+      "IGNORE_COLD": {
+        "effect": "item_preservation",
+        "desc": "Item cannot be destroyed by cold",
+        "inert_in_runtime": true
+      },
+      "LIGHT_CURSE": {
+        "effect": "curse",
+        "desc": "Light curse: item is cursed (removable by Remove Curse)"
+      },
+      "HEAVY_CURSE": {
+        "effect": "curse",
+        "desc": "Heavy curse: requires Banishment or *Remove Curse*"
+      },
+      "PERMA_CURSE": {
+        "effect": "curse",
+        "desc": "Permanent curse: cannot be removed"
+      },
+      "AGGRAVATE": {
+        "effect": "curse",
+        "desc": "Aggravates nearby monsters; wakes sleeping monsters"
+      },
+      "TELEPORT": {
+        "effect": "curse",
+        "desc": "Random involuntary teleportation (1% chance per tick)"
+      },
+      "DRAIN_EXP": {
+        "effect": "curse",
+        "desc": "Periodically drains experience points"
+      },
+      "HIDE_TYPE": {
+        "effect": "display",
+        "desc": "Hides the stat type from the item name (e.g. Boots of Speed instead of Boots +10 SPEED)"
+      },
+      "SHOW_MODS": {
+        "effect": "display",
+        "desc": "Always shows to-hit/to-dam modifiers in the item name"
+      }
+    },
+    "runtime_notes": {
+      "applied_fields": [
+        "depth",
+        "rarity",
+        "flags",
+        "pval",
+        "xtra",
+        "cost",
+        "applicable_types"
+      ],
+      "not_yet_applied": [
+        "max_to_hit",
+        "max_to_dam",
+        "max_to_ac"
+      ],
+      "inert_flags": [
+        "ACTIVATE",
+        "IGNORE_ACID",
+        "IGNORE_COLD",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "MIGHT",
+        "SHOTS"
+      ],
+      "note": "inert_flags are stored but have no runtime effect in current IronHell implementation (src/game/systems/character/resistances.ts flagsToAffixes does not map them). IGNORE_* are item preservation flags and may intentionally remain inert in a PvE context."
+    }
+  },
+  "ego_items": [
+    {
+      "serial": 4,
+      "name": "of Resist Acid",
+      "rating": 16,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 5,
+      "name": "of Resist Lightning",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 400,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "RES_ELEC",
+        "IGNORE_ELEC"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 6,
+      "name": "of Resist Fire",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 800,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "RES_FIRE",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 7,
+      "name": "of Resist Cold",
+      "rating": 12,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 600,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "RES_COLD",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 8,
+      "name": "of Resistance",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 12500,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 9,
+      "name": "of Elvenkind",
+      "rating": 25,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 15000,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 10,
+      "name": "of Vulnerability",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 50,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "soft_armor"
+        },
+        {
+          "tval": 37,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "AGGRAVATE",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 11,
+      "name": "of Permanence",
+      "rating": 30,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 20,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 30000,
+      "applicable_types": [
+        {
+          "tval": 36,
+          "min_sval": 2,
+          "max_sval": 2,
+          "tval_name": "soft_armor"
+        }
+      ],
+      "flags": [
+        "SUST_STR",
+        "SUST_DEX",
+        "SUST_CON",
+        "SUST_INT",
+        "SUST_WIS",
+        "SUST_CHR",
+        "HOLD_LIFE",
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 12,
+      "name": "(Dwarven)",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 15,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 37,
+          "min_sval": 3,
+          "max_sval": 99,
+          "tval_name": "hard_armor"
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_FIRE",
+        "FREE_ACT",
+        "STR",
+        "CON",
+        "INFRA",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "chest"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 16,
+      "name": "of Resist Acid",
+      "rating": 16,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 17,
+      "name": "of Resist Lightning",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 400,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_ELEC",
+        "IGNORE_ELEC"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 18,
+      "name": "of Resist Fire",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 800,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_FIRE",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 19,
+      "name": "of Resist Cold",
+      "rating": 12,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 600,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_COLD",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 20,
+      "name": "of Resistance",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 12500,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 21,
+      "name": "of Elvenkind",
+      "rating": 25,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 18000,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "RES_FIRE",
+        "RES_COLD",
+        "RES_ACID",
+        "RES_ELEC",
+        "IGNORE_ACID",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "IGNORE_ELEC"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 22,
+      "name": "of Preservation",
+      "rating": 25,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 20,
+      "pval": 0,
+      "depth": 60,
+      "rarity": 4,
+      "cost": 24000,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_DISEN",
+        "SUST_STR",
+        "SUST_CON",
+        "SUST_DEX",
+        "HOLD_LIFE",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 23,
+      "name": "of Vulnerability",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 50,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "AGGRAVATE",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 24,
+      "name": "of Intelligence",
+      "rating": 13,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "INT",
+        "SUST_INT"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 25,
+      "name": "of Wisdom",
+      "rating": 13,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "WIS",
+        "SUST_WIS"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 26,
+      "name": "of Beauty",
+      "rating": 8,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 4,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "CHR",
+        "SUST_CHR"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 27,
+      "name": "of the Magi",
+      "rating": 15,
+      "xtra": 3,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 7500,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "INT",
+        "SUST_INT",
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 28,
+      "name": "of Might",
+      "rating": 19,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 7500,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "STR",
+        "DEX",
+        "CON",
+        "SUST_STR",
+        "SUST_DEX",
+        "SUST_CON",
+        "FREE_ACT",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 29,
+      "name": "of Lordliness",
+      "rating": 17,
+      "xtra": 3,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 7500,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "WIS",
+        "CHR",
+        "SUST_WIS",
+        "SUST_CHR",
+        "RES_FEAR",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 30,
+      "name": "of Seeing",
+      "rating": 8,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 2000,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        },
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "SEARCH",
+        "RES_BLIND",
+        "SEE_INVIS"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 31,
+      "name": "of Infravision",
+      "rating": 11,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "INFRA",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 32,
+      "name": "of Light",
+      "rating": 6,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "LITE",
+        "RES_LITE"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 33,
+      "name": "of Telepathy",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 50000,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        },
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "TELEPATHY"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 34,
+      "name": "of Regeneration",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 1500,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        },
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "REGEN"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 35,
+      "name": "of Teleportation",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        }
+      ],
+      "flags": [
+        "TELEPORT",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 36,
+      "name": "of Serenity",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "RES_SOUND",
+        "RES_CONFU",
+        "RES_FEAR"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 37,
+      "name": "of Night and Day",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 35,
+      "rarity": 6,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "RES_LITE",
+        "RES_DARK",
+        "LITE",
+        "SEE_INVIS",
+        "RES_BLIND",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 38,
+      "name": "of Dullness",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 32,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "helm"
+        },
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "INT",
+        "WIS",
+        "CHR",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 39,
+      "name": "of Sickliness",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 33,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "crown"
+        }
+      ],
+      "flags": [
+        "STR",
+        "DEX",
+        "CON",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "head"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 40,
+      "name": "of Protection",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 1500,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD",
+        "RES_SHARD"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 41,
+      "name": "of Stealth",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "STEALTH"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 42,
+      "name": "of Aman",
+      "rating": 20,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 20,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 43,
+      "name": "of the Magi",
+      "rating": 15,
+      "xtra": 3,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 4,
+      "pval": 2,
+      "depth": 30,
+      "rarity": 3,
+      "cost": 2000,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "INT",
+        "SUST_INT",
+        "STEALTH",
+        "HIDE_TYPE",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 44,
+      "name": "of Enveloping",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "SHOW_MODS",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 45,
+      "name": "of Vulnerability",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 50,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "AGGRAVATE",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 46,
+      "name": "of Irritation",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 15,
+      "max_to_dam": 15,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "AGGRAVATE",
+        "SHOW_MODS",
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 48,
+      "name": "of Free Action",
+      "rating": 11,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "FREE_ACT"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 49,
+      "name": "of Slaying",
+      "rating": 17,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 1500,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "SHOW_MODS"
+      ],
+      "description": "They boost your to-hit and to-dam values.",
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 50,
+      "name": "of Agility",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 51,
+      "name": "of Power",
+      "rating": 22,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 2500,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "STR",
+        "SHOW_MODS",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 52,
+      "name": "of Thievery",
+      "rating": 22,
+      "xtra": 0,
+      "max_to_hit": 8,
+      "max_to_dam": 3,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 40,
+      "rarity": 12,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 1,
+          "max_sval": 1,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "SEARCH",
+        "SHOW_MODS",
+        "FEATHER",
+        "FREE_ACT",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 53,
+      "name": "of Combat",
+      "rating": 22,
+      "xtra": 0,
+      "max_to_hit": 3,
+      "max_to_dam": 8,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 50,
+      "rarity": 12,
+      "cost": 7000,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 2,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "STR",
+        "CON",
+        "SHOW_MODS",
+        "AGGRAVATE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 54,
+      "name": "of Weakness",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 10,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "STR",
+        "LIGHT_CURSE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 55,
+      "name": "of Clumsiness",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 10,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "LIGHT_CURSE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 56,
+      "name": "of Slow Descent",
+      "rating": 7,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 5,
+      "cost": 250,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "FEATHER"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 57,
+      "name": "of Stealth",
+      "rating": 16,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 58,
+      "name": "of Free Action",
+      "rating": 15,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "FREE_ACT"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 59,
+      "name": "of Speed",
+      "rating": 25,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 10,
+      "depth": 0,
+      "rarity": 24,
+      "cost": 100000,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "SPEED",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 60,
+      "name": "of Stability",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "RES_NEXUS",
+        "FEATHER"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 61,
+      "name": "of Elvenkind",
+      "rating": 30,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 60,
+      "rarity": 30,
+      "cost": 200000,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 2,
+          "max_sval": 3,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "SPEED",
+        "HIDE_TYPE",
+        "FEATHER",
+        "IGNORE_ACID",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 62,
+      "name": "of Slowness",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 5,
+      "depth": 0,
+      "rarity": 5,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "SPEED",
+        "LIGHT_CURSE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 63,
+      "name": "of Annoyance",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 10,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "SPEED",
+        "STEALTH",
+        "AGGRAVATE",
+        "LIGHT_CURSE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 64,
+      "name": "(Holy Avenger)",
+      "rating": 30,
+      "xtra": 1,
+      "max_to_hit": 6,
+      "max_to_dam": 6,
+      "max_to_ac": 4,
+      "pval": 4,
+      "depth": 0,
+      "rarity": 12,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "WIS",
+        "SLAY_EVIL",
+        "SLAY_UNDEAD",
+        "SLAY_DEMON",
+        "SEE_INVIS",
+        "BLESSED",
+        "RES_FEAR"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 65,
+      "name": "(Defender)",
+      "rating": 25,
+      "xtra": 1,
+      "max_to_hit": 4,
+      "max_to_dam": 4,
+      "max_to_ac": 8,
+      "pval": 4,
+      "depth": 0,
+      "rarity": 12,
+      "cost": 15000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "STEALTH",
+        "FREE_ACT",
+        "SEE_INVIS",
+        "FEATHER",
+        "REGEN",
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 66,
+      "name": "(Blessed)",
+      "rating": 20,
+      "xtra": 3,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "WIS",
+        "BLESSED"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 67,
+      "name": "of Gondolin",
+      "rating": 30,
+      "xtra": 3,
+      "max_to_hit": 7,
+      "max_to_dam": 7,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 30,
+      "rarity": 20,
+      "cost": 25000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_DEMON",
+        "SLAY_ORC",
+        "SLAY_TROLL",
+        "SLAY_DRAGON",
+        "LITE",
+        "RES_DARK",
+        "SEE_INVIS",
+        "FREE_ACT",
+        "IGNORE_ACID",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 68,
+      "name": "of Westernesse",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "STR",
+        "DEX",
+        "CON",
+        "SLAY_ORC",
+        "SLAY_TROLL",
+        "SLAY_GIANT",
+        "FREE_ACT",
+        "SEE_INVIS"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 69,
+      "name": "of Extra Attacks",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 10000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BLOWS",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 70,
+      "name": "of Fury",
+      "rating": 30,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 40,
+      "rarity": 20,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 12,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 10,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 16,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "STR",
+        "BLOWS",
+        "AGGRAVATE",
+        "RES_FEAR",
+        "HIDE_TYPE",
+        "IGNORE_ACID",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 72,
+      "name": "of Acid",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BRAND_ACID",
+        "RES_ACID",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 73,
+      "name": "of Lightning",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 10,
+      "cost": 4500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BRAND_ELEC",
+        "RES_ELEC",
+        "IGNORE_ELEC"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 74,
+      "name": "of Flame",
+      "rating": 15,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 3500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BRAND_FIRE",
+        "RES_FIRE",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 75,
+      "name": "of Frost",
+      "rating": 15,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 3000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BRAND_COLD",
+        "RES_COLD",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 76,
+      "name": "of Venom",
+      "rating": 15,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "BRAND_POIS"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 80,
+      "name": "of Slay Animal",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 3000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_ANIMAL"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 81,
+      "name": "of Slay Evil",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 3000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_EVIL"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 82,
+      "name": "of Slay Undead",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 3500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 18,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_UNDEAD"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 83,
+      "name": "of Slay Demon",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 3500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_DEMON"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 84,
+      "name": "of Slay Orc",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 2500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_ORC"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 85,
+      "name": "of Slay Troll",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 2500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_TROLL"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 86,
+      "name": "of Slay Giant",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 2500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_GIANT"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 87,
+      "name": "of Slay Dragon",
+      "rating": 18,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 3500,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SLAY_DRAGON"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 88,
+      "name": "of *Slay Animal*",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 6000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "INT",
+        "SLAY_ANIMAL",
+        "SLOW_DIGEST"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 89,
+      "name": "of *Slay Evil*",
+      "rating": 20,
+      "xtra": 3,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 5000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "WIS",
+        "SLAY_EVIL",
+        "BLESSED"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 90,
+      "name": "of *Slay Undead*",
+      "rating": 24,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 8000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 18,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "KILL_UNDEAD",
+        "WIS",
+        "SEE_INVIS"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 91,
+      "name": "of *Slay Demon*",
+      "rating": 16,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 8000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "KILL_DEMON",
+        "INT",
+        "RES_FIRE"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 92,
+      "name": "of *Slay Orc*",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "SLAY_ORC",
+        "SUST_DEX"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 93,
+      "name": "of *Slay Troll*",
+      "rating": 14,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "STR",
+        "SLAY_TROLL",
+        "REGEN"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 94,
+      "name": "of *Slay Giant*",
+      "rating": 16,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 4000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "STR",
+        "SLAY_GIANT",
+        "SUST_STR"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 95,
+      "name": "of *Slay Dragon*",
+      "rating": 24,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 20,
+      "cost": 8000,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "CON",
+        "KILL_DRAGON",
+        "RES_FEAR"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 100,
+      "name": "of Digging",
+      "rating": 4,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 4,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 500,
+      "applicable_types": [
+        {
+          "tval": 20,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "digger"
+        }
+      ],
+      "flags": [
+        "TUNNEL",
+        "BRAND_ACID"
+      ],
+      "slots": [
+        "mainHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 101,
+      "name": "of Earthquakes",
+      "rating": 8,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 6,
+      "depth": 20,
+      "rarity": 4,
+      "cost": 3000,
+      "applicable_types": [
+        {
+          "tval": 20,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "digger"
+        }
+      ],
+      "flags": [
+        "STR",
+        "TUNNEL",
+        "BRAND_ACID",
+        "IMPACT",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "mainHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 102,
+      "name": "of Morgul",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 5,
+      "cost": 1,
+      "applicable_types": [
+        {
+          "tval": 21,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "hafted"
+        },
+        {
+          "tval": 22,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "polearm"
+        },
+        {
+          "tval": 23,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "sword"
+        }
+      ],
+      "flags": [
+        "SEE_INVIS",
+        "AGGRAVATE",
+        "HEAVY_CURSE",
+        "LIGHT_CURSE",
+        "HOLD_LIFE",
+        "DRAIN_EXP",
+        "SLAY_UNDEAD",
+        "BRAND_POIS"
+      ],
+      "slots": [
+        "mainHand",
+        "offHand"
+      ],
+      "item_categories": [
+        "weapon"
+      ]
+    },
+    {
+      "serial": 104,
+      "name": "of Accuracy",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 15,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [],
+      "description": "It has no special abilities, but its to-hit value may be unusually high.",
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 105,
+      "name": "of Power",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 15,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 1000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [],
+      "description": "It has no special abilities, but its to-dam value may be unusually high.",
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 106,
+      "name": "of Lothlorien",
+      "rating": 30,
+      "xtra": 3,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 50,
+      "rarity": 4,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 12,
+          "max_sval": 13,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "MIGHT",
+        "FREE_ACT",
+        "IGNORE_ACID",
+        "IGNORE_FIRE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 107,
+      "name": "of the Haradrim",
+      "rating": 30,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 1,
+      "depth": 50,
+      "rarity": 4,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 23,
+          "max_sval": 23,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "MIGHT",
+        "SHOTS",
+        "IGNORE_ACID",
+        "IGNORE_FIRE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 108,
+      "name": "of Extra Might",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 1,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 10000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "MIGHT",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 109,
+      "name": "of Extra Shots",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 1,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 10000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "SHOTS",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 110,
+      "name": "of Buckland",
+      "rating": 25,
+      "xtra": 0,
+      "max_to_hit": 8,
+      "max_to_dam": 8,
+      "max_to_ac": 0,
+      "pval": 2,
+      "depth": 40,
+      "rarity": 4,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 2,
+          "max_sval": 2,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "DEX",
+        "SHOTS",
+        "MIGHT",
+        "IGNORE_ACID",
+        "IGNORE_FIRE",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 111,
+      "name": "of the Nazgul",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 2,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "LIGHT_CURSE",
+        "DRAIN_EXP",
+        "SEE_INVIS"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    },
+    {
+      "serial": 112,
+      "name": "of Slay Animal",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 20,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_ANIMAL"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 113,
+      "name": "of Slay Evil",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 20,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_EVIL"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 114,
+      "name": "of Slay Undead",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 25,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_UNDEAD"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 115,
+      "name": "of Slay Demon",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 25,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_DEMON"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 116,
+      "name": "of Acid",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 9,
+      "cost": 50,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "BRAND_ACID",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 117,
+      "name": "of Lightning",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 9,
+      "cost": 45,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "BRAND_ELEC",
+        "IGNORE_ELEC"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 118,
+      "name": "of Slay Giant",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 25,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_GIANT"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 119,
+      "name": "of Slay Dragon",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 40,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_DRAGON"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 120,
+      "name": "of Holy Might",
+      "rating": 20,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 40,
+      "rarity": 15,
+      "cost": 60,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 2,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 2,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 2,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "SLAY_EVIL",
+        "SLAY_DEMON",
+        "SLAY_UNDEAD",
+        "IGNORE_FIRE",
+        "IGNORE_ACID"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 121,
+      "name": "of Venom",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 40,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 2,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "BRAND_POIS"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 122,
+      "name": "of Flame",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 35,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "BRAND_FIRE",
+        "IGNORE_FIRE"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 123,
+      "name": "of Frost",
+      "rating": 10,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 30,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "BRAND_COLD",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 124,
+      "name": "of Wounding",
+      "rating": 5,
+      "xtra": 0,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 20,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [],
+      "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values.",
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 125,
+      "name": "of Backbiting",
+      "rating": 0,
+      "xtra": 0,
+      "max_to_hit": 50,
+      "max_to_dam": 50,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 1,
+      "cost": 0,
+      "applicable_types": [
+        {
+          "tval": 16,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shot"
+        },
+        {
+          "tval": 17,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "arrow"
+        },
+        {
+          "tval": 18,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bolt"
+        }
+      ],
+      "flags": [
+        "LIGHT_CURSE"
+      ],
+      "slots": [
+        "ammo"
+      ],
+      "item_categories": [
+        "ammo"
+      ]
+    },
+    {
+      "serial": 128,
+      "name": "of the Avari",
+      "rating": 32,
+      "xtra": 2,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 15,
+      "pval": 2,
+      "depth": 0,
+      "rarity": 6,
+      "cost": 80000,
+      "applicable_types": [
+        {
+          "tval": 34,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "shield"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "CON",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "offHand"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 129,
+      "name": "of the Teleri",
+      "rating": 31,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 3,
+      "cost": 20000,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "HOLD_LIFE",
+        "FREE_ACT"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 130,
+      "name": "of Lordly Resistance",
+      "rating": 31,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 20,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 8,
+      "cost": 250000,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "ACTIVATE",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 131,
+      "name": "of Resistance",
+      "rating": 31,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 10,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 4,
+      "cost": 35000,
+      "applicable_types": [
+        {
+          "tval": 35,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "cloak"
+        }
+      ],
+      "flags": [
+        "RES_ACID",
+        "RES_ELEC",
+        "RES_FIRE",
+        "RES_COLD",
+        "IGNORE_ACID",
+        "IGNORE_ELEC",
+        "IGNORE_FIRE",
+        "IGNORE_COLD"
+      ],
+      "slots": [
+        "back"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 132,
+      "name": "of the Istari",
+      "rating": 34,
+      "xtra": 2,
+      "max_to_hit": 5,
+      "max_to_dam": 5,
+      "max_to_ac": 10,
+      "pval": 3,
+      "depth": 0,
+      "rarity": 15,
+      "cost": 50000,
+      "applicable_types": [
+        {
+          "tval": 31,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "gloves"
+        }
+      ],
+      "flags": [
+        "INT",
+        "WIS",
+        "FREE_ACT",
+        "SHOW_MODS",
+        "HIDE_TYPE"
+      ],
+      "slots": [
+        "hands"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 133,
+      "name": "of Mirkwood",
+      "rating": 35,
+      "xtra": 0,
+      "max_to_hit": 0,
+      "max_to_dam": 0,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 12,
+      "cost": 15000,
+      "applicable_types": [
+        {
+          "tval": 30,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "boots"
+        }
+      ],
+      "flags": [
+        "FREE_ACT",
+        "RES_POIS"
+      ],
+      "slots": [
+        "feet"
+      ],
+      "item_categories": [
+        "armor"
+      ]
+    },
+    {
+      "serial": 135,
+      "name": "of Numenor",
+      "rating": 25,
+      "xtra": 0,
+      "max_to_hit": 10,
+      "max_to_dam": 10,
+      "max_to_ac": 0,
+      "pval": 0,
+      "depth": 0,
+      "rarity": 5,
+      "cost": 50000,
+      "applicable_types": [
+        {
+          "tval": 19,
+          "min_sval": 0,
+          "max_sval": 99,
+          "tval_name": "bow"
+        }
+      ],
+      "flags": [
+        "REGEN",
+        "MIGHT"
+      ],
+      "slots": [
+        "ranged"
+      ],
+      "item_categories": [
+        "ranged"
+      ]
+    }
+  ]
+}

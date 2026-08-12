@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/statuses.schema.json",
+  "title": "Gameplay Architecture V2 Status Layer",
+  "description": "Temporary mutable status definitions only. Permanent capabilities and resistance flags are out of scope.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "statuses"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "statuses": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/StatusDefinition" }
+    }
+  },
+  "$defs": {
+    "StatusId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "DiceRoll": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "sides"],
+      "properties": {
+        "count": { "type": "integer", "minimum": 1 },
+        "sides": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "DurationContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base"],
+      "properties": {
+        "base": { "type": "integer", "minimum": 0 },
+        "dice": { "$ref": "#/$defs/DiceRoll" }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "base": { "minimum": 1 }
+          },
+          "required": ["base"]
+        },
+        {
+          "required": ["dice"]
+        }
+      ]
+    },
+    "StatusCategory": {
+      "type": "string",
+      "enum": ["debuff", "buff", "control", "utility", "oppose"]
+    },
+    "RefreshPolicy": {
+      "type": "string",
+      "enum": ["none", "additive", "max", "replace"]
+    },
+    "ReplacementPolicy": {
+      "type": "string",
+      "enum": ["keep_existing", "replace_existing"]
+    },
+    "StatusDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status_id",
+        "name",
+        "category",
+        "description",
+        "is_timed",
+        "default_duration",
+        "is_stackable",
+        "refresh_policy",
+        "replacement_policy",
+        "provenance_status"
+      ],
+      "properties": {
+        "status_id": { "$ref": "#/$defs/StatusId" },
+        "name": { "type": "string", "minLength": 1 },
+        "category": { "$ref": "#/$defs/StatusCategory" },
+        "description": { "type": "string", "minLength": 1 },
+        "is_timed": {
+          "type": "boolean",
+          "const": true,
+          "description": "Status layer is temporary mutable state only in Gameplay Architecture V2."
+        },
+        "default_duration": { "$ref": "#/$defs/DurationContract" },
+        "is_stackable": {
+          "type": "boolean",
+          "description": "Whether repeated applications are stack-merged instead of being treated as a simple replacement."
+        },
+        "refresh_policy": {
+          "$ref": "#/$defs/RefreshPolicy",
+          "description": "How repeated application updates duration when the same status is already active."
+        },
+        "replacement_policy": {
+          "$ref": "#/$defs/ReplacementPolicy",
+          "description": "How an incoming timed application is handled relative to existing state."
+        },
+        "timed_group": {
+          "type": "string",
+          "enum": ["none", "oppose", "control", "combat_buff", "vision", "degen"],
+          "default": "none"
+        },
+        "notes": { "type": "string" },
+        "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "is_stackable": { "const": false } },
+            "required": ["is_stackable"]
+          },
+          "then": {
+            "properties": {
+              "refresh_policy": { "const": "none" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "is_stackable": { "const": true } },
+            "required": ["is_stackable"]
+          },
+          "then": {
+            "properties": {
+              "refresh_policy": {
+                "enum": ["additive", "max", "replace"]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/races.schema.json",
+  "title": "Races",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "races"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "races": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "description",
+          "stat_modifiers",
+          "skill_modifiers",
+          "hit_die",
+          "exp_factor",
+          "infravision",
+          "history_chart",
+          "age_base",
+          "age_mod",
+          "male_height",
+          "male_height_mod",
+          "female_height",
+          "female_height_mod",
+          "male_weight",
+          "male_weight_mod",
+          "female_weight",
+          "female_weight_mod",
+          "capability_ids",
+          "size",
+          "vision_type",
+          "lore",
+          "provenance_status"
+        ],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/Id" },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "stat_modifiers": { "$ref": "common.schema.json#/$defs/StatModifiers" },
+          "skill_modifiers": { "$ref": "common.schema.json#/$defs/SkillModifiers" },
+          "hit_die": { "type": "integer", "minimum": 0 },
+          "exp_factor": { "type": "integer", "minimum": 0 },
+          "infravision": { "type": "integer", "minimum": 0 },
+          "history_chart": { "type": "integer", "minimum": 1 },
+          "age_base": { "type": "integer", "minimum": 0 },
+          "age_mod": { "type": "integer", "minimum": 0 },
+          "male_height": { "type": "integer", "minimum": 0 },
+          "male_height_mod": { "type": "integer", "minimum": 0 },
+          "female_height": { "type": "integer", "minimum": 0 },
+          "female_height_mod": { "type": "integer", "minimum": 0 },
+          "male_weight": { "type": "integer", "minimum": 0 },
+          "male_weight_mod": { "type": "integer", "minimum": 0 },
+          "female_weight": { "type": "integer", "minimum": 0 },
+          "female_weight_mod": { "type": "integer", "minimum": 0 },
+          "capability_ids": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/$defs/CapabilityReference" },
+            "uniqueItems": true
+          },
+          "size": {
+            "type": "string",
+            "enum": ["small", "medium", "large"]
+          },
+          "lore": { "type": "string", "minLength": 1 },
+          "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+        }
+      }
+    }
+  }
+}

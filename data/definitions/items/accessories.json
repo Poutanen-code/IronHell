@@ -1,0 +1,1317 @@
+{
+    "schema_version": 1,
+    "accessories": [
+        {
+            "id": "ring_of_feather_falling",
+            "name": "Ring of Feather Falling",
+            "type": "ring",
+            "tval": 45,
+            "sval": 7,
+            "weight": 2,
+            "sell_value": 200,
+            "affixes": [],
+            "capability_ids": [
+                "feather"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "Reduces falling damage from pits and traps.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_weakness",
+            "name": "Ring of Weakness",
+            "type": "ring",
+            "tval": 45,
+            "sval": 2,
+            "weight": 2,
+            "sell_value": 0,
+            "affixes": [
+                {
+                    "type": "strength",
+                    "value": -5
+                }
+            ],
+            "capability_ids": [],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "It reduces strength (pval:-5), unless you have sustain strength. Lightly cursed.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_stupidity",
+            "name": "Ring of Stupidity",
+            "type": "ring",
+            "tval": 45,
+            "sval": 3,
+            "weight": 2,
+            "sell_value": 0,
+            "affixes": [
+                {
+                    "type": "intelligence",
+                    "value": -5
+                }
+            ],
+            "capability_ids": [],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "It reduces intelligence (pval:-5), unless you have sustain intelligence. Lightly cursed.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_teleportation",
+            "name": "Ring of Teleportation",
+            "type": "ring",
+            "tval": 45,
+            "sval": 4,
+            "weight": 2,
+            "sell_value": 0,
+            "affixes": [],
+            "capability_ids": [
+                "teleportation"
+            ],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Teleportation.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_slow_digestion",
+            "name": "Ring of Slow Digestion",
+            "type": "ring",
+            "tval": 45,
+            "sval": 6,
+            "weight": 2,
+            "sell_value": 250,
+            "affixes": [],
+            "capability_ids": [
+                "slow_digest"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Slow Digestion.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_resist_fire",
+            "name": "Ring of Resist Fire",
+            "type": "ring",
+            "tval": 45,
+            "sval": 8,
+            "weight": 2,
+            "sell_value": 250,
+            "affixes": [],
+            "capability_ids": [
+                "res_fire",
+                "ignore_fire"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "A warm band that shrugs off furnace heat.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_resist_cold",
+            "name": "Ring of Resist Cold",
+            "type": "ring",
+            "tval": 45,
+            "sval": 9,
+            "weight": 2,
+            "sell_value": 250,
+            "affixes": [],
+            "capability_ids": [
+                "res_cold",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "Frost-glass lines the inner edge of this ring.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_strength",
+            "name": "Ring of Sustain Strength",
+            "type": "ring",
+            "tval": 45,
+            "sval": 10,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_str"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Strength.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_intelligence",
+            "name": "Ring of Sustain Intelligence",
+            "type": "ring",
+            "tval": 45,
+            "sval": 11,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_int"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Intelligence.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_wisdom",
+            "name": "Ring of Sustain Wisdom",
+            "type": "ring",
+            "tval": 45,
+            "sval": 12,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_wis"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Wisdom.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_constitution",
+            "name": "Ring of Sustain Constitution",
+            "type": "ring",
+            "tval": 45,
+            "sval": 13,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_con"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Constitution.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_dexterity",
+            "name": "Ring of Sustain Dexterity",
+            "type": "ring",
+            "tval": 45,
+            "sval": 14,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_dex"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Dexterity.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_sustain_charisma",
+            "name": "Ring of Sustain Charisma",
+            "type": "ring",
+            "tval": 45,
+            "sval": 15,
+            "weight": 2,
+            "sell_value": 400,
+            "affixes": [],
+            "capability_ids": [
+                "sust_chr"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Sustain Charisma.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_protection",
+            "name": "Ring of Protection",
+            "type": "ring",
+            "tval": 45,
+            "sval": 16,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "armor",
+                    "min_value": 1,
+                    "max_value": 12
+                }
+            ],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "A staple ring for cautious beginners.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_flames",
+            "name": "Ring of Flames",
+            "type": "ring",
+            "tval": 45,
+            "sval": 18,
+            "weight": 2,
+            "sell_value": 3000,
+            "affixes": [],
+            "capability_ids": [
+                "res_fire",
+                "ignore_fire"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 2
+                }
+            ],
+            "description": "Warm red runes dance across its inside edge.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_ice",
+            "name": "Ring of Ice",
+            "type": "ring",
+            "tval": 45,
+            "sval": 19,
+            "weight": 2,
+            "sell_value": 3000,
+            "affixes": [],
+            "capability_ids": [
+                "res_cold",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 2
+                }
+            ],
+            "description": "An ego ring rimed in eternal cold.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_resist_poison",
+            "name": "Ring of Resist Poison",
+            "type": "ring",
+            "tval": 45,
+            "sval": 20,
+            "weight": 2,
+            "sell_value": 16000,
+            "affixes": [],
+            "capability_ids": [
+                "res_pois"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 40,
+                    "rarity": 2
+                }
+            ],
+            "description": "An antidotal ring prized in spider and drake nests.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_free_action",
+            "name": "Ring of Free Action",
+            "type": "ring",
+            "tval": 45,
+            "sval": 21,
+            "weight": 2,
+            "sell_value": 1500,
+            "affixes": [],
+            "capability_ids": [
+                "free_act"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "An old adventurer\u0027s favorite against webbers and shamans.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_see_invisible",
+            "name": "Ring of See Invisible",
+            "type": "ring",
+            "tval": 45,
+            "sval": 22,
+            "weight": 2,
+            "sell_value": 340,
+            "affixes": [],
+            "capability_ids": [
+                "see_invis"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "One of the most sought rings in old Angband lore.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_searching",
+            "name": "Ring of Searching",
+            "type": "ring",
+            "tval": 45,
+            "sval": 23,
+            "weight": 2,
+            "sell_value": 250,
+            "affixes": [],
+            "capability_ids": ["searching"],
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "Heightens awareness of hidden doors and traps.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_strength",
+            "name": "Ring of Strength",
+            "type": "ring",
+            "tval": 45,
+            "sval": 24,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "strength",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_str"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "A heavy gold ring that hums with bodily might.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_intelligence",
+            "name": "Ring of Intelligence",
+            "type": "ring",
+            "tval": 45,
+            "sval": 25,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "intelligence",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_int"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Intelligence.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_dexterity",
+            "name": "Ring of Dexterity",
+            "type": "ring",
+            "tval": 45,
+            "sval": 26,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "dexterity",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_dex"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "A polished band that lightens movement and timing.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_constitution",
+            "name": "Ring of Constitution",
+            "type": "ring",
+            "tval": 45,
+            "sval": 27,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "constitution",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_con"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Constitution.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_accuracy",
+            "name": "Ring of Accuracy",
+            "type": "ring",
+            "tval": 45,
+            "sval": 28,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "to_hit",
+                    "min_value": 1,
+                    "max_value": 12
+                }
+            ],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "A true-strike ring favored by archers and duelists.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_damage",
+            "name": "Ring of Damage",
+            "type": "ring",
+            "tval": 45,
+            "sval": 29,
+            "weight": 2,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "to_damage",
+                    "min_value": 1,
+                    "max_value": 12
+                }
+            ],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 20,
+                    "rarity": 1
+                }
+            ],
+            "description": "Simple rune-work that sharpens killing power.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_slaying",
+            "name": "Ring of Slaying",
+            "type": "ring",
+            "tval": 45,
+            "sval": 30,
+            "weight": 2,
+            "sell_value": 1000,
+            "generated_affixes": [
+                {
+                    "type": "to_hit",
+                    "min_value": 1,
+                    "max_value": 12
+                },
+                {
+                    "type": "to_damage",
+                    "min_value": 1,
+                    "max_value": 12
+                }
+            ],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 40,
+                    "rarity": 1
+                }
+            ],
+            "description": "It boosts your to-hit and to-dam values.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_speed",
+            "name": "Ring of Speed",
+            "type": "ring",
+            "tval": 45,
+            "sval": 31,
+            "weight": 2,
+            "sell_value": 100000,
+            "generated_affixes": [
+                {
+                    "type": "speed",
+                    "min_value": 1,
+                    "max_value": 16
+                }
+            ],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 75,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Speed that quickens the wearer\u0027s movements.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_lightning",
+            "name": "Ring of Lightning",
+            "type": "ring",
+            "tval": 45,
+            "sval": 38,
+            "weight": 2,
+            "sell_value": 5000,
+            "affixes": [],
+            "capability_ids": [
+                "res_elec",
+                "ignore_elec"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 2
+                }
+            ],
+            "description": "Static arcs dance between its rune knots.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_acid",
+            "name": "Ring of Acid",
+            "type": "ring",
+            "tval": 45,
+            "sval": 17,
+            "weight": 2,
+            "sell_value": 3000,
+            "affixes": [],
+            "capability_ids": [
+                "res_acid",
+                "ignore_acid"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 2
+                }
+            ],
+            "description": "Corrosive sigils crawl around this viridian band.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ring_of_woe",
+            "name": "Ring of Woe",
+            "type": "ring",
+            "tval": 45,
+            "sval": 0,
+            "weight": 2,
+            "sell_value": 0,
+            "affixes": [
+                {
+                    "type": "wisdom",
+                    "value": -5
+                },
+                {
+                    "type": "charisma",
+                    "value": -5
+                }
+            ],
+            "capability_ids": [
+                "teleportation"
+            ],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Woe.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "ring_of_aggravate_monster",
+            "name": "Ring of Aggravate Monster",
+            "type": "ring",
+            "tval": 45,
+            "sval": 1,
+            "weight": 2,
+            "sell_value": 0,
+            "affixes": [],
+            "capability_ids": [
+                "aggravate_monsters"
+            ],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "description": "A ring of Aggravate Monster.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_teleportation",
+            "name": "Amulet of Teleportation",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 1,
+            "weight": 3,
+            "sell_value": 0,
+            "affixes": [],
+            "capability_ids": [
+                "teleportation"
+            ],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "A lightly cursed amulet that randomly teleports the wearer.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_adornment",
+            "name": "Amulet of Adornment",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 2,
+            "weight": 3,
+            "sell_value": 20,
+            "affixes": [],
+            "capability_ids": [],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "A amulet of Adornment.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "amulet_of_doom",
+            "name": "Amulet of DOOM",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 0,
+            "weight": 3,
+            "sell_value": 0,
+            "affixes": [
+                {
+                    "type": "strength",
+                    "value": -5
+                },
+                {
+                    "type": "intelligence",
+                    "value": -5
+                },
+                {
+                    "type": "wisdom",
+                    "value": -5
+                },
+                {
+                    "type": "dexterity",
+                    "value": -5
+                },
+                {
+                    "type": "constitution",
+                    "value": -5
+                },
+                {
+                    "type": "charisma",
+                    "value": -5
+                }
+            ],
+            "capability_ids": [],
+            "is_cursed": true,
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 1
+                }
+            ],
+            "description": "A amulet of DOOM.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_slow_digestion",
+            "name": "Amulet of Slow Digestion",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 3,
+            "weight": 3,
+            "sell_value": 200,
+            "affixes": [
+                {
+                    "type": "constitution",
+                    "value": 3
+                }
+            ],
+            "capability_ids": [
+                "slow_digest"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 15,
+                    "rarity": 1
+                }
+            ],
+            "description": "Reduces the wearer's need for food during long delves.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_resist_acid",
+            "name": "Amulet of Resist Acid",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 4,
+            "weight": 3,
+            "sell_value": 300,
+            "affixes": [
+                {
+                    "type": "armor",
+                    "value": 4
+                }
+            ],
+            "capability_ids": [
+                "res_acid",
+                "ignore_acid"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "Warding runes protect against corrosive splashes.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_searching",
+            "name": "Amulet of Searching",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 5,
+            "weight": 3,
+            "sell_value": 600,
+            "affixes": [
+                {
+                    "type": "wisdom",
+                    "value": 8
+                },
+                {
+                    "type": "light_radius",
+                    "value": 2
+                }
+            ],
+            "capability_ids": ["searching"],
+            "allocation_table": [
+                {
+                    "depth": 15,
+                    "rarity": 1
+                }
+            ],
+            "description": "Favored by trapfinders and treasure-seekers.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "amulet_of_wisdom",
+            "name": "Amulet of Wisdom",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 6,
+            "weight": 3,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "wisdom",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_wis"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "A calm blue stone that aids disciplined casting.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "amulet_of_charisma",
+            "name": "Amulet of Charisma",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 7,
+            "weight": 3,
+            "sell_value": 500,
+            "generated_affixes": [
+                {
+                    "type": "charisma",
+                    "min_value": 1,
+                    "max_value": 6
+                }
+            ],
+            "capability_ids": [
+                "sust_chr"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 1
+                }
+            ],
+            "description": "Silver filigree and a bright-cut topaz centerpiece.",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "amulet_of_the_magi",
+            "name": "Amulet of the Magi",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 8,
+            "weight": 3,
+            "sell_value": 30000,
+            "generated_affixes":
+            [
+                {
+                    "type":"intelligence",
+                    "min_value":1,
+                    "max_value":6
+                },
+                {
+                    "type":"searching",
+                    "min_value":1,
+                    "max_value":10
+                }
+            ],
+            "capability_ids": [
+                "free_act",
+                "see_invis",
+                "sust_int",
+                "res_confu",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 70,
+                    "rarity": 8
+                }
+            ],
+            "description": "An iconic caster relic in many veteran builds.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_sustenance",
+            "name": "Amulet of Sustenance",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 9,
+            "weight": 3,
+            "sell_value": 20000,
+            "affixes": [],
+            "capability_ids": [
+                "sust_str",
+                "sust_int",
+                "sust_wis",
+                "sust_dex",
+                "sust_con",
+                "sust_chr",
+                "hold_life",
+                "slow_digest",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 60,
+                    "rarity": 6
+                }
+            ],
+            "description": "A amulet of Sustenance.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_esp",
+            "name": "Amulet of ESP",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 13,
+            "weight": 3,
+            "sell_value": 25000,
+            "affixes": [],
+            "capability_ids": [
+                "telepathy",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 50,
+                    "rarity": 8
+                }
+            ],
+            "description": "A amulet of ESP.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_resistance",
+            "name": "Amulet of Resistance",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 14,
+            "weight": 3,
+            "sell_value": 20000,
+            "affixes": [],
+            "capability_ids": [
+                "res_fire",
+                "res_acid",
+                "res_elec",
+                "res_cold",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 60,
+                    "rarity": 8
+                }
+            ],
+            "description": "A amulet of Resistance.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_regeneration",
+            "name": "Amulet of Regeneration",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 15,
+            "weight": 3,
+            "sell_value": 600,
+            "affixes": [],
+            "capability_ids": [
+                "regeneration"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 30,
+                    "rarity": 3
+                }
+            ],
+            "description": "A amulet of Regeneration.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_infravision",
+            "name": "Amulet of Infravision",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 21,
+            "weight": 3,
+            "sell_value": 200,
+            "affixes": [],
+            "capability_ids": [
+                "infravision"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 2
+                }
+            ],
+            "description": "A amulet of Infravision.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_resist_lightning",
+            "name": "Amulet of Resist Lightning",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 22,
+            "weight": 3,
+            "sell_value": 300,
+            "affixes": [],
+            "capability_ids": [
+                "res_elec",
+                "ignore_elec"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 10,
+                    "rarity": 1
+                }
+            ],
+            "description": "A amulet of Resist Lightning.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_the_moon",
+            "name": "Amulet of the Moon",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 23,
+            "weight": 3,
+            "sell_value": 30000,
+            "affixes": [],
+            "capability_ids": [
+                "see_invis",
+                "infravision",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 40,
+                    "rarity": 8
+                },
+                {
+                    "depth": 60,
+                    "rarity": 4
+                }
+            ],
+            "description": "A amulet of the Moon.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_terken",
+            "name": "Amulet of Terken",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 24,
+            "weight": 3,
+            "sell_value": 30000,
+            "affixes": [],
+            "capability_ids": [
+                "see_invis",
+                "free_act",
+                "ignore_acid",
+                "ignore_elec",
+                "ignore_fire",
+                "ignore_cold"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 40,
+                    "rarity": 8
+                },
+                {
+                    "depth": 60,
+                    "rarity": 4
+                }
+            ],
+            "description": "A amulet of Terken.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_devotion",
+            "name": "Amulet of Devotion",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 18,
+            "weight": 3,
+            "sell_value": 30000,
+            "affixes": [
+                {
+                    "type": "wisdom",
+                    "value": 1
+                },
+                {
+                    "type": "charisma",
+                    "value": 1
+                }
+            ],
+            "capability_ids": [
+                "sust_wis",
+                "sust_chr",
+                "res_dark",
+                "res_lite",
+                "res_fire",
+                "hold_life"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 70,
+                    "rarity": 8
+                }
+            ],
+            "description": "A amulet of Devotion.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_weaponmastery",
+            "name": "Amulet of Weaponmastery",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 19,
+            "weight": 3,
+            "sell_value": 30000,
+            "affixes": [
+                {
+                    "type": "strength",
+                    "value": 1
+                }
+            ],
+            "capability_ids": [
+                "sust_str",
+                "sust_con",
+                "free_act",
+                "res_fear",
+                "res_disen"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 70,
+                    "rarity": 8
+                }
+            ],
+            "description": "A amulet of Weaponmastery.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "amulet_of_trickery",
+            "name": "Amulet of Trickery",
+            "type": "amulet",
+            "tval": 40,
+            "sval": 20,
+            "weight": 3,
+            "sell_value": 30000,
+            "affixes": [
+                {
+                    "type": "dexterity",
+                    "value": 1
+                },
+                {
+                    "type": "speed",
+                    "value": 1
+                }
+            ],
+            "capability_ids": [
+                "sust_dex",
+                "res_nexus",
+                "res_pois"
+            ],
+            "allocation_table": [
+                {
+                    "depth": 70,
+                    "rarity": 8
+                }
+            ],
+            "description": "A amulet of Trickery.",
+            "provenance_status": "verified"
+        }
+    ]
+}

@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "books": [
+    {
+      "id": "magic_for_beginners",
+      "name": "Magic for Beginners",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 0,
+      "spell_ids": [
+        "magic_magic_missile",
+        "magic_detect_monsters",
+        "magic_phase_door",
+        "magic_light_area",
+        "magic_treasure_detection",
+        "magic_cure_light_wounds",
+        "magic_object_detection",
+        "magic_find_traps_doors",
+        "magic_stinking_cloud"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "conjurings_and_tricks",
+      "name": "Conjurings and Tricks",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 1,
+      "spell_ids": [
+        "magic_confuse_monster",
+        "magic_lightning_bolt",
+        "magic_trap_door_destruction",
+        "magic_cure_poison",
+        "magic_sleep_monster",
+        "magic_teleport_self",
+        "magic_spear_of_light",
+        "magic_frost_bolt",
+        "magic_wonder"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "incantations_and_illusions",
+      "name": "Incantations and Illusions",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 2,
+      "spell_ids": [
+        "magic_satisfy_hunger",
+        "magic_recharge_item_i",
+        "magic_turn_stone_to_mud",
+        "magic_fire_bolt",
+        "magic_polymorph_other",
+        "magic_identify",
+        "magic_detect_invisible",
+        "magic_acid_bolt",
+        "magic_slow_monster"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "sorcery_and_evocations",
+      "name": "Sorcery and Evocations",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 3,
+      "spell_ids": [
+        "magic_frost_ball",
+        "magic_teleport_other",
+        "magic_haste_self",
+        "magic_mass_sleep",
+        "magic_fire_ball",
+        "magic_detect_enchantment"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "resistances_of_scarabtarices",
+      "name": "Resistances of Scarabtarices",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 4,
+      "spell_ids": [
+        "magic_resist_cold",
+        "magic_resist_fire",
+        "magic_resist_poison",
+        "magic_resistance",
+        "magic_shield"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "raal_s_tome_of_destruction",
+      "name": "Raal's Tome of Destruction",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 5,
+      "spell_ids": [
+        "magic_shock_wave",
+        "magic_explosion",
+        "magic_cloud_kill",
+        "magic_acid_ball",
+        "magic_ice_storm",
+        "magic_meteor_swarm",
+        "magic_rift"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "mordenkainen_s_escapes",
+      "name": "Mordenkainen's Escapes",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 6,
+      "spell_ids": [
+        "magic_door_creation",
+        "magic_stair_creation",
+        "magic_teleport_level",
+        "magic_word_of_recall",
+        "magic_rune_of_protection"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "tenser_s_transformations",
+      "name": "Tenser's transformations",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 7,
+      "spell_ids": [
+        "magic_heroism",
+        "magic_berserker",
+        "magic_enchant_armor",
+        "magic_enchant_weapon",
+        "magic_recharge_item_ii",
+        "magic_elemental_brand"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "kelek_s_grimoire_of_power",
+      "name": "Kelek's Grimoire of Power",
+      "realm": "magic",
+      "book_tval": 90,
+      "book_sval": 8,
+      "spell_ids": [
+        "magic_earthquake",
+        "magic_bedlam",
+        "magic_rend_soul",
+        "magic_banishment",
+        "magic_word_of_destruction",
+        "magic_mass_banishment",
+        "magic_chaos_strike",
+        "magic_mana_storm"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "beginners_handbook",
+      "name": "Beginners Handbook",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 0,
+      "spell_ids": [
+        "prayer_detect_evil",
+        "prayer_cure_light_wounds",
+        "prayer_bless",
+        "prayer_remove_fear",
+        "prayer_call_light",
+        "prayer_find_traps",
+        "prayer_detect_doors_stairs",
+        "prayer_slow_poison"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "words_of_wisdom",
+      "name": "Words of Wisdom",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 1,
+      "spell_ids": [
+        "prayer_scare_monster",
+        "prayer_portal",
+        "prayer_cure_serious_wounds",
+        "prayer_chant",
+        "prayer_sanctuary",
+        "prayer_satisfy_hunger",
+        "prayer_remove_curse",
+        "prayer_resist_heat_cold"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "chants_and_blessings",
+      "name": "Chants and Blessings",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 2,
+      "spell_ids": [
+        "prayer_neutralize_poison",
+        "prayer_orb_of_draining",
+        "prayer_cure_critical_wounds",
+        "prayer_sense_invisible",
+        "prayer_protection_from_evil",
+        "prayer_earthquake",
+        "prayer_sense_surroundings",
+        "prayer_cure_mortal_wounds",
+        "prayer_turn_undead"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "exorcism_and_dispelling",
+      "name": "Exorcism and Dispelling",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 3,
+      "spell_ids": [
+        "prayer_prayer",
+        "prayer_dispel_undead",
+        "prayer_heal",
+        "prayer_dispel_evil",
+        "prayer_glyph_of_warding",
+        "prayer_holy_word"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "ethereal_openings",
+      "name": "Ethereal openings",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 4,
+      "spell_ids": [
+        "prayer_blink",
+        "prayer_teleport_self",
+        "prayer_teleport_other",
+        "prayer_teleport_level",
+        "prayer_word_of_recall",
+        "prayer_alter_reality"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "godly_insights",
+      "name": "Godly Insights",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 5,
+      "spell_ids": [
+        "prayer_detect_monsters",
+        "prayer_detection",
+        "prayer_perception",
+        "prayer_probing",
+        "prayer_clairvoyance"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "purifications_and_healing",
+      "name": "Purifications and Healing",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 6,
+      "spell_ids": [
+        "prayer_cure_serious_wounds2",
+        "prayer_cure_mortal_wounds2",
+        "prayer_healing",
+        "prayer_restoration",
+        "prayer_remembrance"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "holy_infusions",
+      "name": "Holy Infusions",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 7,
+      "spell_ids": [
+        "prayer_unbarring_ways",
+        "prayer_recharging",
+        "prayer_dispel_curse",
+        "prayer_enchant_weapon",
+        "prayer_enchant_armor",
+        "prayer_elemental_brand"
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wrath_of_god",
+      "name": "Wrath of God",
+      "realm": "prayer",
+      "book_tval": 91,
+      "book_sval": 8,
+      "spell_ids": [
+        "prayer_dispel_undead2",
+        "prayer_dispel_evil2",
+        "prayer_banish_evil",
+        "prayer_word_of_destruction",
+        "prayer_annihilation"
+      ],
+      "provenance_status": "verified"
+    }
+  ]
+}

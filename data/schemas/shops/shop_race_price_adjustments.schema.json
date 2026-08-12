@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/shop_race_price_adjustments",
+  "type": "object",
+  "required": ["version", "raceOrder", "matrix"],
+  "properties": {
+    "version": { "type": "string" },
+    "raceOrder": { "type": "array", "items": { "type": "string" } },
+    "matrix": {
+      "type": "object",
+      "additionalProperties": { "type": "array", "items": { "type": "number" } }
+    }
+  }
+}

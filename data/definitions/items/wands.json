@@ -1,0 +1,949 @@
+{
+  "schema_version": 1,
+  "wands": [
+    {
+      "id": "wand_of_trap_location",
+      "name": "Trap Location",
+      "tval": 66,
+      "sval": 0,
+      "weight": 15,
+      "sell_value": 100,
+      "pval": 50,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "traps"
+            ]
+          }
+        }
+      ],
+      "description": "A magical wand of trap location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_door_stair_location",
+      "name": "Door/Stair Location",
+      "tval": 66,
+      "sval": 1,
+      "weight": 15,
+      "sell_value": 1000,
+      "pval": 70,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "doors",
+              "stairs"
+            ]
+          }
+        }
+      ],
+      "description": "A magical wand of door/stair location.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_perception",
+      "name": "Perception",
+      "tval": 66,
+      "sval": 2,
+      "weight": 15,
+      "sell_value": 13000,
+      "pval": 10,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "comprehensive"
+          }
+        }
+      ],
+      "description": "A magical wand of perception.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_recall",
+      "name": "Recall",
+      "tval": 66,
+      "sval": 3,
+      "weight": 15,
+      "sell_value": 4000,
+      "pval": 60,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
+        }
+      ],
+      "description": "A magical wand of recall.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_illumination",
+      "name": "Illumination",
+      "tval": 66,
+      "sval": 4,
+      "weight": 15,
+      "sell_value": 1000,
+      "pval": 30,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 2,
+            "light_style": "torch"
+          }
+        }
+      ],
+      "description": "A magical wand of illumination.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_enlightenment",
+      "name": "Enlightenment",
+      "tval": 66,
+      "sval": 5,
+      "weight": 15,
+      "sell_value": 10000,
+      "pval": 99,
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local"
+          }
+        }
+      ],
+      "description": "A magical wand of enlightenment.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_detection",
+      "name": "Detection",
+      "tval": 66,
+      "sval": 6,
+      "weight": 15,
+      "sell_value": 5000,
+      "pval": 99,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "all"
+            ]
+          }
+        }
+      ],
+      "description": "A magical wand of detection.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_probing",
+      "name": "Probing",
+      "tval": 66,
+      "sval": 7,
+      "weight": 15,
+      "sell_value": 4000,
+      "pval": 50,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "InspectEntity",
+          "parameters": {
+            "scope": "probing",
+            "target_mode": "all_in_sight"
+          }
+        }
+      ],
+      "description": "A magical wand of probing.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_curing",
+      "name": "Curing",
+      "tval": 66,
+      "sval": 8,
+      "weight": 15,
+      "sell_value": 15000,
+      "pval": 999,
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded",
+              "poisoned",
+              "confused",
+              "stunned",
+              "cut"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ],
+      "description": "A magical wand of curing.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (SV_ROD_CURING)."
+    },
+    {
+      "id": "wand_of_healing",
+      "name": "Healing",
+      "tval": 66,
+      "sval": 9,
+      "weight": 15,
+      "sell_value": 20000,
+      "pval": 999,
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 500
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical wand of healing.",
+      "provenance_status": "verified",
+      "notes": "Healing value verified from MAngband use-obj.c (SV_ROD_HEALING -> hp_player(p_ptr, 500))."
+    },
+    {
+      "id": "wand_of_restoration",
+      "name": "Restoration",
+      "tval": 66,
+      "sval": 10,
+      "weight": 15,
+      "sell_value": 25000,
+      "pval": 999,
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 16
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "all_stats",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical wand of restoration.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "wand_of_speed",
+      "name": "Speed",
+      "tval": 66,
+      "sval": 11,
+      "weight": 15,
+      "sell_value": 50000,
+      "pval": 99,
+      "allocation_table": [
+        {
+          "depth": 95,
+          "rarity": 16
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "haste",
+            "duration": {
+              "base": 15,
+              "dice": {
+                "count": 1,
+                "sides": 30
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical wand of speed.",
+      "provenance_status": "derived",
+      "notes": "Derived from MAngband use-obj.c (SV_ROD_SPEED: set_fast(randint1(30)+15), with +5 extension when already hasted)."
+    },
+    {
+      "id": "wand_of_magic_missiles",
+      "name": "Magic Missiles",
+      "tval": 66,
+      "sval": 12,
+      "weight": 15,
+      "sell_value": 150,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": {
+              "kind": "dice",
+              "count": 3,
+              "sides": 4
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of magic missiles.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (SV_WAND_MAGIC_MISSILE -> damroll(3,4))."
+    },
+    {
+      "id": "wand_of_acid_bolt",
+      "name": "Acid Bolt",
+      "tval": 66,
+      "sval": 13,
+      "weight": 15,
+      "sell_value": 600,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of acid bolt.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (damroll(10, 8))."
+    },
+    {
+      "id": "wand_of_lightning_bolt",
+      "name": "Lightning Bolt",
+      "tval": 66,
+      "sval": 14,
+      "weight": 15,
+      "sell_value": 400,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 6
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of lightning bolt.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (damroll(6, 6))."
+    },
+    {
+      "id": "wand_of_fire_bolt",
+      "name": "Fire Bolt",
+      "tval": 66,
+      "sval": 15,
+      "weight": 15,
+      "sell_value": 700,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "dice",
+              "count": 12,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of fire bolt.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (damroll(12, 8))."
+    },
+    {
+      "id": "wand_of_frost_bolt",
+      "name": "Frost Bolt",
+      "tval": 66,
+      "sval": 16,
+      "weight": 15,
+      "sell_value": 500,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of frost bolt.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (damroll(6, 8))."
+    },
+    {
+      "id": "wand_of_acid_ball",
+      "name": "Acid Ball",
+      "tval": 66,
+      "sval": 17,
+      "weight": 15,
+      "sell_value": 800,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 35,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "flat",
+              "value": 120
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of acid ball.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (120 flat damage, radius 2)."
+    },
+    {
+      "id": "wand_of_lightning_ball",
+      "name": "Lightning Ball",
+      "tval": 66,
+      "sval": 18,
+      "weight": 15,
+      "sell_value": 600,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 35,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 64
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of lightning ball.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (64 flat damage, radius 2)."
+    },
+    {
+      "id": "wand_of_fire_ball",
+      "name": "Fire Ball",
+      "tval": 66,
+      "sval": 19,
+      "weight": 15,
+      "sell_value": 1000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 144
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of fire ball.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (144 flat damage, radius 2)."
+    },
+    {
+      "id": "wand_of_frost_ball",
+      "name": "Frost Ball",
+      "tval": 66,
+      "sval": 20,
+      "weight": 15,
+      "sell_value": 800,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 96
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of frost ball.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (96 flat damage, radius 2)."
+    },
+    {
+      "id": "wand_of_stinking_cloud",
+      "name": "Stinking Cloud",
+      "tval": 66,
+      "sval": 21,
+      "weight": 15,
+      "sell_value": 300,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": {
+              "kind": "flat",
+              "value": 12
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of stinking cloud.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (12 flat damage)."
+    },
+    {
+      "id": "wand_of_drain_life",
+      "name": "Drain Life",
+      "tval": 66,
+      "sval": 22,
+      "weight": 15,
+      "sell_value": 1000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DrainLife",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of drain life.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (SV_WAND_DRAIN_LIFE -> drain_life(..., 150))."
+    },
+    {
+      "id": "wand_of_annihilation",
+      "name": "Annihilation",
+      "tval": 66,
+      "sval": 23,
+      "weight": 15,
+      "sell_value": 2000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DrainLife",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 250
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of annihilation.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (SV_WAND_ANNIHILATION -> 250 flat damage life drain)."
+    },
+    {
+      "id": "wand_of_dragon_fire",
+      "name": "Dragon Fire",
+      "tval": 66,
+      "sval": 24,
+      "weight": 15,
+      "sell_value": 1500,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 200
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon fire.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Fire -> 200 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_frost",
+      "name": "Dragon Frost",
+      "tval": 66,
+      "sval": 25,
+      "weight": 15,
+      "sell_value": 1200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 160
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon frost.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Frost -> 160 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_breath_acid",
+      "name": "Dragon Breath Acid",
+      "tval": 66,
+      "sval": 26,
+      "weight": 15,
+      "sell_value": 1500,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "flat",
+              "value": 200
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon breath acid.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Acid -> 200 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_breath_lightning",
+      "name": "Dragon Breath Lightning",
+      "tval": 66,
+      "sval": 27,
+      "weight": 15,
+      "sell_value": 1200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 160
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon breath lightning.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Lightning -> 160 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_breath_fire",
+      "name": "Dragon Breath Fire",
+      "tval": 66,
+      "sval": 28,
+      "weight": 15,
+      "sell_value": 1500,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 200
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon breath fire.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Fire -> 200 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_breath_frost",
+      "name": "Dragon Breath Frost",
+      "tval": 66,
+      "sval": 29,
+      "weight": 15,
+      "sell_value": 1200,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 160
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon breath frost.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Cold -> 160 flat damage)."
+    },
+    {
+      "id": "wand_of_dragon_breath_poison",
+      "name": "Dragon Breath Poison",
+      "tval": 66,
+      "sval": 30,
+      "weight": 15,
+      "sell_value": 1000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 2
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": {
+              "kind": "flat",
+              "value": 120
+            },
+            "radius": 2,
+            "direction": "aimed"
+          }
+        }
+      ],
+      "description": "A magical wand of dragon breath poison.",
+      "provenance_status": "verified",
+      "notes": "Verified from MAngband use-obj.c (Dragon Poison -> 120 flat damage)."
+    }
+  ]
+}

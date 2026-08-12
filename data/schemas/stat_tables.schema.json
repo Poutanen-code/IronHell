@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/stat_tables.schema.json",
+  "title": "Stat Tables",
+  "description": "MAngband 1.5.3 stat-index lookup tables. All arrays are indexed 0–37 (stat 3 through 18/220+). See stat_index_labels for the mapping. Source: tables.c. adj_dex_ta, adj_str_td, adj_str_th, adj_dex_th store true signed values; the C source encodes them with a +128 offset.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "provenance_status",
+    "stat_index_labels",
+    "adj_con_mhp",
+    "adj_mag_mana",
+    "adj_mag_study",
+    "adj_mag_fail",
+    "adj_mag_stat",
+    "adj_int_dev",
+    "adj_wis_sav",
+    "adj_dex_dis",
+    "adj_int_dis",
+    "adj_chr_gold",
+    "adj_dex_safe",
+    "adj_con_fix",
+    "adj_str_wgt",
+    "adj_str_hold",
+    "adj_str_dig",
+    "adj_str_blow",
+    "adj_dex_blow",
+    "adj_dex_ta",
+    "adj_str_td",
+    "adj_str_th",
+    "adj_dex_th",
+    "blows_table",
+    "player_exp"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" },
+    "note_stat_index": { "type": "string" },
+    "note_offset_tables": { "type": "string" },
+    "stat_index_labels": {
+      "type": "array",
+      "minItems": 38,
+      "maxItems": 38,
+      "items": { "type": "string" }
+    },
+    "adj_con_mhp": { "$ref": "#/$defs/StatArray38" },
+    "adj_mag_mana": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_mag_study": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_mag_fail": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_mag_stat": { "$ref": "#/$defs/StatArray38" },
+    "adj_int_dev": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_wis_sav": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_dex_dis": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_int_dis": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_chr_gold": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_dex_safe": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_con_fix": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_str_wgt": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_str_hold": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_str_dig": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_str_blow": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_dex_blow": { "$ref": "#/$defs/StatArray38NonNeg" },
+    "adj_dex_ta": { "$ref": "#/$defs/StatArray38" },
+    "adj_str_td": { "$ref": "#/$defs/StatArray38" },
+    "adj_str_th": { "$ref": "#/$defs/StatArray38" },
+    "adj_dex_th": { "$ref": "#/$defs/StatArray38" },
+    "blows_table": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "array",
+        "minItems": 12,
+        "maxItems": 12,
+        "items": { "type": "integer", "minimum": 1, "maximum": 6 }
+      }
+    },
+    "player_exp": {
+      "type": "array",
+      "minItems": 50,
+      "maxItems": 50,
+      "items": { "type": "integer", "minimum": 1 }
+    }
+  },
+  "$defs": {
+    "StatArray38": {
+      "type": "array",
+      "minItems": 38,
+      "maxItems": 38,
+      "items": { "type": "integer" }
+    },
+    "StatArray38NonNeg": {
+      "type": "array",
+      "minItems": 38,
+      "maxItems": 38,
+      "items": { "type": "integer", "minimum": 0 }
+    }
+  }
+}

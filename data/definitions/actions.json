@@ -1,0 +1,1473 @@
+{
+  "schema_version": 1,
+  "actions": [
+    {
+      "action_id": "BoltDamage",
+      "name": "Bolt Damage",
+      "description": "Single-target projectile damage payload shared across caster and device sources.",
+      "category": "damage",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "damage_type",
+            "description": "Damage channel delivered by the bolt.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+          },
+          {
+            "id": "amount",
+            "description": "Typed damage expression for the bolt payload.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "direction",
+            "description": "Directional input or trajectory token for the bolt path.",
+            "value_type": "token",
+            "required": true
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1. light_weak and holy_orb damage types added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "BallDamage",
+      "name": "Ball Damage",
+      "description": "Area-of-effect damage payload centered on a point, target, or source actor.",
+      "category": "damage",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "staff"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "damage_type",
+            "description": "Damage channel delivered by the ball effect.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+          },
+          {
+            "id": "amount",
+            "description": "Typed damage expression for the area payload.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "radius",
+            "description": "Blast radius in tiles.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "target_mode",
+            "description": "Targeting mode for the ball center.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["point", "target", "self", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "HealHP",
+      "name": "Heal HP",
+      "description": "Restores hit points to the resolved target set.",
+      "category": "healing",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "potion", "rod", "staff", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "amount",
+            "description": "Typed healing expression.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the healing payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "ally", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "CureStatus",
+      "name": "Cure Status",
+      "description": "Removes one or more timed statuses from the resolved target set.",
+      "category": "status",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "potion", "rod", "staff"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "status_ids",
+            "description": "Status identifiers removed by this payload.",
+            "value_type": "id_list",
+            "required": true,
+            "reference_domain": "status",
+            "min_items": 1
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the cure payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "ally", "area"]
+          },
+          {
+            "id": "cure_mode",
+            "description": "How thoroughly the status is removed. full sets the counter to zero; halve divides the counter by two.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": ["full", "halve"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1. cure_mode added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "ApplyTimedBuff",
+      "name": "Apply Timed Buff",
+      "description": "Applies a timed beneficial status to the resolved target set.",
+      "category": "status",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "potion", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "status_id",
+            "description": "Timed status granted by the payload.",
+            "value_type": "id",
+            "required": true,
+            "reference_domain": "status"
+          },
+          {
+            "id": "duration",
+            "description": "Duration expression for the granted timed status.",
+            "value_type": "duration",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the timed buff.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "ally"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+       }
+    },
+    {
+      "action_id": "ApplyOpposeElements",
+      "name": "Apply Oppose Elements",
+      "description": "Applies timed elemental oppose coverage without flattening it into permanent resistance.",
+      "category": "status",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "potion", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "elements",
+            "description": "Element set granted as timed oppose state.",
+            "value_type": "enum_list",
+            "required": true,
+            "allowed_values": ["acid", "lightning", "fire", "cold", "poison"]
+          },
+          {
+            "id": "duration",
+            "description": "Duration expression for the oppose state.",
+            "value_type": "duration",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the timed oppose payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "ally"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1 with explicit separation from permanent resistance."
+      }
+    },
+    {
+      "action_id": "TeleportSelf",
+      "name": "Teleport Self",
+      "description": "Relocates the acting entity according to a self-teleport mode and distance envelope.",
+      "category": "movement",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation", "trap"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "distance",
+            "description": "Maximum relocation distance. Zero means policy-defined or level-wide.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "teleport_mode",
+            "description": "Semantic mode of self-relocation.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["phase", "teleport", "escape", "random"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "LightArea",
+      "name": "Light Area",
+      "description": "Applies lighting to an area or illumination pattern.",
+      "category": "information",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "radius",
+            "description": "Lighting radius. Zero means full local effect semantics are policy-defined.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "light_style",
+            "description": "Lighting presentation or effect style.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["torch", "illumination", "starlight", "room"]
+          },
+          {
+            "id": "damage_light_sensitive",
+            "description": "When present, projects GF_LITE_WEAK damage at this amount to light-sensitive monsters in the illuminated area. Omit when no damage component applies.",
+            "value_type": "structured_amount",
+            "required": false
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1. damage_light_sensitive and room light_style added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "DetectEntities",
+      "name": "Detect Entities",
+      "description": "Reveals one or more categories of entities or map objects.",
+      "category": "information",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "targets",
+            "description": "Entity or map-object categories to reveal.",
+            "value_type": "enum_list",
+            "required": true,
+            "allowed_values": ["monsters", "objects", "traps", "doors", "stairs", "evil", "all", "enchanted_objects", "invisible_monsters"]
+          },
+          {
+            "id": "radius",
+            "description": "Optional reveal radius. Zero means full local search semantics are policy-defined.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "MapArea",
+      "name": "Map Area",
+      "description": "Reveals structural dungeon information across a local area or wider scope.",
+      "category": "information",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "scroll", "rod", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "reveal_mode",
+            "description": "Mapping depth or reveal style.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["local", "level", "clairvoyant", "full_level_illuminate"]
+          },
+          {
+            "id": "radius",
+            "description": "Mapping radius when reveal_mode is area-scoped. Zero means level scope.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "IdentifyItem",
+      "name": "Identify Item",
+      "description": "Reveals item knowledge for one or more selected items.",
+      "category": "information",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "scroll", "rod", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "identify_scope",
+            "description": "Selection scope for the identification payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["single", "all_carried", "all_equipped", "comprehensive"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "EnchantEquipment",
+      "name": "Enchant Equipment",
+      "description": "Applies a positive equipment enchantment profile to a selected item.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "scroll"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "enchantment_profile",
+            "description": "Declared enchantment profile applied to the selected equipment.",
+            "value_type": "token",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Item selection mode for the enchantment.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["single_item", "equipped_item"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "SleepControl",
+      "name": "Sleep Control",
+      "description": "Applies sleep control to one or more hostile targets.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "wand", "rod", "staff", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope for the control payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+          },
+          {
+            "id": "potency",
+            "description": "Relative power used by downstream validation and resolution.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "radius",
+            "description": "Area radius when target_mode is area-like.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "entity_filter",
+            "description": "Restricts the sleep effect to entities matching this tag. Omit to affect all entities.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": ["all", "evil", "undead", "demon"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1. entity_filter added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "SlowControl",
+      "name": "Slow Control",
+      "description": "Applies slowing control to one or more hostile targets.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "wand", "rod", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope for the control payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+          },
+          {
+            "id": "potency",
+            "description": "Relative power used by downstream validation and resolution.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "radius",
+            "description": "Area radius when target_mode is area-like.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "DispelByTag",
+      "name": "Dispel By Tag",
+      "description": "Damages or clears entities selected by a reusable tag-based filter.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": ["prayer", "staff"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "entity_filter",
+            "description": "Tag filter used to choose affected entities.",
+            "value_type": "enum_list",
+            "required": true,
+            "allowed_values": ["evil", "undead", "demon", "all"]
+          },
+          {
+            "id": "amount",
+            "description": "Typed dispel amount expression.",
+            "value_type": "structured_amount",
+            "required": true
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "DrainLife",
+      "name": "Drain Life",
+      "description": "Delivers direct life-draining damage through a directed offensive payload.",
+      "category": "damage",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "rod", "wand", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "amount",
+            "description": "Typed life-drain amount expression.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "direction",
+            "description": "Directional input or trajectory token for the drain path.",
+            "value_type": "token",
+            "required": true
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "Earthquake",
+      "name": "Earthquake",
+      "description": "Applies a terrain-disrupting area mutation centered on the actor, target, or selected point.",
+      "category": "terrain",
+      "confidence": "high",
+      "allowed_source_families": ["spell", "prayer", "staff", "monster_spell", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "radius",
+            "description": "Affected radius in tiles.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "center_mode",
+            "description": "How the earthquake center is chosen.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "point"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+      }
+    },
+    {
+      "action_id": "BeamDamage",
+      "name": "Beam Damage",
+      "description": "Directed linear damage payload with beam semantics.",
+      "category": "damage",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "rod", "wand", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "damage_type",
+            "description": "Damage channel delivered by the beam.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+          },
+          {
+            "id": "amount",
+            "description": "Typed damage expression for the beam payload.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "direction",
+            "description": "Directional input or trajectory token for the beam path.",
+            "value_type": "token",
+            "required": true
+          },
+          {
+            "id": "terrain_effect",
+            "description": "Optional terrain side-effect applied to each grid cell along the beam path. illuminate_path is the GF_LITE_WEAK grid effect that permanently lights cells.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": ["none", "illuminate_path"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. light_weak damage type and terrain_effect parameter added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "TeleportTarget",
+      "name": "Teleport Target",
+      "description": "Forcibly relocates one or more targets away from their current position.",
+      "category": "movement",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "rod", "wand", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "distance",
+            "description": "Maximum relocation distance. Zero means policy-defined or level-wide.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "target_mode",
+            "description": "Target envelope for forced relocation.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "all_nearby"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "RecallOrLevelShift",
+      "name": "Recall Or Level Shift",
+      "description": "Schedules or forces an inter-level relocation outcome.",
+      "category": "movement",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "relocation_mode",
+            "description": "Inter-level relocation mode used by the payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["recall", "word_of_recall", "teleport_level", "alter_reality", "forced_level_shift"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "DarkenArea",
+      "name": "Darken Area",
+      "description": "Applies darkness or visibility suppression to an area.",
+      "category": "information",
+      "confidence": "medium",
+      "allowed_source_families": ["monster_spell", "spell", "prayer", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "radius",
+            "description": "Affected darkness radius.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "darkness_mode",
+            "description": "Darkness application style.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["ambient", "projected", "self_centered"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "RechargeItem",
+      "name": "Recharge Item",
+      "description": "Restores device resource state according to a declared recharge power.",
+      "category": "item",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "scroll", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "power",
+            "description": "Relative recharge strength used by downstream resolution.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "item_kind_filter",
+            "description": "Device kinds the recharge payload is allowed to target.",
+            "value_type": "enum_list",
+            "required": true,
+            "allowed_values": ["wand", "staff", "device", "rechargeable"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2 with explicit policy separation for recharge risk."
+      }
+    },
+    {
+      "action_id": "BrandWeapon",
+      "name": "Brand Weapon",
+      "description": "Applies a declared brand profile to a selected weapon.",
+      "category": "item",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "brand_type",
+            "description": "Brand applied to the target weapon.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["flame", "frost", "poison", "holy", "chaos", "elemental"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Weapon selection mode.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["equipped_weapon", "single_item"]
+          },
+          {
+            "id": "success_chance",
+            "description": "Relative success chance for the brand application.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0,
+            "maximum": 100
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "AlterTerrain",
+      "name": "Alter Terrain",
+      "description": "Applies a reusable terrain or feature transformation payload.",
+      "category": "terrain",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "wand", "staff", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "terrain_operation",
+            "description": "Declared terrain or feature operation.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["stone_to_mud", "destroy_trap_or_door", "create_door", "create_stair", "rune_of_protection", "destruction_field", "glyph_of_warding", "unbar_paths", "glyph", "create_object"]
+          },
+          {
+            "id": "target_mode",
+            "description": "How the terrain transformation is aimed or centered.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["direction", "point", "area", "self", "target"]
+          },
+          {
+            "id": "radius",
+            "description": "Optional area radius for area-like terrain operations.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "entity_effect",
+            "description": "Optional entity-level side effect applied during terrain alteration. remove_all_in_radius covers the destroy_area(full=TRUE) monster-deletion behavior.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": ["none", "remove_all_in_radius"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "ConfuseControl",
+      "name": "Confuse Control",
+      "description": "Applies confusion control to one or more targets.",
+      "category": "control",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "wand", "monster_spell", "trap"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope for the control payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area", "all_nearby"]
+          },
+          {
+            "id": "potency",
+            "description": "Relative power used by downstream validation and resolution.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "duration",
+            "description": "Optional duration expression when the payload applies timed confusion directly.",
+            "value_type": "duration",
+            "required": false
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "FearControl",
+      "name": "Fear Control",
+      "description": "Applies fear control to one or more targets.",
+      "category": "control",
+      "confidence": "medium",
+      "allowed_source_families": ["prayer", "wand", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope for the control payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+          },
+          {
+            "id": "potency",
+            "description": "Relative power used by downstream validation and resolution.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "duration",
+            "description": "Optional duration expression when fear is directly timed.",
+            "value_type": "duration",
+            "required": false
+          },
+          {
+            "id": "entity_filter",
+            "description": "Restricts the fear effect to entities matching this tag. Omit to affect all entities. undead is required for Turn Undead semantics.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": ["all", "evil", "undead", "demon"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. all_in_los target_mode and entity_filter added in Action Catalog Stabilization Pass."
+      }
+    },
+    {
+      "action_id": "ParalyzeControl",
+      "name": "Paralyze Control",
+      "description": "Applies paralysis control to one or more targets.",
+      "category": "control",
+      "confidence": "medium",
+      "allowed_source_families": ["monster_spell", "trap"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope for the control payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area"]
+          },
+          {
+            "id": "duration",
+            "description": "Duration expression for the applied paralysis.",
+            "value_type": "duration",
+            "required": true
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "BanishByRule",
+      "name": "Banish By Rule",
+      "description": "Removes entities according to a declared banishment rule.",
+      "category": "control",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "staff"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "banish_rule",
+            "description": "Rule used to select entities for removal.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["evil", "targeted_non_unique", "mass_non_unique", "evil_only", "non_unique", "all"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Scope in which banishment is resolved.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "area", "level"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "SummonEntities",
+      "name": "Summon Entities",
+      "description": "Creates one or more entities of a declared summon family.",
+      "category": "summoning",
+      "confidence": "medium",
+      "allowed_source_families": ["monster_spell", "staff", "activation", "trap"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "summon_family",
+            "description": "Entity family used by the summon payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["monster", "animal", "undead", "demon", "dragon", "spider", "hound", "unique"]
+          },
+          {
+            "id": "count",
+            "description": "Number of entities requested by the summon payload.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          },
+          {
+            "id": "target_mode",
+            "description": "Where or around whom summoned entities are created.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "near_target", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2."
+      }
+    },
+    {
+      "action_id": "InspectEntity",
+      "name": "Inspect Entity",
+      "description": "Reveals detailed runtime state (current HP, lore flags, resistances) for entities within range. Distinct from DetectEntities which only reveals entity positions.",
+      "category": "information",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "scroll", "rod"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "scope",
+            "description": "Which information is revealed about the resolved entity set.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["hp", "known_lore", "probing"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Target selection envelope for entity inspection.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["all_in_sight", "target", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_PROBING semantics. Reusable across prayer, scroll, and device sources."
+      }
+    },
+    {
+      "action_id": "RestoreAttributes",
+      "name": "Restore Attributes",
+      "description": "Restores drained stats and/or lost experience levels according to the selected scope.",
+      "category": "healing",
+      "confidence": "medium",
+      "allowed_source_families": ["prayer", "potion", "scroll", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "restore_scope",
+            "description": "Which attributes are restored by this payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["all_stats", "experience_level", "single_stat"]
+          },
+          {
+            "id": "stat_id",
+            "description": "Required when restore_scope is single_stat.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "strength",
+              "intelligence",
+              "wisdom",
+              "dexterity",
+              "constitution",
+              "charisma"
+            ]
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the restoration payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_RESTORATION and PRAYER_REMEMBRANCE. Covers do_res_stat (single_stat and all_stats) and restore_level (experience_level) semantics."
+      }
+    },
+    {
+      "action_id": "RemoveCurse",
+      "name": "Remove Curse",
+      "description": "Removes one or all curses from the actor's equipped items.",
+      "category": "item",
+      "confidence": "medium",
+      "allowed_source_families": ["prayer", "scroll", "activation"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "scope",
+            "description": "Whether one curse or all curses are removed. single covers remove_curse; all covers remove_all_curse.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["single", "all"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for PRAYER_REMOVE_CURSE (scope=single) and PRAYER_DISPEL_CURSE (scope=all). Reusable by scroll sources."
+      }
+    },
+    {
+      "action_id": "ModifyResourceMeter",
+      "name": "Modify Resource Meter",
+      "description": "Sets or adjusts a named actor resource meter such as the food satiation counter.",
+      "category": "utility",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "prayer", "potion", "scroll", "consumable"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "meter",
+            "description": "The named resource meter to modify.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["food", "mana"]
+          },
+          {
+            "id": "mode",
+            "description": "How the meter value is changed.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["set_max", "set_near_max", "add", "set_value"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for Satisfy Hunger semantics. set_food(PY_FOOD_MAX-1) maps to mode=set_near_max. Reusable across spell and consumable sources."
+      }
+    },
+    {
+      "action_id": "ModifyAttribute",
+      "name": "Modify Attribute",
+      "description": "Applies a canonical attribute modification operation using MAngband stat progression semantics.",
+      "category": "attribute",
+      "confidence": "medium",
+      "allowed_source_families": [
+        "potion",
+        "monster_blow",
+        "monster_spell",
+        "trap",
+        "spell",
+        "prayer"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "scope",
+            "description": "Whether a single attribute or all attributes are modified.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "single_stat",
+              "all_stats"
+            ]
+          },
+          {
+            "id": "stat_id",
+            "description": "Required when scope is single_stat.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "strength",
+              "intelligence",
+              "wisdom",
+              "dexterity",
+              "constitution",
+              "charisma"
+            ]
+          },
+          {
+            "id": "operation",
+            "description": "The attribute operation to perform.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "increase",
+              "decrease"
+            ]
+          },
+          {
+            "id": "modification_mode",
+            "description": "Whether the modification is permanent or restorable.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "permanent",
+              "restorable"
+            ]
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the attribute modification.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "self",
+              "target"
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action for MAngband attribute gain and attribute drain semantics. Uses native stat progression algorithms rather than explicit numeric adjustments. Attribute restoration remains represented by RestoreAttributes."
+      }
+    },
+    {
+      "action_id": "ModifyExperience",
+      "name": "Modify Experience",
+      "description": "Adjusts experience by a specified amount.",
+      "category": "progression",
+      "confidence": "medium",
+      "allowed_source_families": [
+        "monster_blow",
+        "monster_spell",
+        "potion",
+        "spell",
+        "prayer",
+        "consumable"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "amount",
+            "description": "Signed experience adjustment.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "modification_mode",
+            "description": "Nature of the experience adjustment.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["permanent", "restorable"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the experience adjustment.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action for experience gain and experience drain semantics. Experience restoration remains represented by RestoreAttributes(experience_level)."
+      }
+    },
+    {
+      "action_id": "TransformEntity",
+      "name": "Transform Entity",
+      "description": "Replaces the resolved target entity with a randomly selected entity of the same class.",
+      "category": "control",
+      "confidence": "medium",
+      "allowed_source_families": ["spell", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "transform_rule",
+            "description": "Rule governing the selection of the replacement entity.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["polymorph_other"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Target selection mode for the transformation payload.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["target", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for SPELL_POLYMORPH_OTHER. poly_monster replaces target with a random monster of the same approximate depth."
+      }
+    }
+  ]
+}

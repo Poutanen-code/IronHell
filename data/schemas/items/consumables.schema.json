@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/consumables.schema.json",
+  "title": "Consumables",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "consumables"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "consumables": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/ConsumableItem" }
+    }
+  },
+  "$defs": {
+    "ConsumableItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "type", "tval", "sval",
+        "cooldown_ticks", "stack_size", "weight", "sell_value",
+        "capability_ids", "allocation_table",
+        "description", "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "common_item.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["mushroom", "food"]
+        },
+        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
+        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
+        "cooldown_ticks": { "type": "integer", "minimum": 0 },
+        "stack_size": { "type": "integer", "minimum": 1 },
+        "weight": { "type": "number", "minimum": 0 },
+        "sell_value": { "type": "integer", "minimum": 0 },
+        "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "effects": { "$ref": "common_item.schema.json#/$defs/Effects" },
+        "description": { "type": "string", "minLength": 1 },
+        "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
+      }
+    }
+  }
+}

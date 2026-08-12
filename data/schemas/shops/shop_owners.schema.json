@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ironhell/rewrite/shop_owners",
+  "type": "object",
+  "required": ["version", "ownersByShopType"],
+  "properties": {
+    "version": { "type": "string" },
+    "ownersByShopType": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id", "name", "raceId", "purse", "greed", "maxGreed"],
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" },
+            "raceId": { "type": "string" },
+            "purse": { "type": "integer" },
+            "greed": { "type": "integer" },
+            "maxGreed": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}

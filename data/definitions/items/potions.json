@@ -1,0 +1,1541 @@
+{
+  "schema_version": 1,
+  "potions": [
+    {
+      "id": "potion_of_water",
+      "name": "Potion of Water",
+      "tval": 75,
+      "sval": 0,
+      "weight": 4,
+      "sell_value": 1,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It has no effect apart from providing nourishment.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_apple_juice",
+      "name": "Potion of Apple Juice",
+      "tval": 75,
+      "sval": 1,
+      "weight": 4,
+      "sell_value": 1,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It has no effect apart from providing nourishment.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_slime_mold_juice",
+      "name": "Potion of Slime Mold Juice",
+      "tval": 75,
+      "sval": 2,
+      "weight": 4,
+      "sell_value": 2,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It has no effect apart from providing nourishment.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_slowness",
+      "name": "Potion of Slowness",
+      "tval": 75,
+      "sval": 4,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It slows you down (-10 to speed) for 15+1d25 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "SlowControl",
+          "parameters": {
+            "target_mode": "self",
+            "potency": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_salt_water",
+      "name": "Potion of Salt Water",
+      "tval": 75,
+      "sval": 5,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces vomiting, causing severe hunger and 4 turns of paralysis (even with free action), but clears away all poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "paralyzed",
+            "duration": {
+              "base": 4
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"forced\":true}"
+    },
+    {
+      "id": "potion_of_poison",
+      "name": "Potion of Poison",
+      "tval": 75,
+      "sval": 6,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It poisons you (adding 9+1d15 points to the poison counter), unless you have resistance to poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "poisoned",
+            "duration": {
+              "base": 9,
+              "dice": {
+                "count": 1,
+                "sides": 15
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_pois\"}"
+    },
+    {
+      "id": "potion_of_blindness",
+      "name": "Potion of Blindness",
+      "tval": 75,
+      "sval": 7,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces blindness for 99+1d100 turns, unless you have resistance to blindness.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": {
+              "base": 99,
+              "dice": {
+                "count": 1,
+                "sides": 100
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+    },
+    {
+      "id": "potion_of_confusion",
+      "name": "Potion of Confusion",
+      "tval": 75,
+      "sval": 9,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces confusion for 14+1d20 turns, unless you have resistance to confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "confused",
+            "duration": {
+              "base": 14,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_sleep",
+      "name": "Potion of Sleep",
+      "tval": 75,
+      "sval": 11,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        }
+      ],
+      "description": "It induces paralyzation for 3+1d4 turns, unless you have free action.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "paralyzed",
+            "duration": {
+              "base": 3,
+              "dice": {
+                "count": 1,
+                "sides": 4
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"free_act\"}"
+    },
+    {
+      "id": "potion_of_lose_memories",
+      "name": "Potion of Lose Memories",
+      "tval": 75,
+      "sval": 13,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It drains 25% of your experience total, unless you have hold life.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyExperience",
+          "parameters": {
+            "amount": {
+              "kind": "runtime_formula",
+              "source_item_id": "potion_of_lose_memories"
+            },
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_weakness",
+      "name": "Potion of Weakness",
+      "tval": 75,
+      "sval": 16,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces strength (unless you have sustain strength).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "strength",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_stupidity",
+      "name": "Potion of Stupidity",
+      "tval": 75,
+      "sval": 17,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces intelligence (unless you have sustain intelligence).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "intelligence",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_naivety",
+      "name": "Potion of Naivety",
+      "tval": 75,
+      "sval": 18,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces wisdom (unless you have sustain wisdom).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "wisdom",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_clumsiness",
+      "name": "Potion of Clumsiness",
+      "tval": 75,
+      "sval": 19,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces dexterity (unless you have sustain dexterity).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "dexterity",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_sickliness",
+      "name": "Potion of Sickliness",
+      "tval": 75,
+      "sval": 20,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces constitution (unless you have sustain constitution).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "constitution",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_ugliness",
+      "name": "Potion of Ugliness",
+      "tval": 75,
+      "sval": 21,
+      "weight": 4,
+      "sell_value": 0,
+      "is_harmful": true,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It reduces charisma (unless you have sustain charisma).",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "charisma",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_infravision",
+      "name": "Potion of Infravision",
+      "tval": 75,
+      "sval": 24,
+      "weight": 4,
+      "sell_value": 20,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It extends the radius of your infravision by 50 feet for 100+1d100 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "infravision_boost",
+            "duration": {
+              "base": 100,
+              "dice": {
+                "count": 1,
+                "sides": 100
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_detect_invisible",
+      "name": "Potion of Detect Invisible",
+      "tval": 75,
+      "sval": 25,
+      "weight": 4,
+      "sell_value": 50,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It enables you to see invisible creatures for 12+1d12 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "see_invisible",
+            "duration": {
+              "base": 12,
+              "dice": {
+                "count": 1,
+                "sides": 12
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_slow_poison",
+      "name": "Potion of Slow Poison",
+      "tval": 75,
+      "sval": 26,
+      "weight": 4,
+      "sell_value": 25,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It halves the severity of any current poisoning.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "halve"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_neutralize_poison",
+      "name": "Potion of Neutralize Poison",
+      "tval": 75,
+      "sval": 27,
+      "weight": 4,
+      "sell_value": 75,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It neutralizes poison.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_boldness",
+      "name": "Potion of Boldness",
+      "tval": 75,
+      "sval": 28,
+      "weight": 4,
+      "sell_value": 10,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It removes fear.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_speed",
+      "name": "Potion of Speed",
+      "tval": 75,
+      "sval": 29,
+      "weight": 4,
+      "sell_value": 75,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        },
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It hastes you (+10 to speed) for 15+1d25 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "haste",
+            "duration": {
+              "base": 15,
+              "dice": {
+                "count": 1,
+                "sides": 25
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_resist_heat",
+      "name": "Potion of Resist Heat",
+      "tval": 75,
+      "sval": 30,
+      "weight": 4,
+      "sell_value": 30,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It grants you temporary resistance to fire for 10+1d10 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "resist_fire",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_resist_cold",
+      "name": "Potion of Resist Cold",
+      "tval": 75,
+      "sval": 31,
+      "weight": 4,
+      "sell_value": 30,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It grants you temporary resistance to cold for 10+1d10 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "resist_cold",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_heroism",
+      "name": "Potion of Heroism",
+      "tval": 75,
+      "sval": 32,
+      "weight": 4,
+      "sell_value": 35,
+      "allocation_table": [
+        {
+          "depth": 1,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 10 points of damage, removes fear, and grants heroism (resistance to fear and +12 to-hit) for 25+1d25 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "heroism",
+            "duration": {
+              "base": 25,
+              "dice": {
+                "count": 1,
+                "sides": 25
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_berserk_strength",
+      "name": "Potion of Berserk Strength",
+      "tval": 75,
+      "sval": 33,
+      "weight": 4,
+      "sell_value": 100,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 30 points of damage, removes fear, and grants berserk strength (resistance to fear, +12 to-hit, -10 to AC) for 25+1d25 turns.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 30
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "berserk",
+            "duration": {
+              "base": 25,
+              "dice": {
+                "count": 1,
+                "sides": 25
+              }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_cure_light_wounds",
+      "name": "Potion of Cure Light Wounds",
+      "tval": 75,
+      "sval": 34,
+      "weight": 4,
+      "sell_value": 15,
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 1,
+          "rarity": 1
+        },
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 15 points of damage, heals 20 points worth of cuts and confusion, and cures blindness.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 15
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_cure_serious_wounds",
+      "name": "Potion of Cure Serious Wounds",
+      "tval": 75,
+      "sval": 35,
+      "weight": 4,
+      "sell_value": 40,
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 1d5+20 points of damage, heals all cut damage, and cures blindness and confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 5,
+              "base": 20
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "confused"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_cure_critical_wounds",
+      "name": "Potion of Cure Critical Wounds",
+      "tval": 75,
+      "sval": 36,
+      "weight": 4,
+      "sell_value": 100,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 1d5+25 points of damage, cures all stunning, heals all cut damage, neutralizes poison, and cures blindness and confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 5,
+              "base": 25
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "confused"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_healing",
+      "name": "Potion of Healing",
+      "tval": 75,
+      "sval": 37,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        },
+        {
+          "depth": 60,
+          "rarity": 1
+        }
+      ],
+      "description": "It cures 300 points of damage, cures all stunning, heals all cut damage, neutralizes poison, and cures blindness and confusion.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 300
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "blinded"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "confused"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_mana",
+      "name": "Potion of Restore Mana",
+      "tval": 75,
+      "sval": 40,
+      "weight": 4,
+      "sell_value": 350,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        },
+        {
+          "depth": 70,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores mana points to maximum if they are currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "mana",
+            "mode": "set_max"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_life_levels",
+      "name": "Potion of Restore Life Levels",
+      "tval": 75,
+      "sval": 41,
+      "weight": 4,
+      "sell_value": 400,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores experience to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_strength",
+      "name": "Potion of Restore Strength",
+      "tval": 75,
+      "sval": 42,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores strength to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "strength",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_intelligence",
+      "name": "Potion of Restore Intelligence",
+      "tval": 75,
+      "sval": 43,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores intelligence to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "intelligence",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_wisdom",
+      "name": "Potion of Restore Wisdom",
+      "tval": 75,
+      "sval": 44,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores wisdom to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "wisdom",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_dexterity",
+      "name": "Potion of Restore Dexterity",
+      "tval": 75,
+      "sval": 45,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores dexterity to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "dexterity",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_constitution",
+      "name": "Potion of Restore Constitution",
+      "tval": 75,
+      "sval": 46,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores constitution to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "constitution",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_restore_charisma",
+      "name": "Potion of Restore Charisma",
+      "tval": 75,
+      "sval": 47,
+      "weight": 4,
+      "sell_value": 300,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It restores charisma to maximum if it is currently below maximum.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "charisma",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_strength",
+      "name": "Potion of Strength",
+      "tval": 75,
+      "sval": 48,
+      "weight": 4,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Strength, then permanently increases strength.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "strength",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "strength",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_intelligence",
+      "name": "Potion of Intelligence",
+      "tval": 75,
+      "sval": 49,
+      "weight": 4,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Intelligence, then permanently increases intelligence.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "intelligence",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "intelligence",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_wisdom",
+      "name": "Potion of Wisdom",
+      "tval": 75,
+      "sval": 50,
+      "weight": 4,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Wisdom, then permanently increases wisdom.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "wisdom",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "wisdom",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_dexterity",
+      "name": "Potion of Dexterity",
+      "tval": 75,
+      "sval": 51,
+      "weight": 4,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Dexterity, then permanently increases dexterity.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "dexterity",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "dexterity",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_constitution",
+      "name": "Potion of Constitution",
+      "tval": 75,
+      "sval": 52,
+      "weight": 4,
+      "sell_value": 8000,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Constitution, then permanently increases constitution.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "constitution",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "constitution",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_charisma",
+      "name": "Potion of Charisma",
+      "tval": 75,
+      "sval": 53,
+      "weight": 4,
+      "sell_value": 1000,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "description": "It first acts as a Potion of Restore Charisma, then permanently increases charisma.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "single_stat",
+            "stat_id": "charisma",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "charisma",
+            "operation": "increase",
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_enlightenment",
+      "name": "Potion of Enlightenment",
+      "tval": 75,
+      "sval": 56,
+      "weight": 4,
+      "sell_value": 800,
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
+      "description": "It completely lights up and magically maps the current dungeon level.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "full_level_illuminate"
+          }
+        },
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 0,
+            "light_style": "room"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion_of_experience",
+      "name": "Potion of Experience",
+      "tval": 75,
+      "sval": 59,
+      "weight": 4,
+      "sell_value": 25000,
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 1
+        }
+      ],
+      "description": "It grants either 100000 experience points or half the current experience total plus 10, whichever is less.",
+      "provenance_status": "verified",
+      "effects": [
+        {
+          "action_id": "ModifyExperience",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 100000
+            },
+            "modification_mode": "permanent",
+            "target_mode": "self"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/artifacts.schema.json",
+  "title": "Artifacts",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifacts"],
+  "properties": {
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "serial", "name", "tval", "sval", "pval", "depth", "rarity",
+          "weight", "cost", "base_ac", "damage", "plus_to_hit",
+          "plus_to_dam", "plus_to_ac", "flags", "description"
+        ],
+        "properties": {
+          "serial": { "type": "integer" },
+          "name": { "type": "string" },
+          "tval": { "type": "integer" },
+          "sval": { "type": "integer" },
+          "pval": { "type": "integer" },
+          "depth": { "type": "integer" },
+          "rarity": { "type": "integer" },
+          "weight": { "type": "integer" },
+          "cost": { "type": "integer" },
+          "base_ac": { "type": "integer" },
+          "damage": { "type": "string" },
+          "plus_to_hit": { "type": "integer" },
+          "plus_to_dam": { "type": "integer" },
+          "plus_to_ac": { "type": "integer" },
+          "flags": { "type": "array", "items": { "type": "string" } },
+          "activation": {
+            "description": "Legacy activation ID. Must match an activation_id in activations.json. Kept as a plain string for backward compatibility.",
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "recharge_base": { "type": "integer", "minimum": 0 },
+          "recharge_dice": { "type": "integer", "minimum": 0 },
+          "description": { "type": "string" }
+        },
+        "if": {
+          "properties": {
+            "flags": { "contains": { "const": "ACTIVATE" } }
+          }
+        },
+        "then": {
+          "required": ["activation", "recharge_base", "recharge_dice"]
+        }
+      }
+    }
+  }
+}

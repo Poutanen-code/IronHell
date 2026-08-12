@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "item_affixes": [
+    {
+      "id": "strength",
+      "name": "Strength",
+      "description": "Modifies bearer Strength stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence",
+      "description": "Modifies bearer Intelligence stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "wisdom",
+      "name": "Wisdom",
+      "description": "Modifies bearer Wisdom stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "dexterity",
+      "name": "Dexterity",
+      "description": "Modifies bearer Dexterity stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "constitution",
+      "name": "Constitution",
+      "description": "Modifies bearer Constitution stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "charisma",
+      "name": "Charisma",
+      "description": "Modifies bearer Charisma stat.",
+      "value_type": "integer",
+      "unit": "stat_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "armor",
+      "name": "Armor",
+      "description": "Flat bonus to armor class.",
+      "value_type": "integer",
+      "unit": "ac_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "description": "Modifies bearer movement speed.",
+      "value_type": "integer",
+      "unit": "speed_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "light_radius",
+      "name": "Light Radius",
+      "description": "Extends the bearer light radius.",
+      "value_type": "integer",
+      "unit": "tiles",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "to_hit",
+      "name": "To Hit",
+      "description": "Extends the bearer to-hit bonus.",
+      "value_type": "integer",
+      "unit": "hit_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "to_damage",
+      "name": "To Damage",
+      "description": "Extends the bearer to-damage bonus.",
+      "value_type": "integer",
+      "unit": "damage_points",
+      "provenance_status": "observed"
+    },
+    {
+      "id": "to_ac",
+      "name": "Armor Bonus",
+      "description": "Extends the bearer armor class bonus.",
+      "value_type": "integer",
+      "unit": "ac_points",
+      "provenance_status": "observed"
+    }
+  ]
+}

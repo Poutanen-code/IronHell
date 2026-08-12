@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/resistances.schema.json",
+  "title": "Gameplay Architecture V2 Resistance Layer",
+  "description": "Typed mitigation and protection semantics. Resist, Oppose, Immunity, and Ignore remain distinct concepts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "resistances"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "resistances": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/ResistanceDefinition" }
+    }
+  },
+  "$defs": {
+    "ResistanceId": {
+      "$ref": "common.schema.json#/$defs/Id"
+    },
+    "SemanticKind": {
+      "type": "string",
+      "enum": ["resist", "oppose", "immunity", "ignore"]
+    },
+    "TargetScope": {
+      "type": "string",
+      "enum": ["bearer", "item_self"]
+    },
+    "Channel": {
+      "type": "string",
+      "enum": [
+        "acid",
+        "elec",
+        "fire",
+        "cold",
+        "pois",
+        "lite",
+        "dark",
+        "blind",
+        "confu",
+        "sound",
+        "shard",
+        "nexus",
+        "nethr",
+        "chaos",
+        "disen",
+        "fear",
+        "elemental_bundle"
+      ]
+    },
+    "ResistanceDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "semantic_kind",
+        "target_scope",
+        "channel",
+        "provenance_status"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/ResistanceId" },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "semantic_kind": { "$ref": "#/$defs/SemanticKind" },
+        "target_scope": { "$ref": "#/$defs/TargetScope" },
+        "channel": { "$ref": "#/$defs/Channel" },
+        "status_id": {
+          "$ref": "common.schema.json#/$defs/Id",
+          "description": "Required for oppose semantics to bind timed status channel definitions."
+        },
+        "notes": { "type": "string" },
+        "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "semantic_kind": { "const": "oppose" } },
+            "required": ["semantic_kind"]
+          },
+          "then": {
+            "required": ["status_id"],
+            "properties": {
+              "target_scope": { "const": "bearer" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "semantic_kind": { "const": "ignore" } },
+            "required": ["semantic_kind"]
+          },
+          "then": {
+            "properties": {
+              "target_scope": { "const": "item_self" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "semantic_kind": { "enum": ["resist", "immunity"] } },
+            "required": ["semantic_kind"]
+          },
+          "then": {
+            "properties": {
+              "target_scope": { "const": "bearer" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

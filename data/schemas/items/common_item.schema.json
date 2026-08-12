@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/items/common_item.schema.json",
+  "title": "Common Item Definitions",
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "ProvenanceStatus": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "observed",
+        "derived",
+        "inferred",
+        "ironhell_specific",
+        "unresolved"
+      ]
+    },
+    "DamageDice": {
+      "type": "string",
+      "pattern": "^[0-9]+d[0-9]+(\\+[0-9]+)?$"
+    },
+    "AllocationEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["depth", "rarity"],
+      "properties": {
+        "depth": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rarity": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "AllocationTable": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/AllocationEntry" }
+    },
+    "Affix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": { "type": "string", "minLength": 1 },
+        "value": { "type": "number" }
+      }
+    },
+    "Tval": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "integer", "minimum": 0 }
+      ]
+    },
+    "Sval": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "integer", "minimum": 0 }
+      ]
+    },
+    "EffectId": {
+      "description": "Primitive effect type discriminator. Must be one of the known effect types defined in effects.schema.json.",
+      "type": "string",
+      "enum": [
+        "damage",
+        "heal",
+        "apply_status",
+        "cure_status",
+        "restore_life",
+        "restore_stat",
+        "restore_all_stats",
+        "drain_stat",
+        "gain_stat",
+        "restore_mana",
+        "gain_experience",
+        "drain_experience",
+        "slow_poison",
+        "satisfy_hunger",
+        "teleport",
+        "teleport_other",
+        "teleport_level",
+        "phase_door",
+        "word_of_recall",
+        "identify",
+        "recharge",
+        "detect",
+        "mapping",
+        "light_area",
+        "dark_area",
+        "summon",
+        "probe",
+        "haste",
+        "berserk",
+        "protection_from_evil",
+        "banish",
+        "dispel",
+        "aggravate",
+        "create_traps",
+        "stone_to_mud",
+        "destroy_traps_doors",
+        "destroy_area",
+        "enchant_item",
+        "remove_curse",
+        "curse_item",
+        "create_object",
+        "glyph_of_warding",
+        "thrown_damage",
+        "polymorph_monster",
+        "heal_monster",
+        "earthquake",
+        "bizarre"
+      ]
+    },
+    "Condition": {
+      "description": "Guard condition on an effect. The effect fires only when the condition is satisfied.",
+      "oneOf": [
+        {
+          "description": "Fire only if the target does not currently have the named capability (resistance/sustain check).",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["requires_absence"],
+          "properties": {
+            "requires_absence": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            }
+          }
+        },
+        {
+          "description": "Fire regardless of all resistances. Used for effects that cannot be resisted (e.g. salt water paralysis).",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["forced"],
+          "properties": {
+            "forced": { "type": "boolean", "const": true }
+          }
+        },
+        {
+          "description": "Fire on the next melee hit the player lands. NOTE: this trigger type differs semantically from resistance checks. Architectural review required before adding more trigger types.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["on_next_melee_hit"],
+          "properties": {
+            "on_next_melee_hit": { "type": "boolean", "const": true }
+          }
+        }
+      ]
+    },
+    "EffectDescriptor": {
+      "description": "An inline effect descriptor. effect_id is the type discriminator. Additional properties depend on the effect type; see effects.schema.json for full definitions.",
+      "type": "object",
+      "required": ["effect_id"],
+      "properties": {
+        "effect_id": { "$ref": "#/$defs/EffectId" },
+        "condition": { "$ref": "#/$defs/Condition" }
+      }
+    },
+    "Effects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/EffectDescriptor" }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "ownersByShopType": {
+    "general": [
+      { "id": "general_owner_0", "name": "Bilbo the Friendly", "raceId": "hobbit", "purse": 5000, "greed": 108, "maxGreed": 179 },
+      { "id": "general_owner_1", "name": "Rincewind the Chicken", "raceId": "human", "purse": 10000, "greed": 108, "maxGreed": 175 },
+      { "id": "general_owner_2", "name": "Snafu the Midget", "raceId": "gnome", "purse": 20000, "greed": 107, "maxGreed": 170 },
+      { "id": "general_owner_3", "name": "Lyar-el the Comely", "raceId": "elf", "purse": 30000, "greed": 107, "maxGreed": 165 }
+    ],
+    "armor": [
+      { "id": "armor_owner_0", "name": "Kon-Dar the Ugly", "raceId": "half_orc", "purse": 5000, "greed": 115, "maxGreed": 210 },
+      { "id": "armor_owner_1", "name": "Darg-Low the Grim", "raceId": "human", "purse": 10000, "greed": 111, "maxGreed": 190 },
+      { "id": "armor_owner_2", "name": "Decado the Handsome", "raceId": "dunadan", "purse": 25000, "greed": 112, "maxGreed": 200 },
+      { "id": "armor_owner_3", "name": "Mauglin the Grumpy", "raceId": "dwarf", "purse": 30000, "greed": 112, "maxGreed": 200 }
+    ],
+    "weapons": [
+      { "id": "weapons_owner_0", "name": "Ithyl-Mak the Beastly", "raceId": "half_troll", "purse": 5000, "greed": 115, "maxGreed": 210 },
+      { "id": "weapons_owner_1", "name": "Arndal Beast-Slayer", "raceId": "half_elf", "purse": 10000, "greed": 110, "maxGreed": 185 },
+      { "id": "weapons_owner_2", "name": "Tarl Beast-Master", "raceId": "hobbit", "purse": 25000, "greed": 115, "maxGreed": 190 },
+      { "id": "weapons_owner_3", "name": "Oglign Dragon-Slayer", "raceId": "dwarf", "purse": 30000, "greed": 112, "maxGreed": 195 }
+    ],
+    "temple": [
+      { "id": "temple_owner_0", "name": "Ludwig the Humble", "raceId": "human", "purse": 15000, "greed": 109, "maxGreed": 175 },
+      { "id": "temple_owner_1", "name": "Gunnar the Paladin", "raceId": "human", "purse": 20000, "greed": 110, "maxGreed": 185 },
+      { "id": "temple_owner_2", "name": "Delilah the Pure", "raceId": "elf", "purse": 25000, "greed": 107, "maxGreed": 180 },
+      { "id": "temple_owner_3", "name": "Keldon the Wise", "raceId": "dwarf", "purse": 30000, "greed": 109, "maxGreed": 185 }
+    ],
+    "alchemy": [
+      { "id": "alchemy_owner_0", "name": "Mauser the Chemist", "raceId": "half_elf", "purse": 10000, "greed": 111, "maxGreed": 190 },
+      { "id": "alchemy_owner_1", "name": "Wizzle the Chaotic", "raceId": "hobbit", "purse": 10000, "greed": 110, "maxGreed": 190 },
+      { "id": "alchemy_owner_2", "name": "Ga-nat the Greedy", "raceId": "gnome", "purse": 15000, "greed": 116, "maxGreed": 200 },
+      { "id": "alchemy_owner_3", "name": "Vella the Slender", "raceId": "human", "purse": 15000, "greed": 111, "maxGreed": 220 }
+    ],
+    "magic": [
+      { "id": "magic_owner_0", "name": "Ariel the Sorceress", "raceId": "half_elf", "purse": 15000, "greed": 110, "maxGreed": 200 },
+      { "id": "magic_owner_1", "name": "Buggerby the Great", "raceId": "gnome", "purse": 20000, "greed": 113, "maxGreed": 215 },
+      { "id": "magic_owner_2", "name": "Inglorian the Mage", "raceId": "human", "purse": 25000, "greed": 110, "maxGreed": 200 },
+      { "id": "magic_owner_3", "name": "Luthien Starshine", "raceId": "high_elf", "purse": 30000, "greed": 110, "maxGreed": 175 }
+    ],
+    "black_market": [
+      { "id": "black_market_owner_0", "name": "Lo-Hak the Awful", "raceId": "half_troll", "purse": 15000, "greed": 150, "maxGreed": 250 },
+      { "id": "black_market_owner_1", "name": "Histor the Goblin", "raceId": "kobold", "purse": 20000, "greed": 150, "maxGreed": 250 },
+      { "id": "black_market_owner_2", "name": "Durwin the Shifty", "raceId": "dwarf", "purse": 25000, "greed": 150, "maxGreed": 250 },
+      { "id": "black_market_owner_3", "name": "Drago the Fair", "raceId": "elf", "purse": 30000, "greed": 150, "maxGreed": 250 }
+    ]
+  }
+}

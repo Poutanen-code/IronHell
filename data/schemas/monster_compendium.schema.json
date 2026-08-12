@@ -1,0 +1,481 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/monster_compendium.schema.json",
+  "title": "IronHell Monster Compendium",
+  "description": "Strict schema for data/monster_compendium.json. Designed for deterministic validation and AI wiring.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "_meta",
+    "monsters"
+  ],
+  "properties": {
+    "_meta": {
+      "$ref": "#/$defs/meta"
+    },
+    "monsters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/monster"
+      }
+    }
+  },
+  "$defs": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "generated_from",
+        "description",
+        "schema_path",
+        "field_reference",
+        "integrity",
+        "ai_portability_guidance"
+      ],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "generated_from": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "schema_path": { "type": "string", "const": "data/schemas/monster_compendium.schema.json" },
+        "field_reference": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reference_fields",
+            "ironhell_wired_fields",
+            "removed_unwired_fields"
+          ],
+          "properties": {
+            "reference_fields": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "serial",
+                "symbol",
+                "color",
+                "stats",
+                "flags",
+                "blows",
+                "spells",
+                "spell_frequency",
+                "description"
+              ],
+              "properties": {
+                "serial": { "type": "string", "minLength": 1 },
+                "symbol": { "type": "string", "minLength": 1 },
+                "color": { "type": "string", "minLength": 1 },
+                "stats": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "level",
+                    "hp",
+                    "hp_dice",
+                    "armor",
+                    "attack_speed",
+                    "movement_speed",
+                    "vision",
+                    "xp_reward",
+                    "rarity"
+                  ],
+                  "properties": {
+                    "level": { "type": "string", "minLength": 1 },
+                    "hp": { "type": "string", "minLength": 1 },
+                    "hp_dice": { "type": "string", "minLength": 1 },
+                    "armor": { "type": "string", "minLength": 1 },
+                    "attack_speed": { "type": "string", "minLength": 1 },
+                    "movement_speed": { "type": "string", "minLength": 1 },
+                    "vision": { "type": "string", "minLength": 1 },
+                    "xp_reward": { "type": "string", "minLength": 1 },
+                    "rarity": { "type": "string", "minLength": 1 }
+                  }
+                },
+                "flags": { "type": "string", "minLength": 1 },
+                "blows": { "type": "string", "minLength": 1 },
+                "spells": { "type": "string", "minLength": 1 },
+                "spell_frequency": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              }
+            },
+            "ironhell_wired_fields": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "type",
+                "dungeon_levels",
+                "ai_behavior",
+                "sprite",
+                "abilities",
+                "can_dig"
+              ],
+              "properties": {
+                "id": { "type": "string", "minLength": 1 },
+                "type": { "type": "string", "minLength": 1 },
+                "dungeon_levels": { "type": "string", "minLength": 1 },
+                "ai_behavior": { "type": "string", "minLength": 1 },
+                "sprite": { "type": "string", "minLength": 1 },
+                "abilities": { "type": "string", "minLength": 1 },
+                "can_dig": { "type": "string", "minLength": 1 }
+              }
+            },
+            "removed_unwired_fields": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "accuracy",
+                "evasion",
+                "resistances",
+                "vulnerabilities",
+                "loot_table"
+              ],
+              "properties": {
+                "accuracy": { "type": "string", "minLength": 1 },
+                "evasion": { "type": "string", "minLength": 1 },
+                "resistances": { "type": "string", "minLength": 1 },
+                "vulnerabilities": { "type": "string", "minLength": 1 },
+                "loot_table": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        "integrity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "monster_count",
+            "reference_serial_range",
+            "missing_reference_serials",
+            "has_full_reference_parity",
+            "all_entries_have_serial",
+            "all_entries_have_symbol",
+            "all_entries_have_color",
+            "all_entries_have_hp_dice",
+            "notes"
+          ],
+          "properties": {
+            "monster_count": { "type": "integer", "minimum": 1 },
+            "reference_serial_range": { "type": "string", "const": "1-616" },
+            "missing_reference_serials": {
+              "type": "array",
+              "items": { "type": "integer", "minimum": 1, "maximum": 616 },
+              "uniqueItems": true
+            },
+            "has_full_reference_parity": { "type": "boolean" },
+            "all_entries_have_serial": { "type": "boolean" },
+            "all_entries_have_symbol": { "type": "boolean" },
+            "all_entries_have_color": { "type": "boolean" },
+            "all_entries_have_hp_dice": { "type": "boolean" },
+            "notes": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "ai_portability_guidance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reusable_as_is",
+            "constraints",
+            "recommended_consumption",
+            "future_migration_notes"
+          ],
+          "properties": {
+            "reusable_as_is": { "type": "boolean" },
+            "constraints": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "recommended_consumption": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "future_migration_notes": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "monster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "type",
+        "dungeon_levels",
+        "stats",
+        "ai_behavior",
+        "description",
+        "sprite",
+        "serial",
+        "symbol",
+        "color"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+          "minLength": 1
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": ["beast", "humanoid", "undead", "demon", "elemental", "construct", "aberration", "dragon"]
+        },
+        "dungeon_levels": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            { "type": "integer", "minimum": 0 },
+            { "type": "integer", "minimum": 0 }
+          ],
+          "items": false
+        },
+        "stats": { "$ref": "#/$defs/monster_stats" },
+        "abilities": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/monster_ability" }
+        },
+        "ai_behavior": {
+          "type": "string",
+          "enum": [
+            "aggressive_melee",
+            "aggressive_ranged",
+            "ranged_kiting",
+            "defensive",
+            "territorial",
+            "pack_hunter",
+            "ambusher",
+            "support",
+            "berserker",
+            "coward",
+            "flee_when_hurt",
+            "stalker",
+            "boss_phase",
+            "wanderer"
+          ]
+        },
+        "can_dig": { "type": "boolean" },
+        "blows": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/monster_blow" }
+        },
+        "flags": { "$ref": "#/$defs/monster_flags" },
+        "spells": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/monster_spell" }
+        },
+        "spell_frequency": { "type": "integer", "minimum": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "sprite": { "type": "string", "minLength": 1 },
+        "serial": { "type": "integer", "minimum": 1, "maximum": 616 },
+        "symbol": { "type": "string", "minLength": 1, "maxLength": 1 },
+        "color": { "type": "string", "minLength": 1, "maxLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["spell_frequency"] },
+          "then": { "required": ["spells"] }
+        }
+      ]
+    },
+    "monster_stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "hp",
+        "armor",
+        "attack_speed",
+        "movement_speed",
+        "xp_reward",
+        "vision",
+        "rarity",
+        "hp_dice"
+      ],
+      "properties": {
+        "level": { "type": "integer", "minimum": 0 },
+        "hp": { "type": "integer", "minimum": 1 },
+        "armor": { "type": "integer", "minimum": 0 },
+        "attack_speed": { "type": "number", "exclusiveMinimum": 0 },
+        "movement_speed": { "type": "integer", "minimum": 1 },
+        "xp_reward": { "type": "integer", "minimum": 0 },
+        "vision": { "type": "integer", "minimum": 0 },
+        "rarity": { "type": "integer", "minimum": 1 },
+        "hp_dice": {
+          "type": "string",
+          "pattern": "^[0-9]+d[0-9]+([+-][0-9]+)?$"
+        }
+      }
+    },
+    "monster_ability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type", "description"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "enum": ["passive", "active"] },
+        "description": { "type": "string", "minLength": 1 },
+        "cooldown_ticks": { "type": "integer", "minimum": 0 },
+        "trigger": { "type": "string", "enum": ["on_hit", "on_take_damage", "low_hp", "periodic"] },
+        "effect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "type": "string", "enum": ["damage", "heal", "buff", "debuff", "summon", "teleport"] },
+            "value": { "type": "number" },
+            "damage_type": { "type": "string" },
+            "duration": { "type": "integer", "minimum": 0 },
+            "summon_id": { "type": "string", "minLength": 1 },
+            "area_of_effect": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "monster_blow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "effect", "dice_count", "dice_sides"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "HIT", "TOUCH", "PUNCH", "CLAW", "BITE", "STING", "CRUSH", "ENGULF",
+            "DROOL", "SPIT", "GAZE", "WAIL", "SPORE", "BATTER",
+            "CRAWL", "BUTT", "KICK", "CHARGE", "EXPLODE", "SLASH",
+            "BEG", "INSULT", "MOAN"
+          ]
+        },
+        "effect": {
+          "type": "string",
+          "enum": [
+            "HURT", "POISON", "UN_BONUS", "UN_POWER",
+            "ACID", "FIRE", "COLD", "ELEC",
+            "BLIND", "CONFUSE", "TERRIFY", "PARALYZE",
+            "LOSE_STR", "LOSE_DEX", "LOSE_CON", "LOSE_INT", "LOSE_WIS", "LOSE_CHR", "LOSE_ALL",
+            "EAT_GOLD", "EAT_ITEM", "EAT_FOOD", "EAT_LITE",
+            "EXP_10", "EXP_20", "EXP_40", "EXP_80",
+            "SHATTER", "HALLU"
+          ]
+        },
+        "dice_count": { "type": "integer", "minimum": 0 },
+        "dice_sides": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "monster_spell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "range", "cooldown_ticks"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "breath_fire", "breath_cold", "breath_acid", "breath_elec", "breath_poison",
+            "breath_nether", "breath_light", "breath_dark", "breath_confusion",
+            "breath_sound", "breath_chaos", "breath_disenchant", "breath_nexus",
+            "breath_time", "breath_inertia", "breath_gravity", "breath_shards",
+            "breath_plasma", "breath_force",
+            "shriek", "arrow_1", "arrow_2", "arrow_3", "arrow_4", "boulder",
+            "ball_fire", "ball_cold", "ball_acid", "ball_elec",
+            "ball_poison", "ball_nether", "ball_water", "ball_mana", "ball_darkness",
+            "bolt_fire", "bolt_cold", "bolt_acid", "bolt_elec",
+            "bolt_nether", "bolt_water", "bolt_mana", "bolt_plasma", "bolt_ice",
+            "missile",
+            "cause_1", "cause_2", "cause_3", "cause_4",
+            "mind_blast", "brain_smash", "drain_mana",
+            "blind", "confuse", "scare", "slow", "hold",
+            "heal_self", "haste_self", "blink", "teleport_self",
+            "teleport_to", "teleport_away", "teleport_level",
+            "forget", "darkness", "traps",
+            "summon_kin", "summon_monster", "summon_monsters",
+            "summon_animal", "summon_spider", "summon_hound", "summon_hydra",
+            "summon_angel", "summon_demon", "summon_undead", "summon_dragon",
+            "summon_hi_undead", "summon_hi_dragon", "summon_hi_demon",
+            "summon_wraith", "summon_unique"
+          ]
+        },
+        "range": { "type": "integer", "minimum": 0 },
+        "cooldown_ticks": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "monster_flags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unique": { "type": "boolean" },
+        "questor": { "type": "boolean" },
+        "male": { "type": "boolean" },
+        "female": { "type": "boolean" },
+        "friends": { "type": "boolean" },
+        "escort": { "type": "boolean" },
+        "escorts": { "type": "boolean" },
+        "force_depth": { "type": "boolean" },
+        "force_max_hp": { "type": "boolean" },
+        "force_sleep": { "type": "boolean" },
+        "only_gold": { "type": "boolean" },
+        "only_item": { "type": "boolean" },
+        "drop_60": { "type": "boolean" },
+        "drop_90": { "type": "boolean" },
+        "drop_1d2": { "type": "boolean" },
+        "drop_2d2": { "type": "boolean" },
+        "drop_3d2": { "type": "boolean" },
+        "drop_4d2": { "type": "boolean" },
+        "drop_good": { "type": "boolean" },
+        "drop_great": { "type": "boolean" },
+        "open_door": { "type": "boolean" },
+        "bash_door": { "type": "boolean" },
+        "pass_wall": { "type": "boolean" },
+        "kill_wall": { "type": "boolean" },
+        "move_body": { "type": "boolean" },
+        "kill_body": { "type": "boolean" },
+        "kill_item": { "type": "boolean" },
+        "invisible": { "type": "boolean" },
+        "regenerate": { "type": "boolean" },
+        "multiply": { "type": "boolean" },
+        "smart": { "type": "boolean" },
+        "stupid": { "type": "boolean" },
+        "cold_blood": { "type": "boolean" },
+        "empty_mind": { "type": "boolean" },
+        "weird_mind": { "type": "boolean" },
+        "powerful": { "type": "boolean" },
+        "never_blow": { "type": "boolean" },
+        "never_move": { "type": "boolean" },
+        "wanderer": { "type": "boolean" },
+        "rand25": { "type": "boolean" },
+        "rand50": { "type": "boolean" },
+        "take_item": { "type": "boolean" },
+        "orc": { "type": "boolean" },
+        "troll": { "type": "boolean" },
+        "giant": { "type": "boolean" },
+        "dragon": { "type": "boolean" },
+        "demon": { "type": "boolean" },
+        "undead": { "type": "boolean" },
+        "evil": { "type": "boolean" },
+        "animal": { "type": "boolean" },
+        "hurt_light": { "type": "boolean" },
+        "hurt_rock": { "type": "boolean" },
+        "immune_acid": { "type": "boolean" },
+        "immune_elec": { "type": "boolean" },
+        "immune_fire": { "type": "boolean" },
+        "immune_cold": { "type": "boolean" },
+        "immune_pois": { "type": "boolean" },
+        "no_fear": { "type": "boolean" },
+        "no_stun": { "type": "boolean" },
+        "no_conf": { "type": "boolean" },
+        "no_sleep": { "type": "boolean" },
+        "sleep_rating": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

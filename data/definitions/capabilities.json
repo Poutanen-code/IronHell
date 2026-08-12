@@ -1,0 +1,621 @@
+﻿{
+    "schema_version": 1,
+    "capabilities": [
+        {
+            "id": "back_stab",
+            "source_flag": "BACK_STAB",
+            "name": "Back Stab",
+            "description": "Deals extra damage to sleeping and fleeing creatures.",
+            "category": "class_combat",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "beam",
+            "source_flag": "BEAM",
+            "name": "Beam",
+            "description": "Improves chance of spell bolts becoming beams.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "bless_weapon",
+            "source_flag": "BLESS_WEAPON",
+            "name": "Bless Weapon",
+            "description": "Enables blessed weapon interaction for priestly classes.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "bravery_30",
+            "source_flag": "BRAVERY_30",
+            "name": "Bravery 30",
+            "description": "Provides class-based fear resistance progression.",
+            "category": "class_combat",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "choose_spells",
+            "source_flag": "CHOOSE_SPELLS",
+            "name": "Choose Spells",
+            "description": "Allows spells to be selected rather than strictly assigned.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "cumber_glove",
+            "source_flag": "CUMBER_GLOVE",
+            "name": "Cumber Glove",
+            "description": "Gloves can interfere with spellcasting performance.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "extra_shot",
+            "source_flag": "EXTRA_SHOT",
+            "name": "Extra Shot",
+            "description": "Can gain additional ranged shots with matching ammo.",
+            "category": "class_combat",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "free_act",
+            "source_flag": "FREE_ACT",
+            "name": "Free Action",
+            "description": "Immune to paralysis.",
+            "category": "survival",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "hold_life",
+            "source_flag": "HOLD_LIFE",
+            "name": "Hold Life",
+            "description": "Resistant to experience drain attacks.",
+            "category": "survival",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "hp_bonus",
+            "source_flag": "HP_BONUS",
+            "name": "HP Bonus",
+            "description": "Applies class-specific hit point bonus behavior.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "pseudo_id_heavy",
+            "source_flag": "PSEUDO_ID_HEAVY",
+            "name": "Pseudo ID Heavy",
+            "description": "Uses heavy pseudo-identification behavior.",
+            "category": "class_misc",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "pseudo_id_improv",
+            "source_flag": "PSEUDO_ID_IMPROV",
+            "name": "Pseudo ID Improved",
+            "description": "Pseudo-identification improves with level.",
+            "category": "class_misc",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "regen",
+            "source_flag": "REGEN",
+            "name": "Regeneration",
+            "description": "Regenerates hit points faster than normal.",
+            "category": "survival",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "res_blind",
+            "source_flag": "RES_BLIND",
+            "name": "Resist Blindness",
+            "description": "Resistant to blindness attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_blind"
+        },
+        {
+            "id": "res_dark",
+            "source_flag": "RES_DARK",
+            "name": "Resist Darkness",
+            "description": "Resistant to darkness-based attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_dark"
+        },
+        {
+            "id": "res_lite",
+            "source_flag": "RES_LITE",
+            "name": "Resist Light",
+            "description": "Resistant to light-based attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_lite"
+        },
+        {
+            "id": "res_pois",
+            "source_flag": "RES_POIS",
+            "name": "Resist Poison",
+            "description": "Resistant to poison attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_pois"
+        },
+        {
+            "id": "see_invis",
+            "source_flag": "SEE_INVIS",
+            "name": "See Invisible",
+            "description": "Can see invisible creatures.",
+            "category": "perception",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "speed_bonus",
+            "source_flag": "SPEED_BONUS",
+            "name": "Speed Bonus",
+            "description": "Gains class speed bonuses at level milestones.",
+            "category": "class_combat",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "stealing_improv",
+            "source_flag": "STEALING_IMPROV",
+            "name": "Stealing Improved",
+            "description": "Stealing effectiveness improves with level.",
+            "category": "class_misc",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "stealth_mode",
+            "source_flag": "STEALTH_MODE",
+            "name": "Stealth Mode",
+            "description": "Replaces class search mode behavior with stealth mode behavior.",
+            "category": "class_misc",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_con",
+            "source_flag": "SUST_CON",
+            "name": "Sustain Constitution",
+            "description": "Constitution cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_dex",
+            "source_flag": "SUST_DEX",
+            "name": "Sustain Dexterity",
+            "description": "Dexterity cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_str",
+            "source_flag": "SUST_STR",
+            "name": "Sustain Strength",
+            "description": "Strength cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "zero_fail",
+            "source_flag": "ZERO_FAIL",
+            "name": "Zero Fail",
+            "description": "Spell failure rate can reach zero percent.",
+            "category": "class_magic",
+            "scope": "native_identity",
+            "provenance_status": "observed"
+        },
+        {
+            "id": "aggravate_monsters",
+            "source_flag": "AGGRAVATE",
+            "name": "Aggravate Monsters",
+            "description": "Wakes all nearby monsters and makes them hostile.",
+            "category": "curse",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "feather",
+            "source_flag": "FEATHER",
+            "name": "Feather Falling",
+            "description": "Eliminates damage from falling into pits.",
+            "category": "survival",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "ignore_acid",
+            "source_flag": "IGNORE_ACID",
+            "name": "Ignore Acid",
+            "description": "This item cannot be destroyed by acid.",
+            "category": "item_ignore",
+            "scope": "item_self_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "ignore_acid"
+        },
+        {
+            "id": "ignore_cold",
+            "source_flag": "IGNORE_COLD",
+            "name": "Ignore Cold",
+            "description": "This item cannot be destroyed by cold.",
+            "category": "item_ignore",
+            "scope": "item_self_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "ignore_cold"
+        },
+        {
+            "id": "ignore_elec",
+            "source_flag": "IGNORE_ELEC",
+            "name": "Ignore Lightning",
+            "description": "This item cannot be destroyed by lightning.",
+            "category": "item_ignore",
+            "scope": "item_self_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "ignore_elec"
+        },
+        {
+            "id": "ignore_fire",
+            "source_flag": "IGNORE_FIRE",
+            "name": "Ignore Fire",
+            "description": "This item cannot be destroyed by fire.",
+            "category": "item_ignore",
+            "scope": "item_self_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "ignore_fire"
+        },
+        {
+            "id": "infravision",
+            "source_flag": "INFRA",
+            "name": "Infravision",
+            "description": "Extends the range of infravision by one increment.",
+            "category": "perception",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "race",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "res_acid",
+            "source_flag": "RES_ACID",
+            "name": "Resist Acid",
+            "description": "Reduces acid damage by approximately one third.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_acid"
+        },
+        {
+            "id": "res_cold",
+            "source_flag": "RES_COLD",
+            "name": "Resist Cold",
+            "description": "Reduces cold damage by approximately one third.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_cold"
+        },
+        {
+            "id": "res_confu",
+            "source_flag": "RES_CONFU",
+            "name": "Resist Confusion",
+            "description": "Resistant to confusion attacks and effects.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_confu"
+        },
+        {
+            "id": "res_disen",
+            "source_flag": "RES_DISEN",
+            "name": "Resist Disenchantment",
+            "description": "Resistant to disenchantment attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_disen"
+        },
+        {
+            "id": "res_elec",
+            "source_flag": "RES_ELEC",
+            "name": "Resist Lightning",
+            "description": "Reduces lightning damage by approximately one third.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_elec"
+        },
+        {
+            "id": "res_fear",
+            "source_flag": "RES_FEAR",
+            "name": "Resist Fear",
+            "description": "Resistant to fear effects.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_fear"
+        },
+        {
+            "id": "res_fire",
+            "source_flag": "RES_FIRE",
+            "name": "Resist Fire",
+            "description": "Reduces fire damage by approximately one third.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_fire"
+        },
+        {
+            "id": "res_nexus",
+            "source_flag": "RES_NEXUS",
+            "name": "Resist Nexus",
+            "description": "Resistant to nexus attacks.",
+            "category": "resistance",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "amulet",
+                "armor",
+                "artifact"
+            ],
+            "provenance_status": "observed",
+            "resistance_id": "res_nexus"
+        },
+        {
+            "id": "slow_digest",
+            "source_flag": "SLOW_DIGEST",
+            "name": "Slow Digestion",
+            "description": "Reduces the rate at which the character consumes food.",
+            "category": "survival",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_chr",
+            "source_flag": "SUST_CHR",
+            "name": "Sustain Charisma",
+            "description": "Charisma cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_int",
+            "source_flag": "SUST_INT",
+            "name": "Sustain Intelligence",
+            "description": "Intelligence cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "sust_wis",
+            "source_flag": "SUST_WIS",
+            "name": "Sustain Wisdom",
+            "description": "Wisdom cannot be reduced by attacks.",
+            "category": "sustain",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "teleportation",
+            "source_flag": "TELEPORT",
+            "name": "Teleportation",
+            "description": "Randomly teleports the wearer at unpredictable intervals.",
+            "category": "curse",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        },
+        {
+            "id": "telepathy",
+            "source_flag": "TELEPATHY",
+            "name": "Telepathy",
+            "description": "Detects the presence of nearby minded creatures (ESP).",
+            "category": "perception",
+            "scope": "bearer_passive",
+            "grant_sources": [
+                "amulet",
+                "artifact"
+            ],
+            "provenance_status": "observed"
+        }
+    ]
+}
