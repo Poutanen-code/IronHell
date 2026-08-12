@@ -1,9 +1,0 @@
-{
-  "version": "0.1.0",
-  "strings": {
-    "terrain.open_floor.name": "open floor",
-    "terrain.up_staircase.name": "up staircase",
-    "shop.general.title": "General Store",
-    "history.hist_1": "$u are the illegitimate and unacknowledged child"
-  }
-}
