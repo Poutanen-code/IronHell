@@ -539,7 +539,7 @@
           }
         }
       ],
-      "notes": "MAngband: wall_to_mud() fires GF_KILL_WALL with 20+randint1(30) damage. creature_damage applies to rock/stone-type monsters (RF3_HURT_ROCK).",
+      "notes": "MAngband: wall_to_mud() fires GF_KILL_WALL with 20+randint1(30) damage. Beam damage applies to rock/stone-type monsters (RF3_HURT_ROCK).",
       "provenance_status": "verified"
     },
     {

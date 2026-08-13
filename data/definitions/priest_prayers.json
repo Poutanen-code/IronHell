@@ -382,7 +382,7 @@
           }
         }
       ],
-      "notes": "Corrected from IdentifyItem placeholder. remove_curse() removes one curse.",
+      "notes": "remove_curse() removes one curse.",
       "provenance_status": "verified"
     },
     {
@@ -1304,7 +1304,7 @@
           }
         }
       ],
-      "notes": "Corrected from IdentifyItem placeholder. remove_all_curse() removes all curses from equipment.",
+      "notes": "remove_all_curse() removes all curses from equipment.",
       "provenance_status": "verified"
     },
     {

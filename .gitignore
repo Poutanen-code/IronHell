@@ -16,7 +16,7 @@ pnpm-debug.log*
 .idea/
 *.log
 
-reference-*/
+ref*/
 
 # Additional ignores added by assistant
 release/

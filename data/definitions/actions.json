@@ -941,7 +941,7 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass. creature_damage and creature_damage_filter added in V2 Parity Pass for GF_KILL_WALL (stone_to_mud) creature damage semantics."
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass."
       }
     },
     {

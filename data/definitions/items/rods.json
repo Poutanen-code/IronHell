@@ -142,7 +142,7 @@
           "action_id": "BeamDamage",
           "parameters": {
             "damage_type": "stone_weak",
-            "amount": { "kind": "dice", "count": 6, "sides": 8, "base": 25 },
+            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
             "direction": "aimed",
             "terrain_effect": "stone_to_mud"
           }
