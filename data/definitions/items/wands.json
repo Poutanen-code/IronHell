@@ -74,7 +74,7 @@
         {
           "action_id": "IdentifyItem",
           "parameters": {
-            "identify_scope": "comprehensive"
+            "identify_scope": "single"
           }
         }
       ],
@@ -182,129 +182,6 @@
         }
       ],
       "description": "A magical wand of detection.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "wand_of_probing",
-      "name": "Probing",
-      "tval": 66,
-      "sval": 7,
-      "weight": 15,
-      "sell_value": 4000,
-      "pval": 50,
-      "allocation_table": [
-        {
-          "depth": 40,
-          "rarity": 4
-        }
-      ],
-      "effects": [
-        {
-          "action_id": "InspectEntity",
-          "parameters": {
-            "scope": "probing",
-            "target_mode": "all_in_sight"
-          }
-        }
-      ],
-      "description": "A magical wand of probing.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "wand_of_curing",
-      "name": "Curing",
-      "tval": 66,
-      "sval": 8,
-      "weight": 15,
-      "sell_value": 15000,
-      "pval": 999,
-      "allocation_table": [
-        {
-          "depth": 65,
-          "rarity": 8
-        }
-      ],
-      "effects": [
-        {
-          "action_id": "CureStatus",
-          "parameters": {
-            "status_ids": [
-              "blinded",
-              "poisoned",
-              "confused",
-              "stunned",
-              "cut"
-            ],
-            "target_mode": "self",
-            "cure_mode": "full"
-          }
-        }
-      ],
-      "description": "A magical wand of curing.",
-      "provenance_status": "verified",
-      "notes": "Verified from MAngband use-obj.c (SV_ROD_CURING)."
-    },
-    {
-      "id": "wand_of_healing",
-      "name": "Healing",
-      "tval": 66,
-      "sval": 9,
-      "weight": 15,
-      "sell_value": 20000,
-      "pval": 999,
-      "allocation_table": [
-        {
-          "depth": 80,
-          "rarity": 8
-        }
-      ],
-      "effects": [
-        {
-          "action_id": "HealHP",
-          "parameters": {
-            "amount": {
-              "kind": "flat",
-              "value": 500
-            },
-            "target_mode": "self"
-          }
-        }
-      ],
-      "description": "A magical wand of healing.",
-      "provenance_status": "verified",
-      "notes": "Healing value verified from MAngband use-obj.c (SV_ROD_HEALING -> hp_player(p_ptr, 500))."
-    },
-    {
-      "id": "wand_of_restoration",
-      "name": "Restoration",
-      "tval": 66,
-      "sval": 10,
-      "weight": 15,
-      "sell_value": 25000,
-      "pval": 999,
-      "allocation_table": [
-        {
-          "depth": 80,
-          "rarity": 16
-        }
-      ],
-      "effects": [
-        {
-          "action_id": "RestoreAttributes",
-          "parameters": {
-            "restore_scope": "experience_level",
-            "target_mode": "self"
-          }
-        },
-        {
-          "action_id": "RestoreAttributes",
-          "parameters": {
-            "restore_scope": "all_stats",
-            "target_mode": "self"
-          }
-        }
-      ],
-      "description": "A magical wand of restoration.",
       "provenance_status": "verified"
     },
     {
