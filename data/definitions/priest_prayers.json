@@ -545,7 +545,9 @@
           "parameters": {
             "status_id": "protected_from_evil",
             "duration": {
-              "kind": "policy_default"
+              "base": 0,
+              "dice": { "count": 1, "sides": 25 },
+              "level_multiplier": 3
             },
             "target_mode": "self"
           }

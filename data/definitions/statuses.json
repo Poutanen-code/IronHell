@@ -112,13 +112,15 @@
       "status_id": "berserk",
       "name": "Berserk Strength",
       "category": "buff",
-      "description": "The character gains +24 to hit, +24 to damage, and immunity to fear, but suffers -10 AC.",
+      "description": "The character gains +24 to hit, +24 to damage, and immunity to fear, but suffers -10 AC. Grants a temporary +30 MaxHP bonus while active; the bonus is removed when the status expires.",
       "is_timed": true,
       "default_duration": { "base": 25, "dice": { "count": 1, "sides": 25 } },
+      "hp_bonus": 30,
       "is_stackable": true,
       "refresh_policy": "additive",
       "replacement_policy": "replace_existing",
       "timed_group": "combat_buff",
+      "notes": "MAngband set_shero(). The hp_player(30) call in the spell is modeled as a temporary MaxHP bonus on the status, not a permanent heal.",
       "provenance_status": "verified"
     },
     {
@@ -140,13 +142,13 @@
       "category": "buff",
       "description": "Evil creatures suffer a saving-throw penalty when attacking the character. Duration scales with player level.",
       "is_timed": true,
-      "default_duration": { "base": 0, "dice": { "count": 3, "sides": 1 } },
+      "default_duration": { "base": 0, "dice": { "count": 1, "sides": 25 }, "level_multiplier": 3 },
       "is_stackable": true,
       "refresh_policy": "additive",
       "replacement_policy": "replace_existing",
       "timed_group": "combat_buff",
-      "notes": "The dice count (3) is multiplied by player level in the runtime. dice.count acts as a level multiplier, sides=1 yields count*1 per die.",
-      "provenance_status": "derived"
+      "notes": "MAngband: set_protevil(p_ptr->lev * 3 + randint(25)). Canonical duration: 1d25 + 3 * player_level.",
+      "provenance_status": "verified"
     },
     {
       "status_id": "haste",

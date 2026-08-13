@@ -94,10 +94,14 @@
       "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "SlowControl",
+          "action_id": "ModifyPlayerSpeed",
           "parameters": {
-            "target_mode": "self",
-            "potency": 1
+            "speed_mode": "slow",
+            "duration": {
+              "base": 15,
+              "dice": { "count": 1, "sides": 25 }
+            },
+            "target_mode": "self"
           }
         }
       ]
@@ -650,15 +654,12 @@
       "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyPlayerSpeed",
           "parameters": {
-            "status_id": "haste",
+            "speed_mode": "haste",
             "duration": {
               "base": 15,
-              "dice": {
-                "count": 1,
-                "sides": 25
-              }
+              "dice": { "count": 1, "sides": 25 }
             },
             "target_mode": "self"
           }
@@ -682,15 +683,12 @@
       "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyOpposeElements",
           "parameters": {
-            "status_id": "resist_fire",
+            "elements": ["fire"],
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "dice": { "count": 1, "sides": 10 }
             },
             "target_mode": "self"
           }
@@ -714,15 +712,12 @@
       "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyOpposeElements",
           "parameters": {
-            "status_id": "resist_cold",
+            "elements": ["cold"],
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "dice": { "count": 1, "sides": 10 }
             },
             "target_mode": "self"
           }
@@ -794,25 +789,13 @@
           "rarity": 1
         }
       ],
-      "description": "It cures 30 points of damage, removes fear, and grants berserk strength (resistance to fear, +12 to-hit, -10 to AC) for 25+1d25 turns.",
+      "description": "It removes fear and grants berserk strength (resistance to fear, +24 to-hit, +24 to-dam, -10 to AC, +30 temporary MaxHP) for 25+1d25 turns.",
       "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "HealHP",
-          "parameters": {
-            "amount": {
-              "kind": "flat",
-              "value": 30
-            },
-            "target_mode": "self"
-          }
-        },
-        {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "afraid"
-            ],
+            "status_ids": ["afraid"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -823,15 +806,13 @@
             "status_id": "berserk",
             "duration": {
               "base": 25,
-              "dice": {
-                "count": 1,
-                "sides": 25
-              }
+              "dice": { "count": 1, "sides": 25 }
             },
             "target_mode": "self"
           }
         }
-      ]
+      ],
+      "notes": "MAngband: hp_player(30) modeled as berserk.hp_bonus (temporary MaxHP). Direct HealHP removed."
     },
     {
       "id": "potion_of_cure_light_wounds",
@@ -871,9 +852,23 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "blinded"
-            ],
+            "status_ids": ["cut"],
+            "target_mode": "self",
+            "cure_mode": "halve"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["confused"],
+            "target_mode": "self",
+            "cure_mode": "halve"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["blinded"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -911,9 +906,7 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "blinded"
-            ],
+            "status_ids": ["cut"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -921,9 +914,15 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "confused"
-            ],
+            "status_ids": ["blinded"],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["confused"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -961,9 +960,7 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "poisoned"
-            ],
+            "status_ids": ["stunned"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -971,9 +968,7 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "blinded"
-            ],
+            "status_ids": ["cut"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -981,9 +976,23 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "confused"
-            ],
+            "status_ids": ["poisoned"],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["blinded"],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["confused"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1023,9 +1032,7 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "poisoned"
-            ],
+            "status_ids": ["stunned"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1033,9 +1040,7 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "blinded"
-            ],
+            "status_ids": ["cut"],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1043,9 +1048,23 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "confused"
-            ],
+            "status_ids": ["poisoned"],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["blinded"],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["confused"],
             "target_mode": "self",
             "cure_mode": "full"
           }

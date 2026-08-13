@@ -505,8 +505,9 @@
           "parameters": {
             "damage_type": "light_weak",
             "amount": {
-              "kind": "fixed",
-              "dice": "6d8"
+              "kind": "dice",
+              "count": 6,
+              "sides": 8
             },
             "direction": "aimed",
             "terrain_effect": "illuminate_path"
@@ -529,13 +530,16 @@
       },
       "action_refs": [
         {
-          "action_id": "AlterTerrain",
+          "action_id": "BeamDamage",
           "parameters": {
-            "terrain_operation": "stone_to_mud",
-            "target_mode": "target"
+            "damage_type": "stone_weak",
+            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
+            "direction": "aimed",
+            "terrain_effect": "stone_to_mud"
           }
         }
       ],
+      "notes": "MAngband: wall_to_mud() fires GF_KILL_WALL with 20+randint1(30) damage. creature_damage applies to rock/stone-type monsters (RF3_HURT_ROCK).",
       "provenance_status": "verified"
     },
     {
@@ -711,22 +715,12 @@
       },
       "action_refs": [
         {
-          "action_id": "HealHP",
-          "parameters": {
-            "amount": {
-              "kind": "flat",
-              "value": 30
-            },
-            "target_mode": "self"
-          }
-        },
-        {
           "action_id": "ApplyTimedBuff",
           "parameters": {
             "status_id": "berserk",
             "duration": {
               "base": 25,
-              "random": 25
+              "dice": { "count": 1, "sides": 25 }
             },
             "target_mode": "self"
           }
@@ -734,15 +728,13 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": [
-              "afraid"
-            ],
+            "status_ids": ["afraid"],
             "cure_mode": "full",
             "target_mode": "self"
           }
         }
       ],
-      "notes": "Composite: hp_player(30) + set_shero(...) + set_afraid(0). Added 30 HP and CureStatus action_refs.",
+      "notes": "MAngband: hp_player(30) + set_shero(...) + set_afraid(0). The 30 HP is modeled as berserk.hp_bonus (temporary MaxHP boost) on the status, not a one-time HealHP. CureStatus(afraid) retained.",
       "provenance_status": "verified"
     },
     {
@@ -758,16 +750,19 @@
       },
       "action_refs": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyPlayerSpeed",
           "parameters": {
-            "status_id": "haste",
+            "speed_mode": "haste",
             "duration": {
-              "kind": "policy_default"
+              "base": 0,
+              "dice": { "count": 1, "sides": 20 },
+              "level_multiplier": 1
             },
             "target_mode": "self"
           }
         }
       ],
+      "notes": "MAngband: set_fast(randint1(20) + plev). Duration = 1d20 + player_level.",
       "provenance_status": "verified"
     },
     {
@@ -805,10 +800,10 @@
       },
       "action_refs": [
         {
-          "action_id": "SlowControl",
+          "action_id": "ModifyMonsterSpeed",
           "parameters": {
-            "target_mode": "target",
-            "potency": 1
+            "speed_mode": "slow",
+            "target_mode": "aimed"
           }
         }
       ],

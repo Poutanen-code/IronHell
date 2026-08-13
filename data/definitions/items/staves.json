@@ -47,17 +47,10 @@
       ],
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyMonsterSpeed",
           "parameters": {
-            "status_id": "slowed",
-            "duration": {
-              "base": 15,
-              "dice": {
-                "count": 1,
-                "sides": 30
-              }
-            },
-            "target_mode": "self"
+            "speed_mode": "slow",
+            "target_mode": "all_in_los"
           }
         }
       ],
@@ -80,23 +73,15 @@
       ],
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyMonsterSpeed",
           "parameters": {
-            "status_id": "haste",
-            "duration": {
-              "base": 20,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
-            },
-            "target_mode": "self"
+            "speed_mode": "haste",
+            "target_mode": "all_in_los"
           }
         }
       ],
       "description": "A magical staff of haste monsters.",
-      "provenance_status": "unresolved",
-      "notes": "MAngband uses speed_monsters() (monster-targeted haste sweep), but current action catalog has no explicit monster-haste area control action."
+      "provenance_status": "verified"
     },
     {
       "id": "staff_of_summoning",

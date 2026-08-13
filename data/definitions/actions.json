@@ -519,35 +519,34 @@
       }
     },
     {
-      "action_id": "SlowControl",
-      "name": "Slow Control",
-      "description": "Applies slowing control to one or more hostile targets.",
-      "category": "control",
+      "action_id": "ModifyPlayerSpeed",
+      "name": "Modify Player Speed",
+      "description": "Applies a timed haste or slow effect to the player. Replaces ApplyTimedBuff(haste) and SlowControl(self) usages with explicit speed semantics and canonical duration expressions.",
+      "category": "movement",
       "confidence": "high",
-      "allowed_source_families": ["spell", "wand", "rod", "monster_spell"],
+      "allowed_source_families": ["spell", "prayer", "potion", "rod", "wand", "staff", "activation", "monster_spell"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
           {
-            "id": "target_mode",
-            "description": "Targeting envelope for the control payload.",
+            "id": "speed_mode",
+            "description": "Direction of the speed modification applied to the player.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+            "allowed_values": ["haste", "slow"]
           },
           {
-            "id": "potency",
-            "description": "Relative power used by downstream validation and resolution.",
-            "value_type": "integer",
+            "id": "duration",
+            "description": "Duration expression for the speed modification. Use level_multiplier for level-scaled durations.",
+            "value_type": "duration",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Always self — player speed modifications apply only to the acting player.",
+            "value_type": "enum",
             "required": true,
-            "minimum": 1
-          },
-          {
-            "id": "radius",
-            "description": "Area radius when target_mode is area-like.",
-            "value_type": "integer",
-            "required": false,
-            "minimum": 0
+            "allowed_values": ["self"]
           }
         ]
       },
@@ -558,7 +557,7 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
+        "summary": "Redesigned in V2 Parity Pass. Replaces the former potency-based contract. Canonical action for all player haste and slow effects (set_fast, set_slow in MAngband). Duration is explicit and level-scalable via level_multiplier."
       }
     },
     {
@@ -681,7 +680,7 @@
             "description": "Damage channel delivered by the beam.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "stone_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
           },
           {
             "id": "amount",
@@ -697,10 +696,10 @@
           },
           {
             "id": "terrain_effect",
-            "description": "Optional terrain side-effect applied to each grid cell along the beam path. illuminate_path is the GF_LITE_WEAK grid effect that permanently lights cells.",
+            "description": "Optional terrain side-effect applied to each grid cell along the beam path. illuminate_path is the GF_LITE_WEAK grid effect that permanently lights cells. Stone to mud is the GF_KILL_WALL grid effect that converts stone to mud. Omit when no terrain effect applies.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["none", "illuminate_path"]
+            "allowed_values": ["none", "illuminate_path", "stone_to_mud"]
           }
         ]
       },
@@ -901,7 +900,7 @@
       "description": "Applies a reusable terrain or feature transformation payload.",
       "category": "terrain",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "wand", "staff", "activation"],
+      "allowed_source_families": ["spell", "prayer", "wand", "rod", "staff", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -942,7 +941,7 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass."
+        "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.2. terrain_operation values expanded, target added to target_mode, and entity_effect added in Action Catalog Stabilization Pass. creature_damage and creature_damage_filter added in V2 Parity Pass for GF_KILL_WALL (stone_to_mud) creature damage semantics."
       }
     },
     {
@@ -1448,7 +1447,7 @@
             "description": "Rule governing the selection of the replacement entity.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["polymorph_other"]
+            "allowed_values": ["polymorph_other", "random_monster"]
           },
           {
             "id": "target_mode",
@@ -1467,6 +1466,213 @@
       "provenance_status": "derived",
       "provenance": {
         "summary": "Added in Action Catalog Stabilization Pass. Canonical new action for SPELL_POLYMORPH_OTHER. poly_monster replaces target with a random monster of the same approximate depth."
+      }
+    },
+    {
+      "action_id": "CloneMonster",
+      "name": "Clone Monster",
+      "description": "Creates a duplicate copy of the targeted monster adjacent to its current position. The clone is a separate entity with full HP.",
+      "category": "summoning",
+      "confidence": "high",
+      "allowed_source_families": ["rod", "wand", "spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "direction",
+            "description": "Directional input or trajectory token used to select the target monster.",
+            "value_type": "token",
+            "required": true
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "MAngband: clone_monster() calls multiply_monster() on the targeted monster. Distinct from TransformEntity (which replaces) and SummonEntities (which creates independent entities). Added to resolve rod_of_clone_monster and TransformEntity workaround."
+      }
+    },
+    {
+      "action_id": "ModifyMonsterSpeed",
+      "name": "Modify Monster Speed",
+      "description": "Applies a temporary speed modification (haste or slow) to one or more monsters.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": ["rod", "wand", "staff", "spell", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "speed_mode",
+            "description": "Direction of the speed modification applied to the target(s).",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["haste", "slow"]
+          },
+          {
+            "id": "target_mode",
+            "description": "Targeting envelope. Use aimed for single-target directed use; all_in_los for sweep effects.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["aimed", "all_in_los"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "MAngband: speed_monster() (single aimed) and speed_monsters() (all in LOS). Distinct from SlowControl (which targets groups with potency). Added to resolve rod_of_haste_monster and staff_of_haste_monsters unresolved mappings."
+      }
+    },
+    {
+      "action_id": "AggravateMonsters",
+      "name": "Aggravate Monsters",
+      "description": "Awakens all sleeping monsters within the aggravation radius and causes all monsters within line of sight to move at maximum speed.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": ["scroll", "activation", "spell", "item_property"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "radius",
+            "description": "Wake radius for sleeping monsters. Zero means level-wide.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "MAngband: aggravate_monsters() wakes sleeping monsters within 40 squares and hastes monsters in LOS. Added to resolve scroll_of_aggravate_monster unresolved_mapping."
+      }
+    },
+    {
+      "action_id": "ApplyItemCurse",
+      "name": "Apply Item Curse",
+      "description": "Applies a destructive curse to the selected equipped item, removing special powers and applying a negative magical bonus.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": ["scroll", "activation", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_slot",
+            "description": "Equipment slot containing the item to curse.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["armor", "weapon", "selected"]
+          },
+          {
+            "id": "artifact_resist_chance",
+            "description": "Numerator of the fractional chance (N in 2) that artifacts resist the curse. Default 1.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "MAngband: curse_armor() and curse_weapon() remove special powers and apply -2d5 magical penalty. Artifacts have 1-in-2 resistance. Added to resolve scroll_curse_armor and scroll_curse_weapon unresolved_mapping."
+      }
+    },
+    {
+      "action_id": "CreateTraps",
+      "name": "Create Traps",
+      "description": "Creates random traps on all empty floor squares within a given radius of the caster.",
+      "category": "terrain",
+      "confidence": "high",
+      "allowed_source_families": ["scroll", "activation", "monster_spell"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "radius",
+            "description": "Radius within which empty floor squares receive traps.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 0
+          },
+          {
+            "id": "center_mode",
+            "description": "Center point for trap placement.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "target", "point"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "MAngband: trap_creation() places traps on all empty floor squares in a 1-radius ring around the player. Added to resolve scroll_of_trap_creation unresolved_mapping."
+      }
+    },
+    {
+      "action_id": "ApplyDamage",
+      "name": "Apply Damage",
+      "description": "Applies direct HP damage to a resolved target set without projectile semantics. Covers self-inflicted damage (eating harmful consumables), thrown-item impact, environmental hazards, and melee damage that does not fit a more specific action.",
+      "category": "damage",
+      "confidence": "high",
+      "allowed_source_families": ["consumable", "activation", "trap", "monster_blow", "environmental"],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "damage_type",
+            "description": "Damage channel applied to the target.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "dark", "sound", "chaos", "nether", "arcane", "mana"]
+          },
+          {
+            "id": "amount",
+            "description": "Typed damage amount expression.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the damage. self covers eating/drinking harmful items; aimed covers thrown item impact.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": ["self", "aimed", "target", "area"]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added to resolve the consumable self-damage and thrown-damage gap identified in consumables.json. BoltDamage(direction=self) and BoltDamage(direction=thrown) were non-canonical workarounds. ApplyDamage has no projectile/beam semantics and covers the direct-application cases."
       }
     }
   ]

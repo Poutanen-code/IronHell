@@ -33,7 +33,12 @@
       "required": ["base"],
       "properties": {
         "base": { "type": "integer", "minimum": 0 },
-        "dice": { "$ref": "#/$defs/DiceRoll" }
+        "dice": { "$ref": "#/$defs/DiceRoll" },
+        "level_multiplier": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Adds (player_level * level_multiplier) to the resolved duration. Canonical representation for level-scaled durations (e.g. Protection from Evil: 3 * player_level + 1d25)."
+        }
       },
       "anyOf": [
         {
@@ -44,6 +49,9 @@
         },
         {
           "required": ["dice"]
+        },
+        {
+          "required": ["level_multiplier"]
         }
       ]
     },
@@ -101,6 +109,11 @@
           "type": "string",
           "enum": ["none", "oppose", "control", "combat_buff", "vision", "degen"],
           "default": "none"
+        },
+        "hp_bonus": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Temporary MaxHP bonus granted while this status is active. Removed when the status expires. Used by berserk (shero) semantics."
         },
         "notes": { "type": "string" },
         "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }

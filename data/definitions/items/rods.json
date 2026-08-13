@@ -17,14 +17,17 @@
       ],
       "effects": [
         {
-          "action_id": "LightArea",
+          "action_id": "BeamDamage",
           "parameters": {
-            "radius": 2,
-            "light_style": "torch"
+            "damage_type": "light_weak",
+            "amount": { "kind": "dice", "count": 6, "sides": 8 },
+            "direction": "aimed",
+            "terrain_effect": "illuminate_path"
           }
         }
       ],
       "description": "A magical rod of light.",
+      "notes": "MAngband: lite_line(dir) fires GF_LITE_WEAK beam, damroll(6,8), PROJECT_BEAM|GRID|KILL. Damages light-sensitive monsters and illuminates terrain.",
       "provenance_status": "verified"
     },
     {
@@ -136,14 +139,17 @@
       ],
       "effects": [
         {
-          "action_id": "AlterTerrain",
+          "action_id": "BeamDamage",
           "parameters": {
-            "terrain_operation": "stone_to_mud",
-            "target_mode": "direction"
+            "damage_type": "stone_weak",
+            "amount": { "kind": "dice", "count": 6, "sides": 8, "base": 25 },
+            "direction": "aimed",
+            "terrain_effect": "stone_to_mud"
           }
         }
       ],
       "description": "A magical rod of stone to mud.",
+      "notes": "MAngband: wall_to_mud(dir, 20+randint1(30)). GF_KILL_WALL damages rock/stone creatures.",
       "provenance_status": "verified"
     },
     {
@@ -218,23 +224,15 @@
       ],
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyMonsterSpeed",
           "parameters": {
-            "status_id": "haste",
-            "duration": {
-              "base": 20,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
-            },
-            "target_mode": "self"
+            "speed_mode": "haste",
+            "target_mode": "aimed"
           }
         }
       ],
       "description": "A magical rod of haste monster.",
-      "provenance_status": "unresolved",
-      "notes": "MAngband uses speed_monster() (GF_OLD_SPEED with potency based on player level). Current action catalog has no explicit targeted monster haste control action."
+      "provenance_status": "verified"
     },
     {
       "id": "rod_of_slow_monster",
@@ -252,16 +250,15 @@
       ],
       "effects": [
         {
-          "action_id": "SlowControl",
+          "action_id": "ModifyMonsterSpeed",
           "parameters": {
-            "target_mode": "target",
-            "potency": 1
+            "speed_mode": "slow",
+            "target_mode": "aimed"
           }
         }
       ],
       "description": "A magical rod of slow monster.",
-      "provenance_status": "derived",
-      "notes": "MAngband slow_monster uses potency based on player level; canonical SlowControl currently stores normalized potency."
+      "provenance_status": "verified"
     },
     {
       "id": "rod_of_confuse_monster",
@@ -424,16 +421,14 @@
       ],
       "effects": [
         {
-          "action_id": "TransformEntity",
+          "action_id": "CloneMonster",
           "parameters": {
-            "transform_rule": "polymorph_other",
-            "target_mode": "target"
+            "direction": "aimed"
           }
         }
       ],
       "description": "A magical rod of clone monster.",
-      "provenance_status": "unresolved",
-      "notes": "Unsupported action parameters moved out of contract: TransformEntity.unresolved_mapping=\"clone_monster_semantics_not_modeled\""
+      "provenance_status": "verified"
     },
     {
       "id": "rod_of_scare_monster",
@@ -672,6 +667,345 @@
       "description": "A magical rod of frost ball.",
       "provenance_status": "verified",
       "notes": "Verified from MAngband use-obj.c (96 flat damage, radius 2)."
+    },
+    {
+      "id": "rod_of_trap_location",
+      "name": "Trap Location",
+      "tval": 65,
+      "sval": 25,
+      "weight": 10,
+      "sell_value": 100,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": ["traps"]
+          }
+        }
+      ],
+      "description": "A magical rod of trap location.",
+      "notes": "MAngband SV_ROD_DETECT_TRAP: detect_trap().",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_door_stair_location",
+      "name": "Door/Stair Location",
+      "tval": 65,
+      "sval": 26,
+      "weight": 10,
+      "sell_value": 1000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": ["doors", "stairs"]
+          }
+        }
+      ],
+      "description": "A magical rod of door and stair location.",
+      "notes": "MAngband SV_ROD_DETECT_DOOR: detect_sdoor() (secret doors and stairs).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_perception",
+      "name": "Perception",
+      "tval": 65,
+      "sval": 27,
+      "weight": 10,
+      "sell_value": 13000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
+        }
+      ],
+      "description": "A magical rod of perception.",
+      "notes": "MAngband SV_ROD_IDENTIFY: ident_spell(). Reveals normal (non-hidden) powers of one object.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_recall",
+      "name": "Recall",
+      "tval": 65,
+      "sval": 28,
+      "weight": 10,
+      "sell_value": 4000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
+        }
+      ],
+      "description": "A magical rod of recall.",
+      "notes": "MAngband SV_ROD_RECALL: set_recall(). Invokes word of recall.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_illumination",
+      "name": "Illumination",
+      "tval": 65,
+      "sval": 29,
+      "weight": 10,
+      "sell_value": 1000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 2,
+            "light_style": "room",
+            "damage_light_sensitive": { "kind": "dice", "count": 2, "sides": 8 }
+          }
+        }
+      ],
+      "description": "A magical rod of illumination.",
+      "notes": "MAngband SV_ROD_ILLUMINATION: lite_area(damroll(2,8), 2). Lights radius 2 + full room; 2d8 to light-sensitive creatures.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_enlightenment",
+      "name": "Enlightenment",
+      "tval": 65,
+      "sval": 30,
+      "weight": 10,
+      "sell_value": 10000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local"
+          }
+        }
+      ],
+      "description": "A magical rod of enlightenment.",
+      "notes": "MAngband SV_ROD_MAPPING: map_area().",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_detection",
+      "name": "Detection",
+      "tval": 65,
+      "sval": 31,
+      "weight": 10,
+      "sell_value": 5000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": ["all"]
+          }
+        }
+      ],
+      "description": "A magical rod of detection.",
+      "notes": "MAngband SV_ROD_DETECTION: detection(). Reveals all treasure, objects, secret doors, stairs, traps, and monsters.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_probing",
+      "name": "Probing",
+      "tval": 65,
+      "sval": 32,
+      "weight": 10,
+      "sell_value": 4000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "InspectEntity",
+          "parameters": {
+            "scope": "probing",
+            "target_mode": "all_in_sight"
+          }
+        }
+      ],
+      "description": "A magical rod of probing.",
+      "notes": "MAngband SV_ROD_PROBING: probing(). Shows current HP, characteristics and abilities of all visible monsters.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_curing",
+      "name": "Curing",
+      "tval": 65,
+      "sval": 33,
+      "weight": 10,
+      "sell_value": 15000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 65,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["blinded", "poisoned", "confused", "stunned", "cut"],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical rod of curing.",
+      "notes": "MAngband SV_ROD_CURING: set_blind(0)+set_poisoned(0)+set_confused(0)+set_stun(0)+set_cut(0).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_healing",
+      "name": "Healing",
+      "tval": 65,
+      "sval": 34,
+      "weight": 10,
+      "sell_value": 20000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 8
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": { "kind": "flat", "value": 500 },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": ["stunned", "cut"],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical rod of healing.",
+      "notes": "MAngband SV_ROD_HEALING: hp_player(500)+set_stun(0)+set_cut(0).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_restoration",
+      "name": "Restoration",
+      "tval": 65,
+      "sval": 35,
+      "weight": 10,
+      "sell_value": 25000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 16
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "all_stats",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical rod of restoration.",
+      "notes": "MAngband SV_ROD_RESTORATION: restore_level()+do_res_stat(all six stats).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "rod_of_speed",
+      "name": "Speed",
+      "tval": 65,
+      "sval": 36,
+      "weight": 10,
+      "sell_value": 50000,
+      "pval": 0,
+      "allocation_table": [
+        {
+          "depth": 95,
+          "rarity": 16
+        }
+      ],
+      "effects": [
+        {
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "duration": {
+              "base": 15,
+              "dice": { "count": 1, "sides": 30 }
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "description": "A magical rod of speed.",
+      "notes": "MAngband SV_ROD_SPEED: set_fast(randint1(30)+15). +5 extension when already hasted handled by runtime.",
+      "provenance_status": "verified"
     }
   ]
 }

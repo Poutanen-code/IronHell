@@ -35,8 +35,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "mushroom_paranoia",
@@ -72,8 +71,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "mushroom_confusion",
@@ -109,8 +107,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "mushroom_hallucination",
@@ -146,8 +143,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "mushroom_paralysis",
@@ -183,8 +179,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "mushroom_weakness",
@@ -204,18 +199,14 @@
         }
       ],
       "description": "It inflicts 6d6 points of damage, and also reduces strength unless you have sustain strength.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 6,
-              "sides": 6
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 6, "sides": 6 },
+            "target_mode": "self"
           }
         },
         {
@@ -228,8 +219,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_sickness",
@@ -249,18 +239,14 @@
         }
       ],
       "description": "It inflicts 6d6 points of damage, and also reduces constitution unless you have sustain constitution.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 6,
-              "sides": 6
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 6, "sides": 6 },
+            "target_mode": "self"
           }
         },
         {
@@ -273,8 +259,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_stupidity",
@@ -294,18 +279,14 @@
         }
       ],
       "description": "It inflicts 8d8 points of damage, and also reduces intelligence unless you have sustain intelligence.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 8,
-              "sides": 8
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "target_mode": "self"
           }
         },
         {
@@ -318,8 +299,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_naivety",
@@ -339,18 +319,14 @@
         }
       ],
       "description": "It inflicts 8d8 points of damage, and also reduces wisdom unless you have sustain wisdom.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 8,
-              "sides": 8
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "target_mode": "self"
           }
         },
         {
@@ -363,8 +339,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_unhealth",
@@ -384,18 +359,14 @@
         }
       ],
       "description": "It inflicts 10d10 points of damage, and also reduces constitution unless you have sustain constitution. It may also be thrown to inflict 10d10 points of damage.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 10,
-              "sides": 10
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "target_mode": "self"
           }
         },
         {
@@ -409,19 +380,14 @@
           }
         },
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 10,
-              "sides": 10
-            },
-            "direction": "thrown"
+            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "target_mode": "aimed"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self); thrown_damage->BoltDamage(thrown). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_disease",
@@ -441,18 +407,14 @@
         }
       ],
       "description": "It inflicts 10d10 points of damage, and also reduces strength unless you have sustain strength. It may also be thrown to inflict 10d10 points of damage.",
-      "provenance_status": "derived",
+      "provenance_status": "verified",
       "effects": [
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 10,
-              "sides": 10
-            },
-            "direction": "self"
+            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "target_mode": "self"
           }
         },
         {
@@ -466,19 +428,14 @@
           }
         },
         {
-          "action_id": "BoltDamage",
+          "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": {
-              "kind": "dice",
-              "count": 10,
-              "sides": 10
-            },
-            "direction": "thrown"
+            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "target_mode": "aimed"
           }
         }
-      ],
-      "notes": "Legacy effect conversion: damage->BoltDamage(self); thrown_damage->BoltDamage(thrown). Action-catalog gap: no canonical direct self/thrown consumable damage action."
+      ]
     },
     {
       "id": "mushroom_cure_poison",
@@ -772,8 +729,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.target=\"self\""
+      ]
     },
     {
       "id": "ration_of_food",

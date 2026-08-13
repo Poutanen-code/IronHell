@@ -323,23 +323,20 @@
       ],
       "effects": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ModifyPlayerSpeed",
           "parameters": {
-            "status_id": "haste",
+            "speed_mode": "haste",
             "duration": {
               "base": 15,
-              "dice": {
-                "count": 1,
-                "sides": 30
-              }
+              "dice": { "count": 1, "sides": 30 }
             },
             "target_mode": "self"
           }
         }
       ],
       "description": "A magical wand of speed.",
-      "provenance_status": "derived",
-      "notes": "Derived from MAngband use-obj.c (SV_ROD_SPEED: set_fast(randint1(30)+15), with +5 extension when already hasted)."
+      "provenance_status": "verified",
+      "notes": "MAngband: set_fast(randint1(30)+15). Duration = 15+1d30."
     },
     {
       "id": "wand_of_magic_missiles",
@@ -370,8 +367,7 @@
         }
       ],
       "description": "A magical wand of magic missiles.",
-      "provenance_status": "verified",
-      "notes": "Verified from MAngband use-obj.c (SV_WAND_MAGIC_MISSILE -> damroll(3,4))."
+      "provenance_status": "verified"
     },
     {
       "id": "wand_of_acid_bolt",
