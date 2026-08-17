@@ -77,7 +77,7 @@
             "description": "Targeting mode for the ball center.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["point", "target", "self", "area"]
+            "allowed_values": ["self", "point", "aimed", "area"]
           }
         ]
       },
@@ -872,7 +872,7 @@
             "description": "Weapon selection mode.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["equipped_weapon", "single_item"]
+            "allowed_values": ["single_item", "equipped_item"]
           },
           {
             "id": "success_chance",

@@ -564,7 +564,7 @@
               "value": 120
             },
             "radius": 2,
-            "direction": "aimed"
+            "direction": "point"
           }
         }
       ],
@@ -596,7 +596,7 @@
               "value": 64
             },
             "radius": 2,
-            "direction": "aimed"
+            "direction": "point"
           }
         }
       ],
@@ -628,7 +628,7 @@
               "value": 144
             },
             "radius": 2,
-            "direction": "aimed"
+            "direction": "point"
           }
         }
       ],
@@ -660,7 +660,7 @@
               "value": 96
             },
             "radius": 2,
-            "direction": "aimed"
+            "direction": "point"
           }
         }
       ],
