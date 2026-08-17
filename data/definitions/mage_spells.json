@@ -1013,7 +1013,7 @@
         {
           "action_id": "ConfuseControl",
           "parameters": {
-            "target_mode": "area",
+            "target_mode": "all_nearby",
             "potency": 1,
             "radius": 4
           }
@@ -1363,7 +1363,7 @@
           "action_id": "BrandWeapon",
           "parameters": {
             "brand_type": "elemental",
-            "target_mode": "single_item"
+            "target_mode": "equipped_item"
           }
         }
       ],

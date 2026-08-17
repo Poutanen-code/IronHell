@@ -384,7 +384,7 @@
           "parameters": {
             "damage_type": "physical",
             "amount": { "kind": "dice", "count": 10, "sides": 10 },
-            "target_mode": "aimed"
+            "target_mode": "self"
           }
         }
       ]
@@ -432,7 +432,7 @@
           "parameters": {
             "damage_type": "physical",
             "amount": { "kind": "dice", "count": 10, "sides": 10 },
-            "target_mode": "aimed"
+            "target_mode": "self"
           }
         }
       ]
