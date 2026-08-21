@@ -493,7 +493,7 @@
       "flags": ["WIS", "DEX", "RES_FEAR", "BLESSED", "BRAND_COLD", "RES_COLD", "SLAY_EVIL", "SLAY_TROLL", "SLAY_ORC", "KILL_UNDEAD", "FREE_ACT", "SLOW_DIGEST", "INSTA_ART"],
       "activation": "FROST3",
       "recharge_base": 35, "recharge_dice": 0,
-      "description": "Gil-galad's Snow-point; remarkably powerful with KILL_UNDEAD."
+      "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain."
     },
     {
       "serial": 98,
@@ -542,7 +542,7 @@
       "flags": ["STR", "DEX", "CON", "INT", "WIS", "CHR", "RES_FEAR", "BLESSED", "SLAY_EVIL", "BRAND_COLD", "SLAY_UNDEAD", "KILL_DEMON", "SLAY_ORC", "FREE_ACT", "IM_COLD", "RES_COLD", "SEE_INVIS", "INSTA_ART"],
       "activation": "MASS_BANISHMENT",
       "recharge_base": 1000, "recharge_dice": 0,
-      "description": "Maia-level weapon; IM_COLD and MASS_BANISHMENT are extraordinarily rare abilities."
+      "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind."
     },
     {
       "serial": 103,

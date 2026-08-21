@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/terrain_definitions.schema.json",
+  "title": "Terrain Definitions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "terrain_definitions"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "terrain_definitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "symbol",
+          "color",
+          "terrain_category",
+          "walkable",
+          "blocks_los",
+          "destroyable",
+          "supports_lighting",
+          "sound_attenuation",
+          "feature_tags",
+          "appears_as",
+          "provenance_status"
+        ],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/Id" },
+          "name": { "type": "string", "minLength": 1 },
+          "symbol": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "color": { "type": "string", "minLength": 1, "maxLength": 2 },
+          "terrain_category": {
+            "type": "string",
+            "enum": [
+              "floor",
+              "wall",
+              "permanent_wall",
+              "door",
+              "secret_door",
+              "stair",
+              "trap",
+              "vein",
+              "shop",
+              "water",
+              "vegetation",
+              "wilderness",
+              "special"
+            ]
+          },
+          "walkable": { "type": "boolean" },
+          "blocks_los": { "type": "boolean" },
+          "destroyable": { "type": "boolean" },
+          "supports_lighting": { "type": "boolean" },
+          "sound_attenuation": {
+            "type": "string",
+            "enum": ["none", "partial", "full"]
+          },
+          "feature_tags": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+            "uniqueItems": true
+          },
+          "appears_as": {
+            "anyOf": [
+              { "type": "null" },
+              { "$ref": "common.schema.json#/$defs/Id" }
+            ]
+          },
+          "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+        }
+      }
+    }
+  }
+}

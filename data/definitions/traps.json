@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "traps": [
+    {
+      "id": "invisible_trap",
+      "name": "invisible trap",
+      "source_feature_id": "invisible_trap",
+      "trap_category": "concealed_generic",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile; disguised as open floor until detected."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "mixed",
+      "visibility_model": "disguised",
+      "effect_tags": ["generic_trap_effect"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "trap_door",
+      "name": "trap door",
+      "source_feature_id": "trap_door",
+      "trap_category": "transition",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile and drops it to a lower level."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "level_transition",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["level_transition"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "pit",
+      "name": "pit",
+      "source_feature_id": "pit",
+      "trap_category": "pit",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile and falls into the pit."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "damage",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["fall_damage"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "spiked_pit",
+      "name": "spiked pit",
+      "source_feature_id": "spiked_pit",
+      "trap_category": "pit",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile and falls onto spikes."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "damage",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["fall_damage", "piercing_damage"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "poison_pit",
+      "name": "poison pit",
+      "source_feature_id": "poison_pit",
+      "trap_category": "pit",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, falling onto poisoned spikes."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "mixed",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["fall_damage", "poison_status"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "summon_rune",
+      "name": "summoning rune",
+      "source_feature_id": "summon_rune",
+      "trap_category": "rune",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, summoning hostile monsters."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "summon",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["monster_summon"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "teleport_rune",
+      "name": "teleport rune",
+      "source_feature_id": "teleport_rune",
+      "trap_category": "rune",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, teleporting it elsewhere."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "teleport",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["forced_teleport"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "fire_spot",
+      "name": "fire trap",
+      "source_feature_id": "fire_spot",
+      "trap_category": "elemental_spot",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, igniting a burst of fire."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "damage",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["fire_damage"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "acid_spot",
+      "name": "acid trap",
+      "source_feature_id": "acid_spot",
+      "trap_category": "elemental_spot",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, releasing a burst of acid."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "damage",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["acid_damage"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "dart_slow",
+      "name": "dart trap (slow)",
+      "source_feature_id": "dart_slow",
+      "trap_category": "dart",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, firing a dart that slows the target."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["slow_status"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "dart_strength",
+      "name": "dart trap (strength)",
+      "source_feature_id": "dart_strength",
+      "trap_category": "dart",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, firing a dart that drains strength."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "stat_drain",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["strength_drain"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "dart_dexterity",
+      "name": "dart trap (dexterity)",
+      "source_feature_id": "dart_dexterity",
+      "trap_category": "dart",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, firing a dart that drains dexterity."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "stat_drain",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["dexterity_drain"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "dart_constitution",
+      "name": "dart trap (constitution)",
+      "source_feature_id": "dart_constitution",
+      "trap_category": "dart",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, firing a dart that drains constitution."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "stat_drain",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["constitution_drain"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "gas_blind",
+      "name": "gas trap (blind)",
+      "source_feature_id": "gas_blind",
+      "trap_category": "gas",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, releasing a blinding gas cloud."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["blind_status"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "gas_confuse",
+      "name": "gas trap (confuse)",
+      "source_feature_id": "gas_confuse",
+      "trap_category": "gas",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, releasing a confusing gas cloud."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["confuse_status"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "gas_poison",
+      "name": "gas trap (poison)",
+      "source_feature_id": "gas_poison",
+      "trap_category": "gas",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, releasing a poisonous gas cloud."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["poison_status"],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "gas_sleep",
+      "name": "gas trap (sleep)",
+      "source_feature_id": "gas_sleep",
+      "trap_category": "gas",
+      "trigger_behavior": {
+        "trigger_type": "on_enter",
+        "description": "Triggers when a creature enters the tile, releasing a soporific gas cloud."
+      },
+      "detection_behavior": {
+        "detection_model": "search_skill",
+        "passive_search_applies": true,
+        "active_detection_applies": true
+      },
+      "disarm_behavior": {
+        "disarm_model": "skill_check",
+        "skill": "disarming"
+      },
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": ["sleep_status"],
+      "provenance_status": "verified"
+    }
+  ]
+}

@@ -64,31 +64,6 @@
       "notes": "Damage scales with player level at runtime (3 * player_level). flat_bonus=0 is a placeholder; runtime replaces it."
     },
     {
-      "activation_id": "HASTE2",
-      "name": "Haste II",
-      "description": "Your body quickens to incredible speed.",
-      "effects": [
-        {
-          "effect_id": "haste",
-          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } }
-        }
-      ]
-    },
-    {
-      "activation_id": "FIRE3",
-      "name": "Ball of Fire",
-      "description": "A massive fireball erupts from the artifact.",
-      "effects": [
-        {
-          "effect_id": "damage",
-          "damage_type": "fire",
-          "shape": "ball",
-          "flat_bonus": 120,
-          "radius": 2
-        }
-      ]
-    },
-    {
       "activation_id": "BIZZARE",
       "name": "Bizarre",
       "description": "The One Ring pulses with terrible power, producing an utterly unpredictable effect.",
@@ -98,17 +73,6 @@
         }
       ],
       "notes": "The One Ring's unique activation. Runtime selects randomly from a pool of drastic effects."
-    },
-    {
-      "activation_id": "HEAL2",
-      "name": "Heal II",
-      "description": "Powerful magic knits your wounds, restoring a great deal of health.",
-      "effects": [
-        {
-          "effect_id": "heal",
-          "flat_bonus": 1000
-        }
-      ]
     },
     {
       "activation_id": "PHASE",
@@ -141,10 +105,16 @@
       "description": "A jagged bolt of razor shards screams toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "shard",
-          "shape": "bolt",
-          "flat_bonus": 120
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "shard",
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -154,10 +124,16 @@
       "description": "A bolt of fire leaps from the artifact toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "fire",
-          "shape": "bolt",
-          "dice": { "count": 9, "sides": 8 }
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "dice",
+              "count": 9,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -166,11 +142,18 @@
       "name": "Frost Bolt",
       "description": "A bolt of intense cold streaks toward your target.",
       "effects": [
+
         {
-          "effect_id": "damage",
-          "damage_type": "cold",
-          "shape": "bolt",
-          "dice": { "count": 12, "sides": 8 }
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -179,11 +162,18 @@
       "name": "Lightning Bolt",
       "description": "A bolt of lightning crackles outward.",
       "effects": [
+
         {
-          "effect_id": "damage",
-          "damage_type": "lightning",
-          "shape": "bolt",
-          "dice": { "count": 6, "sides": 6 }
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -193,11 +183,16 @@
       "description": "A noxious cloud of poison gas billows outward.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "poison",
-          "shape": "ball",
-          "flat_bonus": 12,
-          "radius": 3
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": {
+              "kind": "flat",
+              "value": 12
+            },
+            "radius": 3,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -207,25 +202,16 @@
       "description": "A ball of intense cold erupts from the artifact.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "cold",
-          "shape": "ball",
-          "flat_bonus": 48,
-          "radius": 2
-        }
-      ]
-    },
-    {
-      "activation_id": "FROST4",
-      "name": "Frost Ball IV",
-      "description": "A devastating ball of freezing cold annihilates everything nearby.",
-      "effects": [
-        {
-          "effect_id": "damage",
-          "damage_type": "cold",
-          "shape": "ball",
-          "flat_bonus": 200,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 48
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -235,11 +221,35 @@
       "description": "A powerful ball of freezing cold erupts outward.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "cold",
-          "shape": "ball",
-          "flat_bonus": 100,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 100
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ]
+    },
+    {
+      "activation_id": "FROST4",
+      "name": "Frost Ball IV",
+      "description": "A devastating ball of freezing cold annihilates everything nearby.",
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 200
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -249,11 +259,16 @@
       "description": "An enormous ball of killing cold detonates, chilling all in its radius.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "cold",
-          "shape": "ball",
-          "flat_bonus": 130,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "flat",
+              "value": 130
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -263,11 +278,35 @@
       "description": "A ball of roaring fire blossoms from the artifact.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "fire",
-          "shape": "ball",
-          "flat_bonus": 55,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 55
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ]
+    },
+    {
+      "activation_id": "FIRE3",
+      "name": "Ball of Fire",
+      "description": "A massive fireball erupts from the artifact.",
+      "effects": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 120
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -277,11 +316,16 @@
       "description": "A large fireball detonates with tremendous force.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "fire",
-          "shape": "ball",
-          "flat_bonus": 80,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "flat",
+              "value": 80
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -291,11 +335,16 @@
       "description": "A ball of crackling lightning explodes outward from the artifact.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "lightning",
-          "shape": "ball",
-          "flat_bonus": 100,
-          "radius": 2
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 100
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
         }
       ]
     },
@@ -305,10 +354,16 @@
       "description": "A bolt of sizzling acid arcs toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "acid",
-          "shape": "bolt",
-          "dice": { "count": 5, "sides": 8 }
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "dice",
+              "count": 5,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -362,10 +417,16 @@
       "description": "A bolt of pure arcane force speeds toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "arcane",
-          "shape": "bolt",
-          "dice": { "count": 2, "sides": 6 }
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 6
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -375,10 +436,16 @@
       "description": "A bolt of raw magical force blasts toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "mana",
-          "shape": "bolt",
-          "flat_bonus": 120
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "mana",
+            "amount": {
+              "kind": "dice",
+              "count": 12,
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -401,8 +468,25 @@
       "description": "Powerful healing magic restores a significant portion of your health.",
       "effects": [
         {
-          "effect_id": "heal",
-          "flat_bonus": 500
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": { "kind": "flat", "value": 500 },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "activation_id": "HEAL2",
+      "name": "Heal II",
+      "description": "Powerful magic knits your wounds, restoring a great deal of health.",
+      "effects": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": { "kind": "flat", "value": 1000 },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -411,9 +495,16 @@
       "name": "Cure Wounds",
       "description": "Minor healing magic mends your wounds.",
       "effects": [
-        {
-          "effect_id": "heal",
-          "dice": { "count": 4, "sides": 8 }
+{
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 8
+            },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -423,7 +514,11 @@
       "description": "The artifact restores life levels drained by undead and demons.",
       "effects": [
         {
-          "effect_id": "restore_life"
+          "action_id": "RestoreAttributes",
+          "parameters": {
+            "restore_scope": "experience_level",
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -433,8 +528,15 @@
       "description": "You move with supernatural speed.",
       "effects": [
         {
-          "effect_id": "haste",
-          "duration": { "base": 10, "dice": { "count": 1, "sides": 10 } }
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "duration": {
+              "base": 10,
+              "dice": { "count": 1, "sides": 10 }
+            },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -444,8 +546,33 @@
       "description": "You move with sustained supernatural speed.",
       "effects": [
         {
-          "effect_id": "haste",
-          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } }
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "duration": {
+              "base": 20,
+              "dice": { "count": 1, "sides": 20 }
+            },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "activation_id": "HASTE2",
+      "name": "Haste II",
+      "description": "Your body quickens to incredible speed.",
+      "effects": [
+        {
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "duration": {
+              "base": 75,
+              "dice": { "count": 1, "sides": 75 }
+            },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -455,8 +582,15 @@
       "description": "Battle-rage floods through you; your blows land with terrible force.",
       "effects": [
         {
-          "effect_id": "berserk",
-          "duration": { "base": 25, "dice": { "count": 1, "sides": 25 } }
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "berserk",
+            "duration": {
+              "base": 25,
+              "dice": { "count": 1, "sides": 25 }
+            },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -466,8 +600,10 @@
       "description": "The artifact reveals the true nature of an item.",
       "effects": [
         {
-          "effect_id": "identify",
-          "identify_all": false
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
         }
       ]
     },
@@ -502,10 +638,13 @@
       "description": "A blast of disorienting magic befuddles your target.",
       "effects": [
         {
-          "effect_id": "apply_status",
-          "status_id": "confused",
-          "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } },
-          "target": "target"
+          "action_id": "ConfuseControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 10,
+            "radius": 4,
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } }
+          }
         }
       ]
     },
@@ -556,14 +695,29 @@
       "description": "You are flooded with battle-fury, divine blessing, and elemental protection simultaneously.",
       "effects": [
         {
-          "effect_id": "berserk",
-          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } }
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "berserk",
+            "duration": {
+              "base": 25,
+              "dice": { "count": 1, "sides": 25 }
+            },
+            "target_mode": "self"
+          }
         },
         {
-          "effect_id": "apply_status",
-          "status_id": "blessed",
-          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
-          "target": "self"
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "blessed",
+            "duration": {
+              "base": 50,
+              "dice": {
+                "count": 1,
+                "sides": 50
+              }
+            },
+            "target_mode": "self"
+          }
         },
         {
           "effect_id": "apply_status",
@@ -579,8 +733,11 @@
       "description": "You are whisked away to a random location on the level.",
       "effects": [
         {
-          "effect_id": "teleport",
-          "distance": 100
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 100,
+            "teleport_mode": "teleport"
+          }
         }
       ]
     },
@@ -601,7 +758,10 @@
       "description": "After a short delay, you are recalled to the surface.",
       "effects": [
         {
-          "effect_id": "word_of_recall"
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
         }
       ]
     },
@@ -611,8 +771,11 @@
       "description": "A wave of holy power banishes all evil creatures from the level.",
       "effects": [
         {
-          "effect_id": "banish",
-          "target": "evil"
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "evil",
+            "target_mode": "level"
+          }
         }
       ]
     },
@@ -622,8 +785,11 @@
       "description": "Every non-unique creature on the level is banished to the void.",
       "effects": [
         {
-          "effect_id": "banish",
-          "target": "non_unique"
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "mass_non_unique",
+            "target_mode": "level"
+          }
         }
       ]
     },
@@ -633,7 +799,13 @@
       "description": "The artifact dissolves rock walls to muddy rubble with a touch.",
       "effects": [
         {
-          "effect_id": "stone_to_mud"
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "stone_weak",
+            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
+            "direction": "aimed",
+            "terrain_effect": "stone_to_mud"
+          }
         }
       ]
     },

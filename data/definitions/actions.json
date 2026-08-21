@@ -7,7 +7,7 @@
       "description": "Single-target projectile damage payload shared across caster and device sources.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand"],
+      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -48,7 +48,7 @@
       "description": "Area-of-effect damage payload centered on a point, target, or source actor.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "staff"],
+      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "staff", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1083,7 +1083,7 @@
       "description": "Removes entities according to a declared banishment rule.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "staff"],
+      "allowed_source_families": ["spell", "prayer", "staff", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [

@@ -824,7 +824,7 @@
         {
           "action_id": "TeleportTarget",
           "parameters": {
-            "distance": 0,
+            "distance": 100,
             "target_mode": "target"
           }
         }

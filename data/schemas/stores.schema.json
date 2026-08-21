@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/stores.schema.json",
+  "title": "Stores",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "stores"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "stores": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "store_type",
+          "terrain_feature_id",
+          "town_symbol",
+          "inventory_profile_id",
+          "turnover_profile_id",
+          "pricing_profile_id",
+          "access_tags",
+          "provenance_status"
+        ],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/Id" },
+          "name": { "type": "string", "minLength": 1 },
+          "store_type": {
+            "type": "string",
+            "enum": [
+              "general_store",
+              "armory",
+              "weapon_smith",
+              "temple",
+              "alchemy_shop",
+              "magic_shop",
+              "black_market",
+              "home"
+            ]
+          },
+          "terrain_feature_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "town_symbol": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "inventory_profile_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "turnover_profile_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "pricing_profile_id": { "$ref": "common.schema.json#/$defs/Id" },
+          "access_tags": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+            "uniqueItems": true
+          },
+          "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
+        }
+      }
+    }
+  }
+}

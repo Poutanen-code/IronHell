@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "stores": [
+    {
+      "id": "general_store",
+      "name": "General Store",
+      "store_type": "general_store",
+      "terrain_feature_id": "shop_general_store",
+      "town_symbol": "1",
+      "inventory_profile_id": "general_store_inventory_profile_placeholder",
+      "turnover_profile_id": "general_store_turnover_profile_placeholder",
+      "pricing_profile_id": "general_store_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "armory",
+      "name": "Armory",
+      "store_type": "armory",
+      "terrain_feature_id": "shop_armory",
+      "town_symbol": "2",
+      "inventory_profile_id": "armory_inventory_profile_placeholder",
+      "turnover_profile_id": "armory_turnover_profile_placeholder",
+      "pricing_profile_id": "armory_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "weapon_smith",
+      "name": "Weapon Smiths",
+      "store_type": "weapon_smith",
+      "terrain_feature_id": "shop_weapon_smith",
+      "town_symbol": "3",
+      "inventory_profile_id": "weapon_smith_inventory_profile_placeholder",
+      "turnover_profile_id": "weapon_smith_turnover_profile_placeholder",
+      "pricing_profile_id": "weapon_smith_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "temple",
+      "name": "Temple",
+      "store_type": "temple",
+      "terrain_feature_id": "shop_temple",
+      "town_symbol": "4",
+      "inventory_profile_id": "temple_inventory_profile_placeholder",
+      "turnover_profile_id": "temple_turnover_profile_placeholder",
+      "pricing_profile_id": "temple_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "alchemy_shop",
+      "name": "Alchemy Shop",
+      "store_type": "alchemy_shop",
+      "terrain_feature_id": "shop_alchemy",
+      "town_symbol": "5",
+      "inventory_profile_id": "alchemy_shop_inventory_profile_placeholder",
+      "turnover_profile_id": "alchemy_shop_turnover_profile_placeholder",
+      "pricing_profile_id": "alchemy_shop_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "magic_shop",
+      "name": "Magic Shop",
+      "store_type": "magic_shop",
+      "terrain_feature_id": "shop_magic",
+      "town_symbol": "6",
+      "inventory_profile_id": "magic_shop_inventory_profile_placeholder",
+      "turnover_profile_id": "magic_shop_turnover_profile_placeholder",
+      "pricing_profile_id": "magic_shop_pricing_profile_placeholder",
+      "access_tags": ["town_only"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "black_market",
+      "name": "Black Market",
+      "store_type": "black_market",
+      "terrain_feature_id": "shop_black_market",
+      "town_symbol": "7",
+      "inventory_profile_id": "black_market_inventory_profile_placeholder",
+      "turnover_profile_id": "black_market_turnover_profile_placeholder",
+      "pricing_profile_id": "black_market_pricing_profile_placeholder",
+      "access_tags": ["town_only", "restricted_access"],
+      "provenance_status": "inferred"
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "store_type": "home",
+      "terrain_feature_id": "shop_home",
+      "town_symbol": "8",
+      "inventory_profile_id": "home_inventory_profile_placeholder",
+      "turnover_profile_id": "home_turnover_profile_placeholder",
+      "pricing_profile_id": "home_pricing_profile_placeholder",
+      "access_tags": ["town_only", "owner_only"],
+      "provenance_status": "inferred"
+    }
+  ]
+}
