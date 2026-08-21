@@ -43,6 +43,11 @@
           "minItems": 1,
           "items": { "$ref": "effects#/$defs/Effect" }
         },
+        "migration_status": {
+          "description": "Marks an activation whose remaining behavior cannot yet be represented by an activation-eligible canonical action.",
+          "type": "string",
+          "enum": ["unresolved"]
+        },
         "notes": {
           "description": "Implementation notes for developers. Not shown to players.",
           "type": "string"

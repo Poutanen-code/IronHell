@@ -6,23 +6,28 @@
       "name": "Illumination",
       "description": "The light blazes out, illuminating the area with brilliant starlight that harms the undead.",
       "effects": [
-        {
-          "effect_id": "light_area",
-          "radius": 0,
-          "type": "starlight",
-          "damage_undead": true,
-          "ray_count": 8
+           {
+             "action_id": "LightArea",
+             "parameters": {
+               "radius": 0,
+               "light_style": "starlight"
+             }
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "Canonical LightArea preserves illumination, but the catalog has no activation-eligible action parameter for the legacy eight-ray undead damage component."
     },
     {
       "activation_id": "MAGIC_MAP",
       "name": "Magic Mapping",
       "description": "The entire level is revealed in your mind's eye.",
       "effects": [
-        {
-          "effect_id": "mapping",
-          "radius": 0
+           {
+             "action_id": "MapArea",
+             "parameters": {
+               "reveal_mode": "level",
+               "radius": 0
+             }
         }
       ]
     },
@@ -31,9 +36,11 @@
       "name": "Detection",
       "description": "You sense all creatures, objects, traps, and paths nearby.",
       "effects": [
-        {
-          "effect_id": "detect",
-          "targets": ["all"]
+           {
+             "action_id": "DetectEntities",
+             "parameters": {
+               "targets": ["all"]
+             }
         }
       ]
     },
@@ -42,9 +49,13 @@
       "name": "Protection from Evil",
       "description": "A holy aura wards off evil creatures.",
       "effects": [
-        {
-          "effect_id": "protection_from_evil",
-          "duration": { "base": 0, "dice": { "count": 3, "sides": 1 } }
+           {
+             "action_id": "ApplyTimedBuff",
+             "parameters": {
+               "status_id": "protection_from_evil",
+               "duration": { "base": 0, "dice": { "count": 3, "sides": 1 } },
+               "target_mode": "self"
+             }
         }
       ],
       "notes": "Duration base is 0; the runtime multiplies dice.count by player level (3*level ticks)."
@@ -61,7 +72,8 @@
           "flat_bonus": 0
         }
       ],
-      "notes": "Damage scales with player level at runtime (3 * player_level). flat_bonus=0 is a placeholder; runtime replaces it."
+      "notes": "Damage scales with player level at runtime (5 * player_level). flat_bonus=0 is a placeholder; runtime replaces it. The catalog has DispelByTag, but activation is not an allowed source family; the legacy holy burst and evil-target filter remain unresolved.",
+      "migration_status": "unresolved"
     },
     {
       "activation_id": "BIZZARE",
@@ -72,16 +84,20 @@
           "effect_id": "bizarre"
         }
       ],
-      "notes": "The One Ring's unique activation. Runtime selects randomly from a pool of drastic effects."
+      "notes": "The One Ring's unique activation. Runtime selects randomly from a pool of drastic effects. No canonical action models this random pool; an activation-specific random-effect action is required.",
+      "migration_status": "unresolved"
     },
     {
       "activation_id": "PHASE",
       "name": "Phase Door",
       "description": "You blink a short distance to an adjacent open area.",
       "effects": [
-        {
-          "effect_id": "phase_door",
-          "distance": 10
+           {
+             "action_id": "TeleportSelf",
+             "parameters": {
+               "distance": 10,
+               "teleport_mode": "phase"
+             }
         }
       ]
     },
@@ -91,13 +107,15 @@
       "description": "Eight beams of starlight streak outward, burning undead.",
       "effects": [
         {
-          "effect_id": "light_area",
-          "radius": 0,
-          "type": "starlight",
-          "damage_undead": true,
-          "ray_count": 8
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 0,
+            "light_style": "starlight"
+          }
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "Canonical LightArea preserves illumination, but the catalog has no activation-eligible action parameter for the legacy eight-ray undead damage component."
     },
     {
       "activation_id": "SHARD",
@@ -379,7 +397,9 @@
           "flat_bonus": 90,
           "is_drain": true
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has DrainLife, but activation is not an allowed source family. The legacy nether bolt and life-restoration semantics remain unresolved."
     },
     {
       "activation_id": "DRAIN_LIFE2",
@@ -393,7 +413,9 @@
           "flat_bonus": 120,
           "is_drain": true
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has DrainLife, but activation is not an allowed source family. The legacy nether bolt and life-restoration semantics remain unresolved."
     },
     {
       "activation_id": "STAR_BALL",
@@ -401,15 +423,79 @@
       "description": "Eight balls of brilliant starlight streak outward, each scorching enemies with holy radiance.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "light",
-          "shape": "ball",
-          "dice": { "count": 6, "sides": 7 },
-          "radius": 3,
-          "count": 8
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        },
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "radius": 3,
+            "target_mode": "point"
+          }
         }
       ],
-      "notes": "Fires 8 individual light balls. Each deals 6d7 damage."
+      "notes": "Fires 8 ordered BallDamage actions. Each deals 6d7 light damage with radius 3."
     },
     {
       "activation_id": "MISSILE",
@@ -455,10 +541,12 @@
       "description": "A magical arrow of great force speeds toward your target.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "physical",
-          "shape": "bolt",
-          "flat_bonus": 150
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "flat", "value": 150 },
+            "direction": "aimed"
+          }
         }
       ]
     },
@@ -615,7 +703,9 @@
         {
           "effect_id": "probe"
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has InspectEntity, but activation is not an allowed source family. Probe remains unresolved."
     },
     {
       "activation_id": "CLAIRVOYANCE",
@@ -623,12 +713,17 @@
       "description": "Your mind expands to encompass the entire level, detecting all creatures, objects, traps, and passages.",
       "effects": [
         {
-          "effect_id": "mapping",
-          "radius": 0
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "clairvoyant",
+            "radius": 0
+          }
         },
         {
-          "effect_id": "detect",
-          "targets": ["all"]
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": ["all"]
+          }
         }
       ]
     },
@@ -646,7 +741,9 @@
             "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } }
           }
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "ConfuseControl exists, but activation is not an allowed source family. The canonical payload remains pending source-family/catalog resolution."
     },
     {
       "activation_id": "SLEEP",
@@ -659,7 +756,9 @@
           "duration": { "base": 0, "dice": { "count": 1, "sides": 4 } },
           "target": "all_nearby"
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has SleepControl, but activation is not an allowed source family. Sleep remains unresolved."
     },
     {
       "activation_id": "REM_FEAR_POIS",
@@ -674,7 +773,9 @@
           "effect_id": "cure_status",
           "status_id": "poisoned"
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has CureStatus, but activation is not an allowed source family. Both fear and poison cures remain unresolved."
     },
     {
       "activation_id": "RESIST",
@@ -682,10 +783,12 @@
       "description": "A protective aura wards off fire, cold, acid, and lightning.",
       "effects": [
         {
-          "effect_id": "apply_status",
-          "status_id": "elemental_resistance",
-          "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
-          "target": "self"
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": ["acid", "lightning", "fire", "cold"],
+            "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -720,10 +823,12 @@
           }
         },
         {
-          "effect_id": "apply_status",
-          "status_id": "elemental_resistance",
-          "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
-          "target": "self"
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": ["acid", "lightning", "fire", "cold"],
+            "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
+            "target_mode": "self"
+          }
         }
       ]
     },
@@ -750,7 +855,9 @@
           "effect_id": "teleport_other",
           "distance": 0
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "The catalog has TeleportTarget, but activation is not an allowed source family. The legacy forced target relocation remains unresolved."
     },
     {
       "activation_id": "WORD_OF_RECALL",
@@ -763,7 +870,9 @@
             "relocation_mode": "word_of_recall"
           }
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "RecallOrLevelShift exists, but activation is not an allowed source family. The canonical payload remains pending source-family/catalog resolution."
     },
     {
       "activation_id": "BANISHMENT",
@@ -807,7 +916,9 @@
             "terrain_effect": "stone_to_mud"
           }
         }
-      ]
+      ],
+      "migration_status": "unresolved",
+      "notes": "BeamDamage is not activation-eligible. AlterTerrain cannot preserve the directed stone-to-mud beam's damage component, so this activation remains unresolved."
     },
     {
       "activation_id": "TRAP_DOOR_DEST",
@@ -815,7 +926,12 @@
       "description": "All traps and doors in the area are instantly destroyed.",
       "effects": [
         {
-          "effect_id": "destroy_traps_doors"
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destroy_trap_or_door",
+            "target_mode": "area",
+            "radius": 1
+          }
         }
       ]
     },
@@ -825,8 +941,11 @@
       "description": "The artifact channels magical energy into an exhausted device, restoring its charges.",
       "effects": [
         {
-          "effect_id": "recharge",
-          "power": 60
+          "action_id": "RechargeItem",
+          "parameters": {
+            "power": 60,
+            "item_kind_filter": ["wand", "staff", "device", "rechargeable"]
+          }
         }
       ]
     }
