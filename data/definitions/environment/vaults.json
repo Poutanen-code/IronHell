@@ -1,0 +1,1735 @@
+{
+  "schema_version": 1,
+  "vaults": [
+    {
+      "id": "vault_round_001",
+      "name": "round",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "       %%%%%%       ",
+        "    %%%..##..%%%    ",
+        "  %%....####....%%  ",
+        " %......#**#......% ",
+        "%...,.##+##+##.,...%",
+        "%.,.,.#*#*9#*#.,.,.%",
+        "%.,.,.#*#9*#*#.,.,.%",
+        "%...,.##+##+##.,...%",
+        " %......#**#......% ",
+        "  %%....####....%%  ",
+        "    %%%..##..%%%    ",
+        "       %%%%%%       "
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        " ": {
+          "kind": "special_marker",
+          "ref": "layout_padding",
+          "provenance_status": "verified"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 1
+      }
+    },
+    {
+      "id": "vault_octagon_002",
+      "name": "octagon",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 14,
+        "cols": 20
+      },
+      "layout": [
+        "   %%%%%%%%%%%%%%   ",
+        "  %%.##########.%%  ",
+        " %%..#..,,,,..#..%% ",
+        "%%,..#.,####,.#..,%%",
+        "%....#.,#**#,.#....%",
+        "%.###+,##&&##,+###.%",
+        "%.#..,,#*9**#,,..#.%",
+        "%.#..,,#**9*#,,..#.%",
+        "%.###+,##&&##,+###.%",
+        "%....#.,#**#,.#....%",
+        "%%,..#.,####,.#..,%%",
+        " %%..#..,,,,..#..%% ",
+        "  %%.##########.%%  ",
+        "   %%%%%%%%%%%%%%   "
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        " ": {
+          "kind": "special_marker",
+          "ref": "layout_padding",
+          "provenance_status": "verified"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 2
+      }
+    },
+    {
+      "id": "vault_octagon_003",
+      "name": "octagon",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "    %%%%%%%%%%%%    ",
+        " %%%%..........%%%% ",
+        " %...###+##+###...% ",
+        "%%...#,,#,,#,,#...%%",
+        "%.###+##+##+##+###.%",
+        "%.#,,#&&#*9#&&#,,#.%",
+        "%.#,,#&&#9*#&&#,,#.%",
+        "%.###+##+##+##+###.%",
+        "%%...#,,#,,#,,#...%%",
+        " %...###+##+###...% ",
+        " %%%%..........%%%% ",
+        "    %%%%%%%%%%%%    "
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        " ": {
+          "kind": "special_marker",
+          "ref": "layout_padding",
+          "provenance_status": "verified"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 3
+      }
+    },
+    {
+      "id": "vault_square_004",
+      "name": "square",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%",
+        "%*.......&........*%",
+        "%.################.%",
+        "%.#,.,.,.,.,.,.,.#.%",
+        "%.#.############,#.%",
+        "%.#,+,&&+*9#&*,#.#&%",
+        "%&#.#,*&#9*+&&,+,#.%",
+        "%.#,############.#.%",
+        "%.#.,.,.,.,.,.,.,#.%",
+        "%.################.%",
+        "%*........&.......*%",
+        "%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 4
+      }
+    },
+    {
+      "id": "vault_diagonal_005",
+      "name": "diagonal",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%   ",
+        "%,,,##,,,,##....%%  ",
+        "%,,,,##,,,,##....%% ",
+        "%#,,,,##,,,,##....%%",
+        "%##,,,,##,,,,##....%",
+        "%.##,,,,,9,,,,#+...%",
+        "%..#+,,,,9,,,,,##..%",
+        "%...##,,,,##,,,,##.%",
+        "%%...##,,,,##,,,,##%",
+        " %%...##,,,,##,,,,#%",
+        "  %%...##,,,,##,,,,%",
+        "   %%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        " ": {
+          "kind": "special_marker",
+          "ref": "layout_padding",
+          "provenance_status": "verified"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 5
+      }
+    },
+    {
+      "id": "vault_diagonal_006",
+      "name": "diagonal",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "   %%%%%%%%%%%%%%%%%",
+        "  %%....##,,,,##,,,%",
+        " %%....##,,,,##,,,,%",
+        "%%....##,,,,##,,,,#%",
+        "%....##,,,,##,,,,##%",
+        "%...+#,,,,9,,,,,##.%",
+        "%..##,,,,,9,,,,+#..%",
+        "%.##,,,,##,,,,##...%",
+        "%##,,,,##,,,,##...%%",
+        "%#,,,,##,,,,##...%% ",
+        "%,,,,##,,,,##...%%  ",
+        "%%%%%%%%%%%%%%%%%   "
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        " ": {
+          "kind": "special_marker",
+          "ref": "layout_padding",
+          "provenance_status": "verified"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 6
+      }
+    },
+    {
+      "id": "vault_square_007",
+      "name": "square",
+      "rating": 5,
+      "tags": [
+        "type7",
+        "starter",
+        "room_type:7",
+        "tier:starter"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 20
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%",
+        "%,################,%",
+        "%^#.*...&..,....,#^%",
+        "%^#...,......9...#^%",
+        "%^#######++#######^%",
+        "%^+.,..&+,*+*....+^%",
+        "%^+..*.,+.&+.,.&.+^%",
+        "%^#######++#######^%",
+        "%^#....,.,.....,.#^%",
+        "%^#..9......*....#^%",
+        "%,################,%",
+        "%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 7
+      }
+    },
+    {
+      "id": "vault_huge_010",
+      "name": "huge",
+      "rating": 45,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 17,
+        "cols": 39
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%+&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#X%",
+        "%X8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&X%",
+        "%X#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#X%",
+        "%X8#&#8#&#8#&#88888888888#8#&#8#&#8#&X%",
+        "%X#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#X%",
+        "%X8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&X%",
+        "%X#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#8#&#&+%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 10
+      }
+    },
+    {
+      "id": "vault_large_011",
+      "name": "large",
+      "rating": 35,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 18,
+        "cols": 40
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X,#,#,#,#,#,#,#,#*99*#,#,#,#,#,#,#,#,X%",
+        "%X+XXXXXXXXXXXXXXXX##XXXXXXXXXXXXXXXX+X%",
+        "%X.,..,.X9.&.,*XX******XX*,.&.9X.,...,#%",
+        "%X..,.^^X....,XX***@@***XX,....X^^..,.#%",
+        "%XXXXXX+X^&.&XX***@##@***XX&.&^X+XXXXXX%",
+        "%X,.&.^^X+XXXX***@#XX#@***XXXX+X^^.,..X%",
+        "%X..,&,.X^^^@X**@#X88X#@**#@^^^X.,..&,X%",
+        "%X.,....X^^^@#**@#X88X#@**X@^^^X.&.,..X%",
+        "%X...,^^X+XXXX***@#XX#@***XXXX+X^^..,.X%",
+        "%XXXXXX+X^&.&XX***@##@***XX&.&^X+XXXXXX%",
+        "%#.,..^^X.....XX***@@***XX,....X^^.,..X%",
+        "%#...,..X9.&.,*XX******XX*,.&.9X..,..,X%",
+        "%X+XXXXXXXXXXXXXXXX##XXXXXXXXXXXXXXXX+X%",
+        "%X,#,#,#,#,#,#,#,#*99*#,#,#,#,#,#,#,#,X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 11
+      }
+    },
+    {
+      "id": "vault_butterfly_012",
+      "name": "butterfly",
+      "rating": 25,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 18,
+        "cols": 40
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X*9..&XX***++^^^^^^^^^^^^++***XX&..*9X%",
+        "%X9..&XX,,,,,XX^^^^^^^^^^XX,,,,,#X&..*X%",
+        "%X..&#X.....,.XX^^^^^^^^XX..&....XX&..X%",
+        "%X.&XX..,.&....XX^^^^^^XX..,...&..XX&.X%",
+        "%X&XX..*...&.^..XX^^^^XX..*....,..,XX&X%",
+        "%XXXX+XXXXXXXXXXXXX++XXXXXXXXXXXXX+XXXX%",
+        "%+....,.,.X&&&&***+88+***&&&&X,.,.,...+%",
+        "%+...,.,.,X&&&&***+88+***&&&&X.,.,....+%",
+        "%XXXX+XXXXXXXXXXXXX++XXXXXXXXXXXXX+XXXX%",
+        "%X&XX..*....&...XX^^^^XX...*...&,..#X&X%",
+        "%X.&XX..&.^....XX^^^^^^XX....&....XX&.X%",
+        "%X..&XX....&..XX^^^^^^^^XX..,..*.XX&..X%",
+        "%X*..&#X,,,,,XX^^^^^^^^^^XX,,,,,XX&..9X%",
+        "%X9*..&XX***++^^^^^^^^^^^^++***XX&..*9X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 12
+      }
+    },
+    {
+      "id": "vault_chambers_013",
+      "name": "chambers",
+      "rating": 25,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 15,
+        "cols": 40
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%&+.^..^..^..^..^..^..^..^..^..^..^..+&%",
+        "%+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+%",
+        "%.X.&.^,X&^&^X****+^*^@^X.*.&..X..*.,X.%",
+        "%^X.,.&^+^&^@X^^^^X@^*^*X....*^+.^...X^%",
+        "%.X*..,.XXX+XXXX+XXXX+XXX.&.^..X..&,.X.%",
+        "%^X..^.*X*..^&&@@*X,999,XXXX+XXX,....X^%",
+        "%.XX+XXXXXXXXXXXXXX,888,X,,,,,,XXX+XXX.%",
+        "%^X*&X.&,*.X,*&^*^X,999,X,,,,,,X....,X^%",
+        "%.X&,+....*+,*&^*^XXXXXXXXXX+XXX.,...+.%",
+        "%^X.,X.*.&.X,*&^*^+.,.&.^*.&^&^X.....X^%",
+        "%.X^*X.,..,X,*&^*^X*.^*.,..&&&^X,..,.X.%",
+        "%+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+%",
+        "%&+..^..^..^..^..^..^..^..^..^..^..^.+&%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 13
+      }
+    },
+    {
+      "id": "vault_planet_x_014",
+      "name": "Planet X",
+      "rating": 10,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 13,
+        "cols": 15
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%",
+        "%.............%",
+        "%.XXXXX#XXXXX.%",
+        "%.XXX,,,,,XXX.%",
+        "%.X,XX,,,XX,X.%",
+        "%.X,,XX9XX,,X.%",
+        "%.#,,9###9,,#.%",
+        "%.X,,XX9XX,,X.%",
+        "%.X,XX,,,XX,X.%",
+        "%.XXX,,,,,XXX.%",
+        "%.XXXXX#XXXXX.%",
+        "%.............%",
+        "%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 14
+      }
+    },
+    {
+      "id": "vault_turnabout_015",
+      "name": "Turnabout",
+      "rating": 10,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 12,
+        "cols": 15
+      },
+      "layout": [
+        "###############",
+        "#.............#",
+        "#.###########.#",
+        "#.#9##,,,,###.#",
+        "#.###^^##,,##.#",
+        "#.##&^^&##,,#.#",
+        "#.###^^^^#,,#.#",
+        "#.#,##,,##,,#.#",
+        "#.#9,##^#@@##.#",
+        "#.#####^#####.#",
+        "#.............#",
+        "###############"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 15
+      }
+    },
+    {
+      "id": "vault_rooms_016",
+      "name": "Rooms",
+      "rating": 10,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 13,
+        "cols": 19
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%",
+        "%.................%",
+        "%.###############.%",
+        "%.#^+,&&#*,*+&&&#.%",
+        "%.#^#,,&#,@,#***#.%",
+        "%.#^#9,,+*,*#,,,+.%",
+        "%.#^#############.%",
+        "%.#^#9,,+*,*#,,,+.%",
+        "%.#^#,,&#,@,#***#.%",
+        "%.#^+,&&#*,*+&&&#.%",
+        "%.###############.%",
+        "%.................%",
+        "%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 16
+      }
+    },
+    {
+      "id": "vault_cross_017",
+      "name": "Cross",
+      "rating": 10,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 13,
+        "cols": 20
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%",
+        "%########++########%",
+        "%#*....*#..#*....*#%",
+        "%#....9,#^^#,9....#%",
+        "%#....,##..##,....#%",
+        "%#+#####*..*#####+#%",
+        "%#^^.....,,.....^^#%",
+        "%#+#####*..*#####+#%",
+        "%#....,##..##,....#%",
+        "%#....9,#^^#,9....#%",
+        "%#*....*#..#*....*#%",
+        "%########++########%",
+        "%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 17
+      }
+    },
+    {
+      "id": "vault_central_018",
+      "name": "Central",
+      "rating": 12,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 10,
+        "cols": 12
+      },
+      "layout": [
+        "############",
+        "#,#^^^^^^#,#",
+        "##+######+##",
+        "#^#^^,,^^#^#",
+        "#^#^&@9&^#^#",
+        "#^#^&9@&^#^#",
+        "#^#^^,,^^#^#",
+        "##+######+##",
+        "#,#^^^^^^#,#",
+        "############"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 18
+      }
+    },
+    {
+      "id": "vault_camouflaged_019",
+      "name": "Camouflaged",
+      "rating": 10,
+      "tags": [
+        "type7",
+        "special",
+        "room_type:7",
+        "tier:special"
+      ],
+      "dimensions": {
+        "rows": 9,
+        "cols": 12
+      },
+      "layout": [
+        "%%%%%%%%%%%%",
+        "%XXXXXXXXXX%",
+        "%#,,,,,,,9X%",
+        "%XXXXXXXXXX%",
+        "%X9,,,,,,,#%",
+        "%XXXXXXXXXX%",
+        "%#,,,,,,,9X%",
+        "%XXXXXXXXXX%",
+        "%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 19
+      }
+    },
+    {
+      "id": "vault_eye_of_storm_020",
+      "name": "The I in the Storm",
+      "rating": 40,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 25,
+        "cols": 41
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%XXXXXXXXXXXXXXXXXXX#XXXXXXXXXXXXXXXXXXX%",
+        "%X&&..^..#9X..^^^^^^^^^^^^^..X9#..^..&&X%",
+        "%X&...#....X..XXXXXX^XXXXXX..X....#...&X%",
+        "%X...&#..#.X9XX.@8XX^XX8@.XX9X.#..#&...X%",
+        "%X..&9#....XXX...@X,,,X@...XXX....#9&..X%",
+        "%X^####..#...XX..XX,.,XX..XX...#..####^X%",
+        "%X........,#..XX^X,,.,,X^XX..#,........X%",
+        "%X.......#.....^XX,...,XX^.....#.......X%",
+        "%X........,#....X,,...,,X....#,........X%",
+        "%X.......#.....XX.......XX.....#.......X%",
+        "%X.#......,#..XX^.......^XX..#,......#.X%",
+        "%X.9#....#....#^^...8...^^#....#....#9.X%",
+        "%X.#......,#..XX^.......^XX..#,......#.X%",
+        "%X.......#.....XX.......XX.....#.......X%",
+        "%X........,#....X,,...,,X....#,........X%",
+        "%X.......#.....^XX,...,XX^.....#.......X%",
+        "%X........,#..XX^X,,.,,X^XX..#,........X%",
+        "%X^####..#...XX..XX,.,XX..XX...#..####^X%",
+        "%X..&9#....XXX...@X,,,X@...XXX....#9&..X%",
+        "%X...&#..#.X9XX.@8XX^XX8@.XX9X.#..#&...X%",
+        "%X&...#....X&&XXXXXX^XXXXXX&&X....#...&X%",
+        "%X&&..^..#9X..^^^^^^^^^^^^^..X9#..^..&&X%",
+        "%XXXXXXXXXXXXXXXXXXX#XXXXXXXXXXXXXXXXXXX%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 20
+      }
+    },
+    {
+      "id": "vault_bank_from_hell_021",
+      "name": "The Bank From Hell",
+      "rating": 30,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 20,
+        "cols": 31
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%XXXXXXXXXXXXXX+XXXXXXXXXXXXXX%",
+        "%X.&.&.&.&.&.#...#.&.&.&.&.&.X%",
+        "%X.#.#.#.#.#.#...#.#.#.#.#.#.X%",
+        "%X...........#...#...........X%",
+        "%X##########+##+##+##########X%",
+        "%X@........^^^^^^^^^........@X%",
+        "%X@^^^.....^^^...^^^.....^^^@X%",
+        "%X##+#######+#####+#######+##X%",
+        "%X.^^^.#@..^^^...^^^..@#.^^^.X%",
+        "%X#...##...............#.###.X%",
+        "%X@...@#.&.&.&.&.&.&.&.#..@..X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXX+X%",
+        "%X.+^*****X*******^+^*****8X.X%",
+        "%X@X^....^X^......^X^.....8X@X%",
+        "%X.X*****^+^*******X******8X.X%",
+        "%X@XXXXXXXXXXXXXXXXXXXXXXXXX@X%",
+        "%X.9.9.9.9.9.9.9.9.9.9.9.9.9.X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 21
+      }
+    },
+    {
+      "id": "vault_snake_maze_022",
+      "name": "Snake Maze",
+      "rating": 15,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 21,
+        "cols": 23
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%",
+        "%.....................%",
+        "%.XXXXXXXXX#XXXXXXXXX.%",
+        "%.X8X9..XXX..X,,,9X8X.%",
+        "%.X,XXX.^.XX.X,XXXX,X.%",
+        "%.X,,,XXX..X.X,,,,X,X.%",
+        "%.XXX,,,XX.X.XX*X,,,X.%",
+        "%.X...X*X..X.XXXXXX.X.%",
+        "%.X.XXXXX.XX.X.^.X..X.%",
+        "%.X...^........X.X.XX.%",
+        "%.X#XXXXXXXXXXXX...*X.%",
+        "%.X&.........^&XX.XXX.%",
+        "%.X.XXXXXXXXXX.XX,,,X.%",
+        "%.X.X......^...*XXX,X.%",
+        "%.X.X,XXXXXXXX&XX,,,X.%",
+        "%.X.X,XX8,,,,X&9X,XXX.%",
+        "%.X^X,,XXXXX.XXXX,X*X.%",
+        "%.X.XX99XX**......^.X.%",
+        "%.X#XXXXXXXXXXXXXXXXX.%",
+        "%.....................%",
+        "%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 22
+      }
+    },
+    {
+      "id": "vault_roundabouts_one_023",
+      "name": "Roundabouts One",
+      "rating": 15,
+      "tags": [
+        "type8",
+        "greater",
+        "room_type:8",
+        "tier:greater"
+      ],
+      "dimensions": {
+        "rows": 21,
+        "cols": 43
+      },
+      "layout": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%",
+        "%X^^^^^^^^^^^^^^^^#&^^^&^^^^^^^^^^^^^&^,,X%",
+        "%X^^^XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&.,X%",
+        "%X^.X+^&^..^^.....#&^^^&......^^....,XX&.X%",
+        "%X.^X^&^XXXXXXXXXXXXXXXXXXXXXXXXXXX^,,X.^X%",
+        "%X^.X&^XX,.^^......&^^^&#.....^^&^+X^^X^.X%",
+        "%X.^X^^X,,.^^......&^^^&#.....^^.&^X^^X.^X%",
+        "%X^.X^^X*^^XXXXXXXXXXXXXXXXXXXXX^^&X^^X^.X%",
+        "%X.^X^^X*^X+^,,,,,,@#8X@99...*&XX^*X^^X.^X%",
+        "%X^^X^^X^^X^&*^^^^^@XXX@^^^^^*&^X^^X^^X^^X%",
+        "%X^.X^^X*^XX&*...99@X8#@,,,,,,^+X^*X^^X^.X%",
+        "%X.^X^^X&^^XXXXXXXXXXXXXXXXXXXXX^^*X^^X.^X%",
+        "%X^.X^^X^&.^^.....#&^^^&......^^.,,X^^X^.X%",
+        "%X.^X^^X+^&^^.....#&^^^&......^^.,XX^&X.^X%",
+        "%X^.X,,^XXXXXXXXXXXXXXXXXXXXXXXXXXX^&^X^.X%",
+        "%X.&XX,....^^......&^^^&#.....^^..^&^+X.^X%",
+        "%X,.&XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX^^^X%",
+        "%X,,^&^^^^^^^^^^^^^&^^^&#^^^^^^^^^^^^^^^^X%",
+        "%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "legend": {
+        "8": {
+          "kind": "special_marker",
+          "ref": "vault_marker_8",
+          "provenance_status": "unresolved"
+        },
+        "9": {
+          "kind": "special_marker",
+          "ref": "vault_marker_9",
+          "provenance_status": "unresolved"
+        },
+        "#": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "verified"
+        },
+        "%": {
+          "kind": "terrain",
+          "ref": "permanent_wall",
+          "provenance_status": "verified"
+        },
+        "&": {
+          "kind": "monster_spawn",
+          "ref": "vault_monster_spawn",
+          "provenance_status": "inferred"
+        },
+        "*": {
+          "kind": "item_spawn",
+          "ref": "vault_loot_spawn",
+          "provenance_status": "inferred"
+        },
+        "+": {
+          "kind": "terrain",
+          "ref": "door",
+          "provenance_status": "verified"
+        },
+        ",": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "inferred"
+        },
+        ".": {
+          "kind": "terrain",
+          "ref": "open_floor",
+          "provenance_status": "verified"
+        },
+        "@": {
+          "kind": "monster_spawn",
+          "ref": "vault_elite_spawn",
+          "provenance_status": "unresolved"
+        },
+        "X": {
+          "kind": "terrain",
+          "ref": "granite_wall",
+          "provenance_status": "inferred"
+        },
+        "^": {
+          "kind": "trap_spawn",
+          "ref": "trap_floor_marker",
+          "provenance_status": "verified"
+        }
+      },
+      "provenance": {
+        "status": "verified",
+        "source_file": "docs/references and legacy/rewrite/vault_templates.json",
+        "source_template_index": 23
+      }
+    }
+  ]
+}

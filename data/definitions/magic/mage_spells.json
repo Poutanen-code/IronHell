@@ -1117,7 +1117,8 @@
               "cold"
             ],
             "duration": {
-              "kind": "policy_default"
+              "base": 20,
+              "dice": { "count": 1, "sides": 20 }
             },
             "target_mode": "self"
           }
@@ -1144,7 +1145,8 @@
               "fire"
             ],
             "duration": {
-              "kind": "policy_default"
+              "base": 20,
+              "dice": { "count": 1, "sides": 20 }
             },
             "target_mode": "self"
           }
@@ -1171,7 +1173,8 @@
               "poison"
             ],
             "duration": {
-              "kind": "policy_default"
+              "base": 20,
+              "dice": { "count": 1, "sides": 20 }
             },
             "target_mode": "self"
           }
@@ -1202,7 +1205,8 @@
               "poison"
             ],
             "duration": {
-              "kind": "policy_default"
+              "base": 20,
+              "dice": { "count": 1, "sides": 20 }
             },
             "target_mode": "self"
           }

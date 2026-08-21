@@ -547,7 +547,6 @@ These actions are approved as canonical payload candidates for future schema and
 - IdentifyItem
 - EnchantEquipment
 - SleepControl
-- SlowControl
 - DispelByTag
 - DrainLife
 - Earthquake

@@ -521,7 +521,7 @@
     {
       "action_id": "ModifyPlayerSpeed",
       "name": "Modify Player Speed",
-      "description": "Applies a timed haste or slow effect to the player. Replaces ApplyTimedBuff(haste) and SlowControl(self) usages with explicit speed semantics and canonical duration expressions.",
+      "description": "Applies a timed haste or slow effect to the player. Replaces ApplyTimedBuff(haste) usages with explicit speed semantics and canonical duration expressions.",
       "category": "movement",
       "confidence": "high",
       "allowed_source_families": ["spell", "prayer", "potion", "rod", "wand", "staff", "activation", "monster_spell"],
@@ -959,7 +959,7 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby"]
+            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
           },
           {
             "id": "potency",
@@ -973,6 +973,13 @@
             "description": "Optional duration expression when the payload applies timed confusion directly.",
             "value_type": "duration",
             "required": false
+          },
+          {
+            "id": "radius",
+            "description": "Optional area radius for area-like terrain operations.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
           }
         ]
       },
@@ -1050,7 +1057,7 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area"]
+            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
           },
           {
             "id": "duration",
@@ -1529,7 +1536,7 @@
       },
       "provenance_status": "derived",
       "provenance": {
-        "summary": "MAngband: speed_monster() (single aimed) and speed_monsters() (all in LOS). Distinct from SlowControl (which targets groups with potency). Added to resolve rod_of_haste_monster and staff_of_haste_monsters unresolved mappings."
+        "summary": "MAngband: speed_monster() (single aimed) and speed_monsters() (all in LOS). Added to resolve rod_of_haste_monster and staff_of_haste_monsters unresolved mappings."
       }
     },
     {

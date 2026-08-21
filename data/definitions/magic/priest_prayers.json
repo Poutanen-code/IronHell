@@ -78,7 +78,8 @@
           "parameters": {
             "status_id": "blessed",
             "duration": {
-              "kind": "policy_default"
+              "base": 12,
+              "dice": { "count": 1, "sides": 12 }
             },
             "target_mode": "self"
           }
@@ -309,7 +310,8 @@
           "parameters": {
             "status_id": "blessed",
             "duration": {
-              "kind": "policy_default"
+              "base": 24,
+              "dice": { "count": 1, "sides": 24 }
             },
             "target_mode": "self"
           }
@@ -405,7 +407,8 @@
               "cold"
             ],
             "duration": {
-              "kind": "policy_default"
+              "base": 10,
+              "dice": { "count": 1, "sides": 10 }
             },
             "target_mode": "self"
           }
@@ -519,7 +522,8 @@
           "parameters": {
             "status_id": "see_invisible",
             "duration": {
-              "kind": "policy_default"
+              "base": 24,
+              "dice": { "count": 1, "sides": 24 }
             },
             "target_mode": "self"
           }
@@ -676,7 +680,8 @@
           "parameters": {
             "status_id": "blessed",
             "duration": {
-              "kind": "policy_default"
+              "base": 48,
+              "dice": { "count": 1, "sides": 48 }
             },
             "target_mode": "self"
           }
@@ -930,7 +935,7 @@
         {
           "action_id": "InspectEntity",
           "parameters": {
-            "scope": "hp_and_lore",
+            "scope": "probing",
             "target_mode": "all_in_sight"
           }
         }
@@ -1367,7 +1372,7 @@
           "action_id": "BrandWeapon",
           "parameters": {
             "brand_type": "elemental",
-            "target_mode": "single_item"
+            "target_mode": "equipped_item"
           }
         }
       ],
