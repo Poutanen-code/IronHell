@@ -57,7 +57,7 @@
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
-            "status_id": "protection_from_evil",
+            "status_id": "protected_from_evil",
             "duration": {
               "base": 0,
               "dice": {

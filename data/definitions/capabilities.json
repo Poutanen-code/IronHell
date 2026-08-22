@@ -1,4 +1,4 @@
-﻿{
+{
     "schema_version": 1,
     "capabilities": [
         {
@@ -71,6 +71,10 @@
             "description": "Immune to paralysis.",
             "category": "survival",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.free_action_immunity"
+            ],
             "grant_sources": [
                 "race",
                 "ring",
@@ -86,6 +90,10 @@
             "description": "Resistant to experience drain attacks.",
             "category": "survival",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.hold_life_mitigation"
+            ],
             "grant_sources": [
                 "race",
                 "amulet",
@@ -137,10 +145,13 @@
         {
             "id": "res_blind",
             "source_flag": "RES_BLIND",
-            "name": "Resist Blindness",
-            "description": "Resistant to blindness attacks.",
+            "name": "Resist Blindness (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_blind",
             "grant_sources": [
                 "race",
                 "armor",
@@ -152,10 +163,13 @@
         {
             "id": "res_dark",
             "source_flag": "RES_DARK",
-            "name": "Resist Darkness",
-            "description": "Resistant to darkness-based attacks.",
+            "name": "Resist Darkness (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_dark",
             "grant_sources": [
                 "race",
                 "amulet",
@@ -168,10 +182,13 @@
         {
             "id": "res_lite",
             "source_flag": "RES_LITE",
-            "name": "Resist Light",
-            "description": "Resistant to light-based attacks.",
+            "name": "Resist Light (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_lite",
             "grant_sources": [
                 "race",
                 "amulet",
@@ -184,10 +201,13 @@
         {
             "id": "res_pois",
             "source_flag": "RES_POIS",
-            "name": "Resist Poison",
-            "description": "Resistant to poison attacks.",
+            "name": "Resist Poison (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_pois",
             "grant_sources": [
                 "race",
                 "ring",
@@ -205,6 +225,10 @@
             "description": "Can see invisible creatures.",
             "category": "perception",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "aliases": [
+                "see_invisible"
+            ],
             "grant_sources": [
                 "race",
                 "ring",
@@ -301,6 +325,10 @@
             "description": "Wakes all nearby monsters and makes them hostile.",
             "category": "curse",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.aggravate_behavior"
+            ],
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -328,10 +356,13 @@
         {
             "id": "ignore_acid",
             "source_flag": "IGNORE_ACID",
-            "name": "Ignore Acid",
-            "description": "This item cannot be destroyed by acid.",
+            "name": "Ignore Acid (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "item_ignore",
             "scope": "item_self_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "ignore_acid",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -345,10 +376,13 @@
         {
             "id": "ignore_cold",
             "source_flag": "IGNORE_COLD",
-            "name": "Ignore Cold",
-            "description": "This item cannot be destroyed by cold.",
+            "name": "Ignore Cold (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "item_ignore",
             "scope": "item_self_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "ignore_cold",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -362,10 +396,13 @@
         {
             "id": "ignore_elec",
             "source_flag": "IGNORE_ELEC",
-            "name": "Ignore Lightning",
-            "description": "This item cannot be destroyed by lightning.",
+            "name": "Ignore Lightning (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "item_ignore",
             "scope": "item_self_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "ignore_elec",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -379,10 +416,13 @@
         {
             "id": "ignore_fire",
             "source_flag": "IGNORE_FIRE",
-            "name": "Ignore Fire",
-            "description": "This item cannot be destroyed by fire.",
+            "name": "Ignore Fire (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "item_ignore",
             "scope": "item_self_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "ignore_fire",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -410,10 +450,13 @@
         {
             "id": "res_acid",
             "source_flag": "RES_ACID",
-            "name": "Resist Acid",
-            "description": "Reduces acid damage by approximately one third.",
+            "name": "Resist Acid (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_acid",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -426,10 +469,13 @@
         {
             "id": "res_cold",
             "source_flag": "RES_COLD",
-            "name": "Resist Cold",
-            "description": "Reduces cold damage by approximately one third.",
+            "name": "Resist Cold (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_cold",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -442,10 +488,13 @@
         {
             "id": "res_confu",
             "source_flag": "RES_CONFU",
-            "name": "Resist Confusion",
-            "description": "Resistant to confusion attacks and effects.",
+            "name": "Resist Confusion (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_confu",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -458,10 +507,13 @@
         {
             "id": "res_disen",
             "source_flag": "RES_DISEN",
-            "name": "Resist Disenchantment",
-            "description": "Resistant to disenchantment attacks.",
+            "name": "Resist Disenchantment (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_disen",
             "grant_sources": [
                 "amulet",
                 "armor",
@@ -473,10 +525,13 @@
         {
             "id": "res_elec",
             "source_flag": "RES_ELEC",
-            "name": "Resist Lightning",
-            "description": "Reduces lightning damage by approximately one third.",
+            "name": "Resist Lightning (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_elec",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -489,10 +544,13 @@
         {
             "id": "res_fear",
             "source_flag": "RES_FEAR",
-            "name": "Resist Fear",
-            "description": "Resistant to fear effects.",
+            "name": "Resist Fear (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_fear",
             "grant_sources": [
                 "amulet",
                 "armor",
@@ -504,10 +562,13 @@
         {
             "id": "res_fire",
             "source_flag": "RES_FIRE",
-            "name": "Resist Fire",
-            "description": "Reduces fire damage by approximately one third.",
+            "name": "Resist Fire (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_fire",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -520,10 +581,13 @@
         {
             "id": "res_nexus",
             "source_flag": "RES_NEXUS",
-            "name": "Resist Nexus",
-            "description": "Resistant to nexus attacks.",
+            "name": "Resist Nexus (Compatibility Reference)",
+            "description": "Compatibility capability reference to resistance-layer ownership.",
             "category": "resistance",
             "scope": "bearer_passive",
+            "deprecated": true,
+            "canonical_owner": "resistance",
+            "migration_target_id": "res_nexus",
             "grant_sources": [
                 "amulet",
                 "armor",
@@ -533,12 +597,33 @@
             "resistance_id": "res_nexus"
         },
         {
+            "id": "drain_exp",
+            "source_flag": "DRAIN_EXP",
+            "name": "Drain Experience",
+            "description": "Passively drains experience while equipped.",
+            "category": "curse",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.drain_exp_tick"
+            ],
+            "grant_sources": [
+                "ring",
+                "amulet",
+                "armor",
+                "weapon",
+                "artifact"
+            ],
+            "provenance_status": "derived"
+        },
+        {
             "id": "slow_digest",
             "source_flag": "SLOW_DIGEST",
             "name": "Slow Digestion",
             "description": "Reduces the rate at which the character consumes food.",
             "category": "survival",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -595,6 +680,10 @@
             "description": "Randomly teleports the wearer at unpredictable intervals.",
             "category": "curse",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.teleport_curse_tick"
+            ],
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -611,11 +700,48 @@
             "description": "Detects the presence of nearby minded creatures (ESP).",
             "category": "perception",
             "scope": "bearer_passive",
+            "canonical_owner": "capability",
             "grant_sources": [
                 "amulet",
                 "artifact"
             ],
             "provenance_status": "observed"
+        },
+        {
+            "id": "blessed_item",
+            "source_flag": "BLESSED",
+            "name": "Blessed Item",
+            "description": "Marks an item as blessed for weapon-usage and holy interaction rules.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "aliases": [
+                "blessed"
+            ],
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "impact",
+            "source_flag": "IMPACT",
+            "name": "Impact",
+            "description": "Melee hits can trigger earthquake-style terrain disruption.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "policy_hooks": [
+                "policy.impact_quake_trigger"
+            ],
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
         }
     ]
 }

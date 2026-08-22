@@ -116,6 +116,19 @@
           "description": "Temporary MaxHP bonus granted while this status is active. Removed when the status expires. Used by berserk (shero) semantics."
         },
         "notes": { "type": "string" },
+        "compatibility_alias": {
+          "type": "boolean",
+          "description": "True when this status id is retained only for compatibility and should migrate to canonical status ids."
+        },
+        "migration_target_status_id": {
+          "$ref": "#/$defs/StatusId"
+        },
+        "migration_target_status_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/StatusId" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
       },
       "allOf": [
@@ -141,6 +154,18 @@
                 "enum": ["additive", "max", "replace"]
               }
             }
+          }
+        },
+        {
+          "if": {
+            "properties": { "compatibility_alias": { "const": true } },
+            "required": ["compatibility_alias"]
+          },
+          "then": {
+            "anyOf": [
+              { "required": ["migration_target_status_id"] },
+              { "required": ["migration_target_status_ids"] }
+            ]
           }
         }
       ]

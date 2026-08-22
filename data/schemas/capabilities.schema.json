@@ -41,6 +41,7 @@
               "perception",
               "survival",
               "curse",
+              "combat",
               "class_combat",
               "class_magic",
               "class_misc",
@@ -57,13 +58,36 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["race", "class", "ring", "amulet", "armor", "weapon", "artifact", "ego"]
+              "enum": ["race", "class", "ring", "amulet", "armor", "weapon", "artifact", "ego", "ego_item"]
             },
             "description": "All known source types that can grant this capability. Informational; used for validation and tooling."
           },
           "resistance_id": {
             "$ref": "common.schema.json#/$defs/Id",
             "description": "Cross-layer reference to resistances.json when this capability encodes resistance or item-ignore semantics."
+          },
+          "aliases": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/$defs/Id" },
+            "uniqueItems": true
+          },
+          "deprecated": { "type": "boolean" },
+          "canonical_owner": {
+            "type": "string",
+            "enum": ["affix", "capability", "resistance", "status", "policy", "action"]
+          },
+          "migration_target_id": {
+            "$ref": "common.schema.json#/$defs/Id",
+            "description": "Canonical target concept id for compatibility-only capability entries."
+          },
+          "policy_hooks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true,
+            "description": "Runtime policy hook identifiers used to resolve behavior owned by policy systems."
           },
           "notes": { "type": "string" },
           "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
