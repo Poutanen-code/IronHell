@@ -5,7 +5,10 @@
   "description": "Defines the canonical Action layer catalog for IronHell Gameplay Architecture V2. These are reusable payload definitions, not source-specific gameplay instances.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "actions"],
+  "required": [
+    "schema_version",
+    "actions"
+  ],
   "properties": {
     "schema_version": {
       "type": "integer",
@@ -14,7 +17,9 @@
     "actions": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/ActionDefinition" }
+      "items": {
+        "$ref": "#/$defs/ActionDefinition"
+      }
     }
   },
   "$defs": {
@@ -54,7 +59,8 @@
         "RestoreAttributes",
         "RemoveCurse",
         "ModifyResourceMeter",
-        "TransformEntity"
+        "TransformEntity",
+        "RandomActionSelection"
       ]
     },
     "ActionCategory": {
@@ -74,7 +80,10 @@
     },
     "Confidence": {
       "type": "string",
-      "enum": ["high", "medium"]
+      "enum": [
+        "high",
+        "medium"
+      ]
     },
     "SourceFamily": {
       "type": "string",
@@ -110,12 +119,26 @@
     "ParameterDefinition": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "description", "value_type", "required"],
+      "required": [
+        "id",
+        "description",
+        "value_type",
+        "required"
+      ],
       "properties": {
-        "id": { "$ref": "common.schema.json#/$defs/Id" },
-        "description": { "type": "string", "minLength": 1 },
-        "value_type": { "$ref": "#/$defs/ParameterValueType" },
-        "required": { "type": "boolean" },
+        "id": {
+          "$ref": "common.schema.json#/$defs/Id"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value_type": {
+          "$ref": "#/$defs/ParameterValueType"
+        },
+        "required": {
+          "type": "boolean"
+        },
         "reference_domain": {
           "type": "string",
           "minLength": 1,
@@ -125,49 +148,108 @@
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
-        "minimum": { "type": "integer" },
-        "maximum": { "type": "integer" },
-        "min_items": { "type": "integer", "minimum": 0 },
-        "max_items": { "type": "integer", "minimum": 0 },
-        "notes": { "type": "string", "minLength": 1 }
+        "minimum": {
+          "type": "integer"
+        },
+        "maximum": {
+          "type": "integer"
+        },
+        "min_items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "allOf": [
         {
           "if": {
-            "properties": { "value_type": { "const": "enum" } },
-            "required": ["value_type"]
+            "properties": {
+              "value_type": {
+                "const": "enum"
+              }
+            },
+            "required": [
+              "value_type"
+            ]
           },
-          "then": { "required": ["allowed_values"] }
+          "then": {
+            "required": [
+              "allowed_values"
+            ]
+          }
         },
         {
           "if": {
-            "properties": { "value_type": { "const": "enum_list" } },
-            "required": ["value_type"]
+            "properties": {
+              "value_type": {
+                "const": "enum_list"
+              }
+            },
+            "required": [
+              "value_type"
+            ]
           },
-          "then": { "required": ["allowed_values"] }
+          "then": {
+            "required": [
+              "allowed_values"
+            ]
+          }
         },
         {
           "if": {
-            "properties": { "value_type": { "const": "id" } },
-            "required": ["value_type"]
+            "properties": {
+              "value_type": {
+                "const": "id"
+              }
+            },
+            "required": [
+              "value_type"
+            ]
           },
-          "then": { "required": ["reference_domain"] }
+          "then": {
+            "required": [
+              "reference_domain"
+            ]
+          }
         },
         {
           "if": {
-            "properties": { "value_type": { "const": "id_list" } },
-            "required": ["value_type"]
+            "properties": {
+              "value_type": {
+                "const": "id_list"
+              }
+            },
+            "required": [
+              "value_type"
+            ]
           },
-          "then": { "required": ["reference_domain"] }
+          "then": {
+            "required": [
+              "reference_domain"
+            ]
+          }
         }
       ]
     },
     "ParameterContract": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["closed", "parameters"],
+      "required": [
+        "closed",
+        "parameters"
+      ],
       "properties": {
         "closed": {
           "type": "boolean",
@@ -177,7 +259,9 @@
         "parameters": {
           "type": "array",
           "minItems": 1,
-          "items": { "$ref": "#/$defs/ParameterDefinition" }
+          "items": {
+            "$ref": "#/$defs/ParameterDefinition"
+          }
         }
       }
     },
@@ -190,17 +274,31 @@
         "enforce_declared_value_types"
       ],
       "properties": {
-        "reject_unknown_parameters": { "type": "boolean", "const": true },
-        "require_declared_required_parameters": { "type": "boolean", "const": true },
-        "enforce_declared_value_types": { "type": "boolean", "const": true }
+        "reject_unknown_parameters": {
+          "type": "boolean",
+          "const": true
+        },
+        "require_declared_required_parameters": {
+          "type": "boolean",
+          "const": true
+        },
+        "enforce_declared_value_types": {
+          "type": "boolean",
+          "const": true
+        }
       }
     },
     "Provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["summary"],
+      "required": [
+        "summary"
+      ],
       "properties": {
-        "summary": { "type": "string", "minLength": 1 }
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "ActionDefinition": {
@@ -219,21 +317,43 @@
         "provenance"
       ],
       "properties": {
-        "action_id": { "$ref": "#/$defs/ActionId" },
-        "name": { "type": "string", "minLength": 1 },
-        "description": { "type": "string", "minLength": 1 },
-        "category": { "$ref": "#/$defs/ActionCategory" },
-        "confidence": { "$ref": "#/$defs/Confidence" },
+        "action_id": {
+          "$ref": "#/$defs/ActionId"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "$ref": "#/$defs/ActionCategory"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence"
+        },
         "allowed_source_families": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": { "$ref": "#/$defs/SourceFamily" }
+          "items": {
+            "$ref": "#/$defs/SourceFamily"
+          }
         },
-        "parameter_contract": { "$ref": "#/$defs/ParameterContract" },
-        "validation": { "$ref": "#/$defs/ValidationSupport" },
-        "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" },
-        "provenance": { "$ref": "#/$defs/Provenance" }
+        "parameter_contract": {
+          "$ref": "#/$defs/ParameterContract"
+        },
+        "validation": {
+          "$ref": "#/$defs/ValidationSupport"
+        },
+        "provenance_status": {
+          "$ref": "common.schema.json#/$defs/ProvenanceStatus"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        }
       }
     }
   }

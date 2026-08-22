@@ -6,28 +6,31 @@
       "name": "Illumination",
       "description": "The light blazes out, illuminating the area with brilliant starlight that harms the undead.",
       "effects": [
-           {
-             "action_id": "LightArea",
-             "parameters": {
-               "radius": 0,
-               "light_style": "starlight"
-             }
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": 3,
+            "light_style": "illumination",
+            "damage_light_sensitive": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 15
+            }
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "Canonical LightArea preserves illumination, but the catalog has no activation-eligible action parameter for the legacy eight-ray undead damage component."
+      ]
     },
     {
       "activation_id": "MAGIC_MAP",
       "name": "Magic Mapping",
       "description": "The entire level is revealed in your mind's eye.",
       "effects": [
-           {
-             "action_id": "MapArea",
-             "parameters": {
-               "reveal_mode": "level",
-               "radius": 0
-             }
+        {
+          "action_id": "MapArea",
+          "parameters": {
+            "reveal_mode": "local",
+            "radius": 0
+          }
         }
       ]
     },
@@ -36,11 +39,13 @@
       "name": "Detection",
       "description": "You sense all creatures, objects, traps, and paths nearby.",
       "effects": [
-           {
-             "action_id": "DetectEntities",
-             "parameters": {
-               "targets": ["all"]
-             }
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "all"
+            ]
+          }
         }
       ]
     },
@@ -49,16 +54,22 @@
       "name": "Protection from Evil",
       "description": "A holy aura wards off evil creatures.",
       "effects": [
-           {
-             "action_id": "ApplyTimedBuff",
-             "parameters": {
-               "status_id": "protection_from_evil",
-               "duration": { "base": 0, "dice": { "count": 3, "sides": 1 } },
-               "target_mode": "self"
-             }
+        {
+          "action_id": "ApplyTimedBuff",
+          "parameters": {
+            "status_id": "protection_from_evil",
+            "duration": {
+              "base": 0,
+              "dice": {
+                "count": 1,
+                "sides": 25
+              },
+              "level_multiplier": 3
+            },
+            "target_mode": "self"
+          }
         }
-      ],
-      "notes": "Duration base is 0; the runtime multiplies dice.count by player level (3*level ticks)."
+      ]
     },
     {
       "activation_id": "DISP_EVIL",
@@ -66,14 +77,21 @@
       "description": "Holy light blasts all evil creatures in sight.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "holy",
-          "shape": "burst",
-          "flat_bonus": 0
+          "action_id": "DispelByTag",
+          "parameters": {
+            "entity_filter": [
+              "evil"
+            ],
+            "amount": {
+              "kind": "flat",
+              "value": 0
+            },
+            "target_mode": "all_in_los",
+            "damage_type": "dispel_evil",
+            "amount_scaling": "player_level_x5"
+          }
         }
-      ],
-      "notes": "Damage scales with player level at runtime (5 * player_level). flat_bonus=0 is a placeholder; runtime replaces it. The catalog has DispelByTag, but activation is not an allowed source family; the legacy holy burst and evil-target filter remain unresolved.",
-      "migration_status": "unresolved"
+      ]
     },
     {
       "activation_id": "BIZZARE",
@@ -81,23 +99,108 @@
       "description": "The One Ring pulses with terrible power, producing an utterly unpredictable effect.",
       "effects": [
         {
-          "effect_id": "bizarre"
+          "action_id": "RandomActionSelection",
+          "parameters": {
+            "selection_mode": "weighted",
+            "execute_count": 1,
+            "outcomes": [
+              {
+                "id": "malignant_aura",
+                "weight": 2,
+                "actions": [
+                  {
+                    "action_id": "ModifyAttribute",
+                    "parameters": {
+                      "scope": "all_stats",
+                      "operation": "decrease",
+                      "modification_mode": "permanent",
+                      "target_mode": "self"
+                    }
+                  },
+                  {
+                    "action_id": "ModifyExperience",
+                    "parameters": {
+                      "amount": {
+                        "kind": "token",
+                        "value": "quarter_current_experience_loss"
+                      },
+                      "modification_mode": "permanent",
+                      "target_mode": "self"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "dispel_monsters",
+                "weight": 1,
+                "actions": [
+                  {
+                    "action_id": "DispelByTag",
+                    "parameters": {
+                      "entity_filter": [
+                        "all"
+                      ],
+                      "amount": {
+                        "kind": "flat",
+                        "value": 1000
+                      },
+                      "target_mode": "all_in_los"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "mana_ball",
+                "weight": 3,
+                "actions": [
+                  {
+                    "action_id": "BallDamage",
+                    "parameters": {
+                      "damage_type": "mana",
+                      "amount": {
+                        "kind": "flat",
+                        "value": 300
+                      },
+                      "radius": 3,
+                      "target_mode": "aimed",
+                      "direction": "aimed"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "mana_bolt",
+                "weight": 4,
+                "actions": [
+                  {
+                    "action_id": "BoltDamage",
+                    "parameters": {
+                      "damage_type": "mana",
+                      "amount": {
+                        "kind": "flat",
+                        "value": 250
+                      },
+                      "direction": "aimed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         }
-      ],
-      "notes": "The One Ring's unique activation. Runtime selects randomly from a pool of drastic effects. No canonical action models this random pool; an activation-specific random-effect action is required.",
-      "migration_status": "unresolved"
+      ]
     },
     {
       "activation_id": "PHASE",
       "name": "Phase Door",
       "description": "You blink a short distance to an adjacent open area.",
       "effects": [
-           {
-             "action_id": "TeleportSelf",
-             "parameters": {
-               "distance": 10,
-               "teleport_mode": "phase"
-             }
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 10,
+            "teleport_mode": "phase"
+          }
         }
       ]
     },
@@ -107,15 +210,110 @@
       "description": "Eight beams of starlight streak outward, burning undead.",
       "effects": [
         {
-          "action_id": "LightArea",
+          "action_id": "BeamDamage",
           "parameters": {
-            "radius": 0,
-            "light_style": "starlight"
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_1",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_2",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_3",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_4",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_5",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_6",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_7",
+            "terrain_effect": "illuminate_path"
+          }
+        },
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 8
+            },
+            "direction": "dir_8",
+            "terrain_effect": "illuminate_path"
           }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "Canonical LightArea preserves illumination, but the catalog has no activation-eligible action parameter for the legacy eight-ray undead damage component."
+      ]
     },
     {
       "activation_id": "SHARD",
@@ -160,7 +358,6 @@
       "name": "Frost Bolt",
       "description": "A bolt of intense cold streaks toward your target.",
       "effects": [
-
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -180,7 +377,6 @@
       "name": "Lightning Bolt",
       "description": "A bolt of lightning crackles outward.",
       "effects": [
-
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -258,15 +454,15 @@
       "description": "A devastating ball of freezing cold annihilates everything nearby.",
       "effects": [
         {
-          "action_id": "BallDamage",
+          "action_id": "BoltDamage",
           "parameters": {
             "damage_type": "cold",
             "amount": {
-              "kind": "flat",
-              "value": 200
+              "kind": "dice",
+              "count": 12,
+              "sides": 8
             },
-            "radius": 2,
-            "target_mode": "point"
+            "direction": "aimed"
           }
         }
       ]
@@ -282,9 +478,9 @@
             "damage_type": "cold",
             "amount": {
               "kind": "flat",
-              "value": 130
+              "value": 200
             },
-            "radius": 2,
+            "radius": 3,
             "target_mode": "point"
           }
         }
@@ -301,7 +497,7 @@
             "damage_type": "fire",
             "amount": {
               "kind": "flat",
-              "value": 55
+              "value": 72
             },
             "radius": 2,
             "target_mode": "point"
@@ -322,7 +518,7 @@
               "kind": "flat",
               "value": 120
             },
-            "radius": 2,
+            "radius": 3,
             "target_mode": "point"
           }
         }
@@ -345,7 +541,8 @@
             "target_mode": "point"
           }
         }
-      ]
+      ],
+      "notes": "Compatibility alias retained for non-MAngband references. Source artifact parity uses FIRE2."
     },
     {
       "activation_id": "ELEC2",
@@ -358,9 +555,9 @@
             "damage_type": "lightning",
             "amount": {
               "kind": "flat",
-              "value": 100
+              "value": 250
             },
-            "radius": 2,
+            "radius": 3,
             "target_mode": "point"
           }
         }
@@ -391,15 +588,18 @@
       "description": "Dark energy drains the life-force of your target, healing you in return.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "nether",
-          "shape": "bolt",
-          "flat_bonus": 90,
-          "is_drain": true
+          "action_id": "DrainLife",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 90
+            },
+            "direction": "aimed",
+            "damage_type": "nether",
+            "heal_on_success": true
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has DrainLife, but activation is not an allowed source family. The legacy nether bolt and life-restoration semantics remain unresolved."
+      ]
     },
     {
       "activation_id": "DRAIN_LIFE2",
@@ -407,15 +607,18 @@
       "description": "A powerful drain tears vital essence from your target, restoring your own health.",
       "effects": [
         {
-          "effect_id": "damage",
-          "damage_type": "nether",
-          "shape": "bolt",
-          "flat_bonus": 120,
-          "is_drain": true
+          "action_id": "DrainLife",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 120
+            },
+            "direction": "aimed",
+            "damage_type": "nether",
+            "heal_on_success": true
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has DrainLife, but activation is not an allowed source family. The legacy nether bolt and life-restoration semantics remain unresolved."
+      ]
     },
     {
       "activation_id": "STAR_BALL",
@@ -425,77 +628,108 @@
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_1"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_2"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_3"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_4"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_5"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_6"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_7"
           }
         },
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "light",
-            "amount": { "kind": "dice", "count": 6, "sides": 7 },
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "radius": 3,
-            "target_mode": "point"
+            "target_mode": "aimed",
+            "direction": "dir_8"
           }
         }
-      ],
-      "notes": "Fires 8 ordered BallDamage actions. Each deals 6d7 light damage with radius 3."
+      ]
     },
     {
       "activation_id": "MISSILE",
@@ -544,7 +778,10 @@
           "action_id": "BoltDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "flat", "value": 150 },
+            "amount": {
+              "kind": "flat",
+              "value": 150
+            },
             "direction": "aimed"
           }
         }
@@ -558,8 +795,12 @@
         {
           "action_id": "HealHP",
           "parameters": {
-            "amount": { "kind": "flat", "value": 500 },
-            "target_mode": "self"
+            "amount": {
+              "kind": "flat",
+              "value": 500
+            },
+            "target_mode": "self",
+            "cut_effect": "clear"
           }
         }
       ]
@@ -572,8 +813,12 @@
         {
           "action_id": "HealHP",
           "parameters": {
-            "amount": { "kind": "flat", "value": 1000 },
-            "target_mode": "self"
+            "amount": {
+              "kind": "flat",
+              "value": 1000
+            },
+            "target_mode": "self",
+            "cut_effect": "clear"
           }
         }
       ]
@@ -583,7 +828,7 @@
       "name": "Cure Wounds",
       "description": "Minor healing magic mends your wounds.",
       "effects": [
-{
+        {
           "action_id": "HealHP",
           "parameters": {
             "amount": {
@@ -591,7 +836,8 @@
               "count": 4,
               "sides": 8
             },
-            "target_mode": "self"
+            "target_mode": "self",
+            "cut_effect": "halve_minus_50"
           }
         }
       ]
@@ -621,12 +867,16 @@
             "speed_mode": "haste",
             "duration": {
               "base": 10,
-              "dice": { "count": 1, "sides": 10 }
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
             },
             "target_mode": "self"
           }
         }
-      ]
+      ],
+      "notes": "Compatibility alias retained for non-MAngband references. Source artifact parity uses HASTE1/HASTE2."
     },
     {
       "activation_id": "HASTE1",
@@ -639,9 +889,14 @@
             "speed_mode": "haste",
             "duration": {
               "base": 20,
-              "dice": { "count": 1, "sides": 20 }
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
             },
-            "target_mode": "self"
+            "target_mode": "self",
+            "apply_mode": "set_or_extend_haste",
+            "if_already_active_add": 5
           }
         }
       ]
@@ -657,9 +912,14 @@
             "speed_mode": "haste",
             "duration": {
               "base": 75,
-              "dice": { "count": 1, "sides": 75 }
+              "dice": {
+                "count": 1,
+                "sides": 75
+              }
             },
-            "target_mode": "self"
+            "target_mode": "self",
+            "apply_mode": "set_or_extend_haste",
+            "if_already_active_add": 5
           }
         }
       ]
@@ -674,8 +934,11 @@
           "parameters": {
             "status_id": "berserk",
             "duration": {
-              "base": 25,
-              "dice": { "count": 1, "sides": 25 }
+              "base": 50,
+              "dice": {
+                "count": 1,
+                "sides": 50
+              }
             },
             "target_mode": "self"
           }
@@ -701,11 +964,15 @@
       "description": "The artifact reveals the true nature and remaining health of all nearby creatures.",
       "effects": [
         {
-          "effect_id": "probe"
+          "action_id": "InspectEntity",
+          "parameters": {
+            "scope": "probing",
+            "target_mode": "all_in_radius",
+            "radius": 20,
+            "los_required": false
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has InspectEntity, but activation is not an allowed source family. Probe remains unresolved."
+      ]
     },
     {
       "activation_id": "CLAIRVOYANCE",
@@ -715,14 +982,17 @@
         {
           "action_id": "MapArea",
           "parameters": {
-            "reveal_mode": "clairvoyant",
+            "reveal_mode": "full_level_illuminate",
             "radius": 0
           }
         },
         {
           "action_id": "DetectEntities",
           "parameters": {
-            "targets": ["all"]
+            "targets": [
+              "traps",
+              "secret_doors"
+            ]
           }
         }
       ]
@@ -736,14 +1006,11 @@
           "action_id": "ConfuseControl",
           "parameters": {
             "target_mode": "target",
-            "potency": 10,
-            "radius": 4,
-            "duration": { "base": 4, "dice": { "count": 1, "sides": 20 } }
+            "potency": 20,
+            "direction": "aimed"
           }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "ConfuseControl exists, but activation is not an allowed source family. The canonical payload remains pending source-family/catalog resolution."
+      ]
     },
     {
       "activation_id": "SLEEP",
@@ -751,14 +1018,16 @@
       "description": "Soothing magic lulls nearby monsters into a deep slumber.",
       "effects": [
         {
-          "effect_id": "apply_status",
-          "status_id": "sleeping",
-          "duration": { "base": 0, "dice": { "count": 1, "sides": 4 } },
-          "target": "all_nearby"
+          "action_id": "SleepControl",
+          "parameters": {
+            "target_mode": "touch",
+            "radius": 1,
+            "potency": 1,
+            "potency_mode": "player_level",
+            "effect_family": "old_sleep"
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has SleepControl, but activation is not an allowed source family. Sleep remains unresolved."
+      ]
     },
     {
       "activation_id": "REM_FEAR_POIS",
@@ -766,16 +1035,17 @@
       "description": "The artifact cleanses you of fear and neutralizes all poison in your blood.",
       "effects": [
         {
-          "effect_id": "cure_status",
-          "status_id": "afraid"
-        },
-        {
-          "effect_id": "cure_status",
-          "status_id": "poisoned"
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid",
+              "poisoned"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has CureStatus, but activation is not an allowed source family. Both fear and poison cures remain unresolved."
+      ]
     },
     {
       "activation_id": "RESIST",
@@ -785,8 +1055,20 @@
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
-            "elements": ["acid", "lightning", "fire", "cold"],
-            "duration": { "base": 20, "dice": { "count": 1, "sides": 20 } },
+            "elements": [
+              "acid",
+              "lightning",
+              "fire",
+              "cold",
+              "poison"
+            ],
+            "duration": {
+              "base": 20,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
             "target_mode": "self"
           }
         }
@@ -798,12 +1080,35 @@
       "description": "You are flooded with battle-fury, divine blessing, and elemental protection simultaneously.",
       "effects": [
         {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 30
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "target_mode": "self",
+            "cure_mode": "full"
+          }
+        },
+        {
           "action_id": "ApplyTimedBuff",
           "parameters": {
             "status_id": "berserk",
             "duration": {
-              "base": 25,
-              "dice": { "count": 1, "sides": 25 }
+              "base": 50,
+              "dice": {
+                "count": 1,
+                "sides": 50
+              }
             },
             "target_mode": "self"
           }
@@ -825,8 +1130,20 @@
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
-            "elements": ["acid", "lightning", "fire", "cold"],
-            "duration": { "base": 50, "dice": { "count": 1, "sides": 50 } },
+            "elements": [
+              "acid",
+              "lightning",
+              "fire",
+              "cold",
+              "poison"
+            ],
+            "duration": {
+              "base": 50,
+              "dice": {
+                "count": 1,
+                "sides": 50
+              }
+            },
             "target_mode": "self"
           }
         }
@@ -852,12 +1169,16 @@
       "description": "A directed force hurls your target to a distant part of the dungeon.",
       "effects": [
         {
-          "effect_id": "teleport_other",
-          "distance": 0
+          "action_id": "TeleportTarget",
+          "parameters": {
+            "distance": 100,
+            "target_mode": "aimed",
+            "direction": "aimed",
+            "teleport_type": "away_all",
+            "distance_formula": "max_sight_x5"
+          }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "The catalog has TeleportTarget, but activation is not an allowed source family. The legacy forced target relocation remains unresolved."
+      ]
     },
     {
       "activation_id": "WORD_OF_RECALL",
@@ -867,12 +1188,13 @@
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
-            "relocation_mode": "word_of_recall"
+            "relocation_mode": "word_of_recall",
+            "toggle_mode": "toggle",
+            "delay_min": 15,
+            "delay_max": 34
           }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "RecallOrLevelShift exists, but activation is not an allowed source family. The canonical payload remains pending source-family/catalog resolution."
+      ]
     },
     {
       "activation_id": "BANISHMENT",
@@ -882,8 +1204,14 @@
         {
           "action_id": "BanishByRule",
           "parameters": {
-            "banish_rule": "evil",
-            "target_mode": "level"
+            "banish_rule": "nearest_type_non_unique",
+            "target_mode": "level",
+            "selection_mode": "nearest_type",
+            "self_damage_per_banish": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
+            }
           }
         }
       ]
@@ -896,8 +1224,17 @@
         {
           "action_id": "BanishByRule",
           "parameters": {
-            "banish_rule": "mass_non_unique",
-            "target_mode": "level"
+            "banish_rule": "local_non_unique_radius",
+            "target_mode": "area",
+            "radius": 20,
+            "los_required": false,
+            "selection_mode": "all_non_unique",
+            "self_damage_per_banish": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
+            },
+            "protect_dungeon_master": true
           }
         }
       ]
@@ -911,14 +1248,23 @@
           "action_id": "BeamDamage",
           "parameters": {
             "damage_type": "stone_weak",
-            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 30,
+              "base": 20
+            },
             "direction": "aimed",
-            "terrain_effect": "stone_to_mud"
+            "terrain_effect": "stone_to_mud",
+            "projector_flags": [
+              "beam",
+              "grid",
+              "item",
+              "kill"
+            ]
           }
         }
-      ],
-      "migration_status": "unresolved",
-      "notes": "BeamDamage is not activation-eligible. AlterTerrain cannot preserve the directed stone-to-mud beam's damage component, so this activation remains unresolved."
+      ]
     },
     {
       "activation_id": "TRAP_DOOR_DEST",
@@ -929,8 +1275,12 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "destroy_trap_or_door",
-            "target_mode": "area",
-            "radius": 1
+            "target_mode": "touch",
+            "radius": 1,
+            "feature_filter": [
+              "traps",
+              "doors"
+            ]
           }
         }
       ]
@@ -944,7 +1294,33 @@
           "action_id": "RechargeItem",
           "parameters": {
             "power": 60,
-            "item_kind_filter": ["wand", "staff", "device", "rechargeable"]
+            "item_kind_filter": [
+              "wand",
+              "staff"
+            ],
+            "recharge_policy": "safe_runtime",
+            "failure_policy": "mangband_recharge",
+            "charge_gain_formula": "2_plus_randint1(power/(item_level+2)+1)"
+          }
+        }
+      ]
+    },
+    {
+      "activation_id": "FIREBRAND",
+      "name": "Firebrand Bolts",
+      "description": "Attempts to brand the first valid stack of bolts with flame and enchant them.",
+      "effects": [
+        {
+          "action_id": "BrandWeapon",
+          "parameters": {
+            "brand_type": "flame",
+            "target_mode": "single_item",
+            "success_chance": 25,
+            "item_kind_filter": [
+              "bolt"
+            ],
+            "apply_ego": "flame",
+            "selection_mode": "first_matching"
           }
         }
       ]

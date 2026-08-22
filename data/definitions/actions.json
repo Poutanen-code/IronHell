@@ -7,7 +7,14 @@
       "description": "Single-target projectile damage payload shared across caster and device sources.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "monster_spell",
+        "rod",
+        "wand",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -16,7 +23,27 @@
             "description": "Damage channel delivered by the bolt.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": [
+              "physical",
+              "fire",
+              "cold",
+              "acid",
+              "lightning",
+              "poison",
+              "light",
+              "light_weak",
+              "dark",
+              "sound",
+              "shard",
+              "nexus",
+              "nether",
+              "chaos",
+              "disenchantment",
+              "arcane",
+              "mana",
+              "holy",
+              "holy_orb"
+            ]
           },
           {
             "id": "amount",
@@ -48,7 +75,15 @@
       "description": "Area-of-effect damage payload centered on a point, target, or source actor.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "monster_spell", "rod", "wand", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "monster_spell",
+        "rod",
+        "wand",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -57,7 +92,27 @@
             "description": "Damage channel delivered by the ball effect.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": [
+              "physical",
+              "fire",
+              "cold",
+              "acid",
+              "lightning",
+              "poison",
+              "light",
+              "light_weak",
+              "dark",
+              "sound",
+              "shard",
+              "nexus",
+              "nether",
+              "chaos",
+              "disenchantment",
+              "arcane",
+              "mana",
+              "holy",
+              "holy_orb"
+            ]
           },
           {
             "id": "amount",
@@ -77,7 +132,18 @@
             "description": "Targeting mode for the ball center.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "point", "aimed", "area"]
+            "allowed_values": [
+              "self",
+              "point",
+              "aimed",
+              "area"
+            ]
+          },
+          {
+            "id": "direction",
+            "description": "Direction token for aimed ball projectors and directional fan compositions.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -97,7 +163,14 @@
       "description": "Restores hit points to the resolved target set.",
       "category": "healing",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "rod", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "rod",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -112,7 +185,23 @@
             "description": "Who receives the healing payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "ally", "area"]
+            "allowed_values": [
+              "self",
+              "target",
+              "ally",
+              "area"
+            ]
+          },
+          {
+            "id": "cut_effect",
+            "description": "Optional post-heal wound adjustment policy.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "none",
+              "clear",
+              "halve_minus_50"
+            ]
           }
         ]
       },
@@ -132,7 +221,14 @@
       "description": "Removes one or more timed statuses from the resolved target set.",
       "category": "status",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "rod", "staff"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "rod",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -149,14 +245,22 @@
             "description": "Who receives the cure payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "ally", "area"]
+            "allowed_values": [
+              "self",
+              "target",
+              "ally",
+              "area"
+            ]
           },
           {
             "id": "cure_mode",
             "description": "How thoroughly the status is removed. full sets the counter to zero; halve divides the counter by two.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["full", "halve"]
+            "allowed_values": [
+              "full",
+              "halve"
+            ]
           }
         ]
       },
@@ -176,7 +280,15 @@
       "description": "Applies a timed beneficial status to the resolved target set.",
       "category": "status",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "activation", "scroll", "rod", "staff"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "activation",
+        "scroll",
+        "rod",
+        "staff"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -198,7 +310,11 @@
             "description": "Who receives the timed buff.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "ally"]
+            "allowed_values": [
+              "self",
+              "target",
+              "ally"
+            ]
           }
         ]
       },
@@ -210,7 +326,7 @@
       "provenance_status": "derived",
       "provenance": {
         "summary": "Approved as a canonical payload in Gameplay Architecture V2 section 9.1."
-       }
+      }
     },
     {
       "action_id": "ApplyOpposeElements",
@@ -218,7 +334,12 @@
       "description": "Applies timed elemental oppose coverage without flattening it into permanent resistance.",
       "category": "status",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -227,7 +348,13 @@
             "description": "Element set granted as timed oppose state.",
             "value_type": "enum_list",
             "required": true,
-            "allowed_values": ["acid", "lightning", "fire", "cold", "poison"]
+            "allowed_values": [
+              "acid",
+              "lightning",
+              "fire",
+              "cold",
+              "poison"
+            ]
           },
           {
             "id": "duration",
@@ -240,7 +367,11 @@
             "description": "Who receives the timed oppose payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "ally"]
+            "allowed_values": [
+              "self",
+              "target",
+              "ally"
+            ]
           }
         ]
       },
@@ -260,7 +391,15 @@
       "description": "Relocates the acting entity according to a self-teleport mode and distance envelope.",
       "category": "movement",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation", "trap"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "rod",
+        "staff",
+        "activation",
+        "trap"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -276,7 +415,12 @@
             "description": "Semantic mode of self-relocation.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["phase", "teleport", "escape", "random"]
+            "allowed_values": [
+              "phase",
+              "teleport",
+              "escape",
+              "random"
+            ]
           }
         ]
       },
@@ -296,7 +440,14 @@
       "description": "Applies lighting to an area or illumination pattern.",
       "category": "information",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "rod",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -312,7 +463,12 @@
             "description": "Lighting presentation or effect style.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["torch", "illumination", "starlight", "room"]
+            "allowed_values": [
+              "torch",
+              "illumination",
+              "starlight",
+              "room"
+            ]
           },
           {
             "id": "damage_light_sensitive",
@@ -338,7 +494,14 @@
       "description": "Reveals one or more categories of entities or map objects.",
       "category": "information",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "rod",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -347,7 +510,18 @@
             "description": "Entity or map-object categories to reveal.",
             "value_type": "enum_list",
             "required": true,
-            "allowed_values": ["monsters", "objects", "traps", "doors", "stairs", "evil", "all", "enchanted_objects", "invisible_monsters"]
+            "allowed_values": [
+              "monsters",
+              "objects",
+              "traps",
+              "doors",
+              "stairs",
+              "evil",
+              "all",
+              "enchanted_objects",
+              "invisible_monsters",
+              "secret_doors"
+            ]
           },
           {
             "id": "radius",
@@ -374,7 +548,12 @@
       "description": "Reveals structural dungeon information across a local area or wider scope.",
       "category": "information",
       "confidence": "high",
-      "allowed_source_families": ["spell", "scroll", "rod", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "scroll",
+        "rod",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -383,7 +562,12 @@
             "description": "Mapping depth or reveal style.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["local", "level", "clairvoyant", "full_level_illuminate"]
+            "allowed_values": [
+              "local",
+              "level",
+              "clairvoyant",
+              "full_level_illuminate"
+            ]
           },
           {
             "id": "radius",
@@ -410,7 +594,12 @@
       "description": "Reveals item knowledge for one or more selected items.",
       "category": "information",
       "confidence": "high",
-      "allowed_source_families": ["spell", "scroll", "rod", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "scroll",
+        "rod",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -419,7 +608,12 @@
             "description": "Selection scope for the identification payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["single", "all_carried", "all_equipped", "comprehensive"]
+            "allowed_values": [
+              "single",
+              "all_carried",
+              "all_equipped",
+              "comprehensive"
+            ]
           }
         ]
       },
@@ -439,7 +633,11 @@
       "description": "Applies a positive equipment enchantment profile to a selected item.",
       "category": "item",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "scroll"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -454,7 +652,10 @@
             "description": "Item selection mode for the enchantment.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["single_item", "equipped_item"]
+            "allowed_values": [
+              "single_item",
+              "equipped_item"
+            ]
           }
         ]
       },
@@ -474,7 +675,14 @@
       "description": "Applies sleep control to one or more hostile targets.",
       "category": "control",
       "confidence": "high",
-      "allowed_source_families": ["spell", "wand", "rod", "staff", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "wand",
+        "rod",
+        "staff",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -483,7 +691,13 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+            "allowed_values": [
+              "target",
+              "area",
+              "all_nearby",
+              "all_in_los",
+              "touch"
+            ]
           },
           {
             "id": "potency",
@@ -504,7 +718,31 @@
             "description": "Restricts the sleep effect to entities matching this tag. Omit to affect all entities.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["all", "evil", "undead", "demon"]
+            "allowed_values": [
+              "all",
+              "evil",
+              "undead",
+              "demon"
+            ]
+          },
+          {
+            "id": "potency_mode",
+            "description": "How potency is resolved at runtime.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "fixed",
+              "player_level"
+            ]
+          },
+          {
+            "id": "effect_family",
+            "description": "Control family selector for downstream effect handler compatibility.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "old_sleep"
+            ]
           }
         ]
       },
@@ -524,7 +762,16 @@
       "description": "Applies a timed haste or slow effect to the player. Replaces ApplyTimedBuff(haste) usages with explicit speed semantics and canonical duration expressions.",
       "category": "movement",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "potion", "rod", "wand", "staff", "activation", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "rod",
+        "wand",
+        "staff",
+        "activation",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -533,7 +780,10 @@
             "description": "Direction of the speed modification applied to the player.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["haste", "slow"]
+            "allowed_values": [
+              "haste",
+              "slow"
+            ]
           },
           {
             "id": "duration",
@@ -546,7 +796,25 @@
             "description": "Always self — player speed modifications apply only to the acting player.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self"]
+            "allowed_values": [
+              "self"
+            ]
+          },
+          {
+            "id": "apply_mode",
+            "description": "Runtime policy for applying haste/slow to existing timed state.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "set_or_extend_haste"
+            ]
+          },
+          {
+            "id": "if_already_active_add",
+            "description": "Turns to add when target already has active speed status.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
           }
         ]
       },
@@ -566,7 +834,11 @@
       "description": "Damages or clears entities selected by a reusable tag-based filter.",
       "category": "control",
       "confidence": "high",
-      "allowed_source_families": ["prayer", "staff"],
+      "allowed_source_families": [
+        "prayer",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -575,13 +847,45 @@
             "description": "Tag filter used to choose affected entities.",
             "value_type": "enum_list",
             "required": true,
-            "allowed_values": ["evil", "undead", "demon", "all"]
+            "allowed_values": [
+              "evil",
+              "undead",
+              "demon",
+              "all"
+            ]
           },
           {
             "id": "amount",
             "description": "Typed dispel amount expression.",
             "value_type": "structured_amount",
             "required": true
+          },
+          {
+            "id": "target_mode",
+            "description": "Target scope for dispel evaluation.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "all_in_los",
+              "area",
+              "target"
+            ]
+          },
+          {
+            "id": "damage_type",
+            "description": "Dispel channel for runtime effect routing.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "holy",
+              "dispel_evil"
+            ]
+          },
+          {
+            "id": "amount_scaling",
+            "description": "Runtime scaling token for amount formulas.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -601,7 +905,14 @@
       "description": "Delivers direct life-draining damage through a directed offensive payload.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "rod", "wand", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "rod",
+        "wand",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -616,6 +927,21 @@
             "description": "Directional input or trajectory token for the drain path.",
             "value_type": "token",
             "required": true
+          },
+          {
+            "id": "damage_type",
+            "description": "Drain channel used by downstream damage handlers.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "nether"
+            ]
+          },
+          {
+            "id": "heal_on_success",
+            "description": "When true, successful damage heals the source actor per drain-life semantics.",
+            "value_type": "boolean",
+            "required": false
           }
         ]
       },
@@ -635,7 +961,13 @@
       "description": "Applies a terrain-disrupting area mutation centered on the actor, target, or selected point.",
       "category": "terrain",
       "confidence": "high",
-      "allowed_source_families": ["spell", "prayer", "staff", "monster_spell", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "staff",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -651,7 +983,11 @@
             "description": "How the earthquake center is chosen.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "point"]
+            "allowed_values": [
+              "self",
+              "target",
+              "point"
+            ]
           }
         ]
       },
@@ -671,7 +1007,13 @@
       "description": "Directed linear damage payload with beam semantics.",
       "category": "damage",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "rod", "wand", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "rod",
+        "wand",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -680,7 +1022,28 @@
             "description": "Damage channel delivered by the beam.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "light_weak", "stone_weak", "dark", "sound", "shard", "nexus", "nether", "chaos", "disenchantment", "arcane", "mana", "holy", "holy_orb"]
+            "allowed_values": [
+              "physical",
+              "fire",
+              "cold",
+              "acid",
+              "lightning",
+              "poison",
+              "light",
+              "light_weak",
+              "stone_weak",
+              "dark",
+              "sound",
+              "shard",
+              "nexus",
+              "nether",
+              "chaos",
+              "disenchantment",
+              "arcane",
+              "mana",
+              "holy",
+              "holy_orb"
+            ]
           },
           {
             "id": "amount",
@@ -699,7 +1062,23 @@
             "description": "Optional terrain side-effect applied to each grid cell along the beam path. illuminate_path is the GF_LITE_WEAK grid effect that permanently lights cells. Stone to mud is the GF_KILL_WALL grid effect that converts stone to mud. Omit when no terrain effect applies.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["none", "illuminate_path", "stone_to_mud"]
+            "allowed_values": [
+              "none",
+              "illuminate_path",
+              "stone_to_mud"
+            ]
+          },
+          {
+            "id": "projector_flags",
+            "description": "Projector behavior flags used by runtime projector adapters.",
+            "value_type": "enum_list",
+            "required": false,
+            "allowed_values": [
+              "beam",
+              "grid",
+              "item",
+              "kill"
+            ]
           }
         ]
       },
@@ -719,7 +1098,14 @@
       "description": "Forcibly relocates one or more targets away from their current position.",
       "category": "movement",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "rod", "wand", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "rod",
+        "wand",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -735,7 +1121,32 @@
             "description": "Target envelope for forced relocation.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "all_nearby"]
+            "allowed_values": [
+              "target",
+              "all_nearby",
+              "aimed"
+            ]
+          },
+          {
+            "id": "direction",
+            "description": "Direction token for aimed teleport effects.",
+            "value_type": "token",
+            "required": false
+          },
+          {
+            "id": "teleport_type",
+            "description": "Teleport projector family selector.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "away_all"
+            ]
+          },
+          {
+            "id": "distance_formula",
+            "description": "Distance formula token for runtime policy evaluation.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -755,7 +1166,14 @@
       "description": "Schedules or forces an inter-level relocation outcome.",
       "category": "movement",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "rod",
+        "monster_spell",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -764,7 +1182,36 @@
             "description": "Inter-level relocation mode used by the payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["recall", "word_of_recall", "teleport_level", "alter_reality", "forced_level_shift"]
+            "allowed_values": [
+              "recall",
+              "word_of_recall",
+              "teleport_level",
+              "alter_reality",
+              "forced_level_shift"
+            ]
+          },
+          {
+            "id": "toggle_mode",
+            "description": "Toggle semantics for delayed recall state.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "toggle"
+            ]
+          },
+          {
+            "id": "delay_min",
+            "description": "Minimum delayed turns before relocation.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "delay_max",
+            "description": "Maximum delayed turns before relocation.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
           }
         ]
       },
@@ -784,7 +1231,12 @@
       "description": "Applies darkness or visibility suppression to an area.",
       "category": "information",
       "confidence": "medium",
-      "allowed_source_families": ["monster_spell", "spell", "prayer", "activation"],
+      "allowed_source_families": [
+        "monster_spell",
+        "spell",
+        "prayer",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -800,7 +1252,11 @@
             "description": "Darkness application style.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["ambient", "projected", "self_centered"]
+            "allowed_values": [
+              "ambient",
+              "projected",
+              "self_centered"
+            ]
           }
         ]
       },
@@ -820,7 +1276,12 @@
       "description": "Restores device resource state according to a declared recharge power.",
       "category": "item",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "scroll", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -836,7 +1297,36 @@
             "description": "Device kinds the recharge payload is allowed to target.",
             "value_type": "enum_list",
             "required": true,
-            "allowed_values": ["wand", "staff", "device", "rechargeable"]
+            "allowed_values": [
+              "wand",
+              "staff",
+              "device",
+              "rechargeable"
+            ]
+          },
+          {
+            "id": "recharge_policy",
+            "description": "Recharge resolution policy token.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "safe_runtime"
+            ]
+          },
+          {
+            "id": "failure_policy",
+            "description": "Failure/backfire policy token.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "mangband_recharge"
+            ]
+          },
+          {
+            "id": "charge_gain_formula",
+            "description": "Charge gain formula token evaluated by runtime.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -856,7 +1346,11 @@
       "description": "Applies a declared brand profile to a selected weapon.",
       "category": "item",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -865,14 +1359,24 @@
             "description": "Brand applied to the target weapon.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["flame", "frost", "poison", "holy", "chaos", "elemental"]
+            "allowed_values": [
+              "flame",
+              "frost",
+              "poison",
+              "holy",
+              "chaos",
+              "elemental"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Weapon selection mode.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["single_item", "equipped_item"]
+            "allowed_values": [
+              "single_item",
+              "equipped_item"
+            ]
           },
           {
             "id": "success_chance",
@@ -881,6 +1385,33 @@
             "required": false,
             "minimum": 0,
             "maximum": 100
+          },
+          {
+            "id": "item_kind_filter",
+            "description": "Restricts eligible item classes for branding.",
+            "value_type": "enum_list",
+            "required": false,
+            "allowed_values": [
+              "bolt"
+            ]
+          },
+          {
+            "id": "apply_ego",
+            "description": "Ego profile applied on successful branding.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "flame"
+            ]
+          },
+          {
+            "id": "selection_mode",
+            "description": "Selection rule for candidate inventory items.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "first_matching"
+            ]
           }
         ]
       },
@@ -900,7 +1431,14 @@
       "description": "Applies a reusable terrain or feature transformation payload.",
       "category": "terrain",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "wand", "rod", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "wand",
+        "rod",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -909,14 +1447,32 @@
             "description": "Declared terrain or feature operation.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["stone_to_mud", "destroy_trap_or_door", "create_door", "create_stair", "rune_of_protection", "destruction_field", "glyph_of_warding", "unbar_paths", "glyph", "create_object"]
+            "allowed_values": [
+              "stone_to_mud",
+              "destroy_trap_or_door",
+              "create_door",
+              "create_stair",
+              "rune_of_protection",
+              "destruction_field",
+              "glyph_of_warding",
+              "unbar_paths",
+              "glyph",
+              "create_object"
+            ]
           },
           {
             "id": "target_mode",
             "description": "How the terrain transformation is aimed or centered.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["direction", "point", "area", "self", "target"]
+            "allowed_values": [
+              "direction",
+              "point",
+              "area",
+              "self",
+              "target",
+              "touch"
+            ]
           },
           {
             "id": "radius",
@@ -930,7 +1486,20 @@
             "description": "Optional entity-level side effect applied during terrain alteration. remove_all_in_radius covers the destroy_area(full=TRUE) monster-deletion behavior.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["none", "remove_all_in_radius"]
+            "allowed_values": [
+              "none",
+              "remove_all_in_radius"
+            ]
+          },
+          {
+            "id": "feature_filter",
+            "description": "Optional terrain feature classes selected by the operation.",
+            "value_type": "enum_list",
+            "required": false,
+            "allowed_values": [
+              "traps",
+              "doors"
+            ]
           }
         ]
       },
@@ -950,7 +1519,13 @@
       "description": "Applies confusion control to one or more targets.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "wand", "monster_spell", "trap"],
+      "allowed_source_families": [
+        "spell",
+        "wand",
+        "monster_spell",
+        "trap",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -959,7 +1534,12 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+            "allowed_values": [
+              "target",
+              "area",
+              "all_nearby",
+              "all_in_los"
+            ]
           },
           {
             "id": "potency",
@@ -980,6 +1560,12 @@
             "value_type": "integer",
             "required": false,
             "minimum": 0
+          },
+          {
+            "id": "direction",
+            "description": "Direction token for aimed confusion effects.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -999,7 +1585,11 @@
       "description": "Applies fear control to one or more targets.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["prayer", "wand", "monster_spell"],
+      "allowed_source_families": [
+        "prayer",
+        "wand",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1008,7 +1598,12 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+            "allowed_values": [
+              "target",
+              "area",
+              "all_nearby",
+              "all_in_los"
+            ]
           },
           {
             "id": "potency",
@@ -1028,7 +1623,12 @@
             "description": "Restricts the fear effect to entities matching this tag. Omit to affect all entities. undead is required for Turn Undead semantics.",
             "value_type": "enum",
             "required": false,
-            "allowed_values": ["all", "evil", "undead", "demon"]
+            "allowed_values": [
+              "all",
+              "evil",
+              "undead",
+              "demon"
+            ]
           }
         ]
       },
@@ -1048,7 +1648,10 @@
       "description": "Applies paralysis control to one or more targets.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["monster_spell", "trap"],
+      "allowed_source_families": [
+        "monster_spell",
+        "trap"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1057,7 +1660,12 @@
             "description": "Targeting envelope for the control payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area", "all_nearby", "all_in_los"]
+            "allowed_values": [
+              "target",
+              "area",
+              "all_nearby",
+              "all_in_los"
+            ]
           },
           {
             "id": "duration",
@@ -1083,7 +1691,12 @@
       "description": "Removes entities according to a declared banishment rule.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "staff", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "staff",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1092,14 +1705,62 @@
             "description": "Rule used to select entities for removal.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["evil", "targeted_non_unique", "mass_non_unique", "evil_only", "non_unique", "all"]
+            "allowed_values": [
+              "evil",
+              "targeted_non_unique",
+              "mass_non_unique",
+              "evil_only",
+              "non_unique",
+              "all",
+              "nearest_type_non_unique",
+              "local_non_unique_radius"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Scope in which banishment is resolved.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "area", "level"]
+            "allowed_values": [
+              "self",
+              "area",
+              "level"
+            ]
+          },
+          {
+            "id": "radius",
+            "description": "Optional radius for local banishment scopes.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "los_required",
+            "description": "Whether line-of-sight is required for target selection.",
+            "value_type": "boolean",
+            "required": false
+          },
+          {
+            "id": "self_damage_per_banish",
+            "description": "Self damage applied per banished entity.",
+            "value_type": "structured_amount",
+            "required": false
+          },
+          {
+            "id": "protect_dungeon_master",
+            "description": "Skips self-damage when the actor is a dungeon master.",
+            "value_type": "boolean",
+            "required": false
+          },
+          {
+            "id": "selection_mode",
+            "description": "Monster grouping policy used before banishment.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "nearest_type",
+              "all_non_unique"
+            ]
           }
         ]
       },
@@ -1119,7 +1780,12 @@
       "description": "Creates one or more entities of a declared summon family.",
       "category": "summoning",
       "confidence": "medium",
-      "allowed_source_families": ["monster_spell", "staff", "activation", "trap"],
+      "allowed_source_families": [
+        "monster_spell",
+        "staff",
+        "activation",
+        "trap"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1128,7 +1794,16 @@
             "description": "Entity family used by the summon payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["monster", "animal", "undead", "demon", "dragon", "spider", "hound", "unique"]
+            "allowed_values": [
+              "monster",
+              "animal",
+              "undead",
+              "demon",
+              "dragon",
+              "spider",
+              "hound",
+              "unique"
+            ]
           },
           {
             "id": "count",
@@ -1142,7 +1817,11 @@
             "description": "Where or around whom summoned entities are created.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "near_target", "area"]
+            "allowed_values": [
+              "self",
+              "near_target",
+              "area"
+            ]
           }
         ]
       },
@@ -1162,7 +1841,13 @@
       "description": "Reveals detailed runtime state (current HP, lore flags, resistances) for entities within range. Distinct from DetectEntities which only reveals entity positions.",
       "category": "information",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "scroll", "rod"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "scroll",
+        "rod",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1171,14 +1856,36 @@
             "description": "Which information is revealed about the resolved entity set.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["hp", "known_lore", "probing"]
+            "allowed_values": [
+              "hp",
+              "known_lore",
+              "probing"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Target selection envelope for entity inspection.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["all_in_sight", "target", "area"]
+            "allowed_values": [
+              "all_in_sight",
+              "target",
+              "area",
+              "all_in_radius"
+            ]
+          },
+          {
+            "id": "radius",
+            "description": "Search radius for area/radius inspection modes.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "los_required",
+            "description": "Whether line of sight is required for inspected entities.",
+            "value_type": "boolean",
+            "required": false
           }
         ]
       },
@@ -1198,7 +1905,12 @@
       "description": "Restores drained stats and/or lost experience levels according to the selected scope.",
       "category": "healing",
       "confidence": "medium",
-      "allowed_source_families": ["prayer", "potion", "scroll", "activation"],
+      "allowed_source_families": [
+        "prayer",
+        "potion",
+        "scroll",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1207,7 +1919,11 @@
             "description": "Which attributes are restored by this payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["all_stats", "experience_level", "single_stat"]
+            "allowed_values": [
+              "all_stats",
+              "experience_level",
+              "single_stat"
+            ]
           },
           {
             "id": "stat_id",
@@ -1228,7 +1944,11 @@
             "description": "Who receives the restoration payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "area"]
+            "allowed_values": [
+              "self",
+              "target",
+              "area"
+            ]
           }
         ]
       },
@@ -1248,7 +1968,11 @@
       "description": "Removes one or all curses from the actor's equipped items.",
       "category": "item",
       "confidence": "medium",
-      "allowed_source_families": ["prayer", "scroll", "activation"],
+      "allowed_source_families": [
+        "prayer",
+        "scroll",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1257,7 +1981,10 @@
             "description": "Whether one curse or all curses are removed. single covers remove_curse; all covers remove_all_curse.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["single", "all"]
+            "allowed_values": [
+              "single",
+              "all"
+            ]
           }
         ]
       },
@@ -1277,7 +2004,13 @@
       "description": "Sets or adjusts a named actor resource meter such as the food satiation counter.",
       "category": "utility",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "prayer", "potion", "scroll", "consumable"],
+      "allowed_source_families": [
+        "spell",
+        "prayer",
+        "potion",
+        "scroll",
+        "consumable"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1286,14 +2019,22 @@
             "description": "The named resource meter to modify.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["food", "mana"]
+            "allowed_values": [
+              "food",
+              "mana"
+            ]
           },
           {
             "id": "mode",
             "description": "How the meter value is changed.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["set_max", "set_near_max", "add", "set_value"]
+            "allowed_values": [
+              "set_max",
+              "set_near_max",
+              "add",
+              "set_value"
+            ]
           }
         ]
       },
@@ -1319,7 +2060,8 @@
         "monster_spell",
         "trap",
         "spell",
-        "prayer"
+        "prayer",
+        "activation"
       ],
       "parameter_contract": {
         "closed": true,
@@ -1402,7 +2144,8 @@
         "potion",
         "spell",
         "prayer",
-        "consumable"
+        "consumable",
+        "activation"
       ],
       "parameter_contract": {
         "closed": true,
@@ -1418,14 +2161,20 @@
             "description": "Nature of the experience adjustment.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["permanent", "restorable"]
+            "allowed_values": [
+              "permanent",
+              "restorable"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Who receives the experience adjustment.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target"]
+            "allowed_values": [
+              "self",
+              "target"
+            ]
           }
         ]
       },
@@ -1445,7 +2194,10 @@
       "description": "Replaces the resolved target entity with a randomly selected entity of the same class.",
       "category": "control",
       "confidence": "medium",
-      "allowed_source_families": ["spell", "monster_spell"],
+      "allowed_source_families": [
+        "spell",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1454,14 +2206,20 @@
             "description": "Rule governing the selection of the replacement entity.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["polymorph_other", "random_monster"]
+            "allowed_values": [
+              "polymorph_other",
+              "random_monster"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Target selection mode for the transformation payload.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["target", "area"]
+            "allowed_values": [
+              "target",
+              "area"
+            ]
           }
         ]
       },
@@ -1481,7 +2239,11 @@
       "description": "Creates a duplicate copy of the targeted monster adjacent to its current position. The clone is a separate entity with full HP.",
       "category": "summoning",
       "confidence": "high",
-      "allowed_source_families": ["rod", "wand", "spell"],
+      "allowed_source_families": [
+        "rod",
+        "wand",
+        "spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1509,7 +2271,13 @@
       "description": "Applies a temporary speed modification (haste or slow) to one or more monsters.",
       "category": "control",
       "confidence": "high",
-      "allowed_source_families": ["rod", "wand", "staff", "spell", "monster_spell"],
+      "allowed_source_families": [
+        "rod",
+        "wand",
+        "staff",
+        "spell",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1518,14 +2286,20 @@
             "description": "Direction of the speed modification applied to the target(s).",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["haste", "slow"]
+            "allowed_values": [
+              "haste",
+              "slow"
+            ]
           },
           {
             "id": "target_mode",
             "description": "Targeting envelope. Use aimed for single-target directed use; all_in_los for sweep effects.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["aimed", "all_in_los"]
+            "allowed_values": [
+              "aimed",
+              "all_in_los"
+            ]
           }
         ]
       },
@@ -1545,7 +2319,12 @@
       "description": "Awakens all sleeping monsters within the aggravation radius and causes all monsters within line of sight to move at maximum speed.",
       "category": "control",
       "confidence": "high",
-      "allowed_source_families": ["scroll", "activation", "spell", "item_property"],
+      "allowed_source_families": [
+        "scroll",
+        "activation",
+        "spell",
+        "item_property"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1574,7 +2353,11 @@
       "description": "Applies a destructive curse to the selected equipped item, removing special powers and applying a negative magical bonus.",
       "category": "item",
       "confidence": "high",
-      "allowed_source_families": ["scroll", "activation", "monster_spell"],
+      "allowed_source_families": [
+        "scroll",
+        "activation",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1583,7 +2366,11 @@
             "description": "Equipment slot containing the item to curse.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["armor", "weapon", "selected"]
+            "allowed_values": [
+              "armor",
+              "weapon",
+              "selected"
+            ]
           },
           {
             "id": "artifact_resist_chance",
@@ -1610,7 +2397,11 @@
       "description": "Creates random traps on all empty floor squares within a given radius of the caster.",
       "category": "terrain",
       "confidence": "high",
-      "allowed_source_families": ["scroll", "activation", "monster_spell"],
+      "allowed_source_families": [
+        "scroll",
+        "activation",
+        "monster_spell"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1626,7 +2417,11 @@
             "description": "Center point for trap placement.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "target", "point"]
+            "allowed_values": [
+              "self",
+              "target",
+              "point"
+            ]
           }
         ]
       },
@@ -1646,7 +2441,13 @@
       "description": "Applies direct HP damage to a resolved target set without projectile semantics. Covers self-inflicted damage (eating harmful consumables), thrown-item impact, environmental hazards, and melee damage that does not fit a more specific action.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["consumable", "activation", "trap", "monster_blow", "environmental"],
+      "allowed_source_families": [
+        "consumable",
+        "activation",
+        "trap",
+        "monster_blow",
+        "environmental"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
@@ -1655,7 +2456,21 @@
             "description": "Damage channel applied to the target.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["physical", "fire", "cold", "acid", "lightning", "poison", "light", "dark", "sound", "chaos", "nether", "arcane", "mana"]
+            "allowed_values": [
+              "physical",
+              "fire",
+              "cold",
+              "acid",
+              "lightning",
+              "poison",
+              "light",
+              "dark",
+              "sound",
+              "chaos",
+              "nether",
+              "arcane",
+              "mana"
+            ]
           },
           {
             "id": "amount",
@@ -1668,7 +2483,12 @@
             "description": "Who receives the damage. self covers eating/drinking harmful items; aimed covers thrown item impact.",
             "value_type": "enum",
             "required": true,
-            "allowed_values": ["self", "aimed", "target", "area"]
+            "allowed_values": [
+              "self",
+              "aimed",
+              "target",
+              "area"
+            ]
           }
         ]
       },
@@ -1680,6 +2500,53 @@
       "provenance_status": "derived",
       "provenance": {
         "summary": "Added to resolve the consumable self-damage and thrown-damage gap identified in consumables.json. BoltDamage(direction=self) and BoltDamage(direction=thrown) were non-canonical workarounds. ApplyDamage has no projectile/beam semantics and covers the direct-application cases."
+      }
+    },
+    {
+      "action_id": "RandomActionSelection",
+      "name": "Random Action Selection",
+      "description": "Executes exactly one nested outcome selected by uniform or weighted random choice.",
+      "category": "control",
+      "confidence": "high",
+      "allowed_source_families": [
+        "activation"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "selection_mode",
+            "description": "Random selection strategy used for outcome choice.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "uniform",
+              "weighted"
+            ]
+          },
+          {
+            "id": "outcomes",
+            "description": "Ordered random outcome table. Each outcome embeds nested canonical actions and weight metadata.",
+            "value_type": "token",
+            "required": true
+          },
+          {
+            "id": "execute_count",
+            "description": "Number of outcomes executed after selection. Use 1 for ring_of_power semantics.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 1
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added for activation parity: ring_of_power requires one-of-N random composite execution with weighted outcomes and nested actions."
       }
     }
   ]
