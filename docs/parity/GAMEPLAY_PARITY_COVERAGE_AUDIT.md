@@ -54,7 +54,7 @@ this audit.
 
 | System | Exists in repository | Coverage | Definition evidence | Missing definitions | MAngband research needed | Runtime dependency risk |
 |---|---|---|---|---|---|---|
-| Character creation | Yes | Fully Defined | `races.json`, `classes.json`, `race_class_rules.json`, `stat_tables.json`, starting equipment; [Character Creation Specification](CHARACTER_CREATION_SPECIFICATION.md) | None identified | Confirm any remaining birth-history edge cases | High: stat rolling, history, gold, and equipment sequencing are policy-sensitive |
+| Character creation | Yes | Fully Defined | `races.json`, `classes.json`, `race_class_rules.json`, `stat_tables.json`, starting equipment; [Character Creation Specification](../implementation/CHARACTER_CREATION_SPECIFICATION.md) | None identified | Confirm any remaining birth-history edge cases | High: stat rolling, history, gold, and equipment sequencing are policy-sensitive |
 | Races | Yes | Fully Defined | 11 records in `races.json`, with stat/skill modifiers and capabilities | None identified | Low; source parity is documented in character compendia | Medium: derived racial effects and capability application |
 | Classes | Yes | Fully Defined | 6 records in `classes.json`, class stats, skills, spells, equipment, capabilities | None identified | Low; class source values are documented | Medium: class-native traits and spell policy |
 | Stats | Yes | Fully Defined | Six-stat modifiers plus 38-entry `stat_tables.json`; character compendia document Angband scale | None identified | Low for definitions; verify source tables before changes | High: non-linear stat indices drive many derived outcomes |
@@ -65,7 +65,7 @@ this audit.
 | Resistances | Yes | Fully Defined | 30 typed records in `resistances.json`, including resist/oppose/immunity/ignore | No missing core resistance family identified | Confirm monster/player interaction nuances | High: mitigation, timed oppose, immunity, and item-self semantics differ |
 | Statuses | Yes | Fully Defined | 26 records in `statuses.json`, durations and status categories | No missing core status record identified | Confirm legacy aliases and source-specific clearing bundles | High: status stacking, timers, and secondary effects are policy-sensitive |
 | Equipment | Yes | Fully Defined | Armor, weapons, accessories, lights, and item affixes catalogs | No core base-equipment family missing | Confirm all MAngband allocation and slot details | High: slot legality, weight, enchantment, and passive grants interact |
-| Inventory | Yes | Partially Defined | Item catalogs and inventory layout in [Character Creation Specification](CHARACTER_CREATION_SPECIFICATION.md) | No standalone inventory-layout/stack-rule definition catalog | Confirm pack/equipment limits, stacking, carrying, and transfer rules | High: pickup, stacking, destruction, and equipment mutation are policy-heavy |
+| Inventory | Yes | Partially Defined | Item catalogs and inventory layout in [Character Creation Specification](../implementation/CHARACTER_CREATION_SPECIFICATION.md) | No standalone inventory-layout/stack-rule definition catalog | Confirm pack/equipment limits, stacking, carrying, and transfer rules | High: pickup, stacking, destruction, and equipment mutation are policy-heavy |
 | Consumables | Yes | Fully Defined | 27 records in `items/consumables.json` plus food/light-related definitions | None identified at family level | Confirm food, hunger, and side-effect variants | Medium: effects and nutrition depend on status and time policy |
 | Potions | Yes | Fully Defined | 46 records in `items/potions.json`; potion compendium maps MAngband effects | None identified at family level | Review documented deviations such as salt-water paralysis bypass | Medium: quaff targeting and bundled effects |
 | Scrolls | Yes | Fully Defined | 45 records in `items/scrolls.json` | None identified at family level | Confirm reading legality, blindness, and cursed-scroll policy | Medium: identification, targeting, and item consumption |
@@ -78,15 +78,15 @@ this audit.
 | Mage spells | Yes | Fully Defined | 64 records in `mage_spells.json`, 18 books, action refs and policy metadata | None identified at catalog level | Confirm complete spell-book membership and lifecycle values | High: learning, mana, failure, targeting, and level gates |
 | Priest prayers | Yes | Fully Defined | 58 records in `priest_prayers.json`, books, action refs and policy metadata | None identified at catalog level | Confirm realm-specific learning and prayer failure rules | High: prayer legality and divine spell policy differ from mage policy |
 | Monster races | Yes | Fully Defined | 616 records in `monster_compendium.json` with identity, depth, HP, blows, flags, and spells | No base monster record family missing | Confirm all legacy flags and edge species semantics | High: monster flags drive movement, combat, AI, and drops |
-| Monster spells | Yes | Partially Defined | Monster spell flags and spell projection research in `monster_compendium.json` and [Monster Action Projection](MONSTER_ACTION_PROJECTION.md) | No standalone monster-spell definition catalog | High: spell flag grammar, breaths, smart masks, and source-specific effects | High: selection and legality are AI policy, not payload data |
-| Monster AI | Yes | Compatibility Layer | Monster intelligence/brain/smart flags and [Monsters Compendium](../compendia/MONSTERS_COMPENDIUM.md) research | No dedicated AI policy definition catalog | High: smart casting, learning, desperation, LOS, and movement | Very high: AI behavior is explicitly policy-controlled |
+| Monster spells | Yes | Partially Defined | Monster spell flags and spell projection research in `monster_compendium.json` and [Monster Action Projection](../archive/research/MONSTER_ACTION_PROJECTION.md) | No standalone monster-spell definition catalog | High: spell flag grammar, breaths, smart masks, and source-specific effects | High: selection and legality are AI policy, not payload data |
+| Monster AI | Yes | Compatibility Layer | Monster intelligence/brain/smart flags and [Monsters Compendium](../../compendia/MONSTERS_COMPENDIUM.md) research | No dedicated AI policy definition catalog | High: smart casting, learning, desperation, LOS, and movement | Very high: AI behavior is explicitly policy-controlled |
 | Monster drops | Yes | Partially Defined | Monster drop flags and depth/rarity data in `monster_compendium.json`; compendium drop rules | No dedicated drop-table or quality-policy catalog | Confirm stackable drop flags, chosen tables, and object-depth scaling | High: generation, quality, gold/item choice, and unique rules interact |
 | Summoning | Yes | Partially Defined | `SummonEntities` action, monster spell flags, activation/effect records | No summon-family/count/depth policy catalog | Confirm summon groups, caps, exclusions, and source variants | High: summon selection is source and world-state policy |
 | Breeding | Yes | Compatibility Layer | Monster `MULTIPLY` flag is documented in the monster compendium | No dedicated breeding/reproduction definition catalog | Confirm reproduction timing, limits, and species behavior | High: world processing and monster lifecycle semantics |
 | Uniques | Yes | Partially Defined | Unique/boss flags and named monsters are present in `monster_compendium.json` | No dedicated unique progression/respawn policy catalog | Confirm unique allocation, death persistence, respawn, and multiplayer rules | High: unique lifecycle is world-state policy |
 | Terrain | Research only | Missing | World Compendium documents MAngband wilderness biome and terrain generation | No terrain/biome definition catalog identified | High: seeded biome composition, wilderness coordinates, and terrain bleeding | High: terrain data feeds generation, movement, LOS, and effects |
 | Dungeon features | Research only | Missing | World Compendium documents rooms, tunnels, vaults, streamers, rubble, and level ratings | No dungeon-feature/template definition catalog identified | High: room templates, vault sources, feature probabilities, and depth gates | High: generated world state and object/trap placement |
-| Traps | Research only | Missing | [Trap Architecture Research](TRAP_ARCHITECTURE_RESEARCH.md) and effect inventory document floor/chest trap semantics | No floor-trap or chest-trap definition catalog identified | High: trap types, discovery, trigger, disarm, and payload mapping | Very high: trigger and chest lifecycle are policy concerns |
+| Traps | Research only | Missing | [Trap Architecture Research](../archive/research/TRAP_ARCHITECTURE_RESEARCH.md) and effect inventory document floor/chest trap semantics | No floor-trap or chest-trap definition catalog identified | High: trap types, discovery, trigger, disarm, and payload mapping | Very high: trigger and chest lifecycle are policy concerns |
 | Doors | Partial prose | Unresolved | World Compendium and trap research mention doors, secret doors, locked doors, and bashing | No dedicated door-state/door-generation definition catalog identified | Confirm locked/secret/closed/open/bashed state semantics | High: movement, monsters, traps, and terrain mutation interact |
 | Stairs | Partial prose | Unresolved | World Compendium documents up/down stair placement and depth transitions; `RecallOrLevelShift` action exists | No stair/transition definition catalog identified | Confirm stair placement, quest stairs, and recall interaction | High: level transitions and player placement are world policy |
 | Stores | Yes | Partially Defined | `shops/shop_owners.json`, `shop_rules.json`, and `shop_race_price_adjustments.json`; World Compendium store sections | No complete store inventory-choice catalog identified | Confirm stock tables, restock cadence, pricing, homes, and black market | High: economy, charisma, restocking, and multiplayer ownership |
@@ -215,7 +215,7 @@ large portions of exploration and are currently prose-only.
 Document monster spell frequency, smart flags, breath variants, drop flags,
 breeding, unique markers, and summon families as explicit policy inputs. Keep
 monster AI decisions separate from reusable action payloads, as required by
-[Gameplay Architecture V2](GAMEPLAY_ARCHITECTURE_V2.md).
+[Gameplay Architecture V2](../architecture/GAMEPLAY_ARCHITECTURE_V2.md).
 
 ### 3. Complete progression data as a source-shaped catalog
 
@@ -282,21 +282,21 @@ runtime change is implied by that sign-off.
 
 Primary repository evidence used for this audit:
 
-- [Gameplay Architecture V2](GAMEPLAY_ARCHITECTURE_V2.md)
-- [Character Creation Specification](CHARACTER_CREATION_SPECIFICATION.md)
-- [Repository Integrity Audit](REPOSITORY_INTEGRITY_AUDIT.md)
-- [Capability and Progression Audit](CAPABILITY_AND_PROGRESSION_AUDIT.md)
-- [Character Compendium](../compendia/CHARACTER_COMPENDIUM.md)
-- [Magic Compendium](../compendia/MAGIC_COMPENDIUM.md)
-- [Monsters Compendium](../compendia/MONSTERS_COMPENDIUM.md)
-- [Systems Compendium](../compendia/SYSTEMS_COMPENDIUM.md)
-- [World Compendium](../compendia/WORLD_COMPENDIUM.md)
-- [Multiplayer Compendium](../compendia/MULTIPLAYER_COMPENDIUM.md)
-- [MAngband Effect Inventory](MANGBAND_EFFECT_INVENTORY.md)
-- [Monster Action Projection](MONSTER_ACTION_PROJECTION.md)
-- [Trap Architecture Research](TRAP_ARCHITECTURE_RESEARCH.md)
-- [Device Semantics Analysis](DEVICE_SEMANTICS_ANALYSIS.md)
-- [Shared Effect Matrix](SHARED_EFFECT_MATRIX.md)
+- [Gameplay Architecture V2](../architecture/GAMEPLAY_ARCHITECTURE_V2.md)
+- [Character Creation Specification](../implementation/CHARACTER_CREATION_SPECIFICATION.md)
+- [Repository Integrity Audit](../archive/audits/REPOSITORY_INTEGRITY_AUDIT.md)
+- [Capability and Progression Audit](../archive/audits/CAPABILITY_AND_PROGRESSION_AUDIT.md)
+- [Character Compendium](../../compendia/CHARACTER_COMPENDIUM.md)
+- [Magic Compendium](../../compendia/MAGIC_COMPENDIUM.md)
+- [Monsters Compendium](../../compendia/MONSTERS_COMPENDIUM.md)
+- [Systems Compendium](../../compendia/SYSTEMS_COMPENDIUM.md)
+- [World Compendium](../../compendia/WORLD_COMPENDIUM.md)
+- [Multiplayer Compendium](../../compendia/MULTIPLAYER_COMPENDIUM.md)
+- [MAngband Effect Inventory](../archive/research/MANGBAND_EFFECT_INVENTORY.md)
+- [Monster Action Projection](../archive/research/MONSTER_ACTION_PROJECTION.md)
+- [Trap Architecture Research](../archive/research/TRAP_ARCHITECTURE_RESEARCH.md)
+- [Device Semantics Analysis](../archive/research/DEVICE_SEMANTICS_ANALYSIS.md)
+- [Shared Effect Matrix](../archive/research/SHARED_EFFECT_MATRIX.md)
 
 The MAngband source authority is the 1.5.3 reference tree cited by those
 documents, especially `birth.c`, `xtra1.c`, `xtra2.c`, `tables.c`,

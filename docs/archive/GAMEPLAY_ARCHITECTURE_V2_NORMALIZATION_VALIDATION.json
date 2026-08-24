@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "capabilities": 49,
+    "resistances": 30,
+    "statuses": 26,
+    "affixes": 20
+  },
+  "duplicateCheck": {
+    "cap_vs_res": [
+      "res_blind",
+      "res_dark",
+      "res_lite",
+      "res_pois",
+      "ignore_acid",
+      "ignore_cold",
+      "ignore_elec",
+      "ignore_fire",
+      "res_acid",
+      "res_cold",
+      "res_confu",
+      "res_disen",
+      "res_elec",
+      "res_fear",
+      "res_fire",
+      "res_nexus"
+    ],
+    "aff_alias_dupes": []
+  },
+  "brokenCount": 0,
+  "broken": []
+}

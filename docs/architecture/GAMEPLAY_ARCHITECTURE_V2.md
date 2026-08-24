@@ -40,14 +40,12 @@ If a future schema or content proposal conflicts with this model, this document 
 
 This design is derived from the completed research set:
 
-- [docs/CANONICAL_GAMEPLAY_MODEL_RESEARCH.md](docs/CANONICAL_GAMEPLAY_MODEL_RESEARCH.md)
-- [docs/CAPABILITY_SCOPE_MATRIX.md](docs/CAPABILITY_SCOPE_MATRIX.md)
-- [docs/RESISTANCE_MODEL_ANALYSIS.md](docs/RESISTANCE_MODEL_ANALYSIS.md)
-- [docs/MONSTER_ACTION_PROJECTION.md](docs/MONSTER_ACTION_PROJECTION.md)
-- [docs/DEVICE_SEMANTICS_ANALYSIS.md](docs/DEVICE_SEMANTICS_ANALYSIS.md)
-- [docs/TRAP_ARCHITECTURE_RESEARCH.md](docs/TRAP_ARCHITECTURE_RESEARCH.md)
-- [docs/ACTION_CANDIDATE_CATALOG.md](docs/ACTION_CANDIDATE_CATALOG.md)
-- [docs/FINAL_ARCHITECTURE_READINESS_REPORT.md](docs/FINAL_ARCHITECTURE_READINESS_REPORT.md)
+- [Canonical Gameplay Model Research](../archive/research/CANONICAL_GAMEPLAY_MODEL_RESEARCH.md)
+- [Capability Scope Matrix](../archive/research/CAPABILITY_SCOPE_MATRIX.md)
+- [Resistance Model Analysis](../archive/research/RESISTANCE_MODEL_ANALYSIS.md)
+- [Monster Action Projection](../archive/research/MONSTER_ACTION_PROJECTION.md)
+- [Device Semantics Analysis](../archive/research/DEVICE_SEMANTICS_ANALYSIS.md)
+- [Trap Architecture Research](../archive/research/TRAP_ARCHITECTURE_RESEARCH.md)
 
 These documents are authoritative evidence. This document is the authoritative design conclusion drawn from them.
 
