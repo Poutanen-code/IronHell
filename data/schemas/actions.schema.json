@@ -60,7 +60,9 @@
         "RemoveCurse",
         "ModifyResourceMeter",
         "TransformEntity",
-        "RandomActionSelection"
+        "RandomActionSelection",
+        "ApplyStatus",
+        "BreathDamage"
       ]
     },
     "ActionCategory": {

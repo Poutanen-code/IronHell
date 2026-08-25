@@ -474,7 +474,7 @@
         "no_stun": { "type": "boolean" },
         "no_conf": { "type": "boolean" },
         "no_sleep": { "type": "boolean" },
-        "sleep_rating": { "type": "integer", "minimum": 0 }
+        "alertness": { "type": "integer", "minimum": 0 }
       }
     }
   }

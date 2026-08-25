@@ -1,30 +1,30 @@
 {
   "_meta": {
-    "source": "MAngband 1.5.3 lib/edit/monster.txt",
-    "generated_from": "reference-mangband-1_5_3/lib/edit/monster.txt",
-    "description": "MAngband-derived monster dataset used by IronHell. Includes reference-identifying fields (serial, symbol, color, hp_dice, flags, blows, spells) plus wired IronHell runtime fields (id, type, dungeon_levels, ai_behavior, sprite, abilities, can_dig).",
+    "source": "IronHell 1.5.3 lib/edit/monster.txt",
+    "generated_from": "reference-mIronHell-1_5_3/lib/edit/monster.txt",
+    "description": "IronHell-derived monster dataset used by IronHell. Includes reference-identifying fields (serial, symbol, color, hp_dice, flags, blows, spells) plus wired IronHell runtime fields (id, type, dungeon_levels, ai_behavior, sprite, abilities, can_dig).",
     "schema_path": "data/schemas/monster_compendium.schema.json",
     "field_reference": {
       "reference_fields": {
-        "serial": "MAngband N: serial number",
-        "symbol": "MAngband G: display glyph",
-        "color": "MAngband G: display color code",
+        "serial": "IronHell N: serial number",
+        "symbol": "IronHell G: display glyph",
+        "color": "IronHell G: display color code",
         "stats": {
           "level": "Monster level",
           "hp": "Current runtime HP baseline used by IronHell",
-          "hp_dice": "Original MAngband HP dice formula from I: line (XdY)",
+          "hp_dice": "Original IronHell HP dice formula from I: line (XdY)",
           "armor": "Armor class (I: AC)",
           "attack_speed": "IronHell combat cadence scalar (derived runtime field)",
-          "movement_speed": "MAngband movement speed baseline (I: speed, 100 = normal)",
-          "vision": "MAngband awareness/vision value (W: vision)",
-          "xp_reward": "MAngband experience reward (W: exp)",
-          "rarity": "MAngband rarity value (W: rarity)"
+          "movement_speed": "IronHell movement speed baseline (I: speed, 100 = normal)",
+          "vision": "IronHell awareness/vision value (W: vision)",
+          "xp_reward": "IronHell experience reward (W: exp)",
+          "rarity": "IronHell rarity value (W: rarity)"
         },
-        "flags": "MAngband RF1/RF2/RF3 booleans plus sleep_rating where present",
-        "blows": "MAngband B: melee attack tuples (method, effect, dice_count, dice_sides)",
-        "spells": "MAngband S: spells normalized to type/range/cooldown_ticks",
-        "spell_frequency": "MAngband S: frequency divisor (lower = more frequent)",
-        "description": "MAngband D: description text"
+        "flags": "IronHell RF1/RF2/RF3 booleans plus alertness where present",
+        "blows": "IronHell B: melee attack tuples (method, effect, dice_count, dice_sides)",
+        "spells": "IronHell S: spells normalized to type/range/cooldown_ticks",
+        "spell_frequency": "IronHell S: frequency divisor (lower = more frequent)",
+        "description": "IronHell D: description text"
       },
       "ironhell_wired_fields": {
         "id": "Stable runtime key used in code",
@@ -63,12 +63,12 @@
         "attack_speed is an engine-specific scalar and may not map 1:1 to other combat loops."
       ],
       "recommended_consumption": [
-        "Treat serial as canonical cross-reference key to MAngband sources.",
-        "Use hp_dice when reproducing strict MAngband HP generation; use hp for existing IronHell runtime balance.",
+        "Treat serial as canonical cross-reference key to IronHell sources.",
+        "Use hp_dice when reproducing strict IronHell HP generation; use hp for existing IronHell runtime balance.",
         "If building a neutral dataset, split into reference core + engine extension layer."
       ],
       "future_migration_notes": [
-        "Future AI integrations should treat stats.hp_dice as the canonical HP source for MAngband-faithful behavior.",
+        "Future AI integrations should treat stats.hp_dice as the canonical HP source for IronHell-faithful behavior.",
         "stats.hp should be considered a compatibility baseline for existing IronHell runtime behavior until hp_dice-driven spawning is adopted."
       ]
     }
@@ -114,7 +114,7 @@
         "friends": true,
         "take_item": true,
         "open_door": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A grubby child that begs passersby and sometimes snatches a coin.",
       "sprite": "humanoid.png",
@@ -153,7 +153,7 @@
       "flags": {
         "rand25": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A mangy, half-starved cat prowling the village for scraps.",
       "sprite": "cat.png",
@@ -192,7 +192,7 @@
       "flags": {
         "rand25": true,
         "animal": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "description": "A scruffy mongrel that barks and occasionally bites.",
       "sprite": "dog.png",
@@ -245,7 +245,7 @@
         "bash_door": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 3
+        "alertness": 3
       },
       "description": "He's lost his dogs. He's had his mushrooms stolen. He's not a happy hobbit!",
       "sprite": "farmer_maggot.png",
@@ -405,7 +405,7 @@
         "rand25": true,
         "take_item": true,
         "open_door": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A hollow-eyed figure that shuffles around asking for alms.",
       "sprite": "humanoid.png",
@@ -446,7 +446,7 @@
         "rand25": true,
         "take_item": true,
         "open_door": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "You feel it isn't safe to touch him.",
       "sprite": "humanoid.png",
@@ -501,7 +501,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "A shady character who leers at passers-by and has quick fingers.",
       "sprite": "humanoid.png",
@@ -588,7 +588,7 @@
         "take_item": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "description": "A distracted trader who mumbles about lost shipments and bad prices.",
       "sprite": "merchant.png",
@@ -633,7 +633,7 @@
         "wanderer": true,
         "no_sleep": true,
         "evil": true,
-        "sleep_rating": 250
+        "alertness": 250
       },
       "description": "A scarred sell-sword looking for trouble or coin or probably both.",
       "sprite": "mercenary.png",
@@ -677,7 +677,7 @@
         "bash_door": true,
         "wanderer": true,
         "no_sleep": true,
-        "sleep_rating": 250
+        "alertness": 250
       },
       "description": "A grim old soldier nursing old wounds and older grudges.",
       "sprite": "humanoid.png",
@@ -814,7 +814,7 @@
       "flags": {
         "weird_mind": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -861,7 +861,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -901,7 +901,7 @@
         "rand50": true,
         "rand25": true,
         "empty_mind": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a smallish, slimy, icky creature.",
       "sprite": "icky_thing.png",
@@ -942,7 +942,7 @@
         "rand25": true,
         "invisible": true,
         "empty_mind": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a smallish, slimy, icky, blobby creature.",
       "sprite": "icky_thing.png",
@@ -982,7 +982,7 @@
         "rand50": true,
         "multiply": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "An oversized vermin from the cellar depths.",
       "sprite": "giant_white_mouse.png",
@@ -1028,7 +1028,7 @@
         "rand25": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
@@ -1074,7 +1074,7 @@
         "rand50": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
@@ -1116,7 +1116,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a squat and ugly humanoid figure with a canine face.",
       "sprite": "small_kobold.png",
@@ -1146,10 +1146,17 @@
       "ai_behavior": "aggressive_melee",
       "blows": [
         {
-          "method": "HIT",
-          "effect": "HURT",
-          "dice_count": 1,
-          "dice_sides": 8
+          "method": "CRAWL",
+          "effects": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": { "kind": "dice", "count": 8, "sides": 8 },
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -1158,7 +1165,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A small, dog-headed humanoid that lurks in shallow tunnels.",
       "sprite": "kobold.png",
@@ -1204,7 +1211,7 @@
         "immune_pois": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
@@ -1244,7 +1251,7 @@
         "never_move": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A disembodied eye, floating a few feet above the ground.",
       "sprite": "floating_eye.png",
@@ -1282,7 +1289,7 @@
       ],
       "flags": {
         "animal": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "description": "It is a small lizard with a hardened hide.",
       "sprite": "reptile.png",
@@ -1321,7 +1328,7 @@
       "flags": {
         "friends": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a yapping snarling dog, dangerous when in a pack.",
       "sprite": "canine.png",
@@ -1361,7 +1368,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A large ant with powerful mandibles.",
       "sprite": "giant_ant.png",
@@ -1399,7 +1406,7 @@
       ],
       "flags": {
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A fast-moving pest.",
       "sprite": "bat.png",
@@ -1493,7 +1500,7 @@
         "take_item": true,
         "kill_body": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a smallish, slimy, icky, hungry creature.",
       "sprite": "icky_thing.png",
@@ -1534,7 +1541,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -1670,7 +1677,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -1730,7 +1737,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -1836,7 +1843,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "Its a large pile of white flesh.",
       "sprite": "jelly.png",
@@ -1876,7 +1883,7 @@
         "rand25": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is as big as a wolf.",
       "sprite": "reptile.png",
@@ -1917,7 +1924,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It is about three feet long.",
       "sprite": "giant_ant.png",
@@ -1957,7 +1964,7 @@
         "rand25": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "A small black and orange lizard.",
       "sprite": "reptile.png",
@@ -2010,7 +2017,7 @@
         "rand50": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A flying, screeching bird with a woman's face.",
       "sprite": "hybrid.png",
@@ -2052,7 +2059,7 @@
         "bash_door": true,
         "animal": true,
         "immune_acid": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A small humanoid figure.",
       "sprite": "yeek.png",
@@ -2184,7 +2191,7 @@
         "immune_acid": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
@@ -2230,7 +2237,7 @@
         "rand25": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 75
+        "alertness": 75
       },
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
@@ -2271,7 +2278,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "Hangs from cracks and strikes when footsteps pass beneath.",
       "sprite": "cave_spider.png",
@@ -2365,7 +2372,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "description": "Usually known as Gollum. He's been sneaking, and he wants his 'precious.'",
       "sprite": "smeagol.png",
@@ -2412,7 +2419,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It's green and it's oozing.",
       "sprite": "jelly.png",
@@ -2464,7 +2471,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -2513,7 +2520,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -2555,7 +2562,7 @@
         "multiply": true,
         "weird_mind": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is six inches long.",
       "sprite": "lizard.png",
@@ -2597,7 +2604,7 @@
         "drop_60": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 120
+        "alertness": 120
       },
       "description": "A large black serpent's body with a female torso.",
       "sprite": "naga.png",
@@ -2691,7 +2698,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "spells": [
         {
@@ -2744,7 +2751,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "spells": [
         {
@@ -2801,7 +2808,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A short little guy, in bedraggled clothes. He appears to be looking for a good tavern.",
       "sprite": "humanoid.png",
@@ -2841,7 +2848,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It is about two feet long and has sharp pincers.",
       "sprite": "giant_ant.png",
@@ -2885,7 +2892,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is a strange yellow growth on the dungeon floor.",
       "sprite": "mold.png",
@@ -2926,7 +2933,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -2971,7 +2978,7 @@
         "animal": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
@@ -3018,7 +3025,7 @@
         "immune_pois": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a disgusting mass of poisonous worms.",
       "sprite": "worm.png",
@@ -3058,7 +3065,7 @@
         "never_move": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -3104,7 +3111,7 @@
       ],
       "flags": {
         "animal": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It is an armored lizard with a powerful bite.",
       "sprite": "reptile.png",
@@ -3152,7 +3159,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -3213,7 +3220,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -3272,7 +3279,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It's a large pile of pulsing blue flesh.",
       "sprite": "jelly.png",
@@ -3323,7 +3330,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It appears to be a pile of copper coins.",
       "sprite": "coins.png",
@@ -3363,7 +3370,7 @@
         "rand25": true,
         "multiply": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a very vicious rodent.",
       "sprite": "rat.png",
@@ -3410,7 +3417,7 @@
         "immune_cold": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
@@ -3456,7 +3463,7 @@
         "rand25": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
@@ -3507,7 +3514,7 @@
         "drop_good": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "He is a sturdy hobbit who is renowned for his unusual strength and vigour. He can prove a troublesome opponent.",
       "sprite": "humanoid.png",
@@ -3550,7 +3557,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -3623,7 +3630,7 @@
         "bash_door": true,
         "evil": true,
         "immune_acid": true,
-        "sleep_rating": 120
+        "alertness": 120
       },
       "description": "A large green serpent with a female's torso. Her green skin glistens with acid.",
       "sprite": "naga.png",
@@ -3669,7 +3676,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It's blue and it's oozing.",
       "sprite": "jelly.png",
@@ -3717,7 +3724,7 @@
         "undead": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a very ugly green ghost with a voracious appetite.",
       "sprite": "ghost.png",
@@ -3762,7 +3769,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is a large pile of pulsing green flesh.",
       "sprite": "jelly.png",
@@ -3804,7 +3811,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It a man-sized figure with the all too recognizable face of a kobold.",
       "sprite": "kobold.png",
@@ -3852,7 +3859,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "It is a small animated kobold skeleton.",
       "sprite": "skeleton.png",
@@ -3891,7 +3898,7 @@
       "flags": {
         "rand50": true,
         "empty_mind": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "description": "It is a smallish, slimy, icky, nasty creature.",
       "sprite": "icky_thing.png",
@@ -3931,7 +3938,7 @@
         "never_move": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -3986,7 +3993,7 @@
         "immune_fire": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
@@ -4027,7 +4034,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "It has a copper head and sharp venomous fangs.",
       "sprite": "snake.png",
@@ -4124,7 +4131,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -4190,7 +4197,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "description": "He looks inexperienced but tough.",
       "sprite": "novice_warrior.png",
@@ -4242,7 +4249,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "serial": 91,
       "symbol": "p",
@@ -4284,7 +4291,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "A strange brown growth on the dungeon floor.",
       "sprite": "mold.png",
@@ -4323,7 +4330,7 @@
       "flags": {
         "rand50": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It screeches as it attacks.",
       "sprite": "bat.png",
@@ -4367,7 +4374,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -4425,7 +4432,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It appears to be a pile of silver coins.",
       "sprite": "coins.png",
@@ -4470,7 +4477,7 @@
         "evil": true,
         "orc": true,
         "hurt_light": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A weak orc footman, dangerous in numbers.",
       "sprite": "snaga_orc.png",
@@ -4511,7 +4518,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "It is recognized by the hard-scaled end of its body that is often rattled to frighten its prey.",
       "sprite": "snake.png",
@@ -4556,7 +4563,7 @@
         "evil": true,
         "orc": true,
         "hurt_light": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "He is often found in huge numbers in deep caves.",
       "sprite": "cave_orc.png",
@@ -4604,7 +4611,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It scuttles towards you.",
       "sprite": "snake.png",
@@ -4648,7 +4655,7 @@
         "demon": true,
         "immune_fire": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a minor but aggressive demon.",
       "sprite": "demon.png",
@@ -4688,7 +4695,7 @@
         "never_move": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -4745,7 +4752,7 @@
         "take_item": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 120
+        "alertness": 120
       },
       "description": "A large red snake with a woman's torso.",
       "sprite": "naga.png",
@@ -4789,7 +4796,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is a large pulsating mound of red flesh.",
       "sprite": "jelly.png",
@@ -4829,7 +4836,7 @@
         "rand50": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "It looks poisonous.",
       "sprite": "reptile.png",
@@ -4869,7 +4876,7 @@
         "rand50": true,
         "empty_mind": true,
         "immune_acid": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a smallish, slimy, icky, acidic creature.",
       "sprite": "icky_thing.png",
@@ -4923,7 +4930,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is an animated kobold corpse. Flesh falls off in large chunks as it shambles forward.",
       "sprite": "zombie.png",
@@ -4978,7 +4985,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -5041,7 +5048,7 @@
         "bash_door": true,
         "evil": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A lithe figure of dark elven blood, resting in the shadows.",
       "sprite": "dark_elf.png",
@@ -5098,7 +5105,7 @@
       ],
       "flags": {
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a black lizard with overlapping scales and a powerful jaw.",
       "sprite": "reptile.png",
@@ -5159,7 +5166,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "Strong and powerful, for a kobold.",
       "sprite": "kobold.png",
@@ -5226,7 +5233,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -5320,7 +5327,7 @@
         "bash_door": true,
         "evil": true,
         "orc": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A captain of a regiment of weaker orcs, Lagduf keeps his troop in order with displays of excessive violence.",
       "sprite": "orc.png",
@@ -5362,7 +5369,7 @@
         "bash_door": true,
         "animal": true,
         "immune_acid": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a strange small humanoid.",
       "sprite": "yeek.png",
@@ -5411,7 +5418,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -5465,7 +5472,7 @@
         "rand25": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "spells": [
         {
@@ -5518,7 +5525,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 75
+        "alertness": 75
       },
       "description": "It is a strange growth on the dungeon floor.",
       "sprite": "mold.png",
@@ -5567,7 +5574,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "It is an animated orc skeleton.",
       "sprite": "skeleton.png",
@@ -5616,7 +5623,7 @@
         "drop_60": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -5673,7 +5680,7 @@
         "demon": true,
         "immune_fire": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is the larval form of a major demon.",
       "sprite": "demon.png",
@@ -5717,7 +5724,7 @@
         "bash_door": true,
         "evil": true,
         "orc": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A brutish orc from the hills, charging with crude iron weapons.",
       "sprite": "hill_orc.png",
@@ -5766,7 +5773,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "He is after your cash!",
       "sprite": "humanoid.png",
@@ -5819,7 +5826,7 @@
         "bash_door": true,
         "animal": true,
         "immune_cold": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A large white figure covered in shaggy fur.",
       "sprite": "hydra.png",
@@ -5865,7 +5872,7 @@
         "rand50": true,
         "empty_mind": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -5914,7 +5921,7 @@
         "multiply": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a rodent of unusual size.",
       "sprite": "rat.png",
@@ -5967,7 +5974,7 @@
         "rand25": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A woman's face on the body of a vicious black bird.",
       "sprite": "hybrid.png",
@@ -6018,7 +6025,7 @@
         "evil": true,
         "orc": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -6095,7 +6102,7 @@
         "evil": true,
         "dragon": true,
         "immune_elec": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A tiny but fierce blue dragon sleeping coiled in its small lair.",
       "sprite": "baby_blue_dragon.png",
@@ -6162,7 +6169,7 @@
         "evil": true,
         "dragon": true,
         "immune_cold": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A small white dragon curled asleep on a pile of frozen bones.",
       "sprite": "baby_white_dragon.png",
@@ -6229,7 +6236,7 @@
         "evil": true,
         "dragon": true,
         "immune_pois": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A small green dragon sleeping amid the reek of its own poison breath.",
       "sprite": "baby_green_dragon.png",
@@ -6296,7 +6303,7 @@
         "evil": true,
         "dragon": true,
         "immune_acid": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A small black dragon sleeping in a pool of corrosive slime.",
       "sprite": "baby_black_dragon.png",
@@ -6363,7 +6370,7 @@
         "evil": true,
         "dragon": true,
         "immune_fire": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A small red dragon sleeping on its first hoard, crackling with heat.",
       "sprite": "baby_red_dragon.png",
@@ -6417,7 +6424,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "description": "It is large and has venomous mandibles.",
       "sprite": "giant_ant.png",
@@ -6480,7 +6487,7 @@
         "drop_good": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A nasty piece of work, Brodda picks on defenseless women and children.",
       "sprite": "humanoid.png",
@@ -6527,7 +6534,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "It is a large snake with a hooded face.",
       "sprite": "snake.png",
@@ -6586,7 +6593,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "It is a vast black spider whose bulbous body is bloated with poison.",
       "sprite": "snake.png",
@@ -6638,7 +6645,7 @@
         "evil": true,
         "immune_pois": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -6736,7 +6743,7 @@
         "animal": true,
         "evil": true,
         "immune_acid": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -6818,7 +6825,7 @@
         "bash_door": true,
         "evil": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A skilled dark elven swordsman, battle-trained in the pits below.",
       "sprite": "dark_elven_warrior.png",
@@ -6930,7 +6937,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "He is a cunning and devious orc with a chaotic nature.",
       "sprite": "orc.png",
@@ -6971,7 +6978,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
@@ -7015,7 +7022,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "It is a strange hairy growth on the dungeon floor.",
       "sprite": "mold.png",
@@ -7059,7 +7066,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -7122,7 +7129,7 @@
         "bash_door": true,
         "evil": true,
         "dragon": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -7188,7 +7195,7 @@
         "demon": true,
         "immune_fire": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -7254,7 +7261,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It appears to be a pile of gold coins, until it starts crawling towards you on tiny legs.",
       "sprite": "coins.png",
@@ -7295,7 +7302,7 @@
         "friends": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It howls and snaps at you.",
       "sprite": "canine.png",
@@ -7337,7 +7344,7 @@
         "multiply": true,
         "weird_mind": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A fast-breeding, annoying pest.",
       "sprite": "insect.png",
@@ -7430,7 +7437,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "He is eyeing your backpack.",
       "sprite": "humanoid.png",
@@ -7493,7 +7500,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -7566,7 +7573,7 @@
       "flags": {
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A strange hybrid of eagle and horse. It looks weird.",
       "sprite": "hybrid.png",
@@ -7627,7 +7634,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 25
+        "alertness": 25
       },
       "description": "It is a shambling orcish corpse leaving behind a trail of flesh.",
       "sprite": "zombie.png",
@@ -7670,7 +7677,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -7734,7 +7741,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "It has glistening black skin, a sleek body and highly venomous fangs.",
       "sprite": "snake.png",
@@ -7782,7 +7789,7 @@
         "bash_door": true,
         "animal": true,
         "immune_cold": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A large and muscled wolf from the northern wastes. Its breath is cold and icy and its fur coated in frost.",
       "sprite": "canine.png",
@@ -7827,7 +7834,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "spells": [
         {
@@ -7881,7 +7888,7 @@
         "animal": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 3
+        "alertness": 3
       },
       "description": "It is a disgusting mass of dark worms, eating each other, the floor, the air, you....",
       "sprite": "worm.png",
@@ -7951,7 +7958,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A leader of a band of raiding orcs, he picks on hobbits.",
       "sprite": "orc.png",
@@ -7995,7 +8002,7 @@
         "animal": true,
         "evil": true,
         "immune_acid": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -8078,7 +8085,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -8153,7 +8160,7 @@
         "bash_door": true,
         "evil": true,
         "hurt_light": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -8229,7 +8236,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A whirlwind of sentient air.",
       "sprite": "elemental.png",
@@ -8277,7 +8284,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is an animated human skeleton.",
       "sprite": "skeleton_human.png",
@@ -8331,7 +8338,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a shambling human corpse dropping chunks of flesh behind it.",
       "sprite": "zombie.png",
@@ -8436,7 +8443,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -8496,7 +8503,7 @@
         "drop_1d2": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A warrior of considerable skill.",
       "sprite": "humanoid.png",
@@ -8548,7 +8555,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a vast armored centipede with massive mandibles and a spiked tail.",
       "sprite": "centipede.png",
@@ -8607,7 +8614,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "A strange jelly thing, covered in discoloured blotches.",
       "sprite": "jelly.png",
@@ -8660,7 +8667,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -8718,7 +8725,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a vicious insect with a tough carapace.",
       "sprite": "beetle.png",
@@ -8783,7 +8790,7 @@
         "animal": true,
         "evil": true,
         "immune_acid": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -8864,7 +8871,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A hideous, smallish giant that is often found near or with orcs.",
       "sprite": "ogre.png",
@@ -8917,7 +8924,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It appears to be a pile of sentient mithril coins that doesn't like being picked up.",
       "sprite": "coins.png",
@@ -8961,7 +8968,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -9054,7 +9061,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -9148,7 +9155,7 @@
         "evil": true,
         "orc": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A large black orc clad in crude armor, swinging iron in both hands.",
       "sprite": "black_orc.png",
@@ -9216,7 +9223,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "A fast moving highly acidic jelly thing, that is eating away the floor it rests on.",
       "sprite": "jelly.png",
@@ -9259,7 +9266,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It makes you itch just to look at it.",
       "sprite": "insect.png",
@@ -9327,7 +9334,7 @@
         "orc": true,
         "immune_cold": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A strong orc guarding the pass of Cirith Ungol. He is mortally afraid of spiders.",
       "sprite": "orc.png",
@@ -9370,7 +9377,7 @@
         "bash_door": true,
         "animal": true,
         "immune_cold": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -9440,7 +9447,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -9506,7 +9513,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -9563,7 +9570,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A shambling humanoid monster with long scars.",
       "sprite": "golem.png",
@@ -9605,7 +9612,7 @@
         "bash_door": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A large wolf with eyes full of cunning, hunting in packs.",
       "sprite": "warg.png",
@@ -9646,7 +9653,7 @@
         "weird_mind": true,
         "multiply": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It makes you itch just to look at it.",
       "sprite": "lizard.png",
@@ -9697,7 +9704,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A strange creature that merges with the dungeon floor, trapping its victims by enveloping them within its perfectly disguised form.",
       "sprite": "humanoid.png",
@@ -9753,7 +9760,7 @@
         "bash_door": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -9826,7 +9833,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A massive orc-like figure with black skin and powerful arms.",
       "sprite": "ogre.png",
@@ -9966,7 +9973,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 120
+        "alertness": 120
       },
       "description": "A giant snake-like figure with a woman's torso.",
       "sprite": "naga.png",
@@ -10136,7 +10143,7 @@
         "bash_door": true,
         "evil": true,
         "orc": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "He is a hideous deformed cross-breed with man and orc, combining man's strength and cunning with orcish evil. The traitorous wizard Saruman is generally believed to be responsible for this abomination.",
       "sprite": "orc.png",
@@ -10189,7 +10196,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "A giant spider with hairy black and red legs.",
       "sprite": "snake.png",
@@ -10236,7 +10243,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
@@ -10291,7 +10298,7 @@
         "animal": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "description": "A strong and powerful spider from Mirkwood forest.",
       "sprite": "mirkwood_spider.png",
@@ -10340,7 +10347,7 @@
         "evil": true,
         "giant": true,
         "immune_cold": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A mountain brute wrapped in rune-inscribed furs.",
       "sprite": "frost_giant.png",
@@ -10393,7 +10400,7 @@
       "flags": {
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is half lion, half eagle. It flies menacingly towards you.",
       "sprite": "hybrid.png",
@@ -10442,7 +10449,7 @@
         "demon": true,
         "immune_fire": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a small demonic spirit full of malevolence.",
       "sprite": "demon.png",
@@ -10486,7 +10493,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -10615,7 +10622,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a massive animated statue made out of hardened clay.",
       "sprite": "golem.png",
@@ -10680,7 +10687,7 @@
         "hurt_rock": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "This bizarre creature has glaring eyes and large mandibles capable of slicing through rock.",
       "sprite": "xorn.png",
@@ -10737,7 +10744,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A drilled warleader carrying brutal steel.",
       "sprite": "orc_captain.png",
@@ -10811,7 +10818,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "It is a strange, vast gelatinous structure that assumes cubic proportions as it lines all four walls of the corridors it patrols. Through its transparent jelly structure you can see treasures it has engulfed, and a few corpses as well.",
       "sprite": "jelly.png",
@@ -10855,7 +10862,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -10912,7 +10919,7 @@
         "evil": true,
         "giant": true,
         "immune_fire": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -10962,7 +10969,7 @@
         "multiply": true,
         "weird_mind": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A giant buzzing wasp, its stinger drips venom.",
       "sprite": "insect.png",
@@ -11027,7 +11034,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
@@ -11086,7 +11093,7 @@
         "evil": true,
         "demon": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -11178,7 +11185,7 @@
         "evil": true,
         "demon": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -11274,7 +11281,7 @@
         "troll": true,
         "hurt_light": true,
         "regenerate": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A large forest troll that hunts among the roots of ancient trees.",
       "sprite": "forest_troll.png",
@@ -11343,7 +11350,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 25
+        "alertness": 25
       },
       "spells": [
         {
@@ -11421,7 +11428,7 @@
         "bash_door": true,
         "move_body": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -11481,7 +11488,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A whirlpool of sentient liquid.",
       "sprite": "elemental.png",
@@ -11527,7 +11534,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is fast and poisonous.",
       "sprite": "snake.png",
@@ -11582,7 +11589,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A whirling form of sentient rock.",
       "sprite": "elemental.png",
@@ -11633,7 +11640,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A whirlwind of sentient flame.",
       "sprite": "elemental.png",
@@ -11940,7 +11947,7 @@
         "friends": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -12005,7 +12012,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A proud Uruk-hai, bred for war and wearing heavy black armor.",
       "sprite": "uruk.png",
@@ -12080,7 +12087,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "He is an orc of power and great cunning, leader of the garrison at Cirith Ungol.",
       "sprite": "orc.png",
@@ -12147,7 +12154,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "He is an orc of power and great cunning, leader of the garrison at Minas Morgul.",
       "sprite": "orc.png",
@@ -12200,7 +12207,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -12257,7 +12264,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A towering giant whose skin has hardened to near-stone.",
       "sprite": "stone_giant.png",
@@ -12302,7 +12309,7 @@
         "bash_door": true,
         "animal": true,
         "immune_acid": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -12367,7 +12374,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "serial": 232,
       "symbol": "g",
@@ -12410,7 +12417,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "It is a strange red growth on the dungeon floor; it seems to burn with flame.",
       "sprite": "mold.png",
@@ -12454,7 +12461,7 @@
         "bash_door": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -12529,7 +12536,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A large and powerful orc, he looks just like his father. He is tall and fast, but fortunately blessed with orcish brains.",
       "sprite": "orc.png",
@@ -12583,7 +12590,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -12653,7 +12660,7 @@
         "bash_door": true,
         "move_body": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -12969,7 +12976,7 @@
         "force_sleep": true,
         "bash_door": true,
         "immune_fire": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -13080,7 +13087,7 @@
         "bash_door": true,
         "animal": true,
         "immune_cold": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A tall shaggy, furry humanoid, it could call the yeti brother.",
       "sprite": "hydra.png",
@@ -13135,7 +13142,7 @@
         "bash_door": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A man-wolf that moves with unnatural speed, hackles raised.",
       "sprite": "werewolf.png",
@@ -13186,7 +13193,7 @@
         "bash_door": true,
         "evil": true,
         "hurt_light": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A powerful dark elf noble sleeping in a luxurious underground chamber.",
       "sprite": "dark_elven_lord.png",
@@ -13269,7 +13276,7 @@
         "evil": true,
         "giant": true,
         "immune_elec": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -13344,7 +13351,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A large and powerful orc, captain of one of Saruman's orcish regiments.",
       "sprite": "orc.png",
@@ -13415,7 +13422,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A strong and cunning orc warrior, the commander of Saruman's orcish horde.",
       "sprite": "orc.png",
@@ -13457,7 +13464,7 @@
         "bash_door": true,
         "animal": true,
         "immune_elec": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -13827,7 +13834,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 75
+        "alertness": 75
       },
       "description": "It is an orcish figure covered in wrappings.",
       "sprite": "zombie.png",
@@ -13874,7 +13881,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a giant beetle with vicious claws.",
       "sprite": "beetle.png",
@@ -13922,7 +13929,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -13976,7 +13983,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a giant scorpion with a sharp stinger.",
       "sprite": "snake.png",
@@ -14024,7 +14031,7 @@
         "bash_door": true,
         "immune_pois": true,
         "no_fear": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "spells": [
         {
@@ -14081,7 +14088,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A scarred warrior who moves with confidence.",
       "sprite": "humanoid.png",
@@ -14143,7 +14150,7 @@
         "evil": true,
         "orc": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "He is also known as the King of Khazad-dum. His ego is renowned to be bigger than his head.",
       "sprite": "orc.png",
@@ -14198,7 +14205,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A thief of great power and shifty speed.",
       "sprite": "humanoid.png",
@@ -14240,7 +14247,7 @@
         "bash_door": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -14289,7 +14296,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is looking for prey.",
       "sprite": "beetle.png",
@@ -14327,7 +14334,7 @@
         "animal": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -14398,7 +14405,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A wight that haunts the wooded barrows, draining life with a touch.",
       "sprite": "forest_wight.png",
@@ -14479,7 +14486,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -14565,7 +14572,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -14645,7 +14652,7 @@
         "bash_door": true,
         "move_body": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -14709,7 +14716,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "description": "It is a human form encased in mouldy wrappings.",
       "sprite": "zombie.png",
@@ -14763,7 +14770,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A blood-sucking bat that flies at your neck hungrily.",
       "sprite": "bat.png",
@@ -14833,7 +14840,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 25
+        "alertness": 25
       },
       "spells": [
         {
@@ -14916,7 +14923,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 25
+        "alertness": 25
       },
       "spells": [
         {
@@ -14985,7 +14992,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -15053,7 +15060,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -15131,7 +15138,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -15223,7 +15230,7 @@
         "hurt_light": true,
         "hurt_rock": true,
         "regenerate": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "He is a giant troll with scabrous black skin.",
       "sprite": "stone_troll.png",
@@ -15283,7 +15290,7 @@
         "troll": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30,
+        "alertness": 30,
         "hurt_light": true
       },
       "spells": [
@@ -15370,7 +15377,7 @@
         "bash_door": true,
         "animal": true,
         "immune_acid": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A huge wormlike shape dripping acid, twisted by evil sorcery into a foul monster that breeds on death.",
       "sprite": "worm.png",
@@ -15458,7 +15465,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a giant beetle with poisonous mandibles.",
       "sprite": "beetle.png",
@@ -15500,7 +15507,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "It is an ant encased in shaggy grey fur.",
       "sprite": "giant_ant.png",
@@ -15559,7 +15566,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
@@ -15617,7 +15624,7 @@
         "invisible": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a huge black panther, clubbed tentacles sprouting from its shoulders.",
       "sprite": "cat.png",
@@ -15659,7 +15666,7 @@
         "bash_door": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is smoking and burning with great heat.",
       "sprite": "snake.png",
@@ -15708,7 +15715,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A giant orc-like figure with an awesomely muscled frame.",
       "sprite": "ogre.png",
@@ -15769,7 +15776,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A ghostly white form that drains experience from those it touches.",
       "sprite": "white_wraith.png",
@@ -15854,7 +15861,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -15950,7 +15957,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -16020,7 +16027,7 @@
         "bash_door": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a giant beetle wreathed in flames.",
       "sprite": "beetle.png",
@@ -16085,7 +16092,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It appears to be a pile of coins made of precious adamant, slithering toward you on lots of tiny legs.",
       "sprite": "coins.png",
@@ -16141,7 +16148,7 @@
         "evil": true,
         "troll": true,
         "regenerate": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A powerful troll form. Venom drips from its needlelike claws.",
       "sprite": "troll.png",
@@ -16338,7 +16345,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A hideous ogre wrapped in black sorcerous robes who rests between bouts of dark study.",
       "sprite": "ogre_mage.png",
@@ -16427,7 +16434,7 @@
         "evil": true,
         "giant": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "An ogre renowned for acts of surpassing cruelty, Lokkak quickly became the leader of a large band of violent ogres.",
       "sprite": "ogre.png",
@@ -16496,7 +16503,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -16586,7 +16593,7 @@
         "force_sleep": true,
         "bash_door": true,
         "immune_fire": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -16646,7 +16653,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -16720,7 +16727,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 120
+        "alertness": 120
       },
       "spells": [
         {
@@ -16806,7 +16813,7 @@
         "move_body": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -16874,7 +16881,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -16962,7 +16969,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -17021,7 +17028,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -17122,7 +17129,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -17224,7 +17231,7 @@
         "evil": true,
         "demon": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -17334,7 +17341,7 @@
         "animal": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -17407,7 +17414,7 @@
         "troll": true,
         "immune_cold": true,
         "hurt_light": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "He is a white troll with powerfully clawed hands.",
       "sprite": "troll.png",
@@ -17460,7 +17467,7 @@
         "animal": true,
         "immune_acid": true,
         "immune_pois": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A massive worm form many feet in length whose vast maw drips with acid.",
       "sprite": "purple_worm.png",
@@ -17529,7 +17536,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -17617,7 +17624,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A strange ox-like form with a huge head but a thin, weak neck, it looks likes the creation of some deranged alchemist.",
       "sprite": "quylthulg.png",
@@ -17679,7 +17686,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "spells": [
         {
@@ -17789,7 +17796,7 @@
         "evil": true,
         "dragon": true,
         "immune_elec": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -17859,7 +17866,7 @@
         "evil": true,
         "dragon": true,
         "immune_cold": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -17929,7 +17936,7 @@
         "evil": true,
         "dragon": true,
         "immune_pois": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -17999,7 +18006,7 @@
         "evil": true,
         "dragon": true,
         "no_conf": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -18079,7 +18086,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a massive statue of purest mithril. It looks expensive!",
       "sprite": "golem.png",
@@ -18140,7 +18147,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "A dragon-like form wrapped in shadow with glowing red eyes, surrounded by an aura of deathly cold.",
       "sprite": "shadow_drake.png",
@@ -18230,7 +18237,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is a troll skeleton animated by dark dweomers.",
       "sprite": "skeleton.png",
@@ -18289,7 +18296,7 @@
         "force_max_hp": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -18339,7 +18346,7 @@
         "bash_door": true,
         "animal": true,
         "immune_elec": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "description": "It is a giant ant that crackles with energy.",
       "sprite": "giant_ant.png",
@@ -18382,7 +18389,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "An armored form moving with purpose. Powerful on its own, flee when hordes of them march.",
       "sprite": "giant_ant.png",
@@ -18445,7 +18452,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A wight that has risen from a grave, lying still as death until disturbed.",
       "sprite": "grave_wight.png",
@@ -18509,7 +18516,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a beetle with deadly sharp cutting mandibles and a rock-hard carapace.",
       "sprite": "beetle.png",
@@ -18578,7 +18585,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "You do not believe in it, but it believes in you... An invisible undead spirit that drains your very mind.",
       "sprite": "ghost.png",
@@ -18642,7 +18649,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a giant beetle that produces a chilling sound.",
       "sprite": "beetle.png",
@@ -18698,7 +18705,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -18860,7 +18867,7 @@
         "no_sleep": true,
         "immune_pois": true,
         "immune_acid": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -18974,7 +18981,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A humanoid clothed in black who moves with blinding speed.",
       "sprite": "humanoid.png",
@@ -19024,7 +19031,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -19085,7 +19092,7 @@
         "giant": true,
         "immune_cold": true,
         "immune_elec": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -19188,7 +19195,7 @@
         "troll": true,
         "immune_pois": true,
         "hurt_light": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "Huge and dimwitted, but terrifying in close quarters.",
       "sprite": "cave_troll.png",
@@ -19253,7 +19260,7 @@
         "troll": true,
         "immune_pois": true,
         "regenerate": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A huge, ugly, half-human in search of plunder.",
       "sprite": "troll.png",
@@ -19320,7 +19327,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -19400,7 +19407,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "An ancient wight resting in its burial mound, waiting to drain the unwary.",
       "sprite": "barrow_wight.png",
@@ -19492,7 +19499,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is the animated form of a massive two-headed troll.",
       "sprite": "skeleton.png",
@@ -19552,7 +19559,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -19640,7 +19647,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -19729,7 +19736,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -19826,7 +19833,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -19921,7 +19928,7 @@
         "immune_pois": true,
         "hurt_light": true,
         "hurt_rock": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -19996,7 +20003,7 @@
         "immune_pois": true,
         "hurt_light": true,
         "hurt_rock": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -20071,7 +20078,7 @@
         "immune_pois": true,
         "hurt_light": true,
         "hurt_rock": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -20143,7 +20150,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -20230,7 +20237,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -20320,7 +20327,7 @@
         "immune_cold": true,
         "immune_pois": true,
         "hurt_light": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "He is a troll that reeks of brine.",
       "sprite": "troll.png",
@@ -20377,7 +20384,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A roiling mass of living flame given rudimentary will.",
       "sprite": "fire_elemental.png",
@@ -20458,7 +20465,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -20560,7 +20567,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -20630,7 +20637,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is impossible to define its form but its violence is legendary.",
       "sprite": "elemental.png",
@@ -20679,7 +20686,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A hideous centipede covered in slime and with glowing tentacles around its head.",
       "sprite": "centipede.png",
@@ -20741,7 +20748,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -20824,7 +20831,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -20901,7 +20908,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "spells": [
         {
@@ -21023,7 +21030,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A humanoid figure dressed in robes, sleeping in its coffin. Power emanates from its chilling frame.",
       "sprite": "master_vampire.png",
@@ -21117,7 +21124,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "It is a giant grey scorpion. It looks poisonous.",
       "sprite": "snake.png",
@@ -21181,7 +21188,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -21253,7 +21260,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -21318,7 +21325,7 @@
         "animal": true,
         "evil": true,
         "immune_fire": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -21393,7 +21400,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a massive deep brown statue, striding towards you with an all-too-familiar purpose. Your magic surprisingly feels much less powerful now.",
       "sprite": "golem.png",
@@ -21458,7 +21465,7 @@
         "troll": true,
         "immune_pois": true,
         "regenerate": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "It is a massive intelligent troll with needle-sharp fangs.",
       "sprite": "troll.png",
@@ -21520,7 +21527,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A human warrior, moving with lightning speed.",
       "sprite": "humanoid.png",
@@ -21660,7 +21667,7 @@
         "no_fear": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "A disgusting animated blob of destruction. Flee its gruesome hunger!",
       "sprite": "jelly.png",
@@ -21860,7 +21867,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -21946,7 +21953,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -22015,7 +22022,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -22085,7 +22092,7 @@
         "evil": true,
         "dragon": true,
         "immune_acid": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -22198,7 +22205,7 @@
         "bash_door": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A giant ant covered in shaggy fur. Its powerful jaws glow with heat.",
       "sprite": "giant_ant.png",
@@ -22257,7 +22264,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -22337,7 +22344,7 @@
         "hurt_rock": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A huge creature of the element Earth. Able to merge with its element, it has four huge arms protruding from its enormous torso.",
       "sprite": "xorn.png",
@@ -22404,7 +22411,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -22489,7 +22496,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -22560,7 +22567,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A tangible but ghostly form made of grey fog. The air around it feels deathly cold.",
       "sprite": "grey_wraith.png",
@@ -22645,7 +22652,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -22744,7 +22751,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "An enormous construct resembling a titan made from stone. It strides purposefully towards you, swinging its slow fists with earth-shattering power.",
       "sprite": "golem.png",
@@ -22800,7 +22807,7 @@
         "bash_door": true,
         "evil": true,
         "dragon": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -22884,7 +22891,7 @@
         "immune_cold": true,
         "immune_pois": true,
         "regenerate": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -22950,7 +22957,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -23021,7 +23028,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -23091,7 +23098,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -23166,7 +23173,7 @@
         "evil": true,
         "dragon": true,
         "immune_fire": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spell_frequency": 10,
       "spells": [
@@ -23242,7 +23249,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A larger cousin of the lurker, this creature traps unsuspecting victims and paralyzes them, to be slowly digested later.",
       "sprite": "humanoid.png",
@@ -23301,7 +23308,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -23382,7 +23389,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -23447,7 +23454,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -23567,7 +23574,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -23638,7 +23645,7 @@
         "open_door": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -23719,7 +23726,7 @@
         "no_sleep": true,
         "no_fear": true,
         "regenerate": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "It is a massive figure clothed in wrappings. You are wary of its massive fists.",
       "sprite": "zombie.png",
@@ -23789,7 +23796,7 @@
         "animal": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -23946,7 +23953,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -24033,7 +24040,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 1
+        "alertness": 1
       },
       "description": "A lump of rotting black flesh that slurrrrrrrps across the dungeon floor.",
       "sprite": "jelly.png",
@@ -24087,7 +24094,7 @@
         "bash_door": true,
         "animal": true,
         "immune_elec": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a giant beetle, whose carapace shimmers with vibrant energies.",
       "sprite": "beetle.png",
@@ -24260,7 +24267,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -24336,7 +24343,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -24414,7 +24421,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -24496,7 +24503,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -24573,7 +24580,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -24676,7 +24683,7 @@
         "bash_door": true,
         "evil": true,
         "immune_cold": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A humanoid figure in armor of ancient form. From beneath its helmet, eyes glow a baleful red that pierce like lances of fire.",
       "sprite": "death_knight.png",
@@ -24771,7 +24778,7 @@
         "take_item": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -24983,7 +24990,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -25067,7 +25074,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -25152,7 +25159,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -25285,7 +25292,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "Your life force is torn from your body as this powerful unearthly being approaches from its ancient throne room.",
       "sprite": "emperor_wight.png",
@@ -25382,7 +25389,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -25496,7 +25503,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -25579,7 +25586,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A wraith of pure shadow and malice that drains the life force from those it touches.",
       "sprite": "black_wraith.png",
@@ -25664,7 +25671,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -25752,7 +25759,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -25844,7 +25851,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A massive troll, larger and stronger than many men together.",
       "sprite": "troll.png",
@@ -25903,7 +25910,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A massive two-headed troll of huge strength, ettins are stupid but violent. They are also living proof that two heads are not more intelligent than one...",
       "sprite": "troll.png",
@@ -25975,7 +25982,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -26071,7 +26078,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -26181,7 +26188,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -26266,7 +26273,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -26352,7 +26359,7 @@
         "move_body": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -26506,7 +26513,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "An ancient noble of the undead who commands lesser vampires.",
       "sprite": "vampire_lord.png",
@@ -26616,7 +26623,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -26684,7 +26691,7 @@
         "animal": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a strange mass of squirming worms. Magical energy crackles around its disgusting form.",
       "sprite": "worm.png",
@@ -26802,7 +26809,7 @@
         "no_conf": true,
         "no_sleep": true,
         "regenerate": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "description": "A weird ghostly troll-like being from the ethereal plane.",
       "sprite": "ghost.png",
@@ -26868,7 +26875,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "spells": [
         {
@@ -26955,7 +26962,7 @@
         "move_body": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -27033,7 +27040,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -27107,7 +27114,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -27205,7 +27212,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -27337,7 +27344,7 @@
         "hurt_rock": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a tougher relative of the Xorn. Its hide glitters with metal ores.",
       "sprite": "xorn.png",
@@ -27389,7 +27396,7 @@
         "bash_door": true,
         "animal": true,
         "immune_elec": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A vast legendary bird, its iron talons rake the most impenetrable of surfaces and its screech echoes through the many winding dungeon corridors.",
       "sprite": "bird.png",
@@ -27461,7 +27468,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A tall black cloaked Ringwraith, he is a master of horsemanship. He longs to taste your blood.",
       "sprite": "wraith.png",
@@ -27518,7 +27525,7 @@
       "flags": {
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "It is a cross between a human and a bull.",
       "sprite": "hybrid.png",
@@ -27590,7 +27597,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -27698,7 +27705,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -27788,7 +27795,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spell_frequency": 6,
       "spells": [
@@ -27872,7 +27879,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -27958,7 +27965,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -28043,7 +28050,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -28226,7 +28233,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -28341,7 +28348,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -28479,7 +28486,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -28593,7 +28600,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -28679,7 +28686,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -28798,7 +28805,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -28890,7 +28897,7 @@
         "no_conf": true,
         "no_fear": true,
         "no_sleep": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -28983,7 +28990,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -29071,7 +29078,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -29175,7 +29182,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -29266,7 +29273,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -29398,7 +29405,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -29478,7 +29485,7 @@
         "friends": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "description": "A massive elephantine form with eyes twisted by madness.",
       "sprite": "quylthulg.png",
@@ -29546,7 +29553,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -29652,7 +29659,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -29755,7 +29762,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -29876,7 +29883,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -29967,7 +29974,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -30050,7 +30057,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -30146,7 +30153,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -30228,7 +30235,7 @@
         "move_body": true,
         "animal": true,
         "immune_fire": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -30317,7 +30324,7 @@
         "evil": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -30427,7 +30434,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -30539,7 +30546,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -30639,7 +30646,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -30732,7 +30739,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -30852,7 +30859,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -30937,7 +30944,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -31026,7 +31033,7 @@
         "bash_door": true,
         "evil": true,
         "giant": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "spells": [
         {
@@ -31120,7 +31127,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -31280,7 +31287,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -31373,7 +31380,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -31477,7 +31484,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -31565,7 +31572,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -31663,7 +31670,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -32042,7 +32049,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -32134,7 +32141,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -32318,7 +32325,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -32441,7 +32448,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -32546,7 +32553,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -32744,7 +32751,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -32946,7 +32953,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -33031,7 +33038,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -33132,7 +33139,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -33203,7 +33210,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -33555,7 +33562,7 @@
         "no_conf": true,
         "no_sleep": true,
         "regenerate": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -33679,7 +33686,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -33803,7 +33810,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -33954,7 +33961,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -34081,7 +34088,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -34203,7 +34210,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -34320,7 +34327,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -34430,7 +34437,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -34543,7 +34550,7 @@
         "immune_cold": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -34814,7 +34821,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -35013,7 +35020,7 @@
         "drop_90": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -35165,7 +35172,7 @@
         "no_conf": true,
         "no_sleep": true,
         "immune_fire": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "spell_frequency": 4,
       "spells": [
@@ -35274,7 +35281,7 @@
         "no_conf": true,
         "no_sleep": true,
         "immune_cold": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "spells": [
         {
@@ -35384,7 +35391,7 @@
         "no_sleep": true,
         "immune_fire": true,
         "immune_cold": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "spells": [
         {
@@ -35504,7 +35511,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -35622,7 +35629,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 100
+        "alertness": 100
       },
       "spells": [
         {
@@ -35747,7 +35754,7 @@
         "no_conf": true,
         "no_sleep": true,
         "kill_wall": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -36048,7 +36055,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -36189,7 +36196,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -36328,7 +36335,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -36617,7 +36624,7 @@
         "immune_elec": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -36936,7 +36943,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -37083,7 +37090,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -37169,7 +37176,7 @@
         "animal": true,
         "evil": true,
         "immune_fire": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "A blazing hound from the depths of the pit, sleeping in a heat shimmer.",
       "sprite": "hellhound.png",
@@ -37254,7 +37261,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -37378,7 +37385,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -37471,7 +37478,7 @@
         "immune_fire": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -37581,7 +37588,7 @@
         "animal": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 90
+        "alertness": 90
       },
       "spells": [
         {
@@ -37817,7 +37824,7 @@
         "immune_cold": true,
         "immune_acid": true,
         "immune_elec": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -37842,7 +37849,7 @@
         }
       ],
       "spell_frequency": 5,
-      "description": "The wolfhound of the Valar, Huan has served many masters in his time, from Celegorm son of Feanor to Beren son of Barahir: but now he runs wild and acknowledges no master save himself, as he hunts alone for his nemesis - Carcharoth, the terrible wolf of Angband.",
+      "description": "The wolfhound of the Valar, Huan has served many masters in his time, from Celegorm son of Feanor to Beren son of Barahir: but now he runs wild and acknowledges no master save himself, as he hunts alone for his nemesis - Carcharoth, the terrible wolf of IronHell.",
       "sprite": "canine.png",
       "serial": 543,
       "symbol": "C",
@@ -37912,7 +37919,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -37942,7 +37949,7 @@
         }
       ],
       "spell_frequency": 3,
-      "description": "The first guard of Angband, Carcharoth, also known as 'The Red Maw', is the greatest wolf to ever walk the earth. He is highly intelligent and a deadly opponent in combat.",
+      "description": "The first guard of IronHell, Carcharoth, also known as 'The Red Maw', is the greatest wolf to ever walk the earth. He is highly intelligent and a deadly opponent in combat.",
       "sprite": "canine.png",
       "serial": 544,
       "symbol": "C",
@@ -38376,7 +38383,7 @@
         }
       ],
       "spell_frequency": 3,
-      "description": "He is the Master of the Pits of Angband. His figure is like a black mountain crowned with lightning.",
+      "description": "He is the Master of the Pits of IronHell. His figure is like a black mountain crowned with lightning.",
       "sprite": "morgoth_lord_of_darkness.png",
       "serial": 547,
       "symbol": "P",
@@ -38414,7 +38421,7 @@
         "rand50": true,
         "multiply": true,
         "animal": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is about three feet long with large teeth. As the light of your lamp falls on it, it seems to grow stronger.",
       "sprite": "rat.png",
@@ -38465,7 +38472,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 99
+        "alertness": 99
       },
       "description": "It is a large pile of rotting flesh, whose touch spoils your food. The terrible smell it exudes is also very hard to get rid of...",
       "sprite": "jelly.png",
@@ -38517,7 +38524,7 @@
         "force_sleep": true,
         "rand50": true,
         "animal": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A giant bat, the beating of whose wings produces a strangely unnerving noise.",
       "sprite": "bat.png",
@@ -38558,7 +38565,7 @@
         "weird_mind": true,
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "description": "A giant silver ant with a caustic bite.",
       "sprite": "giant_ant.png",
@@ -38605,7 +38612,7 @@
         "bash_door": true,
         "animal": true,
         "immune_pois": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
@@ -38645,7 +38652,7 @@
         "force_sleep": true,
         "rand50": true,
         "animal": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "description": "A giant bat which feeds on raw magical energy.",
       "sprite": "bat.png",
@@ -38696,7 +38703,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "description": "It is a strange growth on the dungeon floor, glowing and crackling with sparks.",
       "sprite": "mold.png",
@@ -38755,7 +38762,7 @@
         "animal": true,
         "evil": true,
         "dragon": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "description": "A fast-moving and deadly draconian animal. Beware its poisonous sting!",
       "sprite": "small_dragon.png",
@@ -38921,7 +38928,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -39071,7 +39078,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -39335,7 +39342,7 @@
         "animal": true,
         "immune_cold": true,
         "immune_pois": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -39405,7 +39412,7 @@
         "bash_door": true,
         "animal": true,
         "rand25": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A large bear appears to have made its home in this cave. It is hungry, and you are trespassing in its territory.",
       "sprite": "quylthulg.png",
@@ -39462,7 +39469,7 @@
       "flags": {
         "bash_door": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "A huge, beastly bear, more savage than most of its kind.",
       "sprite": "quylthulg.png",
@@ -39522,7 +39529,7 @@
         "animal": true,
         "evil": true,
         "drop_1d2": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "In the eyes of this bear, there glimmers the faintest light of intelligence. And then its form begins to change... The combination of animal cunning, human intelligence and the great physical strength of the bear makes for a dangerous enemy.",
       "sprite": "quylthulg.png",
@@ -39589,7 +39596,7 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_good": true,
-        "sleep_rating": 25
+        "alertness": 25
       },
       "description": "Beorn is only occasionally seen in human form these days, preferring to appear in the shape of a giant black bear: he also prefers the company of beasts to that of humans. He has never taken kindly to strangers, even in human form - and still less when in bear's shape, as he is now.",
       "sprite": "quylthulg.png",
@@ -39657,7 +39664,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -39733,7 +39740,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -39840,7 +39847,7 @@
         "immune_pois": true,
         "immune_cold": true,
         "immune_fire": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -39937,7 +39944,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40055,7 +40062,7 @@
         "immune_pois": true,
         "immune_acid": true,
         "immune_elec": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40150,7 +40157,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 75
+        "alertness": 75
       },
       "spells": [
         {
@@ -40265,7 +40272,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40372,7 +40379,7 @@
         "evil": true,
         "dragon": true,
         "no_conf": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -40438,7 +40445,7 @@
         "bash_door": true,
         "evil": true,
         "dragon": true,
-        "sleep_rating": 70
+        "alertness": 70
       },
       "spells": [
         {
@@ -40517,7 +40524,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40610,7 +40617,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40703,7 +40710,7 @@
         "immune_acid": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40795,7 +40802,7 @@
         "dragon": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 80
+        "alertness": 80
       },
       "spells": [
         {
@@ -40866,7 +40873,7 @@
         "take_item": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -40947,7 +40954,7 @@
         "take_item": true,
         "open_door": true,
         "bash_door": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -41038,7 +41045,7 @@
         "immune_elec": true,
         "immune_cold": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -41118,7 +41125,7 @@
         "rarity": 2,
         "hp_dice": "60d25"
       },
-      "ai_behavior": "aggressive_ranged",
+      "ai_behavior": "aggressive_melee",
       "blows": [
         {
           "method": "HIT",
@@ -41150,7 +41157,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -41219,7 +41226,7 @@
         "immune_fire": true,
         "immune_cold": true,
         "giant": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -41294,7 +41301,7 @@
         "immune_pois": true,
         "immune_fire": true,
         "immune_cold": true,
-        "sleep_rating": 40
+        "alertness": 40
       },
       "spells": [
         {
@@ -41398,7 +41405,7 @@
         "immune_acid": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "spells": [
         {
@@ -41481,7 +41488,7 @@
         "immune_acid": true,
         "immune_pois": true,
         "immune_elec": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "spells": [
         {
@@ -41576,7 +41583,7 @@
         "evil": true,
         "hurt_light": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -41643,7 +41650,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -41725,7 +41732,7 @@
         "force_max_hp": true,
         "bash_door": true,
         "evil": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -41822,7 +41829,7 @@
         "no_conf": true,
         "no_sleep": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -41933,7 +41940,7 @@
         "weird_mind": true,
         "animal": true,
         "evil": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -41983,7 +41990,7 @@
         "multiply": true,
         "weird_mind": true,
         "animal": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "Clouds of these monsters light up the dungeon - so brightly that you can barely see through them.",
       "sprite": "insect.png",
@@ -42050,7 +42057,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 60
+        "alertness": 60
       },
       "spells": [
         {
@@ -42212,7 +42219,7 @@
         "immune_cold": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "spells": [
         {
@@ -42324,7 +42331,7 @@
         "hurt_light": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -42440,7 +42447,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -42529,7 +42536,7 @@
       "flags": {
         "animal": true,
         "no_fear": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "description": "Trained to hunt and kill without fear.",
       "sprite": "bird.png",
@@ -42590,7 +42597,7 @@
         "no_sleep": true,
         "cold_blood": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "An emaciated undead creature that paralyzes with its touch, haunting old graveyards.",
       "sprite": "ghoul.png",
@@ -42670,7 +42677,7 @@
         "no_sleep": true,
         "cold_blood": true,
         "hurt_light": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "A more powerful form of ghoul that paralysis with terrible force and drains constitution.",
       "sprite": "ghast.png",
@@ -42749,7 +42756,7 @@
         "animal": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 15
+        "alertness": 15
       },
       "description": "An enormous serpent whose gaze can turn flesh to stone.",
       "sprite": "greater_basilisk.png",
@@ -42832,7 +42839,7 @@
         "evil": true,
         "immune_pois": true,
         "smart": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -42926,7 +42933,7 @@
         "evil": true,
         "immune_fire": true,
         "immune_pois": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -43021,7 +43028,7 @@
         "bash_door": true,
         "evil": true,
         "immune_pois": true,
-        "sleep_rating": 10
+        "alertness": 10
       },
       "spells": [
         {
@@ -43095,7 +43102,7 @@
         "animal": true,
         "immune_pois": true,
         "friends": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "spells": [
         {
@@ -43166,7 +43173,7 @@
         "bash_door": true,
         "immune_fire": true,
         "animal": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "It is a fast moving creature of chaos, a gigantic black bat surrounded by flickering bright red flames.",
       "sprite": "bat.png",
@@ -43233,7 +43240,7 @@
         "bash_door": true,
         "no_fear": true,
         "male": true,
-        "sleep_rating": 5
+        "alertness": 5
       },
       "spells": [
         {
@@ -43310,7 +43317,7 @@
         "no_conf": true,
         "no_sleep": true,
         "no_fear": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -43412,7 +43419,7 @@
         "no_sleep": true,
         "no_fear": true,
         "demon": true,
-        "sleep_rating": 50
+        "alertness": 50
       },
       "spells": [
         {
@@ -43510,7 +43517,7 @@
         "male": true,
         "giant": true,
         "escort": true,
-        "sleep_rating": 30
+        "alertness": 30
       },
       "description": "This ogre is leader of his tribe. He sneers at you as he advances towards you, wielding a huge club and pushing his own followers rudely aside.",
       "sprite": "ogre.png",
@@ -43583,7 +43590,7 @@
         "immune_fire": true,
         "immune_elec": true,
         "immune_pois": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
@@ -43674,7 +43681,7 @@
         "troll": true,
         "immune_pois": true,
         "no_fear": true,
-        "sleep_rating": 20
+        "alertness": 20
       },
       "description": "This troll's great strength and size have won it the place of chieftain of its tribe. It fears nothing.",
       "sprite": "troll.png",
@@ -43861,7 +43868,7 @@
         "immune_pois": true,
         "no_conf": true,
         "no_sleep": true,
-        "sleep_rating": 255
+        "alertness": 255
       },
       "spells": [
         {
