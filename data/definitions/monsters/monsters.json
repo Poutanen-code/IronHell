@@ -43285,9 +43285,26 @@
         },
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 10,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -55453,21 +55470,126 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 20,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 20,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "LOSE_ALL",
-          "dice_count": 10,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "strength",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "intelligence",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "wisdom",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "dexterity",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "constitution",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyAttribute",
+              "parameters": {
+                "scope": "single_stat",
+                "stat_id": "charisma",
+                "operation": "decrease",
+                "modification_mode": "restorable",
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -59911,9 +60033,26 @@
         },
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 11,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -59994,9 +60133,26 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 13,
-          "dice_sides": 13
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -60028,9 +60184,26 @@
         },
         {
           "method": "HIT",
-          "effect": "SHATTER",
-          "dice_count": 13,
-          "dice_sides": 13
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "runtime_formula",
+                  "source_effect": "SHATTER"
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "Earthquake",
+              "parameters": {
+                "radius": 8,
+                "center_mode": "self"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",

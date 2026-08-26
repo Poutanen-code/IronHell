@@ -389,7 +389,8 @@
                   "StealGold",
                   "StealItem",
                   "ModifyLightSource",
-                  "ModifyItemPower"
+                  "ModifyItemPower",
+                  "Earthquake"
                 ]
               },
               "parameters": {

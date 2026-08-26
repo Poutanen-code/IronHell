@@ -969,6 +969,7 @@
         "spell",
         "prayer",
         "staff",
+        "monster_attack",
         "monster_ability",
         "activation"
       ],
