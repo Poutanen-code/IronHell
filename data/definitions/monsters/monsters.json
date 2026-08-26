@@ -113,9 +113,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -603,9 +608,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_ITEM",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "INSULT",
@@ -1919,9 +1929,14 @@
         },
         {
           "method": "CRAWL",
-          "effect": "EAT_FOOD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -2099,9 +2114,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -3048,9 +3068,26 @@
       "attacks": [
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 1,
-          "dice_sides": 4
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -3438,15 +3475,49 @@
       "attacks": [
         {
           "method": "TOUCH",
-          "effect": "EAT_LITE",
-          "dice_count": 1,
-          "dice_sides": 3
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 3
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyLightSource",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_LITE",
-          "dice_count": 1,
-          "dice_sides": 3
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 3
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyLightSource",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -3578,9 +3649,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -4773,9 +4849,26 @@
       "attacks": [
         {
           "method": "TOUCH",
-          "effect": "EAT_FOOD",
-          "dice_count": 1,
-          "dice_sides": 1
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 1
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -5039,9 +5132,15 @@
       "attacks": [
         {
           "method": "GAZE",
-          "effect": "UN_BONUS",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -5473,9 +5572,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "description": "A back-alley sneak armed with a chipped blade.",
@@ -6828,9 +6932,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "INSULT",
@@ -7567,9 +7676,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -9463,9 +9577,27 @@
       "attacks": [
         {
           "method": "SPORE",
-          "effect": "UN_BONUS",
-          "dice_count": 1,
-          "dice_sides": 6
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 6
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -9956,9 +10088,14 @@
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_ITEM",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -12675,9 +12812,14 @@
         },
         {
           "method": "CRAWL",
-          "effect": "EAT_FOOD",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -19594,9 +19736,26 @@
         },
         {
           "method": "HIT",
-          "effect": "EAT_GOLD",
-          "dice_count": 4,
-          "dice_sides": 4
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 4,
+                  "sides": 4
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -19955,9 +20114,15 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -20074,9 +20239,15 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -22131,9 +22302,15 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -29318,15 +29495,49 @@
         },
         {
           "method": "HIT",
-          "effect": "EAT_GOLD",
-          "dice_count": 4,
-          "dice_sides": 4
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 4,
+                  "sides": 4
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "EAT_ITEM",
-          "dice_count": 4,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 4,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -29519,9 +29730,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -35928,9 +36145,27 @@
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 2,
-          "dice_sides": 6
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 2,
+                  "sides": 6
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
@@ -38189,9 +38424,27 @@
       "attacks": [
         {
           "method": "CRAWL",
-          "effect": "UN_BONUS",
-          "dice_count": 1,
-          "dice_sides": 4
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -40786,9 +41039,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -41262,15 +41521,51 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -41936,9 +42231,27 @@
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 3,
-          "dice_sides": 6
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 3,
+                  "sides": 6
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
@@ -43091,9 +43404,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -44816,21 +45135,75 @@
       "attacks": [
         {
           "method": "SPORE",
-          "effect": "UN_BONUS",
-          "dice_count": 7,
-          "dice_sides": 7
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 7,
+                  "sides": 7
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "SPORE",
-          "effect": "UN_BONUS",
-          "dice_count": 7,
-          "dice_sides": 7
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 7,
+                  "sides": 7
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "SPORE",
-          "effect": "UN_BONUS",
-          "dice_count": 7,
-          "dice_sides": 7
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 7,
+                  "sides": 7
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "SPORE",
@@ -45379,9 +45752,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -45498,15 +45877,51 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -46280,15 +46695,49 @@
       "attacks": [
         {
           "method": "TOUCH",
-          "effect": "EAT_GOLD",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealGold",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
-          "effect": "EAT_ITEM",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -49393,27 +49842,99 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 10,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 10
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 10,
-          "dice_sides": 10
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 10
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 8,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 8,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -49503,9 +50024,27 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -49656,15 +50195,51 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -51288,15 +51863,51 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -51656,9 +52267,27 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 6,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -51840,15 +52469,51 @@
       "attacks": [
         {
           "method": "GAZE",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 6
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 6
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 6,
-          "dice_sides": 6
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 6
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
@@ -52415,27 +53080,99 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 6,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 6,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -53421,15 +54158,27 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -53549,9 +54298,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -53833,15 +54588,51 @@
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 7,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 7,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 7,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 7,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -54301,9 +55092,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -54397,27 +55194,99 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 10,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 10,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 8,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_POWER",
-          "dice_count": 8,
-          "dice_sides": 12
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 12
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -54602,9 +55471,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -54717,9 +55592,26 @@
       "attacks": [
         {
           "method": "BITE",
-          "effect": "EAT_LITE",
-          "dice_count": 1,
-          "dice_sides": 2
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 2
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyLightSource",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -54757,9 +55649,26 @@
       "attacks": [
         {
           "method": "TOUCH",
-          "effect": "EAT_FOOD",
-          "dice_count": 2,
-          "dice_sides": 3
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 2,
+                  "sides": 3
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "StealItem",
+              "parameters": {
+                "target_mode": "target"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -55057,9 +55966,15 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -55439,9 +56354,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -55640,9 +56561,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "TOUCH",
@@ -57532,9 +58459,15 @@
         },
         {
           "method": "TOUCH",
-          "effect": "UN_POWER",
-          "dice_count": 0,
-          "dice_sides": 0
+          "actions": [
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -59612,27 +60545,99 @@
       "attacks": [
         {
           "method": "GAZE",
-          "effect": "UN_BONUS",
-          "dice_count": 5,
-          "dice_sides": 2
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 2
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
-          "effect": "UN_BONUS",
-          "dice_count": 5,
-          "dice_sides": 2
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 2
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 2
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 2
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 2
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 2
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -59787,9 +60792,27 @@
         },
         {
           "method": "GAZE",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         }
       ],
       "flags": {
@@ -61904,15 +62927,51 @@
       "attacks": [
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 8,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
-          "effect": "UN_BONUS",
-          "dice_count": 8,
-          "dice_sides": 8
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 8,
+                  "sides": 8
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         },
         {
           "method": "HIT",
@@ -62618,15 +63677,51 @@
       "attacks": [
         {
           "method": "ENGULF",
-          "effect": "UN_POWER",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_power"
+              }
+            }
+          ]
         },
         {
           "method": "ENGULF",
-          "effect": "UN_BONUS",
-          "dice_count": 5,
-          "dice_sides": 5
+          "actions": [
+            {
+              "action_id": "ApplyDamage",
+              "parameters": {
+                "damage_type": "physical",
+                "amount": {
+                  "kind": "dice",
+                  "count": 5,
+                  "sides": 5
+                },
+                "target_mode": "target"
+              }
+            },
+            {
+              "action_id": "ModifyItemPower",
+              "parameters": {
+                "target_mode": "target",
+                "operation": "remove_bonus"
+              }
+            }
+          ]
         }
       ],
       "flags": {

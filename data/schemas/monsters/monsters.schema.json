@@ -381,7 +381,16 @@
             "properties": {
               "action_id": {
                 "type": "string",
-                "enum": ["ApplyDamage", "ApplyStatus", "ModifyAttribute", "ModifyExperience"]
+                "enum": [
+                  "ApplyDamage",
+                  "ApplyStatus",
+                  "ModifyAttribute",
+                  "ModifyExperience",
+                  "StealGold",
+                  "StealItem",
+                  "ModifyLightSource",
+                  "ModifyItemPower"
+                ]
               },
               "parameters": {
                 "type": "object",

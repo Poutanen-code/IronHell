@@ -2556,6 +2556,110 @@
       }
     },
     {
+      "action_id": "StealGold",
+      "name": "Steal Gold",
+      "description": "Removes gold from the resolved target and transfers or destroys it according to game rules.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": [
+        "monster_blow",
+        "monster_spell"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "target"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "action_id": "StealItem",
+      "name": "Steal Item",
+      "description": "Removes an inventory item from the resolved target according to game rules.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": [
+        "monster_blow",
+        "monster_spell"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "target"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "action_id": "ModifyLightSource",
+      "name": "Modify Light Source",
+      "description": "Consumes or damages a light source carried by the target.",
+      "category": "item",
+      "confidence": "medium",
+      "allowed_source_families": [
+        "monster_blow"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "target"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "action_id": "ModifyItemPower",
+      "name": "Modify Item Power",
+      "description": "Damages magical item properties or enchantments.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": [
+        "monster_blow",
+        "monster_spell"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "target"
+            ]
+          },
+          {
+            "id": "operation",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "remove_bonus",
+              "remove_power"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "action_id": "BreathDamage",
       "name": "Breath Damage",
       "description": "Projects directional breath damage with explicit radius and attenuation semantics.",
