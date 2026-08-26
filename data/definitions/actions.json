@@ -10,7 +10,7 @@
       "allowed_source_families": [
         "spell",
         "prayer",
-        "monster_spell",
+        "monster_ability",
         "rod",
         "wand",
         "activation"
@@ -78,7 +78,7 @@
       "allowed_source_families": [
         "spell",
         "prayer",
-        "monster_spell",
+        "monster_ability",
         "rod",
         "wand",
         "staff",
@@ -166,7 +166,7 @@
       "allowed_source_families": [
         "spell",
         "prayer",
-        "monster_spell",
+        "monster_ability",
         "potion",
         "rod",
         "staff",
@@ -398,7 +398,7 @@
         "scroll",
         "rod",
         "staff",
-        "monster_spell",
+        "monster_ability",
         "activation",
         "trap"
       ],
@@ -682,7 +682,7 @@
         "wand",
         "rod",
         "staff",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -772,7 +772,7 @@
         "wand",
         "staff",
         "activation",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -912,7 +912,7 @@
         "prayer",
         "rod",
         "wand",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -967,7 +967,7 @@
         "spell",
         "prayer",
         "staff",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -1013,7 +1013,7 @@
         "spell",
         "rod",
         "wand",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -1105,7 +1105,7 @@
         "prayer",
         "rod",
         "wand",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -1173,7 +1173,7 @@
         "prayer",
         "scroll",
         "rod",
-        "monster_spell",
+        "monster_ability",
         "activation"
       ],
       "parameter_contract": {
@@ -1234,7 +1234,7 @@
       "category": "information",
       "confidence": "medium",
       "allowed_source_families": [
-        "monster_spell",
+        "monster_ability",
         "spell",
         "prayer",
         "activation"
@@ -1524,7 +1524,7 @@
       "allowed_source_families": [
         "spell",
         "wand",
-        "monster_spell",
+        "monster_ability",
         "trap",
         "activation"
       ],
@@ -1590,7 +1590,7 @@
       "allowed_source_families": [
         "prayer",
         "wand",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -1651,7 +1651,7 @@
       "category": "control",
       "confidence": "medium",
       "allowed_source_families": [
-        "monster_spell",
+        "monster_ability",
         "trap"
       ],
       "parameter_contract": {
@@ -1783,7 +1783,7 @@
       "category": "summoning",
       "confidence": "medium",
       "allowed_source_families": [
-        "monster_spell",
+        "monster_ability",
         "staff",
         "activation",
         "trap"
@@ -2058,8 +2058,8 @@
       "confidence": "medium",
       "allowed_source_families": [
         "potion",
-        "monster_blow",
-        "monster_spell",
+        "monster_attack",
+        "monster_ability",
         "trap",
         "spell",
         "prayer",
@@ -2141,8 +2141,8 @@
       "category": "progression",
       "confidence": "medium",
       "allowed_source_families": [
-        "monster_blow",
-        "monster_spell",
+        "monster_attack",
+        "monster_ability",
         "potion",
         "spell",
         "prayer",
@@ -2198,7 +2198,7 @@
       "confidence": "medium",
       "allowed_source_families": [
         "spell",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2278,7 +2278,7 @@
         "wand",
         "staff",
         "spell",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2358,7 +2358,7 @@
       "allowed_source_families": [
         "scroll",
         "activation",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2402,7 +2402,7 @@
       "allowed_source_families": [
         "scroll",
         "activation",
-        "monster_spell"
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2447,7 +2447,7 @@
         "consumable",
         "activation",
         "trap",
-        "monster_blow",
+        "monster_attack",
         "environmental"
       ],
       "parameter_contract": {
@@ -2560,8 +2560,8 @@
       "allowed_source_families": [
         "spell",
         "prayer",
-        "monster_blow",
-        "monster_spell",
+        "monster_attack",
+        "monster_ability",
         "rod",
         "wand",
         "staff",
@@ -2611,7 +2611,7 @@
       "description": "Projects directional breath damage with explicit radius and attenuation semantics.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "monster_spell", "activation"],
+      "allowed_source_families": ["spell", "monster_ability", "activation"],
       "parameter_contract": {
         "closed": true,
         "parameters": [

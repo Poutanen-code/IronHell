@@ -92,8 +92,8 @@
       "enum": [
         "spell",
         "prayer",
-        "monster_blow",
-        "monster_spell",
+        "monster_attack",
+        "monster_ability",
         "rod",
         "wand",
         "staff",
