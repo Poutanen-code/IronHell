@@ -379,28 +379,13 @@
             "additionalProperties": false,
             "required": ["action_id", "parameters"],
             "properties": {
-              "action_id": { "const": "ApplyDamage" },
+              "action_id": {
+                "type": "string",
+                "enum": ["ApplyDamage", "ApplyStatus", "ModifyAttribute", "ModifyExperience"]
+              },
               "parameters": {
                 "type": "object",
-                "additionalProperties": false,
-                "required": ["damage_type", "amount", "target_mode"],
-                "properties": {
-                  "damage_type": {
-                    "type": "string",
-                    "enum": ["physical", "fire", "cold", "acid", "lightning", "poison"]
-                  },
-                  "amount": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "required": ["kind", "count", "sides"],
-                    "properties": {
-                      "kind": { "const": "dice" },
-                      "count": { "type": "integer", "minimum": 0 },
-                      "sides": { "type": "integer", "minimum": 0 }
-                    }
-                  },
-                  "target_mode": { "const": "target" }
-                }
+                "additionalProperties": true
               }
             }
           }
