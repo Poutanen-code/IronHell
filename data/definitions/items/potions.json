@@ -134,7 +134,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "paralyzed",
             "duration": {
@@ -144,7 +144,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"forced\":true}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"forced\":true}"
     },
     {
       "id": "potion_of_poison",
@@ -164,7 +164,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "poisoned",
             "duration": {
@@ -178,7 +178,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_pois\"}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_pois\"}"
     },
     {
       "id": "potion_of_blindness",
@@ -198,7 +198,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blinded",
             "duration": {
@@ -212,7 +212,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_blind\"}"
     },
     {
       "id": "potion_of_confusion",
@@ -232,7 +232,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "confused",
             "duration": {
@@ -265,7 +265,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "paralyzed",
             "duration": {
@@ -279,7 +279,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"free_act\"}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"free_act\"}"
     },
     {
       "id": "potion_of_lose_memories",
@@ -502,7 +502,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "infravision_boost",
             "duration": {
@@ -534,7 +534,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "see_invisible",
             "duration": {
@@ -761,7 +761,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "heroism",
             "duration": {
@@ -801,7 +801,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "berserk",
             "duration": {

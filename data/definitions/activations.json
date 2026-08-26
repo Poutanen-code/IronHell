@@ -55,7 +55,7 @@
       "description": "A holy aura wards off evil creatures.",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "protected_from_evil",
             "duration": {
@@ -930,7 +930,7 @@
       "description": "Battle-rage floods through you; your blows land with terrible force.",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "berserk",
             "duration": {
@@ -1100,7 +1100,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "berserk",
             "duration": {
@@ -1114,7 +1114,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {

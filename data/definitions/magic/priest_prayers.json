@@ -74,7 +74,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {
@@ -306,7 +306,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {
@@ -340,7 +340,7 @@
           }
         }
       ],
-      "notes": "Corrected from ApplyTimedBuff(protected_from_evil). sleep_monsters_touch() projects GF_OLD_SLEEP radius=1.",
+      "notes": "Corrected from ApplyStatus(protected_from_evil). sleep_monsters_touch() projects GF_OLD_SLEEP radius=1.",
       "provenance_status": "verified"
     },
     {
@@ -518,7 +518,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "see_invisible",
             "duration": {
@@ -545,7 +545,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "protected_from_evil",
             "duration": {
@@ -676,7 +676,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {

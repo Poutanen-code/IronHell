@@ -30,7 +30,7 @@
         "BallDamage",
         "HealHP",
         "CureStatus",
-        "ApplyTimedBuff",
+        "ApplyStatus",
         "ApplyOpposeElements",
         "TeleportSelf",
         "LightArea",
@@ -61,7 +61,6 @@
         "ModifyResourceMeter",
         "TransformEntity",
         "RandomActionSelection",
-        "ApplyStatus",
         "BreathDamage"
       ]
     },

@@ -26,7 +26,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blinded",
             "duration": {
@@ -40,7 +40,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_blind\"}"
     },
     {
       "id": "scroll_of_aggravate_monster",
@@ -849,7 +849,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {
@@ -881,7 +881,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {
@@ -913,7 +913,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blessed",
             "duration": {
@@ -971,7 +971,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "protected_from_evil",
             "duration": {
@@ -1064,7 +1064,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blinded",
             "duration": {
@@ -1078,7 +1078,7 @@
           }
         }
       ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyTimedBuff.condition={\"requires_absence\":\"res_blind\"}"
+      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_blind\"}"
     },
     {
       "id": "scroll_of_dispel_undead",

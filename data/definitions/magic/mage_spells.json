@@ -248,7 +248,7 @@
           }
         }
       ],
-      "notes": "Corrected from ApplyTimedBuff. detect_invisible() is a one-time scan, not a timed buff. See SPELL_COMPOSITE_ACTION_REVIEW.md.",
+      "notes": "Corrected from ApplyStatus. detect_invisible() is a one-time scan, not a timed buff. See SPELL_COMPOSITE_ACTION_REVIEW.md.",
       "provenance_status": "verified"
     },
     {
@@ -678,7 +678,7 @@
           }
         },
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "heroism",
             "duration": {
@@ -715,7 +715,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "berserk",
             "duration": {
@@ -1227,7 +1227,7 @@
       },
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "shield",
             "duration": {

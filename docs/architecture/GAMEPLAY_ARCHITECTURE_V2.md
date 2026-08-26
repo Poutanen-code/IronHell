@@ -536,7 +536,7 @@ These actions are approved as canonical payload candidates for future schema and
 - BallDamage
 - HealHP
 - CureStatus
-- ApplyTimedBuff
+- ApplyStatus
 - ApplyOpposeElements
 - TeleportSelf
 - LightArea

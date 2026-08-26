@@ -276,8 +276,8 @@
       }
     },
     {
-      "action_id": "ApplyTimedBuff",
-      "name": "Apply Timed Buff",
+      "action_id": "ApplyStatus",
+      "name": "Apply Status",
       "description": "Applies a timed beneficial status to the resolved target set.",
       "category": "status",
       "confidence": "high",
@@ -288,7 +288,9 @@
         "activation",
         "scroll",
         "rod",
-        "staff"
+        "staff",
+        "monster_ability",
+        "monster_attack"
       ],
       "parameter_contract": {
         "closed": true,
@@ -761,7 +763,7 @@
     {
       "action_id": "ModifyPlayerSpeed",
       "name": "Modify Player Speed",
-      "description": "Applies a timed haste or slow effect to the player. Replaces ApplyTimedBuff(haste) usages with explicit speed semantics and canonical duration expressions.",
+      "description": "Applies a timed haste or slow effect to the player.",
       "category": "movement",
       "confidence": "high",
       "allowed_source_families": [
@@ -1237,6 +1239,7 @@
         "monster_ability",
         "spell",
         "prayer",
+        "staff",
         "activation"
       ],
       "parameter_contract": {
@@ -1282,6 +1285,7 @@
         "spell",
         "prayer",
         "scroll",
+        "staff",
         "activation"
       ],
       "parameter_contract": {
@@ -2549,60 +2553,6 @@
       "provenance_status": "derived",
       "provenance": {
         "summary": "Added for activation parity: ring_of_power requires one-of-N random composite execution with weighted outcomes and nested actions."
-      }
-    },
-    {
-      "action_id": "ApplyStatus",
-      "name": "Apply Status",
-      "description": "Applies a declared timed status to the resolved target set.",
-      "category": "status",
-      "confidence": "high",
-      "allowed_source_families": [
-        "spell",
-        "prayer",
-        "monster_attack",
-        "monster_ability",
-        "rod",
-        "wand",
-        "staff",
-        "potion",
-        "scroll",
-        "activation",
-        "trap"
-      ],
-      "parameter_contract": {
-        "closed": true,
-        "parameters": [
-          {
-            "id": "status_id",
-            "description": "Timed status granted by the payload.",
-            "value_type": "id",
-            "required": true,
-            "reference_domain": "status"
-          },
-          {
-            "id": "duration",
-            "description": "Duration expression for the granted status.",
-            "value_type": "duration",
-            "required": true
-          },
-          {
-            "id": "target_mode",
-            "description": "Who receives the status payload.",
-            "value_type": "enum",
-            "required": true,
-            "allowed_values": ["self", "target", "ally", "area"]
-          }
-        ]
-      },
-      "validation": {
-        "reject_unknown_parameters": true,
-        "require_declared_required_parameters": true,
-        "enforce_declared_value_types": true
-      },
-      "provenance_status": "derived",
-      "provenance": {
-        "summary": "Added for the universal status payload gap: existing control actions cover selected status families, but poison and future reusable status applications require a generic status action."
       }
     },
     {

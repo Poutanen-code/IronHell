@@ -22,7 +22,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "blinded",
             "duration": {
@@ -58,7 +58,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "afraid",
             "duration": {
@@ -94,7 +94,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "confused",
             "duration": {
@@ -130,7 +130,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "hallucinating",
             "duration": {
@@ -166,7 +166,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "paralyzed",
             "duration": {
@@ -700,7 +700,7 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "ApplyTimedBuff",
+          "action_id": "ApplyStatus",
           "parameters": {
             "status_id": "poisoned",
             "duration": {
