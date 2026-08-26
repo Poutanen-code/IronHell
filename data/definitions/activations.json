@@ -113,7 +113,7 @@
                     "parameters": {
                       "scope": "all_stats",
                       "operation": "decrease",
-                      "modification_mode": "permanent",
+                      "modification_mode": "restorable",
                       "target_mode": "self"
                     }
                   },
@@ -122,9 +122,9 @@
                     "parameters": {
                       "amount": {
                         "kind": "token",
-                        "value": "quarter_current_experience_loss"
+                        "value": "EXP_25"
                       },
-                      "modification_mode": "permanent",
+                      "modification_mode": "restorable",
                       "target_mode": "self"
                     }
                   }

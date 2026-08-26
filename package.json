@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/schema-validation/validate.test.js",
+    "test:monster-blow-migration": "node --test tests/schema-validation/monster-blow-migration.test.js",
     "test:watch": "node --test --watch tests/schema-validation/validate.test.js",
     "test:phase1-catalogs": "node --test tests/schema-validation/phase1-catalogs.test.js"
   },

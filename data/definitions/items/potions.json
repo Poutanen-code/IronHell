@@ -1548,8 +1548,8 @@
           "action_id": "ModifyExperience",
           "parameters": {
             "amount": {
-              "kind": "flat",
-              "value": 100000
+              "kind": "runtime_formula",
+              "source_item_id": "potion_of_experience"
             },
             "modification_mode": "permanent",
             "target_mode": "self"
