@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "ironhell/rewrite/activations",
   "title": "Artifact Activation Definitions",
-  "description": "Maps legacy activation IDs to composition-based effect chains. Preserves all original activation names while replacing hardcoded behavior with parameterized effects.",
+  "description": "Maps legacy activation IDs to composition-based effect chains. Preserves all original activation names while replacing hardcoded behavior with parameterized actions.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "activations"],
@@ -22,7 +22,7 @@
     "ActivationDefinition": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["activation_id", "name", "effects"],
+      "required": ["activation_id", "name", "actions"],
       "properties": {
         "activation_id": {
           "description": "The legacy uppercase activation name used in artifacts.json. Must not be changed.",
@@ -37,11 +37,11 @@
           "description": "Lore-appropriate description shown to the player.",
           "type": "string"
         },
-        "effects": {
-          "description": "Ordered list of effects applied when this activation fires. Effects are applied in sequence.",
+        "actions": {
+          "description": "Ordered list of actions applied when this activation fires. actions are applied in sequence.",
           "type": "array",
           "minItems": 1,
-          "items": { "$ref": "effects#/$defs/Effect" }
+          "items": { "$ref": "actions#/$defs/Effect" }
         },
         "migration_status": {
           "description": "Marks an activation whose remaining behavior cannot yet be represented by an activation-eligible canonical action.",

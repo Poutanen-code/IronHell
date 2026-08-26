@@ -13,7 +13,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -39,7 +39,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -62,7 +62,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -84,7 +84,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -110,7 +110,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -134,7 +134,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -170,7 +170,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -194,7 +194,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -217,7 +217,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -238,7 +238,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -262,7 +262,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -286,7 +286,7 @@
         "book_id": "magic_for_beginners",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -313,7 +313,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -340,7 +340,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ConfuseControl",
           "parameters": {
@@ -362,7 +362,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "SleepControl",
           "parameters": {
@@ -384,8 +384,8 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [],
-      "notes": "Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical action_refs. Resolved at the Policy layer.",
+      "actions": [],
+      "notes": "Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical actions. Resolved at the Policy layer.",
       "provenance_status": "verified"
     },
     {
@@ -399,7 +399,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -425,7 +425,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -451,7 +451,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -477,7 +477,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -499,7 +499,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -528,7 +528,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -553,7 +553,7 @@
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -575,7 +575,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "Earthquake",
           "parameters": {
@@ -597,7 +597,7 @@
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -619,7 +619,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -644,7 +644,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -666,7 +666,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -699,7 +699,7 @@
           }
         }
       ],
-      "notes": "Composite: hp_player(10) + set_hero(...) + set_afraid(0). Added HealHP and CureStatus action_refs.",
+      "notes": "Composite: hp_player(10) + set_hero(...) + set_afraid(0). Added HealHP and CureStatus actions.",
       "provenance_status": "verified"
     },
     {
@@ -713,7 +713,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -748,7 +748,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -776,7 +776,7 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -798,7 +798,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ModifyMonsterSpeed",
           "parameters": {
@@ -820,7 +820,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportTarget",
           "parameters": {
@@ -842,7 +842,7 @@
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -863,7 +863,7 @@
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -884,7 +884,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TransformEntity",
           "parameters": {
@@ -906,7 +906,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -933,7 +933,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -960,7 +960,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -987,7 +987,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "SleepControl",
           "parameters": {
@@ -1009,7 +1009,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ConfuseControl",
           "parameters": {
@@ -1033,7 +1033,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -1059,7 +1059,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1083,7 +1083,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -1109,7 +1109,7 @@
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -1137,7 +1137,7 @@
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -1165,7 +1165,7 @@
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -1193,7 +1193,7 @@
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -1225,7 +1225,7 @@
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -1252,7 +1252,7 @@
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1274,7 +1274,7 @@
         "book_id": "incantations_and_illusions",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RechargeItem",
           "parameters": {
@@ -1296,7 +1296,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -1318,7 +1318,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -1340,7 +1340,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RechargeItem",
           "parameters": {
@@ -1362,7 +1362,7 @@
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BrandWeapon",
           "parameters": {
@@ -1384,7 +1384,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -1411,7 +1411,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -1438,7 +1438,7 @@
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -1465,7 +1465,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -1492,7 +1492,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1514,7 +1514,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -1541,7 +1541,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1563,7 +1563,7 @@
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -1589,7 +1589,7 @@
         "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {

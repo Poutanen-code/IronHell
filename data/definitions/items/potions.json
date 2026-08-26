@@ -16,7 +16,7 @@
       ],
       "description": "It has no effect apart from providing nourishment.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -41,7 +41,7 @@
       ],
       "description": "It has no effect apart from providing nourishment.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -66,7 +66,7 @@
       ],
       "description": "It has no effect apart from providing nourishment.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -92,7 +92,7 @@
       ],
       "description": "It slows you down (-10 to speed) for 15+1d25 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -122,7 +122,7 @@
       ],
       "description": "It induces vomiting, causing severe hunger and 4 turns of paralysis (even with free action), but clears away all poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -162,7 +162,7 @@
       ],
       "description": "It poisons you (adding 9+1d15 points to the poison counter), unless you have resistance to poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -196,7 +196,7 @@
       ],
       "description": "It induces blindness for 99+1d100 turns, unless you have resistance to blindness.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -230,7 +230,7 @@
       ],
       "description": "It induces confusion for 14+1d20 turns, unless you have resistance to confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -263,7 +263,7 @@
       ],
       "description": "It induces paralyzation for 3+1d4 turns, unless you have free action.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -297,7 +297,7 @@
       ],
       "description": "It drains 25% of your experience total, unless you have hold life.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyExperience",
           "parameters": {
@@ -327,7 +327,7 @@
       ],
       "description": "It reduces strength (unless you have sustain strength).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -356,7 +356,7 @@
       ],
       "description": "It reduces intelligence (unless you have sustain intelligence).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -385,7 +385,7 @@
       ],
       "description": "It reduces wisdom (unless you have sustain wisdom).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -414,7 +414,7 @@
       ],
       "description": "It reduces dexterity (unless you have sustain dexterity).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -443,7 +443,7 @@
       ],
       "description": "It reduces constitution (unless you have sustain constitution).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -472,7 +472,7 @@
       ],
       "description": "It reduces charisma (unless you have sustain charisma).",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyAttribute",
           "parameters": {
@@ -500,7 +500,7 @@
       ],
       "description": "It extends the radius of your infravision by 50 feet for 100+1d100 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -532,7 +532,7 @@
       ],
       "description": "It enables you to see invisible creatures for 12+1d12 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -564,7 +564,7 @@
       ],
       "description": "It halves the severity of any current poisoning.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -592,7 +592,7 @@
       ],
       "description": "It neutralizes poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -620,7 +620,7 @@
       ],
       "description": "It removes fear.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -652,7 +652,7 @@
       ],
       "description": "It hastes you (+10 to speed) for 15+1d25 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -681,7 +681,7 @@
       ],
       "description": "It grants you temporary resistance to fire for 10+1d10 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -710,7 +710,7 @@
       ],
       "description": "It grants you temporary resistance to cold for 10+1d10 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -739,7 +739,7 @@
       ],
       "description": "It cures 10 points of damage, removes fear, and grants heroism (resistance to fear and +12 to-hit) for 25+1d25 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -791,7 +791,7 @@
       ],
       "description": "It removes fear and grants berserk strength (resistance to fear, +24 to-hit, +24 to-dam, -10 to AC, +30 temporary MaxHP) for 25+1d25 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -837,7 +837,7 @@
       ],
       "description": "It cures 15 points of damage, heals 20 points worth of cuts and confusion, and cures blindness.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -890,7 +890,7 @@
       ],
       "description": "It cures 1d5+20 points of damage, heals all cut damage, and cures blindness and confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -944,7 +944,7 @@
       ],
       "description": "It cures 1d5+25 points of damage, cures all stunning, heals all cut damage, neutralizes poison, and cures blindness and confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1018,7 +1018,7 @@
       ],
       "description": "It cures 300 points of damage, cures all stunning, heals all cut damage, neutralizes poison, and cures blindness and confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1090,7 +1090,7 @@
       ],
       "description": "It restores mana points to maximum if they are currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -1115,7 +1115,7 @@
       ],
       "description": "It restores experience to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1140,7 +1140,7 @@
       ],
       "description": "It restores strength to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1166,7 +1166,7 @@
       ],
       "description": "It restores intelligence to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1192,7 +1192,7 @@
       ],
       "description": "It restores wisdom to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1218,7 +1218,7 @@
       ],
       "description": "It restores dexterity to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1244,7 +1244,7 @@
       ],
       "description": "It restores constitution to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1270,7 +1270,7 @@
       ],
       "description": "It restores charisma to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1296,7 +1296,7 @@
       ],
       "description": "It first acts as a Potion of Restore Strength, then permanently increases strength.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1332,7 +1332,7 @@
       ],
       "description": "It first acts as a Potion of Restore Intelligence, then permanently increases intelligence.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1368,7 +1368,7 @@
       ],
       "description": "It first acts as a Potion of Restore Wisdom, then permanently increases wisdom.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1404,7 +1404,7 @@
       ],
       "description": "It first acts as a Potion of Restore Dexterity, then permanently increases dexterity.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1440,7 +1440,7 @@
       ],
       "description": "It first acts as a Potion of Restore Constitution, then permanently increases constitution.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1476,7 +1476,7 @@
       ],
       "description": "It first acts as a Potion of Restore Charisma, then permanently increases charisma.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1512,7 +1512,7 @@
       ],
       "description": "It completely lights up and magically maps the current dungeon level.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -1543,7 +1543,7 @@
       ],
       "description": "It grants either 100000 experience points or half the current experience total plus 10, whichever is less.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyExperience",
           "parameters": {

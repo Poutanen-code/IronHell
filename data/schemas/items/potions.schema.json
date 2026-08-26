@@ -31,7 +31,7 @@
         "sell_value": { "type": "integer", "minimum": 0 },
         "is_harmful": { "type": "boolean" },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
-        "effects": { "$ref": "common_item.schema.json#/$defs/Effects" },
+        "actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
         "description": { "type": "string", "minLength": 1 },
         "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
       }

@@ -19,7 +19,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DarkenArea",
           "parameters": {
@@ -45,7 +45,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyMonsterSpeed",
           "parameters": {
@@ -71,7 +71,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyMonsterSpeed",
           "parameters": {
@@ -101,7 +101,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "SummonEntities",
           "parameters": {
@@ -128,7 +128,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -154,7 +154,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -179,7 +179,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "RemoveCurse",
           "parameters": {
@@ -204,7 +204,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -235,7 +235,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -260,7 +260,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -287,7 +287,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -314,7 +314,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -341,7 +341,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -369,7 +369,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -397,7 +397,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -425,7 +425,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -456,7 +456,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -490,7 +490,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {

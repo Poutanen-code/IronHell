@@ -15,7 +15,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -42,7 +42,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -70,7 +70,7 @@
           "rarity": 8
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -95,7 +95,7 @@
           "rarity": 4
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -120,7 +120,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -146,7 +146,7 @@
           "rarity": 4
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -171,7 +171,7 @@
           "rarity": 8
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -198,7 +198,7 @@
           "rarity": 16
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -229,7 +229,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -260,7 +260,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -292,7 +292,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -324,7 +324,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -356,7 +356,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -388,7 +388,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -420,7 +420,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -452,7 +452,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -484,7 +484,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -516,7 +516,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -548,7 +548,7 @@
           "rarity": 1
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DrainLife",
           "parameters": {
@@ -578,7 +578,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "DrainLife",
           "parameters": {
@@ -608,7 +608,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -640,7 +640,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -672,7 +672,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -704,7 +704,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -736,7 +736,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -768,7 +768,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -800,7 +800,7 @@
           "rarity": 2
         }
       ],
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {

@@ -13,7 +13,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -36,7 +36,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -72,7 +72,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -98,7 +98,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -123,7 +123,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -150,7 +150,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -173,7 +173,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -197,7 +197,7 @@
         "book_id": "beginners_handbook",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -223,7 +223,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "FearControl",
           "parameters": {
@@ -245,7 +245,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -268,7 +268,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -304,7 +304,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -330,7 +330,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "SleepControl",
           "parameters": {
@@ -354,7 +354,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -376,7 +376,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RemoveCurse",
           "parameters": {
@@ -398,7 +398,7 @@
         "book_id": "words_of_wisdom",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -427,7 +427,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -452,7 +452,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -480,7 +480,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -516,7 +516,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -543,7 +543,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -570,7 +570,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "Earthquake",
           "parameters": {
@@ -592,7 +592,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -613,7 +613,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -650,7 +650,7 @@
         "book_id": "chants_and_blessings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "FearControl",
           "parameters": {
@@ -674,7 +674,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -700,7 +700,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -727,7 +727,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -763,7 +763,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -790,7 +790,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -812,7 +812,7 @@
         "book_id": "exorcism_and_dispelling",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -863,7 +863,7 @@
         "book_id": "godly_insights",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -886,7 +886,7 @@
         "book_id": "godly_insights",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -910,7 +910,7 @@
         "book_id": "godly_insights",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -931,7 +931,7 @@
         "book_id": "godly_insights",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "InspectEntity",
           "parameters": {
@@ -954,7 +954,7 @@
         "book_id": "godly_insights",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -976,7 +976,7 @@
         "book_id": "purifications_and_healing",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1012,7 +1012,7 @@
         "book_id": "purifications_and_healing",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1049,7 +1049,7 @@
         "book_id": "purifications_and_healing",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1085,7 +1085,7 @@
         "book_id": "purifications_and_healing",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1108,7 +1108,7 @@
         "book_id": "purifications_and_healing",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1131,7 +1131,7 @@
         "book_id": "wrath_of_god",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -1158,7 +1158,7 @@
         "book_id": "wrath_of_god",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -1185,7 +1185,7 @@
         "book_id": "wrath_of_god",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1207,7 +1207,7 @@
         "book_id": "wrath_of_god",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1231,7 +1231,7 @@
         "book_id": "wrath_of_god",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "DrainLife",
           "parameters": {
@@ -1256,7 +1256,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1279,7 +1279,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RechargeItem",
           "parameters": {
@@ -1301,7 +1301,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RemoveCurse",
           "parameters": {
@@ -1323,7 +1323,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -1345,7 +1345,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -1367,7 +1367,7 @@
         "book_id": "holy_infusions",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "BrandWeapon",
           "parameters": {
@@ -1389,7 +1389,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -1411,7 +1411,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -1433,7 +1433,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "TeleportTarget",
           "parameters": {
@@ -1455,7 +1455,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -1476,7 +1476,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -1497,7 +1497,7 @@
         "book_id": "ethereal_openings",
         "realm": "prayer"
       },
-      "action_refs": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {

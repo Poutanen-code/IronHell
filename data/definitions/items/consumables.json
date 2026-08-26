@@ -20,7 +20,7 @@
       ],
       "description": "It causes blindness that lasts for 199+1d200 turns, unless you have resistance to blindness.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -56,7 +56,7 @@
       ],
       "description": "It induces fear that lasts for 9+1d10 turns, unless you have resistance to fear.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -92,7 +92,7 @@
       ],
       "description": "It induces confusion that lasts for 9+1d10 turns, unless you have resistance to confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -128,7 +128,7 @@
       ],
       "description": "It causes you to hallucinate for 249+1d250 turns, unless you have resistance to chaos.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -164,7 +164,7 @@
       ],
       "description": "It induces paralysis that lasts for 9+1d10 turns, unless you have free action.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -200,7 +200,7 @@
       ],
       "description": "It inflicts 6d6 points of damage, and also reduces strength unless you have sustain strength.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -240,7 +240,7 @@
       ],
       "description": "It inflicts 6d6 points of damage, and also reduces constitution unless you have sustain constitution.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -280,7 +280,7 @@
       ],
       "description": "It inflicts 8d8 points of damage, and also reduces intelligence unless you have sustain intelligence.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -320,7 +320,7 @@
       ],
       "description": "It inflicts 8d8 points of damage, and also reduces wisdom unless you have sustain wisdom.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -360,7 +360,7 @@
       ],
       "description": "It inflicts 10d10 points of damage, and also reduces constitution unless you have sustain constitution. It may also be thrown to inflict 10d10 points of damage.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -376,14 +376,6 @@
             "stat_id": "constitution",
             "operation": "decrease",
             "modification_mode": "restorable",
-            "target_mode": "self"
-          }
-        },
-        {
-          "action_id": "ApplyDamage",
-          "parameters": {
-            "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 10, "sides": 10 },
             "target_mode": "self"
           }
         }
@@ -408,7 +400,7 @@
       ],
       "description": "It inflicts 10d10 points of damage, and also reduces strength unless you have sustain strength. It may also be thrown to inflict 10d10 points of damage.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -424,14 +416,6 @@
             "stat_id": "strength",
             "operation": "decrease",
             "modification_mode": "restorable",
-            "target_mode": "self"
-          }
-        },
-        {
-          "action_id": "ApplyDamage",
-          "parameters": {
-            "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 10, "sides": 10 },
             "target_mode": "self"
           }
         }
@@ -456,7 +440,7 @@
       ],
       "description": "It neutralizes poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -488,7 +472,7 @@
       ],
       "description": "It cures blindness.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -520,7 +504,7 @@
       ],
       "description": "It removes your fear.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -552,7 +536,7 @@
       ],
       "description": "It cures confusion.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -584,7 +568,7 @@
       ],
       "description": "It cures 4d8 points of damage.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -617,7 +601,7 @@
       ],
       "description": "It restores strength to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -647,7 +631,7 @@
       ],
       "description": "It restores constitution to maximum if it is currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -685,7 +669,7 @@
       ],
       "description": "It restores to maximum all stats that are currently below maximum.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -714,7 +698,7 @@
       ],
       "description": "It poisons you (adding 9+1d10 points to the poison counter), unless you have resistance to poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -758,7 +742,7 @@
       ],
       "description": "Ration of Food.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -782,7 +766,7 @@
       "allocation_table": [],
       "description": "Hard Biscuit.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -806,7 +790,7 @@
       "allocation_table": [],
       "description": "Strip of Beef Jerky.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -835,7 +819,7 @@
       ],
       "description": "Slime Mold.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -872,7 +856,7 @@
       ],
       "description": "It cures 4d8 points of damage and neutralizes poison.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -917,7 +901,7 @@
       "allocation_table": [],
       "description": "Pint of Fine Ale.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -941,7 +925,7 @@
       "allocation_table": [],
       "description": "Pint of Fine Wine.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {

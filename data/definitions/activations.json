@@ -5,7 +5,7 @@
       "activation_id": "ILLUMINATION",
       "name": "Illumination",
       "description": "The light blazes out, illuminating the area with brilliant starlight that harms the undead.",
-      "effects": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -24,7 +24,7 @@
       "activation_id": "MAGIC_MAP",
       "name": "Magic Mapping",
       "description": "The entire level is revealed in your mind's eye.",
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -38,7 +38,7 @@
       "activation_id": "DETECT",
       "name": "Detection",
       "description": "You sense all creatures, objects, traps, and paths nearby.",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -53,7 +53,7 @@
       "activation_id": "PROT_EVIL",
       "name": "Protection from Evil",
       "description": "A holy aura wards off evil creatures.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -75,7 +75,7 @@
       "activation_id": "DISP_EVIL",
       "name": "Dispel Evil",
       "description": "Holy light blasts all evil creatures in sight.",
-      "effects": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -97,7 +97,7 @@
       "activation_id": "BIZZARE",
       "name": "Bizarre",
       "description": "The One Ring pulses with terrible power, producing an utterly unpredictable effect.",
-      "effects": [
+      "actions": [
         {
           "action_id": "RandomActionSelection",
           "parameters": {
@@ -194,7 +194,7 @@
       "activation_id": "PHASE",
       "name": "Phase Door",
       "description": "You blink a short distance to an adjacent open area.",
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -208,7 +208,7 @@
       "activation_id": "STAR_LIGHT",
       "name": "Starlight",
       "description": "Eight beams of starlight streak outward, burning undead.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -319,7 +319,7 @@
       "activation_id": "SHARD",
       "name": "Shard Bolt",
       "description": "A jagged bolt of razor shards screams toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -338,7 +338,7 @@
       "activation_id": "FIRE1",
       "name": "Fire Bolt",
       "description": "A bolt of fire leaps from the artifact toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -357,7 +357,7 @@
       "activation_id": "FROST1",
       "name": "Frost Bolt",
       "description": "A bolt of intense cold streaks toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -376,7 +376,7 @@
       "activation_id": "LIGHTNING_BOLT",
       "name": "Lightning Bolt",
       "description": "A bolt of lightning crackles outward.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -395,7 +395,7 @@
       "activation_id": "STINKING_CLOUD",
       "name": "Stinking Cloud",
       "description": "A noxious cloud of poison gas billows outward.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -414,7 +414,7 @@
       "activation_id": "FROST2",
       "name": "Frost Ball",
       "description": "A ball of intense cold erupts from the artifact.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -433,7 +433,7 @@
       "activation_id": "FROST3",
       "name": "Frost Ball III",
       "description": "A powerful ball of freezing cold erupts outward.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -452,7 +452,7 @@
       "activation_id": "FROST4",
       "name": "Frost Ball IV",
       "description": "A devastating ball of freezing cold annihilates everything nearby.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -471,7 +471,7 @@
       "activation_id": "FROST5",
       "name": "Frost Ball V",
       "description": "An enormous ball of killing cold detonates, chilling all in its radius.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -490,7 +490,7 @@
       "activation_id": "FIRE2",
       "name": "Fire Ball",
       "description": "A ball of roaring fire blossoms from the artifact.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -509,7 +509,7 @@
       "activation_id": "FIRE3",
       "name": "Ball of Fire",
       "description": "A massive fireball erupts from the artifact.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -528,7 +528,7 @@
       "activation_id": "FIRE_BALL_2",
       "name": "Fire Ball II",
       "description": "A large fireball detonates with tremendous force.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -548,7 +548,7 @@
       "activation_id": "ELEC2",
       "name": "Lightning Ball",
       "description": "A ball of crackling lightning explodes outward from the artifact.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -567,7 +567,7 @@
       "activation_id": "ACID1",
       "name": "Acid Bolt",
       "description": "A bolt of sizzling acid arcs toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -586,7 +586,7 @@
       "activation_id": "DRAIN_LIFE1",
       "name": "Drain Life",
       "description": "Dark energy drains the life-force of your target, healing you in return.",
-      "effects": [
+      "actions": [
         {
           "action_id": "DrainLife",
           "parameters": {
@@ -605,7 +605,7 @@
       "activation_id": "DRAIN_LIFE2",
       "name": "Drain Life II",
       "description": "A powerful drain tears vital essence from your target, restoring your own health.",
-      "effects": [
+      "actions": [
         {
           "action_id": "DrainLife",
           "parameters": {
@@ -624,7 +624,7 @@
       "activation_id": "STAR_BALL",
       "name": "Star Ball",
       "description": "Eight balls of brilliant starlight streak outward, each scorching enemies with holy radiance.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -735,7 +735,7 @@
       "activation_id": "MISSILE",
       "name": "Magic Missile",
       "description": "A bolt of pure arcane force speeds toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -754,7 +754,7 @@
       "activation_id": "MANA_BOLT",
       "name": "Mana Bolt",
       "description": "A bolt of raw magical force blasts toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -773,7 +773,7 @@
       "activation_id": "ARROW",
       "name": "Magical Arrow",
       "description": "A magical arrow of great force speeds toward your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BoltDamage",
           "parameters": {
@@ -791,7 +791,7 @@
       "activation_id": "HEAL1",
       "name": "Heal",
       "description": "Powerful healing magic restores a significant portion of your health.",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -809,7 +809,7 @@
       "activation_id": "HEAL2",
       "name": "Heal II",
       "description": "Powerful magic knits your wounds, restoring a great deal of health.",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -827,7 +827,7 @@
       "activation_id": "CURE_WOUNDS",
       "name": "Cure Wounds",
       "description": "Minor healing magic mends your wounds.",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -846,7 +846,7 @@
       "activation_id": "RESTORE_LIFE",
       "name": "Restore Life Levels",
       "description": "The artifact restores life levels drained by undead and demons.",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -860,7 +860,7 @@
       "activation_id": "HASTE",
       "name": "Haste",
       "description": "You move with supernatural speed.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -882,7 +882,7 @@
       "activation_id": "HASTE1",
       "name": "Haste I",
       "description": "You move with sustained supernatural speed.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -905,7 +905,7 @@
       "activation_id": "HASTE2",
       "name": "Haste II",
       "description": "Your body quickens to incredible speed.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyPlayerSpeed",
           "parameters": {
@@ -928,7 +928,7 @@
       "activation_id": "BERSERKER",
       "name": "Berserk Strength",
       "description": "Battle-rage floods through you; your blows land with terrible force.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -949,7 +949,7 @@
       "activation_id": "IDENTIFY",
       "name": "Identify",
       "description": "The artifact reveals the true nature of an item.",
-      "effects": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -962,7 +962,7 @@
       "activation_id": "PROBE",
       "name": "Probe",
       "description": "The artifact reveals the true nature and remaining health of all nearby creatures.",
-      "effects": [
+      "actions": [
         {
           "action_id": "InspectEntity",
           "parameters": {
@@ -978,7 +978,7 @@
       "activation_id": "CLAIRVOYANCE",
       "name": "Clairvoyance",
       "description": "Your mind expands to encompass the entire level, detecting all creatures, objects, traps, and passages.",
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -1001,7 +1001,7 @@
       "activation_id": "CONFUSE",
       "name": "Confuse Monster",
       "description": "A blast of disorienting magic befuddles your target.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ConfuseControl",
           "parameters": {
@@ -1016,7 +1016,7 @@
       "activation_id": "SLEEP",
       "name": "Sleep Monsters",
       "description": "Soothing magic lulls nearby monsters into a deep slumber.",
-      "effects": [
+      "actions": [
         {
           "action_id": "SleepControl",
           "parameters": {
@@ -1033,7 +1033,7 @@
       "activation_id": "REM_FEAR_POIS",
       "name": "Remove Fear and Poison",
       "description": "The artifact cleanses you of fear and neutralizes all poison in your blood.",
-      "effects": [
+      "actions": [
         {
           "action_id": "CureStatus",
           "parameters": {
@@ -1051,7 +1051,7 @@
       "activation_id": "RESIST",
       "name": "Elemental Resistance",
       "description": "A protective aura wards off fire, cold, acid, and lightning.",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
@@ -1078,7 +1078,7 @@
       "activation_id": "RAGE_BLESS_RESIST",
       "name": "Rage, Bless, and Resist",
       "description": "You are flooded with battle-fury, divine blessing, and elemental protection simultaneously.",
-      "effects": [
+      "actions": [
         {
           "action_id": "HealHP",
           "parameters": {
@@ -1153,7 +1153,7 @@
       "activation_id": "TELEPORT",
       "name": "Teleport",
       "description": "You are whisked away to a random location on the level.",
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -1167,7 +1167,7 @@
       "activation_id": "TELE_AWAY",
       "name": "Teleport Away",
       "description": "A directed force hurls your target to a distant part of the dungeon.",
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportTarget",
           "parameters": {
@@ -1184,7 +1184,7 @@
       "activation_id": "WORD_OF_RECALL",
       "name": "Word of Recall",
       "description": "After a short delay, you are recalled to the surface.",
-      "effects": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -1200,7 +1200,7 @@
       "activation_id": "BANISHMENT",
       "name": "Banishment",
       "description": "A wave of holy power banishes all evil creatures from the level.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1220,7 +1220,7 @@
       "activation_id": "MASS_BANISHMENT",
       "name": "Mass Banishment",
       "description": "Every non-unique creature on the level is banished to the void.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1243,7 +1243,7 @@
       "activation_id": "STONE_TO_MUD",
       "name": "Stone to Mud",
       "description": "The artifact dissolves rock walls to muddy rubble with a touch.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BeamDamage",
           "parameters": {
@@ -1270,7 +1270,7 @@
       "activation_id": "TRAP_DOOR_DEST",
       "name": "Destroy Traps and Doors",
       "description": "All traps and doors in the area are instantly destroyed.",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1289,7 +1289,7 @@
       "activation_id": "RECHARGE1",
       "name": "Recharge",
       "description": "The artifact channels magical energy into an exhausted device, restoring its charges.",
-      "effects": [
+      "actions": [
         {
           "action_id": "RechargeItem",
           "parameters": {
@@ -1309,7 +1309,7 @@
       "activation_id": "FIREBRAND",
       "name": "Firebrand Bolts",
       "description": "Attempts to brand the first valid stack of bolts with flame and enchant them.",
-      "effects": [
+      "actions": [
         {
           "action_id": "BrandWeapon",
           "parameters": {

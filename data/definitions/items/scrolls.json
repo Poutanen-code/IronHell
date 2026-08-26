@@ -17,7 +17,7 @@
       ],
       "description": "It darkens all squares within 3 squares of you, plus the entire room if you are currently in one; and blinds you for 3+1d5 turns unless you have resistance to blindness.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DarkenArea",
           "parameters": {
@@ -58,7 +58,7 @@
       ],
       "description": "It awakens all sleeping monsters within 40 squares of you, and hastes all monsters within line of sight unless they are already hasted.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AggravateMonsters",
           "parameters": {
@@ -83,7 +83,7 @@
       ],
       "description": "It curses the currently equipped body armor, removing all of its special powers, reducing the base AC to 0, and changing the magical AC bonus to -2d5. Artifacts have a 1 in 2 chance to resist.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyItemCurse",
           "parameters": {
@@ -109,7 +109,7 @@
       ],
       "description": "It curses the currently wielded melee weapon, removing all of its special powers and changing the weapon's to-hit and to-dam bonuses both to -2d5. Artifacts have a 1 in 2 chance to resist.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyItemCurse",
           "parameters": {
@@ -135,7 +135,7 @@
       ],
       "description": "It summons 1d3 monsters generated at the current dungeon level.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "SummonEntities",
           "parameters": {
@@ -162,7 +162,7 @@
       ],
       "description": "It summons 1d3 non-unique undead monsters generated at the current dungeon level.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "SummonEntities",
           "parameters": {
@@ -183,7 +183,7 @@
       "allocation_table": [],
       "description": "Creates a new artifact.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -210,7 +210,7 @@
       ],
       "description": "It creates traps on all empty squares within a 1-square radius of you.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "CreateTraps",
           "parameters": {
@@ -235,7 +235,7 @@
       ],
       "description": "It teleports you randomly up to 10 squares away.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -260,7 +260,7 @@
       ],
       "description": "It teleports you randomly up to 100 squares away.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -285,7 +285,7 @@
       ],
       "description": "It teleports you 1 level up or down, chosen at random. Always goes down from the town level.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -309,7 +309,7 @@
       ],
       "description": "It invokes the spell of recall, which takes you from the dungeon to the town or from the town to the deepest level you have visited. It takes a while for the spell to act; until then, it can be canceled by reading a second scroll.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RecallOrLevelShift",
           "parameters": {
@@ -345,7 +345,7 @@
       ],
       "description": "It reveals all normal (magical but non-hidden) powers of one object. The spell may be aborted without using up the scroll.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -377,7 +377,7 @@
       ],
       "description": "It reveals all normal and hidden powers of one object, and permanently implants this knowledge into your mind.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "IdentifyItem",
           "parameters": {
@@ -401,7 +401,7 @@
       ],
       "description": "It removes all ordinary curses from all equipped items. Heavy or permanent curses are unaffected.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RemoveCurse",
           "parameters": {
@@ -429,7 +429,7 @@
       ],
       "description": "It removes all ordinary and heavy curses from all equipped objects. Permanent curses are unaffected.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RemoveCurse",
           "parameters": {
@@ -453,7 +453,7 @@
       ],
       "description": "It attempts to magically enchant a piece of armor once.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -479,7 +479,7 @@
       ],
       "description": "It attempts to magically enhance a weapon's to-hit bonus once.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -505,7 +505,7 @@
       ],
       "description": "It attempts to magically enhance a weapon's to-dam bonus once.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -535,7 +535,7 @@
       ],
       "description": "It attempts to enchant a piece of armor 2+1d3 times.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -561,7 +561,7 @@
       ],
       "description": "It attempts to magically enhance a weapon's to-dam and to-hit bonuses 1d3 times each.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "EnchantEquipment",
           "parameters": {
@@ -587,7 +587,7 @@
       ],
       "description": "It recharges a wand or staff. Success adds 2+1d(60/(level+2)+1) charges; failure uncharges the item.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RechargeItem",
           "parameters": {
@@ -625,7 +625,7 @@
       ],
       "description": "It lights up an area with radius 2 plus the entire room if you are in one. Inflicts 2d8 damage on light-sensitive creatures within the radius.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "LightArea",
           "parameters": {
@@ -655,7 +655,7 @@
       ],
       "description": "It maps out a portion of the level centered on you.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "MapArea",
           "parameters": {
@@ -679,7 +679,7 @@
       ],
       "description": "It detects all treasure in the immediate area.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -705,7 +705,7 @@
       ],
       "description": "It detects all objects in the immediate area.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -735,7 +735,7 @@
       ],
       "description": "It detects all traps in the immediate area.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -769,7 +769,7 @@
       ],
       "description": "It detects all stairs and doors in the immediate area.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -796,7 +796,7 @@
       ],
       "description": "It detects all invisible monsters in the immediate area.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DetectEntities",
           "parameters": {
@@ -822,7 +822,7 @@
       ],
       "description": "It magically renders you well-fed but not satiated. Also cures a bloated stomach.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ModifyResourceMeter",
           "parameters": {
@@ -847,7 +847,7 @@
       ],
       "description": "It blesses you (+5 to AC, +10 to-hit) for 6+1d12 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -879,7 +879,7 @@
       ],
       "description": "It blesses you (+5 to AC, +10 to-hit) for 12+1d24 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -911,7 +911,7 @@
       ],
       "description": "It blesses you (+5 to AC, +10 to-hit) for 24+1d48 turns.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -943,7 +943,7 @@
       ],
       "description": "It enchants you with an aura of confusion. When you next strike a monster, an attempt is made to confuse it.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ConfuseControl",
           "parameters": {
@@ -969,7 +969,7 @@
       ],
       "description": "It grants the enchantment of protection from evil for a duration equal to 1d25 plus three times your character level.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "ApplyTimedBuff",
           "parameters": {
@@ -1003,7 +1003,7 @@
       ],
       "description": "It inscribes a glyph of warding beneath you. Monsters cannot move onto the glyph; they have a (monster level in 550) chance of breaking it when they try.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1028,7 +1028,7 @@
       ],
       "description": "It destroys all traps and doors within a 1-square radius of you.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1053,7 +1053,7 @@
       ],
       "description": "It destroys a circular area of radius 15 centered on you, randomly placing new walls and floor. All monsters and non-artifact objects are removed. Causes blindness for 10+1d10 turns unless you have resistance to blindness or light.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1095,7 +1095,7 @@
       ],
       "description": "It inflicts 60 points of damage on all undead creatures within line of sight.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "DispelByTag",
           "parameters": {
@@ -1129,7 +1129,7 @@
       ],
       "description": "It removes all monsters represented by a chosen symbol from the level. Uniques are unaffected. You take 1d4 damage for every monster removed.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1158,7 +1158,7 @@
       ],
       "description": "It removes all monsters within 20 squares of you. Uniques are unaffected. You take 1d3 damage for every monster removed.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "BanishByRule",
           "parameters": {
@@ -1183,7 +1183,7 @@
       ],
       "description": "It creates one good object on the floor near you.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1209,7 +1209,7 @@
       ],
       "description": "It creates 1+1d2 good objects on the ground near you.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
@@ -1235,7 +1235,7 @@
       ],
       "description": "It restores life to a ghost character standing next to the player who reads it. Restores experience to maximum if there is no adjacent ghost.",
       "provenance_status": "verified",
-      "effects": [
+      "actions": [
         {
           "action_id": "RestoreAttributes",
           "parameters": {
@@ -1260,7 +1260,7 @@
       ],
       "description": "It creates a new house starting at the House Foundation Stone you are standing at, expanding in all directions until no more Foundation Stones are found.",
       "provenance_status": "verified",
-      "effects": [],
+      "actions": [],
       "notes": "Multiplayer-only: creates a player house at the marked Foundation Stone. No standard effect type."
     }
   ]
