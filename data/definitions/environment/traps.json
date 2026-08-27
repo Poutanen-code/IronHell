@@ -8,7 +8,7 @@
       "trap_category": "concealed_generic",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile; disguised as open floor until detected."
+        "description": "Triggers when a creature enters the tile; disguised as open floor until detected. Exact effect is runtime-defined because MAngband's generic invisible trap feature has no fixed payload."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -22,7 +22,7 @@
       "effect_type": "mixed",
       "visibility_model": "disguised",
       "effect_tags": ["generic_trap_effect"],
-      "provenance_status": "verified"
+      "provenance_status": "ironhell_specific"
     },
     {
       "id": "trap_door",
@@ -31,7 +31,7 @@
       "trap_category": "transition",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and drops it to a lower level."
+        "description": "Triggers when a creature enters the tile, deals 2d8 falling damage unless feather fall applies, and moves the player one level down."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -44,7 +44,7 @@
       },
       "effect_type": "level_transition",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["level_transition"],
+      "effect_tags": ["level_transition", "fall_damage_2d8", "feather_fall_prevention"],
       "provenance_status": "verified"
     },
     {
@@ -54,7 +54,7 @@
       "trap_category": "pit",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and falls into the pit."
+        "description": "Triggers when a creature enters the tile and deals 2d6 falling damage unless feather fall applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -67,7 +67,7 @@
       },
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage"],
+      "effect_tags": ["fall_damage_2d6", "feather_fall_prevention"],
       "provenance_status": "verified"
     },
     {
@@ -77,7 +77,7 @@
       "trap_category": "pit",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and falls onto spikes."
+        "description": "Triggers when a creature enters the tile, deals 2d6 damage, and has a 50% chance to double damage and apply a random cut unless feather fall applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -90,7 +90,7 @@
       },
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage", "piercing_damage"],
+      "effect_tags": ["fall_damage_2d6", "piercing_damage", "random_cut", "feather_fall_prevention"],
       "provenance_status": "verified"
     },
     {
@@ -100,7 +100,7 @@
       "trap_category": "pit",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, falling onto poisoned spikes."
+        "description": "Triggers when a creature enters the tile, deals 2d6 damage, and on a 50% spike hit doubles damage, applies a random cut, and applies poison damage unless resisted."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -113,7 +113,7 @@
       },
       "effect_type": "mixed",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage", "poison_status"],
+      "effect_tags": ["fall_damage_2d6", "poison_status", "random_cut", "poison_resistance", "feather_fall_prevention"],
       "provenance_status": "verified"
     },
     {
@@ -123,7 +123,7 @@
       "trap_category": "rune",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, summoning hostile monsters."
+        "description": "Triggers when a creature enters the tile, removes the trap, and summons 2+1d3 monsters at the current dungeon level."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -136,7 +136,7 @@
       },
       "effect_type": "summon",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["monster_summon"],
+      "effect_tags": ["monster_summon_2_plus_1d3", "consumable_trap"],
       "provenance_status": "verified"
     },
     {
@@ -146,7 +146,7 @@
       "trap_category": "rune",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, teleporting it elsewhere."
+        "description": "Triggers when a creature enters the tile and teleports the player up to 100 squares away."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -159,7 +159,7 @@
       },
       "effect_type": "teleport",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["forced_teleport"],
+      "effect_tags": ["forced_teleport_100"],
       "provenance_status": "verified"
     },
     {
@@ -169,7 +169,7 @@
       "trap_category": "elemental_spot",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, igniting a burst of fire."
+        "description": "Triggers when a creature enters the tile and deals 4d6 fire damage."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -182,7 +182,7 @@
       },
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fire_damage"],
+      "effect_tags": ["fire_damage_4d6", "fire_resistance"],
       "provenance_status": "verified"
     },
     {
@@ -192,7 +192,7 @@
       "trap_category": "elemental_spot",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, releasing a burst of acid."
+        "description": "Triggers when a creature enters the tile and deals 4d6 acid damage."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -205,7 +205,7 @@
       },
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["acid_damage"],
+      "effect_tags": ["acid_damage_4d6", "acid_resistance"],
       "provenance_status": "verified"
     },
     {
@@ -215,7 +215,7 @@
       "trap_category": "dart",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, firing a dart that slows the target."
+        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and slowing the player for 20+1d20 turns."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -228,7 +228,7 @@
       },
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["slow_status"],
+      "effect_tags": ["physical_damage_1d4", "slow_status_20_plus_1d20", "dart_hit_125"],
       "provenance_status": "verified"
     },
     {
@@ -238,7 +238,7 @@
       "trap_category": "dart",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, firing a dart that drains strength."
+        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining strength."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -251,7 +251,7 @@
       },
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["strength_drain"],
+      "effect_tags": ["physical_damage_1d4", "strength_drain", "dart_hit_125"],
       "provenance_status": "verified"
     },
     {
@@ -261,7 +261,7 @@
       "trap_category": "dart",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, firing a dart that drains dexterity."
+        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining dexterity."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -274,7 +274,7 @@
       },
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["dexterity_drain"],
+      "effect_tags": ["physical_damage_1d4", "dexterity_drain", "dart_hit_125"],
       "provenance_status": "verified"
     },
     {
@@ -284,7 +284,7 @@
       "trap_category": "dart",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, firing a dart that drains constitution."
+        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining constitution."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -297,7 +297,7 @@
       },
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["constitution_drain"],
+      "effect_tags": ["physical_damage_1d4", "constitution_drain", "dart_hit_125"],
       "provenance_status": "verified"
     },
     {
@@ -307,7 +307,7 @@
       "trap_category": "gas",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, releasing a blinding gas cloud."
+        "description": "Triggers when a creature enters the tile and applies blindness for 25+1d50 turns unless blindness resistance applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -320,7 +320,7 @@
       },
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["blind_status"],
+      "effect_tags": ["blind_status_25_plus_1d50", "blindness_resistance"],
       "provenance_status": "verified"
     },
     {
@@ -330,7 +330,7 @@
       "trap_category": "gas",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, releasing a confusing gas cloud."
+        "description": "Triggers when a creature enters the tile and applies confusion for 10+1d20 turns unless confusion resistance applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -343,7 +343,7 @@
       },
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["confuse_status"],
+      "effect_tags": ["confuse_status_10_plus_1d20", "confusion_resistance"],
       "provenance_status": "verified"
     },
     {
@@ -353,7 +353,7 @@
       "trap_category": "gas",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, releasing a poisonous gas cloud."
+        "description": "Triggers when a creature enters the tile and applies poison for 10+1d20 turns unless poison resistance applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -366,7 +366,7 @@
       },
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["poison_status"],
+      "effect_tags": ["poison_status_10_plus_1d20", "poison_resistance"],
       "provenance_status": "verified"
     },
     {
@@ -376,7 +376,7 @@
       "trap_category": "gas",
       "trigger_behavior": {
         "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, releasing a soporific gas cloud."
+        "description": "Triggers when a creature enters the tile and applies paralysis for 5+1d10 turns unless free action applies."
       },
       "detection_behavior": {
         "detection_model": "search_skill",
@@ -389,7 +389,7 @@
       },
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["sleep_status"],
+      "effect_tags": ["paralysis_status_5_plus_1d10", "free_action_prevention"],
       "provenance_status": "verified"
     }
   ]

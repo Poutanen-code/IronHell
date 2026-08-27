@@ -192,12 +192,14 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "AlterTerrain",
+          "action_id": "CreateItems",
           "parameters": {
-            "terrain_operation": "create_object",
-            "target_mode": "self",
-            "quality": "great",
-            "count": { "kind": "flat", "value": 1 }
+            "amount": {
+              "kind": "flat",
+              "value": 1
+            },
+            "quality": "artifact",
+            "placement_mode": "adjacent_floor"
           }
         }
       ]
@@ -467,7 +469,10 @@
           "parameters": {
             "enchantment_profile": "armor",
             "target_mode": "single_item",
-            "attempts": { "kind": "flat", "value": 1 }
+            "attempts": {
+              "kind": "flat",
+              "value": 1
+            }
           }
         }
       ]
@@ -493,7 +498,10 @@
           "parameters": {
             "enchantment_profile": "weapon_to_hit",
             "target_mode": "single_item",
-            "attempts": { "kind": "flat", "value": 1 }
+            "attempts": {
+              "kind": "flat",
+              "value": 1
+            }
           }
         }
       ]
@@ -519,7 +527,10 @@
           "parameters": {
             "enchantment_profile": "weapon_to_dam",
             "target_mode": "single_item",
-            "attempts": { "kind": "flat", "value": 1 }
+            "attempts": {
+              "kind": "flat",
+              "value": 1
+            }
           }
         }
       ]
@@ -549,7 +560,13 @@
           "parameters": {
             "enchantment_profile": "armor",
             "target_mode": "single_item",
-            "attempts": { "base": 2, "dice": { "count": 1, "sides": 3 } }
+            "attempts": {
+              "base": 2,
+              "dice": {
+                "count": 1,
+                "sides": 3
+              }
+            }
           }
         }
       ]
@@ -575,7 +592,11 @@
           "parameters": {
             "enchantment_profile": "weapon_both",
             "target_mode": "single_item",
-            "attempts": { "kind": "dice", "count": 1, "sides": 3 }
+            "attempts": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
+            }
           }
         }
       ]
@@ -1195,12 +1216,14 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "AlterTerrain",
+          "action_id": "CreateItems",
           "parameters": {
-            "terrain_operation": "create_object",
-            "target_mode": "self",
+            "amount": {
+              "kind": "flat",
+              "value": 1
+            },
             "quality": "good",
-            "count": { "kind": "flat", "value": 1 }
+            "placement_mode": "adjacent_floor"
           }
         }
       ]
@@ -1222,12 +1245,17 @@
       "provenance_status": "verified",
       "actions": [
         {
-          "action_id": "AlterTerrain",
+          "action_id": "CreateItems",
           "parameters": {
-            "terrain_operation": "create_object",
-            "target_mode": "self",
+            "amount": {
+              "base": 1,
+              "dice": {
+                "count": 1,
+                "sides": 2
+              }
+            },
             "quality": "great",
-            "count": { "base": 1, "dice": { "count": 1, "sides": 2 } }
+            "placement_mode": "adjacent_floor"
           }
         }
       ]

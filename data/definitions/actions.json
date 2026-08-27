@@ -291,7 +291,8 @@
         "rod",
         "staff",
         "monster_ability",
-        "monster_attack"
+        "monster_attack",
+        "trap"
       ],
       "parameter_contract": {
         "closed": true,
@@ -783,7 +784,8 @@
         "wand",
         "staff",
         "activation",
-        "monster_ability"
+        "monster_ability",
+        "trap"
       ],
       "parameter_contract": {
         "closed": true,
@@ -1186,6 +1188,7 @@
         "prayer",
         "scroll",
         "rod",
+        "trap",
         "monster_ability",
         "activation"
       ],
@@ -2712,19 +2715,147 @@
       }
     },
     {
+      "action_id": "CreateItems",
+      "name": "Create Items",
+      "description": "Creates one or more generated item instances according to a quality profile and placement rule.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": [
+        "scroll",
+        "staff",
+        "activation",
+        "monster_ability",
+        "treasure",
+        "death_drop"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "amount",
+            "description": "Number of generated items.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "quality",
+            "description": "Quality profile used during generation.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "worthless",
+              "bad",
+              "normal",
+              "good",
+              "great",
+              "artifact"
+            ]
+          },
+          {
+            "id": "placement_mode",
+            "description": "Where generated items are placed.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "self",
+              "death_location",
+              "target",
+              "point",
+              "adjacent_floor"
+            ]
+          },
+          {
+            "id": "item_selection",
+            "description": "Generation source pool.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "random",
+              "treasure",
+              "equipment",
+              "weapon",
+              "armor",
+              "consumable"
+            ]
+          },
+          {
+            "id": "origin_depth",
+            "description": "Optional depth override for generation.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          },
+          {
+            "id": "allow_artifacts",
+            "description": "Whether artifact selection is permitted.",
+            "value_type": "boolean",
+            "required": false
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action for acquirement, treasure creation, artifact creation, monster loot drops, and future reward generation systems."
+      }
+    },
+    {
       "action_id": "BreathDamage",
       "name": "Breath Damage",
       "description": "Projects directional breath damage with explicit radius and attenuation semantics.",
       "category": "damage",
       "confidence": "high",
-      "allowed_source_families": ["spell", "monster_ability", "activation"],
+      "allowed_source_families": [
+        "spell",
+        "monster_ability",
+        "activation"
+      ],
       "parameter_contract": {
         "closed": true,
         "parameters": [
-          { "id": "damage_type", "description": "Damage channel delivered by the breath.", "value_type": "enum", "required": true, "allowed_values": ["fire", "cold", "acid", "lightning", "poison", "nether", "sound", "chaos", "disenchantment", "nexus", "shard", "dark"] },
-          { "id": "amount", "description": "Typed breath damage expression.", "value_type": "structured_amount", "required": true },
-          { "id": "direction", "description": "Direction token for the breath projection.", "value_type": "token", "required": true },
-          { "id": "radius", "description": "Maximum breath radius in tiles.", "value_type": "integer", "required": true, "minimum": 1 }
+          {
+            "id": "damage_type",
+            "description": "Damage channel delivered by the breath.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "fire",
+              "cold",
+              "acid",
+              "lightning",
+              "poison",
+              "nether",
+              "sound",
+              "chaos",
+              "disenchantment",
+              "nexus",
+              "shard",
+              "dark"
+            ]
+          },
+          {
+            "id": "amount",
+            "description": "Typed breath damage expression.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "direction",
+            "description": "Direction token for the breath projection.",
+            "value_type": "token",
+            "required": true
+          },
+          {
+            "id": "radius",
+            "description": "Maximum breath radius in tiles.",
+            "value_type": "integer",
+            "required": true,
+            "minimum": 1
+          }
         ]
       },
       "validation": {
