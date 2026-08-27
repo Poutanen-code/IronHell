@@ -140,7 +140,11 @@
           "action_id": "SummonEntities",
           "parameters": {
             "summon_family": "monster",
-            "count": 3,
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
+            },
             "target_mode": "self"
           }
         }
@@ -167,7 +171,11 @@
           "action_id": "SummonEntities",
           "parameters": {
             "summon_family": "undead",
-            "count": 3,
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
+            },
             "target_mode": "self"
           }
         }
@@ -976,7 +984,10 @@
             "status_id": "protected_from_evil",
             "duration": {
               "base": 0,
-              "dice": { "count": 1, "sides": 25 },
+              "dice": {
+                "count": 1,
+                "sides": 25
+              },
               "level_multiplier": 3
             },
             "target_mode": "self"
