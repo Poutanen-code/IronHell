@@ -159,6 +159,23 @@
         "condition": { "$ref": "#/$defs/Condition" }
       }
     },
+    "ActionReference": {
+      "description": "A JSON-driven reference to a canonical action. Action-specific parameter contracts are validated against actions.json.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action_id"],
+      "properties": {
+        "action_id": { "type": "string", "minLength": 1 },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "Actions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ActionReference" }
+    },
     "Effects": {
       "type": "array",
       "items": { "$ref": "#/$defs/EffectDescriptor" }

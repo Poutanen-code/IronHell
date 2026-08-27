@@ -170,6 +170,7 @@
         "potion",
         "rod",
         "staff",
+        "wand",
         "activation"
       ],
       "parameter_contract": {
@@ -1636,6 +1637,12 @@
               "undead",
               "demon"
             ]
+          },
+          {
+            "id": "direction",
+            "description": "Direction token for an aimed fear effect.",
+            "value_type": "token",
+            "required": false
           }
         ]
       },
@@ -2203,7 +2210,8 @@
       "confidence": "medium",
       "allowed_source_families": [
         "spell",
-        "monster_ability"
+        "monster_ability",
+        "wand"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2516,7 +2524,8 @@
       "category": "control",
       "confidence": "high",
       "allowed_source_families": [
-        "activation"
+        "activation",
+        "wand"
       ],
       "parameter_contract": {
         "closed": true,
