@@ -2,394 +2,569 @@
   "schema_version": 1,
   "traps": [
     {
-      "id": "invisible_trap",
-      "name": "invisible trap",
-      "source_feature_id": "invisible_trap",
-      "trap_category": "concealed_generic",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile; disguised as open floor until detected. Exact effect is runtime-defined because MAngband's generic invisible trap feature has no fixed payload."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
-      "effect_type": "mixed",
-      "visibility_model": "disguised",
-      "effect_tags": ["generic_trap_effect"],
-      "provenance_status": "ironhell_specific"
-    },
-    {
       "id": "trap_door",
       "name": "trap door",
-      "source_feature_id": "trap_door",
+      "allowed_sources": [
+        "floor"
+      ],
       "trap_category": "transition",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, deals 2d8 falling damage unless feather fall applies, and moves the player one level down."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile, deals 2d8 falling damage unless feather fall applies, and moves the player one level down.",
       "effect_type": "level_transition",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["level_transition", "fall_damage_2d8", "feather_fall_prevention"],
+      "effect_tags": [
+        "feather_fall_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 8
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "forced_level_shift"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "pit",
       "name": "pit",
-      "source_feature_id": "pit",
+      "allowed_sources": [
+        "floor"
+      ],
       "trap_category": "pit",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and deals 2d6 falling damage unless feather fall applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and deals 2d6 falling damage unless feather fall applies.",
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage_2d6", "feather_fall_prevention"],
+      "effect_tags": [
+        "feather_fall_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 6
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "spiked_pit",
       "name": "spiked pit",
-      "source_feature_id": "spiked_pit",
+      "allowed_sources": [
+        "floor"
+      ],
       "trap_category": "pit",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, deals 2d6 damage, and has a 50% chance to double damage and apply a random cut unless feather fall applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile, deals 2d6 damage, and has a 50% chance to double damage and apply a random cut unless feather fall applies.",
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage_2d6", "piercing_damage", "random_cut", "feather_fall_prevention"],
+      "effect_tags": [
+        "feather_fall_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 6
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "cut",
+            "duration": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 5
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "poison_pit",
       "name": "poison pit",
-      "source_feature_id": "poison_pit",
+      "allowed_sources": [
+        "floor"
+      ],
       "trap_category": "pit",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, deals 2d6 damage, and on a 50% spike hit doubles damage, applies a random cut, and applies poison damage unless resisted."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile, deals 2d6 damage, and on a 50% spike hit doubles damage, applies a random cut, and applies poison damage unless resisted.",
       "effect_type": "mixed",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fall_damage_2d6", "poison_status", "random_cut", "poison_resistance", "feather_fall_prevention"],
+      "effect_tags": [
+        "feather_fall_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 6
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "cut",
+            "duration": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 5
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "poisoned",
+            "duration": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 5
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "summon_rune",
       "name": "summoning rune",
-      "source_feature_id": "summon_rune",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "rune",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile, removes the trap, and summons 2+1d3 monsters at the current dungeon level."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile, removes the trap, and summons 2+1d3 monsters at the current dungeon level.",
       "effect_type": "summon",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["monster_summon_2_plus_1d3", "consumable_trap"],
+      "effect_tags": [
+        "consumable_trap"
+      ],
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "monster",
+            "amount": {
+              "base": 2,
+              "dice": {
+                "count": 1,
+                "sides": 3
+              }
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "teleport_rune",
       "name": "teleport rune",
-      "source_feature_id": "teleport_rune",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "rune",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and teleports the player up to 100 squares away."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and teleports the player up to 100 squares away.",
       "effect_type": "teleport",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["forced_teleport_100"],
+      "effect_tags": [
+        "forced_teleport_100"
+      ],
+      "actions": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 100,
+            "teleport_mode": "teleport"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "fire_spot",
       "name": "fire trap",
-      "source_feature_id": "fire_spot",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "elemental_spot",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and deals 4d6 fire damage."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and deals 4d6 fire damage.",
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["fire_damage_4d6", "fire_resistance"],
+      "effect_tags": [
+        "fire_resistance"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 6
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "acid_spot",
       "name": "acid trap",
-      "source_feature_id": "acid_spot",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "elemental_spot",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and deals 4d6 acid damage."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and deals 4d6 acid damage.",
       "effect_type": "damage",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["acid_damage_4d6", "acid_resistance"],
+      "effect_tags": [
+        "acid_resistance"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "dice",
+              "count": 4,
+              "sides": 6
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "dart_slow",
-      "name": "dart trap (slow)",
-      "source_feature_id": "dart_slow",
+      "name": "dart trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "dart",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and slowing the player for 20+1d20 turns."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and slowing the player for 20+1d20 turns.",
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["physical_damage_1d4", "slow_status_20_plus_1d20", "dart_hit_125"],
+      "effect_tags": [
+        "dart_hit_125"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "slow",
+            "duration": {
+              "base": 20,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "dart_strength",
-      "name": "dart trap (strength)",
-      "source_feature_id": "dart_strength",
+      "name": "dart trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "dart",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining strength."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining strength.",
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["physical_damage_1d4", "strength_drain", "dart_hit_125"],
+      "effect_tags": [
+        "dart_hit_125"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "strength",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "dart_dexterity",
-      "name": "dart trap (dexterity)",
-      "source_feature_id": "dart_dexterity",
+      "name": "dart trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "dart",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining dexterity."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining dexterity.",
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["physical_damage_1d4", "dexterity_drain", "dart_hit_125"],
+      "effect_tags": [
+        "dart_hit_125"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "dexterity",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "dart_constitution",
-      "name": "dart trap (constitution)",
-      "source_feature_id": "dart_constitution",
+      "name": "dart trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "dart",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining constitution."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers on a successful 125-power dart hit, dealing 1d4 damage and draining constitution.",
       "effect_type": "stat_drain",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["physical_damage_1d4", "constitution_drain", "dart_hit_125"],
+      "effect_tags": [
+        "dart_hit_125"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
+            },
+            "target_mode": "triggering_actor"
+          }
+        },
+        {
+          "action_id": "ModifyAttribute",
+          "parameters": {
+            "scope": "single_stat",
+            "stat_id": "constitution",
+            "operation": "decrease",
+            "modification_mode": "restorable",
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "gas_blind",
-      "name": "gas trap (blind)",
-      "source_feature_id": "gas_blind",
+      "name": "gas trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "gas",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and applies blindness for 25+1d50 turns unless blindness resistance applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and applies blindness for 25+1d50 turns unless blindness resistance applies.",
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["blind_status_25_plus_1d50", "blindness_resistance"],
+      "effect_tags": [
+        "blindness_resistance"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": {
+              "base": 25,
+              "dice": {
+                "count": 1,
+                "sides": 50
+              }
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "gas_confuse",
-      "name": "gas trap (confuse)",
-      "source_feature_id": "gas_confuse",
+      "name": "gas trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "gas",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and applies confusion for 10+1d20 turns unless confusion resistance applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and applies confusion for 10+1d20 turns unless confusion resistance applies.",
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["confuse_status_10_plus_1d20", "confusion_resistance"],
+      "effect_tags": [
+        "confusion_resistance"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "confused",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "gas_poison",
-      "name": "gas trap (poison)",
-      "source_feature_id": "gas_poison",
+      "name": "gas trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "gas",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and applies poison for 10+1d20 turns unless poison resistance applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and applies poison for 10+1d20 turns unless poison resistance applies.",
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["poison_status_10_plus_1d20", "poison_resistance"],
+      "effect_tags": [
+        "poison_resistance"
+      ],
+      "actions": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "poisoned",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 20
+              }
+            },
+            "target_mode": "triggering_actor"
+          }
+        }
+      ],
       "provenance_status": "verified"
     },
     {
       "id": "gas_sleep",
-      "name": "gas trap (sleep)",
-      "source_feature_id": "gas_sleep",
+      "name": "gas trap",
+      "allowed_sources": [
+        "floor",
+        "chest"
+      ],
       "trap_category": "gas",
-      "trigger_behavior": {
-        "trigger_type": "on_enter",
-        "description": "Triggers when a creature enters the tile and applies paralysis for 5+1d10 turns unless free action applies."
-      },
-      "detection_behavior": {
-        "detection_model": "search_skill",
-        "passive_search_applies": true,
-        "active_detection_applies": true
-      },
-      "disarm_behavior": {
-        "disarm_model": "skill_check",
-        "skill": "disarming"
-      },
+      "description": "Triggers when a creature enters the tile and applies paralysis for 5+1d10 turns unless free action applies.",
       "effect_type": "status",
       "visibility_model": "hidden_until_detected",
-      "effect_tags": ["paralysis_status_5_plus_1d10", "free_action_prevention"],
+      "effect_tags": [
+        "free_action_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ParalyzeControl",
+          "parameters": {
+            "target_mode": "triggering_actor",
+            "duration": {
+              "base": 5,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            }
+          }
+        }
+      ],
       "provenance_status": "verified"
     }
   ]

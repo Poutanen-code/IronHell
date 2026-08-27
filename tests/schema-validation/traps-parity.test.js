@@ -61,6 +61,34 @@ function assertActionContract(actionId) {
   assert.equal(new Set(parameterIds).size, parameterIds.length, `${actionId} has duplicate parameter IDs`);
 }
 
+function assertTrapActions(trap) {
+  if (trap.provenance_status === "ironhell_specific") {
+    assert.deepEqual(trap.actions || [], [], `${trap.id} must remain a generic non-executable trap`);
+    return;
+  }
+
+  assert.ok(Array.isArray(trap.actions) && trap.actions.length > 0, `${trap.id} must define executable actions`);
+  for (const actionRef of trap.actions) {
+    const action = actionById.get(actionRef.action_id);
+    assert.ok(action, `${trap.id} references unknown action '${actionRef.action_id}'`);
+    assert.ok(action.allowed_source_families.includes("trap"), `${actionRef.action_id} does not allow trap sources`);
+
+    const parameters = actionRef.parameters || {};
+    const declared = new Map(action.parameter_contract.parameters.map((parameter) => [parameter.id, parameter]));
+    for (const [parameterId, value] of Object.entries(parameters)) {
+      const parameter = declared.get(parameterId);
+      assert.ok(parameter, `${trap.id}: undeclared parameter '${parameterId}'`);
+      if (parameter.allowed_values) {
+        const values = Array.isArray(value) ? value : [value];
+        for (const item of values) assert.ok(parameter.allowed_values.includes(item), `${trap.id}: invalid ${parameterId} value '${item}'`);
+      }
+    }
+    for (const parameter of action.parameter_contract.parameters) {
+      if (parameter.required) assert.notEqual(parameters[parameter.id], undefined, `${trap.id}: missing required parameter '${parameter.id}'`);
+    }
+  }
+}
+
 describe("MAngband 1.5.3 trap parity", () => {
   it("passes startup schema validation", () => {
     assert.equal(validateTraps(trapsData), true, JSON.stringify(validateTraps.errors, null, 2));
@@ -78,9 +106,8 @@ describe("MAngband 1.5.3 trap parity", () => {
   });
 
   it("maps every trap to existing canonical trap-capable actions", () => {
-    for (const trapId of expectedMangbandTrapIds) {
-      for (const actionId of canonicalTrapActions[trapId]) assertActionContract(actionId);
-    }
+    for (const actionId of new Set(Object.values(canonicalTrapActions).flat())) assertActionContract(actionId);
+    for (const trap of trapsData.traps) assertTrapActions(trap);
   });
 
   it("keeps custom and chest integration scope explicit", () => {
@@ -88,6 +115,7 @@ describe("MAngband 1.5.3 trap parity", () => {
       trapsData.traps.filter((trap) => trap.provenance_status === "ironhell_specific").map((trap) => trap.id),
       expectedCustomTrapIds
     );
+    for (const trap of trapsData.traps) assert.deepEqual(trap.allowed_sources, ["floor", "chest"]);
     assert.ok(trapsData.traps.some((trap) => trap.effect_tags.includes("fall_damage_2d6")));
     assert.ok(trapsData.traps.some((trap) => trap.effect_tags.includes("paralysis_status_5_plus_1d10")));
   });

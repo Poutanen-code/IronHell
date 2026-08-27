@@ -375,7 +375,8 @@
             "allowed_values": [
               "self",
               "target",
-              "ally"
+              "ally",
+              "triggering_actor"
             ]
           }
         ]
@@ -2176,7 +2177,8 @@
             "required": true,
             "allowed_values": [
               "self",
-              "target"
+              "target",
+              "triggering_actor"
             ]
           }
         ]
@@ -2547,7 +2549,8 @@
               "self",
               "aimed",
               "target",
-              "area"
+              "area",
+              "triggering_actor"
             ]
           }
         ]
@@ -2801,6 +2804,73 @@
       "provenance_status": "derived",
       "provenance": {
         "summary": "Canonical action for acquirement, treasure creation, artifact creation, monster loot drops, and future reward generation systems."
+      }
+    },
+    {
+      "action_id": "CreateGold",
+      "name": "Create Gold",
+      "description": "Creates one or more gold quantities using a generation policy and places the resulting gold at a location.",
+      "category": "item",
+      "confidence": "high",
+      "allowed_source_families": [
+        "scroll",
+        "activation",
+        "treasure",
+        "death_drop",
+        "chest",
+        "monster_ability"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "amount",
+            "description": "Gold quantity generated.",
+            "value_type": "structured_amount",
+            "required": true
+          },
+          {
+            "id": "placement_mode",
+            "description": "Where generated gold is placed.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "self",
+              "death_location",
+              "target",
+              "point",
+              "adjacent_floor"
+            ]
+          },
+          {
+            "id": "quality",
+            "description": "Optional treasure quality modifier used by runtime gold generation.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "poor",
+              "normal",
+              "good",
+              "great"
+            ]
+          },
+          {
+            "id": "origin_depth",
+            "description": "Optional depth override for treasure scaling.",
+            "value_type": "integer",
+            "required": false,
+            "minimum": 0
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action for chest treasure, monster gold drops, floor treasure generation, treasure vault rewards, and future quest rewards."
       }
     },
     {
