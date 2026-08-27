@@ -39,8 +39,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_blind\"}"
+      ]
     },
     {
       "id": "scroll_of_aggravate_monster",
@@ -196,11 +195,12 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "create_object",
-            "target_mode": "self"
+            "target_mode": "self",
+            "quality": "great",
+            "count": { "kind": "flat", "value": 1 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"great\"; AlterTerrain.count=1"
+      ]
     },
     {
       "id": "scroll_of_trap_creation",
@@ -466,11 +466,11 @@
           "action_id": "EnchantEquipment",
           "parameters": {
             "enchantment_profile": "armor",
-            "target_mode": "single_item"
+            "target_mode": "single_item",
+            "attempts": { "kind": "flat", "value": 1 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+      ]
     },
     {
       "id": "scroll_of_enchant_weapon_to_hit",
@@ -492,11 +492,11 @@
           "action_id": "EnchantEquipment",
           "parameters": {
             "enchantment_profile": "weapon_to_hit",
-            "target_mode": "single_item"
+            "target_mode": "single_item",
+            "attempts": { "kind": "flat", "value": 1 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+      ]
     },
     {
       "id": "scroll_of_enchant_weapon_to_dam",
@@ -518,11 +518,11 @@
           "action_id": "EnchantEquipment",
           "parameters": {
             "enchantment_profile": "weapon_to_dam",
-            "target_mode": "single_item"
+            "target_mode": "single_item",
+            "attempts": { "kind": "flat", "value": 1 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts=1"
+      ]
     },
     {
       "id": "scroll_of_enchant_armor_heavy",
@@ -548,11 +548,11 @@
           "action_id": "EnchantEquipment",
           "parameters": {
             "enchantment_profile": "armor",
-            "target_mode": "single_item"
+            "target_mode": "single_item",
+            "attempts": { "base": 2, "dice": { "count": 1, "sides": 3 } }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts_base=2; EnchantEquipment.attempts_dice={\"count\":1,\"sides\":3}"
+      ]
     },
     {
       "id": "scroll_of_enchant_weapon_heavy",
@@ -574,11 +574,11 @@
           "action_id": "EnchantEquipment",
           "parameters": {
             "enchantment_profile": "weapon_both",
-            "target_mode": "single_item"
+            "target_mode": "single_item",
+            "attempts": { "kind": "dice", "count": 1, "sides": 3 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: EnchantEquipment.attempts_dice={\"count\":1,\"sides\":3}"
+      ]
     },
     {
       "id": "scroll_of_recharging",
@@ -956,11 +956,11 @@
           "action_id": "ConfuseControl",
           "parameters": {
             "target_mode": "target",
-            "potency": 1
+            "potency": 1,
+            "trigger_mode": "next_melee_hit"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ConfuseControl.condition={\"on_next_melee_hit\":true}"
+      ]
     },
     {
       "id": "scroll_of_protection_from_evil",
@@ -1044,7 +1044,7 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "destroy_trap_or_door",
-            "target_mode": "direction"
+            "target_mode": "touch"
           }
         }
       ]
@@ -1088,8 +1088,7 @@
             "target_mode": "self"
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: ApplyStatus.condition={\"requires_absence\":\"res_blind\"}"
+      ]
     },
     {
       "id": "scroll_of_dispel_undead",
@@ -1199,11 +1198,12 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "create_object",
-            "target_mode": "self"
+            "target_mode": "self",
+            "quality": "good",
+            "count": { "kind": "flat", "value": 1 }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"good\"; AlterTerrain.count=1"
+      ]
     },
     {
       "id": "scroll_of_great_acquirement",
@@ -1225,11 +1225,12 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "create_object",
-            "target_mode": "self"
+            "target_mode": "self",
+            "quality": "great",
+            "count": { "base": 1, "dice": { "count": 1, "sides": 2 } }
           }
         }
-      ],
-      "notes": "Unsupported action parameters moved out of contract: AlterTerrain.quality=\"great\"; AlterTerrain.count=1; AlterTerrain.count_dice={\"count\":1,\"sides\":2}"
+      ]
     },
     {
       "id": "scroll_of_life",
@@ -1271,8 +1272,7 @@
       ],
       "description": "It creates a new house starting at the House Foundation Stone you are standing at, expanding in all directions until no more Foundation Stones are found.",
       "provenance_status": "verified",
-      "actions": [],
-      "notes": "Multiplayer-only: creates a player house at the marked Foundation Stone. No standard effect type."
+      "actions": []
     }
   ]
 }

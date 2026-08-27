@@ -138,7 +138,7 @@ describe("actions.json", () => {
     "BallDamage",
     "HealHP",
     "CureStatus",
-    "ApplyTimedBuff",
+    "ApplyStatus",
     "ApplyOpposeElements",
     "TeleportSelf",
     "LightArea",
@@ -170,6 +170,7 @@ describe("actions.json", () => {
     "RemoveCurse",
     "ModifyResourceMeter",
     "TransformEntity",
+    "BreathDamage",
   ];
 
   it("validates against actions.schema.json", () => {

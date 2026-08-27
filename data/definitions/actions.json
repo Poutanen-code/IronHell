@@ -663,6 +663,12 @@
               "single_item",
               "equipped_item"
             ]
+          },
+          {
+            "id": "attempts",
+            "description": "Number of enchantment attempts, represented as a typed amount.",
+            "value_type": "structured_amount",
+            "required": false
           }
         ]
       },
@@ -844,6 +850,7 @@
       "allowed_source_families": [
         "prayer",
         "staff",
+        "scroll",
         "activation"
       ],
       "parameter_contract": {
@@ -1244,6 +1251,7 @@
         "spell",
         "prayer",
         "staff",
+        "scroll",
         "activation"
       ],
       "parameter_contract": {
@@ -1447,6 +1455,7 @@
         "wand",
         "rod",
         "staff",
+        "scroll",
         "activation"
       ],
       "parameter_contract": {
@@ -1510,6 +1519,22 @@
               "traps",
               "doors"
             ]
+          },
+          {
+            "id": "quality",
+            "description": "Quality of an object created by create_object.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "good",
+              "great"
+            ]
+          },
+          {
+            "id": "count",
+            "description": "Number of objects created by create_object.",
+            "value_type": "structured_amount",
+            "required": false
           }
         ]
       },
@@ -1534,6 +1559,7 @@
         "wand",
         "monster_ability",
         "trap",
+        "scroll",
         "activation"
       ],
       "parameter_contract": {
@@ -1576,6 +1602,15 @@
             "description": "Direction token for aimed confusion effects.",
             "value_type": "token",
             "required": false
+          },
+          {
+            "id": "trigger_mode",
+            "description": "Defers confusion until the actor's next melee hit instead of resolving immediately.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "next_melee_hit"
+            ]
           }
         ]
       },
@@ -1711,6 +1746,7 @@
         "spell",
         "prayer",
         "staff",
+        "scroll",
         "activation"
       ],
       "parameter_contract": {
@@ -1799,6 +1835,7 @@
       "allowed_source_families": [
         "monster_ability",
         "staff",
+        "scroll",
         "activation",
         "trap"
       ],
