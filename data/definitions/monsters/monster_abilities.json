@@ -1,0 +1,1579 @@
+{
+  "schema_version": 1,
+  "_meta": {
+    "description": "Canonical Gameplay Architecture V2 ability definitions for every monster ability type referenced by data/definitions/monsters/monsters.json. Each ability resolves to one or more canonical Actions from data/definitions/actions.json. Monsters reference these by ability id; the monster-level ability_cooldown_ticks controls cast cadence, not the payload.",
+    "architecture": "Source (monster) -> Policy (spell_frequency, ability_cooldown_ticks, range, saving throw) -> Actions (this file) -> Statuses (data/definitions/statuses.json)",
+    "level_variable": "All monster-scaled formulas use 'rlev', the monster's native depth/level (matches MAngband rlev = max(native depth, 1)), resolved by the runtime at cast time.",
+    "amount_kinds": {
+      "flat": "Existing kind. { value }.",
+      "dice": "Existing kind. { count, sides }.",
+      "monster_level_formula": "New kind proposed by this file. Fixed dice plus a level-scaled additive bonus: total = roll(base_dice) + flat_base + floor(rlev * level_multiplier) or floor(rlev / level_divisor). Fields: base_dice { count, sides } (optional), flat_base (optional, default 0), level_multiplier (optional, decimal), level_divisor (optional, integer; use instead of level_multiplier when the MAngband formula is an exact fraction such as rlev/3).",
+      "monster_level_scaled_dice": "New kind proposed by this file. The dice shape itself scales with monster level, matching formulas like 1d(rlev*3)+15 or (1+rlev/7)d12. Fields: count (optional base count, default 1), count_level_divisor (optional, adds floor(rlev / divisor) to count), sides (optional base sides), sides_level_multiplier (optional decimal, sides = floor(rlev * multiplier)), sides_level_divisor (optional integer, sides = floor(rlev / divisor)), flat_bonus (optional, added after the roll).",
+      "monster_hp_fraction": "New kind proposed by this file. Matches MAngband breath damage: total = min(floor(current_hp / divisor), max). Fields: divisor, max.",
+      "future_reuse_note": "These three kinds are intentionally caster-agnostic in shape. A future 'caster_level_formula' kind for player spells (base + level_multiplier against caster level instead of rlev) can reuse the same {base_dice/base, level_multiplier/level_divisor} fields with a different level_variable binding."
+    },
+    "unresolved_parity_questions": [
+      "haste_self: MAngband HASTE targets the caster itself, but ModifyMonsterSpeed.target_mode only allows aimed/all_in_los. Proposing a new 'self' target_mode value.",
+      "drain_mana: MAngband DRAIN_MANA drains the player's mana pool and heals the caster for 6x the amount drained. No existing action models a targeted resource drain with a linked caster heal. Proposing a new DrainResource action.",
+      "shriek: SHRIEK aggravates every monster on the level. AggravateMonsters exists but its allowed_source_families does not include monster_ability. Proposing that extension.",
+      "forget: MAngband FORGET erases the player's item/map knowledge. No existing action models knowledge loss. Proposing a new ForgetKnowledge action.",
+      "bolt_ice, bolt_water, ball_water: no 'ice' or 'water' damage_type exists on BoltDamage/BallDamage. Approximated as cold (ice) and physical (water) with provenance_status unresolved.",
+      "bolt_plasma, breath_plasma: no 'plasma' damage_type exists on any projectile/breath action. Approximated as fire with provenance_status unresolved.",
+      "breath_light: BreathDamage has no 'light' channel (only Bolt/BallDamage do). Modeled via BallDamage as a radius substitute; breath attenuation/direction semantics are not preserved.",
+      "breath_confusion: BreathDamage has no 'confusion' channel. Modeled as ApplyStatus(confused) only; the MAngband hp/6-cap400 damage component is not represented.",
+      "breath_inertia: BreathDamage has no 'inertia' channel. Modeled as ModifyMonsterSpeed(slow) only; the MAngband hp/6-cap200 damage component is not represented.",
+      "breath_gravity, breath_time, breath_wall: no matching damage_type exists on BreathDamage for gravity, time, or force/wall channels. Left as high-level placeholders using the nearest exotic channel (nexus/chaos) with provenance_status unresolved pending a catalog decision; do not treat as verified.",
+      "summon_kin, summon_hydra, summon_angel, summon_wraith: SummonEntities.summon_family has no kin/hydra/angel/wraith value. Approximated with the nearest existing family and flagged unresolved.",
+      "summon_hi_undead, summon_hi_dragon, summon_hi_demon: SummonEntities has no tier concept to distinguish 'greater' summons from their base family. Proposing an optional 'tier' parameter (normal|greater).",
+      "cause_4 bleed component: MAngband CAUSE_4 adds 10d10 cut/bleed damage. No 'cut' or 'bleeding' status exists in statuses.json, so only the direct damage action is modeled.",
+      "mind_blast / brain_smash secondary statuses: modeled with the best-fit existing statuses (confused, blinded, paralyzed) plus ModifyMonsterSpeed(slow) for brain_smash; exact MAngband save-per-effect semantics are policy-layer concerns not modeled here."
+    ]
+  },
+  "abilities": [
+    {
+      "id": "arrow_1",
+      "name": "Arrow (light)",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband ARROW_1: 1d6 physical",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "dice", "count": 1, "sides": 6 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arrow_2",
+      "name": "Arrow volley",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband ARROW_2: 3d6 physical",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "dice", "count": 3, "sides": 6 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arrow_3",
+      "name": "Arrow (heavy)",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband ARROW_3: 5d6 physical",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "dice", "count": 5, "sides": 6 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arrow_4",
+      "name": "Arrow (missiles)",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband ARROW_4: 7d6 physical",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "dice", "count": 7, "sides": 6 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_acid",
+      "name": "Acid ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_ACID: 1d(rlev*3)+15",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 3, "flat_bonus": 15 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_cold",
+      "name": "Cold ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_COLD: 1d(rlev*1.5)+10",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 1.5, "flat_bonus": 10 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_darkness",
+      "name": "Darkness ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_DARK: rlev*5 + 10d10",
+      "notes": "Distinct from the 'darkness' ability: this deals dark damage, 'darkness' only unlights an area.",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "dark",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 10, "sides": 10 }, "level_multiplier": 5 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_elec",
+      "name": "Lightning ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_ELEC: 1d(rlev*1.5)+8",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 1.5, "flat_bonus": 8 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_fire",
+      "name": "Fire ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_FIRE: 1d(rlev*3.5)+10",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 3.5, "flat_bonus": 10 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_mana",
+      "name": "Mana ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_MANA: rlev*5 + 10d10",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "mana",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 10, "sides": 10 }, "level_multiplier": 5 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_nether",
+      "name": "Nether ball",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BA_NETH: 50 + 10d10 + rlev",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "nether",
+            "amount": { "kind": "monster_level_formula", "flat_base": 50, "base_dice": { "count": 10, "sides": 10 }, "level_multiplier": 1 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_poison",
+      "name": "Stinking cloud",
+      "category": "ball",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband BA_POIS: 12d2",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": { "kind": "dice", "count": 12, "sides": 2 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ball_water",
+      "name": "Water ball",
+      "category": "ball",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BA_WATE: 1d(rlev*2.5)+50",
+      "notes": "No 'water' damage_type exists on BallDamage. Approximated as physical pending a catalog decision.",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 2.5, "flat_bonus": 50 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blind",
+      "name": "Blind",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband BLIND: 12+d4 turns, resisted by resist_blind or saving throw",
+      "actions": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": { "base": 12, "dice": { "count": 1, "sides": 4 } },
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blink",
+      "name": "Blink",
+      "category": "buff",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband BLINK: short-range teleport, range 10",
+      "actions": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 10,
+            "teleport_mode": "phase"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_acid",
+      "name": "Acid bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_ACID: 7d8 + rlev/3",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 7, "sides": 8 }, "level_divisor": 3 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_cold",
+      "name": "Frost bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_COLD: 6d8 + rlev/3",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 6, "sides": 8 }, "level_divisor": 3 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_elec",
+      "name": "Lightning bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_ELEC: 4d8 + rlev/3",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 4, "sides": 8 }, "level_divisor": 3 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_fire",
+      "name": "Fire bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_FIRE: 9d8 + rlev/3",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 9, "sides": 8 }, "level_divisor": 3 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_ice",
+      "name": "Ice bolt",
+      "category": "bolt",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BO_ICEE: 6d6 + rlev",
+      "notes": "No distinct 'ice' damage_type exists on BoltDamage. Approximated as cold.",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 6, "sides": 6 }, "level_multiplier": 1 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_mana",
+      "name": "Mana bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_MANA: 1d(rlev*3.5)+50",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "mana",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "sides_level_multiplier": 3.5, "flat_bonus": 50 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_nether",
+      "name": "Nether bolt",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BO_NETH: 30 + 5d5 + rlev*1.5",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "nether",
+            "amount": { "kind": "monster_level_formula", "flat_base": 30, "base_dice": { "count": 5, "sides": 5 }, "level_multiplier": 1.5 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_plasma",
+      "name": "Plasma bolt",
+      "category": "bolt",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BO_PLAS: 10 + 8d7 + rlev",
+      "notes": "No 'plasma' damage_type exists on BoltDamage. Approximated as fire pending a catalog decision.",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": { "kind": "monster_level_formula", "flat_base": 10, "base_dice": { "count": 8, "sides": 7 }, "level_multiplier": 1 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolt_water",
+      "name": "Water bolt",
+      "category": "bolt",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BO_WATE: 10d10 + rlev",
+      "notes": "No 'water' damage_type exists on BoltDamage. Approximated as physical.",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 10, "sides": 10 }, "level_multiplier": 1 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boulder",
+      "name": "Boulder",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BOULDER: (1 + rlev/7)d12",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": { "kind": "monster_level_scaled_dice", "count": 1, "count_level_divisor": 7, "sides": 12 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "brain_smash",
+      "name": "Brain smash",
+      "category": "mental",
+      "confidence": "medium",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BRAIN_SMASH: 12d15 mental damage + blind + confuse + paralyze + slow",
+      "notes": "Secondary statuses are best-fit approximations of the MAngband composite effect; exact per-effect save semantics are a policy-layer concern.",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 12, "sides": 15 },
+            "direction": "aimed"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "blinded",
+            "duration": { "base": 12, "dice": { "count": 1, "sides": 4 } },
+            "target_mode": "target"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "confused",
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } },
+            "target_mode": "target"
+          }
+        },
+        {
+          "action_id": "ParalyzeControl",
+          "parameters": {
+            "target_mode": "target",
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } }
+          }
+        },
+        {
+          "action_id": "ModifyMonsterSpeed",
+          "parameters": {
+            "speed_mode": "slow",
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_acid",
+      "name": "Breathe acid",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_ACID: hp/3, cap 1600",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 1600 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_chaos",
+      "name": "Breathe chaos",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_CHAO: hp/6, cap 500",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "chaos",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 500 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_cold",
+      "name": "Breathe frost",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_COLD: hp/3, cap 1600",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 1600 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_confusion",
+      "name": "Breathe confusion",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_CONF: hp/6, cap 400",
+      "notes": "BreathDamage has no 'confusion' channel. Modeled as a direct confusion status only; the damage component is not represented.",
+      "actions": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "confused",
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } },
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_dark",
+      "name": "Breathe darkness",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_DARK: hp/6, cap 400",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "dark",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 400 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_disenchant",
+      "name": "Breathe disenchantment",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_DISE: hp/6, cap 500",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "disenchantment",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 500 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_elec",
+      "name": "Breathe lightning",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_ELEC: hp/3, cap 1600",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 1600 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_fire",
+      "name": "Breathe fire",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_FIRE: hp/3, cap 1600",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 1600 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_gravity",
+      "name": "Breathe gravity",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_GRAV: hp/3, cap 200",
+      "notes": "No 'gravity' damage_type exists on BreathDamage. Approximated as chaos pending a catalog decision; MAngband gravity breath also stuns and knocks back, which are not represented.",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "chaos",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 200 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_inertia",
+      "name": "Breathe inertia",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_INER: hp/6, cap 200",
+      "notes": "BreathDamage has no 'inertia' channel. Modeled as a slow effect only; the damage component is not represented.",
+      "actions": [
+        {
+          "action_id": "ModifyMonsterSpeed",
+          "parameters": {
+            "speed_mode": "slow",
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_light",
+      "name": "Breathe light",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_LITE: hp/6, cap 400",
+      "notes": "BreathDamage has no 'light' channel (only Bolt/BallDamage do). Modeled via BallDamage as a radius substitute; directional breath attenuation is not preserved.",
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "light",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 400 },
+            "radius": 2,
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_nether",
+      "name": "Breathe nether",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_NETH: hp/6, cap 550",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "nether",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 550 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_nexus",
+      "name": "Breathe nexus",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_NEXU: hp/6, cap 400",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "nexus",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 400 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_plasma",
+      "name": "Breathe plasma",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_PLAS: hp/6, cap 150",
+      "notes": "No 'plasma' damage_type exists on BreathDamage. Approximated as fire pending a catalog decision.",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 150 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_poison",
+      "name": "Breathe poison",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_POIS: hp/3, cap 800",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 800 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_shards",
+      "name": "Breathe shards",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_SHAR: hp/6, cap 500",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "shard",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 500 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_sound",
+      "name": "Breathe sound",
+      "category": "breath",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband BR_SOUN: hp/6, cap 500",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "sound",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 500 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_time",
+      "name": "Breathe time",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_TIME: hp/3, cap 150",
+      "notes": "No 'time' damage_type exists on BreathDamage. Approximated as nexus (both are reality-distortion channels) pending a catalog decision; MAngband time breath also drains a stat, which is not represented.",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "nexus",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 3, "max": 150 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "breath_wall",
+      "name": "Breathe force",
+      "category": "breath",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband BR_WALL: hp/6, cap 200",
+      "notes": "No 'force' damage_type exists on BreathDamage, and the terrain-destruction semantics of GF_KILL_WALL are not represented by any damage action. Deferred per docs/gameplay/implementation/MONSTER_SPELL_ABILITY_MIGRATION_ANALYSIS.md Category D; approximated as chaos.",
+      "actions": [
+        {
+          "action_id": "BreathDamage",
+          "parameters": {
+            "damage_type": "chaos",
+            "amount": { "kind": "monster_hp_fraction", "divisor": 6, "max": 200 },
+            "direction": "aimed",
+            "radius": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "cause_1",
+      "name": "Cause light wounds",
+      "category": "curse",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband CAUSE_1: 3d8",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 3, "sides": 8 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cause_2",
+      "name": "Cause medium wounds",
+      "category": "curse",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband CAUSE_2: 8d8",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cause_3",
+      "name": "Cause serious wounds",
+      "category": "curse",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband CAUSE_3: 10d15",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 10, "sides": 15 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cause_4",
+      "name": "Cause critical wounds",
+      "category": "curse",
+      "confidence": "medium",
+      "provenance_status": "derived",
+      "source_formula": "MAngband CAUSE_4: 15d15 + bleeding (10d10 cut)",
+      "notes": "The bleeding/cut component is not modeled: no 'cut' or 'bleeding' status exists in statuses.json.",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 15, "sides": 15 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "confuse",
+      "name": "Confuse",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband CONF: 4+d4 turns, resisted by resist_conf or saving throw",
+      "actions": [
+        {
+          "action_id": "ConfuseControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1,
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } }
+          }
+        }
+      ]
+    },
+    {
+      "id": "darkness",
+      "name": "Darkness",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband DARKNESS: unlights area, radius 3",
+      "notes": "Distinct from 'ball_darkness', which deals dark damage; this only removes light.",
+      "actions": [
+        {
+          "action_id": "DarkenArea",
+          "parameters": {
+            "radius": 3,
+            "darkness_mode": "projected"
+          }
+        }
+      ]
+    },
+    {
+      "id": "drain_mana",
+      "name": "Drain mana",
+      "category": "mental",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband DRAIN_MANA: 1d(rlev/2)+1 mana drained from target, caster heals 6x the amount drained",
+      "notes": "No existing action models a targeted resource drain linked to a caster heal. Proposing a new DrainResource action; ModifyResourceMeter only models self-adjustment, not a target-to-caster transfer.",
+      "actions": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "mana",
+            "mode": "add"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forget",
+      "name": "Forget",
+      "category": "mental",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband FORGET: erases the player's item and map knowledge, resisted by saving throw",
+      "notes": "No existing action models knowledge loss. Proposing a new ForgetKnowledge action; not yet added to actions.json.",
+      "actions": [
+        {
+          "action_id": "ForgetKnowledge",
+          "parameters": {
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "haste_self",
+      "name": "Haste self",
+      "category": "buff",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband HASTE: caster gains +10 speed (up to base+10 quickly, then +2 up to base+20)",
+      "notes": "ModifyMonsterSpeed.target_mode has no 'self' value; the caster is always the intended target. Proposing a new 'self' target_mode value.",
+      "actions": [
+        {
+          "action_id": "ModifyMonsterSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heal_self",
+      "name": "Heal self",
+      "category": "buff",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband HEAL: recovers rlev*6 HP, cancels fear",
+      "actions": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": { "kind": "monster_level_formula", "level_multiplier": 6 },
+            "target_mode": "self"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hold",
+      "name": "Hold",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband HOLD: 4+d4 turns, resisted by free_act or saving throw",
+      "actions": [
+        {
+          "action_id": "ParalyzeControl",
+          "parameters": {
+            "target_mode": "target",
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } }
+          }
+        }
+      ]
+    },
+    {
+      "id": "mind_blast",
+      "name": "Mind blast",
+      "category": "mental",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband MIND_BLAST: 8d8 + confusion if not resist_conf",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "direction": "aimed"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "confused",
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } },
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "missile",
+      "name": "Magic missile",
+      "category": "bolt",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband MISSILE: 2d6 + rlev/3",
+      "actions": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": { "kind": "monster_level_formula", "base_dice": { "count": 2, "sides": 6 }, "level_divisor": 3 },
+            "direction": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scare",
+      "name": "Scare",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband SCARE: 4+d4 turns, resisted by resist_fear or saving throw",
+      "actions": [
+        {
+          "action_id": "FearControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1,
+            "duration": { "base": 4, "dice": { "count": 1, "sides": 4 } }
+          }
+        }
+      ]
+    },
+    {
+      "id": "shriek",
+      "name": "Shriek",
+      "category": "innate",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband SHRIEK: 0 damage, aggravates all monsters on the level",
+      "notes": "AggravateMonsters exists and matches the semantics, but its allowed_source_families does not include monster_ability. Proposing that extension.",
+      "actions": [
+        {
+          "action_id": "AggravateMonsters",
+          "parameters": {
+            "radius": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "slow",
+      "name": "Slow",
+      "category": "status",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband SLOW: 4+d4 turns, resisted by free_act or saving throw",
+      "actions": [
+        {
+          "action_id": "ModifyMonsterSpeed",
+          "parameters": {
+            "speed_mode": "slow",
+            "target_mode": "aimed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_angel",
+      "name": "Summon angel",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_ANGEL: summons 1 angel",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "angel",
+            "amount": { "kind": "flat", "value": 1 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_animal",
+      "name": "Summon animal",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_ANIMAL: summons 6 animals",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "animal",
+            "amount": { "kind": "flat", "value": 6 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_demon",
+      "name": "Summon demon",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_DEMON: summons 1 demon",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "demon",
+            "amount": { "kind": "flat", "value": 1 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_dragon",
+      "name": "Summon dragon",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_DRAGON: summons 1 dragon",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "dragon",
+            "amount": { "kind": "flat", "value": 1 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_hi_demon",
+      "name": "Summon greater demon",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_HI_DEMON: summons 8 greater demons",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "demon",
+            "tier": "greater",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_hi_dragon",
+      "name": "Summon ancient dragon",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_HI_DRAGON: summons 8 ancient dragons",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "dragon",
+            "tier": "greater",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_hi_undead",
+      "name": "Summon greater undead",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_HI_UNDEAD: summons 8 greater undead",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "undead",
+            "tier": "greater",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_hound",
+      "name": "Summon hound",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_HOUND: summons 6 hounds",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "hound",
+            "amount": { "kind": "flat", "value": 6 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_hydra",
+      "name": "Summon hydra",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_HYDRA: summons 6 hydras",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "hydra",
+            "amount": { "kind": "flat", "value": 6 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_kin",
+      "name": "Summon kin",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_KIN: summons 6 monsters sharing the caster's symbol",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "kin",
+            "amount": { "kind": "flat", "value": 6 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_monster",
+      "name": "Summon monster",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband S_MONSTER: summons 1 monster",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "monster",
+            "amount": { "kind": "flat", "value": 1 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_monsters",
+      "name": "Summon monsters",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband S_MONSTERS: summons 8 monsters",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "monster",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_spider",
+      "name": "Summon spider",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_SPIDER: summons 6 spiders",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "spider",
+            "amount": { "kind": "flat", "value": 6 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_undead",
+      "name": "Summon undead",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_UNDEAD: summons 1 undead",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "undead",
+            "amount": { "kind": "flat", "value": 1 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_unique",
+      "name": "Summon unique",
+      "category": "summon",
+      "confidence": "high",
+      "provenance_status": "derived",
+      "source_formula": "MAngband S_UNIQUE: summons 8 unique monsters",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "unique",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summon_wraith",
+      "name": "Summon wraith",
+      "category": "summon",
+      "confidence": "medium",
+      "provenance_status": "unresolved",
+      "source_formula": "MAngband S_WRAITH: summons 8 ring wraiths",
+      "actions": [
+        {
+          "action_id": "SummonEntities",
+          "parameters": {
+            "summon_family": "wraith",
+            "amount": { "kind": "flat", "value": 8 },
+            "target_mode": "near_target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "teleport_away",
+      "name": "Teleport away",
+      "category": "teleport",
+      "confidence": "medium",
+      "provenance_status": "derived",
+      "source_formula": "MAngband TELE_AWAY: teleports the player away, range ~100",
+      "actions": [
+        {
+          "action_id": "TeleportTarget",
+          "parameters": {
+            "distance": 100,
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "teleport_level",
+      "name": "Teleport level",
+      "category": "teleport",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband TELE_LEVEL: sends the player up or down one dungeon level, resisted by resist_nexus or saving throw",
+      "actions": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "teleport_level"
+          }
+        }
+      ]
+    },
+    {
+      "id": "teleport_self",
+      "name": "Teleport self",
+      "category": "teleport",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband TPORT: long-range teleport, range ~50",
+      "actions": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 50,
+            "teleport_mode": "teleport"
+          }
+        }
+      ]
+    },
+    {
+      "id": "teleport_to",
+      "name": "Teleport to",
+      "category": "teleport",
+      "confidence": "medium",
+      "provenance_status": "derived",
+      "source_formula": "MAngband TELE_TO: teleports the player adjacent to the caster",
+      "notes": "TeleportTarget.distance is set to 0 to mean 'adjacent to caster', a policy-defined interpretation rather than a free-range relocation.",
+      "actions": [
+        {
+          "action_id": "TeleportTarget",
+          "parameters": {
+            "distance": 0,
+            "target_mode": "target"
+          }
+        }
+      ]
+    },
+    {
+      "id": "traps",
+      "name": "Create traps",
+      "category": "innate",
+      "confidence": "high",
+      "provenance_status": "verified",
+      "source_formula": "MAngband TRAPS: creates traps on empty floor squares around the player",
+      "actions": [
+        {
+          "action_id": "CreateTraps",
+          "parameters": {
+            "radius": 1,
+            "center_mode": "target"
+          }
+        }
+      ]
+    }
+  ]
+}

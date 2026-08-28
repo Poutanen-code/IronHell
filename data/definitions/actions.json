@@ -1857,6 +1857,7 @@
             "value_type": "enum",
             "required": true,
             "allowed_values": [
+              "kin",
               "monster",
               "animal",
               "undead",
@@ -1864,7 +1865,10 @@
               "dragon",
               "spider",
               "hound",
-              "unique"
+              "hydra",
+              "angel",
+              "unique",
+              "wraith"
             ]
           },
           {
@@ -1883,6 +1887,16 @@
               "near_target",
               "area",
               "triggering_actor"
+            ]
+          },
+          {
+            "id": "tier",
+            "description": "Optional tier of the summoned entities (e.g., normal, greater, ancient).",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "normal",
+              "greater"
             ]
           }
         ]
@@ -2075,7 +2089,8 @@
         "potion",
         "scroll",
         "staff",
-        "consumable"
+        "consumable",
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2099,8 +2114,26 @@
               "set_max",
               "set_near_max",
               "add",
-              "set_value"
+              "set_value",
+              "drain"
             ]
+          },
+          {
+            "id": "target_mode",
+            "description": "Who receives the resource payload.",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "self",
+              "target",
+              "ally"
+            ]
+          },
+          {
+            "id": "amount",
+            "description": "Typed resource meter amount expression.",
+            "value_type": "structured_amount",
+            "required": false
           }
         ]
       },
@@ -2365,6 +2398,7 @@
             "value_type": "enum",
             "required": true,
             "allowed_values": [
+              "self",
               "aimed",
               "all_in_los"
             ]
@@ -2391,7 +2425,8 @@
         "scroll",
         "activation",
         "spell",
-        "item_property"
+        "item_property",
+        "monster_ability"
       ],
       "parameter_contract": {
         "closed": true,
@@ -2921,7 +2956,14 @@
               "disenchantment",
               "nexus",
               "shard",
-              "dark"
+              "dark",
+              "light",
+              "inertia",
+              "confusion",
+              "gravity",
+              "plasma",
+              "time",
+              "force"
             ]
           },
           {
