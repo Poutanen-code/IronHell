@@ -242,9 +242,10 @@
           "items": false
         },
         "stats": { "$ref": "#/$defs/monster_stats" },
+        "ability_cooldown_ticks": { "type": "integer", "minimum": 0 },
         "abilities": {
           "type": "array",
-          "items": { "$ref": "#/$defs/monster_ability" }
+          "items": { "$ref": "#/$defs/ability_type" }
         },
         "ai_behavior": {
           "type": "string",
@@ -318,30 +319,32 @@
         }
       }
     },
-    "monster_ability": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["name", "type", "description"],
-      "properties": {
-        "name": { "type": "string", "minLength": 1 },
-        "type": { "type": "string", "enum": ["passive", "active"] },
-        "description": { "type": "string", "minLength": 1 },
-        "cooldown_ticks": { "type": "integer", "minimum": 0 },
-        "trigger": { "type": "string", "enum": ["on_hit", "on_take_damage", "low_hp", "periodic"] },
-        "effect": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type"],
-          "properties": {
-            "type": { "type": "string", "enum": ["damage", "heal", "buff", "debuff", "summon", "teleport"] },
-            "value": { "type": "number" },
-            "damage_type": { "type": "string" },
-            "duration": { "type": "integer", "minimum": 0 },
-            "summon_id": { "type": "string", "minLength": 1 },
-            "area_of_effect": { "type": "integer", "minimum": 0 }
-          }
-        }
-      }
+    "ability_type": {
+      "type": "string",
+      "enum": [
+        "breath_fire", "breath_cold", "breath_acid", "breath_elec", "breath_poison",
+        "breath_nether", "breath_light", "breath_dark", "breath_confusion",
+        "breath_sound", "breath_chaos", "breath_disenchant", "breath_nexus",
+        "breath_time", "breath_inertia", "breath_gravity", "breath_shards",
+        "breath_plasma", "breath_force", "breath_wall",
+        "shriek", "arrow_1", "arrow_2", "arrow_3", "arrow_4", "boulder",
+        "ball_fire", "ball_cold", "ball_acid", "ball_elec",
+        "ball_poison", "ball_nether", "ball_water", "ball_mana", "ball_darkness",
+        "bolt_fire", "bolt_cold", "bolt_acid", "bolt_elec",
+        "bolt_nether", "bolt_water", "bolt_mana", "bolt_plasma", "bolt_ice",
+        "missile",
+        "cause_1", "cause_2", "cause_3", "cause_4",
+        "mind_blast", "brain_smash", "drain_mana",
+        "blind", "confuse", "scare", "slow", "hold",
+        "heal_self", "haste_self", "blink", "teleport_self",
+        "teleport_to", "teleport_away", "teleport_level",
+        "forget", "darkness", "traps",
+        "summon_kin", "summon_monster", "summon_monsters",
+        "summon_animal", "summon_spider", "summon_hound", "summon_hydra",
+        "summon_angel", "summon_demon", "summon_undead", "summon_dragon",
+        "summon_hi_undead", "summon_hi_dragon", "summon_hi_demon",
+        "summon_wraith", "summon_unique"
+      ]
     },
     "monster_blow": {
       "type": "object",
