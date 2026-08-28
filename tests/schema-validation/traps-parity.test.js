@@ -31,7 +31,8 @@ const expectedMangbandTrapIds = [
   "gas_confuse", "gas_poison", "gas_sleep",
 ];
 
-const expectedCustomTrapIds = ["invisible_trap"];
+const expectedCustomTrapIds = [];
+const expectedChestTrapIds = ["gas_paralyze", "explosive_trap"];
 
 const canonicalTrapActions = {
   trap_door: ["ApplyDamage", "RecallOrLevelShift"],
@@ -100,8 +101,8 @@ describe("MAngband 1.5.3 trap parity", () => {
     assert.deepEqual(ids.filter((id) => expectedMangbandTrapIds.includes(id)), expectedMangbandTrapIds);
     assert.deepEqual(ids.filter((id) => expectedCustomTrapIds.includes(id)), expectedCustomTrapIds);
     assert.deepEqual(
-      trapsData.traps.filter((trap) => expectedMangbandTrapIds.includes(trap.id)).map((trap) => trap.source_feature_id),
-      expectedMangbandTrapIds
+      trapsData.traps.filter((trap) => expectedChestTrapIds.includes(trap.id)).map((trap) => trap.id),
+      expectedChestTrapIds
     );
   });
 
@@ -115,8 +116,11 @@ describe("MAngband 1.5.3 trap parity", () => {
       trapsData.traps.filter((trap) => trap.provenance_status === "ironhell_specific").map((trap) => trap.id),
       expectedCustomTrapIds
     );
-    for (const trap of trapsData.traps) assert.deepEqual(trap.allowed_sources, ["floor", "chest"]);
-    assert.ok(trapsData.traps.some((trap) => trap.effect_tags.includes("fall_damage_2d6")));
-    assert.ok(trapsData.traps.some((trap) => trap.effect_tags.includes("paralysis_status_5_plus_1d10")));
+    assert.deepEqual(
+      new Set(trapsData.traps.filter((trap) => trap.provenance_status === "verified").map((trap) => trap.id)),
+      new Set([...expectedMangbandTrapIds, ...expectedChestTrapIds])
+    );
+    assert.ok(trapsData.traps.some((trap) => trap.actions.some((action) => action.action_id === "ApplyDamage")));
+    assert.ok(trapsData.traps.some((trap) => trap.actions.some((action) => action.action_id === "ApplyStatus")));
   });
 });

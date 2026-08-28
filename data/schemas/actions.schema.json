@@ -61,7 +61,9 @@
         "ModifyResourceMeter",
         "TransformEntity",
         "RandomActionSelection",
-        "BreathDamage"
+        "BreathDamage",
+        "CreateItems",
+        "CreateGold"
       ]
     },
     "ActionCategory": {
@@ -100,7 +102,10 @@
         "scroll",
         "consumable",
         "activation",
-        "trap"
+        "trap",
+        "chest",
+        "treasure",
+        "death_drop"
       ]
     },
     "ParameterValueType": {

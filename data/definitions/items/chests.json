@@ -1,103 +1,381 @@
 {
-  "schema_version": 1,
-  "chests": [
-    {
-      "id": "ruined_chest",
-      "name": "Ruined chest",
-      "tval": 7,
-      "sval": 0,
-      "weight": 250,
-      "sell_value": 0,
-      "trap_chance": 0.1,
-      "lock_difficulty": 0,
-      "gold_multiplier": 2,
-      "allocation_table": [{ "depth": 75, "rarity": 1 }],
-      "description": "A ruined chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "small_wooden_chest",
-      "name": "Small wooden chest",
-      "tval": 7,
-      "sval": 1,
-      "weight": 250,
-      "sell_value": 20,
-      "trap_chance": 0.15,
-      "lock_difficulty": 0,
-      "gold_multiplier": 2,
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
-      "description": "A small wooden chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "small_iron_chest",
-      "name": "Small iron chest",
-      "tval": 7,
-      "sval": 2,
-      "weight": 300,
-      "sell_value": 100,
-      "trap_chance": 0.35,
-      "lock_difficulty": 15,
-      "gold_multiplier": 2,
-      "allocation_table": [{ "depth": 25, "rarity": 1 }],
-      "description": "A small iron chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "small_steel_chest",
-      "name": "Small steel chest",
-      "tval": 7,
-      "sval": 3,
-      "weight": 500,
-      "sell_value": 200,
-      "trap_chance": 0.55,
-      "lock_difficulty": 35,
-      "gold_multiplier": 2,
-      "allocation_table": [{ "depth": 45, "rarity": 1 }],
-      "description": "A small steel chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "large_wooden_chest",
-      "name": "Large wooden chest",
-      "tval": 7,
-      "sval": 5,
-      "weight": 500,
-      "sell_value": 60,
-      "trap_chance": 0.25,
-      "lock_difficulty": 5,
-      "gold_multiplier": 3,
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
-      "description": "A large wooden chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "large_iron_chest",
-      "name": "Large iron chest",
-      "tval": 7,
-      "sval": 6,
-      "weight": 1000,
-      "sell_value": 150,
-      "trap_chance": 0.45,
-      "lock_difficulty": 25,
-      "gold_multiplier": 3,
-      "allocation_table": [{ "depth": 35, "rarity": 1 }],
-      "description": "A large iron chest.",
-      "provenance_status": "verified"
-    },
-    {
-      "id": "large_steel_chest",
-      "name": "Large steel chest",
-      "tval": 7,
-      "sval": 7,
-      "weight": 1000,
-      "sell_value": 250,
-      "trap_chance": 0.65,
-      "lock_difficulty": 45,
-      "gold_multiplier": 3,
-      "allocation_table": [{ "depth": 55, "rarity": 1 }],
-      "description": "A large steel chest.",
-      "provenance_status": "verified"
-    }
-  ]
+    "schema_version": 1,
+    "chests": [
+        {
+            "id": "ruined_chest",
+            "name": "Ruined chest",
+            "tval": 7,
+            "sval": 0,
+            "weight": 250,
+            "sell_value": 0,
+            "trap_chance": 0,
+            "lock_difficulty": 0,
+            "gold_multiplier": 1,
+            "allocation_table": [
+                {
+                    "depth": 75,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [],
+            "loot_actions": [],
+            "state_policy": {
+                "initial_locked": false,
+                "initial_trapped": false,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A ruined chest with no recoverable contents.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "small_wooden_chest",
+            "name": "Small wooden chest",
+            "tval": 7,
+            "sval": 1,
+            "weight": 250,
+            "sell_value": 20,
+            "trap_chance": 0.15,
+            "lock_difficulty": 0,
+            "gold_multiplier": 2,
+            "allocation_table": [
+                {
+                    "depth": 5,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 2
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 2
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": false,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A small wooden chest containing two rewards and scaled gold.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "small_iron_chest",
+            "name": "Small iron chest",
+            "tval": 7,
+            "sval": 2,
+            "weight": 300,
+            "sell_value": 100,
+            "trap_chance": 0.35,
+            "lock_difficulty": 15,
+            "gold_multiplier": 2,
+            "allocation_table": [
+                {
+                    "depth": 25,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison",
+                "gas_paralyze",
+                "summon_rune",
+                "explosive_trap"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 4
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 2
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": true,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A small iron chest containing four rewards and scaled gold.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "small_steel_chest",
+            "name": "Small steel chest",
+            "tval": 7,
+            "sval": 3,
+            "weight": 500,
+            "sell_value": 200,
+            "trap_chance": 0.55,
+            "lock_difficulty": 35,
+            "gold_multiplier": 2,
+            "allocation_table": [
+                {
+                    "depth": 45,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison",
+                "gas_paralyze",
+                "summon_rune",
+                "explosive_trap"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 6
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 2
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": true,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A small steel chest containing six rewards and scaled gold.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "large_wooden_chest",
+            "name": "Large wooden chest",
+            "tval": 7,
+            "sval": 5,
+            "weight": 500,
+            "sell_value": 60,
+            "trap_chance": 0.25,
+            "lock_difficulty": 5,
+            "gold_multiplier": 3,
+            "allocation_table": [
+                {
+                    "depth": 15,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison",
+                "summon_rune"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 2
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 3
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": true,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A large wooden chest containing two rewards and scaled gold.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "large_iron_chest",
+            "name": "Large iron chest",
+            "tval": 7,
+            "sval": 6,
+            "weight": 1000,
+            "sell_value": 150,
+            "trap_chance": 0.45,
+            "lock_difficulty": 25,
+            "gold_multiplier": 3,
+            "allocation_table": [
+                {
+                    "depth": 35,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison",
+                "gas_paralyze",
+                "summon_rune",
+                "explosive_trap"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 4
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 3
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": true,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A large iron chest containing four rewards and scaled gold.",
+            "provenance_status": "verified"
+        },
+        {
+            "id": "large_steel_chest",
+            "name": "Large steel chest",
+            "tval": 7,
+            "sval": 7,
+            "weight": 1000,
+            "sell_value": 250,
+            "trap_chance": 0.65,
+            "lock_difficulty": 45,
+            "gold_multiplier": 3,
+            "allocation_table": [
+                {
+                    "depth": 55,
+                    "rarity": 1
+                }
+            ],
+            "trap_ids": [
+                "dart_strength",
+                "dart_constitution",
+                "gas_poison",
+                "gas_paralyze",
+                "summon_rune",
+                "explosive_trap"
+            ],
+            "loot_actions": [
+                {
+                    "action_id": "CreateItems",
+                    "parameters": {
+                        "amount": {
+                            "kind": "flat",
+                            "value": 6
+                        },
+                        "quality": "normal",
+                        "placement_mode": "adjacent_floor",
+                        "item_selection": "random",
+                        "allow_artifacts": false
+                    }
+                },
+                {
+                    "action_id": "CreateGold",
+                    "parameters": {
+                        "amount": {
+                            "kind": "chest_gold",
+                            "multiplier": 3
+                        },
+                        "placement_mode": "adjacent_floor",
+                        "quality": "normal"
+                    }
+                }
+            ],
+            "state_policy": {
+                "initial_locked": true,
+                "initial_trapped": true,
+                "opens_once": true,
+                "empties_on_open": true
+            },
+            "description": "A large steel chest containing six rewards and scaled gold.",
+            "provenance_status": "verified"
+        }
+    ]
 }

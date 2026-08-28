@@ -20,7 +20,8 @@
       "required": [
         "id", "name", "tval", "sval", "weight", "sell_value",
         "trap_chance", "lock_difficulty", "gold_multiplier",
-        "allocation_table", "description", "provenance_status"
+        "allocation_table", "trap_ids", "loot_actions", "state_policy",
+        "description", "provenance_status"
       ],
       "properties": {
         "id": { "$ref": "common_item.schema.json#/$defs/Id" },
@@ -33,6 +34,23 @@
         "lock_difficulty": { "type": "integer", "minimum": 0 },
         "gold_multiplier": { "type": "integer", "minimum": 1 },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
+        "trap_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" }
+        },
+        "loot_actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
+        "state_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["initial_locked", "initial_trapped", "opens_once", "empties_on_open"],
+          "properties": {
+            "initial_locked": { "type": "boolean" },
+            "initial_trapped": { "type": "boolean" },
+            "opens_once": { "type": "boolean", "const": true },
+            "empties_on_open": { "type": "boolean", "const": true }
+          }
+        },
         "description": { "type": "string", "minLength": 1 },
         "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
       }

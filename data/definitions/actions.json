@@ -82,7 +82,8 @@
         "rod",
         "wand",
         "staff",
-        "activation"
+        "activation",
+        "trap"
       ],
       "parameter_contract": {
         "closed": true,
@@ -318,7 +319,8 @@
             "allowed_values": [
               "self",
               "target",
-              "ally"
+              "ally",
+              "triggering_actor"
             ]
           }
         ]
@@ -813,7 +815,8 @@
             "value_type": "enum",
             "required": true,
             "allowed_values": [
-              "self"
+              "self",
+              "triggering_actor"
             ]
           },
           {
@@ -1578,7 +1581,8 @@
               "target",
               "area",
               "all_nearby",
-              "all_in_los"
+              "all_in_los",
+              "triggering_actor"
             ]
           },
           {
@@ -1719,7 +1723,8 @@
               "target",
               "area",
               "all_nearby",
-              "all_in_los"
+              "all_in_los",
+              "triggering_actor"
             ]
           },
           {
@@ -1876,7 +1881,8 @@
             "allowed_values": [
               "self",
               "near_target",
-              "area"
+              "area",
+              "triggering_actor"
             ]
           }
         ]
@@ -2726,6 +2732,7 @@
       "allowed_source_families": [
         "scroll",
         "staff",
+        "chest",
         "activation",
         "monster_ability",
         "treasure",

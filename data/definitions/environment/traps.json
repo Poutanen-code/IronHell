@@ -2,6 +2,66 @@
   "schema_version": 1,
   "traps": [
     {
+      "id": "gas_paralyze",
+      "name": "paralysis gas trap",
+      "allowed_sources": [
+        "chest"
+      ],
+      "trap_category": "gas",
+      "description": "Triggers when a trapped chest is opened and applies paralysis for 10+1d20 turns unless free action applies.",
+      "effect_type": "status",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": [
+        "free_action_prevention"
+      ],
+      "actions": [
+        {
+          "action_id": "ParalyzeControl",
+          "parameters": {
+            "target_mode": "all_nearby",
+            "duration": {
+              "base": 10,
+              "dice": {
+                "count": 1,
+                "sides": 10
+              }
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "explosive_trap",
+      "name": "explosive chest trap",
+      "allowed_sources": [
+        "chest"
+      ],
+      "trap_category": "elemental_spot",
+      "description": "Triggers when a trapped chest is opened, destroys the chest contents, and deals 5d8 physical damage.",
+      "effect_type": "damage",
+      "visibility_model": "hidden_until_detected",
+      "effect_tags": [
+        "destroy_contents"
+      ],
+      "actions": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "physical",
+            "amount": {
+              "kind": "dice",
+              "count": 5,
+              "sides": 8
+            },
+            "radius": 3,
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
       "id": "trap_door",
       "name": "trap door",
       "allowed_sources": [
@@ -488,17 +548,12 @@
       ],
       "actions": [
         {
-          "action_id": "ApplyStatus",
+          "action_id": "ConfuseControl",
           "parameters": {
-            "status_id": "confused",
-            "duration": {
-              "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
-            },
-            "target_mode": "triggering_actor"
+            "target_mode": "all_nearby",
+            "radius": 3,
+            "potency": 20,
+            "duration": 20
           }
         }
       ],
@@ -554,7 +609,7 @@
         {
           "action_id": "ParalyzeControl",
           "parameters": {
-            "target_mode": "triggering_actor",
+            "target_mode": "all_nearby",
             "duration": {
               "base": 5,
               "dice": {
