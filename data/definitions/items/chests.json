@@ -10,7 +10,6 @@
             "sell_value": 0,
             "trap_chance": 0,
             "lock_difficulty": 0,
-            "gold_multiplier": 1,
             "allocation_table": [
                 {
                     "depth": 75,
@@ -37,7 +36,6 @@
             "sell_value": 20,
             "trap_chance": 0.15,
             "lock_difficulty": 0,
-            "gold_multiplier": 2,
             "allocation_table": [
                 {
                     "depth": 5,
@@ -55,7 +53,7 @@
                     "parameters": {
                         "amount": {
                             "kind": "flat",
-                            "value": 2
+                            "value": 1
                         },
                         "quality": "normal",
                         "placement_mode": "adjacent_floor",
@@ -66,22 +64,19 @@
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 2
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "normal",
+                        "generation_policy": "chest"
                     }
                 }
             ],
             "state_policy": {
-                "initial_locked": false,
+                "initial_locked": true,
                 "initial_trapped": true,
                 "opens_once": true,
                 "empties_on_open": true
             },
-            "description": "A small wooden chest containing two rewards and scaled gold.",
+            "description": "A small wooden chest containing one reward and scaled gold.",
             "provenance_status": "verified"
         },
         {
@@ -93,7 +88,6 @@
             "sell_value": 100,
             "trap_chance": 0.35,
             "lock_difficulty": 15,
-            "gold_multiplier": 2,
             "allocation_table": [
                 {
                     "depth": 25,
@@ -114,9 +108,9 @@
                     "parameters": {
                         "amount": {
                             "kind": "flat",
-                            "value": 4
+                            "value": 1
                         },
-                        "quality": "normal",
+                        "quality": "good",
                         "placement_mode": "adjacent_floor",
                         "item_selection": "random",
                         "allow_artifacts": false
@@ -125,12 +119,9 @@
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 2
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "normal",
+                        "generation_policy": "chest"
                     }
                 }
             ],
@@ -140,7 +131,7 @@
                 "opens_once": true,
                 "empties_on_open": true
             },
-            "description": "A small iron chest containing four rewards and scaled gold.",
+            "description": "A small iron chest containing one reward and scaled gold.",
             "provenance_status": "verified"
         },
         {
@@ -152,7 +143,6 @@
             "sell_value": 200,
             "trap_chance": 0.55,
             "lock_difficulty": 35,
-            "gold_multiplier": 2,
             "allocation_table": [
                 {
                     "depth": 45,
@@ -173,9 +163,9 @@
                     "parameters": {
                         "amount": {
                             "kind": "flat",
-                            "value": 6
+                            "value": 2
                         },
-                        "quality": "normal",
+                        "quality": "good",
                         "placement_mode": "adjacent_floor",
                         "item_selection": "random",
                         "allow_artifacts": false
@@ -184,12 +174,9 @@
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 2
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "good",
+                        "generation_policy": "chest"
                     }
                 }
             ],
@@ -199,7 +186,7 @@
                 "opens_once": true,
                 "empties_on_open": true
             },
-            "description": "A small steel chest containing six rewards and scaled gold.",
+            "description": "A small steel chest containing two rewards and scaled gold.",
             "provenance_status": "verified"
         },
         {
@@ -211,7 +198,6 @@
             "sell_value": 60,
             "trap_chance": 0.25,
             "lock_difficulty": 5,
-            "gold_multiplier": 3,
             "allocation_table": [
                 {
                     "depth": 15,
@@ -232,7 +218,7 @@
                             "kind": "flat",
                             "value": 2
                         },
-                        "quality": "normal",
+                        "quality": "good",
                         "placement_mode": "adjacent_floor",
                         "item_selection": "random",
                         "allow_artifacts": false
@@ -241,12 +227,9 @@
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 3
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "great",
+                        "generation_policy": "chest"
                     }
                 }
             ],
@@ -268,7 +251,6 @@
             "sell_value": 150,
             "trap_chance": 0.45,
             "lock_difficulty": 25,
-            "gold_multiplier": 3,
             "allocation_table": [
                 {
                     "depth": 35,
@@ -291,21 +273,18 @@
                             "kind": "flat",
                             "value": 4
                         },
-                        "quality": "normal",
+                        "quality": "random",
                         "placement_mode": "adjacent_floor",
                         "item_selection": "random",
-                        "allow_artifacts": false
+                        "allow_artifacts": true
                     }
                 },
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 3
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "great",
+                        "generation_policy": "chest"
                     }
                 }
             ],
@@ -327,7 +306,6 @@
             "sell_value": 250,
             "trap_chance": 0.65,
             "lock_difficulty": 45,
-            "gold_multiplier": 3,
             "allocation_table": [
                 {
                     "depth": 55,
@@ -350,21 +328,18 @@
                             "kind": "flat",
                             "value": 6
                         },
-                        "quality": "normal",
+                        "quality": "random",
                         "placement_mode": "adjacent_floor",
                         "item_selection": "random",
-                        "allow_artifacts": false
+                        "allow_artifacts": true
                     }
                 },
                 {
                     "action_id": "CreateGold",
                     "parameters": {
-                        "amount": {
-                            "kind": "chest_gold",
-                            "multiplier": 3
-                        },
                         "placement_mode": "adjacent_floor",
-                        "quality": "normal"
+                        "quality": "great",
+                        "generation_policy": "chest"
                     }
                 }
             ],

@@ -43291,17 +43291,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 10,
+                  "sides": 10,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]
@@ -55476,17 +55471,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 20,
+                  "sides": 10,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]
@@ -55499,17 +55489,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 20,
+                  "sides": 10,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]
@@ -60039,17 +60024,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 11,
+                  "sides": 10,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]
@@ -60139,17 +60119,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 13,
+                  "sides": 13,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]
@@ -60190,17 +60165,12 @@
               "parameters": {
                 "damage_type": "physical",
                 "amount": {
-                  "kind": "runtime_formula",
+                  "kind": "dice",
+                  "count": 13,
+                  "sides": 13,
                   "source_effect": "SHATTER"
                 },
                 "target_mode": "target"
-              }
-            },
-            {
-              "action_id": "Earthquake",
-              "parameters": {
-                "radius": 8,
-                "center_mode": "self"
               }
             }
           ]

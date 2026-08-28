@@ -29,7 +29,8 @@
           }
         }
       ],
-      "provenance_status": "verified"
+      "provenance_status": "ironhell_specific",
+      "parity_notes": "Expanded from single-target MAngband chest effect to area effect for multiplayer consistency."
     },
     {
       "id": "explosive_trap",
@@ -557,7 +558,8 @@
           }
         }
       ],
-      "provenance_status": "verified"
+      "provenance_status": "ironhell_specific",
+      "parity_notes": "Expanded from single-target MAngband chest effect to area effect for multiplayer consistency."
     },
     {
       "id": "gas_poison",
@@ -620,7 +622,8 @@
           }
         }
       ],
-      "provenance_status": "verified"
+      "provenance_status": "ironhell_specific",
+      "parity_notes": "Expanded from single-target MAngband chest effect to area effect for multiplayer consistency."
     }
   ]
 }

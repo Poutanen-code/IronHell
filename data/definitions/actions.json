@@ -2753,6 +2753,7 @@
             "value_type": "enum",
             "required": true,
             "allowed_values": [
+              "random",
               "worthless",
               "bad",
               "normal",
@@ -2781,7 +2782,6 @@
             "required": false,
             "allowed_values": [
               "random",
-              "treasure",
               "equipment",
               "weapon",
               "armor",
@@ -2834,7 +2834,7 @@
             "id": "amount",
             "description": "Gold quantity generated.",
             "value_type": "structured_amount",
-            "required": true
+            "required": false
           },
           {
             "id": "placement_mode",
@@ -2867,6 +2867,16 @@
             "value_type": "integer",
             "required": false,
             "minimum": 0
+          },
+          {
+            "id": "generation_policy",
+            "value_type": "enum",
+            "required": false,
+            "allowed_values": [
+              "chest",
+              "monster_drop",
+              "floor_treasure"
+            ]
           }
         ]
       },
