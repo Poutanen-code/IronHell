@@ -15,4 +15,5 @@ internal sealed record DefinitionCatalog(
     IDefinitionRegistry<ActivationDefinition> Activations,
     IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities,
     IDefinitionRegistry<MonsterDefinition> Monsters,
+    IDefinitionRegistry<TerrainDefinition> Terrain,
     IReadOnlyCollection<RaceClassRule> RaceClassRules) : IDefinitionCatalog;

@@ -28,6 +28,9 @@ internal static class DefinitionCatalogBuilder
     private const string MonstersDocument = "monsters/monsters.json";
     private const string MonsterAbilitiesCatalog = "monster_abilities";
     private const string AbilitiesProperty = "abilities";
+    private const string TerrainCatalog = "terrain";
+    private const string TerrainDefinitionsProperty = "terrain_definitions";
+    private const string TerrainDocument = "environment/terrain_definitions.json";
 
     private sealed record ValidationRegistries(
         IDefinitionRegistry<ActionDefinition> Actions,
@@ -39,7 +42,8 @@ internal static class DefinitionCatalogBuilder
         IDefinitionRegistry<SpellDefinition> PriestPrayers,
         IDefinitionRegistry<ActivationDefinition> Activations,
         IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities,
-        IDefinitionRegistry<MonsterDefinition> Monsters);
+        IDefinitionRegistry<MonsterDefinition> Monsters,
+        IDefinitionRegistry<TerrainDefinition> Terrain);
 
     private static readonly (string DocumentName, string CollectionName, ItemCategory Category)[] ItemCatalogs =
     [
@@ -69,6 +73,7 @@ internal static class DefinitionCatalogBuilder
         var activations = ReadSimpleDefinitions<ActivationDefinition>(documents[ActivationsCatalog], ActivationsCatalog, ActivationIdProperty, id => new ActivationDefinition(id), report);
         var monsterAbilities = ReadSimpleDefinitions<MonsterAbilityDefinition>(documents[MonsterAbilitiesCatalog], AbilitiesProperty, "id", id => new MonsterAbilityDefinition(id), report);
         var monsters = ReadSimpleDefinitions<MonsterDefinition>(documents[MonstersCatalog], MonstersCatalog, "id", id => new MonsterDefinition(id), report);
+        var terrain = ReadSimpleDefinitions<TerrainDefinition>(documents[TerrainCatalog], TerrainDefinitionsProperty, "id", id => new TerrainDefinition(id), report);
         var races = ReadRaces(documents["races"], report);
         var classes = ReadClasses(documents["classes"], report);
         var rules = ReadRules(documents["race_class_rules"], report);
@@ -90,10 +95,11 @@ internal static class DefinitionCatalogBuilder
         var activationRegistry = new DefinitionRegistry<ActivationDefinition>(activations);
         var monsterAbilityRegistry = new DefinitionRegistry<MonsterAbilityDefinition>(monsterAbilities);
         var monsterRegistry = new DefinitionRegistry<MonsterDefinition>(monsters);
+        var terrainRegistry = new DefinitionRegistry<TerrainDefinition>(terrain);
 
         var characterDefinitions = new CharacterDefinitionSet(rules, races, classes);
         ValidateReferences(raceRegistry, classRegistry, capabilityRegistry, itemRegistry, characterDefinitions, report);
-        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterRegistry);
+        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterRegistry, terrainRegistry);
         ValidateCatalogReferences(documents, validationRegistries, report);
         if (report.HasErrors)
         {
@@ -113,6 +119,7 @@ internal static class DefinitionCatalogBuilder
             activationRegistry,
             monsterAbilityRegistry,
             monsterRegistry,
+            terrainRegistry,
             Array.AsReadOnly(rules.OrderBy(rule => rule.RaceId, StringComparer.Ordinal).ThenBy(rule => rule.ClassId, StringComparer.Ordinal).ToArray()));
     }
 
@@ -312,6 +319,7 @@ internal static class DefinitionCatalogBuilder
         ValidateActivationReferences(documents[ActivationsCatalog], registries, report);
         ValidateMonsterAbilityReferences(documents[MonsterAbilitiesCatalog], registries, report);
         ValidateMonsterReferences(documents[MonstersCatalog], registries, report);
+        ValidateTerrainReferences(documents[TerrainCatalog], registries.Terrain, report);
     }
 
     private static void ValidateCapabilityResistanceReferences(
@@ -606,6 +614,18 @@ internal static class DefinitionCatalogBuilder
         foreach (var reference in references ?? [])
         {
             ValidateReference(reference?.GetValue<string>(), registry, MonstersDocument, monsterId, property, errorCode, report);
+        }
+    }
+
+    private static void ValidateTerrainReferences(
+        JsonObject document,
+        IDefinitionRegistry<TerrainDefinition> terrain,
+        DefinitionValidationReport report)
+    {
+        foreach (var definition in document[TerrainDefinitionsProperty]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var id = definition["id"]?.GetValue<string>() ?? string.Empty;
+            ValidateReference(definition["appears_as"]?.GetValue<string>(), terrain, TerrainDocument, id, "appears_as", "unknown_terrain", report);
         }
     }
 

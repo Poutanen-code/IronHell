@@ -26,5 +26,7 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<MonsterDefinition> Monsters { get; }
 
+    IDefinitionRegistry<TerrainDefinition> Terrain { get; }
+
     IReadOnlyCollection<RaceClassRule> RaceClassRules { get; }
 }
