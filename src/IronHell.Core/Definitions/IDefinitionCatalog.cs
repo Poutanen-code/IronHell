@@ -24,5 +24,7 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities { get; }
 
+    IDefinitionRegistry<MonsterDefinition> Monsters { get; }
+
     IReadOnlyCollection<RaceClassRule> RaceClassRules { get; }
 }

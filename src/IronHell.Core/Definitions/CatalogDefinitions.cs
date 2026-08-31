@@ -14,6 +14,8 @@ public sealed record ActivationDefinition(string Id) : IIdentifiedDefinition;
 
 public sealed record MonsterAbilityDefinition(string Id) : IIdentifiedDefinition;
 
+public sealed record MonsterDefinition(string Id) : IIdentifiedDefinition;
+
 public enum ItemCategory
 {
 	Weapon,

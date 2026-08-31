@@ -57,8 +57,8 @@
                 "color",
                 "stats",
                 "flags",
-                "blows",
-                "spells",
+                "attacks",
+                "abilities",
                 "spell_frequency",
                 "description"
               ],
@@ -93,8 +93,8 @@
                   }
                 },
                 "flags": { "type": "string", "minLength": 1 },
-                "blows": { "type": "string", "minLength": 1 },
-                "spells": { "type": "string", "minLength": 1 },
+                "attacks": { "type": "string", "minLength": 1 },
+                "abilities": { "type": "string", "minLength": 1 },
                 "spell_frequency": { "type": "string", "minLength": 1 },
                 "description": { "type": "string", "minLength": 1 }
               }
@@ -108,7 +108,6 @@
                 "dungeon_levels",
                 "ai_behavior",
                 "sprite",
-                "abilities",
                 "can_dig"
               ],
               "properties": {
@@ -117,7 +116,6 @@
                 "dungeon_levels": { "type": "string", "minLength": 1 },
                 "ai_behavior": { "type": "string", "minLength": 1 },
                 "sprite": { "type": "string", "minLength": 1 },
-                "abilities": { "type": "string", "minLength": 1 },
                 "can_dig": { "type": "string", "minLength": 1 }
               }
             },
@@ -267,7 +265,7 @@
           ]
         },
         "can_dig": { "type": "boolean" },
-        "blows": {
+        "attacks": {
           "type": "array",
           "items": { "$ref": "#/$defs/monster_blow" }
         },
@@ -286,7 +284,7 @@
       "allOf": [
         {
           "if": { "required": ["spell_frequency"] },
-          "then": { "required": ["spells"] }
+          "then": { "required": ["abilities"] }
         }
       ]
     },
@@ -393,7 +391,9 @@
                   "StealItem",
                   "ModifyLightSource",
                   "ModifyItemPower",
-                  "Earthquake"
+                  "Earthquake",
+                  "FearControl",
+                  "ParalyzeControl"
                 ]
               },
               "parameters": {

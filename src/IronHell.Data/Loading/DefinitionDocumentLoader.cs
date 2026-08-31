@@ -30,7 +30,7 @@ internal static class DefinitionDocumentLoader
                 {
                     OutputFormat = OutputFormat.List,
                 });
-                foreach (var error in GetSchemaErrors(evaluation).Where(error => !IsItemSchemaBranchNoise(entry, error)))
+                foreach (var error in GetSchemaErrors(evaluation).Where(error => !IsSchemaBranchNoise(entry, error)))
                 {
                     report.Add(entry.JsonPath, null, "$", "schema_validation", error);
                 }
@@ -189,7 +189,18 @@ internal static class DefinitionDocumentLoader
         return evaluation.Details?.SelectMany(GetSchemaErrors) ?? [];
     }
 
+    private static bool IsSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
+        IsItemSchemaBranchNoise(entry, error) || IsMonsterSchemaBranchNoise(entry, error);
+
     private static bool IsItemSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
         entry.JsonPath.StartsWith("items/", StringComparison.Ordinal) &&
         (error == "All values fail against the false schema" || error.EndsWith("but should be \"null\"", StringComparison.Ordinal));
+
+    private static bool IsMonsterSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
+        entry.JsonPath == "monsters/monsters.json" &&
+        (error == "All values fail against the false schema" ||
+         error == "Required properties [\"spells\"] are not present" ||
+         error == "Required properties [\"abilities\"] are not present" ||
+         error == "Required properties [\"spell_frequency\"] are not present" ||
+         error == "Required properties [\"effect\",\"dice_count\",\"dice_sides\"] are not present");
 }

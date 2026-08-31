@@ -368,6 +368,64 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_RepositoryDefinitions_LoadsOrderedMonsterRegistry()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var success = Assert.IsType<DefinitionLoadSuccess>(result);
+        var ids = success.Catalog.Monsters.All.Select(monster => monster.Id).ToArray();
+        Assert.True(success.Catalog.Monsters.TryGet("filthy_street_urchin", out _));
+        Assert.Equal(ids.OrderBy(id => id, StringComparer.Ordinal), ids);
+    }
+
+    [Fact]
+    public async Task LoadAsync_DuplicateMonsterId_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"), "\"id\": \"scrawny_cat\"", "\"id\": \"filthy_street_urchin\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_id");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownMonsterAbility_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monster_abilities.json"), "\"id\": \"arrow_1\"", "\"id\": \"missing_ability\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_monster_ability");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownMonsterAction_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "actions.json"), "\"action_id\": \"ApplyDamage\"", "\"action_id\": \"StatDrain\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_action");
+    }
+
+    [Fact]
+    public async Task LoadAsync_MultipleUnknownMonsterReferences_ReturnsAllErrorsAndNoCatalog()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monster_abilities.json"), "\"id\": \"arrow_1\"", "\"id\": \"missing_ability\"");
+        ReplaceFirst(Path.Combine(root, "actions.json"), "\"action_id\": \"ApplyDamage\"", "\"action_id\": \"StatDrain\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        var failure = Assert.IsType<DefinitionLoadFailure>(result);
+        Assert.Contains(failure.Report.Errors, error => error.Code == "unknown_monster_ability");
+        Assert.Contains(failure.Report.Errors, error => error.Code == "unknown_action");
+    }
+
+    [Fact]
     public async Task LoadAsync_OrdersRegistryEntriesByOrdinalId()
     {
         var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
