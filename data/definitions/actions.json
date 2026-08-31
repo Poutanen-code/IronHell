@@ -2996,6 +2996,52 @@
       "provenance": {
         "summary": "Added for MAngband BR_* projector semantics. BallDamage models a centered area payload and cannot preserve directional breath attenuation."
       }
+    },
+    {
+      "action_id": "ForgetKnowledge",
+      "name": "Forget Knowledge",
+      "description": "Erases previously acquired map knowledge and/or item identification knowledge from the resolved target.",
+      "category": "status",
+      "confidence": "medium",
+      "allowed_source_families": [
+        "monster_ability",
+        "spell",
+        "activation"
+      ],
+      "parameter_contract": {
+        "closed": true,
+        "parameters": [
+          {
+            "id": "target_mode",
+            "description": "Who loses knowledge. Monster casters always target the player.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "target"
+            ]
+          },
+          {
+            "id": "knowledge_scope",
+            "description": "Which knowledge categories are erased.",
+            "value_type": "enum",
+            "required": true,
+            "allowed_values": [
+              "map",
+              "items",
+              "all"
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Added to resolve MAngband FORGET (RF6_FORGET), which erases the player's dungeon map and object knowledge, resisted by saving throw. No prior action modeled knowledge loss."
+      }
     }
   ]
 }

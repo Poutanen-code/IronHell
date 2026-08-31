@@ -63,7 +63,8 @@
         "RandomActionSelection",
         "BreathDamage",
         "CreateItems",
-        "CreateGold"
+        "CreateGold",
+        "ForgetKnowledge"
       ]
     },
     "ActionCategory": {
