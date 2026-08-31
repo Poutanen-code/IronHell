@@ -38,7 +38,6 @@
           "female_weight_mod",
           "capability_ids",
           "size",
-          "vision_type",
           "lore",
           "provenance_status"
         ],

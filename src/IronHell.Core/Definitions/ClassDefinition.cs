@@ -18,4 +18,4 @@ public sealed record ClassDefinition(
     int SenseBase,
     int SenseDiv,
     IReadOnlyList<string> CapabilityIds,
-    IReadOnlyList<StartingEquipmentEntry> StartingEquipment);
+    IReadOnlyList<StartingEquipmentEntry> StartingEquipment) : IIdentifiedDefinition;

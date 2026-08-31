@@ -2669,6 +2669,7 @@
         "parameters": [
           {
             "id": "target_mode",
+            "description": "The actor whose gold is affected.",
             "value_type": "enum",
             "required": true,
             "allowed_values": [
@@ -2676,6 +2677,15 @@
             ]
           }
         ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action added for monster theft behavior."
       }
     },
     {
@@ -2693,6 +2703,7 @@
         "parameters": [
           {
             "id": "target_mode",
+            "description": "The actor whose inventory item is affected.",
             "value_type": "enum",
             "required": true,
             "allowed_values": [
@@ -2700,6 +2711,15 @@
             ]
           }
         ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action added for monster item theft behavior."
       }
     },
     {
@@ -2716,6 +2736,7 @@
         "parameters": [
           {
             "id": "target_mode",
+            "description": "The actor whose carried light source is affected.",
             "value_type": "enum",
             "required": true,
             "allowed_values": [
@@ -2723,6 +2744,15 @@
             ]
           }
         ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action added for carried light-source modification."
       }
     },
     {
@@ -2740,6 +2770,7 @@
         "parameters": [
           {
             "id": "target_mode",
+            "description": "The actor whose item power is affected.",
             "value_type": "enum",
             "required": true,
             "allowed_values": [
@@ -2748,6 +2779,7 @@
           },
           {
             "id": "operation",
+            "description": "The item power modification to apply.",
             "value_type": "enum",
             "required": true,
             "allowed_values": [
@@ -2756,6 +2788,15 @@
             ]
           }
         ]
+      },
+      "validation": {
+        "reject_unknown_parameters": true,
+        "require_declared_required_parameters": true,
+        "enforce_declared_value_types": true
+      },
+      "provenance_status": "derived",
+      "provenance": {
+        "summary": "Canonical action added for item power modification."
       }
     },
     {
@@ -2905,6 +2946,7 @@
           },
           {
             "id": "generation_policy",
+            "description": "The policy selecting the generated gold amount.",
             "value_type": "enum",
             "required": false,
             "allowed_values": [

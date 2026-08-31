@@ -10,4 +10,4 @@ public sealed record RaceDefinition(
     int ExpFactor,
     int Infravision,
     int HistoryChart,
-    IReadOnlyList<string> CapabilityIds);
+    IReadOnlyList<string> CapabilityIds) : IIdentifiedDefinition;

@@ -64,7 +64,20 @@
         "BreathDamage",
         "CreateItems",
         "CreateGold",
-        "ForgetKnowledge"
+        "ForgetKnowledge",
+        "ModifyPlayerSpeed",
+        "ModifyAttribute",
+        "ModifyExperience",
+        "CloneMonster",
+        "ModifyMonsterSpeed",
+        "AggravateMonsters",
+        "ApplyItemCurse",
+        "CreateTraps",
+        "ApplyDamage",
+        "StealGold",
+        "StealItem",
+        "ModifyLightSource",
+        "ModifyItemPower"
       ]
     },
     "ActionCategory": {
@@ -79,7 +92,9 @@
         "terrain",
         "control",
         "summoning",
-        "utility"
+        "utility",
+        "attribute",
+        "progression"
       ]
     },
     "Confidence": {
@@ -106,7 +121,11 @@
         "trap",
         "chest",
         "treasure",
-        "death_drop"
+        "death_drop",
+        "environmental",
+        "item_property",
+        "monster_blow",
+        "monster_spell"
       ]
     },
     "ParameterValueType": {

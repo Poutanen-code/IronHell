@@ -1,0 +1,27 @@
+namespace IronHell.Data.Loading;
+
+public sealed record DefinitionManifestEntry(string Name, string JsonPath, string SchemaPath);
+
+public static class DefinitionManifest
+{
+    public static IReadOnlyList<DefinitionManifestEntry> CharacterCreation { get; } =
+    [
+        new("actions", "actions.json", "../schemas/actions.schema.json"),
+        new("statuses", "statuses.json", "../schemas/statuses.schema.json"),
+        new("capabilities", "capabilities.json", "../schemas/capabilities.schema.json"),
+        new("resistances", "resistances.json", "../schemas/resistances.schema.json"),
+        new("activations", "activations.json", "../schemas/activations.schema.json"),
+        new("weapons", "items/weapons.json", "../schemas/items/weapons.schema.json"),
+        new("armor", "items/armor.json", "../schemas/items/armor.schema.json"),
+        new("lights", "items/lights.json", "../schemas/items/lights.schema.json"),
+        new("consumables", "items/consumables.json", "../schemas/items/consumables.schema.json"),
+        new("potions", "items/potions.json", "../schemas/items/potions.schema.json"),
+        new("scrolls", "items/scrolls.json", "../schemas/items/scrolls.schema.json"),
+        new("spell_books", "magic/spell_books.json", "../schemas/magic/spell_books.schema.json"),
+        new("mage_spells", "magic/mage_spells.json", "../schemas/magic/spells.schema.json"),
+        new("priest_prayers", "magic/priest_prayers.json", "../schemas/magic/spells.schema.json"),
+        new("races", "character/races.json", "../schemas/character/races.schema.json"),
+        new("classes", "character/classes.json", "../schemas/character/classes.schema.json"),
+        new("race_class_rules", "character/race_class_rules.json", "../schemas/character/race_class_rules.schema.json"),
+    ];
+}

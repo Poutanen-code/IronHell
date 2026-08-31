@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ironhell/rewrite/activations",
+  "$id": "https://ironhell.local/schemas/activations.schema.json",
   "title": "Artifact Activation Definitions",
   "description": "Maps legacy activation IDs to composition-based effect chains. Preserves all original activation names while replacing hardcoded behavior with parameterized actions.",
   "type": "object",
@@ -38,10 +38,10 @@
           "type": "string"
         },
         "actions": {
-          "description": "Ordered list of actions applied when this activation fires. actions are applied in sequence.",
+          "description": "Ordered action references applied when this activation fires. Nested action lists are permitted for composite source configuration.",
           "type": "array",
           "minItems": 1,
-          "items": { "$ref": "actions#/$defs/Effect" }
+          "items": { "$ref": "#/$defs/ActionReference" }
         },
         "migration_status": {
           "description": "Marks an activation whose remaining behavior cannot yet be represented by an activation-eligible canonical action.",
@@ -52,6 +52,15 @@
           "description": "Implementation notes for developers. Not shown to players.",
           "type": "string"
         }
+      }
+    },
+    "ActionReference": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["action_id"],
+      "properties": {
+        "action_id": { "type": "string", "minLength": 1 },
+        "parameters": { "type": "object" }
       }
     }
   }
