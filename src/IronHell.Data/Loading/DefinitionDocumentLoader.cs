@@ -190,7 +190,7 @@ internal static class DefinitionDocumentLoader
     }
 
     private static bool IsSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
-        IsItemSchemaBranchNoise(entry, error) || IsMonsterSchemaBranchNoise(entry, error);
+        IsItemSchemaBranchNoise(entry, error) || IsMonsterSchemaBranchNoise(entry, error) || IsTrapSchemaBranchNoise(entry, error);
 
     private static bool IsItemSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
         entry.JsonPath.StartsWith("items/", StringComparison.Ordinal) &&
@@ -203,4 +203,7 @@ internal static class DefinitionDocumentLoader
          error == "Required properties [\"abilities\"] are not present" ||
          error == "Required properties [\"spell_frequency\"] are not present" ||
          error == "Required properties [\"effect\",\"dice_count\",\"dice_sides\"] are not present");
+
+    private static bool IsTrapSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
+        entry.JsonPath == "environment/traps.json" && error == "All values fail against the false schema";
 }

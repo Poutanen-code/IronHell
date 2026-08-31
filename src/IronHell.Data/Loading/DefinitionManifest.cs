@@ -14,6 +14,7 @@ public static class DefinitionManifest
         new("monster_abilities", "monsters/monster_abilities.json", "../schemas/monsters/monster_abilities.schema.json"),
         new("monsters", "monsters/monsters.json", "../schemas/monsters/monsters.schema.json"),
         new("terrain", "environment/terrain_definitions.json", "../schemas/environment/terrain_definitions.schema.json"),
+        new("traps", "environment/traps.json", "../schemas/environment/traps.schema.json"),
         new("weapons", "items/weapons.json", "../schemas/items/weapons.schema.json"),
         new("armor", "items/armor.json", "../schemas/items/armor.schema.json"),
         new("lights", "items/lights.json", "../schemas/items/lights.schema.json"),

@@ -65,12 +65,12 @@
             "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
             "uniqueItems": true
           },
-          "actions": {
+          "action_refs": {
             "type": "array",
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["action_id"],
+              "required": ["action_id", "parameters"],
               "properties": {
                 "action_id": { "type": "string", "minLength": 1 },
                 "parameters": {
@@ -80,6 +80,7 @@
               }
             }
           },
+          "parity_notes": { "type": "string", "minLength": 1 },
           "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
         }
       }

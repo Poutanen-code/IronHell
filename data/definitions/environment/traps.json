@@ -14,7 +14,7 @@
       "effect_tags": [
         "free_action_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ParalyzeControl",
           "parameters": {
@@ -45,7 +45,7 @@
       "effect_tags": [
         "destroy_contents"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "BallDamage",
           "parameters": {
@@ -75,7 +75,7 @@
       "effect_tags": [
         "feather_fall_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -110,7 +110,7 @@
       "effect_tags": [
         "feather_fall_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -139,7 +139,7 @@
       "effect_tags": [
         "feather_fall_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -180,7 +180,7 @@
       "effect_tags": [
         "feather_fall_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -234,7 +234,7 @@
       "effect_tags": [
         "consumable_trap"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "SummonEntities",
           "parameters": {
@@ -266,7 +266,7 @@
       "effect_tags": [
         "forced_teleport_100"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "TeleportSelf",
           "parameters": {
@@ -291,7 +291,7 @@
       "effect_tags": [
         "fire_resistance"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -321,7 +321,7 @@
       "effect_tags": [
         "acid_resistance"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -351,7 +351,7 @@
       "effect_tags": [
         "dart_hit_125"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -395,7 +395,7 @@
       "effect_tags": [
         "dart_hit_125"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -435,7 +435,7 @@
       "effect_tags": [
         "dart_hit_125"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -475,7 +475,7 @@
       "effect_tags": [
         "dart_hit_125"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyDamage",
           "parameters": {
@@ -515,7 +515,7 @@
       "effect_tags": [
         "blindness_resistance"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyStatus",
           "parameters": {
@@ -547,7 +547,7 @@
       "effect_tags": [
         "confusion_resistance"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ConfuseControl",
           "parameters": {
@@ -575,7 +575,7 @@
       "effect_tags": [
         "poison_resistance"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ApplyStatus",
           "parameters": {
@@ -607,7 +607,7 @@
       "effect_tags": [
         "free_action_prevention"
       ],
-      "actions": [
+      "action_refs": [
         {
           "action_id": "ParalyzeControl",
           "parameters": {

@@ -18,6 +18,8 @@ public sealed record MonsterDefinition(string Id) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 
+public sealed record TrapDefinition(string Id) : IIdentifiedDefinition;
+
 public enum ItemCategory
 {
 	Weapon,

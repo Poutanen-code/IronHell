@@ -28,5 +28,7 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<TerrainDefinition> Terrain { get; }
 
+    IDefinitionRegistry<TrapDefinition> Traps { get; }
+
     IReadOnlyCollection<RaceClassRule> RaceClassRules { get; }
 }

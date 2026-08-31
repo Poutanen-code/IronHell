@@ -426,6 +426,114 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_RepositoryDefinitions_LoadsOrderedTerrainRegistry()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var success = Assert.IsType<DefinitionLoadSuccess>(result);
+        var terrain = success.Catalog.Terrain.All;
+        var ids = terrain.Select(definition => definition.Id).ToArray();
+        Assert.True(success.Catalog.Terrain.TryGet("open_floor", out _));
+        Assert.Equal(ids.OrderBy(id => id, StringComparer.Ordinal), ids);
+        Assert.True(Assert.IsAssignableFrom<ICollection<TerrainDefinition>>(terrain).IsReadOnly);
+    }
+
+    [Fact]
+    public async Task LoadAsync_DuplicateTerrainId_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "terrain_definitions.json"), "\"id\": \"open_floor\"", "\"id\": \"darkness\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_id");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownTerrainReference_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "terrain_definitions.json"), "\"appears_as\": \"open_floor\"", "\"appears_as\": \"missing_terrain\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_terrain");
+    }
+
+    [Fact]
+    public async Task LoadAsync_MultipleUnknownTerrainReferences_ReturnsAllErrorsAndNoCatalog()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "terrain_definitions.json"), "\"appears_as\": \"open_floor\"", "\"appears_as\": \"missing_terrain\"");
+        ReplaceFirst(Path.Combine(root, "environment", "terrain_definitions.json"), "\"appears_as\": \"crops\"", "\"appears_as\": \"another_missing_terrain\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        var failure = Assert.IsType<DefinitionLoadFailure>(result);
+        Assert.True(failure.Report.Errors.Count(error => error.Code == "unknown_terrain") >= 2);
+    }
+
+    [Fact]
+    public async Task LoadAsync_RepositoryDefinitions_LoadsOrderedTrapRegistry()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var success = Assert.IsType<DefinitionLoadSuccess>(result);
+        var traps = success.Catalog.Traps.All;
+        var ids = traps.Select(trap => trap.Id).ToArray();
+        Assert.True(success.Catalog.Traps.TryGet("trap_door", out _));
+        Assert.Equal(ids.OrderBy(id => id, StringComparer.Ordinal), ids);
+        Assert.True(Assert.IsAssignableFrom<ICollection<TrapDefinition>>(traps).IsReadOnly);
+    }
+
+    [Fact]
+    public async Task LoadAsync_DuplicateTrapId_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "traps.json"), "\"id\": \"explosive_trap\"", "\"id\": \"gas_paralyze\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_id");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownTrapAction_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "traps.json"), "\"action_id\": \"ParalyzeControl\"", "\"action_id\": \"StatDrain\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_action");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownTrapStatus_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "traps.json"), "\"status_id\": \"cut\"", "\"status_id\": \"missing_status\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_status");
+    }
+
+    [Fact]
+    public async Task LoadAsync_MultipleUnknownTrapReferences_ReturnsAllErrorsAndNoCatalog()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "environment", "traps.json"), "\"action_id\": \"ParalyzeControl\"", "\"action_id\": \"StatDrain\"");
+        ReplaceFirst(Path.Combine(root, "environment", "traps.json"), "\"status_id\": \"cut\"", "\"status_id\": \"missing_status\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        var failure = Assert.IsType<DefinitionLoadFailure>(result);
+        Assert.Contains(failure.Report.Errors, error => error.Code == "unknown_action");
+        Assert.Contains(failure.Report.Errors, error => error.Code == "unknown_status");
+    }
+
+    [Fact]
     public async Task LoadAsync_OrdersRegistryEntriesByOrdinalId()
     {
         var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
