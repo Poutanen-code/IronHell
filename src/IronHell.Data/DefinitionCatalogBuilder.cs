@@ -20,6 +20,9 @@ internal static class DefinitionCatalogBuilder
     private const string ResistanceIdProperty = "resistance_id";
     private const string UnknownResistanceError = "unknown_resistance";
     private const string UnknownCapabilityError = "unknown_capability";
+    private const string CapabilityIdProperty = "capability_id";
+    private const string ResistanceIdsProperty = "resistance_ids";
+    private const string MonsterAbilitiesDocument = "monsters/monster_abilities.json";
 
     private sealed record ValidationRegistries(
         IDefinitionRegistry<ActionDefinition> Actions,
@@ -29,7 +32,8 @@ internal static class DefinitionCatalogBuilder
         IDefinitionRegistry<ItemDefinition> Items,
         IDefinitionRegistry<SpellDefinition> MageSpells,
         IDefinitionRegistry<SpellDefinition> PriestPrayers,
-        IDefinitionRegistry<ActivationDefinition> Activations);
+        IDefinitionRegistry<ActivationDefinition> Activations,
+        IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities);
 
     private static readonly (string DocumentName, string CollectionName, ItemCategory Category)[] ItemCatalogs =
     [
@@ -57,6 +61,7 @@ internal static class DefinitionCatalogBuilder
         var mageSpells = ReadSimpleDefinitions<SpellDefinition>(documents["mage_spells"], "spells", "id", id => new SpellDefinition(id), report);
         var priestPrayers = ReadSimpleDefinitions<SpellDefinition>(documents["priest_prayers"], "spells", "id", id => new SpellDefinition(id), report);
         var activations = ReadSimpleDefinitions<ActivationDefinition>(documents[ActivationsCatalog], ActivationsCatalog, ActivationIdProperty, id => new ActivationDefinition(id), report);
+        var monsterAbilities = ReadSimpleDefinitions<MonsterAbilityDefinition>(documents["monster_abilities"], "abilities", "id", id => new MonsterAbilityDefinition(id), report);
         var races = ReadRaces(documents["races"], report);
         var classes = ReadClasses(documents["classes"], report);
         var rules = ReadRules(documents["race_class_rules"], report);
@@ -76,10 +81,11 @@ internal static class DefinitionCatalogBuilder
         var mageSpellRegistry = new DefinitionRegistry<SpellDefinition>(mageSpells);
         var priestPrayerRegistry = new DefinitionRegistry<SpellDefinition>(priestPrayers);
         var activationRegistry = new DefinitionRegistry<ActivationDefinition>(activations);
+        var monsterAbilityRegistry = new DefinitionRegistry<MonsterAbilityDefinition>(monsterAbilities);
 
         var characterDefinitions = new CharacterDefinitionSet(rules, races, classes);
         ValidateReferences(raceRegistry, classRegistry, capabilityRegistry, itemRegistry, characterDefinitions, report);
-        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry);
+        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry);
         ValidateCatalogReferences(documents, validationRegistries, report);
         if (report.HasErrors)
         {
@@ -97,6 +103,7 @@ internal static class DefinitionCatalogBuilder
             mageSpellRegistry,
             priestPrayerRegistry,
             activationRegistry,
+            monsterAbilityRegistry,
             Array.AsReadOnly(rules.OrderBy(rule => rule.RaceId, StringComparer.Ordinal).ThenBy(rule => rule.ClassId, StringComparer.Ordinal).ToArray()));
     }
 
@@ -294,6 +301,7 @@ internal static class DefinitionCatalogBuilder
         ValidateItemReferences(documents, registries.Actions, registries.Statuses, registries.Capabilities, registries.Resistances, report);
         ValidateSpellReferences(documents, registries, report);
         ValidateActivationReferences(documents[ActivationsCatalog], registries, report);
+        ValidateMonsterAbilityReferences(documents["monster_abilities"], registries, report);
     }
 
     private static void ValidateCapabilityResistanceReferences(
@@ -458,10 +466,10 @@ internal static class DefinitionCatalogBuilder
                 ValidateActionReference(value, registries.Actions, registries.Statuses, ActivationsDocument, activationId, report);
             }
 
-            ValidateReference(value["capability_id"]?.GetValue<string>(), registries.Capabilities, ActivationsDocument, activationId, "capability_id", UnknownCapabilityError, report);
+            ValidateReference(value[CapabilityIdProperty]?.GetValue<string>(), registries.Capabilities, ActivationsDocument, activationId, CapabilityIdProperty, UnknownCapabilityError, report);
             ValidateReference(value[ResistanceIdProperty]?.GetValue<string>(), registries.Resistances, ActivationsDocument, activationId, ResistanceIdProperty, UnknownResistanceError, report);
             ValidateActivationReferenceList(value[CapabilityIdsProperty]?.AsArray(), registries.Capabilities, activationId, CapabilityIdsProperty, UnknownCapabilityError, report);
-            ValidateActivationReferenceList(value["resistance_ids"]?.AsArray(), registries.Resistances, activationId, "resistance_ids", UnknownResistanceError, report);
+            ValidateActivationReferenceList(value[ResistanceIdsProperty]?.AsArray(), registries.Resistances, activationId, ResistanceIdsProperty, UnknownResistanceError, report);
 
             foreach (var property in value)
             {
@@ -489,6 +497,41 @@ internal static class DefinitionCatalogBuilder
         foreach (var reference in references ?? [])
         {
             ValidateReference(reference?.GetValue<string>(), registry, ActivationsDocument, activationId, property, errorCode, report);
+        }
+    }
+
+    private static void ValidateMonsterAbilityReferences(
+        JsonObject document,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        foreach (var ability in document["abilities"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var abilityId = ability["id"]?.GetValue<string>() ?? string.Empty;
+            foreach (var action in ability["action_refs"]?.AsArray().OfType<JsonObject>() ?? [])
+            {
+                ValidateActionReference(action, registries.Actions, registries.Statuses, MonsterAbilitiesDocument, abilityId, report);
+            }
+
+            ValidateReference(ability[CapabilityIdProperty]?.GetValue<string>(), registries.Capabilities, MonsterAbilitiesDocument, abilityId, CapabilityIdProperty, UnknownCapabilityError, report);
+            ValidateReference(ability[ResistanceIdProperty]?.GetValue<string>(), registries.Resistances, MonsterAbilitiesDocument, abilityId, ResistanceIdProperty, UnknownResistanceError, report);
+            ValidateMonsterAbilityReferenceList(ability[CapabilityIdsProperty]?.AsArray(), registries.Capabilities, abilityId, CapabilityIdsProperty, UnknownCapabilityError, report);
+            ValidateMonsterAbilityReferenceList(ability[ResistanceIdsProperty]?.AsArray(), registries.Resistances, abilityId, ResistanceIdsProperty, UnknownResistanceError, report);
+        }
+    }
+
+    private static void ValidateMonsterAbilityReferenceList<T>(
+        JsonArray? references,
+        IDefinitionRegistry<T> registry,
+        string abilityId,
+        string property,
+        string errorCode,
+        DefinitionValidationReport report)
+        where T : IIdentifiedDefinition
+    {
+        foreach (var reference in references ?? [])
+        {
+            ValidateReference(reference?.GetValue<string>(), registry, MonsterAbilitiesDocument, abilityId, property, errorCode, report);
         }
     }
 

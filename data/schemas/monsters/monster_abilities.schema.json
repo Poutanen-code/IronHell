@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/monsters/monster_abilities.schema.json",
+  "title": "Gameplay Architecture V2 Monster Abilities",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "_meta", "abilities"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "_meta": { "type": "object" },
+    "abilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/MonsterAbility" }
+    }
+  },
+  "$defs": {
+    "MonsterAbility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "category", "confidence", "provenance_status", "source_formula", "action_refs"],
+      "properties": {
+        "id": { "$ref": "../common.schema.json#/$defs/Id" },
+        "name": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "enum": ["ball", "bolt", "breath", "buff", "curse", "innate", "mental", "status", "summon", "teleport"] },
+        "confidence": { "type": "string", "enum": ["high", "medium"] },
+        "provenance_status": { "$ref": "../common.schema.json#/$defs/ProvenanceStatus" },
+        "source_formula": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string" },
+        "action_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["action_id", "parameters"],
+            "properties": {
+              "action_id": { "type": "string", "minLength": 1 },
+              "parameters": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

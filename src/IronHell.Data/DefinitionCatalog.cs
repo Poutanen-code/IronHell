@@ -13,4 +13,5 @@ internal sealed record DefinitionCatalog(
     IDefinitionRegistry<SpellDefinition> MageSpells,
     IDefinitionRegistry<SpellDefinition> PriestPrayers,
     IDefinitionRegistry<ActivationDefinition> Activations,
+    IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities,
     IReadOnlyCollection<RaceClassRule> RaceClassRules) : IDefinitionCatalog;

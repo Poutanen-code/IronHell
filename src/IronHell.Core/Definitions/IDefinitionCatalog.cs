@@ -22,5 +22,7 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<ActivationDefinition> Activations { get; }
 
+    IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities { get; }
+
     IReadOnlyCollection<RaceClassRule> RaceClassRules { get; }
 }

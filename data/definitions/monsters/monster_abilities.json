@@ -27,7 +27,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband ARROW_1: 1d6 physical",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -49,7 +49,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband ARROW_2: 3d6 physical",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -71,7 +71,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband ARROW_3: 5d6 physical",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -93,7 +93,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband ARROW_4: 7d6 physical",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -115,7 +115,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_ACID: 1d(rlev*3)+15",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -139,7 +139,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_COLD: 1d(rlev*1.5)+10",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -164,7 +164,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband BA_DARK: rlev*5 + 10d10",
             "notes": "Distinct from the 'darkness' ability: this deals dark damage, 'darkness' only unlights an area.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -190,7 +190,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_ELEC: 1d(rlev*1.5)+8",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -214,7 +214,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_FIRE: 1d(rlev*3.5)+10",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -238,7 +238,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_MANA: rlev*5 + 10d10",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -264,7 +264,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BA_NETH: 50 + 10d10 + rlev",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -291,7 +291,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband BA_POIS: 12d2",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -315,7 +315,7 @@
             "provenance_status": "unresolved",
             "source_formula": "MAngband BA_WATE: 1d(rlev*2.5)+50",
             "notes": "No 'water' damage_type exists on BallDamage. Approximated as physical pending a catalog decision.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BallDamage",
                     "parameters": {
@@ -339,7 +339,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband BLIND: 12+d4 turns, resisted by resist_blind or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ApplyStatus",
                     "parameters": {
@@ -363,7 +363,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband BLINK: short-range teleport, range 10",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "TeleportSelf",
                     "parameters": {
@@ -380,7 +380,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_ACID: 7d8 + rlev/3",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -405,7 +405,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_COLD: 6d8 + rlev/3",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -430,7 +430,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_ELEC: 4d8 + rlev/3",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -455,7 +455,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_FIRE: 9d8 + rlev/3",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -481,7 +481,7 @@
             "provenance_status": "unresolved",
             "source_formula": "MAngband BO_ICEE: 6d6 + rlev",
             "notes": "No distinct 'ice' damage_type exists on BoltDamage. Approximated as cold.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -506,7 +506,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_MANA: 1d(rlev*3.5)+50",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -529,7 +529,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BO_NETH: 30 + 5d5 + rlev*1.5",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -556,7 +556,7 @@
             "provenance_status": "unresolved",
             "source_formula": "MAngband BO_PLAS: 10 + 8d7 + rlev",
             "notes": "No 'plasma' damage_type exists on BoltDamage. Approximated as fire pending a catalog decision.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -583,7 +583,7 @@
             "provenance_status": "unresolved",
             "source_formula": "MAngband BO_WATE: 10d10 + rlev",
             "notes": "No 'water' damage_type exists on BoltDamage. Approximated as physical.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -608,7 +608,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BOULDER: (1 + rlev/7)d12",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -632,7 +632,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband BRAIN_SMASH: 12d15 mental damage + blind + confuse + paralyze + slow",
             "notes": "Secondary statuses are best-fit approximations of the MAngband composite effect; exact per-effect save semantics are a policy-layer concern.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -702,7 +702,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_ACID: hp/3, cap 1600",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -725,7 +725,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_CHAO: hp/6, cap 500",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -748,7 +748,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_COLD: hp/3, cap 1600",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -771,7 +771,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_CONF: hp/6, cap 400",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -794,7 +794,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_DARK: hp/6, cap 400",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -817,7 +817,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_DISE: hp/6, cap 500",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -840,7 +840,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_ELEC: hp/3, cap 1600",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -863,7 +863,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_FIRE: hp/3, cap 1600",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -887,7 +887,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband BR_GRAV: hp/3, cap 200",
             "notes": "MAngband gravity breath also stuns and knocks back the target; only the damage component is modeled.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -910,7 +910,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_INER: hp/6, cap 200",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -933,7 +933,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_LITE: hp/6, cap 400",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -956,7 +956,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_NETH: hp/6, cap 550",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -979,7 +979,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_NEXU: hp/6, cap 400",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1002,7 +1002,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_PLAS: hp/6, cap 150",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1025,7 +1025,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_POIS: hp/3, cap 800",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1048,7 +1048,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_SHAR: hp/6, cap 500",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1071,7 +1071,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband BR_SOUN: hp/6, cap 500",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1095,7 +1095,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband BR_TIME: hp/3, cap 150",
             "notes": "MAngband time breath also drains a stat; only the damage component is modeled.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1119,7 +1119,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband BR_WALL: hp/6, cap 200",
             "notes": "The terrain-destruction semantics of GF_KILL_WALL are not represented by any damage action; only the direct damage component is modeled.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BreathDamage",
                     "parameters": {
@@ -1142,7 +1142,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband CAUSE_1: 3d8",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1164,7 +1164,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband CAUSE_2: 8d8",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1186,7 +1186,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband CAUSE_3: 10d15",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1209,7 +1209,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband CAUSE_4: 15d15 + bleeding (10d10 cut)",
             "notes": "The cut status counter is a severity value, not a turn duration; applying 10d10 directly matches the MAngband cut-counter semantics documented in statuses.json.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1245,7 +1245,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband CONF: 4+d4 turns, resisted by resist_conf or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ConfuseControl",
                     "parameters": {
@@ -1270,7 +1270,7 @@
             "provenance_status": "verified",
             "source_formula": "MAngband DARKNESS: unlights area, radius 3",
             "notes": "Distinct from 'ball_darkness', which deals dark damage; this only removes light.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "DarkenArea",
                     "parameters": {
@@ -1288,7 +1288,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband DRAIN_MANA: 1d(rlev/2)+1 mana drained from target, caster heals 6x the amount drained",
             "notes": "Modeled as a composite: ModifyResourceMeter drains the target's mana, then HealHP restores the caster using an independent amount roll. ModifyResourceMeter.mode=drain and target_mode=target are new fields on an existing action rather than a new action family; the two steps are not a linked/proportional transfer (the caster heal is not guaranteed to equal exactly 6x the amount drained from the target), which is the smallest remaining parity gap.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ModifyResourceMeter",
                     "parameters": {
@@ -1324,7 +1324,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband FORGET: erases the player's item and map knowledge, resisted by saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ForgetKnowledge",
                     "parameters": {
@@ -1341,7 +1341,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband HASTE: caster gains +10 speed (up to base+10 quickly, then +2 up to base+20)",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ModifyMonsterSpeed",
                     "parameters": {
@@ -1358,7 +1358,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband HEAL: recovers rlev*6 HP, cancels fear",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "HealHP",
                     "parameters": {
@@ -1378,7 +1378,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband HOLD: 4+d4 turns, resisted by free_act or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ParalyzeControl",
                     "parameters": {
@@ -1401,7 +1401,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband MIND_BLAST: 8d8 + confusion if not resist_conf",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1437,7 +1437,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband MISSILE: 2d6 + rlev/3",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "BoltDamage",
                     "parameters": {
@@ -1462,7 +1462,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband SCARE: 4+d4 turns, resisted by resist_fear or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "FearControl",
                     "parameters": {
@@ -1486,7 +1486,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband SHRIEK: 0 damage, aggravates all monsters on the level",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "AggravateMonsters",
                     "parameters": {
@@ -1502,7 +1502,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband SLOW: 4+d4 turns, resisted by free_act or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "ModifyMonsterSpeed",
                     "parameters": {
@@ -1519,7 +1519,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_ANGEL: summons 1 angel",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1540,7 +1540,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_ANIMAL: summons 6 animals",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1561,7 +1561,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_DEMON: summons 1 demon",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1582,7 +1582,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_DRAGON: summons 1 dragon",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1603,7 +1603,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_HI_DEMON: summons 8 greater demons",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1625,7 +1625,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_HI_DRAGON: summons 8 ancient dragons",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1647,7 +1647,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_HI_UNDEAD: summons 8 greater undead",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1669,7 +1669,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_HOUND: summons 6 hounds",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1690,7 +1690,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_HYDRA: summons 6 hydras",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1711,7 +1711,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_KIN: summons 6 monsters sharing the caster's symbol",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1732,7 +1732,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband S_MONSTER: summons 1 monster",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1753,7 +1753,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband S_MONSTERS: summons 8 monsters",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1774,7 +1774,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_SPIDER: summons 6 spiders",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1795,7 +1795,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_UNDEAD: summons 1 undead",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1816,7 +1816,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_UNIQUE: summons 8 unique monsters",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1837,7 +1837,7 @@
             "confidence": "high",
             "provenance_status": "derived",
             "source_formula": "MAngband S_WRAITH: summons 8 ring wraiths",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "SummonEntities",
                     "parameters": {
@@ -1858,7 +1858,7 @@
             "confidence": "medium",
             "provenance_status": "derived",
             "source_formula": "MAngband TELE_AWAY: teleports the player away, range ~100",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "TeleportTarget",
                     "parameters": {
@@ -1875,7 +1875,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband TELE_LEVEL: sends the player up or down one dungeon level, resisted by resist_nexus or saving throw",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "RecallOrLevelShift",
                     "parameters": {
@@ -1891,7 +1891,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband TPORT: long-range teleport, range ~50",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "TeleportSelf",
                     "parameters": {
@@ -1909,7 +1909,7 @@
             "provenance_status": "derived",
             "source_formula": "MAngband TELE_TO: teleports the player adjacent to the caster",
             "notes": "TeleportTarget.distance is set to 0 to mean 'adjacent to caster', a policy-defined interpretation rather than a free-range relocation.",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "TeleportTarget",
                     "parameters": {
@@ -1926,7 +1926,7 @@
             "confidence": "high",
             "provenance_status": "verified",
             "source_formula": "MAngband TRAPS: creates traps on empty floor squares around the player",
-            "actions": [
+            "action_refs": [
                 {
                     "action_id": "CreateTraps",
                     "parameters": {
