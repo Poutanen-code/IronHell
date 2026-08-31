@@ -982,8 +982,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -1620,14 +1623,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -2292,14 +2297,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -3170,14 +3178,17 @@
           "method": "TOUCH",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -5559,8 +5570,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -6096,8 +6110,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -7223,14 +7240,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -8653,8 +8673,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -11091,14 +11114,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -12962,8 +12988,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -12978,8 +13007,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -13806,14 +13838,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -14104,8 +14138,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -14554,8 +14591,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -20066,14 +20106,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -20643,14 +20686,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -20671,14 +20716,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -22379,14 +22426,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -23271,14 +23320,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -23710,14 +23761,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -23742,8 +23796,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -25033,14 +25090,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -25200,14 +25260,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -25439,14 +25502,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -25672,8 +25737,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -25700,8 +25768,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -27117,14 +27188,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -27230,14 +27304,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -27875,14 +27952,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -27903,14 +27982,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -28687,8 +28768,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -31648,14 +31732,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -31676,14 +31762,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -32807,14 +32895,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -33816,8 +33906,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -33844,8 +33937,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -35677,8 +35773,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -35813,8 +35912,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -36338,8 +36440,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -36366,8 +36471,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -36394,8 +36502,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -36422,8 +36533,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -37365,14 +37479,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -38686,14 +38802,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -38912,14 +39031,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -38940,14 +39062,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -39208,14 +39333,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -40541,8 +40669,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -40569,8 +40700,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -41326,14 +41460,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -41664,8 +41801,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -41692,8 +41832,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -41720,8 +41863,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -41748,8 +41894,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -41861,14 +42010,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -42388,14 +42539,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -43405,8 +43558,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -43557,14 +43713,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -43701,14 +43860,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -44616,8 +44777,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -44644,8 +44808,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -44672,8 +44839,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -45091,8 +45261,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -45119,8 +45292,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -46123,8 +46299,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -46151,8 +46330,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -46565,8 +46747,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -46620,8 +46805,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -46644,14 +46832,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -48281,14 +48471,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -50762,14 +50954,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -50931,8 +51126,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -51239,8 +51437,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -51267,8 +51468,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -52809,14 +53013,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -53637,8 +53843,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -53665,8 +53874,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54568,8 +54780,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54614,8 +54829,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54699,8 +54917,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54727,8 +54948,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54755,8 +54979,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54783,8 +55010,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -54944,14 +55174,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -54976,8 +55208,11 @@
               "parameters": {
                 "status_id": "confused",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "CONFUSE"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
                 },
                 "target_mode": "target"
               }
@@ -55230,14 +55465,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -55429,8 +55666,11 @@
               "parameters": {
                 "status_id": "blinded",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "BLIND"
+                  "base": 3,
+                  "dice": {
+                    "count": 1,
+                    "sides": 5
+                  }
                 },
                 "target_mode": "target"
               }
@@ -55880,14 +56120,17 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -55896,14 +56139,16 @@
           "method": "GAZE",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56094,14 +56339,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56122,14 +56369,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56216,14 +56465,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56244,14 +56495,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56375,14 +56628,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -56403,14 +56658,16 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "ParalyzeControl",
               "parameters": {
-                "status_id": "paralyzed",
+                "target_mode": "target",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "PARALYZE"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -57022,14 +57279,17 @@
           "method": "WAIL",
           "actions": [
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
@@ -57958,14 +58218,17 @@
               }
             },
             {
-              "action_id": "ApplyStatus",
+              "action_id": "FearControl",
               "parameters": {
-                "status_id": "afraid",
+                "target_mode": "target",
+                "potency": 1,
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "TERRIFY"
-                },
-                "target_mode": "target"
+                  "base": 4,
+                  "dice": {
+                    "count": 1,
+                    "sides": 4
+                  }
+                }
               }
             }
           ]
