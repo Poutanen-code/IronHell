@@ -3,10 +3,10 @@ using IronHell.Core.Definitions;
 namespace IronHell.Core.Characters;
 
 /// <summary>
-/// Deterministic character state produced by CharacterFactory.
+/// Immutable definition-derived character data produced by CharacterFactory.
 /// Fields that require RNG (HP array, mana, stats after rolling, age, gold) are not included here.
 /// </summary>
-public sealed record CharacterState(
+public sealed record CharacterDefinitionState(
     string RaceId,
     string ClassId,
     /// <summary>race.stat_modifiers + class.stat_modifiers. Applied to rolled stats via modify_stat_value at rolling time.</summary>

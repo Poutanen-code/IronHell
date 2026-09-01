@@ -13,6 +13,8 @@ internal static class DefinitionCatalogBuilder
     private const string CapabilityIdsProperty = "capability_ids";
     private const string UnknownStatusError = "unknown_status";
     private const string MagicRealm = "magic";
+    private const string StatusesCatalog = "statuses";
+    private const string StatusesDocument = "statuses.json";
     private const string CapabilitiesCatalog = "capabilities";
     private const string ResistancesCatalog = "resistances";
     private const string ActivationsCatalog = "activations";
@@ -68,7 +70,7 @@ internal static class DefinitionCatalogBuilder
     public static IDefinitionCatalog? Build(FrozenDictionary<string, JsonObject> documents, DefinitionValidationReport report)
     {
         var actions = ReadSimpleDefinitions<ActionDefinition>(documents["actions"], "actions", ActionIdProperty, id => new ActionDefinition(id), report);
-        var statuses = ReadSimpleDefinitions<StatusDefinition>(documents["statuses"], "statuses", StatusIdProperty, id => new StatusDefinition(id), report);
+        var statuses = ReadStatuses(documents[StatusesCatalog], report);
         var capabilities = ReadSimpleDefinitions<CapabilityDefinition>(documents[CapabilitiesCatalog], CapabilitiesCatalog, "id", id => new CapabilityDefinition(id), report);
         var resistances = ReadSimpleDefinitions<ResistanceDefinition>(documents[ResistancesCatalog], ResistancesCatalog, "id", id => new ResistanceDefinition(id), report);
         var items = ReadItems(documents, report);
@@ -145,12 +147,60 @@ internal static class DefinitionCatalogBuilder
                 }
 
                 ValidateItemCategory(entry, catalog, id, report);
-                items.Add(new ItemDefinition(id, catalog.Category));
+                items.Add(new ItemDefinition(id, catalog.Category, entry?["type"]?.GetValue<string>()));
             }
         }
 
         ValidateDuplicates("items", items, report);
         return items;
+    }
+
+    private static List<StatusDefinition> ReadStatuses(JsonObject document, DefinitionValidationReport report)
+    {
+        var definitions = new List<StatusDefinition>();
+        foreach (var entry in document["statuses"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var id = entry[StatusIdProperty]?.GetValue<string>();
+            var duration = ReadStatusDuration(entry["default_duration"]?.AsObject(), id, report);
+            var policy = entry["replacement_policy"]?.GetValue<string>() switch
+            {
+                "keep_existing" => StatusApplicationPolicy.IgnoreIfPresent,
+                "replace_existing" => StatusApplicationPolicy.ReplaceExisting,
+                _ => throw new InvalidOperationException($"Status '{id}' has an unsupported replacement policy."),
+            };
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                report.Add(StatusesDocument, null, StatusIdProperty, "missing_id", "Definition identifier is required.");
+                continue;
+            }
+
+            if (duration is not null)
+            {
+                definitions.Add(new StatusDefinition(id, policy, duration));
+            }
+        }
+
+        ValidateDuplicates(StatusesCatalog, definitions, report);
+        return definitions;
+    }
+
+    private static StatusDurationDefinition? ReadStatusDuration(
+        JsonObject? duration,
+        string? statusId,
+        DefinitionValidationReport report)
+    {
+        if (duration is null || duration["base"]?.GetValue<int>() is not { } fixedDuration || fixedDuration < 0)
+        {
+            report.Add(StatusesDocument, statusId, "default_duration", "invalid_duration", "Status default duration must declare a non-negative base duration.");
+            return null;
+        }
+
+        var dice = duration["dice"]?.AsObject();
+        return new StatusDurationDefinition(
+            fixedDuration,
+            dice?["count"]?.GetValue<int>(),
+            dice?["sides"]?.GetValue<int>(),
+            duration["level_multiplier"]?.GetValue<int>());
     }
 
     private static void ValidateItemCategory(JsonNode? entry, (string DocumentName, string CollectionName, ItemCategory Category) catalog, string id, DefinitionValidationReport report)
@@ -320,7 +370,7 @@ internal static class DefinitionCatalogBuilder
     {
         ValidateCapabilityResistanceReferences(documents[CapabilitiesCatalog], registries.Resistances, report);
         ValidateResistanceStatusReferences(documents[ResistancesCatalog], registries.Statuses, report);
-        ValidateStatusMigrationReferences(documents["statuses"], registries.Statuses, report);
+        ValidateStatusMigrationReferences(documents[StatusesCatalog], registries.Statuses, report);
         ValidateItemReferences(documents, registries.Actions, registries.Statuses, registries.Capabilities, registries.Resistances, report);
         ValidateSpellReferences(documents, registries, report);
         ValidateActivationReferences(documents[ActivationsCatalog], registries, report);

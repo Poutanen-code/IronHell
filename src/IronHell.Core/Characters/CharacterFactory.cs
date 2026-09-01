@@ -5,12 +5,12 @@ namespace IronHell.Core.Characters;
 public static class CharacterFactory
 {
     /// <summary>
-    /// Creates a deterministic CharacterState from a race and class definition.
+    /// Creates deterministic definition-derived character data from a race and class definition.
     /// No RNG is used. Fields requiring dice rolls (stats, HP, mana, age, gold) are not populated.
     /// </summary>
     /// <exception cref="ArgumentNullException">Any argument is null.</exception>
     /// <exception cref="InvalidOperationException">The race/class combination is not in allowedCombinations.</exception>
-    public static CharacterState Create(
+    public static CharacterDefinitionState Create(
         RaceDefinition race,
         ClassDefinition @class,
         IReadOnlyCollection<RaceClassRule> allowedCombinations)
@@ -30,7 +30,7 @@ public static class CharacterFactory
             .ToList()
             .AsReadOnly();
 
-        return new CharacterState(
+        return new CharacterDefinitionState(
             RaceId:                race.Id,
             ClassId:               @class.Id,
             CombinedStatModifiers: race.StatModifiers + @class.StatModifiers,

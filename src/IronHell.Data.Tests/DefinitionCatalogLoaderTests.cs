@@ -1,5 +1,6 @@
 using IronHell.Core.Characters;
 using IronHell.Core.Definitions;
+using IronHell.Core.Items;
 using Xunit;
 
 namespace IronHell.Data.Tests;
@@ -24,6 +25,131 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
         Assert.Equal("human", character.RaceId);
         Assert.Equal("warrior", character.ClassId);
         Assert.Equal(19, character.HitDie);
+    }
+
+    [Fact]
+    public async Task CharacterBootstrapService_CreateHumanWarrior_PopulatesInventoryWithValidDefinitions()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+
+        var character = CharacterBootstrapService.Create(catalog, "character-1", "human", "warrior");
+
+        Assert.Equal("character-1", character.CharacterId);
+        Assert.Equal("human", character.RaceId);
+        Assert.Equal("warrior", character.ClassId);
+        Assert.Empty(character.Equipment.Items);
+        Assert.Empty(character.ActiveStatuses);
+        Assert.Equal(1, character.State.Level);
+        Assert.Equal(0, character.State.Experience);
+        Assert.Equal(19, character.State.MaxHp);
+        Assert.Equal(character.State.MaxHp, character.State.CurrentHp);
+        Assert.Equal(0, character.State.MaxMana);
+        Assert.Equal(0, character.State.CurrentMana);
+        Assert.Equal(9999, character.State.CurrentFood);
+        Assert.Equal(0, character.State.Gold);
+        Assert.Equal(0, character.State.Attributes.Strength);
+        Assert.Equal(10, character.Inventory.Items.Count);
+        foreach (var item in character.Inventory.Items)
+        {
+            Assert.True(catalog.Items.TryGet(item.DefinitionId, out _));
+        }
+    }
+
+    [Fact]
+    public async Task CharacterBootstrapService_Create_RejectsUnknownRace()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+
+        Assert.Throws<KeyNotFoundException>(() => CharacterBootstrapService.Create(catalog, "character-1", "missing_race", "warrior"));
+    }
+
+    [Fact]
+    public async Task CharacterBootstrapService_Create_RejectsUnknownClass()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+
+        Assert.Throws<KeyNotFoundException>(() => CharacterBootstrapService.Create(catalog, "character-1", "human", "missing_class"));
+    }
+
+    [Fact]
+    public async Task LoadAsync_StatusDefinitions_PublishReplaceExistingApplicationPolicy()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+        Assert.Equal(StatusApplicationPolicy.ReplaceExisting, catalog.Statuses.GetRequired("blessed").ApplicationPolicy);
+    }
+
+    [Fact]
+    public async Task LoadAsync_StatusDefinitions_PublishDurationMetadata()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var duration = Assert.IsType<DefinitionLoadSuccess>(result).Catalog.Statuses.GetRequired("blessed").Duration;
+        Assert.Equal(12, duration.FixedDuration);
+        Assert.Equal(1, duration.DiceCount);
+        Assert.Equal(12, duration.DiceSides);
+        Assert.Null(duration.LevelMultiplier);
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownStatusPolicy_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "statuses.json"), "\"replacement_policy\": \"replace_existing\"", "\"replacement_policy\": \"unknown_policy\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_InvalidStatusDuration_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "statuses.json"), "\"base\": 10", "\"base\": -1");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task CharacterBootstrapService_Create_IsDeterministicAndOwnsMutableState()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+
+        var first = CharacterBootstrapService.Create(catalog, "character-1", "human", "warrior");
+        var second = CharacterBootstrapService.Create(catalog, "character-1", "human", "warrior");
+        first.State.Attributes.Strength = 12;
+        first.State.CurrentHp = 5;
+
+        Assert.Equal(second.Inventory.Items.Select(item => item.InstanceId), first.Inventory.Items.Select(item => item.InstanceId));
+        Assert.Equal(0, second.State.Attributes.Strength);
+        Assert.Equal(19, second.State.CurrentHp);
+    }
+
+    [Fact]
+    public async Task Character_EquipAndUnequip_MovesItemBetweenInventoryAndBodySlot()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+        var character = CharacterBootstrapService.Create(catalog, "character-1", "human", "warrior");
+        var armor = character.Inventory.Items.Single(item => item.DefinitionId == "chain_mail");
+
+        character.Equip(catalog, EquipmentSlot.Body, armor.InstanceId);
+
+        Assert.Equal(armor, character.Equipment.GetEquipped(EquipmentSlot.Body));
+        Assert.DoesNotContain(character.Inventory.Items, item => item.InstanceId == armor.InstanceId);
+
+        character.Unequip(EquipmentSlot.Body);
+
+        Assert.False(character.Equipment.IsEquipped(EquipmentSlot.Body));
+        Assert.Contains(character.Inventory.Items, item => item.InstanceId == armor.InstanceId);
     }
 
     [Fact]
