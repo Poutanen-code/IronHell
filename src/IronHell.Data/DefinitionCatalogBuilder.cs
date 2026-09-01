@@ -16,8 +16,8 @@ internal static class DefinitionCatalogBuilder
         var capabilities = SimpleDefinitionReader.Read<CapabilityDefinition>(documents["capabilities"], "capabilities", "id", id => new CapabilityDefinition(id), report);
         var resistances = SimpleDefinitionReader.Read<ResistanceDefinition>(documents["resistances"], "resistances", "id", id => new ResistanceDefinition(id), report);
         var items = ItemDefinitionReader.Read(documents, report);
-        var mageSpells = SimpleDefinitionReader.Read<SpellDefinition>(documents["mage_spells"], "spells", "id", id => new SpellDefinition(id), report);
-        var priestPrayers = SimpleDefinitionReader.Read<SpellDefinition>(documents["priest_prayers"], "spells", "id", id => new SpellDefinition(id), report);
+        var mageSpells = SpellDefinitionReader.Read(documents["mage_spells"], report);
+        var priestPrayers = SpellDefinitionReader.Read(documents["priest_prayers"], report);
         var activations = SimpleDefinitionReader.Read<ActivationDefinition>(documents["activations"], "activations", "activation_id", id => new ActivationDefinition(id), report);
         var monsterAbilities = MonsterDefinitionReader.ReadAbilities(documents["monster_abilities"], report);
         var monsters = MonsterDefinitionReader.ReadMonsters(documents["monsters"], report);

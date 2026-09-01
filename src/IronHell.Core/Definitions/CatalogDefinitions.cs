@@ -43,7 +43,18 @@ public sealed record CapabilityDefinition(string Id) : IIdentifiedDefinition;
 
 public sealed record ResistanceDefinition(string Id) : IIdentifiedDefinition;
 
-public sealed record SpellDefinition(string Id) : IIdentifiedDefinition;
+public sealed record SpellActionAmount(string Kind, int? Value, int? DiceCount, int? DiceSides);
+
+public sealed record SpellActionRef(
+	string ActionId,
+	ActionTargetMode TargetMode,
+	SpellActionAmount? Amount = null,
+	string? StatusId = null,
+	IReadOnlyList<string>? StatusIds = null);
+
+public sealed record SpellDefinition(
+	string Id,
+	IReadOnlyList<SpellActionRef>? ActionRefs = null) : IIdentifiedDefinition;
 
 public sealed record ActivationDefinition(string Id) : IIdentifiedDefinition;
 
