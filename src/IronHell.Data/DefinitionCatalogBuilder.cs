@@ -36,6 +36,7 @@ internal static class DefinitionCatalogBuilder
     private const string TrapsCatalog = "traps";
     private const string TrapsDocument = "environment/traps.json";
     private const string ActionRefsProperty = "action_refs";
+    private const string MissingIdError = "missing_id";
 
     private sealed record ValidationRegistries(
         IDefinitionRegistry<ActionDefinition> Actions,
@@ -69,7 +70,7 @@ internal static class DefinitionCatalogBuilder
 
     public static IDefinitionCatalog? Build(FrozenDictionary<string, JsonObject> documents, DefinitionValidationReport report)
     {
-        var actions = ReadSimpleDefinitions<ActionDefinition>(documents["actions"], "actions", ActionIdProperty, id => new ActionDefinition(id), report);
+        var actions = ReadActions(documents["actions"], report);
         var statuses = ReadStatuses(documents[StatusesCatalog], report);
         var capabilities = ReadSimpleDefinitions<CapabilityDefinition>(documents[CapabilitiesCatalog], CapabilitiesCatalog, "id", id => new CapabilityDefinition(id), report);
         var resistances = ReadSimpleDefinitions<ResistanceDefinition>(documents[ResistancesCatalog], ResistancesCatalog, "id", id => new ResistanceDefinition(id), report);
@@ -142,7 +143,7 @@ internal static class DefinitionCatalogBuilder
                 var id = entry?["id"]?.GetValue<string>();
                 if (string.IsNullOrWhiteSpace(id))
                 {
-                    report.Add($"items/{catalog.DocumentName}.json", null, "$.id", "missing_id", "Item identifier is required.");
+                    report.Add($"items/{catalog.DocumentName}.json", null, "$.id", MissingIdError, "Item identifier is required.");
                     continue;
                 }
 
@@ -154,6 +155,58 @@ internal static class DefinitionCatalogBuilder
         ValidateDuplicates("items", items, report);
         return items;
     }
+
+    private static List<ActionDefinition> ReadActions(JsonObject document, DefinitionValidationReport report)
+    {
+        var definitions = new List<ActionDefinition>();
+        foreach (var entry in document["actions"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var id = entry[ActionIdProperty]?.GetValue<string>();
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                report.Add("actions.json", null, ActionIdProperty, MissingIdError, "Definition identifier is required.");
+                continue;
+            }
+
+            var sourceTypes = entry["allowed_source_families"]?.AsArray()
+                .Select(value => value?.GetValue<string>())
+                .Where(value => value is not null)
+                .Select(MapSourceType)
+                .Where(value => value is not null)
+                .Select(value => value!.Value)
+                .ToHashSet();
+            var targetModes = entry["parameter_contract"]?["parameters"]?.AsArray()
+                .OfType<JsonObject>()
+                .FirstOrDefault(parameter => parameter["id"]?.GetValue<string>() == "target_mode")?["allowed_values"]?.AsArray()
+                .Select(value => value?.GetValue<string>())
+                .Where(value => value is not null)
+                .Select(MapTargetMode)
+                .Where(value => value is not null)
+                .Select(value => value!.Value)
+                .ToHashSet();
+            definitions.Add(new ActionDefinition(id, sourceTypes, targetModes));
+        }
+
+        ValidateDuplicates("actions", definitions, report);
+        return definitions;
+    }
+
+    private static ActionSourceType? MapSourceType(string? sourceFamily) => sourceFamily switch
+    {
+        "spell" => ActionSourceType.CharacterSpell,
+        "prayer" => ActionSourceType.CharacterPrayer,
+        "activation" => ActionSourceType.ItemActivation,
+        "monster_ability" => ActionSourceType.MonsterAbility,
+        "trap" => ActionSourceType.Trap,
+        _ => null,
+    };
+
+    private static ActionTargetMode? MapTargetMode(string? targetMode) => targetMode switch
+    {
+        "self" => ActionTargetMode.Self,
+        "target" or "ally" or "triggering_actor" => ActionTargetMode.OtherCharacter,
+        _ => null,
+    };
 
     private static List<StatusDefinition> ReadStatuses(JsonObject document, DefinitionValidationReport report)
     {
@@ -170,7 +223,7 @@ internal static class DefinitionCatalogBuilder
             };
             if (string.IsNullOrWhiteSpace(id))
             {
-                report.Add(StatusesDocument, null, StatusIdProperty, "missing_id", "Definition identifier is required.");
+                report.Add(StatusesDocument, null, StatusIdProperty, MissingIdError, "Definition identifier is required.");
                 continue;
             }
 
@@ -229,7 +282,7 @@ internal static class DefinitionCatalogBuilder
             var id = entry?[idProperty]?.GetValue<string>();
             if (string.IsNullOrWhiteSpace(id))
             {
-                report.Add($"{collectionName}.json", null, $"$.{collectionName}", "missing_id", "Definition identifier is required.");
+                report.Add($"{collectionName}.json", null, $"$.{collectionName}", MissingIdError, "Definition identifier is required.");
                 continue;
             }
 

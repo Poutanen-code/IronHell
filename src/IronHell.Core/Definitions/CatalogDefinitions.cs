@@ -1,6 +1,25 @@
 namespace IronHell.Core.Definitions;
 
-public sealed record ActionDefinition(string Id) : IIdentifiedDefinition;
+public sealed record ActionDefinition(
+	string Id,
+	IReadOnlySet<ActionSourceType>? AllowedSourceTypes = null,
+	IReadOnlySet<ActionTargetMode>? AllowedTargetModes = null) : IIdentifiedDefinition;
+
+public enum ActionSourceType
+{
+	CharacterSpell,
+	CharacterPrayer,
+	ItemActivation,
+	MonsterAbility,
+	Trap,
+	DirectRuntime,
+}
+
+public enum ActionTargetMode
+{
+	Self,
+	OtherCharacter,
+}
 
 public enum StatusApplicationPolicy
 {

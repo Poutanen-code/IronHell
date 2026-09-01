@@ -96,6 +96,17 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_ActionDefinitions_PublishSourceAndTargetPolicies()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var action = Assert.IsType<DefinitionLoadSuccess>(result).Catalog.Actions.GetRequired("HealHP");
+        Assert.Contains(ActionSourceType.CharacterSpell, action.AllowedSourceTypes!);
+        Assert.Contains(ActionTargetMode.Self, action.AllowedTargetModes!);
+        Assert.Contains(ActionTargetMode.OtherCharacter, action.AllowedTargetModes!);
+    }
+
+    [Fact]
     public async Task LoadAsync_UnknownStatusPolicy_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();

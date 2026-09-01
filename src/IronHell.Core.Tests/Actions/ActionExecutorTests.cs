@@ -35,6 +35,114 @@ public sealed class ActionExecutorTests
     }
 
     [Fact]
+    public void Execute_HealHp_EmitsHpChangedEventForResolvedCharacterTarget()
+    {
+        var source = CreateCharacter();
+        var target = CreateCharacter(currentHp: 5, maxHp: 10);
+        var context = new ActionExecutionContext(CreateCatalog(), source, ActionTarget.CharacterTarget(target));
+
+        var result = new ActionExecutor().Execute(context, [new ActionInvocation("HealHP", Amount: 3)]);
+
+        Assert.Equal([new HpChangedEvent(target.CharacterId, 5, 8)], result.Events);
+    }
+
+    [Fact]
+    public void ExecuteRequest_SelfTargetingAction_AcceptsSelfTarget()
+    {
+        var source = CreateCharacter(currentHp: 5, maxHp: 10);
+        var definition = new ActionDefinition(
+            "HealHP",
+            SourceTypes(ActionSourceType.CharacterSpell),
+            TargetModes(ActionTargetMode.Self));
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.Self(source), ActionSourceType.CharacterSpell);
+        var request = new ActionExecutionRequest(ActionSourceType.CharacterSpell, source, ActionTarget.Self(source), new ActionInvocation("HealHP", Amount: 3));
+
+        var result = new ActionExecutor().Execute(context, request);
+
+        Assert.True(result.Success);
+        Assert.Equal(8, source.State.CurrentHp);
+    }
+
+    [Fact]
+    public void ExecuteRequest_SelfTargetingAction_RejectsOtherCharacterWithoutEvents()
+    {
+        var source = CreateCharacter();
+        var target = CreateCharacter(currentHp: 5, maxHp: 10);
+        var definition = new ActionDefinition("HealHP", SourceTypes(ActionSourceType.CharacterSpell), TargetModes(ActionTargetMode.Self));
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.CharacterTarget(target), ActionSourceType.CharacterSpell);
+        var request = new ActionExecutionRequest(ActionSourceType.CharacterSpell, source, ActionTarget.CharacterTarget(target), new ActionInvocation("HealHP", Amount: 3));
+
+        var result = new ActionExecutor().Execute(context, request);
+
+        Assert.False(result.Success);
+        Assert.Equal(5, target.State.CurrentHp);
+        Assert.Empty(result.Events);
+    }
+
+    [Fact]
+    public void ExecuteRequest_OtherTargetingAction_AcceptsOtherCharacter()
+    {
+        var source = CreateCharacter();
+        var target = CreateCharacter(currentHp: 10, maxHp: 10);
+        var definition = new ActionDefinition("ApplyDamage", SourceTypes(ActionSourceType.MonsterAbility), TargetModes(ActionTargetMode.OtherCharacter));
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.CharacterTarget(target), ActionSourceType.MonsterAbility);
+        var request = new ActionExecutionRequest(ActionSourceType.MonsterAbility, source, ActionTarget.CharacterTarget(target), new ActionInvocation("ApplyDamage", Amount: 3));
+
+        var result = new ActionExecutor().Execute(context, request);
+
+        Assert.True(result.Success);
+        Assert.Equal(7, target.State.CurrentHp);
+    }
+
+    [Fact]
+    public void ExecuteRequest_OtherTargetingAction_RejectsSelfTarget()
+    {
+        var source = CreateCharacter();
+        var definition = new ActionDefinition("ApplyDamage", SourceTypes(ActionSourceType.MonsterAbility), TargetModes(ActionTargetMode.OtherCharacter));
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.Self(source), ActionSourceType.MonsterAbility);
+        var request = new ActionExecutionRequest(ActionSourceType.MonsterAbility, source, ActionTarget.Self(source), new ActionInvocation("ApplyDamage", Amount: 3));
+
+        var result = new ActionExecutor().Execute(context, request);
+
+        Assert.False(result.Success);
+        Assert.Equal(10, source.State.CurrentHp);
+        Assert.Empty(result.Events);
+    }
+
+    [Fact]
+    public void ExecuteRequest_IllegalSourceType_RejectsWithoutMutation()
+    {
+        var source = CreateCharacter();
+        var target = CreateCharacter(currentHp: 5, maxHp: 10);
+        var definition = new ActionDefinition("HealHP", SourceTypes(ActionSourceType.CharacterPrayer), TargetModes(ActionTargetMode.OtherCharacter));
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.CharacterTarget(target), ActionSourceType.CharacterSpell);
+        var request = new ActionExecutionRequest(ActionSourceType.CharacterSpell, source, ActionTarget.CharacterTarget(target), new ActionInvocation("HealHP", Amount: 3));
+
+        var result = new ActionExecutor().Execute(context, request);
+
+        Assert.False(result.Success);
+        Assert.Equal(5, target.State.CurrentHp);
+        Assert.Empty(result.Events);
+    }
+
+    [Fact]
+    public void ExecuteRequest_IdenticalInvalidRequests_ProduceIdenticalFailures()
+    {
+        var definition = new ActionDefinition("HealHP", SourceTypes(ActionSourceType.CharacterSpell), TargetModes(ActionTargetMode.Self));
+        var first = ExecuteInvalidRequest(definition);
+        var second = ExecuteInvalidRequest(definition);
+
+        Assert.Equal(first.ValidationFailures, second.ValidationFailures);
+        Assert.Empty(first.Events);
+        Assert.Empty(second.Events);
+    }
+
+    [Fact]
     public void Execute_ApplyDamage_ExactLethalDamageMarksCharacterDead()
     {
         var target = CreateCharacter(currentHp: 5, maxHp: 10);
@@ -44,6 +152,20 @@ public sealed class ActionExecutorTests
         Assert.True(result.Success);
         Assert.Equal(0, target.State.CurrentHp);
         Assert.True(target.State.IsDead);
+    }
+
+    [Fact]
+    public void Execute_ApplyDamage_LethalDamageEmitsHpChangedThenDeathEvent()
+    {
+        var target = CreateCharacter(currentHp: 5, maxHp: 10);
+
+        var result = Execute(target, [new ActionInvocation("ApplyDamage", Amount: 5)]);
+
+        Assert.Equal(
+        [
+            new HpChangedEvent(target.CharacterId, 5, 0),
+            new CharacterDiedEvent(target.CharacterId),
+        ], result.Events);
     }
 
     [Fact]
@@ -95,6 +217,16 @@ public sealed class ActionExecutorTests
 
         Assert.True(result.Success);
         AssertStatus(target.ActiveStatuses, "blessed", 12);
+    }
+
+    [Fact]
+    public void Execute_ApplyStatus_EmitsStatusAppliedEvent()
+    {
+        var target = CreateCharacter();
+
+        var result = Execute(target, [new ActionInvocation("ApplyStatus", StatusId: "blessed")]);
+
+        Assert.Equal([new StatusAppliedEvent(target.CharacterId, "blessed", 12)], result.Events);
     }
 
     [Fact]
@@ -152,6 +284,17 @@ public sealed class ActionExecutorTests
     }
 
     [Fact]
+    public void Execute_CureStatus_EmitsStatusRemovedEvent()
+    {
+        var target = CreateCharacter();
+        target.ApplyStatus(new ActiveStatus("blessed", 12));
+
+        var result = Execute(target, [new ActionInvocation("CureStatus", StatusIds: ["blessed"])]);
+
+        Assert.Equal([new StatusRemovedEvent(target.CharacterId, "blessed")], result.Events);
+    }
+
+    [Fact]
     public void Execute_ApplyStatusWithUnknownStatus_ReturnsFailureWithoutMutation()
     {
         var target = CreateCharacter();
@@ -191,6 +334,12 @@ public sealed class ActionExecutorTests
         Assert.Equal(8, target.State.CurrentHp);
         Assert.Empty(target.ActiveStatuses);
         Assert.Equal(["HealHP:5->8", "ApplyStatus:blessed", "CureStatus:1"], result.AppliedChanges);
+        Assert.Equal(
+        [
+            new HpChangedEvent(target.CharacterId, 5, 8),
+            new StatusAppliedEvent(target.CharacterId, "blessed", 12),
+            new StatusRemovedEvent(target.CharacterId, "blessed"),
+        ], result.Events);
     }
 
     [Fact]
@@ -220,6 +369,15 @@ public sealed class ActionExecutorTests
         IDefinitionCatalog? catalog = null) =>
         new ActionExecutor().Execute(new ActionExecutionContext(catalog ?? CreateCatalog(), CreateCharacter(), target), actions);
 
+    private static ActionExecutionResult ExecuteInvalidRequest(ActionDefinition definition)
+    {
+        var source = CreateCharacter();
+        var target = CreateCharacter();
+        var catalog = CreateCatalog(definition);
+        var context = new ActionExecutionContext(catalog, source, ActionTarget.CharacterTarget(target), ActionSourceType.CharacterSpell);
+        return new ActionExecutor().Execute(context, new ActionExecutionRequest(ActionSourceType.CharacterSpell, source, ActionTarget.CharacterTarget(target), new ActionInvocation("HealHP", Amount: 3)));
+    }
+
     private static Character CreateCharacter(int currentHp = 10, int maxHp = 10)
     {
         var character = new Character("character-1", "human", "warrior");
@@ -238,6 +396,14 @@ public sealed class ActionExecutorTests
     private static IDefinitionCatalog CreateCatalog(StatusApplicationPolicy policy = StatusApplicationPolicy.ReplaceExisting) => new TestCatalog(
         new TestRegistry<ActionDefinition>([new("ApplyDamage"), new("HealHP"), new("ApplyStatus"), new("CureStatus")]),
         new TestRegistry<StatusDefinition>([new("blessed", policy, new StatusDurationDefinition(12, null, null, null)), new("poisoned", StatusApplicationPolicy.ReplaceExisting, new StatusDurationDefinition(8, null, null, null))]));
+
+    private static IDefinitionCatalog CreateCatalog(ActionDefinition action) => new TestCatalog(
+        new TestRegistry<ActionDefinition>([action]),
+        new TestRegistry<StatusDefinition>([new("blessed", StatusApplicationPolicy.ReplaceExisting, new StatusDurationDefinition(12, null, null, null))]));
+
+    private static IReadOnlySet<ActionSourceType> SourceTypes(params ActionSourceType[] sourceTypes) => new HashSet<ActionSourceType>(sourceTypes);
+
+    private static IReadOnlySet<ActionTargetMode> TargetModes(params ActionTargetMode[] targetModes) => new HashSet<ActionTargetMode>(targetModes);
 
     private sealed class TestCatalog(
         IDefinitionRegistry<ActionDefinition> actions,
