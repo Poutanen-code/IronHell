@@ -1,1 +1,1691 @@
-{"schema_version":1,"realm":"magic","spells":[{"id":"magic_magic_missile","name":"Magic Missile","policy":{"level":1,"mana":1,"fail_rate":22,"experience_value":4,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"BoltDamage","parameters":{"damage_type":"arcane","amount":{"kind":"level_scaled_dice","level_source":"caster","sides":4,"count":3,"count_level_divisor":5},"direction":"aimed"}}],"provenance_status":"verified"},{"id":"magic_detect_monsters","name":"Detect Monsters","policy":{"level":1,"mana":1,"fail_rate":23,"experience_value":4,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["monsters"]}}],"provenance_status":"verified"},{"id":"magic_phase_door","name":"Phase Door","policy":{"level":1,"mana":2,"fail_rate":24,"experience_value":4,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"TeleportSelf","parameters":{"distance":10,"teleport_mode":"phase"}}],"provenance_status":"verified"},{"id":"magic_light_area","name":"Light Area","policy":{"level":1,"mana":2,"fail_rate":26,"experience_value":4,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"LightArea","parameters":{"radius":{"kind":"level_formula","level_source":"caster","flat_base":1,"level_divisor":10},"light_style":"room","damage_light_sensitive":{"kind":"level_scaled_dice","level_source":"caster","count":2,"sides_level_divisor":2}}}],"provenance_status":"verified"},{"id":"magic_find_traps_doors","name":"Find Hidden Traps/Doors","policy":{"level":3,"mana":3,"fail_rate":25,"experience_value":2,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["traps","doors"]}}],"provenance_status":"verified"},{"id":"magic_cure_light_wounds","name":"Cure Light Wounds","policy":{"level":3,"mana":3,"fail_rate":25,"experience_value":3,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"HealHP","parameters":{"amount":{"kind":"dice","count":2,"sides":8},"target_mode":"self"}},{"action_id":"CureStatus","parameters":{"status_ids":["cut"],"cure_mode":"halve","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_treasure_detection","name":"Detect Treasure","policy":{"level":99,"mana":0,"fail_rate":0,"experience_value":0,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["gold","objects"]}}],"notes":"detect_treasure in MAngband detects gold and valuable floor objects. Represented as objects detection.","provenance_status":"derived"},{"id":"magic_object_detection","name":"Detect Objects","policy":{"level":99,"mana":0,"fail_rate":0,"experience_value":0,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["objects"]}}],"provenance_status":"verified"},{"id":"magic_identify","name":"Identify","policy":{"level":11,"mana":7,"fail_rate":25,"experience_value":6,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"IdentifyItem","parameters":{"identify_scope":"single"}}],"provenance_status":"verified"},{"id":"magic_detect_invisible","name":"Detect Invisible","policy":{"level":15,"mana":5,"fail_rate":40,"experience_value":6,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["invisible_monsters"]}}],"notes":"Corrected from ApplyStatus. detect_invisible() is a one-time scan, not a timed buff. See SPELL_COMPOSITE_ACTION_REVIEW.md.","provenance_status":"verified"},{"id":"magic_detect_enchantment","name":"Detect Enchantment","policy":{"level":13,"mana":9,"fail_rate":40,"experience_value":10,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"DetectEntities","parameters":{"targets":["enchanted_objects"]}}],"notes":"detect_objects_magic() reveals artifacts, ego items, magic devices, spell books, and enchanted equipment. Corrected from DetectEntities(all).","provenance_status":"derived"},{"id":"magic_stinking_cloud","name":"Stinking Cloud","policy":{"level":3,"mana":3,"fail_rate":27,"experience_value":3,"book_id":"magic_for_beginners","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"poison","amount":{"kind":"linear","base":10,"per_level":0.5},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_lightning_bolt","name":"Lightning Bolt","policy":{"level":5,"mana":4,"fail_rate":30,"experience_value":4,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"BeamDamage","parameters":{"damage_type":"lightning","amount":{"kind":"dice","count":{"kind":"linear","base":3,"per_level_divisor":6,"level_offset":5},"sides":6},"direction":"aimed"}}],"notes":"fire_beam(GF_ELEC) – always a piercing beam, not bolt-or-beam. Corrected from BoltDamage.","provenance_status":"verified"},{"id":"magic_confuse_monster","name":"Confuse Monster","policy":{"level":5,"mana":4,"fail_rate":30,"experience_value":4,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"ConfuseControl","parameters":{"target_mode":"target","potency":1}}],"provenance_status":"verified"},{"id":"magic_sleep_monster","name":"Sleep Monster","policy":{"level":7,"mana":5,"fail_rate":30,"experience_value":4,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"SleepControl","parameters":{"target_mode":"target","potency":1}}],"provenance_status":"verified"},{"id":"magic_wonder","name":"Wonder","policy":{"level":7,"mana":10,"fail_rate":50,"experience_value":5,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"RandomSpellEffect"}],"notes":"Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical actions. Resolved at the Policy layer.","provenance_status":"verified"},{"id":"magic_frost_bolt","name":"Frost Bolt","policy":{"level":7,"mana":6,"fail_rate":40,"experience_value":6,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"BoltDamage","parameters":{"damage_type":"cold","amount":{"kind":"dice","count":{"kind":"linear","base":5,"per_level_divisor":4,"level_offset":5},"sides":8},"direction":"aimed"}}],"provenance_status":"verified"},{"id":"magic_acid_bolt","name":"Acid Bolt","policy":{"level":16,"mana":10,"fail_rate":40,"experience_value":8,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"BoltDamage","parameters":{"damage_type":"acid","amount":{"kind":"dice","count":{"kind":"linear","base":8,"per_level_divisor":4,"level_offset":5},"sides":8},"direction":"aimed"}}],"provenance_status":"verified"},{"id":"magic_fire_bolt","name":"Fire Bolt","policy":{"level":10,"mana":7,"fail_rate":50,"experience_value":7,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"BoltDamage","parameters":{"damage_type":"fire","amount":{"kind":"dice","count":{"kind":"linear","base":6,"per_level_divisor":4,"level_offset":5},"sides":8},"direction":"aimed"}}],"provenance_status":"verified"},{"id":"magic_trap_door_destruction","name":"Trap/Door Destruction","policy":{"level":5,"mana":4,"fail_rate":30,"experience_value":6,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"AlterTerrain","parameters":{"terrain_operation":"destroy_trap_or_door","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_spear_of_light","name":"Spear of Light","policy":{"level":9,"mana":7,"fail_rate":44,"experience_value":5,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"BeamDamage","parameters":{"damage_type":"light_weak","amount":{"kind":"dice","count":6,"sides":8},"direction":"aimed","terrain_effect":"illuminate_path"}}],"notes":"Corrected from BoltDamage. lite_line() uses PROJECT_BEAM. GF_LITE_WEAK only damages light-sensitive monsters and illuminates terrain along the beam path.","provenance_status":"verified"},{"id":"magic_turn_stone_to_mud","name":"Turn Stone to Mud","policy":{"level":9,"mana":7,"fail_rate":44,"experience_value":8,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"BeamDamage","parameters":{"damage_type":"stone_weak","amount":{"kind":"dice","count":1,"sides":30,"base":20},"direction":"aimed","terrain_effect":"stone_to_mud"}}],"notes":"MAngband: wall_to_mud() fires GF_KILL_WALL with 20+randint1(30) damage. Beam damage applies to rock/stone-type monsters (RF3_HURT_ROCK).","provenance_status":"verified"},{"id":"magic_door_creation","name":"Door Creation","policy":{"level":28,"mana":17,"fail_rate":65,"experience_value":12,"book_id":"mordenkainen_s_escapes","realm":"magic"},"action_refs":[{"action_id":"AlterTerrain","parameters":{"terrain_operation":"create_door","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_earthquake","name":"Earthquake","policy":{"level":23,"mana":12,"fail_rate":60,"experience_value":20,"book_id":"kelek_s_grimoire_of_power","realm":"magic"},"action_refs":[{"action_id":"Earthquake","parameters":{"radius":10,"center_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_stair_creation","name":"Stair Creation","policy":{"level":30,"mana":25,"fail_rate":75,"experience_value":20,"book_id":"mordenkainen_s_escapes","realm":"magic"},"action_refs":[{"action_id":"AlterTerrain","parameters":{"terrain_operation":"create_stair","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_cure_poison","name":"Cure Poison","policy":{"level":5,"mana":5,"fail_rate":35,"experience_value":4,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"CureStatus","parameters":{"status_ids":["poisoned"],"cure_mode":"full","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_satisfy_hunger","name":"Satisfy Hunger","policy":{"level":9,"mana":7,"fail_rate":45,"experience_value":8,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"ModifyResourceMeter","parameters":{"meter":"food","mode":"set_near_max"}}],"provenance_status":"verified"},{"id":"magic_heroism","name":"Heroism","policy":{"level":11,"mana":7,"fail_rate":45,"experience_value":4,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"HealHP","parameters":{"amount":{"kind":"flat","value":10},"target_mode":"self"}},{"action_id":"ApplyStatus","parameters":{"status_id":"heroism","duration":{"base":25,"random":25},"target_mode":"self"}},{"action_id":"CureStatus","parameters":{"status_ids":["afraid"],"cure_mode":"full","target_mode":"self"}}],"notes":"Composite: hp_player(10) + set_hero(...) + set_afraid(0). Added HealHP and CureStatus actions.","provenance_status":"verified"},{"id":"magic_berserker","name":"Berserker","policy":{"level":16,"mana":10,"fail_rate":40,"experience_value":5,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"ApplyStatus","parameters":{"status_id":"berserk","duration":{"base":25,"kind":"dice","count":1,"sides":25},"target_mode":"self"}},{"action_id":"CureStatus","parameters":{"status_ids":["afraid"],"cure_mode":"full","target_mode":"self"}}],"notes":"MAngband: hp_player(30) + set_shero(...) + set_afraid(0). The 30 HP is modeled as berserk.hp_bonus (temporary MaxHP boost) on the status, not a one-time HealHP. CureStatus(afraid)[...]","provenance_status":"verified"},{"id":"magic_haste_self","name":"Haste Self","policy":{"level":7,"mana":10,"fail_rate":50,"experience_value":6,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"ModifyPlayerSpeed","parameters":{"speed_mode":"haste","duration":{"base":0,"kind":"dice","count":1,"sides":20,"level_multiplier":1},"target_mode":"self"}}],"notes":"MAngband: set_fast(randint1(20) + plev). Duration = 1d20 + player_level.","provenance_status":"verified"},{"id":"magic_teleport_self","name":"Teleport Self","policy":{"level":7,"mana":6,"fail_rate":35,"experience_value":5,"book_id":"conjurings_and_tricks","realm":"magic"},"action_refs":[{"action_id":"TeleportSelf","parameters":{"distance":{"kind":"level_formula","level_source":"caster","level_multiplier":5},"teleport_mode":"teleport"}}],"provenance_status":"verified"},{"id":"magic_slow_monster","name":"Slow Monster","policy":{"level":17,"mana":9,"fail_rate":50,"experience_value":7,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"ModifyMonsterSpeed","parameters":{"speed_mode":"slow","target_mode":"aimed"}}],"provenance_status":"verified"},{"id":"magic_teleport_other","name":"Teleport Other","policy":{"level":20,"mana":20,"fail_rate":50,"experience_value":8,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"TeleportTarget","parameters":{"distance":100,"target_mode":"target"}}],"provenance_status":"verified"},{"id":"magic_teleport_level","name":"Teleport Level","policy":{"level":11,"mana":7,"fail_rate":45,"experience_value":10,"book_id":"mordenkainen_s_escapes","realm":"magic"},"action_refs":[{"action_id":"RecallOrLevelShift","parameters":{"relocation_mode":"teleport_level"}}],"provenance_status":"verified"},{"id":"magic_word_of_recall","name":"Word of Recall","policy":{"level":16,"mana":10,"fail_rate":40,"experience_value":10,"book_id":"mordenkainen_s_escapes","realm":"magic"},"action_refs":[{"action_id":"RecallOrLevelShift","parameters":{"relocation_mode":"word_of_recall"}}],"provenance_status":"verified"},{"id":"magic_polymorph_other","name":"Polymorph Other","policy":{"level":11,"mana":7,"fail_rate":45,"experience_value":9,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"TransformEntity","parameters":{"transform_rule":"random_monster","target_mode":"target"}}],"provenance_status":"verified"},{"id":"magic_shock_wave","name":"Shock Wave","policy":{"level":16,"mana":10,"fail_rate":40,"experience_value":6,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"sound","amount":{"kind":"linear","base":10,"per_level":1},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_explosion","name":"Explosion","policy":{"level":16,"mana":10,"fail_rate":40,"experience_value":8,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"shard","amount":{"kind":"linear","base":20,"per_level":2},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_cloud_kill","name":"Cloud Kill","policy":{"level":25,"mana":15,"fail_rate":60,"experience_value":12,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"poison","amount":{"kind":"linear","base":40,"per_level":0.5},"radius":3,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_acid_ball","name":"Acid Ball","policy":{"level":20,"mana":15,"fail_rate":70,"experience_value":10,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"acid","amount":{"kind":"linear","base":40,"per_level":1},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_frost_ball","name":"Frost Ball","policy":{"level":30,"mana":30,"fail_rate":95,"experience_value":20,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"cold","amount":{"kind":"linear","base":30,"per_level":1},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_fire_ball","name":"Fire Ball","policy":{"level":32,"mana":24,"fail_rate":75,"experience_value":16,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"fire","amount":{"kind":"linear","base":55,"per_level":1},"radius":2,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_ice_storm","name":"Ice Storm","policy":{"level":27,"mana":22,"fail_rate":75,"experience_value":18,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"cold","amount":{"kind":"linear","base":50,"per_level":2},"radius":3,"target_mode":"point"}}],"provenance_status":"verified"},{"id":"magic_meteor_swarm","name":"Meteor Swarm","policy":{"level":30,"mana":25,"fail_rate":85,"experience_value":20,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BallDamage","parameters":{"damage_type":"fire","amount":{"kind":"linear","base":30,"per_level":0.5},"radius":2,"target_mode":"point"}}],"notes":"fire_swarm effect","provenance_status":"verified"},{"id":"magic_rift","name":"Rift","policy":{"level":35,"mana":75,"fail_rate":90,"experience_value":25,"book_id":"raal_s_tome_of_destruction","realm":"magic"},"action_refs":[{"action_id":"BeamDamage","parameters":{"damage_type":"gravity","amount":{"kind":"linear","base":40,"per_level":1},"direction":"aimed"}}],"provenance_status":"verified"},{"id":"magic_mass_sleep","name":"Mass Sleep","policy":{"level":20,"mana":20,"fail_rate":50,"experience_value":10,"book_id":"sorcery_and_evocations","realm":"magic"},"action_refs":[{"action_id":"SleepControl","parameters":{"target_mode":"area","radius":0,"potency":1}}],"provenance_status":"verified"},{"id":"magic_resist_cold","name":"Resist Cold","policy":{"level":13,"mana":9,"fail_rate":40,"experience_value":6,"book_id":"resistances_of_scarabtarices","realm":"magic"},"action_refs":[{"action_id":"ApplyOpposeElements","parameters":{"elements":["cold"],"duration":{"base":20,"kind":"dice","count":1,"sides":20},"target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_resist_fire","name":"Resist Fire","policy":{"level":23,"mana":12,"fail_rate":60,"experience_value":8,"book_id":"resistances_of_scarabtarices","realm":"magic"},"action_refs":[{"action_id":"ApplyOpposeElements","parameters":{"elements":["fire"],"duration":{"base":20,"kind":"dice","count":1,"sides":20},"target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_resist_poison","name":"Resist Poison","policy":{"level":25,"mana":15,"fail_rate":60,"experience_value":10,"book_id":"resistances_of_scarabtarices","realm":"magic"},"action_refs":[{"action_id":"ApplyStatus","parameters":{"status_id":"oppose_pois","duration":{"base":20,"kind":"dice","count":1,"sides":20},"target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_resistance","name":"Resistance","policy":{"level":30,"mana":25,"fail_rate":75,"experience_value":12,"book_id":"resistances_of_scarabtarices","realm":"magic"},"action_refs":[{"action_id":"ApplyOpposeElements","parameters":{"elements":["fire","cold","acid","lightning"],"duration":{"base":20,"kind":"dice","count":1,"sides":20},"target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_shield","name":"Shield","policy":{"level":11,"mana":7,"fail_rate":45,"experience_value":6,"book_id":"resistances_of_scarabtarices","realm":"magic"},"action_refs":[{"action_id":"ApplyStatus","parameters":{"status_id":"shield","duration":{"base":30,"kind":"dice","count":1,"sides":20},"target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_rune_of_protection","name":"Rune of Protection","policy":{"level":25,"mana":30,"fail_rate":80,"experience_value":12,"book_id":"mordenkainen_s_escapes","realm":"magic"},"action_refs":[{"action_id":"AlterTerrain","parameters":{"terrain_operation":"warding_glyph","target_mode":"self"}}],"provenance_status":"verified"},{"id":"magic_recharge_item_i","name":"Lesser Recharging","policy":{"level":9,"mana":7,"fail_rate":45,"experience_value":8,"book_id":"incantations_and_illusions","realm":"magic"},"action_refs":[{"action_id":"RechargeItem","parameters":{"potency":1}}],"provenance_status":"verified"},{"id":"magic_enchant_armor","name":"Enchant Armor","policy":{"level":20,"mana":20,"fail_rate":50,"experience_value":12,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"EnchantItem","parameters":{"item_type":"armor","amount":1}}],"provenance_status":"verified"},{"id":"magic_enchant_weapon","name":"Enchant Weapon","policy":{"level":20,"mana":20,"fail_rate":50,"experience_value":12,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"EnchantItem","parameters":{"item_type":"weapon","amount":1}}],"provenance_status":"verified"},{"id":"magic_recharge_item_ii","name":"Greater Recharging","policy":{"level":25,"mana":30,"fail_rate":80,"experience_value":15,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"RechargeItem","parameters":{"potency":2}}],"provenance_status":"verified"},{"id":"magic_elemental_brand","name":"Elemental Brand","policy":{"level":25,"mana":30,"fail_rate":80,"experience_value":15,"book_id":"tenser_s_transformations","realm":"magic"},"action_refs":[{"action_id":"BrandItem","parameters":{"brand_type":"elemental"}}],"provenance_status":"verified"}]}
+{
+  "schema_version": 1,
+  "realm": "magic",
+  "spells": [
+    {
+      "id": "magic_magic_missile",
+      "name": "Magic Missile",
+      "policy": {
+        "level": 1,
+        "mana": 1,
+        "fail_rate": 22,
+        "experience_value": 4,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "arcane",
+            "amount": {
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "sides": 4,
+              "count": 3,
+              "count_level_divisor": 5
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_detect_monsters",
+      "name": "Detect Monsters",
+      "policy": {
+        "level": 1,
+        "mana": 1,
+        "fail_rate": 23,
+        "experience_value": 4,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "monsters"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_phase_door",
+      "name": "Phase Door",
+      "policy": {
+        "level": 1,
+        "mana": 2,
+        "fail_rate": 24,
+        "experience_value": 4,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": 10,
+            "teleport_mode": "phase"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_light_area",
+      "name": "Light Area",
+      "policy": {
+        "level": 1,
+        "mana": 2,
+        "fail_rate": 26,
+        "experience_value": 4,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "LightArea",
+          "parameters": {
+            "radius": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "flat_base": 1,
+              "level_divisor": 10
+            },
+            "light_style": "room",
+            "damage_light_sensitive": {
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 2,
+              "sides_level_divisor": 2
+            }
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_find_traps_doors",
+      "name": "Find Hidden Traps/Doors",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 25,
+        "experience_value": 2,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "traps",
+              "doors"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_cure_light_wounds",
+      "name": "Cure Light Wounds",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 25,
+        "experience_value": 3,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "cut"
+            ],
+            "cure_mode": "halve",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_treasure_detection",
+      "name": "Detect Treasure",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "gold",
+              "objects"
+            ]
+          }
+        }
+      ],
+      "notes": "detect_treasure in MAngband detects gold and valuable floor objects. Represented as objects detection.",
+      "provenance_status": "derived"
+    },
+    {
+      "id": "magic_object_detection",
+      "name": "Detect Objects",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "objects"
+            ]
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_identify",
+      "name": "Identify",
+      "policy": {
+        "level": 11,
+        "mana": 7,
+        "fail_rate": 25,
+        "experience_value": 6,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "IdentifyItem",
+          "parameters": {
+            "identify_scope": "single"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_detect_invisible",
+      "name": "Detect Invisible",
+      "policy": {
+        "level": 15,
+        "mana": 5,
+        "fail_rate": 40,
+        "experience_value": 6,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "invisible_monsters"
+            ]
+          }
+        }
+      ],
+      "notes": "Corrected from ApplyStatus. detect_invisible() is a one-time scan, not a timed buff. See SPELL_COMPOSITE_ACTION_REVIEW.md.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_detect_enchantment",
+      "name": "Detect Enchantment",
+      "policy": {
+        "level": 13,
+        "mana": 9,
+        "fail_rate": 40,
+        "experience_value": 10,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "DetectEntities",
+          "parameters": {
+            "targets": [
+              "enchanted_objects"
+            ]
+          }
+        }
+      ],
+      "notes": "detect_objects_magic() reveals artifacts, ego items, magic devices, spell books, and enchanted equipment. Corrected from DetectEntities(all).",
+      "provenance_status": "derived"
+    },
+    {
+      "id": "magic_stinking_cloud",
+      "name": "Stinking Cloud",
+      "policy": {
+        "level": 3,
+        "mana": 3,
+        "fail_rate": 27,
+        "experience_value": 3,
+        "book_id": "magic_for_beginners",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": {
+              "kind": "linear",
+              "base": 10,
+              "per_level": 0.5
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_lightning_bolt",
+      "name": "Lightning Bolt",
+      "policy": {
+        "level": 5,
+        "mana": 4,
+        "fail_rate": 30,
+        "experience_value": 4,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "lightning",
+            "amount": {
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 3,
+                "per_level_divisor": 6,
+                "level_offset": 5
+              },
+              "sides": 6
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "notes": "fire_beam(GF_ELEC) â€” always a piercing beam, not bolt-or-beam. Corrected from BoltDamage.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_confuse_monster",
+      "name": "Confuse Monster",
+      "policy": {
+        "level": 5,
+        "mana": 4,
+        "fail_rate": 30,
+        "experience_value": 4,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ConfuseControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_sleep_monster",
+      "name": "Sleep Monster",
+      "policy": {
+        "level": 7,
+        "mana": 5,
+        "fail_rate": 30,
+        "experience_value": 4,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "SleepControl",
+          "parameters": {
+            "target_mode": "target",
+            "potency": 1
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_wonder",
+      "name": "Wonder",
+      "policy": {
+        "level": 7,
+        "mana": 10,
+        "fail_rate": 50,
+        "experience_value": 5,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "RandomSpellEffect"
+        }
+      ],
+      "notes": "Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical actions. Resolved at the Policy layer.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_frost_bolt",
+      "name": "Frost Bolt",
+      "policy": {
+        "level": 7,
+        "mana": 6,
+        "fail_rate": 40,
+        "experience_value": 6,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 5,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_acid_bolt",
+      "name": "Acid Bolt",
+      "policy": {
+        "level": 15,
+        "mana": 9,
+        "fail_rate": 50,
+        "experience_value": 8,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 5,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_fire_bolt",
+      "name": "Fire Bolt",
+      "policy": {
+        "level": 10,
+        "mana": 7,
+        "fail_rate": 50,
+        "experience_value": 7,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 6,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_trap_door_destruction",
+      "name": "Trap/Door Destruction",
+      "policy": {
+        "level": 5,
+        "mana": 5,
+        "fail_rate": 30,
+        "experience_value": 6,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destroy_trap_or_door",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_spear_of_light",
+      "name": "Spear of Light",
+      "policy": {
+        "level": 7,
+        "mana": 6,
+        "fail_rate": 30,
+        "experience_value": 5,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "light_weak",
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 8
+            },
+            "direction": "aimed",
+            "terrain_effect": "illuminate_path"
+          }
+        }
+      ],
+      "notes": "Corrected from BoltDamage. lite_line() uses PROJECT_BEAM. GF_LITE_WEAK only damages light-sensitive monsters and illuminates terrain along the beam path.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_turn_stone_to_mud",
+      "name": "Turn Stone to Mud",
+      "policy": {
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 44,
+        "experience_value": 8,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "stone_weak",
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 30,
+              "base": 20
+            },
+            "direction": "aimed",
+            "terrain_effect": "stone_to_mud"
+          }
+        }
+      ],
+      "notes": "MAngband: wall_to_mud() fires GF_KILL_WALL with 20+randint1(30) damage. Beam damage applies to rock/stone-type monsters (RF3_HURT_ROCK).",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_door_creation",
+      "name": "Door Creation",
+      "policy": {
+        "level": 13,
+        "mana": 9,
+        "fail_rate": 40,
+        "experience_value": 12,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "create_door",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_earthquake",
+      "name": "Earthquake",
+      "policy": {
+        "level": 20,
+        "mana": 18,
+        "fail_rate": 60,
+        "experience_value": 20,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "Earthquake",
+          "parameters": {
+            "radius": 10,
+            "center_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_stair_creation",
+      "name": "Stair Creation",
+      "policy": {
+        "level": 24,
+        "mana": 20,
+        "fail_rate": 50,
+        "experience_value": 20,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "create_stair",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_cure_poison",
+      "name": "Cure Poison",
+      "policy": {
+        "level": 5,
+        "mana": 5,
+        "fail_rate": 35,
+        "experience_value": 4,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "poisoned"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_satisfy_hunger",
+      "name": "Satisfy Hunger",
+      "policy": {
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 45,
+        "experience_value": 8,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ModifyResourceMeter",
+          "parameters": {
+            "meter": "food",
+            "mode": "set_near_max"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_heroism",
+      "name": "Heroism",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "HealHP",
+          "parameters": {
+            "amount": {
+              "kind": "flat",
+              "value": 10
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "heroism",
+            "duration": {
+              "base": 25,
+              "random": 25
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Composite: hp_player(10) + set_hero(...) + set_afraid(0). Added HealHP and CureStatus actions.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_berserker",
+      "name": "Berserker",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "berserk",
+            "duration": {
+              "base": 25,
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
+            },
+            "target_mode": "self"
+          }
+        },
+        {
+          "action_id": "CureStatus",
+          "parameters": {
+            "status_ids": [
+              "afraid"
+            ],
+            "cure_mode": "full",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "MAngband: hp_player(30) + set_shero(...) + set_afraid(0). The 30 HP is modeled as berserk.hp_bonus (temporary MaxHP boost) on the status, not a one-time HealHP. CureStatus(afraid) retained.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_haste_self",
+      "name": "Haste Self",
+      "policy": {
+        "level": 25,
+        "mana": 12,
+        "fail_rate": 65,
+        "experience_value": 10,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ModifyPlayerSpeed",
+          "parameters": {
+            "speed_mode": "haste",
+            "duration": {
+              "base": 0,
+              "kind": "dice",
+              "count": 1,
+              "sides": 20,
+              "level_multiplier": 1
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "MAngband: set_fast(randint1(20) + plev). Duration = 1d20 + player_level.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_teleport_self",
+      "name": "Teleport Self",
+      "policy": {
+        "level": 7,
+        "mana": 6,
+        "fail_rate": 35,
+        "experience_value": 5,
+        "book_id": "conjurings_and_tricks",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportSelf",
+          "parameters": {
+            "distance": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "level_multiplier": 5
+            },
+            "teleport_mode": "teleport"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_slow_monster",
+      "name": "Slow Monster",
+      "policy": {
+        "level": 17,
+        "mana": 9,
+        "fail_rate": 50,
+        "experience_value": 7,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ModifyMonsterSpeed",
+          "parameters": {
+            "speed_mode": "slow",
+            "target_mode": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_teleport_other",
+      "name": "Teleport Other",
+      "policy": {
+        "level": 23,
+        "mana": 12,
+        "fail_rate": 60,
+        "experience_value": 8,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "TeleportTarget",
+          "parameters": {
+            "distance": 100,
+            "target_mode": "target"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_teleport_level",
+      "name": "Teleport Level",
+      "policy": {
+        "level": 28,
+        "mana": 17,
+        "fail_rate": 65,
+        "experience_value": 20,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "teleport_level"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_word_of_recall",
+      "name": "Word of Recall",
+      "policy": {
+        "level": 30,
+        "mana": 25,
+        "fail_rate": 75,
+        "experience_value": 15,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "RecallOrLevelShift",
+          "parameters": {
+            "relocation_mode": "word_of_recall"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_polymorph_other",
+      "name": "Polymorph Other",
+      "policy": {
+        "level": 11,
+        "mana": 7,
+        "fail_rate": 45,
+        "experience_value": 9,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "TransformEntity",
+          "parameters": {
+            "transform_rule": "random_monster",
+            "target_mode": "target"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_shock_wave",
+      "name": "Shock Wave",
+      "policy": {
+        "level": 16,
+        "mana": 10,
+        "fail_rate": 40,
+        "experience_value": 6,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "sound",
+            "amount": {
+              "kind": "linear",
+              "base": 10,
+              "per_level": 1
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_explosion",
+      "name": "Explosion",
+      "policy": {
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 50,
+        "experience_value": 10,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "shard",
+            "amount": {
+              "kind": "linear",
+              "base": 20,
+              "per_level": 2
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_cloud_kill",
+      "name": "Cloudkill",
+      "policy": {
+        "level": 20,
+        "mana": 9,
+        "fail_rate": 50,
+        "experience_value": 8,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "poison",
+            "amount": {
+              "kind": "linear",
+              "base": 40,
+              "per_level": 0.5
+            },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_mass_sleep",
+      "name": "Mass Sleep",
+      "policy": {
+        "level": 25,
+        "mana": 7,
+        "fail_rate": 50,
+        "experience_value": 6,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "SleepControl",
+          "parameters": {
+            "target_mode": "all_in_los",
+            "potency": 1
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_bedlam",
+      "name": "Bedlam",
+      "policy": {
+        "level": 25,
+        "mana": 15,
+        "fail_rate": 60,
+        "experience_value": 24,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ConfuseControl",
+          "parameters": {
+            "target_mode": "all_nearby",
+            "potency": 1,
+            "radius": 4
+          }
+        }
+      ],
+      "notes": "fire_ball(GF_OLD_CONF, radius=4). Source code applies confusion only; FearControl was a spurious derived addition in SPELL_ACTION_MAPPING.md.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_rend_soul",
+      "name": "Rend Soul",
+      "policy": {
+        "level": 25,
+        "mana": 30,
+        "fail_rate": 80,
+        "experience_value": 30,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "nether",
+            "amount": {
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 11,
+              "sides_level_multiplier": 1
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_word_of_destruction",
+      "name": "Word of Destruction",
+      "policy": {
+        "level": 33,
+        "mana": 21,
+        "fail_rate": 80,
+        "experience_value": 35,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "destruction_field",
+            "target_mode": "self",
+            "entity_effect": "remove_all_in_radius"
+          }
+        }
+      ],
+      "notes": "destroy_area(full=TRUE) destroys terrain and removes all monsters in radius 15.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_chaos_strike",
+      "name": "Chaos Strike",
+      "policy": {
+        "level": 38,
+        "mana": 35,
+        "fail_rate": 90,
+        "experience_value": 40,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BoltDamage",
+          "parameters": {
+            "damage_type": "chaos",
+            "amount": {
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 13,
+              "sides_level_multiplier": 1
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_resist_cold",
+      "name": "Resist Cold",
+      "policy": {
+        "level": 10,
+        "mana": 5,
+        "fail_rate": 50,
+        "experience_value": 10,
+        "book_id": "resistances_of_scarabtarices",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": [
+              "cold"
+            ],
+            "duration": {
+              "base": 20,
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_resist_fire",
+      "name": "Resist Fire",
+      "policy": {
+        "level": 10,
+        "mana": 5,
+        "fail_rate": 50,
+        "experience_value": 10,
+        "book_id": "resistances_of_scarabtarices",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": [
+              "fire"
+            ],
+            "duration": {
+              "base": 20,
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_resist_poison",
+      "name": "Resist Poison",
+      "policy": {
+        "level": 25,
+        "mana": 10,
+        "fail_rate": 45,
+        "experience_value": 20,
+        "book_id": "resistances_of_scarabtarices",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": [
+              "poison"
+            ],
+            "duration": {
+              "base": 20,
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_resistance",
+      "name": "Resistance",
+      "policy": {
+        "level": 28,
+        "mana": 20,
+        "fail_rate": 65,
+        "experience_value": 30,
+        "book_id": "resistances_of_scarabtarices",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyOpposeElements",
+          "parameters": {
+            "elements": [
+              "acid",
+              "lightning",
+              "fire",
+              "cold",
+              "poison"
+            ],
+            "duration": {
+              "base": 20,
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_shield",
+      "name": "Shield",
+      "policy": {
+        "level": 32,
+        "mana": 24,
+        "fail_rate": 75,
+        "experience_value": 30,
+        "book_id": "resistances_of_scarabtarices",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyStatus",
+          "parameters": {
+            "status_id": "shield",
+            "duration": {
+              "base": 30,
+              "random": 20
+            },
+            "target_mode": "self"
+          }
+        }
+      ],
+      "notes": "Corrected from DetectEntities fallback. set_shield() grants +50 AC for duration. See SPELL_COMPOSITE_ACTION_REVIEW.md.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_rune_of_protection",
+      "name": "Rune of Protection",
+      "policy": {
+        "level": 36,
+        "mana": 60,
+        "fail_rate": 70,
+        "experience_value": 40,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "AlterTerrain",
+          "parameters": {
+            "terrain_operation": "rune_of_protection",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "magic_recharge_item_i",
+      "name": "Lesser Recharging",
+      "policy": {
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 75,
+        "experience_value": 10,
+        "book_id": "incantations_and_illusions",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "RechargeItem",
+          "parameters": {
+            "power": 1,
+            "item_kind_filter": "rechargeable"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_enchant_armor",
+      "name": "Enchant Armor",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "armor",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_enchant_weapon",
+      "name": "Enchant Weapon",
+      "policy": {
+        "level": 99,
+        "mana": 0,
+        "fail_rate": 0,
+        "experience_value": 0,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "EnchantEquipment",
+          "parameters": {
+            "enchantment_profile": "weapon",
+            "target_mode": "single_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_recharge_item_ii",
+      "name": "Greater Recharging",
+      "policy": {
+        "level": 30,
+        "mana": 30,
+        "fail_rate": 95,
+        "experience_value": 100,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "RechargeItem",
+          "parameters": {
+            "power": 2,
+            "item_kind_filter": "rechargeable"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_elemental_brand",
+      "name": "Elemental Brand",
+      "policy": {
+        "level": 32,
+        "mana": 60,
+        "fail_rate": 95,
+        "experience_value": 120,
+        "book_id": "tenser_s_transformations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BrandWeapon",
+          "parameters": {
+            "brand_type": "elemental",
+            "target_mode": "equipped_item"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_frost_ball",
+      "name": "Frost Ball",
+      "policy": {
+        "level": 19,
+        "mana": 12,
+        "fail_rate": 55,
+        "experience_value": 8,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "linear",
+              "base": 30,
+              "per_level": 1
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_acid_ball",
+      "name": "Acid Ball",
+      "policy": {
+        "level": 20,
+        "mana": 15,
+        "fail_rate": 70,
+        "experience_value": 20,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "acid",
+            "amount": {
+              "kind": "linear",
+              "base": 40,
+              "per_level": 1
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_fire_ball",
+      "name": "Fire Ball",
+      "policy": {
+        "level": 26,
+        "mana": 18,
+        "fail_rate": 65,
+        "experience_value": 12,
+        "book_id": "sorcery_and_evocations",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "linear",
+              "base": 55,
+              "per_level": 1
+            },
+            "radius": 2,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_ice_storm",
+      "name": "Ice Storm",
+      "policy": {
+        "level": 27,
+        "mana": 22,
+        "fail_rate": 75,
+        "experience_value": 24,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "cold",
+            "amount": {
+              "kind": "linear",
+              "base": 50,
+              "per_level": 2
+            },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_banishment",
+      "name": "Banishment",
+      "policy": {
+        "level": 30,
+        "mana": 45,
+        "fail_rate": 95,
+        "experience_value": 25,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "targeted_non_unique",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_meteor_swarm",
+      "name": "Meteor Swarm",
+      "policy": {
+        "level": 30,
+        "mana": 25,
+        "fail_rate": 85,
+        "experience_value": 34,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "fire",
+            "amount": {
+              "kind": "linear",
+              "base": 30,
+              "per_level": 0.5
+            },
+            "radius": 1,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "magic_mass_banishment",
+      "name": "Mass Banishment",
+      "policy": {
+        "level": 35,
+        "mana": 75,
+        "fail_rate": 90,
+        "experience_value": 100,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BanishByRule",
+          "parameters": {
+            "banish_rule": "mass_non_unique",
+            "target_mode": "self"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_rift",
+      "name": "Rift",
+      "policy": {
+        "level": 35,
+        "mana": 30,
+        "fail_rate": 60,
+        "experience_value": 25,
+        "book_id": "raal_s_tome_of_destruction",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BeamDamage",
+          "parameters": {
+            "damage_type": "gravity",
+            "amount": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "flat_base": 40,
+              "base_dice": {
+                "count": 1,
+                "sides": 7
+              },
+              "level_multiplier": 3.5
+            },
+            "direction": "aimed"
+          }
+        }
+      ],
+      "provenance_status": "derived"
+    },
+    {
+      "id": "magic_mana_storm",
+      "name": "Mana Storm",
+      "policy": {
+        "level": 42,
+        "mana": 30,
+        "fail_rate": 95,
+        "experience_value": 200,
+        "book_id": "kelek_s_grimoire_of_power",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "BallDamage",
+          "parameters": {
+            "damage_type": "mana",
+            "amount": {
+              "kind": "linear",
+              "base": 300,
+              "per_level": 2
+            },
+            "radius": 3,
+            "target_mode": "point"
+          }
+        }
+      ],
+      "provenance_status": "verified"
+    }
+  ]
+}
