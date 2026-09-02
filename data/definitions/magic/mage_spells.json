@@ -19,8 +19,11 @@
           "parameters": {
             "damage_type": "arcane",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_magic_missile"
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "sides": 4,
+              "count": 3,
+              "count_level_divisor": 5
             },
             "direction": "aimed"
           }
@@ -88,11 +91,18 @@
         {
           "action_id": "LightArea",
           "parameters": {
-            "radius": 0,
+            "radius": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "flat_base": 1,
+              "level_divisor": 10
+            },
             "light_style": "room",
             "damage_light_sensitive": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_light_area"
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 2,
+              "sides_level_divisor": 2
             }
           }
         }
@@ -292,8 +302,9 @@
           "parameters": {
             "damage_type": "poison",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_stinking_cloud"
+              "kind": "linear",
+              "base": 10,
+              "per_level": 0.5
             },
             "radius": 2,
             "target_mode": "point"
@@ -319,8 +330,14 @@
           "parameters": {
             "damage_type": "lightning",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_lightning_bolt"
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 3,
+                "per_level_divisor": 6,
+                "level_offset": 5
+              },
+              "sides": 6
             },
             "direction": "aimed"
           }
@@ -405,8 +422,14 @@
           "parameters": {
             "damage_type": "cold",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_frost_bolt"
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 5,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
             },
             "direction": "aimed"
           }
@@ -431,8 +454,14 @@
           "parameters": {
             "damage_type": "acid",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_acid_bolt"
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 5,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
             },
             "direction": "aimed"
           }
@@ -457,8 +486,14 @@
           "parameters": {
             "damage_type": "fire",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_fire_bolt"
+              "kind": "dice",
+              "count": {
+                "kind": "linear",
+                "base": 6,
+                "per_level_divisor": 4,
+                "level_offset": 5
+              },
+              "sides": 8
             },
             "direction": "aimed"
           }
@@ -533,7 +568,12 @@
           "action_id": "BeamDamage",
           "parameters": {
             "damage_type": "stone_weak",
-            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 30,
+              "base": 20
+            },
             "direction": "aimed",
             "terrain_effect": "stone_to_mud"
           }
@@ -720,7 +760,9 @@
             "status_id": "berserk",
             "duration": {
               "base": 25,
-              "dice": { "count": 1, "sides": 25 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
             },
             "target_mode": "self"
           }
@@ -728,7 +770,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["afraid"],
+            "status_ids": [
+              "afraid"
+            ],
             "cure_mode": "full",
             "target_mode": "self"
           }
@@ -755,7 +799,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 0,
-              "dice": { "count": 1, "sides": 20 },
+              "kind": "dice",
+              "count": 1,
+              "sides": 20,
               "level_multiplier": 1
             },
             "target_mode": "self"
@@ -780,7 +826,11 @@
         {
           "action_id": "TeleportSelf",
           "parameters": {
-            "distance": 0,
+            "distance": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "level_multiplier": 5
+            },
             "teleport_mode": "teleport"
           }
         }
@@ -912,8 +962,9 @@
           "parameters": {
             "damage_type": "sound",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_shock_wave"
+              "kind": "linear",
+              "base": 10,
+              "per_level": 1
             },
             "radius": 2,
             "target_mode": "point"
@@ -937,10 +988,11 @@
         {
           "action_id": "BallDamage",
           "parameters": {
-            "damage_type": "fire",
+            "damage_type": "shard",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_explosion"
+              "kind": "linear",
+              "base": 20,
+              "per_level": 2
             },
             "radius": 2,
             "target_mode": "point"
@@ -966,8 +1018,9 @@
           "parameters": {
             "damage_type": "poison",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_cloud_kill"
+              "kind": "linear",
+              "base": 40,
+              "per_level": 0.5
             },
             "radius": 3,
             "target_mode": "point"
@@ -1039,8 +1092,10 @@
           "parameters": {
             "damage_type": "nether",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_rend_soul"
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 11,
+              "sides_level_multiplier": 1
             },
             "direction": "aimed"
           }
@@ -1089,8 +1144,10 @@
           "parameters": {
             "damage_type": "chaos",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_chaos_strike"
+              "kind": "level_scaled_dice",
+              "level_source": "caster",
+              "count": 13,
+              "sides_level_multiplier": 1
             },
             "direction": "aimed"
           }
@@ -1118,7 +1175,9 @@
             ],
             "duration": {
               "base": 20,
-              "dice": { "count": 1, "sides": 20 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -1146,7 +1205,9 @@
             ],
             "duration": {
               "base": 20,
-              "dice": { "count": 1, "sides": 20 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -1174,7 +1235,9 @@
             ],
             "duration": {
               "base": 20,
-              "dice": { "count": 1, "sides": 20 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -1206,7 +1269,9 @@
             ],
             "duration": {
               "base": 20,
-              "dice": { "count": 1, "sides": 20 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -1390,8 +1455,9 @@
           "parameters": {
             "damage_type": "cold",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_frost_ball"
+              "kind": "linear",
+              "base": 30,
+              "per_level": 1
             },
             "radius": 2,
             "target_mode": "point"
@@ -1417,8 +1483,9 @@
           "parameters": {
             "damage_type": "acid",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_acid_ball"
+              "kind": "linear",
+              "base": 40,
+              "per_level": 1
             },
             "radius": 2,
             "target_mode": "point"
@@ -1444,8 +1511,9 @@
           "parameters": {
             "damage_type": "fire",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_fire_ball"
+              "kind": "linear",
+              "base": 55,
+              "per_level": 1
             },
             "radius": 2,
             "target_mode": "point"
@@ -1471,8 +1539,9 @@
           "parameters": {
             "damage_type": "cold",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_ice_storm"
+              "kind": "linear",
+              "base": 50,
+              "per_level": 2
             },
             "radius": 3,
             "target_mode": "point"
@@ -1520,8 +1589,9 @@
           "parameters": {
             "damage_type": "fire",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_meteor_swarm"
+              "kind": "linear",
+              "base": 30,
+              "per_level": 0.5
             },
             "radius": 1,
             "target_mode": "point"
@@ -1569,8 +1639,14 @@
           "parameters": {
             "damage_type": "nexus",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_rift"
+              "kind": "level_formula",
+              "level_source": "caster",
+              "flat_base": 40,
+              "base_dice": {
+                "count": 1,
+                "sides": 7
+              },
+              "level_multiplier": 3.5
             },
             "direction": "aimed"
           }
@@ -1595,8 +1671,9 @@
           "parameters": {
             "damage_type": "mana",
             "amount": {
-              "kind": "runtime_formula",
-              "spell_id": "magic_mana_storm"
+              "kind": "linear",
+              "base": 300,
+              "per_level": 2
             },
             "radius": 3,
             "target_mode": "point"
