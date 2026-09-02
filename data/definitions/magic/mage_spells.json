@@ -185,6 +185,7 @@
           "action_id": "DetectEntities",
           "parameters": {
             "targets": [
+              "gold",
               "objects"
             ]
           }
@@ -265,9 +266,9 @@
       "id": "magic_detect_enchantment",
       "name": "Detect Enchantment",
       "policy": {
-        "level": 30,
-        "mana": 10,
-        "fail_rate": 70,
+        "level": 13,
+        "mana": 9,
+        "fail_rate": 40,
         "experience_value": 10,
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
@@ -401,7 +402,11 @@
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
       },
-      "action_refs": [],
+      "action_refs": [
+        {
+          "action_id": "RandomSpellEffect"
+        }
+      ],
       "notes": "Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical actions. Resolved at the Policy layer.",
       "provenance_status": "verified"
     },
@@ -1637,7 +1642,7 @@
         {
           "action_id": "BeamDamage",
           "parameters": {
-            "damage_type": "nexus",
+            "damage_type": "gravity",
             "amount": {
               "kind": "level_formula",
               "level_source": "caster",
