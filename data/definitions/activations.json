@@ -60,10 +60,9 @@
             "status_id": "protected_from_evil",
             "duration": {
               "base": 0,
-              "dice": {
-                "count": 1,
-                "sides": 25
-              },
+              "kind": "dice",
+              "count": 1,
+              "sides": 25,
               "level_multiplier": 3
             },
             "target_mode": "self"
@@ -867,10 +866,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -889,10 +887,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 20,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self",
             "apply_mode": "set_or_extend_haste",
@@ -912,10 +909,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 75,
-              "dice": {
-                "count": 1,
-                "sides": 75
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 75
             },
             "target_mode": "self",
             "apply_mode": "set_or_extend_haste",
@@ -935,10 +931,9 @@
             "status_id": "berserk",
             "duration": {
               "base": 50,
-              "dice": {
-                "count": 1,
-                "sides": 50
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 50
             },
             "target_mode": "self"
           }
@@ -1064,10 +1059,9 @@
             ],
             "duration": {
               "base": 20,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -1105,10 +1099,9 @@
             "status_id": "berserk",
             "duration": {
               "base": 50,
-              "dice": {
-                "count": 1,
-                "sides": 50
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 50
             },
             "target_mode": "self"
           }
@@ -1119,10 +1112,9 @@
             "status_id": "blessed",
             "duration": {
               "base": 50,
-              "dice": {
-                "count": 1,
-                "sides": 50
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 50
             },
             "target_mode": "self"
           }
@@ -1139,10 +1131,9 @@
             ],
             "duration": {
               "base": 50,
-              "dice": {
-                "count": 1,
-                "sides": 50
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 50
             },
             "target_mode": "self"
           }

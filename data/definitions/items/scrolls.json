@@ -31,10 +31,9 @@
             "status_id": "blinded",
             "duration": {
               "base": 3,
-              "dice": {
-                "count": 1,
-                "sides": 5
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 5
             },
             "target_mode": "self"
           }
@@ -562,10 +561,9 @@
             "target_mode": "single_item",
             "attempts": {
               "base": 2,
-              "dice": {
-                "count": 1,
-                "sides": 3
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
             }
           }
         }
@@ -883,10 +881,9 @@
             "status_id": "blessed",
             "duration": {
               "base": 6,
-              "dice": {
-                "count": 1,
-                "sides": 12
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 12
             },
             "target_mode": "self"
           }
@@ -915,10 +912,9 @@
             "status_id": "blessed",
             "duration": {
               "base": 12,
-              "dice": {
-                "count": 1,
-                "sides": 24
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 24
             },
             "target_mode": "self"
           }
@@ -947,10 +943,9 @@
             "status_id": "blessed",
             "duration": {
               "base": 24,
-              "dice": {
-                "count": 1,
-                "sides": 48
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 48
             },
             "target_mode": "self"
           }
@@ -1005,10 +1000,9 @@
             "status_id": "protected_from_evil",
             "duration": {
               "base": 0,
-              "dice": {
-                "count": 1,
-                "sides": 25
-              },
+              "kind": "dice",
+              "count": 1,
+              "sides": 25,
               "level_multiplier": 3
             },
             "target_mode": "self"
@@ -1101,10 +1095,9 @@
             "status_id": "blinded",
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -1249,10 +1242,9 @@
           "parameters": {
             "amount": {
               "base": 1,
-              "dice": {
-                "count": 1,
-                "sides": 2
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 2
             },
             "quality": "great",
             "placement_mode": "adjacent_floor"

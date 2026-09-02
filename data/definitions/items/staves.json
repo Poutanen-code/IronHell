@@ -33,10 +33,9 @@
                         "status_id": "blinded",
                         "duration": {
                             "base": 19,
-                            "dice": {
-                                "count": 1,
-                                "sides": 20
-                            }
+                            "kind": "dice",
+                            "count": 1,
+                            "sides": 20
                         },
                         "target_mode": "self"
                     }
@@ -66,10 +65,9 @@
                         "speed_mode": "slow",
                         "duration": {
                             "base": 15,
-                            "dice": {
-                                "count": 1,
-                                "sides": 30
-                            }
+                            "kind": "dice",
+                            "count": 1,
+                            "sides": 30
                         },
                         "target_mode": "self",
                         "apply_mode": "set_or_extend_haste",
@@ -677,10 +675,9 @@
                         "speed_mode": "haste",
                         "duration": {
                             "base": 15,
-                            "dice": {
-                                "count": 1,
-                                "sides": 30
-                            }
+                            "kind": "dice",
+                            "count": 1,
+                            "sides": 30
                         },
                         "target_mode": "self",
                         "apply_mode": "set_or_extend_haste",
@@ -818,10 +815,9 @@
                         "status_id": "protected_from_evil",
                         "duration": {
                             "base": 0,
-                            "dice": {
-                                "count": 1,
-                                "sides": 25
-                            },
+                            "kind": "dice",
+                            "count": 1,
+                            "sides": 25,
                             "level_multiplier": 3
                         },
                         "target_mode": "self"

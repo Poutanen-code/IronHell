@@ -983,10 +983,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -1628,10 +1627,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -2303,10 +2301,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -3184,10 +3181,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -5571,10 +5567,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -6111,10 +6106,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -7246,10 +7240,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -8674,10 +8667,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -11120,10 +11112,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -12989,10 +12980,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -13008,10 +12998,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -13026,8 +13015,10 @@
               "parameters": {
                 "status_id": "hallucinating",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "HALLU"
+                  "base": 4,
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -13042,8 +13033,10 @@
               "parameters": {
                 "status_id": "hallucinating",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "HALLU"
+                  "base": 4,
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -13843,10 +13836,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -14139,10 +14131,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -14592,10 +14583,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -20112,10 +20102,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -20691,10 +20680,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -20721,10 +20709,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -22431,10 +22418,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -23325,10 +23311,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -23767,10 +23752,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -23797,10 +23781,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -25096,10 +25079,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -25266,10 +25248,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -25507,10 +25488,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -25738,10 +25718,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -25769,10 +25748,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -27194,10 +27172,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -27310,10 +27287,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -27957,10 +27933,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -27987,10 +27962,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -28769,10 +28743,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -31737,10 +31710,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -31767,10 +31739,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -32576,8 +32547,10 @@
               "parameters": {
                 "status_id": "hallucinating",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "HALLU"
+                  "base": 4,
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -32900,10 +32873,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -33907,10 +33879,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -33938,10 +33909,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -35774,10 +35744,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -35913,10 +35882,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -36441,10 +36409,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -36472,10 +36439,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -36503,10 +36469,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -36534,10 +36499,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -37484,10 +37448,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -38808,10 +38771,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -39037,10 +38999,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -39068,10 +39029,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -39339,10 +39299,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -40670,10 +40629,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -40701,10 +40659,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -41466,10 +41423,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -41802,10 +41758,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -41833,10 +41788,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -41864,10 +41818,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -41895,10 +41848,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -42015,10 +41967,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -42544,10 +42495,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -43559,10 +43509,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -43719,10 +43668,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -43865,10 +43813,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -44778,10 +44725,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -44809,10 +44755,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -44840,10 +44785,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -44870,8 +44814,10 @@
               "parameters": {
                 "status_id": "hallucinating",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "HALLU"
+                  "base": 4,
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -45262,10 +45208,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -45293,10 +45238,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -46300,10 +46244,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -46331,10 +46274,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -46748,10 +46690,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -46806,10 +46747,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -46837,10 +46777,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -48476,10 +48415,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -50960,10 +50898,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -51127,10 +51064,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -51438,10 +51374,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -51469,10 +51404,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -53018,10 +52952,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -53844,10 +53777,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -53875,10 +53807,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -54781,10 +54712,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -54830,10 +54760,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -54918,10 +54847,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -54949,10 +54877,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -54980,10 +54907,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -55011,10 +54937,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -55179,10 +55104,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -55209,10 +55133,9 @@
                 "status_id": "confused",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -55470,10 +55393,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -55667,10 +55589,9 @@
                 "status_id": "blinded",
                 "duration": {
                   "base": 3,
-                  "dice": {
-                    "count": 1,
-                    "sides": 5
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 5
                 },
                 "target_mode": "target"
               }
@@ -56126,10 +56047,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56144,10 +56064,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56176,8 +56095,10 @@
               "parameters": {
                 "status_id": "hallucinating",
                 "duration": {
-                  "kind": "runtime_formula",
-                  "source_effect": "HALLU"
+                  "base": 4,
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 },
                 "target_mode": "target"
               }
@@ -56344,10 +56265,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56374,10 +56294,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56470,10 +56389,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56500,10 +56418,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56633,10 +56550,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -56663,10 +56579,9 @@
                 "target_mode": "target",
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -57285,10 +57200,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }
@@ -58224,10 +58138,9 @@
                 "potency": 1,
                 "duration": {
                   "base": 4,
-                  "dice": {
-                    "count": 1,
-                    "sides": 4
-                  }
+                  "kind": "dice",
+                  "count": 1,
+                  "sides": 4
                 }
               }
             }

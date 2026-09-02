@@ -21,10 +21,9 @@
             "target_mode": "all_nearby",
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             }
           }
         }
@@ -241,10 +240,9 @@
             "summon_family": "monster",
             "amount": {
               "base": 2,
-              "dice": {
-                "count": 1,
-                "sides": 3
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 3
             },
             "target_mode": "triggering_actor"
           }
@@ -370,10 +368,9 @@
             "speed_mode": "slow",
             "duration": {
               "base": 20,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "triggering_actor"
           }
@@ -522,10 +519,9 @@
             "status_id": "blinded",
             "duration": {
               "base": 25,
-              "dice": {
-                "count": 1,
-                "sides": 50
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 50
             },
             "target_mode": "triggering_actor"
           }
@@ -582,10 +578,9 @@
             "status_id": "poisoned",
             "duration": {
               "base": 10,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "triggering_actor"
           }
@@ -614,10 +609,9 @@
             "target_mode": "all_nearby",
             "duration": {
               "base": 5,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             }
           }
         }

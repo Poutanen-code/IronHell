@@ -27,10 +27,9 @@
             "status_id": "blinded",
             "duration": {
               "base": 199,
-              "dice": {
-                "count": 1,
-                "sides": 200
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 200
             },
             "target_mode": "self"
           }
@@ -63,10 +62,9 @@
             "status_id": "afraid",
             "duration": {
               "base": 9,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -99,10 +97,9 @@
             "status_id": "confused",
             "duration": {
               "base": 9,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -135,10 +132,9 @@
             "status_id": "hallucinating",
             "duration": {
               "base": 249,
-              "dice": {
-                "count": 1,
-                "sides": 250
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 250
             },
             "target_mode": "self"
           }
@@ -171,10 +167,9 @@
             "status_id": "paralyzed",
             "duration": {
               "base": 9,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -205,7 +200,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 6, "sides": 6 },
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 6
+            },
             "target_mode": "self"
           }
         },
@@ -245,7 +244,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 6, "sides": 6 },
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 6
+            },
             "target_mode": "self"
           }
         },
@@ -285,7 +288,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 8
+            },
             "target_mode": "self"
           }
         },
@@ -325,7 +332,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 8, "sides": 8 },
+            "amount": {
+              "kind": "dice",
+              "count": 8,
+              "sides": 8
+            },
             "target_mode": "self"
           }
         },
@@ -365,7 +376,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
             "target_mode": "self"
           }
         },
@@ -405,7 +420,11 @@
           "action_id": "ApplyDamage",
           "parameters": {
             "damage_type": "physical",
-            "amount": { "kind": "dice", "count": 10, "sides": 10 },
+            "amount": {
+              "kind": "dice",
+              "count": 10,
+              "sides": 10
+            },
             "target_mode": "self"
           }
         },
@@ -705,10 +724,9 @@
             "status_id": "poisoned",
             "duration": {
               "base": 9,
-              "dice": {
-                "count": 1,
-                "sides": 10
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }

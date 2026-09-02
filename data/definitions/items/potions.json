@@ -99,7 +99,9 @@
             "speed_mode": "slow",
             "duration": {
               "base": 15,
-              "dice": { "count": 1, "sides": 25 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
             },
             "target_mode": "self"
           }
@@ -169,10 +171,9 @@
             "status_id": "poisoned",
             "duration": {
               "base": 9,
-              "dice": {
-                "count": 1,
-                "sides": 15
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 15
             },
             "target_mode": "self"
           }
@@ -203,10 +204,9 @@
             "status_id": "blinded",
             "duration": {
               "base": 99,
-              "dice": {
-                "count": 1,
-                "sides": 100
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 100
             },
             "target_mode": "self"
           }
@@ -237,10 +237,9 @@
             "status_id": "confused",
             "duration": {
               "base": 14,
-              "dice": {
-                "count": 1,
-                "sides": 20
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
@@ -270,10 +269,9 @@
             "status_id": "paralyzed",
             "duration": {
               "base": 3,
-              "dice": {
-                "count": 1,
-                "sides": 4
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 4
             },
             "target_mode": "self"
           }
@@ -507,10 +505,9 @@
             "status_id": "infravision_boost",
             "duration": {
               "base": 100,
-              "dice": {
-                "count": 1,
-                "sides": 100
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 100
             },
             "target_mode": "self"
           }
@@ -539,10 +536,9 @@
             "status_id": "see_invisible",
             "duration": {
               "base": 12,
-              "dice": {
-                "count": 1,
-                "sides": 12
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 12
             },
             "target_mode": "self"
           }
@@ -659,7 +655,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 15,
-              "dice": { "count": 1, "sides": 25 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
             },
             "target_mode": "self"
           }
@@ -685,10 +683,14 @@
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
-            "elements": ["fire"],
+            "elements": [
+              "fire"
+            ],
             "duration": {
               "base": 10,
-              "dice": { "count": 1, "sides": 10 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -714,10 +716,14 @@
         {
           "action_id": "ApplyOpposeElements",
           "parameters": {
-            "elements": ["cold"],
+            "elements": [
+              "cold"
+            ],
             "duration": {
               "base": 10,
-              "dice": { "count": 1, "sides": 10 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 10
             },
             "target_mode": "self"
           }
@@ -766,10 +772,9 @@
             "status_id": "heroism",
             "duration": {
               "base": 25,
-              "dice": {
-                "count": 1,
-                "sides": 25
-              }
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
             },
             "target_mode": "self"
           }
@@ -795,7 +800,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["afraid"],
+            "status_ids": [
+              "afraid"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -806,7 +813,9 @@
             "status_id": "berserk",
             "duration": {
               "base": 25,
-              "dice": { "count": 1, "sides": 25 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 25
             },
             "target_mode": "self"
           }
@@ -852,7 +861,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["cut"],
+            "status_ids": [
+              "cut"
+            ],
             "target_mode": "self",
             "cure_mode": "halve"
           }
@@ -860,7 +871,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["confused"],
+            "status_ids": [
+              "confused"
+            ],
             "target_mode": "self",
             "cure_mode": "halve"
           }
@@ -868,7 +881,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["blinded"],
+            "status_ids": [
+              "blinded"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -906,7 +921,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["cut"],
+            "status_ids": [
+              "cut"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -914,7 +931,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["blinded"],
+            "status_ids": [
+              "blinded"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -922,7 +941,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["confused"],
+            "status_ids": [
+              "confused"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -960,7 +981,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["stunned"],
+            "status_ids": [
+              "stunned"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -968,7 +991,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["cut"],
+            "status_ids": [
+              "cut"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -976,7 +1001,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["poisoned"],
+            "status_ids": [
+              "poisoned"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -984,7 +1011,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["blinded"],
+            "status_ids": [
+              "blinded"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -992,7 +1021,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["confused"],
+            "status_ids": [
+              "confused"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1032,7 +1063,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["stunned"],
+            "status_ids": [
+              "stunned"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1040,7 +1073,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["cut"],
+            "status_ids": [
+              "cut"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1048,7 +1083,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["poisoned"],
+            "status_ids": [
+              "poisoned"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1056,7 +1093,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["blinded"],
+            "status_ids": [
+              "blinded"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }
@@ -1064,7 +1103,9 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["confused"],
+            "status_ids": [
+              "confused"
+            ],
             "target_mode": "self",
             "cure_mode": "full"
           }

@@ -20,7 +20,11 @@
           "action_id": "BeamDamage",
           "parameters": {
             "damage_type": "light_weak",
-            "amount": { "kind": "dice", "count": 6, "sides": 8 },
+            "amount": {
+              "kind": "dice",
+              "count": 6,
+              "sides": 8
+            },
             "direction": "aimed",
             "terrain_effect": "illuminate_path"
           }
@@ -142,7 +146,12 @@
           "action_id": "BeamDamage",
           "parameters": {
             "damage_type": "stone_weak",
-            "amount": { "kind": "dice", "count": 1, "sides": 30, "base": 20 },
+            "amount": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 30,
+              "base": 20
+            },
             "direction": "aimed",
             "terrain_effect": "stone_to_mud"
           }
@@ -686,7 +695,9 @@
         {
           "action_id": "DetectEntities",
           "parameters": {
-            "targets": ["traps"]
+            "targets": [
+              "traps"
+            ]
           }
         }
       ],
@@ -712,7 +723,10 @@
         {
           "action_id": "DetectEntities",
           "parameters": {
-            "targets": ["doors", "stairs"]
+            "targets": [
+              "doors",
+              "stairs"
+            ]
           }
         }
       ],
@@ -792,7 +806,11 @@
           "parameters": {
             "radius": 2,
             "light_style": "room",
-            "damage_light_sensitive": { "kind": "dice", "count": 2, "sides": 8 }
+            "damage_light_sensitive": {
+              "kind": "dice",
+              "count": 2,
+              "sides": 8
+            }
           }
         }
       ],
@@ -844,7 +862,9 @@
         {
           "action_id": "DetectEntities",
           "parameters": {
-            "targets": ["all"]
+            "targets": [
+              "all"
+            ]
           }
         }
       ],
@@ -897,7 +917,13 @@
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["blinded", "poisoned", "confused", "stunned", "cut"],
+            "status_ids": [
+              "blinded",
+              "poisoned",
+              "confused",
+              "stunned",
+              "cut"
+            ],
             "cure_mode": "full",
             "target_mode": "self"
           }
@@ -925,14 +951,20 @@
         {
           "action_id": "HealHP",
           "parameters": {
-            "amount": { "kind": "flat", "value": 500 },
+            "amount": {
+              "kind": "flat",
+              "value": 500
+            },
             "target_mode": "self"
           }
         },
         {
           "action_id": "CureStatus",
           "parameters": {
-            "status_ids": ["stunned", "cut"],
+            "status_ids": [
+              "stunned",
+              "cut"
+            ],
             "cure_mode": "full",
             "target_mode": "self"
           }
@@ -997,7 +1029,9 @@
             "speed_mode": "haste",
             "duration": {
               "base": 15,
-              "dice": { "count": 1, "sides": 30 }
+              "kind": "dice",
+              "count": 1,
+              "sides": 30
             },
             "target_mode": "self"
           }
