@@ -745,7 +745,7 @@
         }
       ],
       "notes": "Composite: hp_player(10) + set_hero(...) + set_afraid(0). Added HealHP and CureStatus actions.",
-      "provenance_status": "verified"
+      "provenance_status": "derived"
     },
     {
       "id": "magic_berserker",
@@ -784,7 +784,7 @@
         }
       ],
       "notes": "MAngband: hp_player(30) + set_shero(...) + set_afraid(0). The 30 HP is modeled as berserk.hp_bonus (temporary MaxHP boost) on the status, not a one-time HealHP. CureStatus(afraid) retained.",
-      "provenance_status": "verified"
+      "provenance_status": "derived"
     },
     {
       "id": "magic_haste_self",
@@ -1313,30 +1313,6 @@
       "provenance_status": "verified"
     },
     {
-      "id": "magic_word_of_destruction",
-      "name": "Word of Destruction",
-      "policy": {
-        "level": 33,
-        "mana": 21,
-        "fail_rate": 80,
-        "experience_value": 35,
-        "book_id": "kelek_s_grimoire_of_power",
-        "realm": "magic"
-      },
-      "action_refs": [
-        {
-          "action_id": "AlterTerrain",
-          "parameters": {
-            "terrain_operation": "destruction_field",
-            "target_mode": "self",
-            "entity_effect": "remove_all_in_radius"
-          }
-        }
-      ],
-      "notes": "destroy_area(full=TRUE) destroys terrain and removes all monsters in radius 15.",
-      "provenance_status": "verified"
-    },
-    {
       "id": "magic_rune_of_protection",
       "name": "Rune of Protection",
       "policy": {
@@ -1674,8 +1650,8 @@
       "name": "Rift",
       "policy": {
         "level": 35,
-        "mana": 75,
-        "fail_rate": 90,
+        "mana": 30,
+        "fail_rate": 60,
         "experience_value": 75,
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"

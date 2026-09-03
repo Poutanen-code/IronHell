@@ -99,7 +99,7 @@
       "status_id": "heroism",
       "name": "Heroism",
       "category": "buff",
-      "description": "The character gains +12 to hit and becomes immune to fear. A minor healing occurs each turn.",
+      "description": "The character gains +12 to hit and becomes immune to fear. Grants a temporary +10 MaxHP bonus while active;",
       "is_timed": true,
       "default_duration": { "base": 25, "kind": "dice", "count": 1, "sides": 25 },
       "is_stackable": true,
