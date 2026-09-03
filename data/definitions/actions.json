@@ -261,6 +261,8 @@
             "value_type": "enum",
             "required": false,
             "allowed_values": [
+              "10",
+              "20",
               "full",
               "halve"
             ]
@@ -415,9 +417,8 @@
           {
             "id": "distance",
             "description": "Maximum relocation distance. Zero means policy-defined or level-wide.",
-            "value_type": "integer",
-            "required": true,
-            "minimum": 0
+            "value_type": "structured_amount",
+            "required": true
           },
           {
             "id": "teleport_mode",
@@ -463,9 +464,8 @@
           {
             "id": "radius",
             "description": "Lighting radius. Zero means full local effect semantics are policy-defined.",
-            "value_type": "integer",
-            "required": true,
-            "minimum": 0
+            "value_type": "structured_amount",
+            "required": true
           },
           {
             "id": "light_style",
@@ -522,6 +522,7 @@
             "allowed_values": [
               "monsters",
               "objects",
+              "gold",
               "traps",
               "doors",
               "stairs",
@@ -1771,7 +1772,7 @@
               "evil",
               "targeted_non_unique",
               "mass_non_unique",
-              "evil_only",
+              "evil",
               "non_unique",
               "all",
               "nearest_type_non_unique",

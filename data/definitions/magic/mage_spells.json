@@ -1325,7 +1325,7 @@
       },
       "action_refs": [
         {
-          "action_id": "ApplyTerrainGlyph",
+          "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "glyph_of_warding",
             "target_mode": "self"
@@ -1374,11 +1374,14 @@
       },
       "action_refs": [
         {
-          "action_id": "EnchantItem",
+          "action_id": "EnchantEquipment",
           "parameters": {
-            "target_mode": "item_prompt",
-            "slot": "armor",
-            "power": "standard"
+            "enchantment_profile": "armor",
+            "target_mode": "single_item",
+            "attempts": {
+              "kind": "flat",
+              "value": 1
+            }
           }
         }
       ],
@@ -1397,11 +1400,14 @@
       },
       "action_refs": [
         {
-          "action_id": "EnchantItem",
+          "action_id": "EnchantEquipment",
           "parameters": {
-            "target_mode": "item_prompt",
-            "slot": "weapon",
-            "power": "standard"
+            "enchantment_profile": "weapon",
+            "target_mode": "single_item",
+            "attempts": {
+              "kind": "flat",
+              "value": 1
+            }
           }
         }
       ],
@@ -1447,14 +1453,13 @@
       },
       "action_refs": [
         {
-          "action_id": "ApplyBrand",
+          "action_id": "BrandWeapon",
           "parameters": {
-            "target_mode": "item_prompt",
+            "target_mode": "equipped_item",
             "brand_types": [
-              "fire",
-              "cold",
-              "acid",
-              "lightning"
+              "flame",
+              "frost",
+              "poison"
             ]
           }
         }
@@ -1621,7 +1626,7 @@
           }
         }
       ],
-      "provenance_status": "derived"
+      "provenance_status": "Needs parity research."
     },
     {
       "id": "magic_mass_banishment",
@@ -1675,7 +1680,7 @@
           }
         }
       ],
-      "provenance_status": "derived"
+      "provenance_status": "Needs parity research."
     },
     {
       "id": "magic_mana_storm",

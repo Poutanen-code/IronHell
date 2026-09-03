@@ -1187,6 +1187,7 @@
           "action_id": "BanishByRule",
           "parameters": {
             "banish_rule": "mass_non_unique",
+            "radius": 20,
             "target_mode": "area"
           }
         }

@@ -54,7 +54,7 @@
             "status_ids": [
               "cut"
             ],
-            "cure_mode": "halve",
+            "cure_mode": "10",
             "target_mode": "self"
           }
         }
@@ -87,7 +87,7 @@
           }
         }
       ],
-      "provenance_status": "derived"
+      "provenance_status": "verified"
     },
     {
       "id": "prayer_remove_fear",
@@ -299,7 +299,7 @@
             "status_ids": [
               "cut"
             ],
-            "cure_mode": "halve",
+            "cure_mode": "20",
             "target_mode": "self"
           }
         }
@@ -1234,7 +1234,8 @@
         {
           "action_id": "BanishByRule",
           "parameters": {
-            "banish_rule": "evil_only",
+            "banish_rule": "evil",
+            "radius": 100,
             "target_mode": "self"
           }
         }
@@ -1258,11 +1259,11 @@
           "parameters": {
             "terrain_operation": "destruction_field",
             "target_mode": "self",
+            "radius": 15,
             "entity_effect": "remove_all_in_radius"
           }
         }
       ],
-      "notes": "destroy_area(full=TRUE): destroys terrain and removes all monsters in radius 15.",
       "provenance_status": "verified"
     },
     {
@@ -1310,8 +1311,7 @@
           }
         }
       ],
-      "notes": "destroy_doors_touch() removes doors and traps in an area around the caster.",
-      "provenance_status": "derived"
+      "provenance_status": "verified"
     },
     {
       "id": "prayer_recharging",
@@ -1465,8 +1465,12 @@
         {
           "action_id": "TeleportSelf",
           "parameters": {
-            "distance": 0,
-            "teleport_mode": "teleport"
+            "distance": {
+              "kind": "level_formula",
+              "level_source": "caster",
+              "level_multiplier": 5
+            },
+            "teleport_mode": "phase"
           }
         }
       ],
