@@ -1328,8 +1328,13 @@
         {
           "action_id": "RechargeItem",
           "parameters": {
-            "power": 2,
-            "item_kind_filter": "rechargeable"
+            "power": 20,
+            "item_kind_filter": [
+              "wand",
+              "staff",
+              "device",
+              "rechargeable"
+            ]
           }
         }
       ],

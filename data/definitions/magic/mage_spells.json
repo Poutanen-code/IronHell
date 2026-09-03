@@ -151,7 +151,7 @@
             "amount": {
               "kind": "dice",
               "count": 2,
-              "sides": 10
+              "sides": 8
             },
             "target_mode": "self"
           }
@@ -344,7 +344,7 @@
           }
         }
       ],
-      "notes": "fire_beam(GF_ELEC) â€” always a piercing beam, not bolt-or-beam. Corrected from BoltDamage.",
+      "notes": "fire_beam(GF_ELEC) — always a piercing beam, not bolt-or-beam. Corrected from BoltDamage.",
       "provenance_status": "verified"
     },
     {
@@ -446,9 +446,9 @@
       "id": "magic_acid_bolt",
       "name": "Acid Bolt",
       "policy": {
-        "level": 15,
-        "mana": 9,
-        "fail_rate": 50,
+        "level": 16,
+        "mana": 10,
+        "fail_rate": 40,
         "experience_value": 8,
         "book_id": "incantations_and_illusions",
         "realm": "magic"
@@ -462,7 +462,7 @@
               "kind": "dice",
               "count": {
                 "kind": "linear",
-                "base": 5,
+                "base": 8,
                 "per_level_divisor": 4,
                 "level_offset": 5
               },
@@ -511,7 +511,7 @@
       "name": "Trap/Door Destruction",
       "policy": {
         "level": 5,
-        "mana": 5,
+        "mana": 4,
         "fail_rate": 30,
         "experience_value": 6,
         "book_id": "conjurings_and_tricks",
@@ -532,9 +532,9 @@
       "id": "magic_spear_of_light",
       "name": "Spear of Light",
       "policy": {
-        "level": 7,
-        "mana": 6,
-        "fail_rate": 30,
+        "level": 9,
+        "mana": 7,
+        "fail_rate": 44,
         "experience_value": 5,
         "book_id": "conjurings_and_tricks",
         "realm": "magic"
@@ -591,9 +591,9 @@
       "id": "magic_door_creation",
       "name": "Door Creation",
       "policy": {
-        "level": 13,
-        "mana": 9,
-        "fail_rate": 40,
+        "level": 28,
+        "mana": 17,
+        "fail_rate": 65,
         "experience_value": 12,
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
@@ -613,8 +613,8 @@
       "id": "magic_earthquake",
       "name": "Earthquake",
       "policy": {
-        "level": 20,
-        "mana": 18,
+        "level": 23,
+        "mana": 12,
         "fail_rate": 60,
         "experience_value": 20,
         "book_id": "kelek_s_grimoire_of_power",
@@ -635,9 +635,9 @@
       "id": "magic_stair_creation",
       "name": "Stair Creation",
       "policy": {
-        "level": 24,
-        "mana": 20,
-        "fail_rate": 50,
+        "level": 30,
+        "mana": 25,
+        "fail_rate": 75,
         "experience_value": 20,
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
@@ -704,9 +704,9 @@
       "id": "magic_heroism",
       "name": "Heroism",
       "policy": {
-        "level": 99,
-        "mana": 0,
-        "fail_rate": 0,
+        "level": 11,
+        "mana": 7,
+        "fail_rate": 45,
         "experience_value": 0,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
@@ -751,9 +751,9 @@
       "id": "magic_berserker",
       "name": "Berserker",
       "policy": {
-        "level": 99,
-        "mana": 0,
-        "fail_rate": 0,
+        "level": 16,
+        "mana": 10,
+        "fail_rate": 40,
         "experience_value": 0,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
@@ -790,9 +790,9 @@
       "id": "magic_haste_self",
       "name": "Haste Self",
       "policy": {
-        "level": 25,
-        "mana": 12,
-        "fail_rate": 65,
+        "level": 7,
+        "mana": 10,
+        "fail_rate": 50,
         "experience_value": 10,
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
@@ -868,9 +868,9 @@
       "id": "magic_teleport_other",
       "name": "Teleport Other",
       "policy": {
-        "level": 23,
-        "mana": 12,
-        "fail_rate": 60,
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 50,
         "experience_value": 8,
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
@@ -890,9 +890,9 @@
       "id": "magic_teleport_level",
       "name": "Teleport Level",
       "policy": {
-        "level": 28,
-        "mana": 17,
-        "fail_rate": 65,
+        "level": 11,
+        "mana": 7,
+        "fail_rate": 45,
         "experience_value": 20,
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
@@ -911,9 +911,9 @@
       "id": "magic_word_of_recall",
       "name": "Word of Recall",
       "policy": {
-        "level": 30,
-        "mana": 25,
-        "fail_rate": 75,
+        "level": 16,
+        "mana": 10,
+        "fail_rate": 40,
         "experience_value": 15,
         "book_id": "mordenkainen_s_escapes",
         "realm": "magic"
@@ -982,9 +982,9 @@
       "id": "magic_explosion",
       "name": "Explosion",
       "policy": {
-        "level": 20,
-        "mana": 20,
-        "fail_rate": 50,
+        "level": 16,
+        "mana": 10,
+        "fail_rate": 40,
         "experience_value": 10,
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
@@ -1010,9 +1010,9 @@
       "id": "magic_cloud_kill",
       "name": "Cloudkill",
       "policy": {
-        "level": 20,
-        "mana": 9,
-        "fail_rate": 50,
+        "level": 25,
+        "mana": 15,
+        "fail_rate": 60,
         "experience_value": 8,
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
@@ -1038,8 +1038,8 @@
       "id": "magic_mass_sleep",
       "name": "Mass Sleep",
       "policy": {
-        "level": 25,
-        "mana": 7,
+        "level": 20,
+        "mana": 20,
         "fail_rate": 50,
         "experience_value": 6,
         "book_id": "sorcery_and_evocations",
@@ -1164,9 +1164,9 @@
       "id": "magic_resist_cold",
       "name": "Resist Cold",
       "policy": {
-        "level": 10,
-        "mana": 5,
-        "fail_rate": 50,
+        "level": 13,
+        "mana": 9,
+        "fail_rate": 40,
         "experience_value": 10,
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
@@ -1194,9 +1194,9 @@
       "id": "magic_resist_fire",
       "name": "Resist Fire",
       "policy": {
-        "level": 10,
-        "mana": 5,
-        "fail_rate": 50,
+        "level": 23,
+        "mana": 12,
+        "fail_rate": 60,
         "experience_value": 10,
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
@@ -1225,9 +1225,9 @@
       "name": "Resist Poison",
       "policy": {
         "level": 25,
-        "mana": 10,
-        "fail_rate": 45,
-        "experience_value": 20,
+        "mana": 15,
+        "fail_rate": 60,
+        "experience_value": 10,
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
@@ -1254,10 +1254,10 @@
       "id": "magic_resistance",
       "name": "Resistance",
       "policy": {
-        "level": 28,
-        "mana": 20,
-        "fail_rate": 65,
-        "experience_value": 30,
+        "level": 30,
+        "mana": 25,
+        "fail_rate": 75,
+        "experience_value": 10,
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
@@ -1288,10 +1288,10 @@
       "id": "magic_shield",
       "name": "Shield",
       "policy": {
-        "level": 32,
-        "mana": 24,
-        "fail_rate": 75,
-        "experience_value": 30,
+        "level": 11,
+        "mana": 7,
+        "fail_rate": 45,
+        "experience_value": 10,
         "book_id": "resistances_of_scarabtarices",
         "realm": "magic"
       },
@@ -1302,31 +1302,56 @@
             "status_id": "shield",
             "duration": {
               "base": 30,
-              "random": 20
+              "kind": "dice",
+              "count": 1,
+              "sides": 20
             },
             "target_mode": "self"
           }
         }
       ],
-      "notes": "Corrected from DetectEntities fallback. set_shield() grants +50 AC for duration. See SPELL_COMPOSITE_ACTION_REVIEW.md.",
       "provenance_status": "verified"
     },
     {
-      "id": "magic_rune_of_protection",
-      "name": "Rune of Protection",
+      "id": "magic_word_of_destruction",
+      "name": "Word of Destruction",
       "policy": {
-        "level": 36,
-        "mana": 60,
-        "fail_rate": 70,
-        "experience_value": 40,
-        "book_id": "mordenkainen_s_escapes",
+        "level": 33,
+        "mana": 21,
+        "fail_rate": 80,
+        "experience_value": 35,
+        "book_id": "kelek_s_grimoire_of_power",
         "realm": "magic"
       },
       "action_refs": [
         {
           "action_id": "AlterTerrain",
           "parameters": {
-            "terrain_operation": "rune_of_protection",
+            "terrain_operation": "destruction_field",
+            "target_mode": "self",
+            "entity_effect": "remove_all_in_radius"
+          }
+        }
+      ],
+      "notes": "destroy_area(full=TRUE) destroys terrain and removes all monsters in radius 15.",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "magic_rune_of_protection",
+      "name": "Rune of Protection",
+      "policy": {
+        "level": 25,
+        "mana": 30,
+        "fail_rate": 80,
+        "experience_value": 30,
+        "book_id": "mordenkainen_s_escapes",
+        "realm": "magic"
+      },
+      "action_refs": [
+        {
+          "action_id": "ApplyTerrainGlyph",
+          "parameters": {
+            "terrain_operation": "glyph_of_warding",
             "target_mode": "self"
           }
         }
@@ -1339,7 +1364,7 @@
       "policy": {
         "level": 9,
         "mana": 7,
-        "fail_rate": 75,
+        "fail_rate": 45,
         "experience_value": 10,
         "book_id": "incantations_and_illusions",
         "realm": "magic"
@@ -1348,8 +1373,13 @@
         {
           "action_id": "RechargeItem",
           "parameters": {
-            "power": 1,
-            "item_kind_filter": "rechargeable"
+            "power": 30,
+            "item_kind_filter": [
+              "wand",
+              "staff",
+              "device",
+              "rechargeable"
+            ]
           }
         }
       ],
@@ -1359,19 +1389,20 @@
       "id": "magic_enchant_armor",
       "name": "Enchant Armor",
       "policy": {
-        "level": 99,
-        "mana": 0,
-        "fail_rate": 0,
-        "experience_value": 0,
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 50,
+        "experience_value": 10,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
       "action_refs": [
         {
-          "action_id": "EnchantEquipment",
+          "action_id": "EnchantItem",
           "parameters": {
-            "enchantment_profile": "armor",
-            "target_mode": "single_item"
+            "target_mode": "item_prompt",
+            "slot": "armor",
+            "power": "standard"
           }
         }
       ],
@@ -1381,19 +1412,20 @@
       "id": "magic_enchant_weapon",
       "name": "Enchant Weapon",
       "policy": {
-        "level": 99,
-        "mana": 0,
-        "fail_rate": 0,
-        "experience_value": 0,
+        "level": 20,
+        "mana": 20,
+        "fail_rate": 50,
+        "experience_value": 10,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
       "action_refs": [
         {
-          "action_id": "EnchantEquipment",
+          "action_id": "EnchantItem",
           "parameters": {
-            "enchantment_profile": "weapon",
-            "target_mode": "single_item"
+            "target_mode": "item_prompt",
+            "slot": "weapon",
+            "power": "standard"
           }
         }
       ],
@@ -1403,10 +1435,10 @@
       "id": "magic_recharge_item_ii",
       "name": "Greater Recharging",
       "policy": {
-        "level": 30,
+        "level": 25,
         "mana": 30,
-        "fail_rate": 95,
-        "experience_value": 100,
+        "fail_rate": 80,
+        "experience_value": 10,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
@@ -1414,8 +1446,13 @@
         {
           "action_id": "RechargeItem",
           "parameters": {
-            "power": 2,
-            "item_kind_filter": "rechargeable"
+            "power": 60,
+            "item_kind_filter": [
+              "wand",
+              "staff",
+              "device",
+              "rechargeable"
+            ]
           }
         }
       ],
@@ -1425,19 +1462,24 @@
       "id": "magic_elemental_brand",
       "name": "Elemental Brand",
       "policy": {
-        "level": 32,
-        "mana": 60,
-        "fail_rate": 95,
-        "experience_value": 120,
+        "level": 25,
+        "mana": 30,
+        "fail_rate": 80,
+        "experience_value": 10,
         "book_id": "tenser_s_transformations",
         "realm": "magic"
       },
       "action_refs": [
         {
-          "action_id": "BrandWeapon",
+          "action_id": "ApplyBrand",
           "parameters": {
-            "brand_type": "elemental",
-            "target_mode": "equipped_item"
+            "target_mode": "item_prompt",
+            "brand_types": [
+              "fire",
+              "cold",
+              "acid",
+              "lightning"
+            ]
           }
         }
       ],
@@ -1447,10 +1489,10 @@
       "id": "magic_frost_ball",
       "name": "Frost Ball",
       "policy": {
-        "level": 19,
-        "mana": 12,
-        "fail_rate": 55,
-        "experience_value": 8,
+        "level": 30,
+        "mana": 30,
+        "fail_rate": 95,
+        "experience_value": 24,
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
@@ -1503,10 +1545,10 @@
       "id": "magic_fire_ball",
       "name": "Fire Ball",
       "policy": {
-        "level": 26,
-        "mana": 18,
-        "fail_rate": 65,
-        "experience_value": 12,
+        "level": 32,
+        "mana": 24,
+        "fail_rate": 75,
+        "experience_value": 24,
         "book_id": "sorcery_and_evocations",
         "realm": "magic"
       },
@@ -1632,9 +1674,9 @@
       "name": "Rift",
       "policy": {
         "level": 35,
-        "mana": 30,
-        "fail_rate": 60,
-        "experience_value": 25,
+        "mana": 75,
+        "fail_rate": 90,
+        "experience_value": 75,
         "book_id": "raal_s_tome_of_destruction",
         "realm": "magic"
       },
@@ -1644,14 +1686,14 @@
           "parameters": {
             "damage_type": "gravity",
             "amount": {
-              "kind": "level_formula",
-              "level_source": "caster",
-              "flat_base": 40,
-              "base_dice": {
-                "count": 1,
-                "sides": 7
-              },
-              "level_multiplier": 3.5
+              "kind": "linear",
+              "base": 40,
+              "per_level": 0,
+              "extra_roll": {
+                "kind": "damroll",
+                "times": 7,
+                "level_source": "caster"
+              }
             },
             "direction": "aimed"
           }
