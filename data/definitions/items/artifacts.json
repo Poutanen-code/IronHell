@@ -19,9 +19,13 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": "ILLUMINATION",
-      "recharge_base": 10,
-      "recharge_dice": 10,
+      "activation": {
+        "id": "ILLUMINATION",
+        "recharge": {
+          "base": 10,
+          "dice": 10
+        }
+      },
       "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure."
     },
     {
@@ -44,9 +48,13 @@
         "SEE_INVIS",
         "INSTA_ART"
       ],
-      "activation": "MAGIC_MAP",
-      "recharge_base": 50,
-      "recharge_dice": 50,
+      "activation": {
+        "id": "MAGIC_MAP",
+        "recharge": {
+          "base": 50,
+          "dice": 50
+        }
+      },
       "description": "The shining Star of the West, a treasured heirloom of Elendil's house."
     },
     {
@@ -72,9 +80,13 @@
         "RES_DARK",
         "INSTA_ART"
       ],
-      "activation": "DETECT",
-      "recharge_base": 30,
-      "recharge_dice": 30,
+      "activation": {
+        "id": "DETECT",
+        "recharge": {
+          "base": 30,
+          "dice": 30
+        }
+      },
       "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards."
     },
     {
@@ -94,9 +106,13 @@
         "RES_FIRE",
         "INSTA_ART"
       ],
-      "activation": "PROT_EVIL",
-      "recharge_base": 225,
-      "recharge_dice": 225,
+      "activation": {
+        "id": "PROT_EVIL",
+        "recharge": {
+          "base": 225,
+          "dice": 225
+        }
+      },
       "description": "A fiery circle of bronze, with mighty spells to ward off and banish evil.",
       "base_ac": 0,
       "damage": "0d0",
@@ -128,9 +144,13 @@
         "RES_ELEC",
         "INSTA_ART"
       ],
-      "activation": "DISP_EVIL",
-      "recharge_base": 50,
-      "recharge_dice": 50,
+      "activation": {
+        "id": "DISP_EVIL",
+        "recharge": {
+          "base": 50,
+          "dice": 50
+        }
+      },
       "description": "The ancient heirloom of Ingwe, high lord of the Vanyar, against whom nothing of evil could stand.",
       "base_ac": 0,
       "damage": "0d0",
@@ -197,9 +217,13 @@
         "INSTA_ART",
         "HIDE_TYPE"
       ],
-      "activation": "CLAIRVOYANCE",
-      "recharge_base": 50,
-      "recharge_dice": 50,
+      "activation": {
+        "id": "CLAIRVOYANCE",
+        "recharge": {
+          "base": 50,
+          "dice": 50
+        }
+      },
       "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it."
     },
     {
@@ -251,9 +275,13 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": "HASTE2",
-      "recharge_base": 150,
-      "recharge_dice": 150,
+      "activation": {
+        "id": "HASTE2",
+        "recharge": {
+          "base": 150,
+          "dice": 150
+        }
+      },
       "description": "The treasure of Tulkas, most fleet and wrathful of the Valar.",
       "base_ac": 0,
       "damage": "0d0",
@@ -300,9 +328,13 @@
         "RES_FEAR",
         "INSTA_ART"
       ],
-      "activation": "FIRE3",
-      "recharge_base": 20,
-      "recharge_dice": 20,
+      "activation": {
+        "id": "FIRE3",
+        "recharge": {
+          "base": 20,
+          "dice": 20
+        }
+      },
       "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
@@ -344,9 +376,13 @@
         "TELEPATHY",
         "INSTA_ART"
       ],
-      "activation": "FROST5",
-      "recharge_base": 20,
-      "recharge_dice": 20,
+      "activation": {
+        "id": "FROST5",
+        "recharge": {
+          "base": 20,
+          "dice": 20
+        }
+      },
       "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
@@ -389,9 +425,13 @@
         "RES_DISEN",
         "INSTA_ART"
       ],
-      "activation": "ELEC2",
-      "recharge_base": 20,
-      "recharge_dice": 20,
+      "activation": {
+        "id": "ELEC2",
+        "recharge": {
+          "base": 20,
+          "dice": 20
+        }
+      },
       "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
@@ -444,9 +484,13 @@
         "SUST_CHR",
         "INSTA_ART"
       ],
-      "activation": "BIZZARE",
-      "recharge_base": 30,
-      "recharge_dice": 30,
+      "activation": {
+        "id": "BIZZARE",
+        "recharge": {
+          "base": 30,
+          "dice": 30
+        }
+      },
       "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it."
     },
     {
@@ -476,9 +520,13 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": "HEAL1",
-      "recharge_base": 200,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "HEAL1",
+        "recharge": {
+          "base": 200,
+          "dice": 0
+        }
+      },
       "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle."
     },
     {
@@ -501,9 +549,13 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": "RESTORE_LIFE",
-      "recharge_base": 150,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "RESTORE_LIFE",
+        "recharge": {
+          "base": 150,
+          "dice": 0
+        }
+      },
       "description": "A plain white jewel, given by Queen Arwen to Frodo Baggins before his return to the Shire.",
       "base_ac": 0,
       "damage": "0d0",
@@ -541,9 +593,13 @@
         "AGGRAVATE",
         "ACTIVATE"
       ],
-      "activation": "STAR_BALL",
-      "recharge_base": 50,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "STAR_BALL",
+        "recharge": {
+          "base": 50,
+          "dice": 0
+        }
+      },
       "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on."
     },
     {
@@ -582,9 +638,13 @@
         "RES_DISEN",
         "ACTIVATE"
       ],
-      "activation": "RAGE_BLESS_RESIST",
-      "recharge_base": 400,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "RAGE_BLESS_RESIST",
+        "recharge": {
+          "base": 400,
+          "dice": 0
+        }
+      },
       "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal."
     },
     {
@@ -615,9 +675,13 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": "STAR_BALL",
-      "recharge_base": 50,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "STAR_BALL",
+        "recharge": {
+          "base": 50,
+          "dice": 0
+        }
+      },
       "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer."
     },
     {
@@ -649,9 +713,13 @@
         "RES_FEAR",
         "ACTIVATE"
       ],
-      "activation": "HEAL2",
-      "recharge_base": 444,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "HEAL2",
+        "recharge": {
+          "base": 444,
+          "dice": 0
+        }
+      },
       "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can."
     },
     {
@@ -735,9 +803,13 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": "PHASE",
-      "recharge_base": 2,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "PHASE",
+        "recharge": {
+          "base": 2,
+          "dice": 0
+        }
+      },
       "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within."
     },
     {
@@ -767,9 +839,13 @@
         "RES_DISEN",
         "ACTIVATE"
       ],
-      "activation": "BANISHMENT",
-      "recharge_base": 500,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "BANISHMENT",
+        "recharge": {
+          "base": 500,
+          "dice": 0
+        }
+      },
       "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish."
     },
     {
@@ -825,9 +901,13 @@
         "RES_CONFU",
         "ACTIVATE"
       ],
-      "activation": "TRAP_DOOR_DEST",
-      "recharge_base": 10,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "TRAP_DOOR_DEST",
+        "recharge": {
+          "base": 10,
+          "dice": 0
+        }
+      },
       "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path."
     },
     {
@@ -851,9 +931,13 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": "PROT_EVIL",
-      "recharge_base": 100,
-      "recharge_dice": 100,
+      "activation": {
+        "id": "PROT_EVIL",
+        "recharge": {
+          "base": 100,
+          "dice": 100
+        }
+      },
       "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth."
     },
     {
@@ -935,9 +1019,13 @@
         "SUST_DEX",
         "SUST_CHR"
       ],
-      "activation": "STAR_LIGHT",
-      "recharge_base": 100,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "STAR_LIGHT",
+        "recharge": {
+          "base": 100,
+          "dice": 0
+        }
+      },
       "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth."
     },
     {
@@ -1255,9 +1343,13 @@
         "SEE_INVIS",
         "ACTIVATE"
       ],
-      "activation": "DETECT",
-      "recharge_base": 55,
-      "recharge_dice": 55,
+      "activation": {
+        "id": "DETECT",
+        "recharge": {
+          "base": 55,
+          "dice": 55
+        }
+      },
       "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness."
     },
     {
@@ -1322,9 +1414,13 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": "HEAL1",
-      "recharge_base": 250,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "HEAL1",
+        "recharge": {
+          "base": 250,
+          "dice": 0
+        }
+      },
       "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world."
     },
     {
@@ -1384,9 +1480,13 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": "RESIST",
-      "recharge_base": 111,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "RESIST",
+        "recharge": {
+          "base": 111,
+          "dice": 0
+        }
+      },
       "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements."
     },
     {
@@ -1413,9 +1513,13 @@
         "RES_ACID",
         "ACTIVATE"
       ],
-      "activation": "SLEEP",
-      "recharge_base": 55,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "SLEEP",
+        "recharge": {
+          "base": 55,
+          "dice": 0
+        }
+      },
       "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar."
     },
     {
@@ -1443,9 +1547,13 @@
         "RES_COLD",
         "ACTIVATE"
       ],
-      "activation": "RECHARGE1",
-      "recharge_base": 70,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "RECHARGE1",
+        "recharge": {
+          "base": 70,
+          "dice": 0
+        }
+      },
       "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water."
     },
     {
@@ -1493,9 +1601,13 @@
         "RES_NEXUS",
         "ACTIVATE"
       ],
-      "activation": "TELEPORT",
-      "recharge_base": 45,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "TELEPORT",
+        "recharge": {
+          "base": 45,
+          "dice": 0
+        }
+      },
       "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission."
     },
     {
@@ -1525,9 +1637,13 @@
         "RES_COLD",
         "ACTIVATE"
       ],
-      "activation": "RESTORE_LIFE",
-      "recharge_base": 250,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "RESTORE_LIFE",
+        "recharge": {
+          "base": 250,
+          "dice": 0
+        }
+      },
       "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death."
     },
     {
@@ -1581,9 +1697,13 @@
         "AGGRAVATE",
         "ACTIVATE"
       ],
-      "activation": "MANA_BOLT",
-      "recharge_base": 30,
-      "recharge_dice": 30,
+      "activation": {
+        "id": "MANA_BOLT",
+        "recharge": {
+          "base": 30,
+          "dice": 30
+        }
+      },
       "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle."
     },
     {
@@ -1632,9 +1752,13 @@
         "LITE",
         "ACTIVATE"
       ],
-      "activation": "MISSILE",
-      "recharge_base": 2,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "MISSILE",
+        "recharge": {
+          "base": 2,
+          "dice": 0
+        }
+      },
       "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency."
     },
     {
@@ -1657,9 +1781,13 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": "FIRE1",
-      "recharge_base": 8,
-      "recharge_dice": 8,
+      "activation": {
+        "id": "FIRE1",
+        "recharge": {
+          "base": 8,
+          "dice": 8
+        }
+      },
       "description": "A set of gauntlets that smoulder with an unnatural heat."
     },
     {
@@ -1682,9 +1810,13 @@
         "SLOW_DIGEST",
         "ACTIVATE"
       ],
-      "activation": "FROST1",
-      "recharge_base": 7,
-      "recharge_dice": 7,
+      "activation": {
+        "id": "FROST1",
+        "recharge": {
+          "base": 7,
+          "dice": 7
+        }
+      },
       "description": "A set of handgear, freezing with unnatural cold."
     },
     {
@@ -1707,9 +1839,13 @@
         "LITE",
         "ACTIVATE"
       ],
-      "activation": "LIGHTNING_BOLT",
-      "recharge_base": 6,
-      "recharge_dice": 6,
+      "activation": {
+        "id": "LIGHTNING_BOLT",
+        "recharge": {
+          "base": 6,
+          "dice": 6
+        }
+      },
       "description": "A set of handgear with sparks that crackle across its knuckleguards."
     },
     {
@@ -1732,9 +1868,13 @@
         "FEATHER",
         "ACTIVATE"
       ],
-      "activation": "ACID1",
-      "recharge_base": 5,
-      "recharge_dice": 5,
+      "activation": {
+        "id": "ACID1",
+        "recharge": {
+          "base": 5,
+          "dice": 5
+        }
+      },
       "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished."
     },
     {
@@ -1790,9 +1930,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "ARROW",
-      "recharge_base": 30,
-      "recharge_dice": 30,
+      "activation": {
+        "id": "ARROW",
+        "recharge": {
+          "base": 30,
+          "dice": 30
+        }
+      },
       "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever."
     },
     {
@@ -1816,9 +1960,13 @@
         "RES_NEXUS",
         "ACTIVATE"
       ],
-      "activation": "HASTE1",
-      "recharge_base": 200,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "HASTE1",
+        "recharge": {
+          "base": 200,
+          "dice": 0
+        }
+      },
       "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\""
     },
     {
@@ -1846,9 +1994,13 @@
         "RES_CONFU",
         "SUST_CON"
       ],
-      "activation": "REM_FEAR_POIS",
-      "recharge_base": 5,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "REM_FEAR_POIS",
+        "recharge": {
+          "base": 5,
+          "dice": 0
+        }
+      },
       "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility."
     },
     {
@@ -1900,9 +2052,13 @@
         "HIDE_TYPE",
         "ACTIVATE"
       ],
-      "activation": "PHASE",
-      "recharge_base": 20,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "PHASE",
+        "recharge": {
+          "base": 20,
+          "dice": 0
+        }
+      },
       "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward."
     },
     {
@@ -1985,9 +2141,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FIRE1",
-      "recharge_base": 8,
-      "recharge_dice": 8,
+      "activation": {
+        "id": "FIRE1",
+        "recharge": {
+          "base": 8,
+          "dice": 8
+        }
+      },
       "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt."
     },
     {
@@ -2011,9 +2171,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FROST1",
-      "recharge_base": 7,
-      "recharge_dice": 7,
+      "activation": {
+        "id": "FROST1",
+        "recharge": {
+          "base": 7,
+          "dice": 7
+        }
+      },
       "description": "From the hilt of this dagger springs not so much a blade as an icicle."
     },
     {
@@ -2037,9 +2201,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "LIGHTNING_BOLT",
-      "recharge_base": 6,
-      "recharge_dice": 6,
+      "activation": {
+        "id": "LIGHTNING_BOLT",
+        "recharge": {
+          "base": 6,
+          "dice": 6
+        }
+      },
       "description": "In this dagger is bound the very force of the lightning."
     },
     {
@@ -2065,9 +2233,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "STINKING_CLOUD",
-      "recharge_base": 4,
-      "recharge_dice": 4,
+      "activation": {
+        "id": "STINKING_CLOUD",
+        "recharge": {
+          "base": 4,
+          "dice": 4
+        }
+      },
       "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune."
     },
     {
@@ -2096,9 +2268,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FROST2",
-      "recharge_base": 5,
-      "recharge_dice": 5,
+      "activation": {
+        "id": "FROST2",
+        "recharge": {
+          "base": 5,
+          "dice": 5
+        }
+      },
       "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind."
     },
     {
@@ -2158,9 +2334,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FROST4",
-      "recharge_base": 50,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FROST4",
+        "recharge": {
+          "base": 50,
+          "dice": 0
+        }
+      },
       "description": "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay."
     },
     {
@@ -2470,9 +2650,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FROST3",
-      "recharge_base": 40,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FROST3",
+        "recharge": {
+          "base": 40,
+          "dice": 0
+        }
+      },
       "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again."
     },
     {
@@ -2510,9 +2694,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FIRE2",
-      "recharge_base": 40,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FIRE2",
+        "recharge": {
+          "base": 40,
+          "dice": 0
+        }
+      },
       "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it."
     },
     {
@@ -2807,9 +2995,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "DRAIN_LIFE2",
-      "recharge_base": 40,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "DRAIN_LIFE2",
+        "recharge": {
+          "base": 40,
+          "dice": 0
+        }
+      },
       "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed."
     },
     {
@@ -2925,9 +3117,13 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": "FROST3",
-      "recharge_base": 35,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FROST3",
+        "recharge": {
+          "base": 35,
+          "dice": 0
+        }
+      },
       "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain."
     },
     {
@@ -2962,9 +3158,13 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": "STONE_TO_MUD",
-      "recharge_base": 5,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "STONE_TO_MUD",
+        "recharge": {
+          "base": 5,
+          "dice": 0
+        }
+      },
       "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease."
     },
     {
@@ -3099,9 +3299,13 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": "MASS_BANISHMENT",
-      "recharge_base": 1000,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "MASS_BANISHMENT",
+        "recharge": {
+          "base": 1000,
+          "dice": 0
+        }
+      },
       "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind."
     },
     {
@@ -3164,9 +3368,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "CURE_WOUNDS",
-      "recharge_base": 3,
-      "recharge_dice": 3,
+      "activation": {
+        "id": "CURE_WOUNDS",
+        "recharge": {
+          "base": 3,
+          "dice": 3
+        }
+      },
       "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor."
     },
     {
@@ -3285,9 +3493,13 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": "TELE_AWAY",
-      "recharge_base": 50,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "TELE_AWAY",
+        "recharge": {
+          "base": 50,
+          "dice": 0
+        }
+      },
       "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water."
     },
     {
@@ -3320,9 +3532,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "WORD_OF_RECALL",
-      "recharge_base": 200,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "WORD_OF_RECALL",
+        "recharge": {
+          "base": 200,
+          "dice": 0
+        }
+      },
       "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning."
     },
     {
@@ -3355,9 +3571,13 @@
         "SLAY_TROLL",
         "SHOW_MODS"
       ],
-      "activation": "BERSERKER",
-      "recharge_base": 80,
-      "recharge_dice": 80,
+      "activation": {
+        "id": "BERSERKER",
+        "recharge": {
+          "base": 80,
+          "dice": 80
+        }
+      },
       "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog's troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\""
     },
     {
@@ -3416,9 +3636,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "CONFUSE",
-      "recharge_base": 15,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "CONFUSE",
+        "recharge": {
+          "base": 15,
+          "dice": 0
+        }
+      },
       "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down."
     },
     {
@@ -3502,9 +3726,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FIRE2",
-      "recharge_base": 20,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FIRE2",
+        "recharge": {
+          "base": 20,
+          "dice": 0
+        }
+      },
       "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath."
     },
     {
@@ -3530,9 +3758,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "HASTE1",
-      "recharge_base": 100,
-      "recharge_dice": 100,
+      "activation": {
+        "id": "HASTE1",
+        "recharge": {
+          "base": 100,
+          "dice": 100
+        }
+      },
       "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows."
     },
     {
@@ -3622,9 +3854,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "IDENTIFY",
-      "recharge_base": 10,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "IDENTIFY",
+        "recharge": {
+          "base": 10,
+          "dice": 0
+        }
+      },
       "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things."
     },
     {
@@ -3659,9 +3895,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "PROBE",
-      "recharge_base": 20,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "PROBE",
+        "recharge": {
+          "base": 20,
+          "dice": 0
+        }
+      },
       "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals."
     },
     {
@@ -3726,8 +3966,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "DRAIN_LIFE1",
-      "recharge_base": 40,
+      "activation": {
+        "id": "DRAIN_LIFE1",
+        "recharge": {
+          "base": 40,
+          "dice": 0
+        }
+      },
       "recharge_dice": 0,
       "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically."
     },
@@ -3766,9 +4011,13 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": "FIRE3",
-      "recharge_base": 15,
-      "recharge_dice": 0,
+      "activation": {
+        "id": "FIRE3",
+        "recharge": {
+          "base": 15,
+          "dice": 0
+        }
+      },
       "description": "A great crackling Balrog's whip of flame, this weapon could bring even Ungoliant to heel."
     },
     {
@@ -3845,9 +4094,13 @@
         "SHOW_MODS"
       ],
       "description": "A crossbow that grants fiery speed to he who finds it, and from which shoot bolts that blaze with flame unquenchable.",
-      "activation": "FIREBRAND",
-      "recharge_base": 999,
-      "recharge_dice": 0
+      "activation": {
+        "id": "FIREBRAND",
+        "recharge": {
+          "base": 999,
+          "dice": 0
+        }
+      }
     },
     {
       "serial": 127,
@@ -3878,9 +4131,13 @@
         "SHOW_MODS"
       ],
       "description": "A great brazen arbalest with arms of gleaming steel shooting quarrels with mighty power for those brave enough to risk betrayal.",
-      "activation": "ARROW",
-      "recharge_base": 20,
-      "recharge_dice": 20
+      "activation": {
+        "id": "ARROW",
+        "recharge": {
+          "base": 20,
+          "dice": 20
+        }
+      }
     },
     {
       "serial": 128,
@@ -3966,9 +4223,13 @@
         "ACTIVATE"
       ],
       "description": "A mighty Dwarven mattock, as good for hewing orc-necks as for hewing stone.  Nain, King of the Iron Hills, brought his mattock-wielding warriors to the Battle of Azanulbizar, and no Orc could withstand them, although Nain himself fell before their lord Azog.",
-      "activation": "STONE_TO_MUD",
-      "recharge_base": 2,
-      "recharge_dice": 0
+      "activation": {
+        "id": "STONE_TO_MUD",
+        "recharge": {
+          "base": 2,
+          "dice": 0
+        }
+      }
     },
     {
       "serial": 131,
@@ -4032,9 +4293,13 @@
         "ACTIVATE"
       ],
       "description": "The weapon of a mighty dwarven priest, whose shade is rumoured to still haunt the halls of Angband itself.",
-      "activation": "DISP_EVIL",
-      "recharge_base": 100,
-      "recharge_dice": 100
+      "activation": {
+        "id": "DISP_EVIL",
+        "recharge": {
+          "base": 100,
+          "dice": 100
+        }
+      }
     },
     {
       "serial": 133,
@@ -4087,9 +4352,13 @@
         "AGGRAVATE"
       ],
       "description": "The painted shield of a chieftain of Far Harad, gaudy and barbaric. Its wielder will fear nothing and fight with unnatural strength, but also draw attention to himself.",
-      "activation": "BERSERKER",
-      "recharge_base": 50,
-      "recharge_dice": 0
+      "activation": {
+        "id": "BERSERKER",
+        "recharge": {
+          "base": 50,
+          "dice": 0
+        }
+      }
     },
     {
       "serial": 135,
