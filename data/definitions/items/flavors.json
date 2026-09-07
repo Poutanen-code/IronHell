@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "flavors": [
     {"id": 1, "tval": 45, "sval": 37, "character": "=", "color": "y", "text": "Plain Gold"},
     {"id": 2, "tval": 45, "character": "=", "color": "g", "text": "Alexandrite"},

@@ -21,7 +21,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 1,
+            "target_mode": "self"
           }
         }
       ]
@@ -46,7 +48,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 5,
+            "target_mode": "self"
           }
         }
       ]
@@ -71,7 +75,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 5,
+            "target_mode": "self"
           }
         }
       ]

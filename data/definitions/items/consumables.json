@@ -765,7 +765,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 30,
+            "target_mode": "self"
           }
         }
       ]
@@ -789,7 +791,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 10,
+            "target_mode": "self"
           }
         }
       ]
@@ -813,7 +817,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 10,
+            "target_mode": "self"
           }
         }
       ]
@@ -842,7 +848,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 5,
+            "target_mode": "self"
           }
         }
       ]
@@ -900,7 +908,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 50,
+            "target_mode": "self"
           }
         }
       ]
@@ -924,7 +934,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 5,
+            "target_mode": "self"
           }
         }
       ]
@@ -948,7 +960,9 @@
           "action_id": "ModifyResourceMeter",
           "parameters": {
             "meter": "food",
-            "mode": "set_near_max"
+            "mode": "add",
+            "amount": 5,
+            "target_mode": "self"
           }
         }
       ]

@@ -9,7 +9,7 @@
         {
           "action_id": "LightArea",
           "parameters": {
-            "radius": 3,
+            "radius": 4,
             "light_style": "illumination",
             "damage_light_sensitive": {
               "kind": "dice",
