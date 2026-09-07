@@ -2,6 +2,8 @@
   "artifacts": [
     {
       "serial": 1,
+      "baseItemId": "phial",
+      "id": "the_phial_of_galadriel",
       "name": "The Phial of Galadriel",
       "tval": 39,
       "sval": 4,
@@ -30,6 +32,8 @@
     },
     {
       "serial": 2,
+      "baseItemId": "star",
+      "id": "the_star_of_elendil",
       "name": "The Star of Elendil",
       "tval": 39,
       "sval": 5,
@@ -59,6 +63,8 @@
     },
     {
       "serial": 3,
+      "baseItemId": "stone",
+      "id": "the_arkenstone_of_thrain",
       "name": "The Arkenstone of Thrain",
       "tval": 39,
       "sval": 6,
@@ -91,6 +97,8 @@
     },
     {
       "serial": 4,
+      "baseItemId": "amulet",
+      "id": "the_amulet_of_carlammas",
       "name": "The Amulet of Carlammas",
       "tval": 40,
       "sval": 10,
@@ -122,6 +130,8 @@
     },
     {
       "serial": 5,
+      "baseItemId": "amulet",
+      "id": "the_amulet_of_ingwe",
       "name": "The Amulet of Ingwe",
       "tval": 40,
       "sval": 11,
@@ -160,6 +170,8 @@
     },
     {
       "serial": 6,
+      "baseItemId": "amulet",
+      "id": "the_necklace_of_the_dwarves",  
       "name": "The Necklace of the Dwarves",
       "tval": 40,
       "sval": 12,
@@ -189,6 +201,8 @@
     },
     {
       "serial": 7,
+      "baseItemId": "orb",
+      "id": "the_palantir_of_westernesse",
       "name": "The Palantir of Westernesse",
       "tval": 39,
       "sval": 7,
@@ -228,6 +242,8 @@
     },
     {
       "serial": 8,
+      "baseItemId": "ring",
+      "id": "the_ring_of_barahir",
       "name": "The Ring of Barahir",
       "tval": 45,
       "sval": 32,
@@ -258,6 +274,8 @@
     },
     {
       "serial": 9,
+      "baseItemId": "ring",
+      "id": "the_ring_of_tulkas",
       "name": "The Ring of Tulkas",
       "tval": 45,
       "sval": 33,
@@ -291,6 +309,8 @@
     },
     {
       "serial": 10,
+      "baseItemId": "ring",
+      "id": "the_ring_of_power_narya",
       "name": "The Ring of Power 'Narya'",
       "tval": 45,
       "sval": 34,
@@ -339,6 +359,8 @@
     },
     {
       "serial": 11,
+      "baseItemId": "ring",
+      "id": "the_ring_of_power_nenya",
       "name": "The Ring of Power 'Nenya'",
       "tval": 45,
       "sval": 35,
@@ -387,6 +409,8 @@
     },
     {
       "serial": 12,
+      "baseItemId": "ring",
+      "id": "the_ring_of_power_vilya",
       "name": "The Ring of Power 'Vilya'",
       "tval": 45,
       "sval": 36,
@@ -436,6 +460,8 @@
     },
     {
       "serial": 13,
+      "baseItemId": "ring",
+      "id": "the_ring_of_power_one_ring",
       "name": "The Ring of Power 'The One Ring'",
       "tval": 45,
       "sval": 37,
@@ -495,6 +521,8 @@
     },
     {
       "serial": 14,
+      "baseItemId": "ring",
+      "id": "the_elfstone_of_elrond",
       "name": "The Elfstone 'Elessar'",
       "tval": 40,
       "sval": 16,
@@ -531,6 +559,8 @@
     },
     {
       "serial": 15,
+      "baseItemId": "jewel",
+      "id": "the_jewel_of_evenstar",
       "name": "The Jewel 'Evenstar'",
       "tval": 40,
       "sval": 17,
@@ -565,6 +595,8 @@
     },
     {
       "serial": 16,
+      "baseItemId": "multi_hued_dragon_scale_mail",
+      "id": "the_multi-hued_dragon_scale_mail_razorback",
       "name": "The Multi-Hued Dragon Scale Mail 'Razorback'",
       "tval": 38,
       "sval": 6,
@@ -604,6 +636,8 @@
     },
     {
       "serial": 17,
+      "baseItemId": "power_dragon_scale_mail",
+      "id": "the_power_dragon_scale_mail_bladeturner",
       "name": "The Power Dragon Scale Mail 'Bladeturner'",
       "tval": 38,
       "sval": 30,
@@ -649,6 +683,8 @@
     },
     {
       "serial": 18,
+      "baseItemId": "balance_dragon_scale_mail",
+      "id": "the_balance_dragon_scale_mail_mediator",
       "name": "The Balance Dragon Scale Mail 'Mediator'",
       "tval": 38,
       "sval": 20,
@@ -686,6 +722,8 @@
     },
     {
       "serial": 19,
+      "baseItemId": "adamantite_plate_mail",
+      "id": "the_adamantite_plate_mail_soulkeeper",
       "name": "The Adamantite Plate Mail 'Soulkeeper'",
       "tval": 37,
       "sval": 30,
@@ -724,6 +762,8 @@
     },
     {
       "serial": 20,
+      "baseItemId": "full_plate_armor",
+      "id": "the_full_plate_armor_of_isildur",
       "name": "The Full Plate Armor of Isildur",
       "tval": 37,
       "sval": 15,
@@ -751,6 +791,8 @@
     },
     {
       "serial": 21,
+      "baseItemId": "metal_brigandine_armor",
+      "id": "the_metal_brigandine_armor_of_the_rohirrim",
       "name": "The Metal Brigandine Armor of the Rohirrim",
       "tval": 37,
       "sval": 9,
@@ -780,6 +822,8 @@
     },
     {
       "serial": 22,
+      "baseItemId": "mithril_chain_mail",
+      "id": "the_mithril_chain_mail_belegennon",
       "name": "The Mithril Chain Mail 'Belegennon'",
       "tval": 37,
       "sval": 20,
@@ -814,6 +858,8 @@
     },
     {
       "serial": 23,
+      "baseItemId": "mithril_plate_mail",
+      "id": "the_mithril_plate_mail_of_celeborn",
       "name": "The Mithril Plate Mail of Celeborn",
       "tval": 37,
       "sval": 25,
@@ -850,6 +896,8 @@
     },
     {
       "serial": 24,
+      "baseItemId": "chain_mail",
+      "id": "the_chain_mail_of_arvedui",
       "name": "The Chain Mail of Arvedui",
       "tval": 37,
       "sval": 4,
@@ -878,6 +926,8 @@
     },
     {
       "serial": 25,
+      "baseItemId": "augmented_chain_mail",
+      "id": "the_augmented_chain_mail_of_caspanion",
       "name": "The Augmented Chain Mail of Caspanion",
       "tval": 37,
       "sval": 6,
@@ -912,6 +962,8 @@
     },
     {
       "serial": 26,
+      "baseItemId": "hard_leather_armor",
+      "id": "the_hard_leather_armor_of_himring",
       "name": "The Hard Leather Armor of Himring",
       "tval": 36,
       "sval": 6,
@@ -942,6 +994,8 @@
     },
     {
       "serial": 27,
+      "baseItemId": "soft_leather_armor",
+      "id": "the_soft_leather_armor_of_hithlomir",
       "name": "The Soft Leather Armor 'Hithlomir'",
       "tval": 36,
       "sval": 4,
@@ -968,6 +1022,8 @@
     },
     {
       "serial": 28,
+      "baseItemId": "leather_scale_mail",
+      "id": "the_leather_scale_mail_thalkettoth",
       "name": "The Leather Scale Mail 'Thalkettoth'",
       "tval": 36,
       "sval": 11,
@@ -992,6 +1048,8 @@
     },
     {
       "serial": 29,
+      "baseItemId": "large_metal_shield",
+      "id": "the_shield_of_deflection_of_gil-galad",
       "name": "The Shield of Deflection of Gil-galad",
       "tval": 34,
       "sval": 10,
@@ -1030,6 +1088,8 @@
     },
     {
       "serial": 30,
+      "baseItemId": "small_metal_shield",
+      "id": "the_small_metal_shield_of_thorin",
       "name": "The Small Metal Shield of Thorin",
       "tval": 34,
       "sval": 3,
@@ -1057,6 +1117,8 @@
     },
     {
       "serial": 31,
+      "baseItemId": "large_leather_shield",
+      "id": "the_large_leather_shield_of_celegorm",
       "name": "The Large Leather Shield of Celegorm",
       "tval": 34,
       "sval": 4,
@@ -1082,6 +1144,8 @@
     },
     {
       "serial": 32,
+      "baseItemId": "large_metal_shield",
+      "id": "the_large_metal_shield_of_anarion",
       "name": "The Large Metal Shield of Anarion",
       "tval": 34,
       "sval": 5,
@@ -1111,6 +1175,8 @@
     },
     {
       "serial": 33,
+      "baseItemId": "metal_cap",
+      "id": "the_metal_cap_of_celebrimbor",
       "name": "The Metal Cap of Celebrimbor",
       "tval": 32,
       "sval": 3,
@@ -1138,6 +1204,8 @@
     },
     {
       "serial": 34,
+      "baseItemId": "massive_iron_crown",
+      "id": "the_massive_iron_crown_of_morgoth",
       "name": "The Massive Iron Crown of Morgoth",
       "tval": 33,
       "sval": 50,
@@ -1183,6 +1251,8 @@
     },
     {
       "serial": 35,
+      "baseItemId": "iron_crown",
+      "id": "the_iron_crown_of_beruthiel",
       "name": "The Iron Crown of Beruthiel",
       "tval": 33,
       "sval": 10,
@@ -1211,6 +1281,8 @@
     },
     {
       "serial": 36,
+      "baseItemId": "hard_leather_cap",
+      "id": "the_hard_leather_cap_of_thranduil",
       "name": "The Hard Leather Cap of Thranduil",
       "tval": 32,
       "sval": 2,
@@ -1235,6 +1307,8 @@
     },
     {
       "serial": 37,
+      "baseItemId": "metal_cap",
+      "id": "the_metal_cap_of_thengel",
       "name": "The Metal Cap of Thengel",
       "tval": 32,
       "sval": 3,
@@ -1258,6 +1332,8 @@
     },
     {
       "serial": 38,
+      "baseItemId": "steel_helm",
+      "id": "the_steel_helm_of_hammerhand", 
       "name": "The Steel Helm of Hammerhand",
       "tval": 32,
       "sval": 6,
@@ -1289,6 +1365,8 @@
     },
     {
       "serial": 39,
+      "baseItemId": "iron_helm",
+      "id": "the_iron_helm_of_dor-lomin",
       "name": "The Iron Helm of Dor-Lomin",
       "tval": 32,
       "sval": 5,
@@ -1320,6 +1398,8 @@
     },
     {
       "serial": 40,
+      "baseItemId": "iron_helm",
+      "id": "the_iron_helm_holhenneth",
       "name": "The Iron Helm 'Holhenneth'",
       "tval": 32,
       "sval": 5,
@@ -1354,6 +1434,8 @@
     },
     {
       "serial": 41,
+      "baseItemId": "iron_helm",
+      "id": "the_iron_helm_of_gorlim",
       "name": "The Iron Helm of Gorlim",
       "tval": 32,
       "sval": 5,
@@ -1383,6 +1465,8 @@
     },
     {
       "serial": 42,
+      "baseItemId": "golden_crown",
+      "id": "the_golden_crown_of_gondor",
       "name": "The Golden Crown of Gondor",
       "tval": 33,
       "sval": 11,
@@ -1425,6 +1509,8 @@
     },
     {
       "serial": 43,
+      "baseItemId": "jewel_encrusted_crown",
+      "id": "the_jewel_encrusted_crown_of_numenor",
       "name": "The Jewel Encrusted Crown of Numenor",
       "tval": 33,
       "sval": 12,
@@ -1459,6 +1545,8 @@
     },
     {
       "serial": 44,
+      "baseItemId": "cloak",
+      "id": "the_cloak_colluin",
       "name": "The Cloak 'Colluin'",
       "tval": 35,
       "sval": 1,
@@ -1491,6 +1579,8 @@
     },
     {
       "serial": 45,
+      "baseItemId": "cloak",
+      "id": "the_cloak_holcolleth",
       "name": "The Cloak 'Holcolleth'",
       "tval": 35,
       "sval": 1,
@@ -1524,6 +1614,8 @@
     },
     {
       "serial": 46,
+      "baseItemId": "cloak",
+      "id": "the_cloak_of_thingol",
       "name": "The Cloak of Thingol",
       "tval": 35,
       "sval": 1,
@@ -1558,6 +1650,8 @@
     },
     {
       "serial": 47,
+      "baseItemId": "cloak",
+      "id": "the_cloak_of_thorongil",
       "name": "The Cloak of Thorongil",
       "tval": 35,
       "sval": 1,
@@ -1581,6 +1675,8 @@
     },
     {
       "serial": 48,
+      "baseItemId": "cloak",
+      "id": "the_cloak_colannon",
       "name": "The Cloak 'Colannon'",
       "tval": 35,
       "sval": 1,
@@ -1612,6 +1708,8 @@
     },
     {
       "serial": 49,
+      "baseItemId": "shadow_cloak",
+      "id": "the_shadow_cloak_of_luthien",
       "name": "The Shadow Cloak of Luthien",
       "tval": 35,
       "sval": 6,
@@ -1648,7 +1746,9 @@
     },
     {
       "serial": 50,
-      "name": "The Long Sword 'Narsil'",
+      "baseItemId": "shadow_cloak",
+      "id": "the_shadow_cloak_of_tuor",
+      "name": "The Shadow Cloak of Tuor",
       "tval": 35,
       "sval": 6,
       "pval": 4,
@@ -1674,6 +1774,8 @@
     },
     {
       "serial": 51,
+      "baseItemId": "gauntlets",
+      "id": "the_gauntlets_of_eol",
       "name": "The Gauntlets of Eol",
       "tval": 31,
       "sval": 2,
@@ -1708,6 +1810,8 @@
     },
     {
       "serial": 52,
+      "baseItemId": "leather_gloves",
+      "id": "the_set_of_leather_gloves_cambeleg",
       "name": "The Set of Leather Gloves 'Cambeleg'",
       "tval": 31,
       "sval": 1,
@@ -1732,6 +1836,8 @@
     },
     {
       "serial": 53,
+      "baseItemId": "leather_gloves",
+      "id": "the_set_of_leather_gloves_cammithrim",
       "name": "The Set of Leather Gloves 'Cammithrim'",
       "tval": 31,
       "sval": 1,
@@ -1763,6 +1869,8 @@
     },
     {
       "serial": 54,
+      "baseItemId": "gauntlets",
+      "id": "the_set_of_gauntlets_paurhach",
       "name": "The Set of Gauntlets 'Paurhach'",
       "tval": 31,
       "sval": 2,
@@ -1792,6 +1900,8 @@
     },
     {
       "serial": 55,
+      "baseItemId": "gauntlets",
+      "id": "the_set_of_gauntlets_paurnimmen",
       "name": "The Set of Gauntlets 'Paurnimmen'",
       "tval": 31,
       "sval": 2,
@@ -1821,6 +1931,8 @@
     },
     {
       "serial": 56,
+      "baseItemId": "gauntlets",
+      "id": "the_set_of_gauntlets_pauraegen",
       "name": "The Set of Gauntlets 'Pauraegen'",
       "tval": 31,
       "sval": 2,
@@ -1850,6 +1962,8 @@
     },
     {
       "serial": 57,
+      "baseItemId": "gauntlets",
+      "id": "the_set_of_gauntlets_paurnen",
       "name": "The Set of Gauntlets 'Paurnen'",
       "tval": 31,
       "sval": 2,
@@ -1879,6 +1993,8 @@
     },
     {
       "serial": 58,
+      "baseItemId": "gauntlets",
+      "id": "the_set_of_gauntlets_camlost",
       "name": "The Set of Gauntlets 'Camlost'",
       "tval": 31,
       "sval": 2,
@@ -1909,6 +2025,8 @@
     },
     {
       "serial": 59,
+      "baseItemId": "set_of_cesti",
+      "id": "the_set_of_cesti_of_fingolfin",
       "name": "The Set of Cesti of Fingolfin",
       "tval": 31,
       "sval": 5,
@@ -1941,7 +2059,9 @@
     },
     {
       "serial": 60,
-      "name": "The Spear of Gil-galad",
+      "baseItemId": "pair_of_hard_leather_boots",
+      "id": "the_pair_of_hard_leather_boots_of_feanor",
+      "name": "The Pair of Hard Leather Boots of Feanor",
       "tval": 30,
       "sval": 3,
       "pval": 15,
@@ -1971,6 +2091,8 @@
     },
     {
       "serial": 61,
+      "baseItemId": "pair_of_soft_leather_boots",
+      "id": "the_pair_of_soft_leather_boots_dal-i-thalion",
       "name": "The Pair of Soft Leather Boots 'Dal-i-thalion'",
       "tval": 30,
       "sval": 2,
@@ -2005,6 +2127,8 @@
     },
     {
       "serial": 62,
+      "baseItemId": "pair_of_metal_shod_boots",
+      "id": "the_pair_of_metal_shod_boots_of_thror",
       "name": "The Pair of Metal Shod Boots of Thror",
       "tval": 30,
       "sval": 6,
@@ -2029,6 +2153,8 @@
     },
     {
       "serial": 63,
+      "baseItemId": "pair_of_soft_leather_boots",
+      "id": "the_pair_of_soft_leather_boots_of_wormtongue",
       "name": "The Pair of Soft Leather Boots of Wormtongue",
       "tval": 30,
       "sval": 2,
@@ -2063,6 +2189,8 @@
     },
     {
       "serial": 64,
+      "baseItemId": "main_gauche",
+      "id": "main_gauche_of_maedhros",
       "name": "Main Gauche of Maedhros",
       "tval": 23,
       "sval": 5,
@@ -2091,6 +2219,8 @@
     },
     {
       "serial": 65,
+      "baseItemId": "dagger",
+      "id": "dagger_angrist",
       "name": "Dagger 'Angrist'",
       "tval": 23,
       "sval": 4,
@@ -2122,6 +2252,8 @@
     },
     {
       "serial": 66,
+      "baseItemId": "dagger",
+      "id": "dagger_narthanc",
       "name": "Dagger 'Narthanc'",
       "tval": 23,
       "sval": 4,
@@ -2152,6 +2284,8 @@
     },
     {
       "serial": 67,
+      "baseItemId": "dagger",
+      "id": "dagger_nimthanc",
       "name": "Dagger 'Nimthanc'",
       "tval": 23,
       "sval": 4,
@@ -2182,6 +2316,8 @@
     },
     {
       "serial": 68,
+      "baseItemId": "dagger",
+      "id": "dagger_dethanc",
       "name": "Dagger 'Dethanc'",
       "tval": 23,
       "sval": 4,
@@ -2212,6 +2348,8 @@
     },
     {
       "serial": 69,
+      "baseItemId": "dagger",
+      "id": "dagger_of_rilia",
       "name": "Dagger of Rilia",
       "tval": 23,
       "sval": 4,
@@ -2244,6 +2382,8 @@
     },
     {
       "serial": 70,
+      "baseItemId": "dagger",
+      "id": "dagger_belangil",
       "name": "Dagger 'Belangil'",
       "tval": 23,
       "sval": 4,
@@ -2279,6 +2419,8 @@
     },
     {
       "serial": 71,
+      "baseItemId": "bastard_sword",
+      "id": "bastard_sword_calris",
       "name": "Bastard Sword 'Calris'",
       "tval": 23,
       "sval": 21,
@@ -2309,6 +2451,8 @@
     },
     {
       "serial": 72,
+      "baseItemId": "broad_sword",
+      "id": "broad_sword_arunruth",
       "name": "Broad Sword 'Arunruth'",
       "tval": 23,
       "sval": 16,
@@ -2345,6 +2489,8 @@
     },
     {
       "serial": 73,
+      "baseItemId": "broad_sword",
+      "id": "broad_sword_glamdring",
       "name": "Broad Sword 'Glamdring'",
       "tval": 23,
       "sval": 16,
@@ -2376,6 +2522,8 @@
     },
     {
       "serial": 74,
+      "baseItemId": "broad_sword",
+      "id": "broad_sword_aeglin",
       "name": "Broad Sword 'Aeglin'",
       "tval": 23,
       "sval": 16,
@@ -2407,6 +2555,8 @@
     },
     {
       "serial": 75,
+      "baseItemId": "broad_sword",
+      "id": "broad_sword_orcrist",
       "name": "Broad Sword 'Orcrist'",
       "tval": 23,
       "sval": 16,
@@ -2438,6 +2588,8 @@
     },
     {
       "serial": 76,
+      "baseItemId": "two_handed_sword",
+      "id": "two_handed_sword_gurthang",
       "name": "Two-Handed Sword 'Gurthang'",
       "tval": 23,
       "sval": 25,
@@ -2468,6 +2620,8 @@
     },
     {
       "serial": 77,
+      "baseItemId": "two_handed_sword",
+      "id": "two_handed_sword_zarcuthra",
       "name": "Two-Handed Sword 'Zarcuthra'",
       "tval": 23,
       "sval": 25,
@@ -2506,6 +2660,8 @@
     },
     {
       "serial": 78,
+      "baseItemId": "two_handed_sword",
+      "id": "two_handed_sword_mormegil",
       "name": "Two-Handed Sword 'Mormegil'",
       "tval": 23,
       "sval": 25,
@@ -2537,6 +2693,8 @@
     },
     {
       "serial": 79,
+      "baseItemId": "cutlass",
+      "id": "cutlass_gondricam",
       "name": "Cutlass 'Gondricam'",
       "tval": 23,
       "sval": 12,
@@ -2567,6 +2725,8 @@
     },
     {
       "serial": 80,
+      "baseItemId": "executioners_sword",
+      "id": "executioners_sword_crisdurian",
       "name": "Executioner's Sword 'Crisdurian'",
       "tval": 23,
       "sval": 28,
@@ -2594,6 +2754,8 @@
     },
     {
       "serial": 81,
+      "baseItemId": "katana",
+      "id": "katana_aglarang",
       "name": "Katana 'Aglarang'",
       "tval": 23,
       "sval": 20,
@@ -2618,6 +2780,8 @@
     },
     {
       "serial": 82,
+      "baseItemId": "long_sword",
+      "id": "long_sword_ringil",
       "name": "Long Sword 'Ringil'",
       "tval": 23,
       "sval": 17,
@@ -2661,6 +2825,8 @@
     },
     {
       "serial": 83,
+      "baseItemId": "long_sword",
+      "id": "long_sword_anduril",
       "name": "Long Sword 'Anduril'",
       "tval": 23,
       "sval": 17,
@@ -2705,6 +2871,8 @@
     },
     {
       "serial": 84,
+      "baseItemId": "long_sword",
+      "id": "long_sword_anguirel",
       "name": "Long Sword 'Anguirel'",
       "tval": 23,
       "sval": 17,
@@ -2739,6 +2907,8 @@
     },
     {
       "serial": 85,
+      "baseItemId": "long_sword",
+      "id": "long_sword_elvagil",
       "name": "Long Sword 'Elvagil'",
       "tval": 23,
       "sval": 17,
@@ -2767,6 +2937,8 @@
     },
     {
       "serial": 86,
+      "baseItemId": "rapier",
+      "id": "rapier_forasgil",
       "name": "Rapier 'Forasgil'",
       "tval": 23,
       "sval": 7,
@@ -2792,6 +2964,8 @@
     },
     {
       "serial": 87,
+      "baseItemId": "sabre",
+      "id": "sabre_careth_asdriag",
       "name": "Sabre 'Careth Asdriag'",
       "tval": 23,
       "sval": 11,
@@ -2819,6 +2993,8 @@
     },
     {
       "serial": 88,
+      "baseItemId": "small_sword",
+      "id": "small_sword_sting",
       "name": "Small Sword 'Sting'",
       "tval": 23,
       "sval": 8,
@@ -2854,6 +3030,8 @@
     },
     {
       "serial": 89,
+      "baseItemId": "scimitar",
+      "id": "scimitar_haradekket",
       "name": "Scimitar 'Haradekket'",
       "tval": 23,
       "sval": 18,
@@ -2881,6 +3059,8 @@
     },
     {
       "serial": 90,
+      "baseItemId": "short_sword",
+      "id": "short_sword_dagmor",
       "name": "Short Sword 'Dagmor'",
       "tval": 23,
       "sval": 10,
@@ -2907,6 +3087,8 @@
     },
     {
       "serial": 91,
+      "baseItemId": "blade_of_chaos",
+      "id": "blade_of_chaos_doomcaller",
       "name": "Blade of Chaos 'Doomcaller'",
       "tval": 23,
       "sval": 30,
@@ -2942,6 +3124,8 @@
     },
     {
       "serial": 92,
+      "baseItemId": "spear",
+      "id": "spear_of_melkor",
       "name": "Spear of Melkor",
       "tval": 22,
       "sval": 2,
@@ -2972,6 +3156,8 @@
     },
     {
       "serial": 93,
+      "baseItemId": "beaked_axe",
+      "id": "beaked_axe_of_theoden",
       "name": "Beaked Axe of Theoden",
       "tval": 22,
       "sval": 10,
@@ -3006,6 +3192,8 @@
     },
     {
       "serial": 94,
+      "baseItemId": "glaive",
+      "id": "glaive_of_pain",
       "name": "Glaive of Pain",
       "tval": 22,
       "sval": 13,
@@ -3027,6 +3215,8 @@
     },
     {
       "serial": 95,
+      "baseItemId": "halberd",
+      "id": "halberd_osondir",
       "name": "Halberd 'Osondir'",
       "tval": 22,
       "sval": 15,
@@ -3056,6 +3246,8 @@
     },
     {
       "serial": 96,
+      "baseItemId": "pike",
+      "id": "pike_til_i_arc",
       "name": "Pike 'Til-i-arc'",
       "tval": 22,
       "sval": 8,
@@ -3087,6 +3279,8 @@
     },
     {
       "serial": 97,
+      "baseItemId": "spear",
+      "id": "spear_aeglos",
       "name": "Spear 'Aeglos'",
       "tval": 22,
       "sval": 2,
@@ -3128,6 +3322,8 @@
     },
     {
       "serial": 98,
+      "baseItemId": "spear",
+      "id": "spear_of_orome",
       "name": "Spear of Orome",
       "tval": 22,
       "sval": 2,
@@ -3169,6 +3365,8 @@
     },
     {
       "serial": 99,
+      "baseItemId": "spear",
+      "id": "spear_nimloth",
       "name": "Spear 'Nimloth'",
       "tval": 22,
       "sval": 2,
@@ -3197,6 +3395,8 @@
     },
     {
       "serial": 100,
+      "baseItemId": "lance",
+      "id": "lance_of_eorlingas",
       "name": "Lance of Eorlingas",
       "tval": 22,
       "sval": 20,
@@ -3226,6 +3426,8 @@
     },
     {
       "serial": 101,
+      "baseItemId": "great_axe",
+      "id": "great_axe_of_durin",
       "name": "Great Axe of Durin",
       "tval": 22,
       "sval": 25,
@@ -3264,6 +3466,8 @@
     },
     {
       "serial": 102,
+      "baseItemId": "great_axe",
+      "id": "great_axe_of_eonwe",
       "name": "Great Axe of Eonwe",
       "tval": 22,
       "sval": 25,
@@ -3310,6 +3514,8 @@
     },
     {
       "serial": 103,
+      "baseItemId": "battle_axe",
+      "id": "battle_axe_of_balli_stonehand",
       "name": "Battle Axe of Balli Stonehand",
       "tval": 22,
       "sval": 22,
@@ -3346,6 +3552,8 @@
     },
     {
       "serial": 104,
+      "baseItemId": "battle_axe",
+      "id": "battle_axe_lotharang",
       "name": "Battle Axe 'Lotharang'",
       "tval": 22,
       "sval": 22,
@@ -3379,6 +3587,8 @@
     },
     {
       "serial": 105,
+      "baseItemId": "lochaber_axe",
+      "id": "lochaber_axe_mundwine",
       "name": "Lochaber Axe 'Mundwine'",
       "tval": 22,
       "sval": 28,
@@ -3406,6 +3616,8 @@
     },
     {
       "serial": 106,
+      "baseItemId": "broad_axe",
+      "id": "broad_axe_barukkheled",
       "name": "Broad Axe 'Barukkheled'",
       "tval": 22,
       "sval": 11,
@@ -3433,6 +3645,8 @@
     },
     {
       "serial": 107,
+      "baseItemId": "trident",
+      "id": "trident_of_wrath",
       "name": "Trident of Wrath",
       "tval": 22,
       "sval": 5,
@@ -3463,6 +3677,8 @@
     },
     {
       "serial": 108,
+      "baseItemId": "trident",
+      "id": "trident_of_ulmo",
       "name": "Trident of Ulmo",
       "tval": 22,
       "sval": 5,
@@ -3504,6 +3720,8 @@
     },
     {
       "serial": 109,
+      "baseItemId": "scythe",
+      "id": "scythe_avavir",
       "name": "Scythe 'Avavir'",
       "tval": 22,
       "sval": 17,
@@ -3543,6 +3761,8 @@
     },
     {
       "serial": 110,
+      "baseItemId": "beaked_axe",
+      "id": "beaked_axe_of_hurin",
       "name": "Beaked Axe of Hurin",
       "tval": 22,
       "sval": 10,
@@ -3582,6 +3802,8 @@
     },
     {
       "serial": 111,
+      "baseItemId": "mighty_hammer",
+      "id": "mighty_hammer_grond",
       "name": "Mighty Hammer 'Grond'",
       "tval": 21,
       "sval": 50,
@@ -3614,6 +3836,8 @@
     },
     {
       "serial": 112,
+      "baseItemId": "flail",
+      "id": "flail_totila",
       "name": "Flail 'Totila'",
       "tval": 21,
       "sval": 13,
@@ -3647,6 +3871,8 @@
     },
     {
       "serial": 113,
+      "baseItemId": "two_handed_flail",
+      "id": "two_handed_flail_thunderfist",
       "name": "Two-Handed Flail 'Thunderfist'",
       "tval": 21,
       "sval": 18,
@@ -3679,6 +3905,8 @@
     },
     {
       "serial": 114,
+      "baseItemId": "morning_star",
+      "id": "morning_star_bloodspike",
       "name": "Morning Star 'Bloodspike'",
       "tval": 21,
       "sval": 12,
@@ -3707,6 +3935,8 @@
     },
     {
       "serial": 115,
+      "baseItemId": "morning_star",
+      "id": "morning_star_firestar",
       "name": "Morning Star 'Firestar'",
       "tval": 21,
       "sval": 12,
@@ -3737,6 +3967,8 @@
     },
     {
       "serial": 116,
+      "baseItemId": "mace",
+      "id": "mace_taratol",
       "name": "Mace 'Taratol'",
       "tval": 21,
       "sval": 5,
@@ -3769,6 +4001,8 @@
     },
     {
       "serial": 117,
+      "baseItemId": "war_hammer",
+      "id": "war_hammer_of_aule",
       "name": "War Hammer of Aule",
       "tval": 21,
       "sval": 8,
@@ -3805,6 +4039,8 @@
     },
     {
       "serial": 118,
+      "baseItemId": "quarterstaff",
+      "id": "quarterstaff_nar_i_vagil",
       "name": "Quarterstaff 'Nar-i-vagil'",
       "tval": 21,
       "sval": 3,
@@ -3830,6 +4066,8 @@
     },
     {
       "serial": 119,
+      "baseItemId": "quarterstaff",
+      "id": "quarterstaff_eriril",
       "name": "Quarterstaff 'Eriril'",
       "tval": 21,
       "sval": 3,
@@ -3865,6 +4103,8 @@
     },
     {
       "serial": 120,
+      "baseItemId": "quarterstaff",
+      "id": "quarterstaff_of_olorin",
       "name": "Quarterstaff of Olorin",
       "tval": 21,
       "sval": 3,
@@ -3906,6 +4146,8 @@
     },
     {
       "serial": 121,
+      "baseItemId": "mace",
+      "id": "mace_of_disruption_deathwreaker",
       "name": "Mace of Disruption 'Deathwreaker'",
       "tval": 21,
       "sval": 20,
@@ -3940,6 +4182,8 @@
     },
     {
       "serial": 122,
+      "baseItemId": "lucerne_hammer",
+      "id": "lucerne_hammer_turmil",
       "name": "Lucerne Hammer 'Turmil'",
       "tval": 21,
       "sval": 10,
@@ -3978,6 +4222,8 @@
     },
     {
       "serial": 123,
+      "baseItemId": "whip",
+      "id": "whip_of_gothmog",
       "name": "Whip of Gothmog",
       "tval": 21,
       "sval": 2,
@@ -4022,7 +4268,9 @@
     },
     {
       "serial": 124,
-      "name": "The Shadow Cloak of Tuor",
+      "baseItemId": "the_long_bow",
+      "id": "the_long_bow_belthronding",
+      "name": "The Long Bow 'Belthronding'",
       "tval": 19,
       "sval": 13,
       "pval": 1,
@@ -4048,7 +4296,9 @@
     },
     {
       "serial": 125,
-      "name": "The Pair of Hard Leather Boots of Feanor",
+      "baseItemId": "the_long_bow",
+      "id": "the_long_bow_of_bard",
+      "name": "The Long Bow of Bard",
       "tval": 19,
       "sval": 13,
       "pval": 2,
@@ -4073,6 +4323,8 @@
     },
     {
       "serial": 126,
+      "baseItemId": "heavy_crossbow",
+      "id": "cubragol",
       "name": "'Cubragol'",
       "tval": 19,
       "sval": 23,
@@ -4104,6 +4356,8 @@
     },
     {
       "serial": 127,
+      "baseItemId": "heavy_crossbow",
+      "id": "the_brazen_arbalest_of_umbar",
       "name": "of Umbar",
       "tval": 19,
       "sval": 24,
@@ -4141,6 +4395,8 @@
     },
     {
       "serial": 128,
+      "baseItemId": "the_long_bow",
+      "id": "the_hunting_bow_of_amrod",
       "name": "of Amrod",
       "tval": 19,
       "sval": 12,
@@ -4167,6 +4423,8 @@
     },
     {
       "serial": 129,
+      "baseItemId": "the_long_bow",
+      "id": "the_hunting_bow_of_amras",
       "name": "of Amras",
       "tval": 19,
       "sval": 12,
@@ -4196,6 +4454,8 @@
     },
     {
       "serial": 130,
+      "baseItemId": "mattock",
+      "id": "the_mighty_mattock_of_nain",
       "name": "of Nain",
       "tval": 20,
       "sval": 7,
@@ -4233,6 +4493,8 @@
     },
     {
       "serial": 131,
+      "baseItemId": "dwarven_pick",
+      "id": "the_fine_dwarven_pick_of_erebor",
       "name": "of Erebor",
       "tval": 20,
       "sval": 6,
@@ -4265,6 +4527,8 @@
     },
     {
       "serial": 132,
+      "baseItemId": "mighty_hammer",
+      "id": "the_mighty_hammer_of_fundin_bluecloak",
       "name": "of Fundin Bluecloak",
       "tval": 21,
       "sval": 6,
@@ -4303,6 +4567,8 @@
     },
     {
       "serial": 133,
+      "baseItemId": "mighty_hammer",
+      "id": "the_mighty_hammer_of_azaghal",
       "name": "of Azaghal",
       "tval": 23,
       "sval": 5,
@@ -4326,6 +4592,8 @@
     },
     {
       "serial": 134,
+      "baseItemId": "small_metal_shield",
+      "id": "the_shield_of_the_haradrim",
       "name": "of the Haradrim",
       "tval": 34,
       "sval": 4,
@@ -4362,6 +4630,8 @@
     },
     {
       "serial": 135,
+      "baseItemId": "broken_sword",
+      "id": "narsil",
       "name": "'Narsil'",
       "tval": 23,
       "sval": 2,
@@ -4389,6 +4659,8 @@
     },
     {
       "serial": 136,
+      "baseItemId": "long_sword",
+      "id": "the_blade_of_eowyn",
       "name": "of Eowyn",
       "tval": 23,
       "sval": 21,
