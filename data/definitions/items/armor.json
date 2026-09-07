@@ -170,7 +170,7 @@
       "capability_ids": [],
       "affixes": [],
       "description": "Layered scales deflect claws and jagged blades alike.",
-      "provenance_status": "observed"
+      "provenance_status": "verified"
     },
     {
       "id": "chain_mail",
@@ -227,7 +227,7 @@
       "capability_ids": [],
       "affixes": [],
       "description": "Augmented plates stitched into heavy chain.",
-      "provenance_status": "observed"
+      "provenance_status": "verified"
     },
     {
       "id": "bar_chain_mail",
@@ -347,7 +347,7 @@
       "id": "mithril_chain_mail",
       "name": "Mithril Chain Mail",
       "type": "chest",
-      "armor_weight": "plate",
+      "armor_weight": "mail",
       "tval": 37,
       "sval": 20,
       "base_ac": 28,
@@ -782,7 +782,7 @@
       "capability_ids": ["regeneration"],
       "affixes": [],
       "description": "Set of Elven Gloves providing agility and dexterity enhancements.",
-      "provenance_status": "observed"
+      "provenance_status": "verified"
     },
     {
       "id": "set_of_cesti",
@@ -877,7 +877,7 @@
       "capability_ids": ["ignore_acid", "ignore_elec", "ignore_fire", "ignore_cold", "stealth"],
       "affixes": [],
       "description": "Pair of Witan Boots providing exceptional protection and agility.",
-      "provenance_status": "observed"
+      "provenance_status": "verified"
     },
     {
       "id": "black_dragon_scale_mail",
