@@ -700,16 +700,6 @@
         "classification": "affix",
         "affix_id": "wisdom"
       }
-    },
-    "normalization": {
-      "canonical_sources": {
-        "affixes": "data/definitions/items/item_affixes.json",
-        "capabilities": "data/definitions/capabilities.json",
-        "resistances": "data/definitions/resistances.json",
-        "statuses": "data/definitions/statuses.json",
-        "activations": "data/definitions/activations.json"
-      },
-      "notes": "Flag semantics are now catalog-referenced. Runtime behavior is unchanged."
     }
   },
   "ego_items": [
@@ -750,21 +740,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and ignores acid damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "res_acid"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to acid and ignores acid damage."
     },
     {
       "serial": 5,
@@ -803,21 +779,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to lightning and ignores lightning damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_elec",
-          "res_elec"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to lightning and ignores lightning damage."
     },
     {
       "serial": 6,
@@ -856,22 +818,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to fire and ignores fire damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to fire and ignores fire damage."
     },
     {
       "serial": 7,
@@ -910,21 +857,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to cold and ignores cold damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_cold",
-          "res_cold"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to cold and ignores cold damage."
     },
     {
       "serial": 8,
@@ -969,28 +902,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
       "serial": 9,
@@ -1036,30 +948,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
       "serial": 10,
@@ -1098,20 +987,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Cursed armor that aggravates enemies.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      "description": "Cursed armor that aggravates enemies."
     },
     {
       "serial": 11,
@@ -1157,35 +1033,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants various stat sustains, hold life, and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "hold_life",
-          "sust_chr",
-          "sust_con",
-          "sust_dex",
-          "sust_int",
-          "sust_str",
-          "sust_wis",
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants various stat sustains, hold life, and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
       "serial": 12,
@@ -1223,28 +1071,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and fire, free action, increased strength and constitution, infravision, and hides the type of armor.",
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution",
-          "infra",
-          "strength"
-        ],
-        "capability_ids": [
-          "free_act",
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "Grants resistance to acid and fire, free action, increased strength and constitution, infravision, and hides the type of armor."
     },
     {
       "serial": 16,
@@ -1277,21 +1104,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and ignores acid damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "res_acid"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to acid and ignores acid damage."
     },
     {
       "serial": 17,
@@ -1324,21 +1137,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to lightning and ignores lightning damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_elec",
-          "res_elec"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Grants resistance to lightning and ignores lightning damage."
     },
     {
       "serial": 18,
@@ -1371,22 +1170,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 19,
@@ -1419,21 +1203,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_cold",
-          "res_cold"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 20,
@@ -1472,28 +1242,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 21,
@@ -1533,30 +1282,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 22,
@@ -1596,29 +1322,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "hold_life",
-          "sust_con",
-          "sust_dex",
-          "sust_str",
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_disen"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 23,
@@ -1651,20 +1355,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 24,
@@ -1697,22 +1388,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "intelligence"
-        ],
-        "capability_ids": [
-          "sust_int"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 25,
@@ -1745,22 +1421,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "wisdom"
-        ],
-        "capability_ids": [
-          "sust_wis"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 26,
@@ -1793,22 +1454,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "charisma"
-        ],
-        "capability_ids": [
-          "sust_chr"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 27,
@@ -1849,31 +1495,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Crown that increases intelligence, sustains the intelligence stat, grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
-      "normalized_refs": {
-        "affix_ids": [
-          "intelligence"
-        ],
-        "capability_ids": [
-          "sust_int",
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Crown that increases intelligence, sustains the intelligence stat, grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
       "serial": 28,
@@ -1915,31 +1537,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Crown that increases strength, dexterity, and constitution, sustains these stats, grants free action, and ignores damage from acid, electricity, fire, and cold.",
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution",
-          "dexterity",
-          "strength"
-        ],
-        "capability_ids": [
-          "free_act",
-          "sust_con",
-          "sust_dex",
-          "sust_str",
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Crown that increases strength, dexterity, and constitution, sustains these stats, grants free action, and ignores damage from acid, electricity, fire, and cold."
     },
     {
       "serial": 29,
@@ -1979,30 +1577,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "charisma",
-          "wisdom"
-        ],
-        "capability_ids": [
-          "sust_chr",
-          "sust_wis"
-        ],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire",
-          "res_fear"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 30,
@@ -2042,24 +1617,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "search"
-        ],
-        "capability_ids": [
-          "see_invis"
-        ],
-        "resistance_ids": [
-          "res_blind"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 31,
@@ -2092,22 +1650,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "infra"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 32,
@@ -2140,22 +1683,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "light_radius"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "res_lite"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 33,
@@ -2193,20 +1721,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "telepathy"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 34,
@@ -2244,20 +1759,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "regen"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 35,
@@ -2290,20 +1792,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 36,
@@ -2337,22 +1826,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "res_confu",
-          "res_fear",
-          "res_sound"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 37,
@@ -2389,27 +1863,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "light_radius"
-        ],
-        "capability_ids": [
-          "see_invis"
-        ],
-        "resistance_ids": [
-          "ignore_acid",
-          "res_blind",
-          "res_dark",
-          "res_lite"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 38,
@@ -2450,24 +1904,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "charisma",
-          "intelligence",
-          "wisdom"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 39,
@@ -2508,24 +1945,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution",
-          "dexterity",
-          "strength"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 40,
@@ -2561,24 +1981,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire",
-          "res_shard"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 41,
@@ -2610,20 +2013,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 42,
@@ -2659,25 +2049,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 43,
@@ -2713,27 +2085,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "intelligence",
-          "stealth"
-        ],
-        "capability_ids": [
-          "sust_int"
-        ],
-        "resistance_ids": [
-          "ignore_acid"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 44,
@@ -2766,22 +2118,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "to_hit"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 45,
@@ -2814,20 +2151,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 46,
@@ -2861,22 +2185,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "to_hit"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 48,
@@ -2908,20 +2217,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "free_act"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 49,
@@ -2953,20 +2249,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "to_hit"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 50,
@@ -2999,22 +2282,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 51,
@@ -3048,23 +2316,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "to_hit",
-          "strength"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 52,
@@ -3101,27 +2353,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity",
-          "to_hit",
-          "search"
-        ],
-        "capability_ids": [
-          "feather",
-          "free_act"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 53,
@@ -3157,24 +2389,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution",
-          "to_hit",
-          "strength"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 54,
@@ -3208,24 +2423,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "strength"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 55,
@@ -3259,24 +2457,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 56,
@@ -3308,20 +2489,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "feather"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 57,
@@ -3354,22 +2522,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 58,
@@ -3401,20 +2554,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "free_act"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 59,
@@ -3447,22 +2587,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "speed"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 60,
@@ -3495,22 +2620,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "feather"
-        ],
-        "resistance_ids": [
-          "res_nexus"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 61,
@@ -3547,28 +2657,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "speed",
-          "stealth"
-        ],
-        "capability_ids": [
-          "feather"
-        ],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 62,
@@ -3602,24 +2691,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "speed"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 63,
@@ -3655,25 +2727,7 @@
       ],
       "item_categories": [
         "armor"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "speed",
-          "stealth"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 64,
@@ -3724,29 +2778,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "wisdom"
-        ],
-        "capability_ids": [
-          "blessed_item",
-          "see_invis"
-        ],
-        "resistance_ids": [
-          "res_fear"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DEMON",
-          "SLAY_EVIL",
-          "SLAY_UNDEAD"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 65,
@@ -3803,34 +2835,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "stealth"
-        ],
-        "capability_ids": [
-          "feather",
-          "free_act",
-          "regen",
-          "see_invis",
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 66,
@@ -3876,22 +2881,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "wisdom"
-        ],
-        "capability_ids": [
-          "blessed_item"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 67,
@@ -3945,32 +2935,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "light_radius"
-        ],
-        "capability_ids": [
-          "free_act",
-          "see_invis"
-        ],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire",
-          "res_dark"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DEMON",
-          "SLAY_DRAGON",
-          "SLAY_ORC",
-          "SLAY_TROLL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 68,
@@ -4022,29 +2987,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution",
-          "dexterity",
-          "strength"
-        ],
-        "capability_ids": [
-          "free_act",
-          "see_invis"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_GIANT",
-          "SLAY_ORC",
-          "SLAY_TROLL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 69,
@@ -4090,22 +3033,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "blows"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 70,
@@ -4156,27 +3084,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "blows",
-          "strength"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire",
-          "res_fear"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      ]
     },
     {
       "serial": 72,
@@ -4223,23 +3131,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "res_acid"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ACID"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 73,
@@ -4286,23 +3178,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_elec",
-          "res_elec"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ELEC"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 74,
@@ -4349,23 +3225,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_fire",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_FIRE"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 75,
@@ -4412,23 +3272,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_cold",
-          "res_cold"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_COLD"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 76,
@@ -4473,20 +3317,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_POIS"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 80,
@@ -4531,20 +3362,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_ANIMAL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 81,
@@ -4589,20 +3407,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_EVIL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 82,
@@ -4647,20 +3452,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_UNDEAD"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 83,
@@ -4705,20 +3497,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DEMON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 84,
@@ -4763,20 +3542,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_ORC"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 85,
@@ -4821,20 +3587,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_TROLL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 86,
@@ -4879,20 +3632,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_GIANT"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 87,
@@ -4937,20 +3677,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DRAGON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 88,
@@ -4997,24 +3724,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "intelligence"
-        ],
-        "capability_ids": [
-          "slow_digest"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_ANIMAL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 89,
@@ -5061,24 +3771,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "wisdom"
-        ],
-        "capability_ids": [
-          "blessed_item"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_EVIL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 90,
@@ -5125,24 +3818,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "wisdom"
-        ],
-        "capability_ids": [
-          "see_invis"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "KILL_UNDEAD"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 91,
@@ -5189,24 +3865,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "intelligence"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "KILL_DEMON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 92,
@@ -5253,24 +3912,7 @@
       ],
       "item_categories": [
         "weapon"
-      ],
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity"
-        ],
-        "capability_ids": [
-          "sust_dex"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_ORC"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 93,
@@ -5317,24 +3959,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against trolls, grant strength, and provide regeneration.",
-      "normalized_refs": {
-        "affix_ids": [
-          "strength"
-        ],
-        "capability_ids": [
-          "regen"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_TROLL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Weapons that are extra effective against trolls, grant strength, and provide regeneration."
     },
     {
       "serial": 94,
@@ -5381,24 +4006,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against giants, grant strength, and sustain strength.",
-      "normalized_refs": {
-        "affix_ids": [
-          "strength"
-        ],
-        "capability_ids": [
-          "sust_str"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_GIANT"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Weapons that are extra effective against giants, grant strength, and sustain strength."
     },
     {
       "serial": 95,
@@ -5445,24 +4053,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against dragons, grant constitution, and provide fear resistance.",
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "res_fear"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "KILL_DRAGON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Weapons that are extra effective against dragons, grant constitution, and provide fear resistance."
     },
     {
       "serial": 100,
@@ -5495,22 +4086,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that enhance tunneling capabilities and deal acid damage.",
-      "normalized_refs": {
-        "affix_ids": [
-          "tunnel"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ACID"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Weapons that enhance tunneling capabilities and deal acid damage."
     },
     {
       "serial": 101,
@@ -5546,27 +4122,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that can cause earthquakes, enhance tunneling capabilities, deal acid damage and grant increased strength.",
-      "normalized_refs": {
-        "affix_ids": [
-          "strength",
-          "tunnel"
-        ],
-        "capability_ids": [
-          "impact"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ACID"
-        ],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "Weapons that can cause earthquakes, enhance tunneling capabilities, deal acid damage and grant increased strength."
     },
     {
       "serial": 102,
@@ -5618,28 +4174,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are cursed, aggravate the wielder, and have various detrimental effects.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "hold_life",
-          "see_invis"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_UNDEAD"
-        ],
-        "brand_flags": [
-          "BRAND_POIS"
-        ],
-        "curse_flags": [
-          "HEAVY_CURSE",
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      "description": "Weapons that are cursed, aggravate the wielder, and have various detrimental effects."
     },
     {
       "serial": 104,
@@ -5669,18 +4204,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "It has no special abilities, but its to-hit value may be unusually high.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "It has no special abilities, but its to-hit value may be unusually high."
     },
     {
       "serial": 105,
@@ -5710,18 +4234,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "It has no special abilities, but its to-dam value may be unusually high.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "It has no special abilities, but its to-dam value may be unusually high."
     },
     {
       "serial": 106,
@@ -5758,28 +4271,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow imbued with the powers of Lothlorien, enhancing dexterity and might. It resists acid and fire.",
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity",
-          "might"
-        ],
-        "capability_ids": [
-          "free_act"
-        ],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "A bow imbued with the powers of Lothlorien, enhancing dexterity and might. It resists acid and fire."
     },
     {
       "serial": 107,
@@ -5815,26 +4307,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow favored by the Haradrim, enhancing might and providing extra shot. It resists acid and fire.",
-      "normalized_refs": {
-        "affix_ids": [
-          "might",
-          "shots"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "A bow favored by the Haradrim, enhancing might and providing extra shot. It resists acid and fire."
     },
     {
       "serial": 108,
@@ -5867,22 +4340,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants extra might to its wielder.",
-      "normalized_refs": {
-        "affix_ids": [
-          "might"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "A bow that grants extra might to its wielder."
     },
     {
       "serial": 109,
@@ -5915,22 +4373,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants extra shots to its wielder.",
-      "normalized_refs": {
-        "affix_ids": [
-          "shots"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "A bow that grants extra shots to its wielder."
     },
     {
       "serial": 110,
@@ -5967,27 +4410,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow favored by the people of Buckland, enhancing dexterity, might, and providing extra shots. It resists acid and fire.",
-      "normalized_refs": {
-        "affix_ids": [
-          "dexterity",
-          "might",
-          "shots"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "A bow favored by the people of Buckland, enhancing dexterity, might, and providing extra shots. It resists acid and fire."
     },
     {
       "serial": 111,
@@ -6021,22 +4444,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow cursed by the influence of the Nazgul, draining experience and revealing invisible entities.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "see_invis"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      "description": "A bow cursed by the influence of the Nazgul, draining experience and revealing invisible entities."
     },
     {
       "serial": 112,
@@ -6080,20 +4488,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against animals.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_ANIMAL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against animals."
     },
     {
       "serial": 113,
@@ -6136,20 +4531,7 @@
       ],
       "item_categories": [
         "ammo"
-      ],
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_EVIL"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      ]
     },
     {
       "serial": 114,
@@ -6193,20 +4575,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against undead.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_UNDEAD"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against undead."
     },
     {
       "serial": 115,
@@ -6250,20 +4619,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against demons.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DEMON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against demons."
     },
     {
       "serial": 116,
@@ -6308,22 +4664,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals acid damage and ignores acid.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ACID"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that deals acid damage and ignores acid."
     },
     {
       "serial": 117,
@@ -6368,22 +4709,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals lightning damage and ignores lightning.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_elec"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_ELEC"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that deals lightning damage and ignores lightning."
     },
     {
       "serial": 118,
@@ -6427,20 +4753,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against giants.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_GIANT"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against giants."
     },
     {
       "serial": 119,
@@ -6484,20 +4797,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against dragons.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DRAGON"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against dragons."
     },
     {
       "serial": 120,
@@ -6545,25 +4845,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against evil creatures, demons and undead. Ignores fire and acid.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [
-          "SLAY_DEMON",
-          "SLAY_EVIL",
-          "SLAY_UNDEAD"
-        ],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that is particularly effective against evil creatures, demons and undead. Ignores fire and acid."
     },
     {
       "serial": 121,
@@ -6607,20 +4889,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals poison damage.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_POIS"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that deals poison damage."
     },
     {
       "serial": 122,
@@ -6665,22 +4934,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals fire damage and ignores fire.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_FIRE"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that deals fire damage and ignores fire."
     },
     {
       "serial": 123,
@@ -6725,22 +4979,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals cold damage and ignores cold.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_cold"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [
-          "BRAND_COLD"
-        ],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition that deals cold damage and ignores cold."
     },
     {
       "serial": 124,
@@ -6782,18 +5021,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values."
     },
     {
       "serial": 125,
@@ -6837,20 +5065,7 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition of Backbiting often has unusually low to-hit and to-dam values.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [
-          "LIGHT_CURSE"
-        ],
-        "display_flags": []
-      }
+      "description": "Ammunition of Backbiting often has unusually low to-hit and to-dam values."
     },
     {
       "serial": 128,
@@ -6890,29 +5105,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A shield that provides resistance to various elements and boosts constitution.",
-      "normalized_refs": {
-        "affix_ids": [
-          "constitution"
-        ],
-        "capability_ids": [],
-        "resistance_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire",
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "A shield that provides resistance to various elements and boosts constitution."
     },
     {
       "serial": 129,
@@ -6945,21 +5138,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A cloak that grants the wearer the abilities of free action and life preservation.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "free_act",
-          "hold_life"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "A cloak that grants the wearer the abilities of free action and life preservation."
     },
     {
       "serial": 130,
@@ -7000,29 +5179,6 @@
         "armor"
       ],
       "description": "A cloak that provides resistance to various elements and can be activated for special effects.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [
-          "RESIST"
-        ],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      },
       "activation": {
         "id": "RESIST",
         "recharge": {
@@ -7068,28 +5224,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A cloak that provides basic resistance to various elements.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "ignore_acid",
-          "ignore_cold",
-          "ignore_elec",
-          "ignore_fire"
-        ],
-        "resistance_ids": [
-          "res_acid",
-          "res_cold",
-          "res_elec",
-          "res_fire"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "A cloak that provides basic resistance to various elements."
     },
     {
       "serial": 132,
@@ -7125,26 +5260,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Gloves that enhance the wearer's intelligence and wisdom, and provide free action.",
-      "normalized_refs": {
-        "affix_ids": [
-          "to_hit",
-          "intelligence",
-          "wisdom"
-        ],
-        "capability_ids": [
-          "free_act"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": [
-          "HIDE_TYPE"
-        ]
-      }
+      "description": "Gloves that enhance the wearer's intelligence and wisdom, and provide free action."
     },
     {
       "serial": 133,
@@ -7177,22 +5293,7 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Boots that provide free action and resistance to poison.",
-      "normalized_refs": {
-        "affix_ids": [],
-        "capability_ids": [
-          "free_act"
-        ],
-        "resistance_ids": [
-          "res_pois"
-        ],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "Boots that provide free action and resistance to poison."
     },
     {
       "serial": 135,
@@ -7225,22 +5326,7 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants regeneration and might.",
-      "normalized_refs": {
-        "affix_ids": [
-          "might"
-        ],
-        "capability_ids": [
-          "regen"
-        ],
-        "resistance_ids": [],
-        "activation_ids": [],
-        "status_ids": [],
-        "slay_flags": [],
-        "brand_flags": [],
-        "curse_flags": [],
-        "display_flags": []
-      }
+      "description": "A bow that grants regeneration and might."
     }
   ]
 }

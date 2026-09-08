@@ -127,7 +127,7 @@
       "status_id": "blessed",
       "name": "Blessed",
       "category": "buff",
-      "description": "The character gains +5 to hit, +5 AC, and priests may use non-blunt weapons without penalty.",
+      "description": "The character gains +5 to hit, +5 AC, and priests may use non-blunt blessed weapons without penalty.",
       "is_timed": true,
       "default_duration": { "base": 12, "kind": "dice", "count": 1, "sides": 12 },
       "is_stackable": true,
