@@ -1,12 +1,9 @@
-{
+﻿{
   "artifacts": [
     {
-      "serial": 1,
       "baseItemId": "phial",
       "id": "phial_of_galadriel",
       "name": "The Phial of Galadriel",
-      "tval": 39,
-      "sval": 4,
       "pval": 0,
       "depth": 5,
       "rarity": 5,
@@ -28,15 +25,12 @@
           "dice": 10
         }
       },
-      "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure."
+      "description": "A small crystal phial, with the light of Earendil\u0027s Star contained inside. Its light is imperishable, and near it darkness cannot endure."
     },
     {
-      "serial": 2,
       "baseItemId": "star",
       "id": "elendil",
       "name": "The Star of Elendil",
-      "tval": 39,
-      "sval": 5,
       "pval": 0,
       "depth": 30,
       "rarity": 25,
@@ -59,15 +53,12 @@
           "dice": 50
         }
       },
-      "description": "The shining Star of the West, a treasured heirloom of Elendil's house."
+      "description": "The shining Star of the West, a treasured heirloom of Elendil\u0027s house."
     },
     {
-      "serial": 3,
       "baseItemId": "stone",
       "id": "arkenstone_of_thrain",
       "name": "The Arkenstone of Thrain",
-      "tval": 39,
-      "sval": 6,
       "pval": 0,
       "depth": 50,
       "rarity": 50,
@@ -96,12 +87,9 @@
       "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards."
     },
     {
-      "serial": 4,
       "baseItemId": "amulet",
       "id": "carlammas",
       "name": "The Amulet of Carlammas",
-      "tval": 40,
-      "sval": 10,
       "pval": 2,
       "depth": 50,
       "rarity": 10,
@@ -129,12 +117,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 5,
       "baseItemId": "amulet",
       "id": "ingwe",
       "name": "The Amulet of Ingwe",
-      "tval": 40,
-      "sval": 11,
       "pval": 3,
       "depth": 65,
       "rarity": 30,
@@ -169,12 +154,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 6,
       "baseItemId": "amulet",
-      "id": "necklace_of_the_dwarves",  
+      "id": "necklace_of_the_dwarves",
       "name": "The Necklace of the Dwarves",
-      "tval": 40,
-      "sval": 12,
       "pval": 3,
       "depth": 70,
       "rarity": 50,
@@ -200,12 +182,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 7,
       "baseItemId": "orb",
       "id": "palantir_of_westernesse",
       "name": "The Palantir of Westernesse",
-      "tval": 39,
-      "sval": 7,
       "pval": 2,
       "depth": 75,
       "rarity": 60,
@@ -241,12 +220,9 @@
       "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it."
     },
     {
-      "serial": 8,
       "baseItemId": "ring",
       "id": "barahir",
       "name": "The Ring of Barahir",
-      "tval": 45,
-      "sval": 32,
       "pval": 1,
       "depth": 50,
       "rarity": 25,
@@ -265,7 +241,7 @@
         "RES_DARK",
         "INSTA_ART"
       ],
-      "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers, an ancient treasure of Isildur's house.",
+      "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers, an ancient treasure of Isildur\u0027s house.",
       "base_ac": 0,
       "damage": "0d0",
       "plus_to_hit": 0,
@@ -273,12 +249,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 9,
       "baseItemId": "ring",
       "id": "tulkas",
       "name": "The Ring of Tulkas",
-      "tval": 45,
-      "sval": 33,
       "pval": 4,
       "depth": 70,
       "rarity": 50,
@@ -308,12 +281,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 10,
       "baseItemId": "ring",
       "id": "narya",
-      "name": "The Ring of Power 'Narya'",
-      "tval": 45,
-      "sval": 34,
+      "name": "The Ring of Power \u0027Narya\u0027",
       "pval": 1,
       "depth": 70,
       "rarity": 60,
@@ -358,12 +328,9 @@
       "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
-      "serial": 11,
       "baseItemId": "ring",
       "id": "nenya",
-      "name": "The Ring of Power 'Nenya'",
-      "tval": 45,
-      "sval": 35,
+      "name": "The Ring of Power \u0027Nenya\u0027",
       "pval": 2,
       "depth": 80,
       "rarity": 70,
@@ -408,12 +375,9 @@
       "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
-      "serial": 12,
       "baseItemId": "ring",
       "id": "vilya",
-      "name": "The Ring of Power 'Vilya'",
-      "tval": 45,
-      "sval": 36,
+      "name": "The Ring of Power \u0027Vilya\u0027",
       "pval": 3,
       "depth": 90,
       "rarity": 80,
@@ -459,12 +423,9 @@
       "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
     },
     {
-      "serial": 13,
       "baseItemId": "ring",
       "id": "one_ring",
-      "name": "The Ring of Power 'The One Ring'",
-      "tval": 45,
-      "sval": 37,
+      "name": "The Ring of Power \u0027The One Ring\u0027",
       "pval": 5,
       "depth": 100,
       "rarity": 100,
@@ -517,15 +478,12 @@
           "dice": 30
         }
       },
-      "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it."
+      "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur\u0027s Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it."
     },
     {
-      "serial": 14,
       "baseItemId": "amulet",
       "id": "elfstone_of_elrond",
-      "name": "The Elfstone 'Elessar'",
-      "tval": 40,
-      "sval": 16,
+      "name": "The Elfstone \u0027Elessar\u0027",
       "pval": 2,
       "depth": 60,
       "rarity": 60,
@@ -558,12 +516,9 @@
       "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle."
     },
     {
-      "serial": 15,
       "baseItemId": "jewel",
       "id": "jewel_of_evenstar",
-      "name": "The Jewel 'Evenstar'",
-      "tval": 40,
-      "sval": 17,
+      "name": "The Jewel \u0027Evenstar\u0027",
       "pval": 0,
       "depth": 40,
       "rarity": 40,
@@ -594,12 +549,9 @@
       "plus_to_ac": 0
     },
     {
-      "serial": 16,
       "baseItemId": "multi_hued_dragon_scale_mail",
       "id": "razorback",
-      "name": "The Multi-Hued Dragon Scale Mail 'Razorback'",
-      "tval": 38,
-      "sval": 6,
+      "name": "The Multi-Hued Dragon Scale Mail \u0027Razorback\u0027",
       "pval": 0,
       "depth": 90,
       "rarity": 9,
@@ -635,12 +587,9 @@
       "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on."
     },
     {
-      "serial": 17,
       "baseItemId": "power_dragon_scale_mail",
       "id": "bladeturner",
-      "name": "The Power Dragon Scale Mail 'Bladeturner'",
-      "tval": 38,
-      "sval": 30,
+      "name": "The Power Dragon Scale Mail \u0027Bladeturner\u0027",
       "pval": 0,
       "depth": 100,
       "rarity": 16,
@@ -682,12 +631,9 @@
       "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal."
     },
     {
-      "serial": 18,
       "baseItemId": "balance_dragon_scale_mail",
       "id": "mediator",
-      "name": "The Balance Dragon Scale Mail 'Mediator'",
-      "tval": 38,
-      "sval": 20,
+      "name": "The Balance Dragon Scale Mail \u0027Mediator\u0027",
       "pval": 0,
       "depth": 95,
       "rarity": 12,
@@ -721,12 +667,9 @@
       "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer."
     },
     {
-      "serial": 19,
       "baseItemId": "adamantite_plate_mail",
       "id": "soulkeeper",
-      "name": "The Adamantite Plate Mail 'Soulkeeper'",
-      "tval": 37,
-      "sval": 30,
+      "name": "The Adamantite Plate Mail \u0027Soulkeeper\u0027",
       "pval": 2,
       "depth": 75,
       "rarity": 9,
@@ -761,12 +704,9 @@
       "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can."
     },
     {
-      "serial": 20,
       "baseItemId": "full_plate_armor",
       "id": "isildur",
       "name": "The Full Plate Armor of Isildur",
-      "tval": 37,
-      "sval": 15,
       "pval": 1,
       "depth": 30,
       "rarity": 3,
@@ -790,12 +730,9 @@
       "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability deeply engraved into its surface."
     },
     {
-      "serial": 21,
       "baseItemId": "metal_brigandine_armor",
       "id": "rohirrim",
       "name": "The Metal Brigandine Armor of the Rohirrim",
-      "tval": 37,
-      "sval": 9,
       "pval": 2,
       "depth": 30,
       "rarity": 3,
@@ -821,12 +758,9 @@
       "description": "Small metal plates cover an inner layer of sturdy canvas, and both bear scenes of hunting and war.  You feel the spirit of Eorl the Young, matchless in combat, around you as you put his armour on."
     },
     {
-      "serial": 22,
       "baseItemId": "mithril_chain_mail",
       "id": "belegennon",
-      "name": "The Mithril Chain Mail 'Belegennon'",
-      "tval": 37,
-      "sval": 20,
+      "name": "The Mithril Chain Mail \u0027Belegennon\u0027",
       "pval": 4,
       "depth": 40,
       "rarity": 3,
@@ -857,12 +791,9 @@
       "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within."
     },
     {
-      "serial": 23,
       "baseItemId": "mithril_plate_mail",
       "id": "celeborn",
       "name": "The Mithril Plate Mail of Celeborn",
-      "tval": 37,
-      "sval": 25,
       "pval": 4,
       "depth": 40,
       "rarity": 3,
@@ -895,12 +826,9 @@
       "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish."
     },
     {
-      "serial": 24,
       "baseItemId": "chain_mail",
       "id": "arvedui",
       "name": "The Chain Mail of Arvedui",
-      "tval": 37,
-      "sval": 4,
       "pval": 2,
       "depth": 20,
       "rarity": 3,
@@ -925,12 +853,9 @@
       "description": "A hauberk, leggings, and sleeves of interlocking steel rings, well padded with leather.  You feel as strong and tall as Arvedui, last king of Arnor, as you put it on."
     },
     {
-      "serial": 25,
       "baseItemId": "augmented_chain_mail",
       "id": "caspanion",
       "name": "The Augmented Chain Mail of Caspanion",
-      "tval": 37,
-      "sval": 6,
       "pval": 3,
       "depth": 25,
       "rarity": 9,
@@ -958,15 +883,12 @@
           "dice": 0
         }
       },
-      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path."
+      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer\u0027s path."
     },
     {
-      "serial": 26,
       "baseItemId": "hard_leather_armor",
       "id": "himring",
       "name": "The Hard Leather Armor of Himring",
-      "tval": 36,
-      "sval": 6,
       "pval": 0,
       "depth": 50,
       "rarity": 20,
@@ -993,12 +915,9 @@
       "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth."
     },
     {
-      "serial": 27,
       "baseItemId": "soft_leather_armor",
       "id": "hithlomir",
-      "name": "The Soft Leather Armor 'Hithlomir'",
-      "tval": 36,
-      "sval": 4,
+      "name": "The Soft Leather Armor \u0027Hithlomir\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 3,
@@ -1021,12 +940,9 @@
       "description": "Familar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears."
     },
     {
-      "serial": 28,
       "baseItemId": "leather_scale_mail",
       "id": "thalkettoth",
-      "name": "The Leather Scale Mail 'Thalkettoth'",
-      "tval": 36,
-      "sval": 11,
+      "name": "The Leather Scale Mail \u0027Thalkettoth\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 3,
@@ -1047,12 +963,9 @@
       "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather whose wearer moves with agility and assurance."
     },
     {
-      "serial": 29,
       "baseItemId": "large_metal_shield",
       "id": "gil-galad",
       "name": "The Shield of Deflection of Gil-galad",
-      "tval": 34,
-      "sval": 10,
       "pval": 5,
       "depth": 70,
       "rarity": 4,
@@ -1087,12 +1000,9 @@
       "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth."
     },
     {
-      "serial": 30,
       "baseItemId": "small_metal_shield",
       "id": "shield_of_thorin",
       "name": "The Small Metal Shield of Thorin",
-      "tval": 34,
-      "sval": 3,
       "pval": 4,
       "depth": 40,
       "rarity": 6,
@@ -1116,12 +1026,9 @@
       "description": "Invoking the strength and endurance of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth."
     },
     {
-      "serial": 31,
       "baseItemId": "large_leather_shield",
       "id": "shield_of_celegorm",
       "name": "The Large Leather Shield of Celegorm",
-      "tval": 34,
-      "sval": 4,
       "pval": 0,
       "depth": 30,
       "rarity": 3,
@@ -1143,12 +1050,9 @@
       "description": "This shield emblazoned with a multitude of creatures unseen for ages once protected Celegorm, Lord of Himlad; around it a mystic balance lies, containing the conflicts of the elements."
     },
     {
-      "serial": 32,
       "baseItemId": "large_metal_shield",
       "id": "shield_of_anarion",
       "name": "The Large Metal Shield of Anarion",
-      "tval": 34,
-      "sval": 5,
       "pval": 0,
       "depth": 40,
       "rarity": 9,
@@ -1174,12 +1078,9 @@
       "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish."
     },
     {
-      "serial": 33,
       "baseItemId": "metal_cap",
       "id": "celebrimbor",
       "name": "The Metal Cap of Celebrimbor",
-      "tval": 32,
-      "sval": 3,
       "pval": 3,
       "depth": 55,
       "rarity": 12,
@@ -1203,12 +1104,9 @@
       "description": "A metal cap forged by the greatest Noldorin smith of the Second Age, this helm is of equal use in battle or at the forge, and its enchantment will never be diminished."
     },
     {
-      "serial": 34,
       "baseItemId": "massive_iron_crown",
       "id": "crown_of_morgoth",
       "name": "The Massive Iron Crown of Morgoth",
-      "tval": 33,
-      "sval": 50,
       "pval": 125,
       "depth": 100,
       "rarity": 1,
@@ -1250,12 +1148,9 @@
       "description": "Containing much of the power of he who once was mightiest among the Ainur, this plain iron crown has mounted upon it the two remaining Silmarils, greatest treasures of Middle-Earth."
     },
     {
-      "serial": 35,
       "baseItemId": "iron_crown",
       "id": "beruthiel",
       "name": "The Iron Crown of Beruthiel",
-      "tval": 33,
-      "sval": 10,
       "pval": -5,
       "depth": 40,
       "rarity": 12,
@@ -1280,12 +1175,9 @@
       "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel, which grants extraordinary powers of sight and awareness at a terrible physical cost."
     },
     {
-      "serial": 36,
       "baseItemId": "hard_leather_cap",
       "id": "thranduil",
       "name": "The Hard Leather Cap of Thranduil",
-      "tval": 32,
-      "sval": 2,
       "pval": 2,
       "depth": 20,
       "rarity": 2,
@@ -1306,12 +1198,9 @@
       "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain."
     },
     {
-      "serial": 37,
       "baseItemId": "metal_cap",
       "id": "thengel",
       "name": "The Metal Cap of Thengel",
-      "tval": 32,
-      "sval": 3,
       "pval": 3,
       "depth": 10,
       "rarity": 2,
@@ -1331,12 +1220,9 @@
       "description": "A ridged helmet made of steel, and embossed with scenes of valor in fine- engraved silver.  It grants the wearer nobility and understanding."
     },
     {
-      "serial": 38,
       "baseItemId": "steel_helm",
-      "id": "hammerhand", 
+      "id": "hammerhand",
       "name": "The Steel Helm of Hammerhand",
-      "tval": 32,
-      "sval": 6,
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -1364,12 +1250,9 @@
       "description": "A great helm, as steady and as distinctive as the hero of the Westdike. Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode out time and again among his foes and slew many. Although they knew of his coming, none could stand against him."
     },
     {
-      "serial": 39,
       "baseItemId": "iron_helm",
       "id": "dor-lomin",
       "name": "The Iron Helm of Dor-Lomin",
-      "tval": 32,
-      "sval": 5,
       "pval": 4,
       "depth": 40,
       "rarity": 20,
@@ -1397,12 +1280,9 @@
       "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth."
     },
     {
-      "serial": 40,
       "baseItemId": "iron_helm",
       "id": "holhenneth",
-      "name": "The Iron Helm 'Holhenneth'",
-      "tval": 32,
-      "sval": 5,
+      "name": "The Iron Helm \u0027Holhenneth\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 5,
@@ -1433,12 +1313,9 @@
       "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness."
     },
     {
-      "serial": 41,
       "baseItemId": "iron_helm",
       "id": "gorlim",
       "name": "The Iron Helm of Gorlim",
-      "tval": 32,
-      "sval": 5,
       "pval": -5,
       "depth": 20,
       "rarity": 5,
@@ -1464,12 +1341,9 @@
       "description": "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed succor."
     },
     {
-      "serial": 42,
       "baseItemId": "golden_crown",
       "id": "crown_of_gondor",
       "name": "The Golden Crown of Gondor",
-      "tval": 33,
-      "sval": 11,
       "pval": 3,
       "depth": 40,
       "rarity": 40,
@@ -1508,12 +1382,9 @@
       "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world."
     },
     {
-      "serial": 43,
       "baseItemId": "jewel_encrusted_crown",
       "id": "crown_of_numenor",
       "name": "The Jewel Encrusted Crown of Numenor",
-      "tval": 33,
-      "sval": 12,
       "pval": 3,
       "depth": 60,
       "rarity": 30,
@@ -1544,12 +1415,9 @@
       "description": "A crown of massive gold, set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor."
     },
     {
-      "serial": 44,
       "baseItemId": "cloak",
       "id": "colluin",
-      "name": "The Cloak 'Colluin'",
-      "tval": 35,
-      "sval": 1,
+      "name": "The Cloak \u0027Colluin\u0027",
       "pval": 0,
       "depth": 5,
       "rarity": 45,
@@ -1578,12 +1446,9 @@
       "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements."
     },
     {
-      "serial": 45,
       "baseItemId": "cloak",
       "id": "holcolleth",
-      "name": "The Cloak 'Holcolleth'",
-      "tval": 35,
-      "sval": 1,
+      "name": "The Cloak \u0027Holcolleth\u0027",
       "pval": 2,
       "depth": 5,
       "rarity": 25,
@@ -1613,12 +1478,9 @@
       "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar."
     },
     {
-      "serial": 46,
       "baseItemId": "cloak",
       "id": "thingol",
       "name": "The Cloak of Thingol",
-      "tval": 35,
-      "sval": 1,
       "pval": 3,
       "depth": 5,
       "rarity": 50,
@@ -1649,12 +1511,9 @@
       "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water."
     },
     {
-      "serial": 47,
       "baseItemId": "cloak",
       "id": "thorongil",
       "name": "The Cloak of Thorongil",
-      "tval": 35,
-      "sval": 1,
       "pval": 0,
       "depth": 5,
       "rarity": 10,
@@ -1674,12 +1533,9 @@
       "description": "This shimmering cloak of greens and browns was once worn by the young Aragorn, a keen-eyed captain of Gondor, valiant on both land and sea."
     },
     {
-      "serial": 48,
       "baseItemId": "cloak",
       "id": "colannon",
-      "name": "The Cloak 'Colannon'",
-      "tval": 35,
-      "sval": 1,
+      "name": "The Cloak \u0027Colannon\u0027",
       "pval": 3,
       "depth": 5,
       "rarity": 20,
@@ -1707,12 +1563,9 @@
       "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission."
     },
     {
-      "serial": 49,
       "baseItemId": "shadow_cloak",
       "id": "luthien",
       "name": "The Shadow Cloak of Luthien",
-      "tval": 35,
-      "sval": 6,
       "pval": 2,
       "depth": 40,
       "rarity": 40,
@@ -1745,12 +1598,9 @@
       "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death."
     },
     {
-      "serial": 50,
       "baseItemId": "shadow_cloak",
       "id": "tuor",
       "name": "The Shadow Cloak of Tuor",
-      "tval": 35,
-      "sval": 6,
       "pval": 4,
       "depth": 40,
       "rarity": 40,
@@ -1770,15 +1620,12 @@
         "RES_ACID",
         "SEE_INVIS"
       ],
-      "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo's kingly gift from a multitude of hostile eyes."
+      "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo\u0027s kingly gift from a multitude of hostile eyes."
     },
     {
-      "serial": 51,
       "baseItemId": "gauntlets",
       "id": "gauntlets_of_eol",
       "name": "The Gauntlets of Eol",
-      "tval": 31,
-      "sval": 2,
       "pval": 3,
       "depth": 55,
       "rarity": 35,
@@ -1809,12 +1656,9 @@
       "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle."
     },
     {
-      "serial": 52,
       "baseItemId": "leather_gloves",
       "id": "cambeleg",
-      "name": "The Set of Leather Gloves 'Cambeleg'",
-      "tval": 31,
-      "sval": 1,
+      "name": "The Set of Leather Gloves \u0027Cambeleg\u0027",
       "pval": 2,
       "depth": 10,
       "rarity": 6,
@@ -1832,15 +1676,12 @@
         "FREE_ACT",
         "SHOW_MODS"
       ],
-      "description": "A hero's handgear that lends great prowess in battle."
+      "description": "A hero\u0027s handgear that lends great prowess in battle."
     },
     {
-      "serial": 53,
       "baseItemId": "leather_gloves",
       "id": "cammithrim",
-      "name": "The Set of Leather Gloves 'Cammithrim'",
-      "tval": 31,
-      "sval": 1,
+      "name": "The Set of Leather Gloves \u0027Cammithrim\u0027",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1868,12 +1709,9 @@
       "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency."
     },
     {
-      "serial": 54,
       "baseItemId": "gauntlets",
       "id": "paurhach",
-      "name": "The Set of Gauntlets 'Paurhach'",
-      "tval": 31,
-      "sval": 2,
+      "name": "The Set of Gauntlets \u0027Paurhach\u0027",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1899,12 +1737,9 @@
       "description": "A set of gauntlets that smoulder with an unnatural heat."
     },
     {
-      "serial": 55,
       "baseItemId": "gauntlets",
       "id": "paurnimmen",
-      "name": "The Set of Gauntlets 'Paurnimmen'",
-      "tval": 31,
-      "sval": 2,
+      "name": "The Set of Gauntlets \u0027Paurnimmen\u0027",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1930,12 +1765,9 @@
       "description": "A set of handgear, freezing with unnatural cold."
     },
     {
-      "serial": 56,
       "baseItemId": "gauntlets",
       "id": "pauraegen",
-      "name": "The Set of Gauntlets 'Pauraegen'",
-      "tval": 31,
-      "sval": 2,
+      "name": "The Set of Gauntlets \u0027Pauraegen\u0027",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1961,12 +1793,9 @@
       "description": "A set of handgear with sparks that crackle across its knuckleguards."
     },
     {
-      "serial": 57,
       "baseItemId": "gauntlets",
       "id": "paurnen",
-      "name": "The Set of Gauntlets 'Paurnen'",
-      "tval": 31,
-      "sval": 2,
+      "name": "The Set of Gauntlets \u0027Paurnen\u0027",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1992,12 +1821,9 @@
       "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished."
     },
     {
-      "serial": 58,
       "baseItemId": "gauntlets",
       "id": "camlost",
-      "name": "The Set of Gauntlets 'Camlost'",
-      "tval": 31,
-      "sval": 2,
+      "name": "The Set of Gauntlets \u0027Camlost\u0027",
       "pval": -3,
       "depth": 10,
       "rarity": 20,
@@ -2024,12 +1850,9 @@
       "description": "A pair of gauntlets that sap combat ability, named after the empty hand of Beren that once clasped a Silmaril."
     },
     {
-      "serial": 59,
       "baseItemId": "set_of_cesti",
       "id": "fingolfin",
       "name": "The Set of Cesti of Fingolfin",
-      "tval": 31,
-      "sval": 5,
       "pval": 4,
       "depth": 40,
       "rarity": 15,
@@ -2058,12 +1881,9 @@
       "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever."
     },
     {
-      "serial": 60,
       "baseItemId": "pair_of_hard_leather_boots",
       "id": "feanor",
       "name": "The Pair of Hard Leather Boots of Feanor",
-      "tval": 30,
-      "sval": 3,
       "pval": 15,
       "depth": 40,
       "rarity": 120,
@@ -2087,15 +1907,12 @@
           "dice": 0
         }
       },
-      "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\""
+      "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero\u0027s challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\""
     },
     {
-      "serial": 61,
       "baseItemId": "pair_of_soft_leather_boots",
       "id": "dal-i-thalion",
-      "name": "The Pair of Soft Leather Boots 'Dal-i-thalion'",
-      "tval": 30,
-      "sval": 2,
+      "name": "The Pair of Soft Leather Boots \u0027Dal-i-thalion\u0027",
       "pval": 5,
       "depth": 10,
       "rarity": 25,
@@ -2126,12 +1943,9 @@
       "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility."
     },
     {
-      "serial": 62,
       "baseItemId": "pair_of_metal_shod_boots",
       "id": "thror",
       "name": "The Pair of Metal Shod Boots of Thror",
-      "tval": 30,
-      "sval": 6,
       "pval": 3,
       "depth": 30,
       "rarity": 25,
@@ -2152,12 +1966,9 @@
       "description": "Sturdy footwear of leather and steel as enduring as the long-suffering Dwarven king-in-exile who wore them."
     },
     {
-      "serial": 63,
       "baseItemId": "pair_of_soft_leather_boots",
       "id": "boots_wormtongue",
       "name": "The Pair of Soft Leather Boots of Wormtongue",
-      "tval": 30,
-      "sval": 2,
       "pval": 3,
       "depth": 10,
       "rarity": 15,
@@ -2188,12 +1999,9 @@
       "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward."
     },
     {
-      "serial": 64,
       "baseItemId": "main_gauche",
       "id": "maedhros",
       "name": "Main Gauche of Maedhros",
-      "tval": 23,
-      "sval": 5,
       "pval": 3,
       "depth": 15,
       "rarity": 30,
@@ -2218,12 +2026,9 @@
       "description": "A short thrusting blade with a large guard worn by Maedhros the Tall, eldest son of Feanor, who lost his right hand in captivity in Angband."
     },
     {
-      "serial": 65,
       "baseItemId": "dagger",
       "id": "angrist",
-      "name": "Dagger 'Angrist'",
-      "tval": 23,
-      "sval": 4,
+      "name": "Dagger \u0027Angrist\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 80,
@@ -2248,15 +2053,12 @@
         "SUST_DEX",
         "SHOW_MODS"
       ],
-      "description": "Forged from meteoric iron by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a Silmaril out of Morgoth's crown, this long chopping dagger slices through ordinary metal as easily as its name, \"Iron Cleaver\", suggests."
+      "description": "Forged from meteoric iron by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a Silmaril out of Morgoth\u0027s crown, this long chopping dagger slices through ordinary metal as easily as its name, \"Iron Cleaver\", suggests."
     },
     {
-      "serial": 66,
       "baseItemId": "dagger",
       "id": "narthanc",
-      "name": "Dagger 'Narthanc'",
-      "tval": 23,
-      "sval": 4,
+      "name": "Dagger \u0027Narthanc\u0027",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2280,15 +2082,12 @@
           "dice": 8
         }
       },
-      "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt."
+      "description": "A flame, instead of a blade, seems to spring forth from this dagger\u0027s hilt."
     },
     {
-      "serial": 67,
       "baseItemId": "dagger",
       "id": "nimthanc",
-      "name": "Dagger 'Nimthanc'",
-      "tval": 23,
-      "sval": 4,
+      "name": "Dagger \u0027Nimthanc\u0027",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2315,12 +2114,9 @@
       "description": "From the hilt of this dagger springs not so much a blade as an icicle."
     },
     {
-      "serial": 68,
       "baseItemId": "dagger",
       "id": "dethanc",
-      "name": "Dagger 'Dethanc'",
-      "tval": 23,
-      "sval": 4,
+      "name": "Dagger \u0027Dethanc\u0027",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2347,12 +2143,9 @@
       "description": "In this dagger is bound the very force of the lightning."
     },
     {
-      "serial": 69,
       "baseItemId": "dagger",
       "id": "rilia",
       "name": "Dagger of Rilia",
-      "tval": 23,
-      "sval": 4,
       "pval": 0,
       "depth": 5,
       "rarity": 40,
@@ -2381,12 +2174,9 @@
       "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune."
     },
     {
-      "serial": 70,
       "baseItemId": "dagger",
       "id": "belangil",
-      "name": "Dagger 'Belangil'",
-      "tval": 23,
-      "sval": 4,
+      "name": "Dagger \u0027Belangil\u0027",
       "pval": 2,
       "depth": 10,
       "rarity": 40,
@@ -2418,12 +2208,9 @@
       "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind."
     },
     {
-      "serial": 71,
       "baseItemId": "bastard_sword",
       "id": "calris",
-      "name": "Bastard Sword 'Calris'",
-      "tval": 23,
-      "sval": 21,
+      "name": "Bastard Sword \u0027Calris\u0027",
       "pval": 5,
       "depth": 30,
       "rarity": 15,
@@ -2450,12 +2237,9 @@
       "description": "This sword has runes of power incused on its ornate hint, and a single blood channel that gleams coldly blue as you grasp this mighty weapon of peril."
     },
     {
-      "serial": 72,
       "baseItemId": "broad_sword",
       "id": "arunruth",
-      "name": "Broad Sword 'Arunruth'",
-      "tval": 23,
-      "sval": 16,
+      "name": "Broad Sword \u0027Arunruth\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 45,
@@ -2485,15 +2269,12 @@
           "dice": 0
         }
       },
-      "description": "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay."
+      "description": "The beautiful sword of Thingol, justly named \"King\u0027s Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay."
     },
     {
-      "serial": 73,
       "baseItemId": "broad_sword",
       "id": "glamdring",
-      "name": "Broad Sword 'Glamdring'",
-      "tval": 23,
-      "sval": 16,
+      "name": "Broad Sword \u0027Glamdring\u0027",
       "pval": 1,
       "depth": 20,
       "rarity": 20,
@@ -2521,12 +2302,9 @@
       "description": "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" from dying orcs who dared to behold hidden Gondolin."
     },
     {
-      "serial": 74,
       "baseItemId": "broad_sword",
       "id": "aeglin",
-      "name": "Broad Sword 'Aeglin'",
-      "tval": 23,
-      "sval": 16,
+      "name": "Broad Sword \u0027Aeglin\u0027",
       "pval": 1,
       "depth": 20,
       "rarity": 30,
@@ -2554,12 +2332,9 @@
       "description": "Like unto Orcrist and Glamdring, and like them long lost, this sword is continually coved in tiny arcs of captive lightning that flash and dance eerily in the globes of light they create."
     },
     {
-      "serial": 75,
       "baseItemId": "broad_sword",
       "id": "orcrist",
-      "name": "Broad Sword 'Orcrist'",
-      "tval": 23,
-      "sval": 16,
+      "name": "Broad Sword \u0027Orcrist\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 20,
@@ -2587,12 +2362,9 @@
       "description": "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by orcs who came to know its power all too well."
     },
     {
-      "serial": 76,
       "baseItemId": "two_handed_sword",
       "id": "gurthang",
-      "name": "Two-Handed Sword 'Gurthang'",
-      "tval": 23,
-      "sval": 25,
+      "name": "Two-Handed Sword \u0027Gurthang\u0027",
       "pval": 2,
       "depth": 30,
       "rarity": 30,
@@ -2616,15 +2388,12 @@
         "REGEN",
         "SHOW_MODS"
       ],
-      "description": "A giant sword once wielded by mighty Turin, and an even greater dragonbane; for what wyrm could stand against the blade that bathed in Glaurung's blood?"
+      "description": "A giant sword once wielded by mighty Turin, and an even greater dragonbane; for what wyrm could stand against the blade that bathed in Glaurung\u0027s blood?"
     },
     {
-      "serial": 77,
       "baseItemId": "two_handed_sword",
       "id": "zarcuthra",
-      "name": "Two-Handed Sword 'Zarcuthra'",
-      "tval": 23,
-      "sval": 25,
+      "name": "Two-Handed Sword \u0027Zarcuthra\u0027",
       "pval": 4,
       "depth": 30,
       "rarity": 180,
@@ -2659,12 +2428,9 @@
       "description": "Runes dark and deadly stand stark against the naked steel of this awesome weapon, and you feel a wrathful power of slaying and rending as you slowly approach."
     },
     {
-      "serial": 78,
       "baseItemId": "two_handed_sword",
       "id": "mormegil",
-      "name": "Two-Handed Sword 'Mormegil'",
-      "tval": 23,
-      "sval": 25,
+      "name": "Two-Handed Sword \u0027Mormegil\u0027",
       "pval": -10,
       "depth": 30,
       "rarity": 15,
@@ -2692,12 +2458,9 @@
       "description": "A foul, twisted sword with blackened spines and knobs, whose very name is a curse upon the lips of Elves and Men. It is said that it will drink the very lifeblood of its wielder."
     },
     {
-      "serial": 79,
       "baseItemId": "cutlass",
       "id": "gondricam",
-      "name": "Cutlass 'Gondricam'",
-      "tval": 23,
-      "sval": 12,
+      "name": "Cutlass \u0027Gondricam\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -2724,12 +2487,9 @@
       "description": "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade with a perfect edge shining cleanly in the sun, an object of hate to the men of Umbar who met it in combat."
     },
     {
-      "serial": 80,
       "baseItemId": "executioners_sword",
       "id": "crisdurian",
-      "name": "Executioner's Sword 'Crisdurian'",
-      "tval": 23,
-      "sval": 28,
+      "name": "Executioner\u0027s Sword \u0027Crisdurian\u0027",
       "pval": 0,
       "depth": 40,
       "rarity": 25,
@@ -2750,15 +2510,12 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A giant's weapon, with a long blade tall and straight thrusting out from a massive double-pronged hilt.  On its blade are written doomspells against both the living and undead."
+      "description": "A giant\u0027s weapon, with a long blade tall and straight thrusting out from a massive double-pronged hilt.  On its blade are written doomspells against both the living and undead."
     },
     {
-      "serial": 81,
       "baseItemId": "katana",
       "id": "aglarang",
-      "name": "Katana 'Aglarang'",
-      "tval": 23,
-      "sval": 20,
+      "name": "Katana \u0027Aglarang\u0027",
       "pval": 5,
       "depth": 30,
       "rarity": 25,
@@ -2779,12 +2536,9 @@
       "description": "An utterly perfect, cleanly chiseled sword, with a edge that effortlessly slices rock and bone and spells to render the wearer lithe and nimble.  It is combat incarnate."
     },
     {
-      "serial": 82,
       "baseItemId": "long_sword",
       "id": "ringil",
-      "name": "Long Sword 'Ringil'",
-      "tval": 23,
-      "sval": 17,
+      "name": "Long Sword \u0027Ringil\u0027",
       "pval": 10,
       "depth": 20,
       "rarity": 120,
@@ -2824,12 +2578,9 @@
       "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again."
     },
     {
-      "serial": 83,
       "baseItemId": "long_sword",
       "id": "anduril",
-      "name": "Long Sword 'Anduril'",
-      "tval": 23,
-      "sval": 17,
+      "name": "Long Sword \u0027Anduril\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 40,
@@ -2870,12 +2621,9 @@
       "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it."
     },
     {
-      "serial": 84,
       "baseItemId": "long_sword",
       "id": "anguirel",
-      "name": "Long Sword 'Anguirel'",
-      "tval": 23,
-      "sval": 17,
+      "name": "Long Sword \u0027Anguirel\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 30,
@@ -2906,12 +2654,9 @@
       "description": "Forged of black galvorn by the Dark-Elven smith Eol, and as deadly as any other blade he forged."
     },
     {
-      "serial": 85,
       "baseItemId": "long_sword",
       "id": "elvagil",
-      "name": "Long Sword 'Elvagil'",
-      "tval": 23,
-      "sval": 17,
+      "name": "Long Sword \u0027Elvagil\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -2936,12 +2681,9 @@
       "description": "The \"Singing Blade\", whose wearer can slay Orcs and Trolls in the hidden and secret places of the earth."
     },
     {
-      "serial": 86,
       "baseItemId": "rapier",
       "id": "forasgil",
-      "name": "Rapier 'Forasgil'",
-      "tval": 23,
-      "sval": 7,
+      "name": "Rapier \u0027Forasgil\u0027",
       "pval": 0,
       "depth": 15,
       "rarity": 8,
@@ -2963,12 +2705,9 @@
       "description": "A slender, tapered needle of ice that coldly grips its impaled prey."
     },
     {
-      "serial": 87,
       "baseItemId": "sabre",
       "id": "careth_asdriag",
-      "name": "Sabre 'Careth Asdriag'",
-      "tval": 23,
-      "sval": 11,
+      "name": "Sabre \u0027Careth Asdriag\u0027",
       "pval": 1,
       "depth": 15,
       "rarity": 8,
@@ -2992,12 +2731,9 @@
       "description": "An heirloom of the dauntless Lords of Rhun far to the east, and a name of dismay to creatures natural and unnatural."
     },
     {
-      "serial": 88,
       "baseItemId": "small_sword",
       "id": "sting",
-      "name": "Small Sword 'Sting'",
-      "tval": 23,
-      "sval": 8,
+      "name": "Small Sword \u0027Sting\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -3029,12 +2765,9 @@
       "description": "\"I will give you a name, and I shall call you Sting.\"  The perfect size for Bilbo, and stamped forever by the courage he found in Mirkwood, this sturdy little blade grants the wearer combat prowess and survival abilities he did not know he had."
     },
     {
-      "serial": 89,
       "baseItemId": "scimitar",
       "id": "haradekket",
-      "name": "Scimitar 'Haradekket'",
-      "tval": 23,
-      "sval": 18,
+      "name": "Scimitar \u0027Haradekket\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -3058,12 +2791,9 @@
       "description": "A damascened scimitar that hefts with wondrous ease.  Famed in song as the \"Sickle of Harad\", and a deadly foe to the undead."
     },
     {
-      "serial": 90,
       "baseItemId": "short_sword",
       "id": "dagmor",
-      "name": "Short Sword 'Dagmor'",
-      "tval": 23,
-      "sval": 10,
+      "name": "Short Sword \u0027Dagmor\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -3086,12 +2816,9 @@
       "description": "A stubby blade worn by Beren, whose horn sounded of old in the glades of Brethil."
     },
     {
-      "serial": 91,
       "baseItemId": "blade_of_chaos",
       "id": "doomcaller",
-      "name": "Blade of Chaos 'Doomcaller'",
-      "tval": 23,
-      "sval": 30,
+      "name": "Blade of Chaos \u0027Doomcaller\u0027",
       "pval": 0,
       "depth": 70,
       "rarity": 25,
@@ -3123,12 +2850,9 @@
       "description": "This weapon of wrath, wrought by a desperate berserker gang, dives hungrily into the yielding flesh of your enemies.  You yourself fall under the shadow of death even as you inflict wounds that will not heal."
     },
     {
-      "serial": 92,
       "baseItemId": "spear",
       "id": "melkor",
       "name": "Spear of Melkor",
-      "tval": 22,
-      "sval": 2,
       "pval": -4,
       "depth": 65,
       "rarity": 45,
@@ -3155,12 +2879,9 @@
       "description": "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as he came to Valinor in wrath. Its envenomed bite pierced the Two Trees with wounds that would not heal."
     },
     {
-      "serial": 93,
       "baseItemId": "beaked_axe",
       "id": "theoden",
       "name": "Beaked Axe of Theoden",
-      "tval": 22,
-      "sval": 10,
       "pval": 3,
       "depth": 20,
       "rarity": 15,
@@ -3191,12 +2912,9 @@
       "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed."
     },
     {
-      "serial": 94,
       "baseItemId": "glaive",
       "id": "pain",
       "name": "Glaive of Pain",
-      "tval": 22,
-      "sval": 13,
       "pval": 0,
       "depth": 30,
       "rarity": 25,
@@ -3211,15 +2929,12 @@
         "SHOW_MODS",
         "RES_FEAR"
       ],
-      "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death's myrmidon down."
+      "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death\u0027s myrmidon down."
     },
     {
-      "serial": 95,
       "baseItemId": "halberd",
       "id": "osondir",
-      "name": "Halberd 'Osondir'",
-      "tval": 22,
-      "sval": 15,
+      "name": "Halberd \u0027Osondir\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -3245,12 +2960,9 @@
       "description": "Lordly and tall did Osondir stand against the wrath of giants, and clear-eyed in barrows fell, wielding a halberd glowing ruby red."
     },
     {
-      "serial": 96,
       "baseItemId": "pike",
       "id": "til_i_arc",
-      "name": "Pike 'Til-i-arc'",
-      "tval": 22,
-      "sval": 8,
+      "name": "Pike \u0027Til-i-arc\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -3278,12 +2990,9 @@
       "description": "Within this long two-handed spear dwell the spirits of frost giants and fire demons, who war forever, fettered in sorcerous binds."
     },
     {
-      "serial": 97,
       "baseItemId": "spear",
       "id": "aeglos",
-      "name": "Spear 'Aeglos'",
-      "tval": 22,
-      "sval": 2,
+      "name": "Spear \u0027Aeglos\u0027",
       "pval": 4,
       "depth": 15,
       "rarity": 45,
@@ -3321,12 +3030,9 @@
       "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain."
     },
     {
-      "serial": 98,
       "baseItemId": "spear",
       "id": "orome",
       "name": "Spear of Orome",
-      "tval": 22,
-      "sval": 2,
       "pval": 4,
       "depth": 15,
       "rarity": 45,
@@ -3364,12 +3070,9 @@
       "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease."
     },
     {
-      "serial": 99,
       "baseItemId": "spear",
       "id": "nimloth",
-      "name": "Spear 'Nimloth'",
-      "tval": 22,
-      "sval": 2,
+      "name": "Spear \u0027Nimloth\u0027",
       "pval": 3,
       "depth": 15,
       "rarity": 12,
@@ -3394,12 +3097,9 @@
       "description": "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a legendary tree, and spells to break the wills of the undead and strike cold into the breasts of your enemies lay upon this perfectly balanced spear."
     },
     {
-      "serial": 100,
       "baseItemId": "lance",
       "id": "eorlingas",
       "name": "Lance of Eorlingas",
-      "tval": 22,
-      "sval": 20,
       "pval": 2,
       "depth": 20,
       "rarity": 23,
@@ -3425,12 +3125,9 @@
       "description": "\"Forth Eorlingas!\"  To the field of Cormallen Eorl the Young came beyond hope to save beleaguered Gondor, and from his lance fled massive trolls and dire wolves."
     },
     {
-      "serial": 101,
       "baseItemId": "great_axe",
       "id": "axe_of_durin",
       "name": "Great Axe of Durin",
-      "tval": 22,
-      "sval": 25,
       "pval": 3,
       "depth": 30,
       "rarity": 90,
@@ -3462,15 +3159,12 @@
         "RES_CHAOS",
         "SHOW_MODS"
       ],
-      "description": "The twin massive axe heads of this ancient demon's dread gleam with mithril inlay, which tell sagas of endurance, invoking the powers of Kazad-dum to protect the wearer and slay all evils found underground."
+      "description": "The twin massive axe heads of this ancient demon\u0027s dread gleam with mithril inlay, which tell sagas of endurance, invoking the powers of Kazad-dum to protect the wearer and slay all evils found underground."
     },
     {
-      "serial": 102,
       "baseItemId": "great_axe",
       "id": "eonwe",
       "name": "Great Axe of Eonwe",
-      "tval": 22,
-      "sval": 25,
       "pval": 2,
       "depth": 30,
       "rarity": 120,
@@ -3513,12 +3207,9 @@
       "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind."
     },
     {
-      "serial": 103,
       "baseItemId": "battle_axe",
       "id": "balli_stonehand",
       "name": "Battle Axe of Balli Stonehand",
-      "tval": 22,
-      "sval": 22,
       "pval": 3,
       "depth": 30,
       "rarity": 15,
@@ -3551,12 +3242,9 @@
       "description": "The twin blades of this weapon were forged in Belegost, and powerful forces to resist and endure lie ready for he who shall wield it once more."
     },
     {
-      "serial": 104,
       "baseItemId": "battle_axe",
       "id": "lotharang",
-      "name": "Battle Axe 'Lotharang'",
-      "tval": 22,
-      "sval": 22,
+      "name": "Battle Axe \u0027Lotharang\u0027",
       "pval": 1,
       "depth": 30,
       "rarity": 15,
@@ -3586,12 +3274,9 @@
       "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor."
     },
     {
-      "serial": 105,
       "baseItemId": "lochaber_axe",
       "id": "mundwine",
-      "name": "Lochaber Axe 'Mundwine'",
-      "tval": 22,
-      "sval": 28,
+      "name": "Lochaber Axe \u0027Mundwine\u0027",
       "pval": 0,
       "depth": 30,
       "rarity": 8,
@@ -3615,12 +3300,9 @@
       "description": "A massive axe with twin razor-sharp heads, so large that it usually requires two hands to wield, with spells to ward off the elements intricately engraved upon its surface in filleted gold."
     },
     {
-      "serial": 106,
       "baseItemId": "broad_axe",
       "id": "barukkheled",
-      "name": "Broad Axe 'Barukkheled'",
-      "tval": 22,
-      "sval": 11,
+      "name": "Broad Axe \u0027Barukkheled\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -3644,12 +3326,9 @@
       "description": "A royal heirloom of the southern coast, strong in combat against the evil creatures of earth."
     },
     {
-      "serial": 107,
       "baseItemId": "trident",
       "id": "wrath",
       "name": "Trident of Wrath",
-      "tval": 22,
-      "sval": 5,
       "pval": 2,
       "depth": 15,
       "rarity": 35,
@@ -3676,12 +3355,9 @@
       "description": "A massive triple-pronged spear, so great it normally requires two hands to wield, evoking the spirit of Osse who with it pierced legions of evil and undead."
     },
     {
-      "serial": 108,
       "baseItemId": "trident",
       "id": "ulmo",
       "name": "Trident of Ulmo",
-      "tval": 22,
-      "sval": 5,
       "pval": 4,
       "depth": 30,
       "rarity": 90,
@@ -3719,12 +3395,9 @@
       "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water."
     },
     {
-      "serial": 109,
       "baseItemId": "scythe",
       "id": "avavir",
-      "name": "Scythe 'Avavir'",
-      "tval": 22,
-      "sval": 17,
+      "name": "Scythe \u0027Avavir\u0027",
       "pval": 3,
       "depth": 40,
       "rarity": 8,
@@ -3760,12 +3433,9 @@
       "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning."
     },
     {
-      "serial": 110,
       "baseItemId": "beaked_axe",
       "id": "hurin",
       "name": "Beaked Axe of Hurin",
-      "tval": 22,
-      "sval": 10,
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -3798,15 +3468,12 @@
           "dice": 80
         }
       },
-      "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog's troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\""
+      "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog\u0027s troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\""
     },
     {
-      "serial": 111,
       "baseItemId": "mighty_hammer",
       "id": "grond",
-      "name": "Mighty Hammer 'Grond'",
-      "tval": 21,
-      "sval": 50,
+      "name": "Mighty Hammer \u0027Grond\u0027",
       "pval": 0,
       "depth": 100,
       "rarity": 1,
@@ -3832,15 +3499,12 @@
         "SHOW_MODS",
         "INSTA_ART"
       ],
-      "description": "The mighty Hammer of the Underworld, blackened by doomspells of shattering, whose wielder holds the lives of all Morgoth's servants in his hand."
+      "description": "The mighty Hammer of the Underworld, blackened by doomspells of shattering, whose wielder holds the lives of all Morgoth\u0027s servants in his hand."
     },
     {
-      "serial": 112,
       "baseItemId": "flail",
       "id": "totila",
-      "name": "Flail 'Totila'",
-      "tval": 21,
-      "sval": 13,
+      "name": "Flail \u0027Totila\u0027",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -3870,12 +3534,9 @@
       "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down."
     },
     {
-      "serial": 113,
       "baseItemId": "two_handed_flail",
       "id": "thunderfist",
-      "name": "Two-Handed Flail 'Thunderfist'",
-      "tval": 21,
-      "sval": 18,
+      "name": "Two-Handed Flail \u0027Thunderfist\u0027",
       "pval": 4,
       "depth": 45,
       "rarity": 38,
@@ -3904,12 +3565,9 @@
       "description": "The long-lost weapon of Kzurin, Dwarven champion of ancient Belegost, with runes of strength in its handle, and flames and sparks that roar and crackle around its massive head."
     },
     {
-      "serial": 114,
       "baseItemId": "morning_star",
       "id": "bloodspike",
-      "name": "Morning Star 'Bloodspike'",
-      "tval": 21,
-      "sval": 12,
+      "name": "Morning Star \u0027Bloodspike\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 30,
@@ -3934,12 +3592,9 @@
       "description": "You feel strong and firm of foot as you whip the chain-suspended spiked orb this weapon bears around and bathe it in the blood of your foes."
     },
     {
-      "serial": 115,
       "baseItemId": "morning_star",
       "id": "firestar",
-      "name": "Morning Star 'Firestar'",
-      "tval": 21,
-      "sval": 12,
+      "name": "Morning Star \u0027Firestar\u0027",
       "pval": 0,
       "depth": 20,
       "rarity": 15,
@@ -3966,12 +3621,9 @@
       "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath."
     },
     {
-      "serial": 116,
       "baseItemId": "mace",
       "id": "taratol",
-      "name": "Mace 'Taratol'",
-      "tval": 21,
-      "sval": 5,
+      "name": "Mace \u0027Taratol\u0027",
       "pval": 0,
       "depth": 20,
       "rarity": 15,
@@ -4000,12 +3652,9 @@
       "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows."
     },
     {
-      "serial": 117,
       "baseItemId": "war_hammer",
       "id": "aule",
       "name": "War Hammer of Aule",
-      "tval": 21,
-      "sval": 8,
       "pval": 4,
       "depth": 40,
       "rarity": 75,
@@ -4038,12 +3687,9 @@
       "description": "The wondrous hammer of Aule, creator of the wise Dwarven lords of old. It bears magics of demolishing that no serpent or demon can withstand, and invokes the strength of mountains to ward off the tumult of the elements."
     },
     {
-      "serial": 118,
       "baseItemId": "quarterstaff",
       "id": "nar_i_vagil",
-      "name": "Quarterstaff 'Nar-i-vagil'",
-      "tval": 21,
-      "sval": 3,
+      "name": "Quarterstaff \u0027Nar-i-vagil\u0027",
       "pval": 3,
       "depth": 20,
       "rarity": 18,
@@ -4065,12 +3711,9 @@
       "description": "Named for a fiery star and set with gems of great worth binding mystic virtues of protection and thought."
     },
     {
-      "serial": 119,
       "baseItemId": "quarterstaff",
       "id": "eriril",
-      "name": "Quarterstaff 'Eriril'",
-      "tval": 21,
-      "sval": 3,
+      "name": "Quarterstaff \u0027Eriril\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 18,
@@ -4099,15 +3742,12 @@
           "dice": 0
         }
       },
-      "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things."
+      "description": "The radiant golden staff of an Istar of legend; this wizard\u0027s companion grants keen sight and clear knowledge of many hidden things."
     },
     {
-      "serial": 120,
       "baseItemId": "quarterstaff",
       "id": "olorin",
       "name": "Quarterstaff of Olorin",
-      "tval": 21,
-      "sval": 3,
       "pval": 4,
       "depth": 30,
       "rarity": 105,
@@ -4145,12 +3785,9 @@
       "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals."
     },
     {
-      "serial": 121,
       "baseItemId": "mace",
       "id": "deathwreaker",
-      "name": "Mace of Disruption 'Deathwreaker'",
-      "tval": 21,
-      "sval": 20,
+      "name": "Mace of Disruption \u0027Deathwreaker\u0027",
       "pval": 6,
       "depth": 80,
       "rarity": 38,
@@ -4181,12 +3818,9 @@
       "description": "A weapon so massive it seems beyond the strength of mortals, yet you feel the might of giants within you as you heft it.  As you grip the handle of ebony and steel, coronas of fire blaze and mighty spells to preserve magic activate around you.  You wield the Fear of Dragons and the Despair of the Undead!"
     },
     {
-      "serial": 122,
       "baseItemId": "lucerne_hammer",
       "id": "turmil",
-      "name": "Lucerne Hammer 'Turmil'",
-      "tval": 21,
-      "sval": 10,
+      "name": "Lucerne Hammer \u0027Turmil\u0027",
       "pval": 4,
       "depth": 20,
       "rarity": 15,
@@ -4221,12 +3855,9 @@
       "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically."
     },
     {
-      "serial": 123,
       "baseItemId": "whip",
       "id": "gothmog",
       "name": "Whip of Gothmog",
-      "tval": 21,
-      "sval": 2,
       "pval": -3,
       "depth": 60,
       "rarity": 25,
@@ -4264,15 +3895,12 @@
           "dice": 0
         }
       },
-      "description": "A great crackling Balrog's whip of flame, this weapon could bring even Ungoliant to heel."
+      "description": "A great crackling Balrog\u0027s whip of flame, this weapon could bring even Ungoliant to heel."
     },
     {
-      "serial": 124,
       "baseItemId": "long_bow",
       "id": "belthronding",
-      "name": "The Long Bow 'Belthronding'",
-      "tval": 19,
-      "sval": 13,
+      "name": "The Long Bow \u0027Belthronding\u0027",
       "pval": 1,
       "depth": 40,
       "rarity": 20,
@@ -4295,12 +3923,9 @@
       "description": "The great bow of Beleg Cuthalion, made of black yew and strung with elven hair that faintly shimmers a pale clear gold."
     },
     {
-      "serial": 125,
       "baseItemId": "long_bow",
       "id": "bow_of_bard",
       "name": "The Long Bow of Bard",
-      "tval": 19,
-      "sval": 13,
       "pval": 2,
       "depth": 30,
       "rarity": 20,
@@ -4322,12 +3947,9 @@
       "description": "The great yew bow of grim-faced Bard, who shot the mightiest arrow that songs record."
     },
     {
-      "serial": 126,
       "baseItemId": "heavy_crossbow",
       "id": "cubragol",
-      "name": "'Cubragol'",
-      "tval": 19,
-      "sval": 23,
+      "name": "\u0027Cubragol\u0027",
       "pval": 10,
       "depth": 50,
       "rarity": 25,
@@ -4355,12 +3977,9 @@
       }
     },
     {
-      "serial": 127,
       "baseItemId": "heavy_crossbow",
       "id": "arbalest_of_umbar",
       "name": "of Umbar",
-      "tval": 19,
-      "sval": 24,
       "pval": 2,
       "depth": 60,
       "rarity": 20,
@@ -4394,12 +4013,9 @@
       }
     },
     {
-      "serial": 128,
       "baseItemId": "long_bow",
       "id": "amrod",
       "name": "of Amrod",
-      "tval": 19,
-      "sval": 12,
       "pval": 2,
       "depth": 25,
       "rarity": 10,
@@ -4419,15 +4035,12 @@
         "RES_COLD",
         "REGEN"
       ],
-      "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
+      "description": "A hunting bow, once wielded by one of Feanor\u0027s last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
     },
     {
-      "serial": 129,
       "baseItemId": "long_bow",
       "id": "amras",
       "name": "of Amras",
-      "tval": 19,
-      "sval": 12,
       "pval": 1,
       "depth": 25,
       "rarity": 10,
@@ -4450,15 +4063,12 @@
         "RES_COLD",
         "SLOW_DIGEST"
       ],
-      "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
+      "description": "A hunting bow, once wielded by one of Feanor\u0027s last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
     },
     {
-      "serial": 130,
       "baseItemId": "mattock",
       "id": "nain",
       "name": "of Nain",
-      "tval": 20,
-      "sval": 7,
       "pval": 6,
       "depth": 60,
       "rarity": 8,
@@ -4492,12 +4102,9 @@
       }
     },
     {
-      "serial": 131,
       "baseItemId": "dwarven_pick",
       "id": "fine_dwarven_pick_of_erebor",
       "name": "of Erebor",
-      "tval": 20,
-      "sval": 6,
       "pval": 5,
       "depth": 55,
       "rarity": 5,
@@ -4523,15 +4130,12 @@
         "RES_LITE",
         "RES_DARK"
       ],
-      "description": "A fine dwarven pick, good for a miner, and suitable as a weapon should the wielder ever tunnel through into a foe's stronghold."
+      "description": "A fine dwarven pick, good for a miner, and suitable as a weapon should the wielder ever tunnel through into a foe\u0027s stronghold."
     },
     {
-      "serial": 132,
       "baseItemId": "mighty_hammer",
       "id": "fundin_bluecloak",
       "name": "of Fundin Bluecloak",
-      "tval": 21,
-      "sval": 6,
       "pval": 4,
       "depth": 65,
       "rarity": 100,
@@ -4566,12 +4170,9 @@
       }
     },
     {
-      "serial": 133,
       "baseItemId": "mighty_hammer",
       "id": "azaghal",
       "name": "of Azaghal",
-      "tval": 23,
-      "sval": 5,
       "pval": 0,
       "depth": 18,
       "rarity": 30,
@@ -4591,12 +4192,9 @@
       "description": "Azaghal, Dwarf-king of Beregost, fell before Glaurung in the Battle of Unnumbered Tears, but with his final stroke he dealt Glaurung such a blow that the Father of Dragons fled the field with all his kin, and was at first believed to be mortally wounded."
     },
     {
-      "serial": 134,
       "baseItemId": "small_metal_shield",
       "id": "haradrim",
       "name": "of the Haradrim",
-      "tval": 34,
-      "sval": 4,
       "pval": 2,
       "depth": 35,
       "rarity": 12,
@@ -4629,12 +4227,9 @@
       }
     },
     {
-      "serial": 135,
       "baseItemId": "broken_sword",
       "id": "narsil",
-      "name": "'Narsil'",
-      "tval": 23,
-      "sval": 2,
+      "name": "\u0027Narsil\u0027",
       "pval": 2,
       "depth": 10,
       "rarity": 4,
@@ -4658,12 +4253,9 @@
       "description": "The remnants of the sword whose shattered hilt once cut the One Ring off the hand of Sauron."
     },
     {
-      "serial": 136,
       "baseItemId": "long_sword",
       "id": "eowyn",
       "name": "of Eowyn",
-      "tval": 23,
-      "sval": 21,
       "pval": 4,
       "depth": 30,
       "rarity": 100,
