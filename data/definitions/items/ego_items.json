@@ -734,6 +734,22 @@
         "RES_ACID",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -773,6 +789,22 @@
         "RES_ELEC",
         "IGNORE_ELEC"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "ignore_elec"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -812,6 +844,22 @@
         "RES_FIRE",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -851,6 +899,22 @@
         "RES_COLD",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -896,6 +960,40 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -942,6 +1040,45 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -981,6 +1118,23 @@
         "AGGRAVATE",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -1027,6 +1181,62 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "sust_str"
+          },
+          {
+            "id": "sust_dex"
+          },
+          {
+            "id": "sust_con"
+          },
+          {
+            "id": "sust_int"
+          },
+          {
+            "id": "sust_wis"
+          },
+          {
+            "id": "sust_chr"
+          },
+          {
+            "id": "hold_life"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "chest"
       ],
@@ -1065,6 +1275,43 @@
         "INFRA",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          },
+          {
+            "id": "infra",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "chest"
       ],
@@ -1098,6 +1345,22 @@
         "RES_ACID",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "offHand"
       ],
@@ -1131,6 +1394,22 @@
         "RES_ELEC",
         "IGNORE_ELEC"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "ignore_elec"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "offHand"
       ],
@@ -1165,6 +1444,22 @@
         "RES_FIRE",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "offHand"
       ],
@@ -1198,6 +1493,22 @@
         "RES_COLD",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "offHand"
       ],
@@ -1236,6 +1547,40 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
       "slots": [
         "offHand"
@@ -1276,6 +1621,45 @@
         "IGNORE_COLD",
         "IGNORE_ELEC"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          },
+          {
+            "id": "ignore_elec"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
       "slots": [
         "offHand"
@@ -1316,6 +1700,44 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "sust_str"
+          },
+          {
+            "id": "sust_con"
+          },
+          {
+            "id": "sust_dex"
+          },
+          {
+            "id": "hold_life"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_disen"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants resistance to disenchantment, sustains various stats, hold life, and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
         "offHand"
@@ -1349,6 +1771,23 @@
         "AGGRAVATE",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Cursed shield that aggravates enemies and carries a light curse.",
       "slots": [
         "offHand"
@@ -1382,6 +1821,24 @@
         "INT",
         "SUST_INT"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_int"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Helm that increases intelligence and sustains the intelligence stat.",
       "slots": [
         "head"
@@ -1415,6 +1872,24 @@
         "WIS",
         "SUST_WIS"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_wis"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Helm that increases wisdom and sustains the wisdom stat.",
       "slots": [
         "head"
@@ -1448,6 +1923,24 @@
         "CHR",
         "SUST_CHR"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "charisma",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_chr"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Helm that increases charisma and sustains the charisma stat.",
       "slots": [
         "head"
@@ -1489,6 +1982,49 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_int"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "head"
       ],
@@ -1531,6 +2067,54 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_str"
+          },
+          {
+            "id": "sust_dex"
+          },
+          {
+            "id": "sust_con"
+          },
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "head"
       ],
@@ -1571,6 +2155,47 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          },
+          {
+            "id": "charisma",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_wis"
+          },
+          {
+            "id": "sust_chr"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_fear"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Crown that increases wisdom and charisma, sustains these stats, grants resistance to fear, and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
         "head"
@@ -1611,6 +2236,28 @@
         "RES_BLIND",
         "SEE_INVIS"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "search",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_blind"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants search ability, resistance to blindness, and the ability to see invisible.",
       "slots": [
         "head"
@@ -1644,6 +2291,24 @@
         "INFRA",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "infra",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Grants infravision and hides the item type.",
       "slots": [
         "head"
@@ -1677,6 +2342,24 @@
         "LITE",
         "RES_LITE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "light_radius",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_lite"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants light and resistance to light.",
       "slots": [
         "head"
@@ -1715,6 +2398,19 @@
       "flags": [
         "TELEPATHY"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "telepathy"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants telepathy.",
       "slots": [
         "head"
@@ -1753,6 +2449,19 @@
       "flags": [
         "REGEN"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "regen"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants regeneration.",
       "slots": [
         "head"
@@ -1786,6 +2495,23 @@
         "TELEPORT",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "teleportation"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Grants teleportation and carries a curse.",
       "slots": [
         "head"
@@ -1820,6 +2546,25 @@
         "RES_CONFU",
         "RES_FEAR"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_sound"
+          },
+          {
+            "id": "res_confu"
+          },
+          {
+            "id": "res_fear"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants resistance to sound, confusion, and fear.",
       "slots": [
         "head"
@@ -1857,6 +2602,37 @@
         "RES_BLIND",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "light_radius",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_lite"
+          },
+          {
+            "id": "res_dark"
+          },
+          {
+            "id": "res_blind"
+          },
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Grants resistance to light, dark and blindness, provides light, allows seeing invisible, and ignores damage from acid.",
       "slots": [
         "head"
@@ -1898,6 +2674,32 @@
         "CHR",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          },
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          },
+          {
+            "id": "charisma",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Helm that decreases intelligence, wisdom, and charisma, and carries a light curse.",
       "slots": [
         "head"
@@ -1939,6 +2741,32 @@
         "CON",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Crown that decreases strength, dexterity, and constitution, and carries a light curse.",
       "slots": [
         "head"
@@ -1975,6 +2803,31 @@
         "IGNORE_COLD",
         "RES_SHARD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          },
+          {
+            "id": "res_shard"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Cloak that grants resistance to shards and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
         "back"
@@ -2007,6 +2860,20 @@
       "flags": [
         "STEALTH"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Cloak that grants stealth.",
       "slots": [
         "back"
@@ -2043,6 +2910,33 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Cloak that grants stealth to its wearer. Cloak resists acid, electricity, fire, and cold.",
       "slots": [
         "back"
@@ -2079,6 +2973,36 @@
         "HIDE_TYPE",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          },
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_int"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Cloak that grants intelligence, sustains intelligence, provides stealth, and resists acid.",
       "slots": [
         "back"
@@ -2112,6 +3036,24 @@
         "SHOW_MODS",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Cloak that decreases to-hit and to-damage, but carries a light curse.",
       "slots": [
         "back"
@@ -2145,6 +3087,23 @@
         "AGGRAVATE",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Cloak that decreases armor class and carries a light curse.",
       "slots": [
         "back"
@@ -2179,6 +3138,28 @@
         "SHOW_MODS",
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "description": "Cloak that decreases to-hit and to-damage, carries a light curse and aggravates enemies.",
       "slots": [
         "back"
@@ -2211,6 +3192,19 @@
       "flags": [
         "FREE_ACT"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Gloves that grant free action.",
       "slots": [
         "hands"
@@ -2243,6 +3237,20 @@
       "flags": [
         "SHOW_MODS"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "They boost your to-hit and to-dam values.",
       "slots": [
         "hands"
@@ -2276,6 +3284,24 @@
         "DEX",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that increase dexterity.",
       "slots": [
         "hands"
@@ -2310,6 +3336,28 @@
         "SHOW_MODS",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that increase strength and to-hit and to-damage.",
       "slots": [
         "hands"
@@ -2347,6 +3395,39 @@
         "FREE_ACT",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "search",
+            "value_source": "pval"
+          },
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "feather"
+          },
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that increase dexterity, searching ability, and provide feather and free action.",
       "slots": [
         "hands"
@@ -2383,6 +3464,36 @@
         "AGGRAVATE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          },
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that increase strength, constitution, and to-hit, but aggravate enemies.",
       "slots": [
         "hands"
@@ -2417,6 +3528,28 @@
         "LIGHT_CURSE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that decrease strength and carry a light curse.",
       "slots": [
         "hands"
@@ -2451,6 +3584,28 @@
         "LIGHT_CURSE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Gloves that decrease dexterity and carry a light curse.",
       "slots": [
         "hands"
@@ -2483,6 +3638,19 @@
       "flags": [
         "FEATHER"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "feather"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Boots that slow descent.",
       "slots": [
         "feet"
@@ -2516,6 +3684,24 @@
         "STEALTH",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Boots that enhance stealth and hide the type.",
       "slots": [
         "feet"
@@ -2548,6 +3734,19 @@
       "flags": [
         "FREE_ACT"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Boots that grant free action.",
       "slots": [
         "feet"
@@ -2581,6 +3780,24 @@
         "SPEED",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "speed",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Boots that increase speed and hide the type.",
       "slots": [
         "feet"
@@ -2614,6 +3831,23 @@
         "RES_NEXUS",
         "FEATHER"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "feather"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_nexus"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Boots that provide resistance to nexus, and feather falling.",
       "slots": [
         "feet"
@@ -2651,6 +3885,39 @@
         "IGNORE_ACID",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          },
+          {
+            "id": "speed",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "feather"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Boots that enhance stealth, increase speed, hide the type, provide feather falling, and ignore acid and fire.",
       "slots": [
         "feet"
@@ -2685,6 +3952,28 @@
         "LIGHT_CURSE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "speed",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Boots that decrease speed, carry a light curse.",
       "slots": [
         "feet"
@@ -2721,6 +4010,36 @@
         "LIGHT_CURSE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "speed",
+            "value_source": "pval"
+          },
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Boots that decrease speed, stealth, aggravate enemies, and carry a light curse.",
       "slots": [
         "feet"
@@ -2771,6 +4090,41 @@
         "BLESSED",
         "RES_FEAR"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          },
+          {
+            "id": "blessed_item"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_fear"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_evil"
+          },
+          {
+            "id": "slay_undead"
+          },
+          {
+            "id": "slay_demon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that increase wisdom, slay evil, undead, and demons, grant see invisibility, are blessed, and provide resistance to fear.",
       "slots": [
         "mainHand",
@@ -2828,6 +4182,58 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "stealth",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "free_act"
+          },
+          {
+            "id": "see_invis"
+          },
+          {
+            "id": "feather"
+          },
+          {
+            "id": "regen"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that enhance stealth, grant free action, see invisibility, feather falling, regeneration, and provide resistance and immunity to various elements.",
       "slots": [
         "mainHand",
@@ -2874,6 +4280,24 @@
         "WIS",
         "BLESSED"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "blessed_item"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that increase wisdom and are blessed.",
       "slots": [
         "mainHand",
@@ -2928,6 +4352,50 @@
         "IGNORE_ACID",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "light_radius",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          },
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_dark"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_demon"
+          },
+          {
+            "id": "slay_orc"
+          },
+          {
+            "id": "slay_troll"
+          },
+          {
+            "id": "slay_dragon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that slay demons, orcs, trolls, and dragons, emit light, provide resistance to darkness, grant see invisibility and free action, and ignore acid and fire.",
       "slots": [
         "mainHand",
@@ -2980,6 +4448,45 @@
         "FREE_ACT",
         "SEE_INVIS"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "free_act"
+          },
+          {
+            "id": "see_invis"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_orc"
+          },
+          {
+            "id": "slay_troll"
+          },
+          {
+            "id": "slay_giant"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that increase strength, dexterity, and constitution, slay orcs, trolls, and giants, and grant free action and see invisibility.",
       "slots": [
         "mainHand",
@@ -3026,6 +4533,24 @@
         "BLOWS",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "blows",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Weapons that grant extra attacks and hide the type.",
       "slots": [
         "mainHand",
@@ -3077,6 +4602,42 @@
         "IGNORE_ACID",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "blows",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "aggravate_monsters"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_fear"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "description": "Weapons that increase strength, grant extra attacks, aggravate enemies, provide resistance to fear, hide the type, and ignore acid and fire.",
       "slots": [
         "mainHand",
@@ -3124,6 +4685,26 @@
         "RES_ACID",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_acid"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that provide acid branding, resistance to acid, and ignore acid.",
       "slots": [
         "mainHand",
@@ -3171,6 +4752,26 @@
         "RES_ELEC",
         "IGNORE_ELEC"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "ignore_elec"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_elec"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that provide lightning branding, resistance to lightning, and ignore lightning.",
       "slots": [
         "mainHand",
@@ -3218,6 +4819,26 @@
         "RES_FIRE",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_fire"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that provide fire branding, resistance to fire, and ignore fire.",
       "slots": [
         "mainHand",
@@ -3265,6 +4886,26 @@
         "RES_COLD",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_cold"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that provide cold branding, resistance to cold, and ignore cold.",
       "slots": [
         "mainHand",
@@ -3310,6 +4951,19 @@
       "flags": [
         "BRAND_POIS"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_pois"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are poisonous.",
       "slots": [
         "mainHand",
@@ -3355,6 +5009,19 @@
       "flags": [
         "SLAY_ANIMAL"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_animal"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against animals.",
       "slots": [
         "mainHand",
@@ -3400,6 +5067,19 @@
       "flags": [
         "SLAY_EVIL"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_evil"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against evil creatures.",
       "slots": [
         "mainHand",
@@ -3445,6 +5125,19 @@
       "flags": [
         "SLAY_UNDEAD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_undead"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against undead creatures.",
       "slots": [
         "mainHand",
@@ -3490,6 +5183,19 @@
       "flags": [
         "SLAY_DEMON"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_demon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against demons.",
       "slots": [
         "mainHand",
@@ -3535,6 +5241,19 @@
       "flags": [
         "SLAY_ORC"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_orc"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against orcs.",
       "slots": [
         "mainHand",
@@ -3580,6 +5299,19 @@
       "flags": [
         "SLAY_TROLL"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_troll"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against trolls.",
       "slots": [
         "mainHand",
@@ -3625,6 +5357,19 @@
       "flags": [
         "SLAY_GIANT"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_giant"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against giants.",
       "slots": [
         "mainHand",
@@ -3670,6 +5415,19 @@
       "flags": [
         "SLAY_DRAGON"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_dragon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are effective against dragons.",
       "slots": [
         "mainHand",
@@ -3717,6 +5475,28 @@
         "SLAY_ANIMAL",
         "SLOW_DIGEST"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "slow_digest"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_animal"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are extra effective against animals, grant intelligence and slow digestion.",
       "slots": [
         "mainHand",
@@ -3764,6 +5544,28 @@
         "SLAY_EVIL",
         "BLESSED"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "blessed_item"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_evil"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are extra effective against evil creatures, grant wisdom, and are blessed.",
       "slots": [
         "mainHand",
@@ -3811,6 +5613,28 @@
         "WIS",
         "SEE_INVIS"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "kill_undead"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are extra effective against undead creatures, grant wisdom, and allow seeing invisible.",
       "slots": [
         "mainHand",
@@ -3859,6 +5683,28 @@
         "INT",
         "RES_FIRE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "kill_demon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "mainHand",
         "offHand"
@@ -3905,6 +5751,28 @@
         "SLAY_ORC",
         "SUST_DEX"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_dex"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_orc"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "description": "Weapons that are extra effective against orcs, grant dexterity, and sustain dexterity.",
       "slots": [
         "mainHand",
@@ -3952,6 +5820,28 @@
         "SLAY_TROLL",
         "REGEN"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "regen"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_troll"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "mainHand",
         "offHand"
@@ -3999,6 +5889,28 @@
         "SLAY_GIANT",
         "SUST_STR"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "sust_str"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_giant"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "mainHand",
         "offHand"
@@ -4046,6 +5958,28 @@
         "KILL_DRAGON",
         "RES_FEAR"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_fear"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "kill_dragon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "mainHand",
         "offHand"
@@ -4080,6 +6014,24 @@
         "TUNNEL",
         "BRAND_ACID"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "tunnel",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_acid"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "mainHand"
       ],
@@ -4116,6 +6068,36 @@
         "IMPACT",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "strength",
+            "value_source": "pval"
+          },
+          {
+            "id": "tunnel",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "impact"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_acid"
+          }
+        ],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "mainHand"
       ],
@@ -4167,6 +6149,42 @@
         "SLAY_UNDEAD",
         "BRAND_POIS"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "see_invis"
+          },
+          {
+            "id": "aggravate_monsters"
+          },
+          {
+            "id": "hold_life"
+          },
+          {
+            "id": "drain_exp"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_undead"
+          },
+          {
+            "id": "brand_pois"
+          }
+        ],
+        "curses": [
+          {
+            "id": "HEAVY_CURSE"
+          },
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "slots": [
         "mainHand",
         "offHand"
@@ -4198,6 +6216,15 @@
         }
       ],
       "flags": [],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ranged"
       ],
@@ -4228,6 +6255,15 @@
         }
       ],
       "flags": [],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ranged"
       ],
@@ -4265,6 +6301,39 @@
         "IGNORE_FIRE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "might",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "ranged"
       ],
@@ -4301,6 +6370,35 @@
         "IGNORE_FIRE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "might",
+            "value_source": "pval"
+          },
+          {
+            "id": "shots",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "ranged"
       ],
@@ -4334,6 +6432,24 @@
         "MIGHT",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "might",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "ranged"
       ],
@@ -4367,6 +6483,24 @@
         "SHOTS",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "shots",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "ranged"
       ],
@@ -4404,6 +6538,39 @@
         "IGNORE_FIRE",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "dexterity",
+            "value_source": "pval"
+          },
+          {
+            "id": "shots",
+            "value_source": "pval"
+          },
+          {
+            "id": "might",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "ranged"
       ],
@@ -4438,6 +6605,26 @@
         "DRAIN_EXP",
         "SEE_INVIS"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "drain_exp"
+          },
+          {
+            "id": "see_invis"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "slots": [
         "ranged"
       ],
@@ -4482,6 +6669,19 @@
       "flags": [
         "SLAY_ANIMAL"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_animal"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4526,6 +6726,19 @@
       "flags": [
         "SLAY_EVIL"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_evil"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4569,6 +6782,19 @@
       "flags": [
         "SLAY_UNDEAD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_undead"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4613,6 +6839,19 @@
       "flags": [
         "SLAY_DEMON"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_demon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4658,6 +6897,23 @@
         "BRAND_ACID",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_acid"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4703,6 +6959,23 @@
         "BRAND_ELEC",
         "IGNORE_ELEC"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_elec"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_elec"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4747,6 +7020,19 @@
       "flags": [
         "SLAY_GIANT"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_giant"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4791,6 +7077,19 @@
       "flags": [
         "SLAY_DRAGON"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_dragon"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4839,6 +7138,32 @@
         "IGNORE_FIRE",
         "IGNORE_ACID"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_acid"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "slay_evil"
+          },
+          {
+            "id": "slay_demon"
+          },
+          {
+            "id": "slay_undead"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4883,6 +7208,19 @@
       "flags": [
         "BRAND_POIS"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_pois"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4928,6 +7266,23 @@
         "BRAND_FIRE",
         "IGNORE_FIRE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_fire"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_fire"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -4973,6 +7328,23 @@
         "BRAND_COLD",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [
+          {
+            "id": "brand_cold"
+          }
+        ],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -5015,6 +7387,15 @@
         }
       ],
       "flags": [],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -5059,6 +7440,19 @@
       "flags": [
         "LIGHT_CURSE"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [
+          {
+            "id": "LIGHT_CURSE"
+          }
+        ],
+        "display_flags": []
+      },
       "slots": [
         "ammo"
       ],
@@ -5099,6 +7493,45 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "constitution",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "offHand"
       ],
@@ -5132,6 +7565,22 @@
         "HOLD_LIFE",
         "FREE_ACT"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "hold_life"
+          },
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "back"
       ],
@@ -5172,6 +7621,44 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [
+          {
+            "id": "RESIST"
+          }
+        ],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "back"
       ],
@@ -5182,7 +7669,7 @@
       "activation": {
         "id": "RESIST",
         "recharge": {
-          "base": 111,
+          "base": 100,
           "dice": 0
         }
       }
@@ -5218,6 +7705,40 @@
         "IGNORE_FIRE",
         "IGNORE_COLD"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [],
+        "resistances": [
+          {
+            "id": "res_acid"
+          },
+          {
+            "id": "res_elec"
+          },
+          {
+            "id": "res_fire"
+          },
+          {
+            "id": "res_cold"
+          },
+          {
+            "id": "ignore_acid"
+          },
+          {
+            "id": "ignore_elec"
+          },
+          {
+            "id": "ignore_fire"
+          },
+          {
+            "id": "ignore_cold"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "back"
       ],
@@ -5254,6 +7775,36 @@
         "SHOW_MODS",
         "HIDE_TYPE"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "intelligence",
+            "value_source": "pval"
+          },
+          {
+            "id": "wisdom",
+            "value_source": "pval"
+          },
+          {
+            "id": "to_hit",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": [
+          {
+            "id": "HIDE_TYPE"
+          }
+        ]
+      },
       "slots": [
         "hands"
       ],
@@ -5287,6 +7838,23 @@
         "FREE_ACT",
         "RES_POIS"
       ],
+      "effects": {
+        "affixes": [],
+        "capabilities": [
+          {
+            "id": "free_act"
+          }
+        ],
+        "resistances": [
+          {
+            "id": "res_pois"
+          }
+        ],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "feet"
       ],
@@ -5320,6 +7888,24 @@
         "REGEN",
         "MIGHT"
       ],
+      "effects": {
+        "affixes": [
+          {
+            "id": "might",
+            "value_source": "pval"
+          }
+        ],
+        "capabilities": [
+          {
+            "id": "regen"
+          }
+        ],
+        "resistances": [],
+        "activations": [],
+        "combat_policies": [],
+        "curses": [],
+        "display_flags": []
+      },
       "slots": [
         "ranged"
       ],
