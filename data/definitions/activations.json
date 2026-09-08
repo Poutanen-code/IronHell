@@ -1266,7 +1266,7 @@
           "action_id": "AlterTerrain",
           "parameters": {
             "terrain_operation": "destroy_trap_or_door",
-            "target_mode": "touch",
+            "target_mode": "self",
             "radius": 1,
             "feature_filter": [
               "traps",
