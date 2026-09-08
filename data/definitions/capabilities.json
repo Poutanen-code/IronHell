@@ -72,9 +72,6 @@
             "category": "survival",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.free_action_immunity"
-            ],
             "grant_sources": [
                 "race",
                 "ring",
@@ -91,9 +88,6 @@
             "category": "survival",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.hold_life_mitigation"
-            ],
             "grant_sources": [
                 "race",
                 "amulet",
@@ -326,9 +320,6 @@
             "category": "curse",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.aggravate_behavior"
-            ],
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -604,9 +595,6 @@
             "category": "curse",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.drain_exp_tick"
-            ],
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -681,9 +669,6 @@
             "category": "curse",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.teleport_curse_tick"
-            ],
             "grant_sources": [
                 "ring",
                 "amulet",
@@ -733,9 +718,261 @@
             "category": "combat",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
-            "policy_hooks": [
-                "policy.impact_quake_trigger"
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
             ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_dragon",
+            "source_flag": "SLAY_DRAGON",
+            "name": "Slay Dragon",
+            "description": "Deals increased melee damage against dragons.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_evil",
+            "source_flag": "SLAY_EVIL",
+            "name": "Slay Evil",
+            "description": "Deals increased melee damage against evil creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_undead",
+            "source_flag": "SLAY_UNDEAD",
+            "name": "Slay Undead",
+            "description": "Deals increased melee damage against undead creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_demon",
+            "source_flag": "SLAY_DEMON",
+            "name": "Slay Demon",
+            "description": "Deals increased melee damage against demon creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_orc",
+            "source_flag": "SLAY_ORC",
+            "name": "Slay Orc",
+            "description": "Deals increased melee damage against orc creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_troll",
+            "source_flag": "SLAY_TROLL",
+            "name": "Slay Troll",
+            "description": "Deals increased melee damage against troll creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_giant",
+            "source_flag": "SLAY_GIANT",
+            "name": "Slay Giant",
+            "description": "Deals increased melee damage against giant creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "slay_animal",
+            "source_flag": "SLAY_ANIMAL",
+            "name": "Slay Animal",
+            "description": "Deals increased melee damage against animal creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "kill_undead",
+            "source_flag": "KILL_UNDEAD",
+            "name": "Kill Undead",
+            "description": "Deals exceptional melee damage against undead creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "kill_demon",
+            "source_flag": "KILL_DEMON",
+            "name": "Kill Demon",
+            "description": "Deals exceptional melee damage against demon creatures.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "kill_dragon",
+            "source_flag": "KILL_DRAGON",
+            "name": "Kill Dragon",
+            "description": "Deals exceptional melee damage against dragons.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_fire",
+            "source_flag": "BRAND_FIRE",
+            "name": "Fire Brand",
+            "description": "Adds fire-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_fire",
+            "source_flag": "BRAND_FIRE",
+            "name": "Fire Brand",
+            "description": "Adds fire-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_acid",
+            "source_flag": "BRAND_ACID",
+            "name": "Acid Brand",
+            "description": "Adds acid-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_elec",
+            "source_flag": "BRAND_ELEC",
+            "name": "Electric Brand",
+            "description": "Adds electric-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_cold",
+            "source_flag": "BRAND_COLD",
+            "name": "Cold Brand",
+            "description": "Adds cold-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
+            "grant_sources": [
+                "weapon",
+                "artifact",
+                "ego_item"
+            ],
+            "provenance_status": "derived"
+        },
+        {
+            "id": "brand_pois",
+            "source_flag": "BRAND_POIS",
+            "name": "Poison Brand",
+            "description": "Adds poison-branded melee damage.",
+            "category": "combat",
+            "scope": "bearer_passive",
+            "canonical_owner": "capability",
             "grant_sources": [
                 "weapon",
                 "artifact",
