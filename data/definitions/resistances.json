@@ -8,6 +8,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "acid",
+      "grant_sources": [
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -17,6 +23,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "elec",
+      "grant_sources": [
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -26,6 +38,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "fire",
+      "grant_sources": [
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -35,6 +53,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "cold",
+      "grant_sources": [
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -44,6 +68,13 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "pois",
+      "grant_sources": [
+        "race",
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -53,6 +84,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "lite",
+      "grant_sources": [
+        "race",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -62,6 +99,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "dark",
+      "grant_sources": [
+        "race",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -71,6 +114,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "blind",
+      "grant_sources": [
+        "race",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -80,6 +128,12 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "confu",
+      "grant_sources": [
+        "ring",
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -89,6 +143,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "sound",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -98,6 +157,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "shard",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -107,6 +171,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "nexus",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -116,6 +185,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "nethr",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -125,6 +199,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "chaos",
+      "grant_sources": [
+        "weapon",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -134,6 +213,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "disen",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "shield"
+      ],
       "provenance_status": "verified"
     },
     {
@@ -143,6 +227,11 @@
       "semantic_kind": "resist",
       "target_scope": "bearer",
       "channel": "fear",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
       "provenance_status": "verified"
     },
     {
