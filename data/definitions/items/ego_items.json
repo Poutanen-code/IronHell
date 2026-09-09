@@ -837,10 +837,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_fire",
+        "capabilities": [
           "ignore_fire"
+        ],
+        "resistances": [
+          "res_fire"
         ],
         "activations": [],
         "combat_policies": [],
@@ -887,10 +888,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_cold",
+        "capabilities": [
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -943,16 +945,17 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1011,16 +1014,17 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1132,17 +1136,17 @@
           "sust_int",
           "sust_wis",
           "sust_chr",
-          "hold_life"
+          "hold_life",
+          "ignore_acid",
+          "ignore_elec",
+          "ignore_fire",
+          "ignore_cold"
         ],
         "resistances": [
           "res_acid",
           "res_elec",
           "res_fire",
-          "res_cold",
-          "ignore_acid",
-          "ignore_elec",
-          "ignore_fire",
-          "ignore_cold"
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1202,12 +1206,11 @@
           }
         ],
         "capabilities": [
-          "free_act"
-        ],
-        "resistances": [
+          "free_act",
           "ignore_acid",
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -1249,10 +1252,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
+        "capabilities": [
           "ignore_acid"
+        ],
+        "resistances": [
+          "res_acid"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1293,10 +1297,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_elec",
+        "capabilities": [
           "ignore_elec"
+        ],
+        "resistances": [
+          "res_elec"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1338,10 +1343,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_fire",
+        "capabilities": [
           "ignore_fire"
+        ],
+        "resistances": [
+          "res_fire"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1382,10 +1388,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_cold",
+        "capabilities": [
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1431,16 +1438,17 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1806,17 +1814,17 @@
           }
         ],
         "capabilities": [
-          "sust_int"
+          "sust_int",
+          "ignore_acid",
+          "ignore_elec",
+          "ignore_fire",
+          "ignore_cold"
         ],
         "resistances": [
           "res_acid",
           "res_elec",
           "res_fire",
-          "res_cold",
-          "ignore_acid",
-          "ignore_elec",
-          "ignore_fire",
-          "ignore_cold"
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -1883,14 +1891,13 @@
           "sust_str",
           "sust_dex",
           "sust_con",
-          "free_act"
-        ],
-        "resistances": [
+          "free_act",
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -1948,14 +1955,14 @@
         ],
         "capabilities": [
           "sust_wis",
-          "sust_chr"
-        ],
-        "resistances": [
-          "res_fear",
+          "sust_chr",
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_fear"
         ],
         "activations": [],
         "combat_policies": [],
@@ -2346,13 +2353,13 @@
           }
         ],
         "capabilities": [
-          "see_invis"
+          "see_invis",
+          "ignore_acid"
         ],
         "resistances": [
           "res_lite",
           "res_dark",
-          "res_blind",
-          "ignore_acid"
+          "res_blind"
         ],
         "activations": [],
         "combat_policies": [],
@@ -2524,12 +2531,13 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold",
+          "ignore_cold"
+        ],
+        "resistances": [
           "res_shard"
         ],
         "activations": [],
@@ -2624,13 +2632,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -2683,11 +2691,10 @@
           }
         ],
         "capabilities": [
-          "sust_int"
-        ],
-        "resistances": [
+          "sust_int",
           "ignore_acid"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -3526,12 +3533,11 @@
           }
         ],
         "capabilities": [
-          "feather"
-        ],
-        "resistances": [
+          "feather",
           "ignore_acid",
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -3788,17 +3794,17 @@
           "free_act",
           "see_invis",
           "feather",
-          "regen"
+          "regen",
+          "ignore_acid",
+          "ignore_elec",
+          "ignore_fire",
+          "ignore_cold"
         ],
         "resistances": [
           "res_acid",
           "res_elec",
           "res_fire",
-          "res_cold",
-          "ignore_acid",
-          "ignore_elec",
-          "ignore_fire",
-          "ignore_cold"
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -3928,12 +3934,12 @@
         ],
         "capabilities": [
           "see_invis",
-          "free_act"
-        ],
-        "resistances": [
-          "res_dark",
+          "free_act",
           "ignore_acid",
           "ignore_fire"
+        ],
+        "resistances": [
+          "res_dark"
         ],
         "activations": [],
         "combat_policies": [
@@ -4148,12 +4154,12 @@
           }
         ],
         "capabilities": [
-          "aggravate_monsters"
-        ],
-        "resistances": [
-          "res_fear",
+          "aggravate_monsters",
           "ignore_acid",
           "ignore_fire"
+        ],
+        "resistances": [
+          "res_fear"
         ],
         "activations": [],
         "combat_policies": [],
@@ -4210,10 +4216,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
+        "capabilities": [
           "ignore_acid"
+        ],
+        "resistances": [
+          "res_acid"
         ],
         "activations": [],
         "combat_policies": [
@@ -4270,10 +4277,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_elec",
+        "capabilities": [
           "ignore_elec"
+        ],
+        "resistances": [
+          "res_elec"
         ],
         "activations": [],
         "combat_policies": [
@@ -4330,10 +4338,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_fire",
+        "capabilities": [
           "ignore_fire"
+        ],
+        "resistances": [
+          "res_fire"
         ],
         "activations": [],
         "combat_policies": [
@@ -4390,10 +4399,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_cold",
+        "capabilities": [
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [
@@ -5712,12 +5722,11 @@
           }
         ],
         "capabilities": [
-          "free_act"
-        ],
-        "resistances": [
+          "free_act",
           "ignore_acid",
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -5771,11 +5780,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_acid",
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -5930,11 +5939,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_acid",
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [],
         "curses": [],
@@ -6250,10 +6259,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_acid"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [
           "brand_acid"
@@ -6307,10 +6316,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_elec"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [
           "brand_elec"
@@ -6475,11 +6484,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_fire",
           "ignore_acid"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [
           "slay_evil",
@@ -6589,10 +6598,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_fire"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [
           "brand_fire"
@@ -6646,10 +6655,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capabilities": [
           "ignore_cold"
         ],
+        "resistances": [],
         "activations": [],
         "combat_policies": [
           "brand_cold"
@@ -6807,16 +6816,17 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
@@ -6908,16 +6918,17 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [
           "RESIST"
@@ -6973,16 +6984,17 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
-          "res_acid",
-          "res_elec",
-          "res_fire",
-          "res_cold",
+        "capabilities": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
+        ],
+        "resistances": [
+          "res_acid",
+          "res_elec",
+          "res_fire",
+          "res_cold"
         ],
         "activations": [],
         "combat_policies": [],
