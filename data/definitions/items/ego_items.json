@@ -1,4 +1,4 @@
-{
+﻿{
   "schema_version": 1,
   "_meta": {
     "source": "MAngband 1.5.3 lib/edit/ego_item.txt",
@@ -704,7 +704,6 @@
   },
   "ego_items": [
     {
-      "serial": 4,
       "id": "of_resist_acid",
       "name": "of Resist Acid",
       "rating": 16,
@@ -759,7 +758,6 @@
       "description": "Grants resistance to acid and ignores acid damage."
     },
     {
-      "serial": 5,
       "id": "of_resist_lightning",
       "name": "of Resist Lightning",
       "rating": 10,
@@ -814,7 +812,6 @@
       "description": "Grants resistance to lightning and ignores lightning damage."
     },
     {
-      "serial": 6,
       "id": "of_resist_fire",
       "name": "of Resist Fire",
       "rating": 14,
@@ -869,7 +866,6 @@
       "description": "Grants resistance to fire and ignores fire damage."
     },
     {
-      "serial": 7,
       "id": "of_resist_cold",
       "name": "of Resist Cold",
       "rating": 12,
@@ -924,7 +920,6 @@
       "description": "Grants resistance to cold and ignores cold damage."
     },
     {
-      "serial": 8,
       "id": "of_resistance",
       "name": "of Resistance",
       "rating": 20,
@@ -1003,7 +998,6 @@
       "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
-      "serial": 9,
       "id": "of_elvenkind",
       "name": "of Elvenkind",
       "rating": 25,
@@ -1088,7 +1082,6 @@
       "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
-      "serial": 10,
       "id": "of_vulnerability",
       "name": "of Vulnerability",
       "rating": 0,
@@ -1144,7 +1137,6 @@
       "description": "Cursed armor that aggravates enemies."
     },
     {
-      "serial": 11,
       "id": "of_permanence",
       "name": "of Permanence",
       "rating": 30,
@@ -1246,7 +1238,6 @@
       "description": "Grants various stat sustains, hold life, and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
-      "serial": 12,
       "id": "of_dwarven",
       "name": "(Dwarven)",
       "rating": 18,
@@ -1321,7 +1312,6 @@
       "description": "Grants resistance to acid and fire, free action, increased strength and constitution, infravision, and hides the type of armor."
     },
     {
-      "serial": 16,
       "id": "of_resist_acid_shield",
       "name": "of Resist Acid",
       "rating": 16,
@@ -1370,7 +1360,6 @@
       "description": "Grants resistance to acid and ignores acid damage."
     },
     {
-      "serial": 17,
       "id": "of_resist_lightning_shield",
       "name": "of Resist Lightning",
       "rating": 10,
@@ -1419,7 +1408,6 @@
       "description": "Grants resistance to lightning and ignores lightning damage."
     },
     {
-      "serial": 18,
       "id": "of_resist_fire",
       "name": "of Resist Fire",
       "rating": 14,
@@ -1468,7 +1456,6 @@
       ]
     },
     {
-      "serial": 19,
       "id": "of_resist_cold",
       "name": "of Resist Cold",
       "rating": 12,
@@ -1517,7 +1504,6 @@
       ]
     },
     {
-      "serial": 20,
       "id": "of_resistance",
       "name": "of Resistance",
       "rating": 20,
@@ -1590,7 +1576,6 @@
       ]
     },
     {
-      "serial": 21,
       "id": "of_elvenkind",
       "name": "of Elvenkind",
       "rating": 25,
@@ -1669,7 +1654,6 @@
       ]
     },
     {
-      "serial": 22,
       "id": "of_preservation",
       "name": "of Preservation",
       "rating": 25,
@@ -1747,7 +1731,6 @@
       ]
     },
     {
-      "serial": 23,
       "id": "of_vulnerability_shield",
       "name": "of Vulnerability",
       "rating": 0,
@@ -1797,7 +1780,6 @@
       ]
     },
     {
-      "serial": 24,
       "id": "of_intelligence",
       "name": "of Intelligence",
       "rating": 13,
@@ -1848,7 +1830,6 @@
       ]
     },
     {
-      "serial": 25,
       "id": "of_wisdom",
       "name": "of Wisdom",
       "rating": 13,
@@ -1899,7 +1880,6 @@
       ]
     },
     {
-      "serial": 26,
       "id": "of_beauty",
       "name": "of Beauty",
       "rating": 8,
@@ -1950,7 +1930,6 @@
       ]
     },
     {
-      "serial": 27,
       "id": "of_the_magi",
       "name": "of the Magi",
       "rating": 15,
@@ -2034,7 +2013,6 @@
       "description": "Crown that increases intelligence, sustains the intelligence stat, grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
     },
     {
-      "serial": 28,
       "id": "of_might",
       "name": "of Might",
       "rating": 19,
@@ -2124,7 +2102,6 @@
       "description": "Crown that increases strength, dexterity, and constitution, sustains these stats, grants free action, and ignores damage from acid, electricity, fire, and cold."
     },
     {
-      "serial": 29,
       "id": "of_lordliness",
       "name": "of Lordliness",
       "rating": 17,
@@ -2205,7 +2182,6 @@
       ]
     },
     {
-      "serial": 30,
       "id": "of_seeing",
       "name": "of Seeing",
       "rating": 8,
@@ -2267,7 +2243,6 @@
       ]
     },
     {
-      "serial": 31,
       "id": "of_infravision",
       "name": "of Infravision",
       "rating": 11,
@@ -2318,7 +2293,6 @@
       ]
     },
     {
-      "serial": 32,
       "id": "of_light",
       "name": "of Light",
       "rating": 6,
@@ -2369,7 +2343,6 @@
       ]
     },
     {
-      "serial": 33,
       "id": "of_telepathy",
       "name": "of Telepathy",
       "rating": 20,
@@ -2420,7 +2393,6 @@
       ]
     },
     {
-      "serial": 34,
       "id": "of_regeneration",
       "name": "of Regeneration",
       "rating": 10,
@@ -2471,7 +2443,6 @@
       ]
     },
     {
-      "serial": 35,
       "id": "of_teleportation",
       "name": "of Teleportation",
       "rating": 0,
@@ -2521,7 +2492,6 @@
       ]
     },
     {
-      "serial": 36,
       "id": "of_serenity",
       "name": "of Serenity",
       "rating": 20,
@@ -2574,7 +2544,6 @@
       ]
     },
     {
-      "serial": 37,
       "id": "of_night_and_day",
       "name": "of Night and Day",
       "rating": 18,
@@ -2642,7 +2611,6 @@
       ]
     },
     {
-      "serial": 38,
       "id": "of_dullness",
       "name": "of Dullness",
       "rating": 0,
@@ -2709,7 +2677,6 @@
       ]
     },
     {
-      "serial": 39,
       "id": "of_sickliness",
       "name": "of Sickliness",
       "rating": 0,
@@ -2776,7 +2743,6 @@
       ]
     },
     {
-      "serial": 40,
       "id": "of_protection",
       "name": "of Protection",
       "rating": 10,
@@ -2837,7 +2803,6 @@
       ]
     },
     {
-      "serial": 41,
       "id": "of_stealth",
       "name": "of Stealth",
       "rating": 10,
@@ -2883,7 +2848,6 @@
       ]
     },
     {
-      "serial": 42,
       "id": "of_aman",
       "name": "of Aman",
       "rating": 20,
@@ -2946,7 +2910,6 @@
       ]
     },
     {
-      "serial": 43,
       "id": "of_the_magi",
       "name": "of the Magi",
       "rating": 15,
@@ -3012,7 +2975,6 @@
       ]
     },
     {
-      "serial": 44,
       "id": "of_enveloping",
       "name": "of Enveloping",
       "rating": 0,
@@ -3063,7 +3025,6 @@
       ]
     },
     {
-      "serial": 45,
       "id": "of_vulnerability_cloak",
       "name": "of Vulnerability",
       "rating": 0,
@@ -3113,7 +3074,6 @@
       ]
     },
     {
-      "serial": 46,
       "id": "of_irritation",
       "name": "of Irritation",
       "rating": 0,
@@ -3169,7 +3129,6 @@
       ]
     },
     {
-      "serial": 48,
       "id": "of_free_action",
       "name": "of Free Action",
       "rating": 11,
@@ -3214,7 +3173,6 @@
       ]
     },
     {
-      "serial": 49,
       "id": "of_slaying",
       "name": "of Slaying",
       "rating": 17,
@@ -3260,7 +3218,6 @@
       ]
     },
     {
-      "serial": 50,
       "id": "of_agility",
       "name": "of Agility",
       "rating": 14,
@@ -3311,7 +3268,6 @@
       ]
     },
     {
-      "serial": 51,
       "id": "of_power",
       "name": "of Power",
       "rating": 22,
@@ -3367,7 +3323,6 @@
       ]
     },
     {
-      "serial": 52,
       "id": "of_thievery",
       "name": "of Thievery",
       "rating": 22,
@@ -3437,7 +3392,6 @@
       ]
     },
     {
-      "serial": 53,
       "id": "of_combat",
       "name": "of Combat",
       "rating": 22,
@@ -3503,7 +3457,6 @@
       ]
     },
     {
-      "serial": 54,
       "id": "of_weakness",
       "name": "of Weakness",
       "rating": 0,
@@ -3559,7 +3512,6 @@
       ]
     },
     {
-      "serial": 55,
       "id": "of_clumsiness",
       "name": "of Clumsiness",
       "rating": 0,
@@ -3615,7 +3567,6 @@
       ]
     },
     {
-      "serial": 56,
       "id": "of_slow_descent",
       "name": "of Slow Descent",
       "rating": 7,
@@ -3660,7 +3611,6 @@
       ]
     },
     {
-      "serial": 57,
       "id": "of_stealth_boots",
       "name": "of Stealth",
       "rating": 16,
@@ -3711,7 +3661,6 @@
       ]
     },
     {
-      "serial": 58,
       "id": "of_free_action_boots",
       "name": "of Free Action",
       "rating": 15,
@@ -3756,7 +3705,6 @@
       ]
     },
     {
-      "serial": 59,
       "id": "of_speed",
       "name": "of Speed",
       "rating": 25,
@@ -3807,7 +3755,6 @@
       ]
     },
     {
-      "serial": 60,
       "id": "of_stability",
       "name": "of Stability",
       "rating": 20,
@@ -3857,7 +3804,6 @@
       ]
     },
     {
-      "serial": 61,
       "id": "of_elvenkind",
       "name": "of Elvenkind",
       "rating": 30,
@@ -3927,7 +3873,6 @@
       ]
     },
     {
-      "serial": 62,
       "id": "of_slowness",
       "name": "of Slowness",
       "rating": 0,
@@ -3983,7 +3928,6 @@
       ]
     },
     {
-      "serial": 63,
       "id": "of_annoyance",
       "name": "of Annoyance",
       "rating": 0,
@@ -4049,7 +3993,6 @@
       ]
     },
     {
-      "serial": 64,
       "id": "holy_avenger",
       "name": "(Holy Avenger)",
       "rating": 30,
@@ -4135,7 +4078,6 @@
       ]
     },
     {
-      "serial": 65,
       "id": "defender",
       "name": "(Defender)",
       "rating": 25,
@@ -4244,7 +4186,6 @@
       ]
     },
     {
-      "serial": 66,
       "id": "blessed",
       "name": "(Blessed)",
       "rating": 20,
@@ -4308,7 +4249,6 @@
       ]
     },
     {
-      "serial": 67,
       "id": "of_gondolin",
       "name": "of Gondolin",
       "rating": 30,
@@ -4406,7 +4346,6 @@
       ]
     },
     {
-      "serial": 68,
       "id": "of_westernesse",
       "name": "of Westernesse",
       "rating": 20,
@@ -4497,7 +4436,6 @@
       ]
     },
     {
-      "serial": 69,
       "id": "of_extra_attacks",
       "name": "of Extra Attacks",
       "rating": 20,
@@ -4561,7 +4499,6 @@
       ]
     },
     {
-      "serial": 70,
       "id": "of_fury",
       "name": "of Fury",
       "rating": 30,
@@ -4648,7 +4585,6 @@
       ]
     },
     {
-      "serial": 72,
       "id": "of_acid",
       "name": "of Acid",
       "rating": 20,
@@ -4715,7 +4651,6 @@
       ]
     },
     {
-      "serial": 73,
       "id": "of_lightning",
       "name": "of Lightning",
       "rating": 20,
@@ -4782,7 +4717,6 @@
       ]
     },
     {
-      "serial": 74,
       "id": "of_flame",
       "name": "of Flame",
       "rating": 15,
@@ -4849,7 +4783,6 @@
       ]
     },
     {
-      "serial": 75,
       "id": "of_frost",
       "name": "of Frost",
       "rating": 15,
@@ -4916,7 +4849,6 @@
       ]
     },
     {
-      "serial": 76,
       "id": "of_venom",
       "name": "of Venom",
       "rating": 15,
@@ -4974,7 +4906,6 @@
       ]
     },
     {
-      "serial": 80,
       "id": "of_slay_animal",
       "name": "of Slay Animal",
       "rating": 18,
@@ -5032,7 +4963,6 @@
       ]
     },
     {
-      "serial": 81,
       "id": "of_slay_evil",
       "name": "of Slay Evil",
       "rating": 18,
@@ -5090,7 +5020,6 @@
       ]
     },
     {
-      "serial": 82,
       "id": "of_slay_undead",
       "name": "of Slay Undead",
       "rating": 18,
@@ -5148,7 +5077,6 @@
       ]
     },
     {
-      "serial": 83,
       "id": "of_slay_demon",
       "name": "of Slay Demon",
       "rating": 14,
@@ -5206,7 +5134,6 @@
       ]
     },
     {
-      "serial": 84,
       "id": "of_slay_orc",
       "name": "of Slay Orc",
       "rating": 10,
@@ -5264,7 +5191,6 @@
       ]
     },
     {
-      "serial": 85,
       "id": "of_slay_troll",
       "name": "of Slay Troll",
       "rating": 10,
@@ -5322,7 +5248,6 @@
       ]
     },
     {
-      "serial": 86,
       "id": "of_slay_giant",
       "name": "of Slay Giant",
       "rating": 14,
@@ -5380,7 +5305,6 @@
       ]
     },
     {
-      "serial": 87,
       "id": "of_slay_dragon",
       "name": "of Slay Dragon",
       "rating": 18,
@@ -5438,7 +5362,6 @@
       ]
     },
     {
-      "serial": 88,
       "id": "of_slay_animal_int",
       "name": "of *Slay Animal*",
       "rating": 20,
@@ -5507,7 +5430,6 @@
       ]
     },
     {
-      "serial": 89,
       "id": "of_slay_undead_wis",
       "name": "of *Slay Evil*",
       "rating": 20,
@@ -5576,7 +5498,6 @@
       ]
     },
     {
-      "serial": 90,
       "id": "of_slay_undead_wis",
       "name": "of *Slay Undead*",
       "rating": 24,
@@ -5645,7 +5566,6 @@
       ]
     },
     {
-      "serial": 91,
       "id": "of_slay_demon_int",
       "name": "of *Slay Demon*",
       "rating": 16,
@@ -5714,7 +5634,6 @@
       ]
     },
     {
-      "serial": 92,
       "id": "of_slay_orc",
       "name": "of *Slay Orc*",
       "rating": 14,
@@ -5783,7 +5702,6 @@
       ]
     },
     {
-      "serial": 93,
       "id": "of_slay_troll_str",
       "name": "of *Slay Troll*",
       "rating": 14,
@@ -5852,7 +5770,6 @@
       "description": "Weapons that are extra effective against trolls, grant strength, and provide regeneration."
     },
     {
-      "serial": 94,
       "id": "of_slay_giant_str",
       "name": "of *Slay Giant*",
       "rating": 16,
@@ -5921,7 +5838,6 @@
       "description": "Weapons that are extra effective against giants, grant strength, and sustain strength."
     },
     {
-      "serial": 95,
       "id": "of_slay_dragon_con",
       "name": "of *Slay Dragon*",
       "rating": 24,
@@ -5990,7 +5906,6 @@
       "description": "Weapons that are extra effective against dragons, grant constitution, and provide fear resistance."
     },
     {
-      "serial": 100,
       "id": "of_digging",
       "name": "of Digging",
       "rating": 4,
@@ -6041,7 +5956,6 @@
       "description": "Weapons that enhance tunneling capabilities and deal acid damage."
     },
     {
-      "serial": 101,
       "id": "of_earthquakes",
       "name": "of Earthquakes",
       "rating": 8,
@@ -6107,7 +6021,6 @@
       "description": "Weapons that can cause earthquakes, enhance tunneling capabilities, deal acid damage and grant increased strength."
     },
     {
-      "serial": 102,
       "id": "of_morgul",
       "name": "of Morgul",
       "rating": 0,
@@ -6195,7 +6108,6 @@
       "description": "Weapons that are cursed, aggravate the wielder, and have various detrimental effects."
     },
     {
-      "serial": 104,
       "id": "of_accuracy",
       "name": "of Accuracy",
       "rating": 10,
@@ -6234,7 +6146,6 @@
       "description": "It has no special abilities, but its to-hit value may be unusually high."
     },
     {
-      "serial": 105,
       "id": "of_power",
       "name": "of Power",
       "rating": 10,
@@ -6273,7 +6184,6 @@
       "description": "It has no special abilities, but its to-dam value may be unusually high."
     },
     {
-      "serial": 106,
       "id": "of_lothlorien",
       "name": "of Lothlorien",
       "rating": 30,
@@ -6343,7 +6253,6 @@
       "description": "A bow imbued with the powers of Lothlorien, enhancing dexterity and might. It resists acid and fire."
     },
     {
-      "serial": 107,
       "id": "of_the_haradrim",
       "name": "of the Haradrim",
       "rating": 30,
@@ -6408,7 +6317,6 @@
       "description": "A bow favored by the Haradrim, enhancing might and providing extra shot. It resists acid and fire."
     },
     {
-      "serial": 108,
       "id": "of_extra_might",
       "name": "of Extra Might",
       "rating": 20,
@@ -6459,7 +6367,6 @@
       "description": "A bow that grants extra might to its wielder."
     },
     {
-      "serial": 109,
       "id": "of_extra_shots",
       "name": "of Extra Shots",
       "rating": 20,
@@ -6510,7 +6417,6 @@
       "description": "A bow that grants extra shots to its wielder."
     },
     {
-      "serial": 110,
       "id": "of_buckland",
       "name": "of Buckland",
       "rating": 25,
@@ -6580,7 +6486,6 @@
       "description": "A bow favored by the people of Buckland, enhancing dexterity, might, and providing extra shots. It resists acid and fire."
     },
     {
-      "serial": 111,
       "id": "of_the_nazgul",
       "name": "of the Nazgul",
       "rating": 0,
@@ -6634,7 +6539,6 @@
       "description": "A bow cursed by the influence of the Nazgul, draining experience and revealing invisible entities."
     },
     {
-      "serial": 112,
       "id": "of_slay_animal_ammo",
       "name": "of Slay Animal",
       "rating": 10,
@@ -6691,7 +6595,6 @@
       "description": "Ammunition that is particularly effective against animals."
     },
     {
-      "serial": 113,
       "id": "of_slay_evil_ammo",
       "name": "of Slay Evil",
       "rating": 10,
@@ -6747,7 +6650,6 @@
       ]
     },
     {
-      "serial": 114,
       "id": "_ammo",
       "name": "of Slay Undead",
       "rating": 10,
@@ -6804,7 +6706,6 @@
       "description": "Ammunition that is particularly effective against undead."
     },
     {
-      "serial": 115,
       "id": "of_slay_demon_ammo",
       "name": "of Slay Demon",
       "rating": 10,
@@ -6861,7 +6762,6 @@
       "description": "Ammunition that is particularly effective against demons."
     },
     {
-      "serial": 116,
       "id": "of_acid_ammo",
       "name": "of Acid",
       "rating": 10,
@@ -6923,7 +6823,6 @@
       "description": "Ammunition that deals acid damage and ignores acid."
     },
     {
-      "serial": 117,
       "id": "of_lightning_ammo",
       "name": "of Lightning",
       "rating": 10,
@@ -6985,7 +6884,6 @@
       "description": "Ammunition that deals lightning damage and ignores lightning."
     },
     {
-      "serial": 118,
       "id": "of_slay_giant_ammo",
       "name": "of Slay Giant",
       "rating": 10,
@@ -7042,7 +6940,6 @@
       "description": "Ammunition that is particularly effective against giants."
     },
     {
-      "serial": 119,
       "id": "of_slay_dragon_ammo",
       "name": "of Slay Dragon",
       "rating": 10,
@@ -7099,7 +6996,6 @@
       "description": "Ammunition that is particularly effective against dragons."
     },
     {
-      "serial": 120,
       "id": "of_holy_might",
       "name": "of Holy Might",
       "rating": 20,
@@ -7173,7 +7069,6 @@
       "description": "Ammunition that is particularly effective against evil creatures, demons and undead. Ignores fire and acid."
     },
     {
-      "serial": 121,
       "id": "of_venom",
       "name": "of Venom",
       "rating": 10,
@@ -7230,7 +7125,6 @@
       "description": "Ammunition that deals poison damage."
     },
     {
-      "serial": 122,
       "id": "of_flame",
       "name": "of Flame",
       "rating": 10,
@@ -7292,7 +7186,6 @@
       "description": "Ammunition that deals fire damage and ignores fire."
     },
     {
-      "serial": 123,
       "id": "of_frost",
       "name": "of Frost",
       "rating": 10,
@@ -7354,7 +7247,6 @@
       "description": "Ammunition that deals cold damage and ignores cold."
     },
     {
-      "serial": 124,
       "id": "of_wounding",
       "name": "of Wounding",
       "rating": 5,
@@ -7405,7 +7297,6 @@
       "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values."
     },
     {
-      "serial": 125,
       "id": "of_backbiting",
       "name": "of Backbiting",
       "rating": 0,
@@ -7462,7 +7353,6 @@
       "description": "Ammunition of Backbiting often has unusually low to-hit and to-dam values."
     },
     {
-      "serial": 128,
       "id": "of_the_avari",
       "name": "of the Avari",
       "rating": 32,
@@ -7541,7 +7431,6 @@
       "description": "A shield that provides resistance to various elements and boosts constitution."
     },
     {
-      "serial": 129,
       "id": "of_the_teleri",
       "name": "of the Teleri",
       "rating": 31,
@@ -7590,7 +7479,6 @@
       "description": "A cloak that grants the wearer the abilities of free action and life preservation."
     },
     {
-      "serial": 130,
       "id": "of_lordly_resistance",
       "name": "of Lordly Resistance",
       "rating": 31,
@@ -7675,7 +7563,6 @@
       }
     },
     {
-      "serial": 131,
       "id": "of_resistance",
       "name": "of Resistance",
       "rating": 31,
@@ -7748,7 +7635,6 @@
       "description": "A cloak that provides basic resistance to various elements."
     },
     {
-      "serial": 132,
       "id": "of_the_istari",
       "name": "of the Istari",
       "rating": 34,
@@ -7811,10 +7697,9 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Gloves that enhance the wearer's intelligence and wisdom, and provide free action."
+      "description": "Gloves that enhance the wearer\u0027s intelligence and wisdom, and provide free action."
     },
     {
-      "serial": 133,
       "id": "of_mirkwood",
       "name": "of Mirkwood",
       "rating": 35,
@@ -7864,7 +7749,6 @@
       "description": "Boots that provide free action and resistance to poison."
     },
     {
-      "serial": 135,
       "id": "of_numenor",
       "name": "of Numenor",
       "rating": 25,
