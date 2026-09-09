@@ -28,7 +28,7 @@
       },
       "ironhell_wired_fields": {
         "id": "Stable runtime key used in code",
-        "type": "IronHell gameplay taxonomy",
+        "species": "IronHell gameplay taxonomy",
         "dungeon_levels": "IronHell [min,max] spawn range",
         "ai_behavior": "AI routing profile used by behavior systems",
         "sprite": "Sprite key used by rendering",
@@ -76,7 +76,7 @@
     {
       "id": "filthy_street_urchin",
       "name": "Filthy street urchin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -139,7 +139,7 @@
     {
       "id": "scrawny_cat",
       "name": "Scrawny cat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         0,
         0
@@ -188,7 +188,7 @@
     {
       "id": "scruffy_dog",
       "name": "Scruffy little dog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         0,
         0
@@ -237,7 +237,7 @@
     {
       "id": "farmer_maggot",
       "name": "Farmer Maggot",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -311,7 +311,7 @@
     {
       "id": "blubbering_idiot",
       "name": "Blubbering idiot",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -360,7 +360,7 @@
     {
       "id": "boilcovered_wretch",
       "name": "Boil-covered wretch",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -411,7 +411,7 @@
     {
       "id": "village_idiot",
       "name": "Village idiot",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -460,7 +460,7 @@
     {
       "id": "pitiful_beggar",
       "name": "Pitiful-looking beggar",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -511,7 +511,7 @@
     {
       "id": "mangylooking_leper",
       "name": "Mangy-looking leper",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -562,7 +562,7 @@
     {
       "id": "squint_eyed_rogue",
       "name": "Squint-eyed rogue",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -643,7 +643,7 @@
     {
       "id": "singing_happy_drunk",
       "name": "Singing, happy drunk",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -696,7 +696,7 @@
     {
       "id": "aimless_merchant",
       "name": "Aimless-looking merchant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -750,7 +750,7 @@
     {
       "id": "mean_mercenary",
       "name": "Mean-looking mercenary",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -805,7 +805,7 @@
     {
       "id": "battle_scarred_veteran",
       "name": "Battle-scarred veteran",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         0,
         0
@@ -859,7 +859,7 @@
     {
       "id": "grey_mold",
       "name": "Grey mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -929,7 +929,7 @@
     {
       "id": "grey_mushroom_patch",
       "name": "Grey mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         1,
         26
@@ -995,7 +995,7 @@
     {
       "id": "giant_yellow_centipede",
       "name": "Giant yellow centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1061,7 +1061,7 @@
     {
       "id": "giant_white_centipede",
       "name": "Giant white centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1129,7 +1129,7 @@
     {
       "id": "white_icky_thing",
       "name": "White icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         1,
         26
@@ -1179,7 +1179,7 @@
     {
       "id": "clear_icky_thing",
       "name": "Clear icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         1,
         26
@@ -1230,7 +1230,7 @@
     {
       "id": "giant_white_mouse",
       "name": "Giant White Mouse",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1280,7 +1280,7 @@
     {
       "id": "large_brown_snake",
       "name": "Large brown snake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1347,7 +1347,7 @@
     {
       "id": "large_white_snake",
       "name": "Large white snake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1414,7 +1414,7 @@
     {
       "id": "small_kobold",
       "name": "Small kobold",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         1,
         26
@@ -1466,7 +1466,7 @@
     {
       "id": "kobold",
       "name": "Kobold",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         2,
         27
@@ -1518,7 +1518,7 @@
     {
       "id": "white_worm_mass",
       "name": "White worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1574,7 +1574,7 @@
     {
       "id": "floating_eye",
       "name": "Floating eye",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         1,
         26
@@ -1624,7 +1624,7 @@
     {
       "id": "rock_lizard",
       "name": "Rock lizard",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1672,7 +1672,7 @@
     {
       "id": "jackal",
       "name": "Jackal",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1721,7 +1721,7 @@
     {
       "id": "soldier_ant",
       "name": "Soldier ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1771,7 +1771,7 @@
     {
       "id": "fruit_bat",
       "name": "Fruit bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         1,
         26
@@ -1819,7 +1819,7 @@
     {
       "id": "shrieker_mushroom_patch",
       "name": "Shrieker mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         2,
         27
@@ -1860,7 +1860,7 @@
     {
       "id": "blubbering_icky_thing",
       "name": "Blubbering icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         2,
         27
@@ -1924,7 +1924,7 @@
     {
       "id": "metallic_green_centipede",
       "name": "Metallic green centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -1975,7 +1975,7 @@
     {
       "id": "novice_warrior_35",
       "name": "Novice warrior",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         2,
         27
@@ -2042,7 +2042,7 @@
     {
       "id": "novice_rogue_36",
       "name": "Novice rogue",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         2,
         27
@@ -2105,7 +2105,7 @@
     {
       "id": "novice_priest_37",
       "name": "Novice priest",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         2,
         27
@@ -2164,7 +2164,7 @@
     {
       "id": "novice_mage_38",
       "name": "Novice mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         2,
         27
@@ -2223,7 +2223,7 @@
     {
       "id": "yellow_mushroom_patch",
       "name": "Yellow mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         2,
         27
@@ -2289,7 +2289,7 @@
     {
       "id": "white_jelly",
       "name": "White jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         2,
         27
@@ -2344,7 +2344,7 @@
     {
       "id": "giant_green_frog",
       "name": "Giant green frog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2394,7 +2394,7 @@
     {
       "id": "giant_black_ant",
       "name": "Giant black ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2445,7 +2445,7 @@
     {
       "id": "salamander",
       "name": "Salamander",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2495,7 +2495,7 @@
     {
       "id": "white_harpy",
       "name": "White harpy",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         2,
         27
@@ -2580,7 +2580,7 @@
     {
       "id": "blue_yeek",
       "name": "Blue yeek",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2632,7 +2632,7 @@
     {
       "id": "grip_farmers_dog",
       "name": "Grip, Farmer Maggot\u0027s dog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         2
@@ -2685,7 +2685,7 @@
     {
       "id": "fang_farmers_dog",
       "name": "Fang, Farmer Maggot\u0027s dog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         2
@@ -2738,7 +2738,7 @@
     {
       "id": "green_worm_mass",
       "name": "Green worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2794,7 +2794,7 @@
     {
       "id": "large_yellow_snake",
       "name": "Large yellow snake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2861,7 +2861,7 @@
     {
       "id": "cave_spider",
       "name": "Cave Spider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2912,7 +2912,7 @@
     {
       "id": "wild_cat",
       "name": "Wild cat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -2977,7 +2977,7 @@
     {
       "id": "smeagol",
       "name": "Smeagol",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         3,
         3
@@ -3043,7 +3043,7 @@
     {
       "id": "green_ooze",
       "name": "Green ooze",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         3,
         28
@@ -3100,7 +3100,7 @@
     {
       "id": "poltergeist",
       "name": "Poltergeist",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         3,
         28
@@ -3168,7 +3168,7 @@
     {
       "id": "metallic_blue_centipede",
       "name": "Metallic blue centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3219,7 +3219,7 @@
     {
       "id": "giant_white_louse",
       "name": "Giant white louse",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3271,7 +3271,7 @@
     {
       "id": "black_naga",
       "name": "Black naga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         3,
         28
@@ -3323,7 +3323,7 @@
     {
       "id": "spotted_mushroom_patch",
       "name": "Spotted mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         3,
         28
@@ -3376,7 +3376,7 @@
     {
       "id": "silver_jelly",
       "name": "Silver jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         3,
         28
@@ -3465,7 +3465,7 @@
     {
       "id": "yellow_jelly",
       "name": "Yellow jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         3,
         28
@@ -3525,7 +3525,7 @@
     {
       "id": "scruffy_looking_hobbit",
       "name": "Scruffy looking hobbit",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         3,
         28
@@ -3589,7 +3589,7 @@
     {
       "id": "giant_white_ant",
       "name": "Giant white ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3639,7 +3639,7 @@
     {
       "id": "yellow_mold",
       "name": "Yellow mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3693,7 +3693,7 @@
     {
       "id": "metallic_red_centipede",
       "name": "Metallic red centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3744,7 +3744,7 @@
     {
       "id": "yellow_worm_mass",
       "name": "Yellow worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3809,7 +3809,7 @@
     {
       "id": "clear_worm_mass",
       "name": "Clear worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         3,
         28
@@ -3866,7 +3866,7 @@
     {
       "id": "radiation_eye",
       "name": "Radiation eye",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         3,
         28
@@ -3931,7 +3931,7 @@
     {
       "id": "cave_lizard",
       "name": "Cave lizard",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -3979,7 +3979,7 @@
     {
       "id": "novice_ranger_69",
       "name": "Novice ranger",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         4,
         28
@@ -4054,7 +4054,7 @@
     {
       "id": "novice_paladin_70",
       "name": "Novice paladin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         4,
         28
@@ -4129,7 +4129,7 @@
     {
       "id": "blue_jelly",
       "name": "Blue jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         4,
         28
@@ -4185,7 +4185,7 @@
     {
       "id": "creeping_copper_coins",
       "name": "Creeping copper coins",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         4,
         28
@@ -4257,7 +4257,7 @@
     {
       "id": "giant_white_rat",
       "name": "Giant white rat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -4307,7 +4307,7 @@
     {
       "id": "blue_worm_mass",
       "name": "Blue worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -4364,7 +4364,7 @@
     {
       "id": "large_grey_snake",
       "name": "Large grey snake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -4431,7 +4431,7 @@
     {
       "id": "bullroarer_the_hobbit",
       "name": "Bullroarer the Hobbit",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         5,
         5
@@ -4503,7 +4503,7 @@
     {
       "id": "novice_mage",
       "name": "Novice mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         6,
         30
@@ -4564,7 +4564,7 @@
     {
       "id": "green_naga",
       "name": "Green naga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         5,
         29
@@ -4635,7 +4635,7 @@
     {
       "id": "blue_ooze",
       "name": "Blue ooze",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         5,
         29
@@ -4691,7 +4691,7 @@
     {
       "id": "green_glutton_ghost",
       "name": "Green glutton ghost",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         5,
         29
@@ -4755,7 +4755,7 @@
     {
       "id": "green_jelly",
       "name": "Green jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         5,
         29
@@ -4810,7 +4810,7 @@
     {
       "id": "large_kobold",
       "name": "Large kobold",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         5,
         29
@@ -4862,7 +4862,7 @@
     {
       "id": "skeleton_kobold",
       "name": "Skeleton kobold",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         5,
         29
@@ -4920,7 +4920,7 @@
     {
       "id": "grey_icky_thing",
       "name": "Grey icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         5,
         29
@@ -4969,7 +4969,7 @@
     {
       "id": "disenchanter_eye",
       "name": "Disenchanter eye",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         5,
         29
@@ -5019,7 +5019,7 @@
     {
       "id": "red_worm_mass",
       "name": "Red worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         5,
         29
@@ -5076,7 +5076,7 @@
     {
       "id": "copperhead_snake",
       "name": "Copperhead snake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         5,
         29
@@ -5127,7 +5127,7 @@
     {
       "id": "purple_mushroom_patch",
       "name": "Purple mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         6,
         30
@@ -5243,7 +5243,7 @@
     {
       "id": "novice_priest",
       "name": "Novice priest",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         6,
         30
@@ -5303,7 +5303,7 @@
     {
       "id": "novice_warrior",
       "name": "Novice warrior",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         6,
         30
@@ -5372,7 +5372,7 @@
     {
       "id": "novice_rogue",
       "name": "Novice Rogue",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         6,
         30
@@ -5437,7 +5437,7 @@
     {
       "id": "brown_mold",
       "name": "Brown mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         6,
         30
@@ -5504,7 +5504,7 @@
     {
       "id": "giant_brown_bat",
       "name": "Giant brown bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         6,
         30
@@ -5553,7 +5553,7 @@
     {
       "id": "kobold_archer",
       "name": "Kobold Archer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         4,
         28
@@ -5610,7 +5610,7 @@
     {
       "id": "creeping_silver_coins",
       "name": "Creeping silver coins",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         6,
         30
@@ -5683,7 +5683,7 @@
     {
       "id": "snaga_orc",
       "name": "Snaga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         6,
         30
@@ -5738,7 +5738,7 @@
     {
       "id": "rattlesnake",
       "name": "Rattlesnake",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         6,
         30
@@ -5789,7 +5789,7 @@
     {
       "id": "cave_orc",
       "name": "Cave orc",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         7,
         31
@@ -5844,7 +5844,7 @@
     {
       "id": "wood_spider",
       "name": "Wood spider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         7,
         31
@@ -5913,7 +5913,7 @@
     {
       "id": "manes",
       "name": "Manes",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         7,
         31
@@ -5967,7 +5967,7 @@
     {
       "id": "bloodshot_eye",
       "name": "Bloodshot eye",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         7,
         31
@@ -6035,7 +6035,7 @@
     {
       "id": "red_naga",
       "name": "Red naga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         7,
         31
@@ -6115,7 +6115,7 @@
     {
       "id": "red_jelly",
       "name": "Red jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         7,
         31
@@ -6179,7 +6179,7 @@
     {
       "id": "giant_red_frog",
       "name": "Giant red frog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         7,
         31
@@ -6239,7 +6239,7 @@
     {
       "id": "green_icky_thing",
       "name": "Green icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         7,
         31
@@ -6289,7 +6289,7 @@
     {
       "id": "zombified_kobold",
       "name": "Zombified kobold",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         7,
         31
@@ -6364,7 +6364,7 @@
     {
       "id": "lost_soul",
       "name": "Lost soul",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         7,
         31
@@ -6444,7 +6444,7 @@
     {
       "id": "dark_elf",
       "name": "Dark Elf",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         7,
         31
@@ -6521,7 +6521,7 @@
     {
       "id": "night_lizard",
       "name": "Night lizard",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         7,
         31
@@ -6586,7 +6586,7 @@
     {
       "id": "mughash_the_kobold_lord",
       "name": "Mughash the Kobold Lord",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         7,
         7
@@ -6679,7 +6679,7 @@
     {
       "id": "wormtongue_agent_of_saruman",
       "name": "Wormtongue, Agent of Saruman",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         8
@@ -6792,7 +6792,7 @@
     {
       "id": "lagduf_the_snaga",
       "name": "Lagduf, the Snaga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         8
@@ -6901,7 +6901,7 @@
     {
       "id": "brown_yeek",
       "name": "Brown yeek",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         8,
         31
@@ -6953,7 +6953,7 @@
     {
       "id": "novice_ranger",
       "name": "Novice ranger",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         31
@@ -7029,7 +7029,7 @@
     {
       "id": "giant_salamander",
       "name": "Giant salamander",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         8,
         31
@@ -7085,7 +7085,7 @@
     {
       "id": "green_mold",
       "name": "Green mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         8,
         31
@@ -7153,7 +7153,7 @@
     {
       "id": "skeleton_orc",
       "name": "Skeleton orc",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         8,
         31
@@ -7212,7 +7212,7 @@
     {
       "id": "novice_paladin",
       "name": "Novice paladin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         31
@@ -7288,7 +7288,7 @@
     {
       "id": "lemure",
       "name": "Lemure",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         8,
         31
@@ -7342,7 +7342,7 @@
     {
       "id": "hill_orc",
       "name": "Hill Orc",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         31
@@ -7396,7 +7396,7 @@
     {
       "id": "bandit",
       "name": "Bandit",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         8,
         31
@@ -7460,7 +7460,7 @@
     {
       "id": "yeti",
       "name": "Yeti",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         9,
         32
@@ -7545,7 +7545,7 @@
     {
       "id": "bloodshot_icky_thing",
       "name": "Bloodshot icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         9,
         32
@@ -7617,7 +7617,7 @@
     {
       "id": "giant_grey_rat",
       "name": "Giant grey rat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         9,
         32
@@ -7668,7 +7668,7 @@
     {
       "id": "black_harpy",
       "name": "Black harpy",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         9,
         32
@@ -7753,7 +7753,7 @@
     {
       "id": "orc_shaman",
       "name": "Orc Shaman",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         9,
         32
@@ -7832,7 +7832,7 @@
     {
       "id": "baby_blue_dragon",
       "name": "Baby Blue Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -7928,7 +7928,7 @@
     {
       "id": "baby_white_dragon",
       "name": "Baby White Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -8024,7 +8024,7 @@
     {
       "id": "baby_green_dragon",
       "name": "Baby Green Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -8120,7 +8120,7 @@
     {
       "id": "baby_black_dragon",
       "name": "Baby Black Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -8216,7 +8216,7 @@
     {
       "id": "baby_red_dragon",
       "name": "Baby Red Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -8312,7 +8312,7 @@
     {
       "id": "giant_red_ant",
       "name": "Giant red ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         9,
         32
@@ -8389,7 +8389,7 @@
     {
       "id": "brodda_the_easterling",
       "name": "Brodda, the Easterling",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         9,
         9
@@ -8495,7 +8495,7 @@
     {
       "id": "king_cobra",
       "name": "King cobra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         9,
         32
@@ -8576,7 +8576,7 @@
     {
       "id": "giant_spider",
       "name": "Giant spider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -8678,7 +8678,7 @@
     {
       "id": "dark_elven_mage",
       "name": "Dark Elven Mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         10,
         33
@@ -8760,7 +8760,7 @@
     {
       "id": "orfax_son_of_boldor",
       "name": "Orfax, Son of Boldor",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         10
@@ -8883,7 +8883,7 @@
     {
       "id": "dark_elven_warrior",
       "name": "Dark Elven Warrior",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         10,
         33
@@ -8953,7 +8953,7 @@
     {
       "id": "clear_mushroom_patch",
       "name": "Clear mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         10,
         33
@@ -9008,7 +9008,7 @@
     {
       "id": "grishnakh_the_hill_orc",
       "name": "Grishnakh, the Hill Orc",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         10,
         10
@@ -9118,7 +9118,7 @@
     {
       "id": "giant_white_tick",
       "name": "Giant white tick",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -9169,7 +9169,7 @@
     {
       "id": "hairy_mold",
       "name": "Hairy mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -9223,7 +9223,7 @@
     {
       "id": "disenchanter_mold",
       "name": "Disenchanter mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -9289,7 +9289,7 @@
     {
       "id": "pseudodragon",
       "name": "Pseudo-dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         10,
         33
@@ -9384,7 +9384,7 @@
     {
       "id": "tengu",
       "name": "Tengu",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         10,
         33
@@ -9443,7 +9443,7 @@
     {
       "id": "creeping_gold_coins",
       "name": "Creeping gold coins",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         10,
         33
@@ -9517,7 +9517,7 @@
     {
       "id": "wolf",
       "name": "Wolf",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -9568,7 +9568,7 @@
     {
       "id": "giant_fruit_fly",
       "name": "Giant fruit fly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         10,
         33
@@ -9620,7 +9620,7 @@
     {
       "id": "panther",
       "name": "Panther",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         10,
         33
@@ -9685,7 +9685,7 @@
     {
       "id": "brigand",
       "name": "Brigand",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         10,
         33
@@ -9749,7 +9749,7 @@
     {
       "id": "baby_multihued_dragon",
       "name": "Baby multi-hued dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         11,
         34
@@ -9853,7 +9853,7 @@
     {
       "id": "hippogriff",
       "name": "Hippogriff",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         11,
         34
@@ -9919,7 +9919,7 @@
     {
       "id": "zombified_orc",
       "name": "Zombified orc",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         11,
         34
@@ -10012,7 +10012,7 @@
     {
       "id": "gnome_mage_154",
       "name": "Gnome mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         11,
         34
@@ -10073,7 +10073,7 @@
     {
       "id": "black_mamba",
       "name": "Black mamba",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -10124,7 +10124,7 @@
     {
       "id": "white_wolf",
       "name": "White wolf",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -10193,7 +10193,7 @@
     {
       "id": "grape_jelly",
       "name": "Grape jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         12,
         34
@@ -10252,7 +10252,7 @@
     {
       "id": "nether_worm_mass",
       "name": "Nether worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -10307,7 +10307,7 @@
     {
       "id": "golfimbul_the_hill_orc_chief",
       "name": "Golfimbul, the Hill Orc Chief",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         12,
         12
@@ -10420,7 +10420,7 @@
     {
       "id": "master_yeek",
       "name": "Master yeek",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -10484,7 +10484,7 @@
     {
       "id": "priest",
       "name": "Priest",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         12,
         34
@@ -10563,7 +10563,7 @@
     {
       "id": "dark_elven_priest",
       "name": "Dark elven priest",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         12,
         34
@@ -10645,7 +10645,7 @@
     {
       "id": "air_spirit",
       "name": "Air spirit",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         12,
         34
@@ -10703,7 +10703,7 @@
     {
       "id": "skeleton_human",
       "name": "Skeleton human",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         12,
         34
@@ -10761,7 +10761,7 @@
     {
       "id": "zombified_human",
       "name": "Zombified human",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         12,
         34
@@ -10836,7 +10836,7 @@
     {
       "id": "tiger",
       "name": "Tiger",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -10918,7 +10918,7 @@
     {
       "id": "moaning_spirit",
       "name": "Moaning spirit",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         12,
         34
@@ -11011,7 +11011,7 @@
     {
       "id": "swordsman",
       "name": "Swordsman",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         12,
         34
@@ -11079,7 +11079,7 @@
     {
       "id": "stegocentipede",
       "name": "Stegocentipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         12,
         34
@@ -11163,7 +11163,7 @@
     {
       "id": "spotted_jelly",
       "name": "Spotted jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         12,
         34
@@ -11254,7 +11254,7 @@
     {
       "id": "drider",
       "name": "Drider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         13,
         35
@@ -11346,7 +11346,7 @@
     {
       "id": "killer_brown_beetle",
       "name": "Killer brown beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         13,
         35
@@ -11396,7 +11396,7 @@
     {
       "id": "boldor_king_of_yeeks",
       "name": "Boldor, King of the Yeeks",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         13,
         13
@@ -11504,7 +11504,7 @@
     {
       "id": "ogre",
       "name": "Ogre",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         13,
         35
@@ -11557,7 +11557,7 @@
     {
       "id": "creeping_mithril_coins",
       "name": "Creeping mithril coins",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         13,
         35
@@ -11631,7 +11631,7 @@
     {
       "id": "illusionist",
       "name": "Illusionist",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         13,
         35
@@ -11697,7 +11697,7 @@
     {
       "id": "druid",
       "name": "Druid",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         13,
         35
@@ -11780,7 +11780,7 @@
     {
       "id": "black_orc",
       "name": "Black Orc",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         13,
         35
@@ -11857,7 +11857,7 @@
     {
       "id": "ochre_jelly",
       "name": "Ochre jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         13,
         35
@@ -11949,7 +11949,7 @@
     {
       "id": "giant_flea",
       "name": "Giant flea",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         14,
         36
@@ -12002,7 +12002,7 @@
     {
       "id": "ufthak_of_cirith_ungol",
       "name": "Ufthak of Cirith Ungol",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         14,
         14
@@ -12113,7 +12113,7 @@
     {
       "id": "giant_white_dragon_fly",
       "name": "Giant white dragon fly",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         14,
         36
@@ -12171,7 +12171,7 @@
     {
       "id": "blue_icky_thing",
       "name": "Blue icky thing",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         14,
         36
@@ -12277,7 +12277,7 @@
     {
       "id": "hill_giant",
       "name": "Hill giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         25,
         44
@@ -12351,7 +12351,7 @@
     {
       "id": "flesh_golem",
       "name": "Flesh golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         14,
         36
@@ -12421,7 +12421,7 @@
     {
       "id": "warg",
       "name": "Warg",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         14,
         36
@@ -12473,7 +12473,7 @@
     {
       "id": "giant_black_louse",
       "name": "Giant black louse",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         14,
         36
@@ -12524,7 +12524,7 @@
     {
       "id": "lurker",
       "name": "Lurker",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         14,
         36
@@ -12596,7 +12596,7 @@
     {
       "id": "wererat",
       "name": "Wererat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -12692,7 +12692,7 @@
     {
       "id": "black_ogre",
       "name": "Black ogre",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         15,
         37
@@ -12763,7 +12763,7 @@
     {
       "id": "magic_mushroom_patch",
       "name": "Magic mushroom patch",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         15,
         37
@@ -12879,7 +12879,7 @@
     {
       "id": "guardian_naga",
       "name": "Guardian naga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         15,
         37
@@ -12967,7 +12967,7 @@
     {
       "id": "light_hound",
       "name": "Light hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13056,7 +13056,7 @@
     {
       "id": "dark_hound",
       "name": "Dark Hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13145,7 +13145,7 @@
     {
       "id": "halforc",
       "name": "Half-orc",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         15,
         37
@@ -13216,7 +13216,7 @@
     {
       "id": "giant_tarantula",
       "name": "Giant tarantula",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13301,7 +13301,7 @@
     {
       "id": "giant_clear_centipede",
       "name": "Giant clear centipede",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13369,7 +13369,7 @@
     {
       "id": "mirkwood_spider",
       "name": "Mirkwood spider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13456,7 +13456,7 @@
     {
       "id": "frost_giant",
       "name": "Frost Giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -13531,7 +13531,7 @@
     {
       "id": "griffon",
       "name": "Griffon",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         15,
         37
@@ -13597,7 +13597,7 @@
     {
       "id": "homunculus",
       "name": "Homunculus",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         15,
         37
@@ -13679,7 +13679,7 @@
     {
       "id": "gnome_mage",
       "name": "Gnome mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         15,
         37
@@ -13741,7 +13741,7 @@
     {
       "id": "clear_hound",
       "name": "Clear hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -13825,7 +13825,7 @@
     {
       "id": "clay_golem",
       "name": "Clay golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         15,
         37
@@ -13900,7 +13900,7 @@
     {
       "id": "umber_hulk",
       "name": "Umber hulk",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         16,
         37
@@ -14009,7 +14009,7 @@
     {
       "id": "orc_captain",
       "name": "Orc Captain",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         18,
         39
@@ -14103,7 +14103,7 @@
     {
       "id": "gelatinous_cube",
       "name": "Gelatinous cube",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         16,
         37
@@ -14201,7 +14201,7 @@
     {
       "id": "giant_green_dragon_fly",
       "name": "Giant green dragon fly",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         16,
         37
@@ -14260,7 +14260,7 @@
     {
       "id": "fire_giant",
       "name": "Fire giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         30,
         48
@@ -14335,7 +14335,7 @@
     {
       "id": "hummerhorn",
       "name": "Hummerhorn",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         16,
         37
@@ -14400,7 +14400,7 @@
     {
       "id": "ulfast_son_of_ulfang",
       "name": "Ulfast, Son of Ulfang",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         16,
         16
@@ -14508,7 +14508,7 @@
     {
       "id": "quasit",
       "name": "Quasit",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         16,
         37
@@ -14620,7 +14620,7 @@
     {
       "id": "imp",
       "name": "Imp",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         17,
         38
@@ -14706,7 +14706,7 @@
     {
       "id": "forest_troll",
       "name": "Forest Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         17,
         38
@@ -14796,7 +14796,7 @@
     {
       "id": "nar_the_dwarf",
       "name": "Nar, the Dwarf",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         17,
         17
@@ -14917,7 +14917,7 @@
     {
       "id": "2headed_hydra",
       "name": "2-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         17,
         38
@@ -14993,7 +14993,7 @@
     {
       "id": "water_spirit",
       "name": "Water spirit",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         17,
         38
@@ -15066,7 +15066,7 @@
     {
       "id": "giant_red_scorpion",
       "name": "Giant red scorpion",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         17,
         38
@@ -15143,7 +15143,7 @@
     {
       "id": "earth_spirit",
       "name": "Earth spirit",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         17,
         38
@@ -15219,7 +15219,7 @@
     {
       "id": "fire_spirit",
       "name": "Fire spirit",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         18,
         39
@@ -15291,7 +15291,7 @@
     {
       "id": "fire_hound",
       "name": "Fire hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         18,
         39
@@ -15381,7 +15381,7 @@
     {
       "id": "cold_hound",
       "name": "Cold hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         18,
         39
@@ -15471,7 +15471,7 @@
     {
       "id": "energy_hound",
       "name": "Energy hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         18,
         39
@@ -15561,7 +15561,7 @@
     {
       "id": "potion_mimic",
       "name": "Potion mimic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         18,
         39
@@ -15657,7 +15657,7 @@
     {
       "id": "blink_dog",
       "name": "Blink dog",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         18,
         39
@@ -15714,7 +15714,7 @@
     {
       "id": "uruk",
       "name": "Uruk",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         16,
         37
@@ -15792,7 +15792,7 @@
     {
       "id": "shagrat_the_orc_captain",
       "name": "Shagrat, the Orc Captain",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         19,
         19
@@ -15902,7 +15902,7 @@
     {
       "id": "gorbag_the_orc_captain",
       "name": "Gorbag, the Orc Captain",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         19,
         19
@@ -16012,7 +16012,7 @@
     {
       "id": "shambling_mound",
       "name": "Shambling mound",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         18,
         39
@@ -16091,7 +16091,7 @@
     {
       "id": "stone_giant",
       "name": "Stone Giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         33,
         50
@@ -16166,7 +16166,7 @@
     {
       "id": "giant_black_dragon_fly",
       "name": "Giant black dragon fly",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         18,
         39
@@ -16207,7 +16207,7 @@
     {
       "id": "stone_golem",
       "name": "Stone Golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         19,
         40
@@ -16282,7 +16282,7 @@
     {
       "id": "red_mold",
       "name": "Red mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         19,
         40
@@ -16337,7 +16337,7 @@
     {
       "id": "giant_gold_dragon_fly",
       "name": "Giant gold dragon fly",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         19,
         40
@@ -16396,7 +16396,7 @@
     {
       "id": "bolg_son_of_azog",
       "name": "Bolg, Son of Azog",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         20,
         20
@@ -16506,7 +16506,7 @@
     {
       "id": "phase_spider",
       "name": "Phase spider",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -16598,7 +16598,7 @@
     {
       "id": "3headed_hydra",
       "name": "3-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -16692,7 +16692,7 @@
     {
       "id": "earth_hound",
       "name": "Earth hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -16798,7 +16798,7 @@
     {
       "id": "air_hound",
       "name": "Air hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -16905,7 +16905,7 @@
     {
       "id": "sabretooth_tiger",
       "name": "Sabre-tooth tiger",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -17004,7 +17004,7 @@
     {
       "id": "water_hound",
       "name": "Water hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -17111,7 +17111,7 @@
     {
       "id": "chimaera",
       "name": "Chimaera",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         20,
         40
@@ -17200,7 +17200,7 @@
     {
       "id": "quylthulg",
       "name": "Quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         20,
         40
@@ -17242,7 +17242,7 @@
     {
       "id": "sasquatch",
       "name": "Sasquatch",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -17327,7 +17327,7 @@
     {
       "id": "werewolf",
       "name": "Werewolf",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         20,
         40
@@ -17414,7 +17414,7 @@
     {
       "id": "dark_elven_lord",
       "name": "Dark Elven Lord",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         20,
         40
@@ -17496,7 +17496,7 @@
     {
       "id": "cloud_giant",
       "name": "Cloud giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         52
@@ -17572,7 +17572,7 @@
     {
       "id": "lugdush_the_uruk",
       "name": "Lugdush, the Uruk",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         21,
         21
@@ -17682,7 +17682,7 @@
     {
       "id": "ugluk_the_uruk",
       "name": "Ugluk, the Uruk",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         22,
         22
@@ -17796,7 +17796,7 @@
     {
       "id": "blue_dragon_bat",
       "name": "Blue dragon bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         21,
         41
@@ -17853,7 +17853,7 @@
     {
       "id": "scroll_mimic",
       "name": "Scroll mimic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         21,
         41
@@ -17967,7 +17967,7 @@
     {
       "id": "fire_vortex",
       "name": "Fire vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         21,
         41
@@ -18027,7 +18027,7 @@
     {
       "id": "water_vortex",
       "name": "Water vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         21,
         41
@@ -18087,7 +18087,7 @@
     {
       "id": "cold_vortex",
       "name": "Cold vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         21,
         41
@@ -18147,7 +18147,7 @@
     {
       "id": "energy_vortex",
       "name": "Energy vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         21,
         41
@@ -18207,7 +18207,7 @@
     {
       "id": "mummified_orc",
       "name": "Mummified orc",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         21,
         41
@@ -18284,7 +18284,7 @@
     {
       "id": "killer_stag_beetle",
       "name": "Killer stag beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         22,
         42
@@ -18352,7 +18352,7 @@
     {
       "id": "iron_golem",
       "name": "Iron golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         22,
         42
@@ -18415,7 +18415,7 @@
     {
       "id": "giant_yellow_scorpion",
       "name": "Giant yellow scorpion",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         22,
         42
@@ -18482,7 +18482,7 @@
     {
       "id": "black_ooze",
       "name": "Black ooze",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         23,
         43
@@ -18545,7 +18545,7 @@
     {
       "id": "hardened_warrior",
       "name": "Hardened warrior",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         23,
         43
@@ -18615,7 +18615,7 @@
     {
       "id": "azog_king_of_the_urukhai",
       "name": "Azog, King of the Uruk-Hai",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         23,
         23
@@ -18709,7 +18709,7 @@
     {
       "id": "master_rogue",
       "name": "Master rogue",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         23,
         43
@@ -18802,7 +18802,7 @@
     {
       "id": "red_dragon_bat",
       "name": "Red dragon bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         23,
         43
@@ -18859,7 +18859,7 @@
     {
       "id": "killer_white_beetle",
       "name": "Killer white beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         23,
         43
@@ -18910,7 +18910,7 @@
     {
       "id": "giant_bronze_dragon_fly",
       "name": "Giant bronze dragon fly",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         23,
         43
@@ -18952,7 +18952,7 @@
     {
       "id": "forest_wight",
       "name": "Forest Wight",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         24,
         43
@@ -19052,7 +19052,7 @@
     {
       "id": "ibun_son_of_mim",
       "name": "Ibun, Son of Mim",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         24,
         24
@@ -19165,7 +19165,7 @@
     {
       "id": "khim_son_of_mim",
       "name": "Khim, Son of Mim",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         24,
         24
@@ -19278,7 +19278,7 @@
     {
       "id": "4headed_hydra",
       "name": "4-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         24,
         43
@@ -19388,7 +19388,7 @@
     {
       "id": "mummified_human",
       "name": "Mummified human",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         24,
         43
@@ -19465,7 +19465,7 @@
     {
       "id": "vampire_bat",
       "name": "Vampire bat",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         24,
         43
@@ -19562,7 +19562,7 @@
     {
       "id": "sangahyando_of_umbar",
       "name": "Sangahyando of Umbar",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         24,
         24
@@ -19681,7 +19681,7 @@
     {
       "id": "angamaite_of_umbar",
       "name": "Angamaite of Umbar",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         24,
         24
@@ -19800,7 +19800,7 @@
     {
       "id": "banshee",
       "name": "Banshee",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         24,
         43
@@ -19883,7 +19883,7 @@
     {
       "id": "pukelman",
       "name": "Pukelman",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         25,
         44
@@ -19966,7 +19966,7 @@
     {
       "id": "dark_elven_druid",
       "name": "Dark elven druid",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         25,
         44
@@ -20068,7 +20068,7 @@
     {
       "id": "stone_troll",
       "name": "Stone troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         25,
         44
@@ -20159,7 +20159,7 @@
     {
       "id": "troll_priest",
       "name": "Troll priest",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         26,
         45
@@ -20261,7 +20261,7 @@
     {
       "id": "wereworm",
       "name": "Wereworm",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         25,
         44
@@ -20361,7 +20361,7 @@
     {
       "id": "carrion_crawler_281",
       "name": "Carrion crawler",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         25,
         44
@@ -20453,7 +20453,7 @@
     {
       "id": "killer_red_beetle",
       "name": "Killer red beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         25,
         44
@@ -20514,7 +20514,7 @@
     {
       "id": "giant_grey_ant",
       "name": "Giant grey ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         26,
         45
@@ -20566,7 +20566,7 @@
     {
       "id": "ulwarth_son_of_ulfang",
       "name": "Ulwarth, Son of Ulfang",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         26,
         26
@@ -20657,7 +20657,7 @@
     {
       "id": "displacer_beast",
       "name": "Displacer beast",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         26,
         45
@@ -20758,7 +20758,7 @@
     {
       "id": "giant_fire_tick",
       "name": "Giant fire tick",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         26,
         45
@@ -20810,7 +20810,7 @@
     {
       "id": "cave_ogre",
       "name": "Cave ogre",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         26,
         45
@@ -20880,7 +20880,7 @@
     {
       "id": "white_wraith",
       "name": "White Wraith",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         26,
         45
@@ -20979,7 +20979,7 @@
     {
       "id": "angel",
       "name": "Angel",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         26,
         45
@@ -21097,7 +21097,7 @@
     {
       "id": "mim_betrayer_of_turin",
       "name": "Mim, Betrayer of Turin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         27,
         27
@@ -21216,7 +21216,7 @@
     {
       "id": "killer_fire_beetle",
       "name": "Killer fire beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         27,
         46
@@ -21284,7 +21284,7 @@
     {
       "id": "creeping_adamantite_coins",
       "name": "Creeping adamantite coins",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         27,
         46
@@ -21392,7 +21392,7 @@
     {
       "id": "algroth",
       "name": "Algroth",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         27,
         46
@@ -21480,7 +21480,7 @@
     {
       "id": "vibration_hound",
       "name": "Vibration hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         27,
         46
@@ -21588,7 +21588,7 @@
     {
       "id": "nexus_hound",
       "name": "Nexus hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         27,
         46
@@ -21696,7 +21696,7 @@
     {
       "id": "ogre_mage",
       "name": "Ogre Mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         27,
         46
@@ -21809,7 +21809,7 @@
     {
       "id": "lokkak_the_ogre_chieftain",
       "name": "Lokkak, the Ogre Chieftain",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         32,
         32
@@ -21902,7 +21902,7 @@
     {
       "id": "vampire",
       "name": "Vampire",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         27,
         46
@@ -22047,7 +22047,7 @@
     {
       "id": "gorgimaera",
       "name": "Gorgimaera",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         27,
         46
@@ -22148,7 +22148,7 @@
     {
       "id": "colbran",
       "name": "Colbran",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         27,
         46
@@ -22226,7 +22226,7 @@
     {
       "id": "spirit_naga",
       "name": "Spirit naga",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -22343,7 +22343,7 @@
     {
       "id": "5headed_hydra",
       "name": "5-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         28,
         46
@@ -22455,7 +22455,7 @@
     {
       "id": "black_knight",
       "name": "Black knight",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -22550,7 +22550,7 @@
     {
       "id": "uldor_the_accursed",
       "name": "Uldor the Accursed",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         28
@@ -22663,7 +22663,7 @@
     {
       "id": "mage",
       "name": "Mage",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -22748,7 +22748,7 @@
     {
       "id": "mind_flayer",
       "name": "Mind flayer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -22852,7 +22852,7 @@
     {
       "id": "draebor_the_imp",
       "name": "Draebor, the Imp",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         28,
         28
@@ -22977,7 +22977,7 @@
     {
       "id": "basilisk",
       "name": "Basilisk",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         28,
         46
@@ -23087,7 +23087,7 @@
     {
       "id": "ice_troll",
       "name": "Ice troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         28,
         46
@@ -23195,7 +23195,7 @@
     {
       "id": "purple_worm",
       "name": "Purple Worm",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         29,
         47
@@ -23280,7 +23280,7 @@
     {
       "id": "archangel",
       "name": "Archangel",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         51
@@ -23401,7 +23401,7 @@
     {
       "id": "catoblepas",
       "name": "Catoblepas",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         29,
         47
@@ -23530,7 +23530,7 @@
     {
       "id": "ring_mimic",
       "name": "Ring mimic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         29,
         47
@@ -23649,7 +23649,7 @@
     {
       "id": "young_blue_dragon",
       "name": "Young Blue Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         29,
         47
@@ -23744,7 +23744,7 @@
     {
       "id": "young_white_dragon",
       "name": "Young White Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         29,
         47
@@ -23839,7 +23839,7 @@
     {
       "id": "young_green_dragon",
       "name": "Young Green Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         29,
         47
@@ -23934,7 +23934,7 @@
     {
       "id": "young_bronze_dragon",
       "name": "Young bronze dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         29,
         47
@@ -24029,7 +24029,7 @@
     {
       "id": "mithril_golem",
       "name": "Mithril golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         30,
         48
@@ -24139,7 +24139,7 @@
     {
       "id": "shadow_drake",
       "name": "Shadow Drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -24252,7 +24252,7 @@
     {
       "id": "skeleton_troll",
       "name": "Skeleton troll",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         30,
         48
@@ -24346,7 +24346,7 @@
     {
       "id": "manticore",
       "name": "Manticore",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         30,
         48
@@ -24453,7 +24453,7 @@
     {
       "id": "giant_blue_ant",
       "name": "Giant blue ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         30,
         48
@@ -24505,7 +24505,7 @@
     {
       "id": "giant_army_ant",
       "name": "Giant army ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         30,
         48
@@ -24558,7 +24558,7 @@
     {
       "id": "grave_wight",
       "name": "Grave Wight",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         30,
         48
@@ -24659,7 +24659,7 @@
     {
       "id": "killer_slicer_beetle",
       "name": "Killer slicer beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         30,
         48
@@ -24726,7 +24726,7 @@
     {
       "id": "ghost",
       "name": "Ghost",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         31,
         49
@@ -24865,7 +24865,7 @@
     {
       "id": "death_watch_beetle",
       "name": "Death watch beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         31,
         49
@@ -24945,7 +24945,7 @@
     {
       "id": "ogre_shaman",
       "name": "Ogre shaman",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         27,
         46
@@ -25044,7 +25044,7 @@
     {
       "id": "nexus_quylthulg",
       "name": "Nexus quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         32,
         49
@@ -25086,7 +25086,7 @@
     {
       "id": "shelob_spider_of_darkness",
       "name": "Shelob, Spider of Darkness",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         55,
         55
@@ -25240,7 +25240,7 @@
     {
       "id": "ninja",
       "name": "Ninja",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         32,
         49
@@ -25348,7 +25348,7 @@
     {
       "id": "memory_moss",
       "name": "Memory moss",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         32,
         49
@@ -25450,7 +25450,7 @@
     {
       "id": "storm_giant",
       "name": "Storm giant",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         55
@@ -25535,7 +25535,7 @@
     {
       "id": "cave_troll",
       "name": "Cave Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         33,
         50
@@ -25643,7 +25643,7 @@
     {
       "id": "halftroll",
       "name": "Half-troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         51
@@ -25751,7 +25751,7 @@
     {
       "id": "mystic",
       "name": "Mystic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         33,
         50
@@ -25868,7 +25868,7 @@
     {
       "id": "barrow_wight",
       "name": "Barrow Wight",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         33,
         50
@@ -25969,7 +25969,7 @@
     {
       "id": "skeleton_ettin",
       "name": "Skeleton ettin",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         33,
         50
@@ -26081,7 +26081,7 @@
     {
       "id": "chaos_drake",
       "name": "Chaos drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -26182,7 +26182,7 @@
     {
       "id": "law_drake",
       "name": "Law drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -26283,7 +26283,7 @@
     {
       "id": "balance_drake",
       "name": "Balance drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -26387,7 +26387,7 @@
     {
       "id": "ethereal_drake",
       "name": "Ethereal drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -26487,7 +26487,7 @@
     {
       "id": "bert_the_stone_troll",
       "name": "Bert the Stone Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         34
@@ -26591,7 +26591,7 @@
     {
       "id": "bill_the_stone_troll",
       "name": "Bill the Stone Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         34
@@ -26695,7 +26695,7 @@
     {
       "id": "tom_the_stone_troll",
       "name": "Tom the Stone Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         34
@@ -26799,7 +26799,7 @@
     {
       "id": "shade",
       "name": "Shade",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         33,
         50
@@ -26913,7 +26913,7 @@
     {
       "id": "spectre",
       "name": "Spectre",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         34,
         51
@@ -27027,7 +27027,7 @@
     {
       "id": "water_troll",
       "name": "Water troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         35,
         52
@@ -27137,7 +27137,7 @@
     {
       "id": "fire_elemental",
       "name": "Fire Elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         33,
         50
@@ -27220,7 +27220,7 @@
     {
       "id": "cherub",
       "name": "Cherub",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         39,
         55
@@ -27347,7 +27347,7 @@
     {
       "id": "water_elemental",
       "name": "Water elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         33,
         50
@@ -27448,7 +27448,7 @@
     {
       "id": "invisible_stalker",
       "name": "Invisible stalker",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         35,
         52
@@ -27542,7 +27542,7 @@
     {
       "id": "carrion_crawler",
       "name": "Carrion crawler",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         34,
         51
@@ -27636,7 +27636,7 @@
     {
       "id": "master_thief",
       "name": "Master thief",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         51
@@ -27760,7 +27760,7 @@
     {
       "id": "ulfang_the_black",
       "name": "Ulfang the Black",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         34,
         34
@@ -27873,7 +27873,7 @@
     {
       "id": "lich",
       "name": "Lich",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         34,
         51
@@ -28013,7 +28013,7 @@
     {
       "id": "master_vampire",
       "name": "Master Vampire",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         36,
         52
@@ -28160,7 +28160,7 @@
     {
       "id": "giant_grey_scorpion",
       "name": "Giant grey scorpion",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         34,
         51
@@ -28227,7 +28227,7 @@
     {
       "id": "earth_elemental",
       "name": "Earth elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         34,
         51
@@ -28328,7 +28328,7 @@
     {
       "id": "air_elemental",
       "name": "Air elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         34,
         51
@@ -28442,7 +28442,7 @@
     {
       "id": "hellhound_361",
       "name": "Hellhound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         35,
         52
@@ -28536,7 +28536,7 @@
     {
       "id": "eog_golem",
       "name": "Eog golem",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         34,
         51
@@ -28646,7 +28646,7 @@
     {
       "id": "olog",
       "name": "Olog",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         52
@@ -28754,7 +28754,7 @@
     {
       "id": "dagashi",
       "name": "Dagashi",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         35,
         52
@@ -28879,7 +28879,7 @@
     {
       "id": "gravity_hound",
       "name": "Gravity hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         35,
         52
@@ -28987,7 +28987,7 @@
     {
       "id": "acidic_cytoplasm",
       "name": "Acidic cytoplasm",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         35,
         52
@@ -29102,7 +29102,7 @@
     {
       "id": "inertia_hound",
       "name": "Inertia hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         35,
         52
@@ -29210,7 +29210,7 @@
     {
       "id": "impact_hound",
       "name": "Impact hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         35,
         52
@@ -29318,7 +29318,7 @@
     {
       "id": "dread_369",
       "name": "Dread",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         35,
         52
@@ -29432,7 +29432,7 @@
     {
       "id": "ooze_elemental",
       "name": "Ooze elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         36,
         52
@@ -29533,7 +29533,7 @@
     {
       "id": "smoke_elemental",
       "name": "Smoke elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         36,
         52
@@ -29616,7 +29616,7 @@
     {
       "id": "young_black_dragon",
       "name": "Young Black Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         31,
         49
@@ -29711,7 +29711,7 @@
     {
       "id": "mumak_373",
       "name": "Mumak",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         35,
         52
@@ -29793,7 +29793,7 @@
     {
       "id": "giant_fire_ant",
       "name": "Giant fire ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         35,
         52
@@ -29864,7 +29864,7 @@
     {
       "id": "mature_white_dragon",
       "name": "Mature White Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         34,
         51
@@ -29961,7 +29961,7 @@
     {
       "id": "xorn",
       "name": "Xorn",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         36,
         52
@@ -30071,7 +30071,7 @@
     {
       "id": "shadow",
       "name": "Shadow",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         36,
         52
@@ -30206,7 +30206,7 @@
     {
       "id": "phantom",
       "name": "Phantom",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         36,
         52
@@ -30339,7 +30339,7 @@
     {
       "id": "grey_wraith",
       "name": "Grey Wraith",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         36,
         52
@@ -30441,7 +30441,7 @@
     {
       "id": "young_multihued_dragon",
       "name": "Young multi-hued dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         32,
         49
@@ -30545,7 +30545,7 @@
     {
       "id": "colossus",
       "name": "Colossus",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         36,
         52
@@ -30654,7 +30654,7 @@
     {
       "id": "young_gold_dragon",
       "name": "Young gold dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         31,
         49
@@ -30748,7 +30748,7 @@
     {
       "id": "rogrog_the_black_troll",
       "name": "Rogrog the Black Troll",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         42,
         42
@@ -30867,7 +30867,7 @@
     {
       "id": "mature_blue_dragon",
       "name": "Mature Blue Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         34,
         51
@@ -30963,7 +30963,7 @@
     {
       "id": "mature_green_dragon",
       "name": "Mature Green Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         34,
         51
@@ -31059,7 +31059,7 @@
     {
       "id": "mature_bronze_dragon",
       "name": "Mature bronze dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         34,
         51
@@ -31155,7 +31155,7 @@
     {
       "id": "young_red_dragon",
       "name": "Young Red Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         31,
         49
@@ -31250,7 +31250,7 @@
     {
       "id": "trapper",
       "name": "Trapper",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         52
@@ -31380,7 +31380,7 @@
     {
       "id": "bodak",
       "name": "Bodak",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         36,
         52
@@ -31477,7 +31477,7 @@
     {
       "id": "ice_elemental",
       "name": "Ice elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         37,
         53
@@ -31578,7 +31578,7 @@
     {
       "id": "necromancer",
       "name": "Necromancer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         52
@@ -31664,7 +31664,7 @@
     {
       "id": "lorgan_chief_of_the_easterlings",
       "name": "Lorgan, Chief of the Easterlings",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         36
@@ -31785,7 +31785,7 @@
     {
       "id": "demonologist",
       "name": "Demonologist",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         36,
         52
@@ -31883,7 +31883,7 @@
     {
       "id": "mummified_troll",
       "name": "Mummified troll",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         37,
         53
@@ -31962,7 +31962,7 @@
     {
       "id": "the_queen_ant",
       "name": "The Queen Ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         37,
         37
@@ -32080,7 +32080,7 @@
     {
       "id": "will_o_the_wisp",
       "name": "Will o\u0027 the wisp",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         38,
         54
@@ -32197,7 +32197,7 @@
     {
       "id": "magma_elemental",
       "name": "Magma elemental",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         37,
         53
@@ -32297,7 +32297,7 @@
     {
       "id": "black_pudding",
       "name": "Black pudding",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         37,
         53
@@ -32414,7 +32414,7 @@
     {
       "id": "killer_iridescent_beetle",
       "name": "Killer iridescent beetle",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         37,
         53
@@ -32500,7 +32500,7 @@
     {
       "id": "nexus_vortex",
       "name": "Nexus vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         37,
         53
@@ -32560,7 +32560,7 @@
     {
       "id": "plasma_vortex",
       "name": "Plasma vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         37,
         53
@@ -32639,7 +32639,7 @@
     {
       "id": "mature_red_dragon",
       "name": "Mature Red Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         36,
         52
@@ -32737,7 +32737,7 @@
     {
       "id": "mature_gold_dragon",
       "name": "Mature gold dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         36,
         52
@@ -32834,7 +32834,7 @@
     {
       "id": "crystal_drake",
       "name": "Crystal drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         33,
         50
@@ -32934,7 +32934,7 @@
     {
       "id": "mature_black_dragon",
       "name": "Mature Black Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         36,
         52
@@ -33031,7 +33031,7 @@
     {
       "id": "mature_multihued_dragon",
       "name": "Mature multi-hued dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         38,
         54
@@ -33139,7 +33139,7 @@
     {
       "id": "death_knight",
       "name": "Death Knight",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         38,
         54
@@ -33240,7 +33240,7 @@
     {
       "id": "castamir_the_usurper",
       "name": "Castamir the Usurper",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         38,
         38
@@ -33360,7 +33360,7 @@
     {
       "id": "time_vortex",
       "name": "Time vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         38,
         54
@@ -33431,7 +33431,7 @@
     {
       "id": "shimmering_vortex",
       "name": "Shimmering vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         38,
         54
@@ -33535,7 +33535,7 @@
     {
       "id": "ancient_blue_dragon",
       "name": "Ancient Blue Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         40,
         55
@@ -33637,7 +33637,7 @@
     {
       "id": "ancient_bronze_dragon",
       "name": "Ancient bronze dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         40,
         55
@@ -33738,7 +33738,7 @@
     {
       "id": "beholder",
       "name": "Beholder",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         40,
         55
@@ -33887,7 +33887,7 @@
     {
       "id": "emperor_wight",
       "name": "Emperor Wight",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         38,
         54
@@ -34006,7 +34006,7 @@
     {
       "id": "seraph",
       "name": "Seraph",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         45,
         59
@@ -34135,7 +34135,7 @@
     {
       "id": "vargo_tyrant_of_fire",
       "name": "Vargo, Tyrant of Fire",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         43,
         43
@@ -34255,7 +34255,7 @@
     {
       "id": "black_wraith",
       "name": "Black Wraith",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         38,
         54
@@ -34375,7 +34375,7 @@
     {
       "id": "erinyes",
       "name": "Erinyes",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         38,
         54
@@ -34470,7 +34470,7 @@
     {
       "id": "nether_wraith",
       "name": "Nether wraith",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         39,
         55
@@ -34591,7 +34591,7 @@
     {
       "id": "eldrak",
       "name": "Eldrak",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         37,
         53
@@ -34682,7 +34682,7 @@
     {
       "id": "ettin",
       "name": "Ettin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         38,
         54
@@ -34773,7 +34773,7 @@
     {
       "id": "waldern_king_of_water",
       "name": "Waldern, King of Water",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         43,
         43
@@ -34896,7 +34896,7 @@
     {
       "id": "kavlax_the_manyheaded",
       "name": "Kavlax the Many-Headed",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         39,
         39
@@ -35025,7 +35025,7 @@
     {
       "id": "ancient_white_dragon",
       "name": "Ancient White Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         40,
         55
@@ -35127,7 +35127,7 @@
     {
       "id": "ancient_green_dragon",
       "name": "Ancient Green Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         40,
         55
@@ -35229,7 +35229,7 @@
     {
       "id": "7headed_hydra",
       "name": "7-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         39,
         55
@@ -35355,7 +35355,7 @@
     {
       "id": "night_mare",
       "name": "Night mare",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         39,
         55
@@ -35488,7 +35488,7 @@
     {
       "id": "vampire_lord",
       "name": "Vampire Lord",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         42,
         57
@@ -35636,7 +35636,7 @@
     {
       "id": "ancient_black_dragon",
       "name": "Ancient Black Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         41,
         56
@@ -35738,7 +35738,7 @@
     {
       "id": "disenchanter_worm_mass",
       "name": "Disenchanter worm mass",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         40,
         55
@@ -35800,7 +35800,7 @@
     {
       "id": "rotting_quylthulg",
       "name": "Rotting quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         45,
         59
@@ -35844,7 +35844,7 @@
     {
       "id": "spirit_troll",
       "name": "Spirit troll",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         40,
         55
@@ -35938,7 +35938,7 @@
     {
       "id": "lesser_titan",
       "name": "Lesser titan",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         56,
         67
@@ -36107,7 +36107,7 @@
     {
       "id": "9headed_hydra",
       "name": "9-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         40,
         55
@@ -36221,7 +36221,7 @@
     {
       "id": "enchantress",
       "name": "Enchantress",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         55
@@ -36319,7 +36319,7 @@
     {
       "id": "knight_templar",
       "name": "Knight Templar",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         44,
         58
@@ -36423,7 +36423,7 @@
     {
       "id": "sorcerer",
       "name": "Sorcerer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         55
@@ -36531,7 +36531,7 @@
     {
       "id": "xaren",
       "name": "Xaren",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         40,
         55
@@ -36643,7 +36643,7 @@
     {
       "id": "giant_roc",
       "name": "Giant roc",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         40,
         55
@@ -36727,7 +36727,7 @@
     {
       "id": "uvatha_the_horseman",
       "name": "Uvatha the Horseman",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         40,
         40
@@ -36864,7 +36864,7 @@
     {
       "id": "minotaur",
       "name": "Minotaur",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         40,
         55
@@ -36964,7 +36964,7 @@
     {
       "id": "medusa_the_gorgon",
       "name": "Medusa, the Gorgon",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         40
@@ -37090,7 +37090,7 @@
     {
       "id": "death_drake",
       "name": "Death drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         45,
         59
@@ -37207,7 +37207,7 @@
     {
       "id": "ancient_red_dragon",
       "name": "Ancient Red Dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         41,
         56
@@ -37309,7 +37309,7 @@
     {
       "id": "ancient_gold_dragon",
       "name": "Ancient gold dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         41,
         56
@@ -37410,7 +37410,7 @@
     {
       "id": "great_crystal_drake",
       "name": "Great crystal drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         45,
         59
@@ -37513,7 +37513,7 @@
     {
       "id": "vrock",
       "name": "Vrock",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         40,
         55
@@ -37613,7 +37613,7 @@
     {
       "id": "death_quasit",
       "name": "Death quasit",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         40,
         55
@@ -37729,7 +37729,7 @@
     {
       "id": "adunaphel_the_quiet",
       "name": "Adunaphel the Quiet",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         43,
         43
@@ -37881,7 +37881,7 @@
     {
       "id": "dark_elven_sorcerer",
       "name": "Dark elven sorcerer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         41,
         56
@@ -37992,7 +37992,7 @@
     {
       "id": "master_lich",
       "name": "Master lich",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         41,
         56
@@ -38134,7 +38134,7 @@
     {
       "id": "hezrou",
       "name": "Hezrou",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         41,
         56
@@ -38217,7 +38217,7 @@
     {
       "id": "akhorahil_the_blind",
       "name": "Akhorahil the Blind",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         45,
         45
@@ -38370,7 +38370,7 @@
     {
       "id": "gorlim_betrayer_of_barahir",
       "name": "Gorlim, Betrayer of Barahir",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         41,
         41
@@ -38505,7 +38505,7 @@
     {
       "id": "archon",
       "name": "Archon",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         55,
         67
@@ -38659,7 +38659,7 @@
     {
       "id": "glabrezu",
       "name": "Glabrezu",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         43,
         58
@@ -38741,7 +38741,7 @@
     {
       "id": "ren_the_unclean",
       "name": "Ren the Unclean",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         48,
         48
@@ -38895,7 +38895,7 @@
     {
       "id": "nalfeshnee",
       "name": "Nalfeshnee",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         45,
         59
@@ -38996,7 +38996,7 @@
     {
       "id": "undead_beholder",
       "name": "Undead beholder",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         45,
         59
@@ -39163,7 +39163,7 @@
     {
       "id": "dread",
       "name": "Dread",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         42,
         57
@@ -39278,7 +39278,7 @@
     {
       "id": "mumak",
       "name": "Mumak",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         43,
         58
@@ -39362,7 +39362,7 @@
     {
       "id": "ancient_multi_hued_dragon",
       "name": "Ancient multi-hued dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         43,
         58
@@ -39474,7 +39474,7 @@
     {
       "id": "ethereal_dragon",
       "name": "Ethereal dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         45,
         59
@@ -39578,7 +39578,7 @@
     {
       "id": "ji_indur_dawndeath",
       "name": "Ji Indur Dawndeath",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         52,
         52
@@ -39732,7 +39732,7 @@
     {
       "id": "marilith",
       "name": "Marilith",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         47,
         61
@@ -39850,7 +39850,7 @@
     {
       "id": "quaker_master_of_earth",
       "name": "Quaker, Master of Earth",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         43,
         43
@@ -39973,7 +39973,7 @@
     {
       "id": "lesser_balrog",
       "name": "Lesser Balrog",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         49,
         62
@@ -40089,7 +40089,7 @@
     {
       "id": "ariel_queen_of_air",
       "name": "Ariel, Queen of Air",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         43,
         43
@@ -40238,7 +40238,7 @@
     {
       "id": "11headed_hydra",
       "name": "11-headed hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         44,
         58
@@ -40354,7 +40354,7 @@
     {
       "id": "patriarch",
       "name": "Patriarch",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         55
@@ -40458,7 +40458,7 @@
     {
       "id": "dreadmaster",
       "name": "Dreadmaster",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         44,
         58
@@ -40605,7 +40605,7 @@
     {
       "id": "drolem",
       "name": "Drolem",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         44,
         58
@@ -40726,7 +40726,7 @@
     {
       "id": "scatha_the_worm",
       "name": "Scatha the Worm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         46,
         46
@@ -40848,7 +40848,7 @@
     {
       "id": "dwar_dog_lord_of_waw",
       "name": "Dwar, Dog Lord of Waw",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         56,
         56
@@ -41003,7 +41003,7 @@
     {
       "id": "smaug_the_golden",
       "name": "Smaug the Golden",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         48,
         48
@@ -41125,7 +41125,7 @@
     {
       "id": "dracolich",
       "name": "Dracolich",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         55,
         67
@@ -41243,7 +41243,7 @@
     {
       "id": "greater_titan",
       "name": "Greater titan",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         66,
         75
@@ -41412,7 +41412,7 @@
     {
       "id": "dracolisk",
       "name": "Dracolisk",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         55,
         67
@@ -41534,7 +41534,7 @@
     {
       "id": "death_mold",
       "name": "Death mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         47,
         61
@@ -41674,7 +41674,7 @@
     {
       "id": "itangast_the_fire_drake",
       "name": "Itangast the Fire Drake",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         47,
         47
@@ -41796,7 +41796,7 @@
     {
       "id": "glaurung_father_of_the_dragons",
       "name": "Glaurung, Father of the Dragons",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         70,
         70
@@ -41924,7 +41924,7 @@
     {
       "id": "master_mystic",
       "name": "Master mystic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         50,
         63
@@ -42056,7 +42056,7 @@
     {
       "id": "balrog_of_moria",
       "name": "The Balrog of Moria",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         50,
         50
@@ -42178,7 +42178,7 @@
     {
       "id": "nightwing",
       "name": "Nightwing",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         61,
         71
@@ -42317,7 +42317,7 @@
     {
       "id": "nether_hound",
       "name": "Nether hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         51,
         64
@@ -42426,7 +42426,7 @@
     {
       "id": "time_hound",
       "name": "Time hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         51,
         64
@@ -42535,7 +42535,7 @@
     {
       "id": "plasma_hound",
       "name": "Plasma hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         51,
         64
@@ -42646,7 +42646,7 @@
     {
       "id": "demonic_quylthulg",
       "name": "Demonic quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         45,
         59
@@ -42690,7 +42690,7 @@
     {
       "id": "great_storm_wyrm",
       "name": "Great Storm Wyrm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         63,
         73
@@ -42812,7 +42812,7 @@
     {
       "id": "baphomet_the_minotaur_lord",
       "name": "Baphomet the Minotaur Lord",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         58,
         58
@@ -42934,7 +42934,7 @@
     {
       "id": "harowen_the_black_hand",
       "name": "Harowen the Black Hand",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         51,
         51
@@ -43075,7 +43075,7 @@
     {
       "id": "hoarmurath_of_dir",
       "name": "Hoarmurath of Dir",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         64,
         64
@@ -43231,7 +43231,7 @@
     {
       "id": "grand_master_mystic",
       "name": "Grand master mystic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         57,
         68
@@ -43365,7 +43365,7 @@
     {
       "id": "khamul_the_black_easterling",
       "name": "Khamul, the Black Easterling",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         72,
         72
@@ -43522,7 +43522,7 @@
     {
       "id": "ethereal_hound",
       "name": "Ethereal hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         59,
         70
@@ -43631,7 +43631,7 @@
     {
       "id": "great_ice_wyrm",
       "name": "Great Ice Wyrm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         63,
         73
@@ -43753,7 +43753,7 @@
     {
       "id": "the_phoenix",
       "name": "The Phoenix",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         54,
         54
@@ -43876,7 +43876,7 @@
     {
       "id": "nightcrawler",
       "name": "Nightcrawler",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         69,
         77
@@ -44023,7 +44023,7 @@
     {
       "id": "hand_druj",
       "name": "Hand druj",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         57,
         68
@@ -44079,7 +44079,7 @@
     {
       "id": "eye_druj",
       "name": "Eye druj",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         58,
         69
@@ -44130,7 +44130,7 @@
     {
       "id": "skull_druj",
       "name": "Skull druj",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         59,
         70
@@ -44185,7 +44185,7 @@
     {
       "id": "chaos_vortex",
       "name": "Chaos vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         53,
         65
@@ -44348,7 +44348,7 @@
     {
       "id": "aether_vortex",
       "name": "Aether vortex",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         60,
         70
@@ -44481,7 +44481,7 @@
     {
       "id": "the_lernaean_hydra",
       "name": "The Lernaean Hydra",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         57,
         57
@@ -44609,7 +44609,7 @@
     {
       "id": "thuringwethil_the_vampire_messenger",
       "name": "Thuringwethil, the Vampire Messenger",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         67,
         67
@@ -44790,7 +44790,7 @@
     {
       "id": "great_hell_wyrm",
       "name": "Great Hell Wyrm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         67,
         76
@@ -44912,7 +44912,7 @@
     {
       "id": "draconic_quylthulg",
       "name": "Draconic quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         45,
         59
@@ -44956,7 +44956,7 @@
     {
       "id": "fundin_bluecloak",
       "name": "Fundin Bluecloak",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         59,
         59
@@ -45085,7 +45085,7 @@
     {
       "id": "uriel_angel_of_fire",
       "name": "Uriel, Angel of Fire",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         61,
         61
@@ -45215,7 +45215,7 @@
     {
       "id": "azriel_angel_of_death",
       "name": "Azriel, Angel of Death",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         62,
         62
@@ -45365,7 +45365,7 @@
     {
       "id": "ancalagon_the_black",
       "name": "Ancalagon the Black",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         85,
         85
@@ -45498,7 +45498,7 @@
     {
       "id": "nightwalker",
       "name": "Nightwalker",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         73,
         80
@@ -45652,7 +45652,7 @@
     {
       "id": "gabriel_the_messenger",
       "name": "Gabriel, the Messenger",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         64,
         64
@@ -45811,7 +45811,7 @@
     {
       "id": "saruman_of_many_colours",
       "name": "Saruman of Many Colours",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         60,
         60
@@ -45966,7 +45966,7 @@
     {
       "id": "dreadlord",
       "name": "Dreadlord",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         62,
         72
@@ -46136,7 +46136,7 @@
     {
       "id": "the_cat_lord",
       "name": "The Cat Lord",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         66,
         66
@@ -46304,7 +46304,7 @@
     {
       "id": "jabberwock",
       "name": "Jabberwock",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         68,
         76
@@ -46415,7 +46415,7 @@
     {
       "id": "chaos_hound",
       "name": "Chaos hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         64,
         73
@@ -46523,7 +46523,7 @@
     {
       "id": "great_wyrm_of_chaos",
       "name": "Great Wyrm of Chaos",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         75,
         82
@@ -46648,7 +46648,7 @@
     {
       "id": "great_wyrm_of_law",
       "name": "Great Wyrm of Law",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         75,
         82
@@ -46773,7 +46773,7 @@
     {
       "id": "great_wyrm_of_balance",
       "name": "Great Wyrm of Balance",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         79,
         85
@@ -46901,7 +46901,7 @@
     {
       "id": "tselakus_the_dreadlord",
       "name": "Tselakus, the Dreadlord",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         68,
         68
@@ -47048,7 +47048,7 @@
     {
       "id": "great_wyrm_of_many_colours",
       "name": "Great Wyrm of Many Colours",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         79,
         85
@@ -47180,7 +47180,7 @@
     {
       "id": "black_reaver",
       "name": "Black reaver",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         74,
         81
@@ -47344,7 +47344,7 @@
     {
       "id": "greater_demonic_quylthulg",
       "name": "Greater demonic quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         71,
         79
@@ -47388,7 +47388,7 @@
     {
       "id": "greater_draconic_quylthulg",
       "name": "Greater draconic quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         71,
         79
@@ -47432,7 +47432,7 @@
     {
       "id": "greater_rotting_quylthulg",
       "name": "Greater rotting quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         71,
         79
@@ -47476,7 +47476,7 @@
     {
       "id": "feagwath_the_undead_sorcerer",
       "name": "Feagwath, the Undead Sorcerer",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         77,
         77
@@ -47650,7 +47650,7 @@
     {
       "id": "omarax_the_eye_tyrant",
       "name": "Omarax, the Eye Tyrant",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         73,
         73
@@ -47813,7 +47813,7 @@
     {
       "id": "ungoliant_the_unlight",
       "name": "Ungoliant, the Unlight",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         75,
         75
@@ -47963,7 +47963,7 @@
     {
       "id": "aether_hound",
       "name": "Aether hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         74,
         81
@@ -48095,7 +48095,7 @@
     {
       "id": "the_mouth_of_sauron",
       "name": "The Mouth of Sauron",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         65,
         65
@@ -48255,7 +48255,7 @@
     {
       "id": "master_quylthulg",
       "name": "Master quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         76,
         82
@@ -48303,7 +48303,7 @@
     {
       "id": "qlzqqlzuup_the_emperor_quylthulg",
       "name": "Qlzqqlzuup, the Emperor Quylthulg",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         79,
         79
@@ -48359,7 +48359,7 @@
     {
       "id": "the_witchking_of_angmar",
       "name": "The Witch-King of Angmar",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         80,
         80
@@ -48518,7 +48518,7 @@
     {
       "id": "pazuzu_lord_of_air",
       "name": "Pazuzu, Lord of Air",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         82,
         82
@@ -48644,7 +48644,7 @@
     {
       "id": "hellhound",
       "name": "Hellhound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         78,
         84
@@ -48739,7 +48739,7 @@
     {
       "id": "cantoras_the_skeletal_lord",
       "name": "Cantoras, the Skeletal Lord",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         84,
         84
@@ -48895,7 +48895,7 @@
     {
       "id": "the_tarrasque",
       "name": "The Tarrasque",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         86,
         86
@@ -49006,7 +49006,7 @@
     {
       "id": "lungorthin_the_balrog_of_white_fire",
       "name": "Lungorthin, the Balrog of White Fire",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         88,
         88
@@ -49130,7 +49130,7 @@
     {
       "id": "draugluin_sire_of_all_werewolves",
       "name": "Draugluin, Sire of All Werewolves",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         83,
         83
@@ -49252,7 +49252,7 @@
     {
       "id": "vecna_the_emperor_lich",
       "name": "Vecna, the Emperor Lich",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         92,
         92
@@ -49424,7 +49424,7 @@
     {
       "id": "huan_wolfhound_of_the_valar",
       "name": "Huan, Wolfhound of the Valar",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         90,
         90
@@ -49548,7 +49548,7 @@
     {
       "id": "carcharoth_the_jaws_of_thirst",
       "name": "Carcharoth, the Jaws of Thirst",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         90,
         90
@@ -49672,7 +49672,7 @@
     {
       "id": "gothmog_the_high_captain_of_balrogs",
       "name": "Gothmog, the High Captain of Balrogs",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         95,
         95
@@ -49797,7 +49797,7 @@
     {
       "id": "sauron_the_sorcerer",
       "name": "Sauron, the Sorcerer",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         99,
         99
@@ -49972,7 +49972,7 @@
     {
       "id": "morgoth_lord_of_darkness",
       "name": "Morgoth, Lord of Darkness",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         100,
         100
@@ -50166,7 +50166,7 @@
     {
       "id": "silver_mouse",
       "name": "Silver mouse",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -50222,7 +50222,7 @@
     {
       "id": "rot_jelly",
       "name": "Rot jelly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         5,
         29
@@ -50310,7 +50310,7 @@
     {
       "id": "giant_tan_bat",
       "name": "Giant tan bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         15,
         37
@@ -50407,7 +50407,7 @@
     {
       "id": "giant_silver_ant",
       "name": "Giant silver ant",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         23,
         43
@@ -50458,7 +50458,7 @@
     {
       "id": "giant_brown_tick",
       "name": "Giant brown tick",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         25,
         44
@@ -50539,7 +50539,7 @@
     {
       "id": "disenchanter_bat",
       "name": "Disenchanter bat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         26,
         45
@@ -50584,7 +50584,7 @@
     {
       "id": "shimmering_mold",
       "name": "Shimmering mold",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         27,
         46
@@ -50656,7 +50656,7 @@
     {
       "id": "wyvern",
       "name": "Wyvern",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         22,
         42
@@ -50747,7 +50747,7 @@
     {
       "id": "chest_mimic",
       "name": "Chest mimic",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         35,
         52
@@ -50888,7 +50888,7 @@
     {
       "id": "demilich",
       "name": "Demilich",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         54,
         66
@@ -51035,7 +51035,7 @@
     {
       "id": "archlich",
       "name": "Archlich",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         64,
         73
@@ -51181,7 +51181,7 @@
     {
       "id": "crow",
       "name": "Crow",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         2,
         27
@@ -51245,7 +51245,7 @@
     {
       "id": "raven",
       "name": "Raven",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         4,
         28
@@ -51309,7 +51309,7 @@
     {
       "id": "crebain",
       "name": "Crebain",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         16,
         37
@@ -51379,7 +51379,7 @@
     {
       "id": "winged_horror",
       "name": "Winged Horror",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         48,
         61
@@ -51509,7 +51509,7 @@
     {
       "id": "cave_bear",
       "name": "Cave bear",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         9,
         32
@@ -51593,7 +51593,7 @@
     {
       "id": "grizzly_bear",
       "name": "Grizzly bear",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         16,
         37
@@ -51693,7 +51693,7 @@
     {
       "id": "werebear",
       "name": "Werebear",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         24,
         43
@@ -51796,7 +51796,7 @@
     {
       "id": "beorn_the_shapechanger",
       "name": "Beorn, the Shape-Changer",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         28,
         28
@@ -51906,7 +51906,7 @@
     {
       "id": "barbazu",
       "name": "Barbazu",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         55,
         67
@@ -52033,7 +52033,7 @@
     {
       "id": "bile_demon",
       "name": "Bile Demon",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         61,
         71
@@ -52138,7 +52138,7 @@
     {
       "id": "osyluth",
       "name": "Osyluth",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         65,
         74
@@ -52294,7 +52294,7 @@
     {
       "id": "gelugon",
       "name": "Gelugon",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         69,
         77
@@ -52430,7 +52430,7 @@
     {
       "id": "horned_reaper",
       "name": "Horned Reaper",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         72,
         79
@@ -52556,7 +52556,7 @@
     {
       "id": "pit_fiend",
       "name": "Pit Fiend",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         77,
         83
@@ -52693,7 +52693,7 @@
     {
       "id": "greater_balrog",
       "name": "Greater Balrog",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         79,
         85
@@ -52816,7 +52816,7 @@
     {
       "id": "baby_bronze_dragon",
       "name": "Baby bronze dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -52912,7 +52912,7 @@
     {
       "id": "baby_gold_dragon",
       "name": "Baby gold dragon",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         9,
         32
@@ -53007,7 +53007,7 @@
     {
       "id": "great_swamp_wyrm",
       "name": "Great Swamp Wyrm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         63,
         73
@@ -53129,7 +53129,7 @@
     {
       "id": "great_wyrm_of_perplexity",
       "name": "Great Wyrm of Perplexity",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         63,
         73
@@ -53276,7 +53276,7 @@
     {
       "id": "great_bile_wyrm",
       "name": "Great Bile Wyrm",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         67,
         76
@@ -53397,7 +53397,7 @@
     {
       "id": "great_wyrm_of_thunder",
       "name": "Great Wyrm of Thunder",
-      "type": "dragon",
+      "species": "dragon",
       "dungeon_levels": [
         67,
         76
@@ -53517,7 +53517,7 @@
     {
       "id": "ranger",
       "name": "Ranger",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         20,
         40
@@ -53596,7 +53596,7 @@
     {
       "id": "paladin",
       "name": "Paladin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         20,
         40
@@ -53674,7 +53674,7 @@
     {
       "id": "ranger_chieftain",
       "name": "Ranger Chieftain",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         41,
         56
@@ -53783,7 +53783,7 @@
     {
       "id": "berserker",
       "name": "Berserker",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         45,
         59
@@ -53880,7 +53880,7 @@
     {
       "id": "cyclops",
       "name": "Cyclops",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         45,
         59
@@ -53962,7 +53962,7 @@
     {
       "id": "polyphemus_the_blind_cyclops",
       "name": "Polyphemus, the Blind Cyclops",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         69,
         69
@@ -54071,7 +54071,7 @@
     {
       "id": "atlas_the_titan",
       "name": "Atlas, the Titan",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         76,
         76
@@ -54223,7 +54223,7 @@
     {
       "id": "kronos_lord_of_the_titans",
       "name": "Kronos, Lord of the Titans",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         87,
         87
@@ -54406,7 +54406,7 @@
     {
       "id": "evil_eye",
       "name": "Evil eye",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         18,
         39
@@ -54478,7 +54478,7 @@
     {
       "id": "spectator",
       "name": "Spectator",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         28,
         46
@@ -54597,7 +54597,7 @@
     {
       "id": "gauth",
       "name": "Gauth",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         36,
         52
@@ -54737,7 +54737,7 @@
     {
       "id": "beholder_hivemother",
       "name": "Beholder hive-mother",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         67,
         76
@@ -54901,7 +54901,7 @@
     {
       "id": "neekerbreeker",
       "name": "Neekerbreeker",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         19,
         40
@@ -54959,7 +54959,7 @@
     {
       "id": "giant_firefly",
       "name": "Giant firefly",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         24,
         43
@@ -55024,7 +55024,7 @@
     {
       "id": "eol_the_dark_elf",
       "name": "Eol, the Dark Elf",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         49,
         49
@@ -55144,7 +55144,7 @@
     {
       "id": "maeglin_the_traitor_of_gondolin",
       "name": "Maeglin, the Traitor of Gondolin",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         81,
         81
@@ -55272,7 +55272,7 @@
     {
       "id": "elder_vampire",
       "name": "Elder vampire",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         54,
         66
@@ -55424,7 +55424,7 @@
     {
       "id": "silent_watcher",
       "name": "Silent watcher",
-      "type": "construct",
+      "species": "construct",
       "dungeon_levels": [
         35,
         52
@@ -55546,7 +55546,7 @@
     {
       "id": "nighthawk",
       "name": "Nighthawk",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         8,
         31
@@ -55629,7 +55629,7 @@
     {
       "id": "ghoul",
       "name": "Ghoul",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         26,
         45
@@ -55752,7 +55752,7 @@
     {
       "id": "ghast",
       "name": "Ghast",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         30,
         48
@@ -55912,7 +55912,7 @@
     {
       "id": "greater_basilisk",
       "name": "Greater Basilisk",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         45,
         59
@@ -56052,7 +56052,7 @@
     {
       "id": "aranea",
       "name": "Aranea",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         38,
         54
@@ -56169,7 +56169,7 @@
     {
       "id": "elder_aranea",
       "name": "Elder aranea",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         48,
         61
@@ -56292,7 +56292,7 @@
     {
       "id": "kobold_shaman",
       "name": "Kobold Shaman",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         3,
         28
@@ -56352,7 +56352,7 @@
     {
       "id": "bat_of_gorgoroth",
       "name": "Bat of Gorgoroth",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         28,
         46
@@ -56431,7 +56431,7 @@
     {
       "id": "doombat",
       "name": "Doombat",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         32,
         49
@@ -56516,7 +56516,7 @@
     {
       "id": "wolf_chieftain",
       "name": "Wolf chieftain",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         26,
         45
@@ -56632,7 +56632,7 @@
     {
       "id": "bone_golem",
       "name": "Bone golem",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         68,
         76
@@ -56788,7 +56788,7 @@
     {
       "id": "bronze_golem",
       "name": "Bronze golem",
-      "type": "demon",
+      "species": "demon",
       "dungeon_levels": [
         75,
         82
@@ -56910,7 +56910,7 @@
     {
       "id": "ogre_chieftain",
       "name": "Ogre chieftain",
-      "type": "aberration",
+      "species": "aberration",
       "dungeon_levels": [
         30,
         48
@@ -57018,7 +57018,7 @@
     {
       "id": "arpharazon_the_golden",
       "name": "Ar-Pharazon the Golden",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         55,
         55
@@ -57142,7 +57142,7 @@
     {
       "id": "troll_chieftain",
       "name": "Troll chieftain",
-      "type": "humanoid",
+      "species": "humanoid",
       "dungeon_levels": [
         40,
         55
@@ -57253,7 +57253,7 @@
     {
       "id": "shardstorm",
       "name": "Shardstorm",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         37,
         53
@@ -57312,7 +57312,7 @@
     {
       "id": "storm_of_unmagic",
       "name": "Storm of Unmagic",
-      "type": "elemental",
+      "species": "elemental",
       "dungeon_levels": [
         53,
         65
@@ -57403,7 +57403,7 @@
     {
       "id": "greater_mummy",
       "name": "Greater mummy",
-      "type": "undead",
+      "species": "undead",
       "dungeon_levels": [
         36,
         52
@@ -57583,7 +57583,7 @@
     {
       "id": "multihued_hound",
       "name": "Multi-hued hound",
-      "type": "beast",
+      "species": "beast",
       "dungeon_levels": [
         43,
         58

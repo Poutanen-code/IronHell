@@ -757,21 +757,6 @@
             "provenance_status": "derived"
         },
         {
-            "id": "brand_fire",
-            "source_flag": "BRAND_FIRE",
-            "name": "Fire Brand",
-            "description": "Adds fire-branded melee damage.",
-            "category": "combat",
-            "scope": "bearer_passive",
-            "canonical_owner": "capability",
-            "grant_sources": [
-                "weapon",
-                "artifact",
-                "ego_item"
-            ],
-            "provenance_status": "derived"
-        },
-        {
             "id": "brand_acid",
             "source_flag": "BRAND_ACID",
             "name": "Acid Brand",
