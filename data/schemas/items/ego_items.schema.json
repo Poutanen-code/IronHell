@@ -13,12 +13,11 @@
         "type": "object",
         "additionalProperties": true,
         "required": [
-          "serial", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
+          "name", "rating", "xtra", "max_to_hit", "max_to_dam",
           "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
           "slots", "item_categories", "flags"
         ],
         "properties": {
-          "serial": { "type": "integer" },
           "name": { "type": "string" },
           "rating": { "type": "integer" },
           "xtra": { "type": "integer" },

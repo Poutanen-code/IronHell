@@ -1,4 +1,4 @@
-{
+﻿{
   "_meta": {
     "source": "IronHell 1.5.3 lib/edit/monster.txt",
     "generated_from": "reference-mIronHell-1_5_3/lib/edit/monster.txt",
@@ -6,7 +6,6 @@
     "schema_path": "data/schemas/monsters/monsters.schema.json",
     "field_reference": {
       "reference_fields": {
-        "serial": "IronHell N: serial number",
         "symbol": "IronHell G: display glyph",
         "color": "IronHell G: display color code",
         "stats": {

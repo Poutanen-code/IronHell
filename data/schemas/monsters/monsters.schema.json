@@ -52,7 +52,6 @@
               "type": "object",
               "additionalProperties": false,
               "required": [
-                "serial",
                 "symbol",
                 "color",
                 "stats",
@@ -63,7 +62,6 @@
                 "description"
               ],
               "properties": {
-                "serial": { "type": "string", "minLength": 1 },
                 "symbol": { "type": "string", "minLength": 1 },
                 "color": { "type": "string", "minLength": 1 },
                 "stats": {
@@ -214,7 +212,6 @@
         "ai_behavior",
         "description",
         "sprite",
-        "serial",
         "symbol",
         "color"
       ],
@@ -277,7 +274,6 @@
         "spell_frequency": { "type": "integer", "minimum": 1 },
         "description": { "type": "string", "minLength": 1 },
         "sprite": { "type": "string", "minLength": 1 },
-        "serial": { "type": "integer", "minimum": 1, "maximum": 616 },
         "symbol": { "type": "string", "minLength": 1, "maxLength": 1 },
         "color": { "type": "string", "minLength": 1, "maxLength": 1 }
       },
