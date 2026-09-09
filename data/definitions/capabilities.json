@@ -738,6 +738,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "dragon",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -753,6 +760,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "evil",
+                    "multiplier": 2.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -760,13 +774,19 @@
             "source_flag": "SLAY_UNDEAD",
             "name": "Slay Undead",
             "description": "Deals increased melee damage against undead creatures.",
-            "category": "combat",
             "scope": "bearer_passive",
             "canonical_owner": "capability",
             "grant_sources": [
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "undead",
+                    "multiplier": 3.0
+                }
             ],
             "provenance_status": "derived"
         },
@@ -783,6 +803,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "demon",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -797,6 +824,13 @@
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "orc",
+                    "multiplier": 3.0
+                }
             ],
             "provenance_status": "derived"
         },
@@ -813,6 +847,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "troll",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -827,6 +868,13 @@
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "giant",
+                    "multiplier": 3.0
+                }
             ],
             "provenance_status": "derived"
         },
@@ -843,6 +891,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "animal",
+                    "multiplier": 2.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -857,6 +912,13 @@
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "undead",
+                    "multiplier": 5.0
+                }
             ],
             "provenance_status": "derived"
         },
@@ -873,6 +935,13 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "demon",
+                    "multiplier": 5.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
@@ -887,6 +956,13 @@
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_type": "dragon",
+                    "multiplier": 5.0
+                }
             ],
             "provenance_status": "derived"
         },

@@ -1,4 +1,4 @@
-{
+﻿{
   "_meta": {
     "source": "IronHell 1.5.3 lib/edit/monster.txt",
     "generated_from": "reference-mIronHell-1_5_3/lib/edit/monster.txt",
@@ -133,7 +133,6 @@
       },
       "description": "A grubby child that begs passersby and sometimes snatches a coin.",
       "sprite": "humanoid.png",
-      "serial": 1,
       "symbol": "t",
       "color": "D"
     },
@@ -183,7 +182,6 @@
       },
       "description": "A mangy, half-starved cat prowling the village for scraps.",
       "sprite": "cat.png",
-      "serial": 2,
       "symbol": "f",
       "color": "U"
     },
@@ -233,7 +231,6 @@
       },
       "description": "A scruffy mongrel that barks and occasionally bites.",
       "sprite": "dog.png",
-      "serial": 3,
       "symbol": "C",
       "color": "U"
     },
@@ -306,9 +303,8 @@
         "no_sleep": true,
         "alertness": 3
       },
-      "description": "He's lost his dogs. He's had his mushrooms stolen. He's not a happy hobbit!",
+      "description": "He\u0027s lost his dogs. He\u0027s had his mushrooms stolen. He\u0027s not a happy hobbit!",
       "sprite": "farmer_maggot.png",
-      "serial": 4,
       "symbol": "h",
       "color": "w"
     },
@@ -358,7 +354,6 @@
       },
       "description": "He tends to blubber a lot.",
       "sprite": "humanoid.png",
-      "serial": 5,
       "symbol": "t",
       "color": "W"
     },
@@ -408,9 +403,8 @@
         "open_door": true,
         "bash_door": true
       },
-      "description": "Ugly doesn't begin to describe him.",
+      "description": "Ugly doesn\u0027t begin to describe him.",
       "sprite": "humanoid.png",
-      "serial": 6,
       "symbol": "t",
       "color": "g"
     },
@@ -460,7 +454,6 @@
       },
       "description": "A shambling figure that drools and wanders with no clear purpose.",
       "sprite": "humanoid.png",
-      "serial": 7,
       "symbol": "t",
       "color": "G"
     },
@@ -512,7 +505,6 @@
       },
       "description": "A hollow-eyed figure that shuffles around asking for alms.",
       "sprite": "humanoid.png",
-      "serial": 8,
       "symbol": "t",
       "color": "U"
     },
@@ -562,9 +554,8 @@
         "open_door": true,
         "alertness": 50
       },
-      "description": "You feel it isn't safe to touch him.",
+      "description": "You feel it isn\u0027t safe to touch him.",
       "sprite": "humanoid.png",
-      "serial": 9,
       "symbol": "t",
       "color": "u"
     },
@@ -646,7 +637,6 @@
       },
       "description": "A shady character who leers at passers-by and has quick fingers.",
       "sprite": "humanoid.png",
-      "serial": 10,
       "symbol": "t",
       "color": "b"
     },
@@ -700,7 +690,6 @@
       },
       "description": "He makes you glad to be sober.",
       "sprite": "humanoid.png",
-      "serial": 11,
       "symbol": "t",
       "color": "y"
     },
@@ -755,7 +744,6 @@
       },
       "description": "A distracted trader who mumbles about lost shipments and bad prices.",
       "sprite": "merchant.png",
-      "serial": 12,
       "symbol": "t",
       "color": "o"
     },
@@ -811,7 +799,6 @@
       },
       "description": "A scarred sell-sword looking for trouble or coin or probably both.",
       "sprite": "mercenary.png",
-      "serial": 13,
       "symbol": "t",
       "color": "r"
     },
@@ -866,7 +853,6 @@
       },
       "description": "A grim old soldier nursing old wounds and older grudges.",
       "sprite": "humanoid.png",
-      "serial": 14,
       "symbol": "t",
       "color": "B"
     },
@@ -937,7 +923,6 @@
       },
       "description": "A small strange grey growth.",
       "sprite": "grey_mold.png",
-      "serial": 15,
       "symbol": "m",
       "color": "s"
     },
@@ -1004,7 +989,6 @@
       },
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
-      "serial": 16,
       "symbol": ",",
       "color": "s"
     },
@@ -1071,7 +1055,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 17,
       "symbol": "c",
       "color": "y"
     },
@@ -1140,7 +1123,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 18,
       "symbol": "c",
       "color": "w"
     },
@@ -1191,7 +1173,6 @@
       },
       "description": "It is a smallish, slimy, icky creature.",
       "sprite": "icky_thing.png",
-      "serial": 19,
       "symbol": "i",
       "color": "w"
     },
@@ -1243,7 +1224,6 @@
       },
       "description": "It is a smallish, slimy, icky, blobby creature.",
       "sprite": "icky_thing.png",
-      "serial": 20,
       "symbol": "i",
       "color": "w"
     },
@@ -1294,7 +1274,6 @@
       },
       "description": "An oversized vermin from the cellar depths.",
       "sprite": "giant_white_mouse.png",
-      "serial": 21,
       "symbol": "r",
       "color": "w"
     },
@@ -1362,7 +1341,6 @@
       },
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
-      "serial": 22,
       "symbol": "J",
       "color": "u"
     },
@@ -1430,7 +1408,6 @@
       },
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
-      "serial": 23,
       "symbol": "J",
       "color": "w"
     },
@@ -1483,7 +1460,6 @@
       },
       "description": "It is a squat and ugly humanoid figure with a canine face.",
       "sprite": "small_kobold.png",
-      "serial": 24,
       "symbol": "k",
       "color": "y"
     },
@@ -1536,7 +1512,6 @@
       },
       "description": "A small, dog-headed humanoid that lurks in shallow tunnels.",
       "sprite": "kobold.png",
-      "serial": 25,
       "symbol": "k",
       "color": "G"
     },
@@ -1593,7 +1568,6 @@
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
-      "serial": 26,
       "symbol": "w",
       "color": "w"
     },
@@ -1644,7 +1618,6 @@
       },
       "description": "A disembodied eye, floating a few feet above the ground.",
       "sprite": "floating_eye.png",
-      "serial": 27,
       "symbol": "e",
       "color": "o"
     },
@@ -1693,7 +1666,6 @@
       },
       "description": "It is a small lizard with a hardened hide.",
       "sprite": "reptile.png",
-      "serial": 28,
       "symbol": "R",
       "color": "U"
     },
@@ -1743,7 +1715,6 @@
       },
       "description": "It is a yapping snarling dog, dangerous when in a pack.",
       "sprite": "canine.png",
-      "serial": 29,
       "symbol": "C",
       "color": "U"
     },
@@ -1794,7 +1765,6 @@
       },
       "description": "A large ant with powerful mandibles.",
       "sprite": "giant_ant.png",
-      "serial": 30,
       "symbol": "a",
       "color": "W"
     },
@@ -1843,7 +1813,6 @@
       },
       "description": "A fast-moving pest.",
       "sprite": "bat.png",
-      "serial": 31,
       "symbol": "b",
       "color": "o"
     },
@@ -1883,9 +1852,8 @@
         "shriek"
       ],
       "spell_frequency": 4,
-      "description": "Yum! It looks quite tasty. It doesn't sound so nice, though...",
+      "description": "Yum! It looks quite tasty. It doesn\u0027t sound so nice, though...",
       "sprite": "mushroom.png",
-      "serial": 32,
       "symbol": ",",
       "color": "R"
     },
@@ -1950,7 +1918,6 @@
       },
       "description": "It is a smallish, slimy, icky, hungry creature.",
       "sprite": "icky_thing.png",
-      "serial": 33,
       "symbol": "i",
       "color": "W"
     },
@@ -2002,7 +1969,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 34,
       "symbol": "c",
       "color": "g"
     },
@@ -2070,7 +2036,6 @@
       },
       "description": "He looks inexperienced but tough.",
       "sprite": "humanoid.png",
-      "serial": 35,
       "symbol": "p",
       "color": "u"
     },
@@ -2134,7 +2099,6 @@
       },
       "description": "A rather shifty individual.",
       "sprite": "humanoid.png",
-      "serial": 36,
       "symbol": "p",
       "color": "b"
     },
@@ -2194,7 +2158,6 @@
       "spell_frequency": 12,
       "description": "He is tripping over his priestly robes.",
       "sprite": "humanoid.png",
-      "serial": 37,
       "symbol": "p",
       "color": "g"
     },
@@ -2254,7 +2217,6 @@
       "spell_frequency": 12,
       "description": "He is leaving behind a trail of dropped spell components.",
       "sprite": "humanoid.png",
-      "serial": 38,
       "symbol": "p",
       "color": "r"
     },
@@ -2321,7 +2283,6 @@
       },
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
-      "serial": 39,
       "symbol": ",",
       "color": "y"
     },
@@ -2377,7 +2338,6 @@
       },
       "description": "Its a large pile of white flesh.",
       "sprite": "jelly.png",
-      "serial": 40,
       "symbol": "j",
       "color": "w"
     },
@@ -2428,7 +2388,6 @@
       },
       "description": "It is as big as a wolf.",
       "sprite": "reptile.png",
-      "serial": 41,
       "symbol": "R",
       "color": "g"
     },
@@ -2480,7 +2439,6 @@
       },
       "description": "It is about three feet long.",
       "sprite": "giant_ant.png",
-      "serial": 42,
       "symbol": "a",
       "color": "D"
     },
@@ -2531,7 +2489,6 @@
       },
       "description": "A small black and orange lizard.",
       "sprite": "reptile.png",
-      "serial": 43,
       "symbol": "R",
       "color": "o"
     },
@@ -2615,9 +2572,8 @@
         "evil": true,
         "alertness": 10
       },
-      "description": "A flying, screeching bird with a woman's face.",
+      "description": "A flying, screeching bird with a woman\u0027s face.",
       "sprite": "hybrid.png",
-      "serial": 44,
       "symbol": "H",
       "color": "w"
     },
@@ -2670,13 +2626,12 @@
       },
       "description": "A small humanoid figure.",
       "sprite": "yeek.png",
-      "serial": 45,
       "symbol": "y",
       "color": "b"
     },
     {
       "id": "grip_farmers_dog",
-      "name": "Grip, Farmer Maggot's dog",
+      "name": "Grip, Farmer Maggot\u0027s dog",
       "type": "beast",
       "dungeon_levels": [
         2,
@@ -2724,13 +2679,12 @@
       },
       "description": "A rather vicious dog belonging to Farmer Maggot. It thinks you are stealing mushrooms.",
       "sprite": "farmers_dog.png",
-      "serial": 46,
       "symbol": "C",
       "color": "U"
     },
     {
       "id": "fang_farmers_dog",
-      "name": "Fang, Farmer Maggot's dog",
+      "name": "Fang, Farmer Maggot\u0027s dog",
       "type": "beast",
       "dungeon_levels": [
         2,
@@ -2778,7 +2732,6 @@
       },
       "description": "A rather vicious dog belonging to Farmer Maggot. It thinks you are stealing mushrooms.",
       "sprite": "farmers_dog.png",
-      "serial": 47,
       "symbol": "C",
       "color": "U"
     },
@@ -2835,7 +2788,6 @@
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
-      "serial": 48,
       "symbol": "w",
       "color": "g"
     },
@@ -2903,7 +2855,6 @@
       },
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
-      "serial": 49,
       "symbol": "J",
       "color": "y"
     },
@@ -2955,7 +2906,6 @@
       },
       "description": "Hangs from cracks and strikes when footsteps pass beneath.",
       "sprite": "cave_spider.png",
-      "serial": 50,
       "symbol": "S",
       "color": "D"
     },
@@ -3021,7 +2971,6 @@
       },
       "description": "A larger than normal feline, hissing loudly. Its velvet paws conceal a fistful of needles.",
       "sprite": "cat.png",
-      "serial": 51,
       "symbol": "f",
       "color": "U"
     },
@@ -3086,9 +3035,8 @@
         "evil": true,
         "alertness": 5
       },
-      "description": "Usually known as Gollum. He's been sneaking, and he wants his 'precious.'",
+      "description": "Usually known as Gollum. He\u0027s been sneaking, and he wants his \u0027precious.\u0027",
       "sprite": "smeagol.png",
-      "serial": 52,
       "symbol": "h",
       "color": "B"
     },
@@ -3144,9 +3092,8 @@
         "no_fear": true,
         "alertness": 80
       },
-      "description": "It's green and it's oozing.",
+      "description": "It\u0027s green and it\u0027s oozing.",
       "sprite": "jelly.png",
-      "serial": 53,
       "symbol": "j",
       "color": "g"
     },
@@ -3215,7 +3162,6 @@
       "spell_frequency": 15,
       "description": "It is a ghastly, ghostly form.",
       "sprite": "ghost.png",
-      "serial": 54,
       "symbol": "G",
       "color": "W"
     },
@@ -3267,7 +3213,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 55,
       "symbol": "c",
       "color": "b"
     },
@@ -3320,7 +3265,6 @@
       },
       "description": "It is six inches long.",
       "sprite": "lizard.png",
-      "serial": 56,
       "symbol": "l",
       "color": "w"
     },
@@ -3371,9 +3315,8 @@
         "evil": true,
         "alertness": 120
       },
-      "description": "A large black serpent's body with a female torso.",
+      "description": "A large black serpent\u0027s body with a female torso.",
       "sprite": "naga.png",
-      "serial": 57,
       "symbol": "n",
       "color": "D"
     },
@@ -3427,7 +3370,6 @@
       },
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
-      "serial": 58,
       "symbol": ",",
       "color": "o"
     },
@@ -3517,7 +3459,6 @@
       "spell_frequency": 15,
       "description": "It is a large pile of silver flesh that sucks all light from its surroundings.",
       "sprite": "jelly.png",
-      "serial": 59,
       "symbol": "j",
       "color": "W"
     },
@@ -3576,9 +3517,8 @@
         "drain_mana"
       ],
       "spell_frequency": 15,
-      "description": "It's a large pile of yellow flesh.",
+      "description": "It\u0027s a large pile of yellow flesh.",
       "sprite": "jelly.png",
-      "serial": 60,
       "symbol": "j",
       "color": "y"
     },
@@ -3643,7 +3583,6 @@
       },
       "description": "A short little guy, in bedraggled clothes. He appears to be looking for a good tavern.",
       "sprite": "humanoid.png",
-      "serial": 61,
       "symbol": "h",
       "color": "b"
     },
@@ -3694,7 +3633,6 @@
       },
       "description": "It is about two feet long and has sharp pincers.",
       "sprite": "giant_ant.png",
-      "serial": 62,
       "symbol": "a",
       "color": "w"
     },
@@ -3749,7 +3687,6 @@
       },
       "description": "It is a strange yellow growth on the dungeon floor.",
       "sprite": "mold.png",
-      "serial": 63,
       "symbol": "m",
       "color": "y"
     },
@@ -3801,7 +3738,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 64,
       "symbol": "c",
       "color": "r"
     },
@@ -3867,7 +3803,6 @@
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
-      "serial": 65,
       "symbol": "w",
       "color": "y"
     },
@@ -3925,7 +3860,6 @@
       },
       "description": "It is a disgusting mass of poisonous worms.",
       "sprite": "worm.png",
-      "serial": 66,
       "symbol": "w",
       "color": "w"
     },
@@ -3991,7 +3925,6 @@
       "spell_frequency": 11,
       "description": "A disembodied eye, crackling with energy.",
       "sprite": "floating_eye.png",
-      "serial": 67,
       "symbol": "e",
       "color": "R"
     },
@@ -4040,7 +3973,6 @@
       },
       "description": "It is an armored lizard with a powerful bite.",
       "sprite": "reptile.png",
-      "serial": 68,
       "symbol": "R",
       "color": "u"
     },
@@ -4116,7 +4048,6 @@
       "spell_frequency": 9,
       "description": "An agile hunter, ready and relaxed.",
       "sprite": "humanoid.png",
-      "serial": 69,
       "symbol": "p",
       "color": "W"
     },
@@ -4192,7 +4123,6 @@
       "spell_frequency": 9,
       "description": "An adventurer both devoutly religious and skillful in combat.",
       "sprite": "humanoid.png",
-      "serial": 70,
       "symbol": "p",
       "color": "w"
     },
@@ -4247,9 +4177,8 @@
         "no_fear": true,
         "alertness": 99
       },
-      "description": "It's a large pile of pulsing blue flesh.",
+      "description": "It\u0027s a large pile of pulsing blue flesh.",
       "sprite": "jelly.png",
-      "serial": 71,
       "symbol": "j",
       "color": "b"
     },
@@ -4322,7 +4251,6 @@
       },
       "description": "It appears to be a pile of copper coins.",
       "sprite": "coins.png",
-      "serial": 72,
       "symbol": "$",
       "color": "u"
     },
@@ -4373,7 +4301,6 @@
       },
       "description": "It is a very vicious rodent.",
       "sprite": "rat.png",
-      "serial": 73,
       "symbol": "r",
       "color": "W"
     },
@@ -4431,7 +4358,6 @@
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
-      "serial": 74,
       "symbol": "w",
       "color": "b"
     },
@@ -4499,7 +4425,6 @@
       },
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
-      "serial": 75,
       "symbol": "J",
       "color": "s"
     },
@@ -4572,7 +4497,6 @@
       },
       "description": "He is a sturdy hobbit who is renowned for his unusual strength and vigour. He can prove a troublesome opponent.",
       "sprite": "humanoid.png",
-      "serial": 76,
       "symbol": "h",
       "color": "U"
     },
@@ -4634,7 +4558,6 @@
       "spell_frequency": 12,
       "description": "He is leaving behind a trail of dropped spell components.",
       "sprite": "novice_mage.png",
-      "serial": 77,
       "symbol": "p",
       "color": "r"
     },
@@ -4704,9 +4627,8 @@
         "immune_acid": true,
         "alertness": 120
       },
-      "description": "A large green serpent with a female's torso. Her green skin glistens with acid.",
+      "description": "A large green serpent with a female\u0027s torso. Her green skin glistens with acid.",
       "sprite": "naga.png",
-      "serial": 78,
       "symbol": "n",
       "color": "g"
     },
@@ -4761,9 +4683,8 @@
         "no_fear": true,
         "alertness": 80
       },
-      "description": "It's blue and it's oozing.",
+      "description": "It\u0027s blue and it\u0027s oozing.",
       "sprite": "jelly.png",
-      "serial": 79,
       "symbol": "j",
       "color": "b"
     },
@@ -4828,7 +4749,6 @@
       },
       "description": "It is a very ugly green ghost with a voracious appetite.",
       "sprite": "ghost.png",
-      "serial": 80,
       "symbol": "G",
       "color": "g"
     },
@@ -4884,7 +4804,6 @@
       },
       "description": "It is a large pile of pulsing green flesh.",
       "sprite": "jelly.png",
-      "serial": 81,
       "symbol": "j",
       "color": "g"
     },
@@ -4937,7 +4856,6 @@
       },
       "description": "It a man-sized figure with the all too recognizable face of a kobold.",
       "sprite": "kobold.png",
-      "serial": 82,
       "symbol": "k",
       "color": "b"
     },
@@ -4996,7 +4914,6 @@
       },
       "description": "It is a small animated kobold skeleton.",
       "sprite": "skeleton.png",
-      "serial": 83,
       "symbol": "s",
       "color": "w"
     },
@@ -5046,7 +4963,6 @@
       },
       "description": "It is a smallish, slimy, icky, nasty creature.",
       "sprite": "icky_thing.png",
-      "serial": 84,
       "symbol": "i",
       "color": "s"
     },
@@ -5097,7 +5013,6 @@
       "spell_frequency": 9,
       "description": "A disembodied eye, crackling with magic.",
       "sprite": "floating_eye.png",
-      "serial": 85,
       "symbol": "e",
       "color": "v"
     },
@@ -5155,7 +5070,6 @@
       },
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
-      "serial": 86,
       "symbol": "w",
       "color": "r"
     },
@@ -5207,7 +5121,6 @@
       },
       "description": "It has a copper head and sharp venomous fangs.",
       "sprite": "snake.png",
-      "serial": 87,
       "symbol": "J",
       "color": "o"
     },
@@ -5324,7 +5237,6 @@
       },
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
-      "serial": 88,
       "symbol": ",",
       "color": "v"
     },
@@ -5385,7 +5297,6 @@
       "spell_frequency": 12,
       "description": "He is tripping over his priestly robes.",
       "sprite": "humanoid.png",
-      "serial": 89,
       "symbol": "p",
       "color": "g"
     },
@@ -5455,7 +5366,6 @@
       },
       "description": "He looks inexperienced but tough.",
       "sprite": "novice_warrior.png",
-      "serial": 90,
       "symbol": "p",
       "color": "u"
     },
@@ -5521,7 +5431,6 @@
         "evil": true,
         "alertness": 5
       },
-      "serial": 91,
       "symbol": "p",
       "color": "b"
     },
@@ -5589,7 +5498,6 @@
       },
       "description": "A strange brown growth on the dungeon floor.",
       "sprite": "mold.png",
-      "serial": 92,
       "symbol": "m",
       "color": "u"
     },
@@ -5639,7 +5547,6 @@
       },
       "description": "It screeches as it attacks.",
       "sprite": "bat.png",
-      "serial": 93,
       "symbol": "b",
       "color": "u"
     },
@@ -5697,7 +5604,6 @@
         "arrow_2"
       ],
       "spell_frequency": 5,
-      "serial": 94,
       "symbol": "k",
       "color": "W"
     },
@@ -5771,7 +5677,6 @@
       },
       "description": "It appears to be a pile of silver coins.",
       "sprite": "coins.png",
-      "serial": 95,
       "symbol": "$",
       "color": "s"
     },
@@ -5827,7 +5732,6 @@
       },
       "description": "A weak orc footman, dangerous in numbers.",
       "sprite": "snaga_orc.png",
-      "serial": 96,
       "symbol": "o",
       "color": "U"
     },
@@ -5879,7 +5783,6 @@
       },
       "description": "It is recognized by the hard-scaled end of its body that is often rattled to frighten its prey.",
       "sprite": "snake.png",
-      "serial": 97,
       "symbol": "J",
       "color": "r"
     },
@@ -5935,7 +5838,6 @@
       },
       "description": "He is often found in huge numbers in deep caves.",
       "sprite": "cave_orc.png",
-      "serial": 98,
       "symbol": "o",
       "color": "G"
     },
@@ -6005,7 +5907,6 @@
       },
       "description": "It scuttles towards you.",
       "sprite": "snake.png",
-      "serial": 99,
       "symbol": "S",
       "color": "U"
     },
@@ -6060,7 +5961,6 @@
       },
       "description": "It is a minor but aggressive demon.",
       "sprite": "demon.png",
-      "serial": 100,
       "symbol": "u",
       "color": "u"
     },
@@ -6129,7 +6029,6 @@
       "spell_frequency": 7,
       "description": "A disembodied eye, bloodshot and nasty.",
       "sprite": "floating_eye.png",
-      "serial": 101,
       "symbol": "e",
       "color": "r"
     },
@@ -6208,9 +6107,8 @@
         "evil": true,
         "alertness": 120
       },
-      "description": "A large red snake with a woman's torso.",
+      "description": "A large red snake with a woman\u0027s torso.",
       "sprite": "naga.png",
-      "serial": 102,
       "symbol": "n",
       "color": "r"
     },
@@ -6275,7 +6173,6 @@
       },
       "description": "It is a large pulsating mound of red flesh.",
       "sprite": "jelly.png",
-      "serial": 103,
       "symbol": "j",
       "color": "r"
     },
@@ -6336,7 +6233,6 @@
       },
       "description": "It looks poisonous.",
       "sprite": "reptile.png",
-      "serial": 104,
       "symbol": "R",
       "color": "r"
     },
@@ -6387,7 +6283,6 @@
       },
       "description": "It is a smallish, slimy, icky, acidic creature.",
       "sprite": "icky_thing.png",
-      "serial": 105,
       "symbol": "i",
       "color": "g"
     },
@@ -6463,7 +6358,6 @@
       },
       "description": "It is an animated kobold corpse. Flesh falls off in large chunks as it shambles forward.",
       "sprite": "zombie.png",
-      "serial": 106,
       "symbol": "z",
       "color": "s"
     },
@@ -6544,7 +6438,6 @@
       "spell_frequency": 15,
       "description": "It is almost insubstantial.",
       "sprite": "ghost.png",
-      "serial": 107,
       "symbol": "G",
       "color": "B"
     },
@@ -6622,7 +6515,6 @@
         "darkness"
       ],
       "spell_frequency": 10,
-      "serial": 108,
       "symbol": "h",
       "color": "D"
     },
@@ -6688,7 +6580,6 @@
       },
       "description": "It is a black lizard with overlapping scales and a powerful jaw.",
       "sprite": "reptile.png",
-      "serial": 109,
       "symbol": "R",
       "color": "b"
     },
@@ -6782,7 +6673,6 @@
       },
       "description": "Strong and powerful, for a kobold.",
       "sprite": "kobold.png",
-      "serial": 110,
       "symbol": "k",
       "color": "v"
     },
@@ -6894,9 +6784,8 @@
         "ball_poison"
       ],
       "spell_frequency": 5,
-      "description": "He's been spying for Saruman. He is a snivelling wretch with no morals and disgusting habits.",
+      "description": "He\u0027s been spying for Saruman. He is a snivelling wretch with no morals and disgusting habits.",
       "sprite": "humanoid.png",
-      "serial": 111,
       "symbol": "p",
       "color": "B"
     },
@@ -7006,7 +6895,6 @@
       },
       "description": "A captain of a regiment of weaker orcs, Lagduf keeps his troop in order with displays of excessive violence.",
       "sprite": "orc.png",
-      "serial": 112,
       "symbol": "o",
       "color": "y"
     },
@@ -7059,7 +6947,6 @@
       },
       "description": "It is a strange small humanoid.",
       "sprite": "yeek.png",
-      "serial": 113,
       "symbol": "y",
       "color": "u"
     },
@@ -7136,7 +7023,6 @@
       "spell_frequency": 9,
       "description": "An agile hunter, ready and relaxed.",
       "sprite": "humanoid.png",
-      "serial": 114,
       "symbol": "p",
       "color": "W"
     },
@@ -7191,9 +7077,8 @@
         "breath_fire"
       ],
       "spell_frequency": 9,
-      "description": "A large black and yellow lizard. You'd better run away!",
+      "description": "A large black and yellow lizard. You\u0027d better run away!",
       "sprite": "reptile.png",
-      "serial": 115,
       "symbol": "R",
       "color": "y"
     },
@@ -7262,7 +7147,6 @@
       },
       "description": "It is a strange growth on the dungeon floor.",
       "sprite": "mold.png",
-      "serial": 116,
       "symbol": "m",
       "color": "g"
     },
@@ -7322,7 +7206,6 @@
       },
       "description": "It is an animated orc skeleton.",
       "sprite": "skeleton.png",
-      "serial": 117,
       "symbol": "s",
       "color": "w"
     },
@@ -7399,7 +7282,6 @@
       "spell_frequency": 9,
       "description": "An adventurer both devoutly religious and skillful in combat.",
       "sprite": "humanoid.png",
-      "serial": 118,
       "symbol": "p",
       "color": "w"
     },
@@ -7454,7 +7336,6 @@
       },
       "description": "It is the larval form of a major demon.",
       "sprite": "demon.png",
-      "serial": 119,
       "symbol": "u",
       "color": "U"
     },
@@ -7509,7 +7390,6 @@
       },
       "description": "A brutish orc from the hills, charging with crude iron weapons.",
       "sprite": "hill_orc.png",
-      "serial": 120,
       "symbol": "o",
       "color": "u"
     },
@@ -7574,7 +7454,6 @@
       },
       "description": "He is after your cash!",
       "sprite": "humanoid.png",
-      "serial": 121,
       "symbol": "p",
       "color": "b"
     },
@@ -7660,7 +7539,6 @@
       },
       "description": "A large white figure covered in shaggy fur.",
       "sprite": "hydra.png",
-      "serial": 122,
       "symbol": "Y",
       "color": "w"
     },
@@ -7733,7 +7611,6 @@
       "spell_frequency": 11,
       "description": "It is a strange, slimy, icky creature.",
       "sprite": "icky_thing.png",
-      "serial": 123,
       "symbol": "i",
       "color": "r"
     },
@@ -7785,7 +7662,6 @@
       },
       "description": "It is a rodent of unusual size.",
       "sprite": "rat.png",
-      "serial": 124,
       "symbol": "r",
       "color": "s"
     },
@@ -7869,9 +7745,8 @@
         "evil": true,
         "alertness": 10
       },
-      "description": "A woman's face on the body of a vicious black bird.",
+      "description": "A woman\u0027s face on the body of a vicious black bird.",
       "sprite": "hybrid.png",
-      "serial": 125,
       "symbol": "H",
       "color": "D"
     },
@@ -7951,7 +7826,6 @@
       "spell_frequency": 8,
       "description": "An orc dressed in skins who gestures wildly with a bone fetish.",
       "sprite": "orc_shaman.png",
-      "serial": 126,
       "symbol": "o",
       "color": "r"
     },
@@ -8048,7 +7922,6 @@
         "breath_elec"
       ],
       "spell_frequency": 12,
-      "serial": 127,
       "symbol": "d",
       "color": "b"
     },
@@ -8145,7 +8018,6 @@
         "breath_cold"
       ],
       "spell_frequency": 12,
-      "serial": 128,
       "symbol": "d",
       "color": "w"
     },
@@ -8242,7 +8114,6 @@
         "breath_poison"
       ],
       "spell_frequency": 12,
-      "serial": 129,
       "symbol": "d",
       "color": "g"
     },
@@ -8339,7 +8210,6 @@
         "breath_acid"
       ],
       "spell_frequency": 12,
-      "serial": 130,
       "symbol": "d",
       "color": "s"
     },
@@ -8436,7 +8306,6 @@
         "breath_fire"
       ],
       "spell_frequency": 12,
-      "serial": 131,
       "symbol": "d",
       "color": "r"
     },
@@ -8514,7 +8383,6 @@
       },
       "description": "It is large and has venomous mandibles.",
       "sprite": "giant_ant.png",
-      "serial": 132,
       "symbol": "a",
       "color": "r"
     },
@@ -8621,7 +8489,6 @@
       },
       "description": "A nasty piece of work, Brodda picks on defenseless women and children.",
       "sprite": "humanoid.png",
-      "serial": 133,
       "symbol": "p",
       "color": "U"
     },
@@ -8703,7 +8570,6 @@
       },
       "description": "It is a large snake with a hooded face.",
       "sprite": "snake.png",
-      "serial": 134,
       "symbol": "J",
       "color": "g"
     },
@@ -8806,7 +8672,6 @@
       },
       "description": "It is a vast black spider whose bulbous body is bloated with poison.",
       "sprite": "snake.png",
-      "serial": 135,
       "symbol": "S",
       "color": "v"
     },
@@ -8889,7 +8754,6 @@
       "spell_frequency": 5,
       "description": "A dark elf who rests between bouts of reading stolen arcane texts.",
       "sprite": "dark_elven_mage.png",
-      "serial": 136,
       "symbol": "h",
       "color": "r"
     },
@@ -9011,9 +8875,8 @@
         "summon_monster"
       ],
       "spell_frequency": 4,
-      "description": "He's just like his daddy! He knows mighty spells, but fortunately he is a yeek.",
+      "description": "He\u0027s just like his daddy! He knows mighty spells, but fortunately he is a yeek.",
       "sprite": "yeek.png",
-      "serial": 137,
       "symbol": "y",
       "color": "B"
     },
@@ -9084,7 +8947,6 @@
       },
       "description": "A skilled dark elven swordsman, battle-trained in the pits below.",
       "sprite": "dark_elven_warrior.png",
-      "serial": 138,
       "symbol": "h",
       "color": "u"
     },
@@ -9140,7 +9002,6 @@
       },
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
-      "serial": 139,
       "symbol": ",",
       "color": "w"
     },
@@ -9251,7 +9112,6 @@
       },
       "description": "He is a cunning and devious orc with a chaotic nature.",
       "sprite": "orc.png",
-      "serial": 140,
       "symbol": "o",
       "color": "y"
     },
@@ -9303,7 +9163,6 @@
       },
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
-      "serial": 141,
       "symbol": "S",
       "color": "w"
     },
@@ -9358,7 +9217,6 @@
       },
       "description": "It is a strange hairy growth on the dungeon floor.",
       "sprite": "mold.png",
-      "serial": 142,
       "symbol": "m",
       "color": "o"
     },
@@ -9425,7 +9283,6 @@
       "spell_frequency": 11,
       "description": "It is a strange glowing growth on the dungeon floor.",
       "sprite": "mold.png",
-      "serial": 143,
       "symbol": "m",
       "color": "v"
     },
@@ -9521,7 +9378,6 @@
       "spell_frequency": 11,
       "description": "A small relative of the dragon that inhabits dark caves.",
       "sprite": "small_dragon.png",
-      "serial": 144,
       "symbol": "d",
       "color": "o"
     },
@@ -9581,7 +9437,6 @@
       "spell_frequency": 3,
       "description": "It is a fast-moving demon that blinks quickly in and out of existence; no other demon matches its teleporting mastery.",
       "sprite": "demon.png",
-      "serial": 145,
       "symbol": "u",
       "color": "R"
     },
@@ -9656,7 +9511,6 @@
       },
       "description": "It appears to be a pile of gold coins, until it starts crawling towards you on tiny legs.",
       "sprite": "coins.png",
-      "serial": 146,
       "symbol": "$",
       "color": "y"
     },
@@ -9708,7 +9562,6 @@
       },
       "description": "It howls and snaps at you.",
       "sprite": "canine.png",
-      "serial": 147,
       "symbol": "C",
       "color": "u"
     },
@@ -9761,7 +9614,6 @@
       },
       "description": "A fast-breeding, annoying pest.",
       "sprite": "insect.png",
-      "serial": 148,
       "symbol": "I",
       "color": "G"
     },
@@ -9825,9 +9677,8 @@
         "bash_door": true,
         "animal": true
       },
-      "description": "A large black cat, stalking you with intent. It thinks you're its next meal.",
+      "description": "A large black cat, stalking you with intent. It thinks you\u0027re its next meal.",
       "sprite": "cat.png",
-      "serial": 149,
       "symbol": "f",
       "color": "u"
     },
@@ -9892,7 +9743,6 @@
       },
       "description": "He is eyeing your backpack.",
       "sprite": "humanoid.png",
-      "serial": 150,
       "symbol": "p",
       "color": "b"
     },
@@ -9997,7 +9847,6 @@
       "spell_frequency": 12,
       "description": "This hatchling dragon is still soft, its eyes unaccustomed to light and its scales shimmering with hints of many different colours.",
       "sprite": "small_dragon.png",
-      "serial": 151,
       "symbol": "d",
       "color": "v"
     },
@@ -10064,7 +9913,6 @@
       },
       "description": "A strange hybrid of eagle and horse. It looks weird.",
       "sprite": "hybrid.png",
-      "serial": 152,
       "symbol": "H",
       "color": "U"
     },
@@ -10158,7 +10006,6 @@
       },
       "description": "It is a shambling orcish corpse leaving behind a trail of flesh.",
       "sprite": "zombie.png",
-      "serial": 153,
       "symbol": "z",
       "color": "s"
     },
@@ -10220,7 +10067,6 @@
       "spell_frequency": 4,
       "description": "A mage of short stature.",
       "sprite": "humanoid.png",
-      "serial": 154,
       "symbol": "h",
       "color": "r"
     },
@@ -10272,7 +10118,6 @@
       },
       "description": "It has glistening black skin, a sleek body and highly venomous fangs.",
       "sprite": "snake.png",
-      "serial": 155,
       "symbol": "J",
       "color": "D"
     },
@@ -10342,7 +10187,6 @@
       },
       "description": "A large and muscled wolf from the northern wastes. Its breath is cold and icy and its fur coated in frost.",
       "sprite": "canine.png",
-      "serial": 156,
       "symbol": "C",
       "color": "w"
     },
@@ -10402,7 +10246,6 @@
       "spell_frequency": 11,
       "description": "Yum! It looks quite tasty. It is a pulsing mound of glowing flesh.",
       "sprite": "jelly.png",
-      "serial": 157,
       "symbol": "j",
       "color": "v"
     },
@@ -10458,7 +10301,6 @@
       },
       "description": "It is a disgusting mass of dark worms, eating each other, the floor, the air, you....",
       "sprite": "worm.png",
-      "serial": 158,
       "symbol": "w",
       "color": "D"
     },
@@ -10572,7 +10414,6 @@
       },
       "description": "A leader of a band of raiding orcs, he picks on hobbits.",
       "sprite": "orc.png",
-      "serial": 159,
       "symbol": "o",
       "color": "y"
     },
@@ -10637,7 +10478,6 @@
       "spell_frequency": 4,
       "description": "A small humanoid that radiates some power.",
       "sprite": "yeek.png",
-      "serial": 160,
       "symbol": "y",
       "color": "U"
     },
@@ -10717,7 +10557,6 @@
       "spell_frequency": 3,
       "description": "A robed man, dedicated to his god.",
       "sprite": "humanoid.png",
-      "serial": 161,
       "symbol": "p",
       "color": "g"
     },
@@ -10800,7 +10639,6 @@
       "spell_frequency": 5,
       "description": "A dark elven figure, dressed all in black, chanting curses.",
       "sprite": "dark_elven_priest.png",
-      "serial": 162,
       "symbol": "h",
       "color": "g"
     },
@@ -10859,7 +10697,6 @@
       },
       "description": "A whirlwind of sentient air.",
       "sprite": "elemental.png",
-      "serial": 163,
       "symbol": "E",
       "color": "B"
     },
@@ -10918,7 +10755,6 @@
       },
       "description": "It is an animated human skeleton.",
       "sprite": "skeleton_human.png",
-      "serial": 164,
       "symbol": "s",
       "color": "w"
     },
@@ -10994,7 +10830,6 @@
       },
       "description": "It is a shambling human corpse dropping chunks of flesh behind it.",
       "sprite": "zombie.png",
-      "serial": 165,
       "symbol": "z",
       "color": "s"
     },
@@ -11077,7 +10912,6 @@
       },
       "description": "One of the largest of its species, a sleek orange and black shape creeps towards you, ready to pounce.",
       "sprite": "cat.png",
-      "serial": 166,
       "symbol": "f",
       "color": "o"
     },
@@ -11171,7 +11005,6 @@
       "spell_frequency": 15,
       "description": "A ghostly apparition that shrieks horribly.",
       "sprite": "ghost.png",
-      "serial": 167,
       "symbol": "G",
       "color": "u"
     },
@@ -11240,7 +11073,6 @@
       },
       "description": "A warrior of considerable skill.",
       "sprite": "humanoid.png",
-      "serial": 168,
       "symbol": "p",
       "color": "u"
     },
@@ -11325,7 +11157,6 @@
       },
       "description": "It is a vast armored centipede with massive mandibles and a spiked tail.",
       "sprite": "centipede.png",
-      "serial": 169,
       "symbol": "c",
       "color": "u"
     },
@@ -11417,7 +11248,6 @@
       },
       "description": "A strange jelly thing, covered in discoloured blotches.",
       "sprite": "jelly.png",
-      "serial": 170,
       "symbol": "j",
       "color": "o"
     },
@@ -11510,7 +11340,6 @@
       "spell_frequency": 8,
       "description": "A dark elven torso merged with the bloated form of a giant spider.",
       "sprite": "snake.png",
-      "serial": 171,
       "symbol": "S",
       "color": "b"
     },
@@ -11561,7 +11390,6 @@
       },
       "description": "It is a vicious insect with a tough carapace.",
       "sprite": "beetle.png",
-      "serial": 172,
       "symbol": "K",
       "color": "u"
     },
@@ -11670,7 +11498,6 @@
       "spell_frequency": 3,
       "description": "A great yeek, powerful in magic and sorcery, but a yeek all the same.",
       "sprite": "boldor_king_of_yeeks.png",
-      "serial": 173,
       "symbol": "y",
       "color": "v"
     },
@@ -11724,7 +11551,6 @@
       },
       "description": "A hideous, smallish giant that is often found near or with orcs.",
       "sprite": "ogre.png",
-      "serial": 174,
       "symbol": "O",
       "color": "U"
     },
@@ -11797,9 +11623,8 @@
         "no_sleep": true,
         "alertness": 10
       },
-      "description": "It appears to be a pile of sentient mithril coins that doesn't like being picked up.",
+      "description": "It appears to be a pile of sentient mithril coins that doesn\u0027t like being picked up.",
       "sprite": "coins.png",
-      "serial": 175,
       "symbol": "$",
       "color": "B"
     },
@@ -11866,7 +11691,6 @@
       "spell_frequency": 3,
       "description": "A deceptive spell caster.",
       "sprite": "humanoid.png",
-      "serial": 176,
       "symbol": "p",
       "color": "R"
     },
@@ -11950,7 +11774,6 @@
       "spell_frequency": 3,
       "description": "A priest devoted to Nature.",
       "sprite": "humanoid.png",
-      "serial": 177,
       "symbol": "p",
       "color": "G"
     },
@@ -12028,7 +11851,6 @@
         "arrow_2"
       ],
       "spell_frequency": 9,
-      "serial": 178,
       "symbol": "o",
       "color": "D"
     },
@@ -12121,7 +11943,6 @@
       },
       "description": "A fast moving highly acidic jelly thing, that is eating away the floor it rests on.",
       "sprite": "jelly.png",
-      "serial": 179,
       "symbol": "j",
       "color": "U"
     },
@@ -12175,7 +11996,6 @@
       },
       "description": "It makes you itch just to look at it.",
       "sprite": "insect.png",
-      "serial": 180,
       "symbol": "I",
       "color": "s"
     },
@@ -12287,7 +12107,6 @@
       },
       "description": "A strong orc guarding the pass of Cirith Ungol. He is mortally afraid of spiders.",
       "sprite": "orc.png",
-      "serial": 181,
       "symbol": "o",
       "color": "g"
     },
@@ -12346,7 +12165,6 @@
       "spell_frequency": 10,
       "description": "It is a large fly that drips frost.",
       "sprite": "insect.png",
-      "serial": 182,
       "symbol": "F",
       "color": "w"
     },
@@ -12453,7 +12271,6 @@
       "spell_frequency": 8,
       "description": "It is a strange, slimy, icky creature, with rudimentary intelligence, but evil cunning. It hungers for food, and you look tasty.",
       "sprite": "icky_thing.png",
-      "serial": 183,
       "symbol": "i",
       "color": "b"
     },
@@ -12528,7 +12345,6 @@
       "spell_frequency": 10,
       "description": "A ten foot tall humanoid with powerful muscles.",
       "sprite": "hill_giant.png",
-      "serial": 184,
       "symbol": "P",
       "color": "U"
     },
@@ -12599,7 +12415,6 @@
       },
       "description": "A shambling humanoid monster with long scars.",
       "sprite": "golem.png",
-      "serial": 185,
       "symbol": "g",
       "color": "R"
     },
@@ -12652,7 +12467,6 @@
       },
       "description": "A large wolf with eyes full of cunning, hunting in packs.",
       "sprite": "warg.png",
-      "serial": 186,
       "symbol": "C",
       "color": "s"
     },
@@ -12704,7 +12518,6 @@
       },
       "description": "It makes you itch just to look at it.",
       "sprite": "lizard.png",
-      "serial": 187,
       "symbol": "l",
       "color": "D"
     },
@@ -12777,7 +12590,6 @@
       },
       "description": "A strange creature that merges with the dungeon floor, trapping its victims by enveloping them within its perfectly disguised form.",
       "sprite": "humanoid.png",
-      "serial": 188,
       "symbol": ".",
       "color": "w"
     },
@@ -12874,7 +12686,6 @@
       "spell_frequency": 9,
       "description": "A large rat with glowing red eyes. The wererat is a disgusting creature, relishing in filth and disease.",
       "sprite": "rat.png",
-      "serial": 189,
       "symbol": "r",
       "color": "D"
     },
@@ -12946,7 +12757,6 @@
       },
       "description": "A massive orc-like figure with black skin and powerful arms.",
       "sprite": "ogre.png",
-      "serial": 190,
       "symbol": "O",
       "color": "D"
     },
@@ -13063,7 +12873,6 @@
       "spell_frequency": 2,
       "description": "Yum! It looks quite tasty. It seems to glow with an unusual light.",
       "sprite": "mushroom.png",
-      "serial": 191,
       "symbol": ",",
       "color": "B"
     },
@@ -13150,9 +12959,8 @@
         "evil": true,
         "alertness": 120
       },
-      "description": "A giant snake-like figure with a woman's torso.",
+      "description": "A giant snake-like figure with a woman\u0027s torso.",
       "sprite": "naga.png",
-      "serial": 192,
       "symbol": "n",
       "color": "B"
     },
@@ -13242,7 +13050,6 @@
       "spell_frequency": 5,
       "description": "A brilliant canine form whose light hurts your eyes.",
       "sprite": "light_hound.png",
-      "serial": 193,
       "symbol": "Z",
       "color": "o"
     },
@@ -13332,7 +13139,6 @@
         "breath_dark"
       ],
       "spell_frequency": 5,
-      "serial": 194,
       "symbol": "Z",
       "color": "D"
     },
@@ -13402,9 +13208,8 @@
         "orc": true,
         "alertness": 20
       },
-      "description": "He is a hideous deformed cross-breed with man and orc, combining man's strength and cunning with orcish evil. The traitorous wizard Saruman is generally believed to be responsible for this abomination.",
+      "description": "He is a hideous deformed cross-breed with man and orc, combining man\u0027s strength and cunning with orcish evil. The traitorous wizard Saruman is generally believed to be responsible for this abomination.",
       "sprite": "orc.png",
-      "serial": 195,
       "symbol": "o",
       "color": "s"
     },
@@ -13490,7 +13295,6 @@
       },
       "description": "A giant spider with hairy black and red legs.",
       "sprite": "snake.png",
-      "serial": 196,
       "symbol": "S",
       "color": "o"
     },
@@ -13559,7 +13363,6 @@
       },
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
-      "serial": 197,
       "symbol": "c",
       "color": "w"
     },
@@ -13647,7 +13450,6 @@
       },
       "description": "A strong and powerful spider from Mirkwood forest.",
       "sprite": "mirkwood_spider.png",
-      "serial": 198,
       "symbol": "S",
       "color": "g"
     },
@@ -13723,7 +13525,6 @@
         "boulder"
       ],
       "spell_frequency": 10,
-      "serial": 199,
       "symbol": "P",
       "color": "w"
     },
@@ -13790,7 +13591,6 @@
       },
       "description": "It is half lion, half eagle. It flies menacingly towards you.",
       "sprite": "hybrid.png",
-      "serial": 200,
       "symbol": "H",
       "color": "u"
     },
@@ -13873,7 +13673,6 @@
       },
       "description": "It is a small demonic spirit full of malevolence.",
       "sprite": "demon.png",
-      "serial": 201,
       "symbol": "u",
       "color": "y"
     },
@@ -13936,7 +13735,6 @@
       "spell_frequency": 4,
       "description": "A mage of short stature.",
       "sprite": "humanoid.png",
-      "serial": 202,
       "symbol": "h",
       "color": "r"
     },
@@ -14021,7 +13819,6 @@
       },
       "description": "A completely translucent hound.",
       "sprite": "zephyr.png",
-      "serial": 203,
       "symbol": "Z",
       "color": "w"
     },
@@ -14097,7 +13894,6 @@
       },
       "description": "It is a massive animated statue made out of hardened clay.",
       "sprite": "golem.png",
-      "serial": 204,
       "symbol": "g",
       "color": "U"
     },
@@ -14207,7 +14003,6 @@
       },
       "description": "This bizarre creature has glaring eyes and large mandibles capable of slicing through rock.",
       "sprite": "xorn.png",
-      "serial": 205,
       "symbol": "X",
       "color": "U"
     },
@@ -14302,7 +14097,6 @@
         "arrow_2"
       ],
       "spell_frequency": 9,
-      "serial": 206,
       "symbol": "o",
       "color": "o"
     },
@@ -14401,7 +14195,6 @@
       },
       "description": "It is a strange, vast gelatinous structure that assumes cubic proportions as it lines all four walls of the corridors it patrols. Through its transparent jelly structure you can see treasures it has engulfed, and a few corpses as well.",
       "sprite": "jelly.png",
-      "serial": 207,
       "symbol": "j",
       "color": "G"
     },
@@ -14461,7 +14254,6 @@
       "spell_frequency": 10,
       "description": "A vast, foul-smelling dragonfly.",
       "sprite": "insect.png",
-      "serial": 208,
       "symbol": "F",
       "color": "g"
     },
@@ -14537,7 +14329,6 @@
       "spell_frequency": 8,
       "description": "A glowing fourteen foot tall giant. Flames drip from its red skin.",
       "sprite": "giant.png",
-      "serial": 209,
       "symbol": "P",
       "color": "r"
     },
@@ -14603,7 +14394,6 @@
       },
       "description": "A giant buzzing wasp, its stinger drips venom.",
       "sprite": "insect.png",
-      "serial": 210,
       "symbol": "I",
       "color": "y"
     },
@@ -14712,7 +14502,6 @@
       },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
-      "serial": 211,
       "symbol": "p",
       "color": "U"
     },
@@ -14823,9 +14612,8 @@
         "scare"
       ],
       "spell_frequency": 10,
-      "description": "The chaotic evil master's favourite pet.",
+      "description": "The chaotic evil master\u0027s favourite pet.",
       "sprite": "demon.png",
-      "serial": 212,
       "symbol": "u",
       "color": "o"
     },
@@ -14910,9 +14698,8 @@
         "scare"
       ],
       "spell_frequency": 10,
-      "description": "The lawful evil master's favourite pet.",
+      "description": "The lawful evil master\u0027s favourite pet.",
       "sprite": "demon.png",
-      "serial": 213,
       "symbol": "u",
       "color": "g"
     },
@@ -15003,7 +14790,6 @@
       },
       "description": "A large forest troll that hunts among the roots of ancient trees.",
       "sprite": "forest_troll.png",
-      "serial": 214,
       "symbol": "T",
       "color": "g"
     },
@@ -15123,9 +14909,8 @@
         "mind_blast"
       ],
       "spell_frequency": 6,
-      "description": "The friend and companion of the dwarven king Thror, he went mad with grief after Thror's death at the hands of Azog the Orc. With torn beard and ragged clothes, he seems to have fixed on you as a convenient target to vent his anger.",
+      "description": "The friend and companion of the dwarven king Thror, he went mad with grief after Thror\u0027s death at the hands of Azog the Orc. With torn beard and ragged clothes, he seems to have fixed on you as a convenient target to vent his anger.",
       "sprite": "humanoid.png",
-      "serial": 215,
       "symbol": "h",
       "color": "y"
     },
@@ -15202,7 +14987,6 @@
       "spell_frequency": 11,
       "description": "A strange reptilian hybrid with two heads, guarding its hoard.",
       "sprite": "mushroom.png",
-      "serial": 216,
       "symbol": "M",
       "color": "u"
     },
@@ -15276,7 +15060,6 @@
       },
       "description": "A whirlpool of sentient liquid.",
       "sprite": "elemental.png",
-      "serial": 217,
       "symbol": "E",
       "color": "b"
     },
@@ -15354,7 +15137,6 @@
       },
       "description": "It is fast and poisonous.",
       "sprite": "snake.png",
-      "serial": 218,
       "symbol": "S",
       "color": "r"
     },
@@ -15431,7 +15213,6 @@
       },
       "description": "A whirling form of sentient rock.",
       "sprite": "elemental.png",
-      "serial": 219,
       "symbol": "E",
       "color": "u"
     },
@@ -15504,7 +15285,6 @@
       },
       "description": "A whirlwind of sentient flame.",
       "sprite": "elemental.png",
-      "serial": 220,
       "symbol": "E",
       "color": "r"
     },
@@ -15595,7 +15375,6 @@
       "spell_frequency": 10,
       "description": "Flames lick at its feet and its tongue is a blade of fire. You can feel a furnace heat radiating from the creature.",
       "sprite": "zephyr.png",
-      "serial": 221,
       "symbol": "Z",
       "color": "r"
     },
@@ -15686,7 +15465,6 @@
       "spell_frequency": 10,
       "description": "A hound as tall as a man, this creature appears to be composed of angular planes of ice. Cold radiates from it and freezes your breath in the air.",
       "sprite": "zephyr.png",
-      "serial": 222,
       "symbol": "Z",
       "color": "w"
     },
@@ -15775,9 +15553,8 @@
         "breath_elec"
       ],
       "spell_frequency": 10,
-      "description": "Saint Elmo's Fire forms a ghostly halo around this hound, and sparks sting your fingers as energy builds up in the air around you.",
+      "description": "Saint Elmo\u0027s Fire forms a ghostly halo around this hound, and sparks sting your fingers as energy builds up in the air around you.",
       "sprite": "zephyr.png",
-      "serial": 223,
       "symbol": "Z",
       "color": "b"
     },
@@ -15874,7 +15651,6 @@
       "spell_frequency": 6,
       "description": "A strange creature that disguises itself as a discarded potion bottle to lure unsuspecting adventurers within reach of its venomous claws.",
       "sprite": "humanoid.png",
-      "serial": 224,
       "symbol": "!",
       "color": "w"
     },
@@ -15932,7 +15708,6 @@
       "spell_frequency": 4,
       "description": "A strange magical member of the canine race, its form seems to shimmer and fade in front of your very eyes.",
       "sprite": "canine.png",
-      "serial": 225,
       "symbol": "C",
       "color": "B"
     },
@@ -16011,7 +15786,6 @@
         "arrow_2"
       ],
       "spell_frequency": 9,
-      "serial": 226,
       "symbol": "o",
       "color": "B"
     },
@@ -16122,7 +15896,6 @@
       },
       "description": "He is an orc of power and great cunning, leader of the garrison at Cirith Ungol.",
       "sprite": "orc.png",
-      "serial": 227,
       "symbol": "o",
       "color": "g"
     },
@@ -16233,7 +16006,6 @@
       },
       "description": "He is an orc of power and great cunning, leader of the garrison at Minas Morgul.",
       "sprite": "orc.png",
-      "serial": 228,
       "symbol": "o",
       "color": "g"
     },
@@ -16313,7 +16085,6 @@
       "spell_frequency": 4,
       "description": "A pile of rotting vegetation that slides towards you with a disgusting stench, waking all it nears.",
       "sprite": "mushroom.png",
-      "serial": 229,
       "symbol": ",",
       "color": "g"
     },
@@ -16389,7 +16160,6 @@
         "boulder"
       ],
       "spell_frequency": 5,
-      "serial": 230,
       "symbol": "P",
       "color": "W"
     },
@@ -16431,7 +16201,6 @@
       "spell_frequency": 10,
       "description": "The size of a large bird, this fly drips caustic acid.",
       "sprite": "insect.png",
-      "serial": 231,
       "symbol": "F",
       "color": "s"
     },
@@ -16507,7 +16276,6 @@
         "no_fear": true,
         "alertness": 10
       },
-      "serial": 232,
       "symbol": "g",
       "color": "W"
     },
@@ -16563,7 +16331,6 @@
       },
       "description": "It is a strange red growth on the dungeon floor; it seems to burn with flame.",
       "sprite": "mold.png",
-      "serial": 233,
       "symbol": "m",
       "color": "r"
     },
@@ -16623,7 +16390,6 @@
       "spell_frequency": 10,
       "description": "Large beating wings support this dazzling insect. A loud buzzing noise pervades the air.",
       "sprite": "insect.png",
-      "serial": 234,
       "symbol": "F",
       "color": "y"
     },
@@ -16734,7 +16500,6 @@
       },
       "description": "A large and powerful orc, he looks just like his father. He is tall and fast, but fortunately blessed with orcish brains.",
       "sprite": "orc.png",
-      "serial": 235,
       "symbol": "o",
       "color": "v"
     },
@@ -16827,7 +16592,6 @@
       "spell_frequency": 5,
       "description": "A spider that never seems quite there. Everywhere you look it is just half-seen in the corner of one eye.",
       "sprite": "snake.png",
-      "serial": 236,
       "symbol": "S",
       "color": "B"
     },
@@ -16922,7 +16686,6 @@
       "spell_frequency": 9,
       "description": "A strange reptilian hybrid with three heads, guarding its hoard.",
       "sprite": "mushroom.png",
-      "serial": 237,
       "symbol": "M",
       "color": "o"
     },
@@ -17029,7 +16792,6 @@
       "spell_frequency": 10,
       "description": "A beautiful crystalline shape does not disguise the danger this hound clearly presents. Your flesh tingles as it approaches.",
       "sprite": "zephyr.png",
-      "serial": 238,
       "symbol": "Z",
       "color": "u"
     },
@@ -17137,7 +16899,6 @@
       "spell_frequency": 10,
       "description": "Swirling vapours surround this beast as it floats towards you, seemingly walking on air. Noxious gases sting your throat.",
       "sprite": "zephyr.png",
-      "serial": 239,
       "symbol": "Z",
       "color": "g"
     },
@@ -17237,7 +16998,6 @@
       },
       "description": "A fierce and dangerous cat, its huge tusks and sharp claws would lacerate even the strongest armor.",
       "sprite": "cat.png",
-      "serial": 240,
       "symbol": "f",
       "color": "y"
     },
@@ -17343,9 +17103,8 @@
         "breath_acid"
       ],
       "spell_frequency": 10,
-      "description": "Liquid footprints follow this hound as it pads around the dungeon. An acrid smell of acid rises from the dog's pelt.",
+      "description": "Liquid footprints follow this hound as it pads around the dungeon. An acrid smell of acid rises from the dog\u0027s pelt.",
       "sprite": "zephyr.png",
-      "serial": 241,
       "symbol": "Z",
       "color": "s"
     },
@@ -17435,7 +17194,6 @@
       "spell_frequency": 10,
       "description": "It is a strange concoction of goat, lion and dragon, with the heads of all three beasts.",
       "sprite": "hybrid.png",
-      "serial": 242,
       "symbol": "H",
       "color": "r"
     },
@@ -17478,7 +17236,6 @@
       "spell_frequency": 4,
       "description": "It is a strange pulsing mound of flesh.",
       "sprite": "quylthulg.png",
-      "serial": 243,
       "symbol": "Q",
       "color": "y"
     },
@@ -17564,7 +17321,6 @@
       },
       "description": "A tall shaggy, furry humanoid, it could call the yeti brother.",
       "sprite": "hydra.png",
-      "serial": 244,
       "symbol": "Y",
       "color": "g"
     },
@@ -17652,7 +17408,6 @@
       },
       "description": "A man-wolf that moves with unnatural speed, hackles raised.",
       "sprite": "werewolf.png",
-      "serial": 245,
       "symbol": "C",
       "color": "D"
     },
@@ -17735,7 +17490,6 @@
         "bolt_cold"
       ],
       "spell_frequency": 5,
-      "serial": 246,
       "symbol": "h",
       "color": "s"
     },
@@ -17812,7 +17566,6 @@
       "spell_frequency": 8,
       "description": "It is a twenty foot tall giant wreathed in clouds.",
       "sprite": "giant.png",
-      "serial": 247,
       "symbol": "P",
       "color": "b"
     },
@@ -17921,9 +17674,8 @@
         "immune_pois": true,
         "alertness": 20
       },
-      "description": "A large and powerful orc, captain of one of Saruman's orcish regiments.",
+      "description": "A large and powerful orc, captain of one of Saruman\u0027s orcish regiments.",
       "sprite": "orc.png",
-      "serial": 248,
       "symbol": "o",
       "color": "b"
     },
@@ -18036,9 +17788,8 @@
         "no_sleep": true,
         "alertness": 20
       },
-      "description": "A strong and cunning orc warrior, the commander of Saruman's orcish horde.",
+      "description": "A strong and cunning orc warrior, the commander of Saruman\u0027s orcish horde.",
       "sprite": "orc.png",
-      "serial": 249,
       "symbol": "o",
       "color": "b"
     },
@@ -18096,7 +17847,6 @@
       "spell_frequency": 4,
       "description": "It is a glowing blue bat with a sharp tail.",
       "sprite": "bat.png",
-      "serial": 250,
       "symbol": "b",
       "color": "b"
     },
@@ -18211,7 +17961,6 @@
       "spell_frequency": 5,
       "description": "A strange creature that disguises itself as a discarded scroll to lure unsuspecting adventurers within reach of its venomous claws.",
       "sprite": "humanoid.png",
-      "serial": 251,
       "symbol": "?",
       "color": "w"
     },
@@ -18272,7 +18021,6 @@
       "spell_frequency": 6,
       "description": "A whirling maelstrom of fire.",
       "sprite": "vortex.png",
-      "serial": 252,
       "symbol": "v",
       "color": "r"
     },
@@ -18333,7 +18081,6 @@
       "spell_frequency": 6,
       "description": "A caustic spinning whirlpool of water.",
       "sprite": "vortex.png",
-      "serial": 253,
       "symbol": "v",
       "color": "s"
     },
@@ -18394,7 +18141,6 @@
       "spell_frequency": 6,
       "description": "A twisting whirlpool of frost.",
       "sprite": "vortex.png",
-      "serial": 254,
       "symbol": "v",
       "color": "w"
     },
@@ -18455,7 +18201,6 @@
       "spell_frequency": 6,
       "description": "A shimmering tornado of air, sparks crackle along its length.",
       "sprite": "vortex.png",
-      "serial": 255,
       "symbol": "v",
       "color": "b"
     },
@@ -18533,7 +18278,6 @@
       },
       "description": "It is an orcish figure covered in wrappings.",
       "sprite": "zombie.png",
-      "serial": 256,
       "symbol": "z",
       "color": "w"
     },
@@ -18602,7 +18346,6 @@
       },
       "description": "It is a giant beetle with vicious claws.",
       "sprite": "beetle.png",
-      "serial": 257,
       "symbol": "K",
       "color": "g"
     },
@@ -18666,7 +18409,6 @@
       "spell_frequency": 7,
       "description": "It is a massive metal statue that moves steadily towards you.",
       "sprite": "golem.png",
-      "serial": 258,
       "symbol": "g",
       "color": "s"
     },
@@ -18734,7 +18476,6 @@
       },
       "description": "It is a giant scorpion with a sharp stinger.",
       "sprite": "snake.png",
-      "serial": 259,
       "symbol": "S",
       "color": "y"
     },
@@ -18798,7 +18539,6 @@
       "spell_frequency": 11,
       "description": "It is a strangely moving puddle.",
       "sprite": "jelly.png",
-      "serial": 260,
       "symbol": "j",
       "color": "D"
     },
@@ -18869,7 +18609,6 @@
       },
       "description": "A scarred warrior who moves with confidence.",
       "sprite": "humanoid.png",
-      "serial": 261,
       "symbol": "p",
       "color": "u"
     },
@@ -18964,7 +18703,6 @@
       },
       "description": "He is also known as the King of Khazad-dum. His ego is renowned to be bigger than his head.",
       "sprite": "orc.png",
-      "serial": 262,
       "symbol": "o",
       "color": "v"
     },
@@ -19058,7 +18796,6 @@
       },
       "description": "A thief of great power and shifty speed.",
       "sprite": "humanoid.png",
-      "serial": 263,
       "symbol": "p",
       "color": "b"
     },
@@ -19116,7 +18853,6 @@
       "spell_frequency": 4,
       "description": "It is a sharp-tailed bat, wreathed in fire.",
       "sprite": "bat.png",
-      "serial": 264,
       "symbol": "b",
       "color": "r"
     },
@@ -19168,7 +18904,6 @@
       },
       "description": "It is looking for prey.",
       "sprite": "beetle.png",
-      "serial": 265,
       "symbol": "K",
       "color": "w"
     },
@@ -19211,7 +18946,6 @@
       "spell_frequency": 10,
       "description": "This vast gleaming bronze fly has wings which beat mesmerically fast.",
       "sprite": "insect.png",
-      "serial": 266,
       "symbol": "F",
       "color": "U"
     },
@@ -19312,7 +19046,6 @@
         "drain_mana"
       ],
       "spell_frequency": 10,
-      "serial": 267,
       "symbol": "W",
       "color": "g"
     },
@@ -19426,7 +19159,6 @@
       "spell_frequency": 8,
       "description": "One of the last of the Petty-Dwarves. Ibun is a tricky sorcerous little being, full of mischief.",
       "sprite": "humanoid.png",
-      "serial": 268,
       "symbol": "h",
       "color": "o"
     },
@@ -19540,7 +19272,6 @@
       "spell_frequency": 8,
       "description": "One of the last of the Petty-Dwarves. Khim is a tricky sorcerous little being, full of mischief.",
       "sprite": "humanoid.png",
-      "serial": 269,
       "symbol": "h",
       "color": "o"
     },
@@ -19651,7 +19382,6 @@
       "spell_frequency": 7,
       "description": "A strange reptilian hybrid with four heads, guarding its hoard.",
       "sprite": "mushroom.png",
-      "serial": 270,
       "symbol": "M",
       "color": "y"
     },
@@ -19729,7 +19459,6 @@
       },
       "description": "It is a human form encased in mouldy wrappings.",
       "sprite": "zombie.png",
-      "serial": 271,
       "symbol": "z",
       "color": "w"
     },
@@ -19827,7 +19556,6 @@
       },
       "description": "A blood-sucking bat that flies at your neck hungrily.",
       "sprite": "bat.png",
-      "serial": 272,
       "symbol": "b",
       "color": "D"
     },
@@ -19947,7 +19675,6 @@
       "spell_frequency": 4,
       "description": "A Black Numenorean with a blacker heart.",
       "sprite": "humanoid.png",
-      "serial": 273,
       "symbol": "p",
       "color": "U"
     },
@@ -20067,7 +19794,6 @@
       "spell_frequency": 4,
       "description": "A Black Numenorean who hates the men of the west.",
       "sprite": "humanoid.png",
-      "serial": 274,
       "symbol": "p",
       "color": "U"
     },
@@ -20149,9 +19875,8 @@
         "drain_mana"
       ],
       "spell_frequency": 15,
-      "description": "It is a ghostly woman's form that wails mournfully.",
+      "description": "It is a ghostly woman\u0027s form that wails mournfully.",
       "sprite": "ghost.png",
-      "serial": 275,
       "symbol": "G",
       "color": "b"
     },
@@ -20235,7 +19960,6 @@
       "spell_frequency": 4,
       "description": "A stumpy figure carved from stone, with glittering eyes, this sentinel strides towards you with deadly intent.",
       "sprite": "golem.png",
-      "serial": 276,
       "symbol": "g",
       "color": "D"
     },
@@ -20338,7 +20062,6 @@
       "spell_frequency": 6,
       "description": "A powerful dark elf, with mighty nature-controlling enchantments.",
       "sprite": "humanoid.png",
-      "serial": 277,
       "symbol": "h",
       "color": "G"
     },
@@ -20430,7 +20153,6 @@
       },
       "description": "He is a giant troll with scabrous black skin.",
       "sprite": "stone_troll.png",
-      "serial": 278,
       "symbol": "T",
       "color": "W"
     },
@@ -20533,7 +20255,6 @@
       "spell_frequency": 5,
       "description": "A troll who is so bright he knows how to read.",
       "sprite": "troll.png",
-      "serial": 279,
       "symbol": "T",
       "color": "G"
     },
@@ -20634,7 +20355,6 @@
       },
       "description": "A huge wormlike shape dripping acid, twisted by evil sorcery into a foul monster that breeds on death.",
       "sprite": "worm.png",
-      "serial": 280,
       "symbol": "w",
       "color": "D"
     },
@@ -20727,7 +20447,6 @@
       },
       "description": "A hideous centipede covered in slime and with glowing tentacles around its head.",
       "sprite": "centipede.png",
-      "serial": 281,
       "symbol": "c",
       "color": "o"
     },
@@ -20789,7 +20508,6 @@
       },
       "description": "It is a giant beetle with poisonous mandibles.",
       "sprite": "beetle.png",
-      "serial": 282,
       "symbol": "K",
       "color": "r"
     },
@@ -20842,7 +20560,6 @@
       },
       "description": "It is an ant encased in shaggy grey fur.",
       "sprite": "giant_ant.png",
-      "serial": 283,
       "symbol": "a",
       "color": "s"
     },
@@ -20934,7 +20651,6 @@
       },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
-      "serial": 284,
       "symbol": "p",
       "color": "U"
     },
@@ -21036,7 +20752,6 @@
       },
       "description": "It is a huge black panther, clubbed tentacles sprouting from its shoulders.",
       "sprite": "cat.png",
-      "serial": 285,
       "symbol": "f",
       "color": "D"
     },
@@ -21089,7 +20804,6 @@
       },
       "description": "It is smoking and burning with great heat.",
       "sprite": "snake.png",
-      "serial": 286,
       "symbol": "S",
       "color": "R"
     },
@@ -21160,7 +20874,6 @@
       },
       "description": "A giant orc-like figure with an awesomely muscled frame.",
       "sprite": "ogre.png",
-      "serial": 287,
       "symbol": "O",
       "color": "u"
     },
@@ -21260,7 +20973,6 @@
         "darkness"
       ],
       "spell_frequency": 8,
-      "serial": 288,
       "symbol": "W",
       "color": "w"
     },
@@ -21379,7 +21091,6 @@
       "spell_frequency": 3,
       "description": "Who knows why you are now facing an angel as an enemy? Is it a punishment from your own god for your sins, or a test of your mettle, or has this angel been sent by another god on behalf of someone who wishes to claim the glory for his own god? Perhaps you will never know: but it is here, and you must fight it.",
       "sprite": "humanoid.png",
-      "serial": 289,
       "symbol": "A",
       "color": "o"
     },
@@ -21499,7 +21210,6 @@
       "spell_frequency": 6,
       "description": "The last of his race, Mim is a Petty-Dwarf. Petty-Dwarves are strange creatures, powerful in sorcery and originating in the East. They have been hunted nearly to extinction by the High Elves.",
       "sprite": "humanoid.png",
-      "serial": 290,
       "symbol": "h",
       "color": "o"
     },
@@ -21568,7 +21278,6 @@
       },
       "description": "It is a giant beetle wreathed in flames.",
       "sprite": "beetle.png",
-      "serial": 291,
       "symbol": "K",
       "color": "R"
     },
@@ -21677,7 +21386,6 @@
       },
       "description": "It appears to be a pile of coins made of precious adamant, slithering toward you on lots of tiny legs.",
       "sprite": "coins.png",
-      "serial": 292,
       "symbol": "$",
       "color": "G"
     },
@@ -21766,7 +21474,6 @@
       },
       "description": "A powerful troll form. Venom drips from its needlelike claws.",
       "sprite": "troll.png",
-      "serial": 293,
       "symbol": "T",
       "color": "o"
     },
@@ -21875,7 +21582,6 @@
       "spell_frequency": 5,
       "description": "A blurry canine form which seems to be moving as fast as the eye can follow. You can feel the earth resonating beneath your feet.",
       "sprite": "zephyr.png",
-      "serial": 294,
       "symbol": "Z",
       "color": "y"
     },
@@ -21984,7 +21690,6 @@
       "spell_frequency": 5,
       "description": "A locus of conflicting points coalesce to form the vague shape of a huge hound. Or is it just your imagination?",
       "sprite": "zephyr.png",
-      "serial": 295,
       "symbol": "Z",
       "color": "v"
     },
@@ -22098,7 +21803,6 @@
         "summon_monster"
       ],
       "spell_frequency": 4,
-      "serial": 296,
       "symbol": "O",
       "color": "r"
     },
@@ -22192,7 +21896,6 @@
       },
       "description": "An ogre renowned for acts of surpassing cruelty, Lokkak quickly became the leader of a large band of violent ogres.",
       "sprite": "ogre.png",
-      "serial": 297,
       "symbol": "O",
       "color": "v"
     },
@@ -22338,7 +22041,6 @@
       "spell_frequency": 9,
       "description": "It is a humanoid with an aura of power. You notice a sharp set of front teeth.",
       "sprite": "vampire.png",
-      "serial": 298,
       "symbol": "V",
       "color": "W"
     },
@@ -22438,9 +22140,8 @@
         "breath_fire"
       ],
       "spell_frequency": 8,
-      "description": "The result of evil experiments, this travesty of nature should never be alive. It has three heads - goat, dragon and gorgon - all attached to a lion's body.",
+      "description": "The result of evil experiments, this travesty of nature should never be alive. It has three heads - goat, dragon and gorgon - all attached to a lion\u0027s body.",
       "sprite": "hybrid.png",
-      "serial": 299,
       "symbol": "H",
       "color": "o"
     },
@@ -22519,7 +22220,6 @@
       "spell_frequency": 3,
       "description": "A man-shaped form of living lightning, sparks and shocks crackle all over this madly capering figure, as it leaps and whirls around and about you.",
       "sprite": "golem.png",
-      "serial": 300,
       "symbol": "g",
       "color": "y"
     },
@@ -22637,7 +22337,6 @@
       "spell_frequency": 4,
       "description": "A wraithly snake-like form with the torso of a beautiful woman, it is the most powerful of its kind.",
       "sprite": "naga.png",
-      "serial": 301,
       "symbol": "n",
       "color": "w"
     },
@@ -22750,7 +22449,6 @@
       "spell_frequency": 5,
       "description": "A strange reptilian hybrid with five heads dripping venom.",
       "sprite": "mushroom.png",
-      "serial": 302,
       "symbol": "M",
       "color": "g"
     },
@@ -22846,7 +22544,6 @@
       "spell_frequency": 8,
       "description": "He is a figure encased in deep black plate armor.",
       "sprite": "black_knight.png",
-      "serial": 303,
       "symbol": "p",
       "color": "s"
     },
@@ -22958,9 +22655,8 @@
         "summon_kin"
       ],
       "spell_frequency": 10,
-      "description": "An evil and cunning man from the East. Having once sworn allegiance to the sons of Feanor, it was Uldor's treachery that turned the tide of the Battle of Unnumbered Tears in Morgoth's favour.",
+      "description": "An evil and cunning man from the East. Having once sworn allegiance to the sons of Feanor, it was Uldor\u0027s treachery that turned the tide of the Battle of Unnumbered Tears in Morgoth\u0027s favour.",
       "sprite": "humanoid.png",
-      "serial": 304,
       "symbol": "p",
       "color": "U"
     },
@@ -23046,7 +22742,6 @@
       "spell_frequency": 3,
       "description": "A mage of some power - you can tell by the size of his hat.",
       "sprite": "humanoid.png",
-      "serial": 305,
       "symbol": "p",
       "color": "r"
     },
@@ -23151,7 +22846,6 @@
       "spell_frequency": 8,
       "description": "A humanoid with a gruesome head, tentacular mouth, and piercing eyes.",
       "sprite": "mind_flayer.png",
-      "serial": 306,
       "symbol": "h",
       "color": "v"
     },
@@ -23277,7 +22971,6 @@
       "spell_frequency": 5,
       "description": "An intensely irritating git of a monster.",
       "sprite": "demon.png",
-      "serial": 307,
       "symbol": "u",
       "color": "v"
     },
@@ -23388,7 +23081,6 @@
       "spell_frequency": 8,
       "description": "An evil reptile that preys on unsuspecting travellers. Its eyes stare deeply at you and your soul starts to wilt!",
       "sprite": "reptile.png",
-      "serial": 308,
       "symbol": "R",
       "color": "s"
     },
@@ -23497,7 +23189,6 @@
       },
       "description": "He is a white troll with powerfully clawed hands.",
       "sprite": "troll.png",
-      "serial": 309,
       "symbol": "T",
       "color": "w"
     },
@@ -23583,7 +23274,6 @@
       },
       "description": "A massive worm form many feet in length whose vast maw drips with acid.",
       "sprite": "purple_worm.png",
-      "serial": 310,
       "symbol": "w",
       "color": "v"
     },
@@ -23705,7 +23395,6 @@
       "spell_frequency": 3,
       "description": "An angel protected by an aura of holiness. Its muscular form looks extremely powerful next to your own frail body.",
       "sprite": "humanoid.png",
-      "serial": 311,
       "symbol": "A",
       "color": "B"
     },
@@ -23835,7 +23524,6 @@
       },
       "description": "A strange ox-like form with a huge head but a thin, weak neck, it looks likes the creation of some deranged alchemist.",
       "sprite": "quylthulg.png",
-      "serial": 312,
       "symbol": "q",
       "color": "g"
     },
@@ -23955,7 +23643,6 @@
       "spell_frequency": 4,
       "description": "A strange creature that disguises itself as a discarded ring to lure unsuspecting adventurers within reach of its venomous claws.",
       "sprite": "humanoid.png",
-      "serial": 313,
       "symbol": "=",
       "color": "w"
     },
@@ -24051,7 +23738,6 @@
       "spell_frequency": 10,
       "description": "A young electric dragon sleeping coiled in its lair.",
       "sprite": "young_blue_dragon.png",
-      "serial": 314,
       "symbol": "d",
       "color": "b"
     },
@@ -24147,7 +23833,6 @@
       "spell_frequency": 10,
       "description": "A young frost dragon curled in icy slumber.",
       "sprite": "young_white_dragon.png",
-      "serial": 315,
       "symbol": "d",
       "color": "w"
     },
@@ -24243,7 +23928,6 @@
       "spell_frequency": 10,
       "description": "A young poison dragon drowsing in a cloud of noxious fumes.",
       "sprite": "young_green_dragon.png",
-      "serial": 316,
       "symbol": "d",
       "color": "g"
     },
@@ -24339,7 +24023,6 @@
       "spell_frequency": 10,
       "description": "It has a form that legends are made of. Its still-tender scales are a rich bronze hue, and its shape glitters with strange colours that confuse you.",
       "sprite": "small_dragon.png",
-      "serial": 317,
       "symbol": "d",
       "color": "U"
     },
@@ -24450,7 +24133,6 @@
       },
       "description": "It is a massive statue of purest mithril. It looks expensive!",
       "sprite": "golem.png",
-      "serial": 318,
       "symbol": "g",
       "color": "B"
     },
@@ -24564,7 +24246,6 @@
         "breath_nether"
       ],
       "spell_frequency": 6,
-      "serial": 319,
       "symbol": "d",
       "color": "G"
     },
@@ -24659,7 +24340,6 @@
       },
       "description": "It is a troll skeleton animated by dark dweomers.",
       "sprite": "skeleton.png",
-      "serial": 320,
       "symbol": "s",
       "color": "w"
     },
@@ -24765,9 +24445,8 @@
         "arrow_4"
       ],
       "spell_frequency": 5,
-      "description": "It is a winged lion's body with a human torso and a tail covered in vicious spikes.",
+      "description": "It is a winged lion\u0027s body with a human torso and a tail covered in vicious spikes.",
       "sprite": "hybrid.png",
-      "serial": 321,
       "symbol": "H",
       "color": "y"
     },
@@ -24820,7 +24499,6 @@
       },
       "description": "It is a giant ant that crackles with energy.",
       "sprite": "giant_ant.png",
-      "serial": 322,
       "symbol": "a",
       "color": "b"
     },
@@ -24874,7 +24552,6 @@
       },
       "description": "An armored form moving with purpose. Powerful on its own, flee when hordes of them march.",
       "sprite": "giant_ant.png",
-      "serial": 323,
       "symbol": "a",
       "color": "o"
     },
@@ -24976,7 +24653,6 @@
         "darkness"
       ],
       "spell_frequency": 8,
-      "serial": 324,
       "symbol": "W",
       "color": "b"
     },
@@ -25044,7 +24720,6 @@
       },
       "description": "It is a beetle with deadly sharp cutting mandibles and a rock-hard carapace.",
       "sprite": "beetle.png",
-      "serial": 325,
       "symbol": "K",
       "color": "y"
     },
@@ -25184,7 +24859,6 @@
         "drain_mana"
       ],
       "spell_frequency": 15,
-      "serial": 326,
       "symbol": "G",
       "color": "w"
     },
@@ -25265,7 +24939,6 @@
       },
       "description": "It is a giant beetle that produces a chilling sound.",
       "sprite": "beetle.png",
-      "serial": 327,
       "symbol": "K",
       "color": "D"
     },
@@ -25365,7 +25038,6 @@
       "spell_frequency": 5,
       "description": "It is an ogre wrapped in furs and covered in grotesque body paints.",
       "sprite": "ogre.png",
-      "serial": 328,
       "symbol": "O",
       "color": "G"
     },
@@ -25408,7 +25080,6 @@
       "spell_frequency": 1,
       "description": "It is a very unstable, strange pulsing mound of flesh.",
       "sprite": "quylthulg.png",
-      "serial": 329,
       "symbol": "Q",
       "color": "v"
     },
@@ -25563,7 +25234,6 @@
       "spell_frequency": 4,
       "description": "Shelob is an enormous bloated spider, the last daughter of Ungoliant the Unlight. Her poison is legendary, as is her ego. She normally guards the pass through Cirith Ungol, but occasionally goes out foraging for food to feed her voracious appetite.",
       "sprite": "snake.png",
-      "serial": 330,
       "symbol": "S",
       "color": "D"
     },
@@ -25672,7 +25342,6 @@
       },
       "description": "A humanoid clothed in black who moves with blinding speed.",
       "sprite": "humanoid.png",
-      "serial": 331,
       "symbol": "p",
       "color": "y"
     },
@@ -25773,9 +25442,8 @@
         "forget"
       ],
       "spell_frequency": 6,
-      "description": "A mass of green vegetation. You don't remember seeing anything like it before.",
+      "description": "A mass of green vegetation. You don\u0027t remember seeing anything like it before.",
       "sprite": "mushroom.png",
-      "serial": 332,
       "symbol": ",",
       "color": "r"
     },
@@ -25861,7 +25529,6 @@
       "spell_frequency": 8,
       "description": "It is a twenty-five foot tall giant wreathed in lightning.",
       "sprite": "giant.png",
-      "serial": 333,
       "symbol": "P",
       "color": "B"
     },
@@ -25970,7 +25637,6 @@
       },
       "description": "Huge and dimwitted, but terrifying in close quarters.",
       "sprite": "cave_troll.png",
-      "serial": 334,
       "symbol": "T",
       "color": "u"
     },
@@ -26079,7 +25745,6 @@
       },
       "description": "A huge, ugly, half-human in search of plunder.",
       "sprite": "troll.png",
-      "serial": 335,
       "symbol": "T",
       "color": "U"
     },
@@ -26197,7 +25862,6 @@
       "spell_frequency": 6,
       "description": "An adept at unarmed combat, the mystic strikes with stunning power. He can summon help from nature and is able to focus his power to ease any pain.",
       "sprite": "humanoid.png",
-      "serial": 336,
       "symbol": "p",
       "color": "o"
     },
@@ -26299,7 +25963,6 @@
         "darkness"
       ],
       "spell_frequency": 8,
-      "serial": 337,
       "symbol": "W",
       "color": "v"
     },
@@ -26412,7 +26075,6 @@
       },
       "description": "It is the animated form of a massive two-headed troll.",
       "sprite": "skeleton.png",
-      "serial": 338,
       "symbol": "s",
       "color": "w"
     },
@@ -26514,7 +26176,6 @@
       "spell_frequency": 6,
       "description": "A dragon twisted by the forces of chaos. It seems first ugly, then fair, as its form shimmers and changes in front of your eyes.",
       "sprite": "small_dragon.png",
-      "serial": 339,
       "symbol": "d",
       "color": "v"
     },
@@ -26616,7 +26277,6 @@
       "spell_frequency": 6,
       "description": "This dragon is clever and cunning. It laughs at your puny efforts to disturb it.",
       "sprite": "small_dragon.png",
-      "serial": 340,
       "symbol": "d",
       "color": "B"
     },
@@ -26721,7 +26381,6 @@
       "spell_frequency": 6,
       "description": "A mighty dragon, the balance drake seeks to maintain the Cosmic Balance, and despises your feeble efforts to destroy evil.",
       "sprite": "small_dragon.png",
-      "serial": 341,
       "symbol": "d",
       "color": "v"
     },
@@ -26820,9 +26479,8 @@
         "breath_dark"
       ],
       "spell_frequency": 6,
-      "description": "A dragon of great power, with control over light and dark, the ethereal drake's eyes glare with white hatred from the shadows.",
+      "description": "A dragon of great power, with control over light and dark, the ethereal drake\u0027s eyes glare with white hatred from the shadows.",
       "sprite": "small_dragon.png",
-      "serial": 342,
       "symbol": "d",
       "color": "o"
     },
@@ -26927,7 +26585,6 @@
       "spell_frequency": 7,
       "description": "Big, brawny, powerful and with a taste for hobbit. He has friends called Bill and Tom.",
       "sprite": "troll.png",
-      "serial": 343,
       "symbol": "T",
       "color": "s"
     },
@@ -27032,7 +26689,6 @@
       "spell_frequency": 7,
       "description": "Big, brawny, powerful and with a taste for hobbit. He has friends called Bert and Tom.",
       "sprite": "troll.png",
-      "serial": 344,
       "symbol": "T",
       "color": "s"
     },
@@ -27137,7 +26793,6 @@
       "spell_frequency": 7,
       "description": "Big, brawny, powerful and with a taste for hobbit. He has friends called Bert and Bill.",
       "sprite": "troll.png",
-      "serial": 345,
       "symbol": "T",
       "color": "s"
     },
@@ -27252,7 +26907,6 @@
       "spell_frequency": 15,
       "description": "A shadowy form clutches at you from the darkness. A powerful undead creature with a deadly touch.",
       "sprite": "ghost.png",
-      "serial": 346,
       "symbol": "G",
       "color": "D"
     },
@@ -27367,7 +27021,6 @@
       "spell_frequency": 15,
       "description": "A phantasmal shrieking spirit that passes through walls to drain life and mind.",
       "sprite": "spectre.png",
-      "serial": 347,
       "symbol": "G",
       "color": "U"
     },
@@ -27478,7 +27131,6 @@
       },
       "description": "He is a troll that reeks of brine.",
       "sprite": "troll.png",
-      "serial": 348,
       "symbol": "T",
       "color": "B"
     },
@@ -27562,7 +27214,6 @@
         "bolt_fire"
       ],
       "spell_frequency": 6,
-      "serial": 349,
       "symbol": "E",
       "color": "r"
     },
@@ -27690,7 +27341,6 @@
       "spell_frequency": 3,
       "description": "It is an angel moving very quickly, wielding a holy war hammer and casting a volley of powerful spells in your direction.",
       "sprite": "humanoid.png",
-      "serial": 350,
       "symbol": "A",
       "color": "G"
     },
@@ -27792,7 +27442,6 @@
       "spell_frequency": 6,
       "description": "It is a towering tempest of water.",
       "sprite": "elemental.png",
-      "serial": 351,
       "symbol": "E",
       "color": "b"
     },
@@ -27887,7 +27536,6 @@
       },
       "description": "It is impossible to define its form but its violence is legendary.",
       "sprite": "elemental.png",
-      "serial": 352,
       "symbol": "E",
       "color": "y"
     },
@@ -27982,7 +27630,6 @@
       },
       "description": "A hideous centipede covered in slime and with glowing tentacles around its head.",
       "sprite": "centipede.png",
-      "serial": 353,
       "symbol": "c",
       "color": "o"
     },
@@ -28107,7 +27754,6 @@
       "spell_frequency": 6,
       "description": "Cool and confident, fast and lithe; protect your possessions quickly!",
       "sprite": "humanoid.png",
-      "serial": 354,
       "symbol": "p",
       "color": "b"
     },
@@ -28221,7 +27867,6 @@
       "spell_frequency": 10,
       "description": "A short and swarthy Easterling dressed in black. He and his three sons once openly swore allegiance to the High Elves, but were secretly in the pay of Morgoth.",
       "sprite": "humanoid.png",
-      "serial": 355,
       "symbol": "p",
       "color": "U"
     },
@@ -28362,7 +28007,6 @@
       "spell_frequency": 4,
       "description": "A dread undead sorcerer sealed in skeletal form by dark pacts. It rests between workings of terrible magic.",
       "sprite": "lich.png",
-      "serial": 356,
       "symbol": "L",
       "color": "o"
     },
@@ -28510,7 +28154,6 @@
         "bolt_nether"
       ],
       "spell_frequency": 6,
-      "serial": 357,
       "symbol": "V",
       "color": "g"
     },
@@ -28578,7 +28221,6 @@
       },
       "description": "It is a giant grey scorpion. It looks poisonous.",
       "sprite": "snake.png",
-      "serial": 358,
       "symbol": "S",
       "color": "s"
     },
@@ -28680,7 +28322,6 @@
       "spell_frequency": 8,
       "description": "It is a towering form composed of rock with fists of awesome power.",
       "sprite": "elemental.png",
-      "serial": 359,
       "symbol": "E",
       "color": "u"
     },
@@ -28795,7 +28436,6 @@
       "spell_frequency": 8,
       "description": "It is a towering tornado of winds.",
       "sprite": "elemental.png",
-      "serial": 360,
       "symbol": "E",
       "color": "B"
     },
@@ -28890,7 +28530,6 @@
       "spell_frequency": 5,
       "description": "It is a giant dog that glows with heat. Flames pour from its nostrils.",
       "sprite": "canine.png",
-      "serial": 361,
       "symbol": "C",
       "color": "r"
     },
@@ -29001,7 +28640,6 @@
       },
       "description": "It is a massive deep brown statue, striding towards you with an all-too-familiar purpose. Your magic surprisingly feels much less powerful now.",
       "sprite": "golem.png",
-      "serial": 362,
       "symbol": "g",
       "color": "u"
     },
@@ -29110,7 +28748,6 @@
       },
       "description": "It is a massive intelligent troll with needle-sharp fangs.",
       "sprite": "troll.png",
-      "serial": 363,
       "symbol": "T",
       "color": "y"
     },
@@ -29236,7 +28873,6 @@
       },
       "description": "A human warrior, moving with lightning speed.",
       "sprite": "humanoid.png",
-      "serial": 364,
       "symbol": "p",
       "color": "y"
     },
@@ -29345,7 +28981,6 @@
       "spell_frequency": 5,
       "description": "Unfettered by the usual constraints of gravity, these unnatural creatures are walking on the walls and even the ceiling! The earth suddenly feels rather less solid as you see gravity warp all round the monsters.",
       "sprite": "zephyr.png",
-      "serial": 365,
       "symbol": "Z",
       "color": "W"
     },
@@ -29461,7 +29096,6 @@
       },
       "description": "A disgusting animated blob of destruction. Flee its gruesome hunger!",
       "sprite": "jelly.png",
-      "serial": 366,
       "symbol": "j",
       "color": "s"
     },
@@ -29570,7 +29204,6 @@
       "spell_frequency": 5,
       "description": "Bizarrely, this hound seems to be hardly moving at all, yet it approaches you with deadly menace. It makes you tired just to look at it.",
       "sprite": "zephyr.png",
-      "serial": 367,
       "symbol": "Z",
       "color": "W"
     },
@@ -29679,7 +29312,6 @@
         "breath_wall"
       ],
       "spell_frequency": 5,
-      "serial": 368,
       "symbol": "Z",
       "color": "u"
     },
@@ -29794,7 +29426,6 @@
       "spell_frequency": 15,
       "description": "It is a form that screams its presence against the eye. Death incarnate, its hideous black body seems to struggle against reality as the universe itself struggles to banish it.",
       "sprite": "ghost.png",
-      "serial": 369,
       "symbol": "G",
       "color": "o"
     },
@@ -29896,7 +29527,6 @@
       "spell_frequency": 5,
       "description": "It is a towering mass of filth, an eyesore of ooze.",
       "sprite": "elemental.png",
-      "serial": 370,
       "symbol": "E",
       "color": "g"
     },
@@ -29980,7 +29610,6 @@
       "spell_frequency": 5,
       "description": "It is a towering blackened form, crackling with heat.",
       "sprite": "elemental.png",
-      "serial": 371,
       "symbol": "E",
       "color": "R"
     },
@@ -30076,7 +29705,6 @@
       "spell_frequency": 10,
       "description": "A young acid dragon sleeping among the corroded bones of its prey.",
       "sprite": "young_black_dragon.png",
-      "serial": 372,
       "symbol": "d",
       "color": "s"
     },
@@ -30159,7 +29787,6 @@
       },
       "description": "A massive elephantine form with eyes twisted by madness.",
       "sprite": "quylthulg.png",
-      "serial": 373,
       "symbol": "q",
       "color": "s"
     },
@@ -30231,7 +29858,6 @@
       },
       "description": "A giant ant covered in shaggy fur. Its powerful jaws glow with heat.",
       "sprite": "giant_ant.png",
-      "serial": 374,
       "symbol": "a",
       "color": "R"
     },
@@ -30329,7 +29955,6 @@
       "spell_frequency": 9,
       "description": "A large frost dragon covered in rimed scales, slumbering in a frozen cavern.",
       "sprite": "mature_white_dragon.png",
-      "serial": 375,
       "symbol": "d",
       "color": "w"
     },
@@ -30440,7 +30065,6 @@
       },
       "description": "A huge creature of the element Earth. Able to merge with its element, it has four huge arms protruding from its enormous torso.",
       "sprite": "xorn.png",
-      "serial": 376,
       "symbol": "X",
       "color": "u"
     },
@@ -30576,7 +30200,6 @@
       "spell_frequency": 8,
       "description": "A mighty spirit of darkness of vaguely humanoid form. Razor-edged claws reach out to end your life as it glides towards you, seeking to suck the energy from your soul to feed its power.",
       "sprite": "ghost.png",
-      "serial": 377,
       "symbol": "G",
       "color": "D"
     },
@@ -30710,7 +30333,6 @@
       "spell_frequency": 5,
       "description": "An unholy creature of darkness, the aura emanating from this evil being saps your very soul.",
       "sprite": "ghost.png",
-      "serial": 378,
       "symbol": "G",
       "color": "v"
     },
@@ -30813,7 +30435,6 @@
         "darkness"
       ],
       "spell_frequency": 7,
-      "serial": 379,
       "symbol": "W",
       "color": "s"
     },
@@ -30918,7 +30539,6 @@
       "spell_frequency": 8,
       "description": "It has a form that legends are made of. Beautiful scales of shimmering and magical colours cover it.",
       "sprite": "small_dragon.png",
-      "serial": 380,
       "symbol": "d",
       "color": "v"
     },
@@ -31028,7 +30648,6 @@
       },
       "description": "An enormous construct resembling a titan made from stone. It strides purposefully towards you, swinging its slow fists with earth-shattering power.",
       "sprite": "golem.png",
-      "serial": 381,
       "symbol": "g",
       "color": "G"
     },
@@ -31123,7 +30742,6 @@
       "spell_frequency": 10,
       "description": "It has a form that legends are made of. Its still-tender scales are a tarnished gold hue, and light is reflected from its form.",
       "sprite": "small_dragon.png",
-      "serial": 382,
       "symbol": "d",
       "color": "y"
     },
@@ -31243,7 +30861,6 @@
       "spell_frequency": 7,
       "description": "A massive and cruel troll of great power, drool slides caustically down his muscular frame. Despite his bulk, he strikes with stunning speed.",
       "sprite": "troll.png",
-      "serial": 383,
       "symbol": "T",
       "color": "D"
     },
@@ -31340,7 +30957,6 @@
       "spell_frequency": 9,
       "description": "A large blue dragon bristling with static charge, sleeping deeply in its lair.",
       "sprite": "mature_blue_dragon.png",
-      "serial": 384,
       "symbol": "d",
       "color": "b"
     },
@@ -31437,7 +31053,6 @@
       "spell_frequency": 9,
       "description": "A large green dragon wreathed in toxic vapour, resting deep below.",
       "sprite": "mature_green_dragon.png",
-      "serial": 385,
       "symbol": "d",
       "color": "g"
     },
@@ -31534,7 +31149,6 @@
       "spell_frequency": 9,
       "description": "A large dragon with scales of rich bronze.",
       "sprite": "small_dragon.png",
-      "serial": 386,
       "symbol": "d",
       "color": "U"
     },
@@ -31630,7 +31244,6 @@
       ],
       "description": "Not yet ancient, but already a catastrophe on wings.",
       "sprite": "young_red_dragon.png",
-      "serial": 387,
       "symbol": "d",
       "color": "r"
     },
@@ -31761,7 +31374,6 @@
       },
       "description": "A larger cousin of the lurker, this creature traps unsuspecting victims and paralyzes them, to be slowly digested later.",
       "sprite": "humanoid.png",
-      "serial": 388,
       "symbol": ".",
       "color": "w"
     },
@@ -31859,7 +31471,6 @@
       "spell_frequency": 4,
       "description": "It is a humanoid form composed of flames and hatred.",
       "sprite": "demon.png",
-      "serial": 389,
       "symbol": "u",
       "color": "r"
     },
@@ -31961,7 +31572,6 @@
       "spell_frequency": 5,
       "description": "It is a towering glacier of ice.",
       "sprite": "elemental.png",
-      "serial": 390,
       "symbol": "E",
       "color": "w"
     },
@@ -32048,7 +31658,6 @@
       "spell_frequency": 3,
       "description": "A gaunt figure, clothed in black robes.",
       "sprite": "humanoid.png",
-      "serial": 391,
       "symbol": "p",
       "color": "R"
     },
@@ -32170,7 +31779,6 @@
       "spell_frequency": 4,
       "description": "A mighty warrior from the east, Lorgan hates everything that he cannot control.",
       "sprite": "humanoid.png",
-      "serial": 392,
       "symbol": "p",
       "color": "v"
     },
@@ -32269,7 +31877,6 @@
       "spell_frequency": 2,
       "description": "A figure twisted by evil standing in robes of deepest crimson.",
       "sprite": "humanoid.png",
-      "serial": 393,
       "symbol": "p",
       "color": "R"
     },
@@ -32349,7 +31956,6 @@
       },
       "description": "It is a massive figure clothed in wrappings. You are wary of its massive fists.",
       "sprite": "zombie.png",
-      "serial": 394,
       "symbol": "z",
       "color": "w"
     },
@@ -32466,15 +32072,14 @@
         "summon_kin"
       ],
       "spell_frequency": 2,
-      "description": "She's upset because you hurt her children.",
+      "description": "She\u0027s upset because you hurt her children.",
       "sprite": "giant_ant.png",
-      "serial": 395,
       "symbol": "a",
       "color": "v"
     },
     {
       "id": "will_o_the_wisp",
-      "name": "Will o' the wisp",
+      "name": "Will o\u0027 the wisp",
       "type": "elemental",
       "dungeon_levels": [
         38,
@@ -32586,7 +32191,6 @@
       "spell_frequency": 2,
       "description": "A strange ball of glowing light. It disappears and reappears and seems to draw you to it. You seem somehow compelled to stand still and watch its strange dancing motion.",
       "sprite": "elemental.png",
-      "serial": 396,
       "symbol": "E",
       "color": "W"
     },
@@ -32687,7 +32291,6 @@
       "spell_frequency": 7,
       "description": "It is a towering glowing form of molten hate.",
       "sprite": "elemental.png",
-      "serial": 397,
       "symbol": "E",
       "color": "o"
     },
@@ -32805,7 +32408,6 @@
       },
       "description": "A lump of rotting black flesh that slurrrrrrrps across the dungeon floor.",
       "sprite": "jelly.png",
-      "serial": 398,
       "symbol": "j",
       "color": "D"
     },
@@ -32892,7 +32494,6 @@
       },
       "description": "It is a giant beetle, whose carapace shimmers with vibrant energies.",
       "sprite": "beetle.png",
-      "serial": 399,
       "symbol": "K",
       "color": "v"
     },
@@ -32953,7 +32554,6 @@
       "spell_frequency": 6,
       "description": "A maelstrom of potent magical energy.",
       "sprite": "vortex.png",
-      "serial": 400,
       "symbol": "v",
       "color": "v"
     },
@@ -33033,7 +32633,6 @@
       "spell_frequency": 6,
       "description": "A whirlpool of intense flame, charring the stones at your feet.",
       "sprite": "vortex.png",
-      "serial": 401,
       "symbol": "v",
       "color": "R"
     },
@@ -33132,7 +32731,6 @@
       "spell_frequency": 9,
       "description": "A large red dragon deep in fiery slumber, scales glowing with inner heat.",
       "sprite": "mature_red_dragon.png",
-      "serial": 402,
       "symbol": "d",
       "color": "r"
     },
@@ -33230,7 +32828,6 @@
       "spell_frequency": 9,
       "description": "A large dragon with scales of gleaming gold.",
       "sprite": "small_dragon.png",
-      "serial": 403,
       "symbol": "d",
       "color": "y"
     },
@@ -33331,7 +32928,6 @@
       "spell_frequency": 6,
       "description": "A dragon of strange crystalline form. Light shines through it, dazzling your eyes with spectrums of colour.",
       "sprite": "small_dragon.png",
-      "serial": 404,
       "symbol": "d",
       "color": "u"
     },
@@ -33429,7 +33025,6 @@
       "spell_frequency": 9,
       "description": "A large black dragon sleeping amid pools of acid that corrode everything around it.",
       "sprite": "mature_black_dragon.png",
-      "serial": 405,
       "symbol": "d",
       "color": "s"
     },
@@ -33538,7 +33133,6 @@
       "spell_frequency": 7,
       "description": "A large dragon, scales shimmering many colours.",
       "sprite": "small_dragon.png",
-      "serial": 406,
       "symbol": "d",
       "color": "v"
     },
@@ -33640,7 +33234,6 @@
         "summon_monsters"
       ],
       "spell_frequency": 5,
-      "serial": 407,
       "symbol": "p",
       "color": "D"
     },
@@ -33761,7 +33354,6 @@
       "spell_frequency": 2,
       "description": "A Black Numenorean who usurped the throne of Gondor, he is treacherous and evil.",
       "sprite": "humanoid.png",
-      "serial": 408,
       "symbol": "p",
       "color": "R"
     },
@@ -33831,9 +33423,8 @@
         "breath_time"
       ],
       "spell_frequency": 6,
-      "description": "You haven't seen it yet.",
+      "description": "You haven\u0027t seen it yet.",
       "sprite": "vortex.png",
-      "serial": 409,
       "symbol": "v",
       "color": "B"
     },
@@ -33938,7 +33529,6 @@
       "spell_frequency": 4,
       "description": "A strange pillar of shining light that hurts your eyes. Its shape changes constantly as it cuts through the air towards you. It is like a beacon, waking monsters from their slumber.",
       "sprite": "vortex.png",
-      "serial": 410,
       "symbol": "v",
       "color": "o"
     },
@@ -34041,7 +33631,6 @@
       "spell_frequency": 6,
       "description": "A massive ancient dragon, scales blazing with stored electricity, sleeping with one eye barely closed.",
       "sprite": "ancient_blue_dragon.png",
-      "serial": 411,
       "symbol": "D",
       "color": "b"
     },
@@ -34143,7 +33732,6 @@
       "spell_frequency": 6,
       "description": "A huge draconic form enveloped in a cascade of colour.",
       "sprite": "dragon.png",
-      "serial": 412,
       "symbol": "D",
       "color": "U"
     },
@@ -34293,7 +33881,6 @@
       "spell_frequency": 2,
       "description": "A vile creature with one huge central eye, twelve smaller eyes on stalks, and a huge mouth filled with sharp teeth.",
       "sprite": "floating_eye.png",
-      "serial": 413,
       "symbol": "e",
       "color": "U"
     },
@@ -34413,7 +34000,6 @@
         "bolt_nether"
       ],
       "spell_frequency": 6,
-      "serial": 414,
       "symbol": "W",
       "color": "r"
     },
@@ -34543,7 +34129,6 @@
       "spell_frequency": 11,
       "description": "It is an angel, fast and strong. You are stunned by its extreme holiness and try to resist all desires to obey it.",
       "sprite": "humanoid.png",
-      "serial": 415,
       "symbol": "A",
       "color": "r"
     },
@@ -34664,7 +34249,6 @@
       "spell_frequency": 4,
       "description": "A towering fire elemental, Vargo burns everything beyond recognition.",
       "sprite": "elemental.png",
-      "serial": 416,
       "symbol": "E",
       "color": "r"
     },
@@ -34785,7 +34369,6 @@
         "bolt_nether"
       ],
       "spell_frequency": 7,
-      "serial": 417,
       "symbol": "W",
       "color": "D"
     },
@@ -34881,7 +34464,6 @@
       "spell_frequency": 7,
       "description": "It is a lesser demon of female form; however, she takes little time to show her true colours.",
       "sprite": "demon.png",
-      "serial": 418,
       "symbol": "U",
       "color": "u"
     },
@@ -35003,7 +34585,6 @@
       "spell_frequency": 6,
       "description": "A form that hurts the eye, death permeates the air around it. As it nears you, a coldness saps your soul.",
       "sprite": "wraith.png",
-      "serial": 419,
       "symbol": "W",
       "color": "G"
     },
@@ -35095,7 +34676,6 @@
       },
       "description": "A massive troll, larger and stronger than many men together.",
       "sprite": "troll.png",
-      "serial": 420,
       "symbol": "T",
       "color": "r"
     },
@@ -35187,7 +34767,6 @@
       },
       "description": "A massive two-headed troll of huge strength, ettins are stupid but violent. They are also living proof that two heads are not more intelligent than one...",
       "sprite": "troll.png",
-      "serial": 421,
       "symbol": "T",
       "color": "b"
     },
@@ -35311,7 +34890,6 @@
       "spell_frequency": 4,
       "description": "A towering water elemental, Waldern is master of all things liquid. Wave after wave drowns your frail body.",
       "sprite": "elemental.png",
-      "serial": 422,
       "symbol": "E",
       "color": "b"
     },
@@ -35441,7 +35019,6 @@
       "spell_frequency": 4,
       "description": "A large dragon with a selection of heads, all shouting and arguing as they look for prey, but each with its own deadly breath weapon.",
       "sprite": "small_dragon.png",
-      "serial": 423,
       "symbol": "d",
       "color": "v"
     },
@@ -35544,7 +35121,6 @@
       "spell_frequency": 6,
       "description": "An ancient frost dragon encrusted with centuries of ice, dreaming cold dreams.",
       "sprite": "ancient_white_dragon.png",
-      "serial": 424,
       "symbol": "D",
       "color": "w"
     },
@@ -35647,7 +35223,6 @@
       "spell_frequency": 6,
       "description": "An ancient green dragon enveloped in a permanent cloud of lethal vapour.",
       "sprite": "ancient_green_dragon.png",
-      "serial": 425,
       "symbol": "D",
       "color": "g"
     },
@@ -35774,7 +35349,6 @@
       "spell_frequency": 5,
       "description": "A strange reptilian hybrid with seven heads dripping venom.",
       "sprite": "mushroom.png",
-      "serial": 426,
       "symbol": "M",
       "color": "G"
     },
@@ -35908,7 +35482,6 @@
       },
       "description": "A fearsome skeletal horse with glowing eyes, that watch you with little more than a hatred of all that lives.",
       "sprite": "quylthulg.png",
-      "serial": 427,
       "symbol": "q",
       "color": "G"
     },
@@ -36057,7 +35630,6 @@
         "bolt_nether"
       ],
       "spell_frequency": 7,
-      "serial": 428,
       "symbol": "V",
       "color": "b"
     },
@@ -36160,7 +35732,6 @@
       "spell_frequency": 6,
       "description": "An ancient black dragon resting in a lake of dissolved stone. Its mere breath corrodes iron.",
       "sprite": "ancient_black_dragon.png",
-      "serial": 429,
       "symbol": "D",
       "color": "s"
     },
@@ -36223,7 +35794,6 @@
       },
       "description": "It is a strange mass of squirming worms. Magical energy crackles around its disgusting form.",
       "sprite": "worm.png",
-      "serial": 430,
       "symbol": "w",
       "color": "v"
     },
@@ -36268,7 +35838,6 @@
       "spell_frequency": 2,
       "description": "It is a pulsing flesh mound that reeks of death and putrefaction.",
       "sprite": "quylthulg.png",
-      "serial": 431,
       "symbol": "Q",
       "color": "u"
     },
@@ -36363,7 +35932,6 @@
       },
       "description": "A weird ghostly troll-like being from the ethereal plane.",
       "sprite": "ghost.png",
-      "serial": 432,
       "symbol": "G",
       "color": "G"
     },
@@ -36533,7 +36101,6 @@
       "spell_frequency": 3,
       "description": "It is a humanoid figure thirty feet tall that gives off an aura of power and hate.",
       "sprite": "giant.png",
-      "serial": 433,
       "symbol": "P",
       "color": "y"
     },
@@ -36648,7 +36215,6 @@
       "spell_frequency": 4,
       "description": "A strange reptilian hybrid with nine smouldering heads.",
       "sprite": "mushroom.png",
-      "serial": 434,
       "symbol": "M",
       "color": "r"
     },
@@ -36747,7 +36313,6 @@
       "spell_frequency": 2,
       "description": "This elusive female spellcaster has a special affinity for dragons, whom she rarely fights without.",
       "sprite": "humanoid.png",
-      "serial": 435,
       "symbol": "p",
       "color": "R"
     },
@@ -36850,9 +36415,8 @@
         "summon_angel"
       ],
       "spell_frequency": 4,
-      "description": "It seems that the more devout the person, the more likely they are to cross the boundary between piety and sanctimoniousness. And such is the case with the Order of the Knights Templar; they are among the most pious and powerful of the religious knightly orders, but noted for their intolerance. Thus it is Morgoth's will that is unwittingly done, as the forces of good are set against each other.",
+      "description": "It seems that the more devout the person, the more likely they are to cross the boundary between piety and sanctimoniousness. And such is the case with the Order of the Knights Templar; they are among the most pious and powerful of the religious knightly orders, but noted for their intolerance. Thus it is Morgoth\u0027s will that is unwittingly done, as the forces of good are set against each other.",
       "sprite": "humanoid.png",
-      "serial": 436,
       "symbol": "p",
       "color": "w"
     },
@@ -36961,7 +36525,6 @@
       "spell_frequency": 2,
       "description": "A human figure in robes, he moves with magically improved speed, and his hands are ablur with spell casting.",
       "sprite": "humanoid.png",
-      "serial": 437,
       "symbol": "p",
       "color": "R"
     },
@@ -37074,7 +36637,6 @@
       },
       "description": "It is a tougher relative of the Xorn. Its hide glitters with metal ores.",
       "sprite": "xorn.png",
-      "serial": 438,
       "symbol": "X",
       "color": "s"
     },
@@ -37159,7 +36721,6 @@
       },
       "description": "A vast legendary bird, its iron talons rake the most impenetrable of surfaces and its screech echoes through the many winding dungeon corridors.",
       "sprite": "bird.png",
-      "serial": 439,
       "symbol": "B",
       "color": "u"
     },
@@ -37297,7 +36858,6 @@
       },
       "description": "A tall black cloaked Ringwraith, he is a master of horsemanship. He longs to taste your blood.",
       "sprite": "wraith.png",
-      "serial": 440,
       "symbol": "W",
       "color": "D"
     },
@@ -37398,7 +36958,6 @@
       },
       "description": "It is a cross between a human and a bull.",
       "sprite": "hybrid.png",
-      "serial": 441,
       "symbol": "H",
       "color": "s"
     },
@@ -37525,7 +37084,6 @@
       "spell_frequency": 2,
       "description": "One of the original three ugly sisters. Her face could sink a thousand ships. Her scales rattle as she slithers towards you, venom dripping from her ghastly mouth.",
       "sprite": "naga.png",
-      "serial": 442,
       "symbol": "n",
       "color": "v"
     },
@@ -37643,7 +37201,6 @@
       "spell_frequency": 5,
       "description": "It is a dragon-like form wrapped in darkness. You cannot make out its true form but you sense its evil.",
       "sprite": "dragon.png",
-      "serial": 443,
       "symbol": "D",
       "color": "G"
     },
@@ -37746,7 +37303,6 @@
       ],
       "description": "An elder tyrant of flame, hoard-king of the abyssal halls.",
       "sprite": "ancient_red_dragon.png",
-      "serial": 444,
       "symbol": "D",
       "color": "r"
     },
@@ -37848,7 +37404,6 @@
       "spell_frequency": 6,
       "description": "A huge draconic form wreathed in a nimbus of light. Its roar stuns and deafens you.",
       "sprite": "dragon.png",
-      "serial": 445,
       "symbol": "D",
       "color": "y"
     },
@@ -37952,7 +37507,6 @@
       "spell_frequency": 5,
       "description": "A huge crystalline dragon. Its claws could cut you to shreds and its teeth are razor sharp. Strange colours ripple through it as it moves in the light.",
       "sprite": "dragon.png",
-      "serial": 446,
       "symbol": "D",
       "color": "u"
     },
@@ -38053,7 +37607,6 @@
       "spell_frequency": 8,
       "description": "It is a demon with a long neck and raking claws.",
       "sprite": "demon.png",
-      "serial": 447,
       "symbol": "U",
       "color": "s"
     },
@@ -38170,7 +37723,6 @@
       "spell_frequency": 10,
       "description": "It is a demon of small stature, but its armored frame moves with lightning speed and its powers make it a tornado of death and destruction.",
       "sprite": "demon.png",
-      "serial": 448,
       "symbol": "u",
       "color": "D"
     },
@@ -38321,9 +37873,8 @@
         "summon_monster"
       ],
       "spell_frequency": 3,
-      "description": "A sorceress in life, Adunaphel quickly fell under Sauron's sway and the power of the rings.",
+      "description": "A sorceress in life, Adunaphel quickly fell under Sauron\u0027s sway and the power of the rings.",
       "sprite": "wraith.png",
-      "serial": 449,
       "symbol": "W",
       "color": "D"
     },
@@ -38435,7 +37986,6 @@
       "spell_frequency": 2,
       "description": "A dark elven figure, dressed in deepest black. Power seems to crackle from his slender frame.",
       "sprite": "humanoid.png",
-      "serial": 450,
       "symbol": "h",
       "color": "R"
     },
@@ -38578,7 +38128,6 @@
       "spell_frequency": 3,
       "description": "A skeletal form wrapped in robes. Powerful magic crackles along its bony fingers.",
       "sprite": "naga.png",
-      "serial": 451,
       "symbol": "L",
       "color": "r"
     },
@@ -38662,7 +38211,6 @@
       "spell_frequency": 9,
       "description": "It is a demon of lizard form with cruel-looking jaws.",
       "sprite": "demon.png",
-      "serial": 452,
       "symbol": "U",
       "color": "g"
     },
@@ -38816,7 +38364,6 @@
       "spell_frequency": 3,
       "description": "A mighty sorcerer King, Akhorahil was blind in life. With powerful enchantments, he created jewelled eyes that enabled him to see better than any ordinary man ever could.",
       "sprite": "wraith.png",
-      "serial": 453,
       "symbol": "W",
       "color": "D"
     },
@@ -38950,9 +38497,8 @@
         "bolt_mana"
       ],
       "spell_frequency": 2,
-      "description": "This sad creature - once a mighty warrior - betrayed his former friends to Morgoth's army in return for, he thought, safety for himself and his wife. And so he fell under Morgoth's power and became little more than a mindless servant of evil, even though the other side of his \"bargain\" was not kept.",
+      "description": "This sad creature - once a mighty warrior - betrayed his former friends to Morgoth\u0027s army in return for, he thought, safety for himself and his wife. And so he fell under Morgoth\u0027s power and became little more than a mindless servant of evil, even though the other side of his \"bargain\" was not kept.",
       "sprite": "humanoid.png",
-      "serial": 454,
       "symbol": "p",
       "color": "s"
     },
@@ -39107,7 +38653,6 @@
       "spell_frequency": 3,
       "description": "Never a more heavenly being have you seen. The very holiness of its presence makes you deeply respect it. Few creatures can match the powers of an Archon; fewer still live to tell the tale after attacking one.",
       "sprite": "humanoid.png",
-      "serial": 455,
       "symbol": "A",
       "color": "y"
     },
@@ -39190,7 +38735,6 @@
       "spell_frequency": 9,
       "description": "It is demon with arms and pincers, its form a true mockery of life.",
       "sprite": "demon.png",
-      "serial": 456,
       "symbol": "U",
       "color": "U"
     },
@@ -39345,7 +38889,6 @@
       "spell_frequency": 3,
       "description": "Ren was an insane eastern king who believed himself to be the son of a volcano god. At an early age his sanity was destroyed by a plague that wiped out his family, and he never recovered.",
       "sprite": "wraith.png",
-      "serial": 457,
       "symbol": "W",
       "color": "D"
     },
@@ -39447,7 +38990,6 @@
       "spell_frequency": 9,
       "description": "It is a large demon with the head of a giant boar. Flames run up and down its length.",
       "sprite": "demon.png",
-      "serial": 458,
       "symbol": "U",
       "color": "r"
     },
@@ -39615,7 +39157,6 @@
       "spell_frequency": 2,
       "description": "A beholder which has cheated death. Black nether storms rage around the bloodshot pupil of its central giant eye, and light seems to bend as it sucks its power from the very air around it. Your soul chills as it drains your vitality for its evil enchantments.",
       "sprite": "floating_eye.png",
-      "serial": 459,
       "symbol": "e",
       "color": "u"
     },
@@ -39731,7 +39272,6 @@
       "spell_frequency": 15,
       "description": "It is a form that screams its presence against the eye. Death incarnate, its hideous black body seems to struggle against reality as the universe itself struggles to banish it.",
       "sprite": "ghost.png",
-      "serial": 460,
       "symbol": "G",
       "color": "o"
     },
@@ -39816,7 +39356,6 @@
       },
       "description": "A massive elephantine form with eyes twisted by madness.",
       "sprite": "quylthulg.png",
-      "serial": 461,
       "symbol": "q",
       "color": "s"
     },
@@ -39929,7 +39468,6 @@
       "spell_frequency": 5,
       "description": "A huge draconic form. Many colours ripple down its massive frame.",
       "sprite": "ancient_multi_hued_dragon.png",
-      "serial": 462,
       "symbol": "D",
       "color": "v"
     },
@@ -40034,7 +39572,6 @@
       "spell_frequency": 5,
       "description": "A huge dragon emanating from the ethereal plane, this terrible dragon is a master of light and dark. Its form disappears from sight as it cloaks itself in unearthly shadows.",
       "sprite": "dragon.png",
-      "serial": 463,
       "symbol": "D",
       "color": "o"
     },
@@ -40187,9 +39724,8 @@
         "summon_undead"
       ],
       "spell_frequency": 3,
-      "description": "This Ringwraith was a weak-minded sorcerer-king who fell easily under Sauron's power.",
+      "description": "This Ringwraith was a weak-minded sorcerer-king who fell easily under Sauron\u0027s power.",
       "sprite": "wraith.png",
-      "serial": 464,
       "symbol": "W",
       "color": "D"
     },
@@ -40308,7 +39844,6 @@
       "spell_frequency": 9,
       "description": "She is a demon of female form with many arms, each bearing deadly weapons.",
       "sprite": "demon.png",
-      "serial": 465,
       "symbol": "U",
       "color": "y"
     },
@@ -40432,7 +39967,6 @@
       "spell_frequency": 6,
       "description": "A towering stone elemental stands before you. The walls and ceiling are reduced to rubble as Quaker advances.",
       "sprite": "elemental.png",
-      "serial": 466,
       "symbol": "E",
       "color": "u"
     },
@@ -40549,7 +40083,6 @@
       "spell_frequency": 4,
       "description": "It is a massive humanoid demon wreathed in flames.",
       "sprite": "demon.png",
-      "serial": 467,
       "symbol": "U",
       "color": "v"
     },
@@ -40699,7 +40232,6 @@
       "spell_frequency": 5,
       "description": "A towering air elemental, Ariel, the sorceress, avoids your blows with her extreme speed.",
       "sprite": "elemental.png",
-      "serial": 468,
       "symbol": "E",
       "color": "B"
     },
@@ -40816,7 +40348,6 @@
       "spell_frequency": 4,
       "description": "A strange reptilian hybrid with eleven smouldering heads.",
       "sprite": "mushroom.png",
-      "serial": 469,
       "symbol": "M",
       "color": "R"
     },
@@ -40921,7 +40452,6 @@
       "spell_frequency": 2,
       "description": "An evil priest, dressed all in black. Deadly spells hit you at an alarming rate as his black spiked mace rains down blow after blow on your pitiful frame.",
       "sprite": "humanoid.png",
-      "serial": 470,
       "symbol": "p",
       "color": "G"
     },
@@ -41069,7 +40599,6 @@
       "spell_frequency": 9,
       "description": "It is an unlife of power almost unequaled. An affront to existence, its very touch abuses and disrupts the flow of life, and its unearthly limbs, of purest black, crush rock and flesh with ease.",
       "sprite": "ghost.png",
-      "serial": 471,
       "symbol": "G",
       "color": "y"
     },
@@ -41191,7 +40720,6 @@
       "spell_frequency": 5,
       "description": "A constructed dragon, the drolem has massive strength. Powerful spells weaved during its creation make it a fearsome adversary. Its eyes show little intelligence, but it has been instructed to destroy all it meets.",
       "sprite": "golem.png",
-      "serial": 472,
       "symbol": "g",
       "color": "g"
     },
@@ -41314,7 +40842,6 @@
       "spell_frequency": 4,
       "description": "An ancient and wise Dragon. Scatha has grown clever over the long years. His scales are covered with frost, and his breath sends a shower of ice into the air.",
       "sprite": "dragon.png",
-      "serial": 473,
       "symbol": "D",
       "color": "W"
     },
@@ -41470,7 +40997,6 @@
       "spell_frequency": 3,
       "description": "Dwar had a special affinity for dogs in life, and can still command them at will. He howls maniacally as he reaches out to destroy you.",
       "sprite": "wraith.png",
-      "serial": 474,
       "symbol": "W",
       "color": "D"
     },
@@ -41593,7 +41119,6 @@
       "spell_frequency": 4,
       "description": "Smaug is one of the Uruloki that still survive, a fire-drake of immense cunning.",
       "sprite": "smaug_the_golden.png",
-      "serial": 475,
       "symbol": "D",
       "color": "R"
     },
@@ -41712,7 +41237,6 @@
       "spell_frequency": 6,
       "description": "The skeletal form of a once-great dragon, enchanted by magic most perilous. Its animated form strikes with speed and drains life from its prey to satisfy its hunger.",
       "sprite": "dragon.png",
-      "serial": 476,
       "symbol": "D",
       "color": "G"
     },
@@ -41882,7 +41406,6 @@
       "spell_frequency": 3,
       "description": "A forty foot tall humanoid that shakes the ground as it walks. The power radiating from its frame shakes your courage, its hatred inspired by your defiance.",
       "sprite": "giant.png",
-      "serial": 477,
       "symbol": "P",
       "color": "o"
     },
@@ -42005,7 +41528,6 @@
       "spell_frequency": 6,
       "description": "A mixture of dragon and basilisk, the dracolisk stares at you with deep piercing eyes, its evil breath burning the ground where it stands.",
       "sprite": "dragon.png",
-      "serial": 478,
       "symbol": "D",
       "color": "R"
     },
@@ -42144,9 +41666,8 @@
         "no_sleep": true,
         "no_fear": true
       },
-      "description": "It is the epitome of all that is evil, in a mold. Its lifeless form draws power from sucking the souls of those that approach it, a nimbus of pure evil surrounds it. Luckily for you, it can't move.",
+      "description": "It is the epitome of all that is evil, in a mold. Its lifeless form draws power from sucking the souls of those that approach it, a nimbus of pure evil surrounds it. Luckily for you, it can\u0027t move.",
       "sprite": "mold.png",
-      "serial": 479,
       "symbol": "m",
       "color": "D"
     },
@@ -42267,9 +41788,8 @@
         "breath_fire"
       ],
       "spell_frequency": 4,
-      "description": "A mighty ancient dragon, Itangast's form scorches your flesh. Wisps of smoke curl up from his nostrils as he regards you with disdain.",
+      "description": "A mighty ancient dragon, Itangast\u0027s form scorches your flesh. Wisps of smoke curl up from his nostrils as he regards you with disdain.",
       "sprite": "dragon.png",
-      "serial": 480,
       "symbol": "D",
       "color": "R"
     },
@@ -42398,7 +41918,6 @@
       "spell_frequency": 3,
       "description": "Glaurung is the father of all dragons, and was for a long time the most powerful. Though this is no longer so, he still has full command over his brood and can command them to appear whenever he so wishes. He is the definition of dragonfire.",
       "sprite": "dragon.png",
-      "serial": 481,
       "symbol": "D",
       "color": "R"
     },
@@ -42531,7 +42050,6 @@
       "spell_frequency": 3,
       "description": "A lord of all that is natural, skilled in the mystic ways. He is a master of martial arts and is at one with nature, able to summon help from the wild if need be.",
       "sprite": "humanoid.png",
-      "serial": 482,
       "symbol": "p",
       "color": "o"
     },
@@ -42654,7 +42172,6 @@
       "spell_frequency": 4,
       "description": "A huge Balrog surrounded by raging pillars of fire. Wielding a great whip of fire and a blazing sword.",
       "sprite": "balrog_of_moria.png",
-      "serial": 483,
       "symbol": "U",
       "color": "v"
     },
@@ -42794,7 +42311,6 @@
       "spell_frequency": 4,
       "description": "Everywhere colours seem paler and the air chiller. At the centre of the cold stands a mighty figure. Its wings envelop you in the chill of death as the nightwing reaches out to draw you into oblivion. Your muscles sag and your mind loses all will to fight as you stand in awe of this mighty being.",
       "sprite": "wraith.png",
-      "serial": 484,
       "symbol": "W",
       "color": "D"
     },
@@ -42904,7 +42420,6 @@
       "spell_frequency": 5,
       "description": "You feel a soul-tearing chill upon viewing this beast, a ghostly form of darkness in the shape of a large dog.",
       "sprite": "zephyr.png",
-      "serial": 485,
       "symbol": "Z",
       "color": "G"
     },
@@ -43014,7 +42529,6 @@
       "spell_frequency": 5,
       "description": "You get a terrible sense of deja vu, or is it a premonition? All at once you see a little puppy and a toothless old dog. Perhaps you should give up and go to bed.",
       "sprite": "zephyr.png",
-      "serial": 486,
       "symbol": "Z",
       "color": "B"
     },
@@ -43126,7 +42640,6 @@
       "spell_frequency": 5,
       "description": "The very air warps as pure elemental energy stalks towards you in the shape of a giant hound. Your hair stands on end and your palms itch as you sense trouble.",
       "sprite": "zephyr.png",
-      "serial": 487,
       "symbol": "Z",
       "color": "R"
     },
@@ -43171,7 +42684,6 @@
       "spell_frequency": 2,
       "description": "A pile of pulsing flesh that glows with an inner hellish fire. The world itself seems to cry out against it.",
       "sprite": "quylthulg.png",
-      "serial": 488,
       "symbol": "Q",
       "color": "r"
     },
@@ -43292,9 +42804,8 @@
         "breath_elec"
       ],
       "spell_frequency": 4,
-      "description": "A vast dragon of power. Storms and lightning crash around its titanic form. Deep blue scales reflect the flashes and highlight the creature's great muscles. It regards you with contempt.",
+      "description": "A vast dragon of power. Storms and lightning crash around its titanic form. Deep blue scales reflect the flashes and highlight the creature\u0027s great muscles. It regards you with contempt.",
       "sprite": "dragon.png",
-      "serial": 489,
       "symbol": "D",
       "color": "b"
     },
@@ -43417,7 +42928,6 @@
       "spell_frequency": 6,
       "description": "A fearsome bull-headed monster, Baphomet swings a mighty axe as he curses all that defy him.",
       "sprite": "hybrid.png",
-      "serial": 490,
       "symbol": "H",
       "color": "v"
     },
@@ -43559,7 +43069,6 @@
       "spell_frequency": 6,
       "description": "He is a master of disguise, an expert of stealth, a genius at traps, and moves with blinding speed. Check your pockets!",
       "sprite": "humanoid.png",
-      "serial": 491,
       "symbol": "p",
       "color": "B"
     },
@@ -43716,7 +43225,6 @@
       "spell_frequency": 3,
       "description": "A Ringwraith powerful in fell sorcery, he yearns for the life he has lost for an unlife of everlasting torment.",
       "sprite": "wraith.png",
-      "serial": 492,
       "symbol": "W",
       "color": "D"
     },
@@ -43849,9 +43357,8 @@
         "summon_animal"
       ],
       "spell_frequency": 3,
-      "description": "He is one of the few true masters of the art, being extremely skillful in all forms of unarmed combat and controlling the world's natural creatures with disdainful ease.",
+      "description": "He is one of the few true masters of the art, being extremely skillful in all forms of unarmed combat and controlling the world\u0027s natural creatures with disdainful ease.",
       "sprite": "humanoid.png",
-      "serial": 493,
       "symbol": "p",
       "color": "o"
     },
@@ -44009,7 +43516,6 @@
       "spell_frequency": 2,
       "description": "A warrior-king of the East. Khamul is a powerful opponent, his skill in combat awesome and his form twisted by evil cunning.",
       "sprite": "wraith.png",
-      "serial": 494,
       "symbol": "W",
       "color": "D"
     },
@@ -44119,7 +43625,6 @@
       "spell_frequency": 5,
       "description": "A pale green hound. Pulsing red lines and strange fluorescent light hints at internal organs best left to the imagination.",
       "sprite": "zephyr.png",
-      "serial": 495,
       "symbol": "Z",
       "color": "G"
     },
@@ -44242,7 +43747,6 @@
       "spell_frequency": 4,
       "description": "An immense dragon capable of awesome destruction. You have never felt such extreme cold, or witnessed such an icy stare. Begone quickly or feel its wrath!",
       "sprite": "dragon.png",
-      "serial": 496,
       "symbol": "D",
       "color": "w"
     },
@@ -44366,7 +43870,6 @@
       "spell_frequency": 3,
       "description": "A massive glowing eagle bathed in flames. The searing heat chars your skin and melts your armor.",
       "sprite": "bird.png",
-      "serial": 497,
       "symbol": "B",
       "color": "r"
     },
@@ -44514,7 +44017,6 @@
       "spell_frequency": 4,
       "description": "This intensely evil creature bears the form of a gargantuan black worm. Its gaping maw is a void of blackness, acid drips from its steely hide. It is like nothing you have ever seen before, and a terrible chill runs down your spine as you face it.",
       "sprite": "wraith.png",
-      "serial": 498,
       "symbol": "W",
       "color": "D"
     },
@@ -44571,7 +44073,6 @@
       "spell_frequency": 1,
       "description": "A skeletal hand floating in the air, motionless except for its flexing fingers.",
       "sprite": "skeleton.png",
-      "serial": 499,
       "symbol": "s",
       "color": "y"
     },
@@ -44621,9 +44122,8 @@
         "summon_undead"
       ],
       "spell_frequency": 1,
-      "description": "A bloodshot eyeball floating in the air, you'd be forgiven for assuming it harmless.",
+      "description": "A bloodshot eyeball floating in the air, you\u0027d be forgiven for assuming it harmless.",
       "sprite": "skeleton.png",
-      "serial": 500,
       "symbol": "s",
       "color": "r"
     },
@@ -44679,7 +44179,6 @@
       "spell_frequency": 1,
       "description": "A glowing skull possessed by sorcerous power. It need not move, but merely blast you with mighty magic as it speaks the words of power.",
       "sprite": "skeleton.png",
-      "serial": 501,
       "symbol": "s",
       "color": "o"
     },
@@ -44843,7 +44342,6 @@
       "spell_frequency": 6,
       "description": "Void, nothingness, spinning destructively.",
       "sprite": "vortex.png",
-      "serial": 502,
       "symbol": "v",
       "color": "v"
     },
@@ -44977,7 +44475,6 @@
       "spell_frequency": 6,
       "description": "An awesome vortex of pure magic, power radiates from its frame.",
       "sprite": "vortex.png",
-      "serial": 503,
       "symbol": "v",
       "color": "v"
     },
@@ -45106,7 +44603,6 @@
       "spell_frequency": 3,
       "description": "A massive legendary hydra. It has twelve powerful heads. Its many eyes stare at you as clouds of smoke and poisonous vapour rise from its seething form. And it grows new heads as fast as you chop them off.",
       "sprite": "mushroom.png",
-      "serial": 504,
       "symbol": "M",
       "color": "v"
     },
@@ -45288,7 +44784,6 @@
       "spell_frequency": 3,
       "description": "Chief messenger between Sauron and Morgoth, she is surely the most deadly of her vampire race. At first she is charming to meet, but her wings and eyes give away her true form.",
       "sprite": "vampire.png",
-      "serial": 505,
       "symbol": "V",
       "color": "v"
     },
@@ -45411,7 +44906,6 @@
       "spell_frequency": 4,
       "description": "A vast dragon of immense power. Fire leaps continuously from its huge form. The air around it scalds you. Its slightest glance burns you, and you truly realize how insignificant you are.",
       "sprite": "dragon.png",
-      "serial": 506,
       "symbol": "D",
       "color": "r"
     },
@@ -45456,7 +44950,6 @@
       "spell_frequency": 2,
       "description": "It looks like it was once a dragon corpse, now deeply infected with magical bacteria that make it pulse in a foul and degrading way.",
       "sprite": "quylthulg.png",
-      "serial": 507,
       "symbol": "Q",
       "color": "g"
     },
@@ -45586,7 +45079,6 @@
       "spell_frequency": 4,
       "description": "He is one of the greatest dwarven priests to walk the earth. Fundin has earned a high position in the church, and his skill with both weapon and spell only justify his position further. His combination of both dwarven strength and priestly wisdom are a true match for any adventurer.",
       "sprite": "humanoid.png",
-      "serial": 508,
       "symbol": "h",
       "color": "B"
     },
@@ -45715,9 +45207,8 @@
         "summon_angel"
       ],
       "spell_frequency": 2,
-      "description": "A creature of godly appearance, you dare not challenge Uriel's supremacy. Those who stood against him before are but a memory, cremated by his mastery of elemental fire.",
+      "description": "A creature of godly appearance, you dare not challenge Uriel\u0027s supremacy. Those who stood against him before are but a memory, cremated by his mastery of elemental fire.",
       "sprite": "humanoid.png",
-      "serial": 509,
       "symbol": "A",
       "color": "R"
     },
@@ -45868,7 +45359,6 @@
       "spell_frequency": 2,
       "description": "Azriel commands awesome power, his visage holy enough to shrivel your soul. You shriek with disbelief as his mastery of death draws you to your grave. It is truly beyond all but the mightiest of warriors to stand against him and live.",
       "sprite": "humanoid.png",
-      "serial": 510,
       "symbol": "A",
       "color": "D"
     },
@@ -46002,7 +45492,6 @@
       "spell_frequency": 3,
       "description": "\"Rushing Jaws\" is his name, and death is his game; the greatest and most terrible of all dragonkind, his power dismayed even the Valar for a time.",
       "sprite": "dragon.png",
-      "serial": 511,
       "symbol": "D",
       "color": "D"
     },
@@ -46157,7 +45646,6 @@
       "spell_frequency": 4,
       "description": "A huge giant garbed in black, more massive than a titan and stronger than a dragon. With terrible blows, it breaks your armor from your back, leaving you defenseless against its evil wrath. It can smell your fear, and you in turn smell the awful stench of death as this ghastly figure strides towards you menacingly.",
       "sprite": "wraith.png",
-      "serial": 512,
       "symbol": "W",
       "color": "D"
     },
@@ -46317,7 +45805,6 @@
       "spell_frequency": 2,
       "description": "Commanding a legion of angels, Gabriel will destroy you for your sins. He will crush you like the pitiful insignificant being he sees you to be. Your very soul will be taken into judgement by his supreme authority as he cleanses the world of evil.",
       "sprite": "humanoid.png",
-      "serial": 513,
       "symbol": "A",
       "color": "w"
     },
@@ -46471,9 +45958,8 @@
         "summon_animal"
       ],
       "spell_frequency": 2,
-      "description": "Originally known as the White, Saruman fell prey to Sauron's wiles. He seeks to emulate him and breeds orcs and trolls to fight for him. He searches forever for the One Ring, to become a mighty Sorcerer-King of the world.",
+      "description": "Originally known as the White, Saruman fell prey to Sauron\u0027s wiles. He seeks to emulate him and breeds orcs and trolls to fight for him. He searches forever for the One Ring, to become a mighty Sorcerer-King of the world.",
       "sprite": "humanoid.png",
-      "serial": 514,
       "symbol": "p",
       "color": "v"
     },
@@ -46644,7 +46130,6 @@
       "spell_frequency": 4,
       "description": "It is a massive form of animated death, its colour deeper than black. It drinks in light, and space around it is twisted and torn by the weight of its evil. It is unlife and it knows nothing but the stealing of souls and the stench of death. Flee its hunger!",
       "sprite": "ghost.png",
-      "serial": 515,
       "symbol": "G",
       "color": "r"
     },
@@ -46813,7 +46298,6 @@
       "spell_frequency": 3,
       "description": "Master of all things feline, the Cat Lord moves with unsurpassed stealth.",
       "sprite": "cat.png",
-      "serial": 516,
       "symbol": "f",
       "color": "v"
     },
@@ -46925,7 +46409,6 @@
       "spell_frequency": 5,
       "description": "\"Beware the Jabberwock, my son! The jaws that bite, the claws that catch!\" Run and run quickly, for death incarnate chases behind you!",
       "sprite": "hybrid.png",
-      "serial": 517,
       "symbol": "H",
       "color": "v"
     },
@@ -47034,7 +46517,6 @@
       "spell_frequency": 5,
       "description": "A constantly changing canine form, this hound rushes towards you as if expecting mayhem and chaos ahead. It appears to have an almost kamikaze relish for combat. You suspect all may not be as it seems.",
       "sprite": "zephyr.png",
-      "serial": 518,
       "symbol": "Z",
       "color": "v"
     },
@@ -47160,7 +46642,6 @@
       ],
       "description": "An ancient terror whose breath warps flesh, steel, and fate.",
       "sprite": "great_wyrm_of_chaos.png",
-      "serial": 519,
       "symbol": "D",
       "color": "v"
     },
@@ -47286,7 +46767,6 @@
       "spell_frequency": 4,
       "description": "A massive dragon of powerful intellect. It seeks to dominate the universe and despises all other life. It sees all who do not obey it as mere insects to be crushed underfoot.",
       "sprite": "dragon.png",
-      "serial": 520,
       "symbol": "D",
       "color": "B"
     },
@@ -47415,7 +46895,6 @@
       "spell_frequency": 4,
       "description": "A massive dragon, one of the mightiest of dragonkind. It is thousands of years old and seeks to maintain the Cosmic Balance. It sees you as an upstart troublemaker without the wisdom to control your actions. It will destroy you.",
       "sprite": "dragon.png",
-      "serial": 521,
       "symbol": "D",
       "color": "v"
     },
@@ -47563,7 +47042,6 @@
       "spell_frequency": 3,
       "description": "This huge affront to existence twists and tears at the fabric of space. A master of mighty magic, Tselakus hungers for your tender flesh. Darkness itself recoils from the touch of Tselakus as he leaves a trail of death and destruction. Tselakus is a being of sneering contempt, laughing at your pitiful efforts to defy him. Mighty claws rend reality as he annihilates all in his path to your soul!",
       "sprite": "ghost.png",
-      "serial": 522,
       "symbol": "G",
       "color": "R"
     },
@@ -47696,7 +47174,6 @@
       "spell_frequency": 4,
       "description": "A gigantic dragon whose scales shimmer in myriad hues.",
       "sprite": "dragon.png",
-      "serial": 523,
       "symbol": "D",
       "color": "v"
     },
@@ -47861,7 +47338,6 @@
       "spell_frequency": 3,
       "description": "A humanoid form, black as night, advancing steadily and unstoppably, even the very rock of the dungeon cannot prevent it reaching you.",
       "sprite": "naga.png",
-      "serial": 524,
       "symbol": "L",
       "color": "D"
     },
@@ -47906,7 +47382,6 @@
       "spell_frequency": 2,
       "description": "A massive pulsating mound of flesh, glowing with a hellish light.",
       "sprite": "quylthulg.png",
-      "serial": 525,
       "symbol": "Q",
       "color": "R"
     },
@@ -47951,7 +47426,6 @@
       "spell_frequency": 2,
       "description": "A massive mound of scaled flesh, throbbing and pulsating with multi-hued light.",
       "sprite": "quylthulg.png",
-      "serial": 526,
       "symbol": "Q",
       "color": "G"
     },
@@ -47996,7 +47470,6 @@
       "spell_frequency": 2,
       "description": "A massive pile of rotting flesh. A disgusting stench fills the air as it throbs and writhes.",
       "sprite": "quylthulg.png",
-      "serial": 527,
       "symbol": "Q",
       "color": "U"
     },
@@ -48171,7 +47644,6 @@
       "spell_frequency": 2,
       "description": "A stench of corruption and decay surrounds this sorcerer, who has clearly risen from the dead to continue his foul plots and schemes.",
       "sprite": "naga.png",
-      "serial": 528,
       "symbol": "L",
       "color": "y"
     },
@@ -48335,7 +47807,6 @@
       "spell_frequency": 2,
       "description": "A beholder of great size and age, floating in the air. His gaze seems to shred your soul and his spells crush your will. He is ancient, his history steeped in forgotten evils, his atrocities numerous and sickening.",
       "sprite": "floating_eye.png",
-      "serial": 529,
       "symbol": "e",
       "color": "v"
     },
@@ -48486,7 +47957,6 @@
       "spell_frequency": 3,
       "description": "This enormous, hideous spirit of void is in the form of a spider of immense proportions. She is surrounded by a cloud of Unlight as she sucks in all living light into her bloated body, and breathes out the blackest of darkness. She is always ravenously hungry and would even eat herself to avoid starvation.",
       "sprite": "snake.png",
-      "serial": 530,
       "symbol": "S",
       "color": "D"
     },
@@ -48591,7 +48061,8 @@
         "immune_elec": true,
         "immune_pois": true,
         "no_conf": true,
-        "no_sleep": true
+        "no_sleep": true,
+        "alertness": 10
       },
       "ability_cooldown_ticks": 10,
       "abilities": [
@@ -48618,7 +48089,6 @@
       "spell_frequency": 5,
       "description": "A shifting, swirling form. It seems to be all colours and sizes and shapes, though the dominant form is that of a huge dog. You feel very uncertain all of a sudden.",
       "sprite": "zephyr.png",
-      "serial": 531,
       "symbol": "Z",
       "color": "v"
     },
@@ -48779,7 +48249,6 @@
       "spell_frequency": 2,
       "description": "The Mouth of Sauron is a mighty spell caster. So old that even he cannot remember his own name, his power and evil are undeniable. He believes unshakably that he is unbeatable and laughs as he weaves his awesome spells.",
       "sprite": "humanoid.png",
-      "serial": 532,
       "symbol": "p",
       "color": "v"
     },
@@ -48828,7 +48297,6 @@
       "spell_frequency": 1,
       "description": "A giant seething mass of flesh, overwhelming you with monster after monster.",
       "sprite": "quylthulg.png",
-      "serial": 533,
       "symbol": "Q",
       "color": "B"
     },
@@ -48885,7 +48353,6 @@
       "spell_frequency": 1,
       "description": "A gigantic seething mass of flesh, Qlzqqlzuup changes colours in front of your eyes. Pulsating first one colour then the next, it knows only it must bring help to protect itself.",
       "sprite": "quylthulg.png",
-      "serial": 534,
       "symbol": "Q",
       "color": "v"
     },
@@ -49045,7 +48512,6 @@
       "spell_frequency": 2,
       "description": "The Chief of the Ringwraiths. A fell being of devastating power. His spells are lethal and his combat blows crushingly hard. He moves at speed, and commands legions of evil to do his bidding. It is said that he is fated never to die by the hand of mortal man.",
       "sprite": "wraith.png",
-      "serial": 535,
       "symbol": "W",
       "color": "D"
     },
@@ -49172,7 +48638,6 @@
       "spell_frequency": 3,
       "description": "A winged humanoid demon from the Planes of Hell, Pazuzu grins inhumanely at you as he decides your fate.",
       "sprite": "demon.png",
-      "serial": 536,
       "symbol": "U",
       "color": "b"
     },
@@ -49268,7 +48733,6 @@
         "breath_fire"
       ],
       "spell_frequency": 5,
-      "serial": 537,
       "symbol": "C",
       "color": "r"
     },
@@ -49425,7 +48889,6 @@
       "spell_frequency": 2,
       "description": "A legion of evil undead druj animating the skeleton of a once mighty sorcerer. His power is devastating and his speed unmatched in the underworld. Flee his wrath!",
       "sprite": "skeleton.png",
-      "serial": 538,
       "symbol": "s",
       "color": "v"
     },
@@ -49537,7 +49000,6 @@
       "spell_frequency": 2,
       "description": "The Tarrasque is a massive reptile of legend, rumoured to be unkillable and immune to magic. Fear its anger, for its devastation is unmatched!",
       "sprite": "reptile.png",
-      "serial": 539,
       "symbol": "R",
       "color": "v"
     },
@@ -49662,7 +49124,6 @@
       "spell_frequency": 4,
       "description": "A massive form cloaked in flame. Lungorthin stares balefully at you with eyes that smoulder red. The dungeon floor where he stands is scorched by the heat of his body.",
       "sprite": "demon.png",
-      "serial": 540,
       "symbol": "U",
       "color": "v"
     },
@@ -49785,7 +49246,6 @@
       "spell_frequency": 3,
       "description": "Draugluin provides Sauron with a fearsome personal guard. He is an enormous wolf inhabited with a human spirit. He is chief of all his kind.",
       "sprite": "canine.png",
-      "serial": 541,
       "symbol": "C",
       "color": "u"
     },
@@ -49958,7 +49418,6 @@
       "spell_frequency": 2,
       "description": "The greatest of all undead sorcerers, even the gods once feared him. This ancient shadow of death wilts every living thing it passes.",
       "sprite": "naga.png",
-      "serial": 542,
       "symbol": "L",
       "color": "v"
     },
@@ -50083,7 +49542,6 @@
       "spell_frequency": 5,
       "description": "The wolfhound of the Valar, Huan has served many masters in his time, from Celegorm son of Feanor to Beren son of Barahir: but now he runs wild and acknowledges no master save himself, as he hunts alone for his nemesis - Carcharoth, the terrible wolf of IronHell.",
       "sprite": "canine.png",
-      "serial": 543,
       "symbol": "C",
       "color": "W"
     },
@@ -50206,9 +49664,8 @@
         "summon_hound"
       ],
       "spell_frequency": 3,
-      "description": "The first guard of IronHell, Carcharoth, also known as 'The Red Maw', is the greatest wolf to ever walk the earth. He is highly intelligent and a deadly opponent in combat.",
+      "description": "The first guard of IronHell, Carcharoth, also known as \u0027The Red Maw\u0027, is the greatest wolf to ever walk the earth. He is highly intelligent and a deadly opponent in combat.",
       "sprite": "canine.png",
-      "serial": 544,
       "symbol": "C",
       "color": "r"
     },
@@ -50332,9 +49789,8 @@
         "summon_hi_undead"
       ],
       "spell_frequency": 3,
-      "description": "Gothmog is the Chief Balrog in Morgoth's personal guard. He is renowned for slaying Feanor and Fingon, two of the High Kings of the Noldor Elves, and has never been defeated in combat. With his whip of flame and awesome fiery breath he saved his master from Ungoliant's rage.",
+      "description": "Gothmog is the Chief Balrog in Morgoth\u0027s personal guard. He is renowned for slaying Feanor and Fingon, two of the High Kings of the Noldor Elves, and has never been defeated in combat. With his whip of flame and awesome fiery breath he saved his master from Ungoliant\u0027s rage.",
       "sprite": "demon.png",
-      "serial": 545,
       "symbol": "U",
       "color": "v"
     },
@@ -50508,9 +49964,8 @@
         "summon_unique"
       ],
       "spell_frequency": 2,
-      "description": "He is Morgoth's most powerful servant. Mighty in spells and enchantments, he created the One Ring.",
+      "description": "He is Morgoth\u0027s most powerful servant. Mighty in spells and enchantments, he created the One Ring.",
       "sprite": "sauron_the_sorcerer.png",
-      "serial": 546,
       "symbol": "p",
       "color": "v"
     },
@@ -50705,7 +50160,6 @@
       "spell_frequency": 3,
       "description": "He is the Master of the Pits of IronHell. His figure is like a black mountain crowned with lightning.",
       "sprite": "morgoth_lord_of_darkness.png",
-      "serial": 547,
       "symbol": "P",
       "color": "D"
     },
@@ -50762,7 +50216,6 @@
       },
       "description": "It is about three feet long with large teeth. As the light of your lamp falls on it, it seems to grow stronger.",
       "sprite": "rat.png",
-      "serial": 548,
       "symbol": "r",
       "color": "W"
     },
@@ -50851,7 +50304,6 @@
       },
       "description": "It is a large pile of rotting flesh, whose touch spoils your food. The terrible smell it exudes is also very hard to get rid of...",
       "sprite": "jelly.png",
-      "serial": 549,
       "symbol": "j",
       "color": "u"
     },
@@ -50949,7 +50401,6 @@
       },
       "description": "A giant bat, the beating of whose wings produces a strangely unnerving noise.",
       "sprite": "bat.png",
-      "serial": 550,
       "symbol": "b",
       "color": "U"
     },
@@ -51001,7 +50452,6 @@
       },
       "description": "A giant silver ant with a caustic bite.",
       "sprite": "giant_ant.png",
-      "serial": 551,
       "symbol": "a",
       "color": "W"
     },
@@ -51083,7 +50533,6 @@
       },
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
-      "serial": 552,
       "symbol": "S",
       "color": "u"
     },
@@ -51129,7 +50578,6 @@
       },
       "description": "A giant bat which feeds on raw magical energy.",
       "sprite": "bat.png",
-      "serial": 553,
       "symbol": "b",
       "color": "v"
     },
@@ -51202,7 +50650,6 @@
       },
       "description": "It is a strange growth on the dungeon floor, glowing and crackling with sparks.",
       "sprite": "mold.png",
-      "serial": 554,
       "symbol": "m",
       "color": "b"
     },
@@ -51294,7 +50741,6 @@
       },
       "description": "A fast-moving and deadly draconian animal. Beware its poisonous sting!",
       "sprite": "small_dragon.png",
-      "serial": 555,
       "symbol": "d",
       "color": "g"
     },
@@ -51434,9 +50880,8 @@
         "summon_monster"
       ],
       "spell_frequency": 5,
-      "description": "A strange creature that disguises itself as a chest to lure unsuspecting adventurers within reach of its venomous claws. The first that most adventurers realise of the deception is when the seemingly invitingly open lid of the chest suddenly grows teeth and then slams shut on the adventurer's hand...",
+      "description": "A strange creature that disguises itself as a chest to lure unsuspecting adventurers within reach of its venomous claws. The first that most adventurers realise of the deception is when the seemingly invitingly open lid of the chest suddenly grows teeth and then slams shut on the adventurer\u0027s hand...",
       "sprite": "humanoid.png",
-      "serial": 556,
       "symbol": "~",
       "color": "s"
     },
@@ -51584,7 +51029,6 @@
       "spell_frequency": 3,
       "description": "A lich who is partially immaterial, on its way to a new, ethereal form.",
       "sprite": "naga.png",
-      "serial": 557,
       "symbol": "L",
       "color": "U"
     },
@@ -51731,7 +51175,6 @@
       "spell_frequency": 3,
       "description": "A lich who has reached its ultimate evolutionary stage: a completely immaterial state.",
       "sprite": "naga.png",
-      "serial": 558,
       "symbol": "L",
       "color": "B"
     },
@@ -51796,7 +51239,6 @@
       },
       "description": "It is a hooded crow, gray except for the black wings and head.",
       "sprite": "bird.png",
-      "serial": 559,
       "symbol": "B",
       "color": "s"
     },
@@ -51861,7 +51303,6 @@
       },
       "description": "Larger than a crow, and pitch black.",
       "sprite": "bird.png",
-      "serial": 560,
       "symbol": "B",
       "color": "D"
     },
@@ -51932,7 +51373,6 @@
       "spell_frequency": 8,
       "description": "A type of crow, specially bred by the forces of evil as spies; their rudimentary intelligence guided by an evil mind has tracked you down, and now they seek to alert other evil creatures to your presence.",
       "sprite": "bird.png",
-      "serial": 561,
       "symbol": "B",
       "color": "D"
     },
@@ -52063,7 +51503,6 @@
       "spell_frequency": 6,
       "description": "A terrifying sight: a winged creature greater than any bird you have ever seen, and with no feathers on its horrid black leathery wings. Descended from a creature of an older world perhaps, bred by Sauron to be a winged steed for his Ringwraiths.",
       "sprite": "bird.png",
-      "serial": 562,
       "symbol": "B",
       "color": "D"
     },
@@ -52148,7 +51587,6 @@
       },
       "description": "A large bear appears to have made its home in this cave. It is hungry, and you are trespassing in its territory.",
       "sprite": "quylthulg.png",
-      "serial": 563,
       "symbol": "q",
       "color": "u"
     },
@@ -52249,7 +51687,6 @@
       },
       "description": "A huge, beastly bear, more savage than most of its kind.",
       "sprite": "quylthulg.png",
-      "serial": 564,
       "symbol": "q",
       "color": "U"
     },
@@ -52353,7 +51790,6 @@
       },
       "description": "In the eyes of this bear, there glimmers the faintest light of intelligence. And then its form begins to change... The combination of animal cunning, human intelligence and the great physical strength of the bear makes for a dangerous enemy.",
       "sprite": "quylthulg.png",
-      "serial": 565,
       "symbol": "q",
       "color": "D"
     },
@@ -52462,9 +51898,8 @@
         "drop_good": true,
         "alertness": 25
       },
-      "description": "Beorn is only occasionally seen in human form these days, preferring to appear in the shape of a giant black bear: he also prefers the company of beasts to that of humans. He has never taken kindly to strangers, even in human form - and still less when in bear's shape, as he is now.",
+      "description": "Beorn is only occasionally seen in human form these days, preferring to appear in the shape of a giant black bear: he also prefers the company of beasts to that of humans. He has never taken kindly to strangers, even in human form - and still less when in bear\u0027s shape, as he is now.",
       "sprite": "quylthulg.png",
-      "serial": 566,
       "symbol": "q",
       "color": "D"
     },
@@ -52592,7 +52027,6 @@
       "spell_frequency": 10,
       "description": "A foul, humanoid creature with a long tail, clawed hands and feet, and a disgusting, wiry, snaky beard. They are the elite shock troops of the hells, capable of a terrifying berserk fury.",
       "sprite": "demon.png",
-      "serial": 567,
       "symbol": "U",
       "color": "G"
     },
@@ -52696,9 +52130,8 @@
         "arrow_4"
       ],
       "spell_frequency": 6,
-      "description": "It's big. It's fat. It's red. It's ugly. It's got a severe attack of highly poisonous flatulence. And its insides are corrosive. All of which go together to make the single most repulsive sight - and smell - you have ever experienced.",
+      "description": "It\u0027s big. It\u0027s fat. It\u0027s red. It\u0027s ugly. It\u0027s got a severe attack of highly poisonous flatulence. And its insides are corrosive. All of which go together to make the single most repulsive sight - and smell - you have ever experienced.",
       "sprite": "demon.png",
-      "serial": 568,
       "symbol": "U",
       "color": "R"
     },
@@ -52855,7 +52288,6 @@
       "spell_frequency": 6,
       "description": "It is a demon made almost entirely out of bones. It is humanoid, but with a large tail similar to that of a giant scorpion, and emits a foul smell of decay and rot. They are despised even in the hells.",
       "sprite": "demon.png",
-      "serial": 569,
       "symbol": "U",
       "color": "W"
     },
@@ -52992,7 +52424,6 @@
       "spell_frequency": 6,
       "description": "This demon from the ice planes is a truly terrifying sight. It has an extremely large, insect-like body towering a full twelve feet tall, with great claws on its hands and pincers on its mouth, and its head bulges with great multi-faceted eyes. Its tail is covered with razor-sharp spikes.",
       "sprite": "demon.png",
-      "serial": 570,
       "symbol": "U",
       "color": "w"
     },
@@ -53119,7 +52550,6 @@
       "spell_frequency": 5,
       "description": "A giant humanoid demon wielding a massive, heavy and sharp scythe. Feared by foes and friends alike when it flies into one of its berserk rages, the Horned Reaper will cut down anything in its path between it and you - even the minions it has just summoned.",
       "sprite": "demon.png",
-      "serial": 571,
       "symbol": "U",
       "color": "B"
     },
@@ -53257,7 +52687,6 @@
       "spell_frequency": 5,
       "description": "Appearing as a giant, clawed and winged humanoid with a scaly red body and massive fangs dripping a foul green liquid, the Pit Fiend is a dreadful enemy from the lowest depths of the hells. They are often the commanders of vast demon armies.",
       "sprite": "demon.png",
-      "serial": 572,
       "symbol": "U",
       "color": "o"
     },
@@ -53381,7 +52810,6 @@
       "spell_frequency": 3,
       "description": "Originally of the semi-divine Maiar, this evil spirit swore allegiance to Morgoth at the beginning of time and is now one of his most terrible demonic servants. With its flaming whip and sword it seeks to destroy you.",
       "sprite": "demon.png",
-      "serial": 573,
       "symbol": "U",
       "color": "v"
     },
@@ -53478,7 +52906,6 @@
       "spell_frequency": 12,
       "description": "This hatchling dragon is still soft, its eyes unaccustomed to light and its scales a dull bronze.",
       "sprite": "small_dragon.png",
-      "serial": 574,
       "symbol": "d",
       "color": "U"
     },
@@ -53574,7 +53001,6 @@
       "spell_frequency": 12,
       "description": "This hatchling dragon is still soft, its eyes unaccustomed to light and its scales a pale gold.",
       "sprite": "small_dragon.png",
-      "serial": 575,
       "symbol": "d",
       "color": "y"
     },
@@ -53697,7 +53123,6 @@
       "spell_frequency": 4,
       "description": "A truly enormous dragon with great powers. The foul gases issuing from the beast nearly make you vomit; and while you may try to hold your breath as you fight it, it sees no reason to do likewise.",
       "sprite": "dragon.png",
-      "serial": 576,
       "symbol": "D",
       "color": "g"
     },
@@ -53845,7 +53270,6 @@
       "spell_frequency": 4,
       "description": "A dragon of great size and power. Its polished bronze scales reflect the light in strange and confusing patterns, and you find it hard to keep your mind on the job of fighting for your life.",
       "sprite": "dragon.png",
-      "serial": 577,
       "symbol": "D",
       "color": "U"
     },
@@ -53967,7 +53391,6 @@
       "spell_frequency": 4,
       "description": "A huge and very powerful dragon. Great steaming pools of acid drip from its form onto the ground. You shudder when you see the acid eating away the very stones of the dungeon - what could it do to you?",
       "sprite": "dragon.png",
-      "serial": 578,
       "symbol": "D",
       "color": "s"
     },
@@ -54088,7 +53511,6 @@
       "spell_frequency": 4,
       "description": "A dragon of gigantic proportions, with destructive abilities to match. The sheer loudness of its roar leaves you stunned and unable to think clearly enough to defend yourself adequately.",
       "sprite": "dragon.png",
-      "serial": 579,
       "symbol": "D",
       "color": "y"
     },
@@ -54168,7 +53590,6 @@
       "spell_frequency": 4,
       "description": "A warrior who is at one with nature. A master of both bow and sword, with minor spellcasting skills, and animals come to do his bidding.",
       "sprite": "humanoid.png",
-      "serial": 580,
       "symbol": "p",
       "color": "W"
     },
@@ -54247,7 +53668,6 @@
       "spell_frequency": 4,
       "description": "A warrior for a holy cause. Unfortunately, his god is not yours, and there is rivalry even between the various gods of Good, so he is your enemy.",
       "sprite": "humanoid.png",
-      "serial": 581,
       "symbol": "p",
       "color": "w"
     },
@@ -54357,7 +53777,6 @@
       "spell_frequency": 4,
       "description": "A chieftain among the Rangers. His understanding of nature gives him powerful elemental spells to use against you, in addition to his skills as an archer and a warrior. Furthermore, he is a master of camouflage, so you will need magically enhanced seeing to spot him.",
       "sprite": "humanoid.png",
-      "serial": 582,
       "symbol": "p",
       "color": "W"
     },
@@ -54455,7 +53874,6 @@
       "spell_frequency": 4,
       "description": "Even the strongest of normal human warriors fears the Berserker - the one who can drive himself into such a terrible battle-frenzy that he can survive blows which should kill him, and still apparently feel no pain. He tramples weaker creatures underfoot in his eagerness to get to his real enemy, and his battle-cry strikes terror into his foes.",
       "sprite": "humanoid.png",
-      "serial": 583,
       "symbol": "p",
       "color": "u"
     },
@@ -54538,7 +53956,6 @@
       "spell_frequency": 8,
       "description": "A gigantic ugly humanoid with but one eye and very thick skin.",
       "sprite": "giant.png",
-      "serial": 584,
       "symbol": "P",
       "color": "u"
     },
@@ -54648,7 +54065,6 @@
       "spell_frequency": 5,
       "description": "No ordinary cyclops, but the son of a sea-god: he wields the powers of elemental water as well as the considerable strength of a cyclops. His one eye was blinded long ago by the warrior Odysseus, but he has trained himself to hear so well that it nearly makes up for his disability.",
       "sprite": "giant.png",
-      "serial": 585,
       "symbol": "P",
       "color": "g"
     },
@@ -54801,7 +54217,6 @@
       "spell_frequency": 5,
       "description": "The strongest of all the Titans. Legend has it that he used to hold the sky on his shoulders; and the mountain range that now does so is named after him.",
       "sprite": "giant.png",
-      "serial": 586,
       "symbol": "P",
       "color": "s"
     },
@@ -54985,7 +54400,6 @@
       "spell_frequency": 3,
       "description": "The lord of the Titans, he has broken loose from his confinement in the nether hells to seek revenge on the world.",
       "sprite": "giant.png",
-      "serial": 587,
       "symbol": "P",
       "color": "v"
     },
@@ -55058,7 +54472,6 @@
       "spell_frequency": 7,
       "description": "A huge disembodied eye. As you stare into the black nothingness of its pupil, you feel your will and vitality draining away, and are unable to do anything except approach it in horrified fascination.",
       "sprite": "floating_eye.png",
-      "serial": 588,
       "symbol": "e",
       "color": "g"
     },
@@ -55178,7 +54591,6 @@
       "spell_frequency": 6,
       "description": "A lesser relative of the beholder: a globular body with a large toothy mouth, a large central eye, and four smaller eyes on stalks protruding from the top of its body.",
       "sprite": "floating_eye.png",
-      "serial": 589,
       "symbol": "e",
       "color": "B"
     },
@@ -55319,7 +54731,6 @@
       "spell_frequency": 5,
       "description": "Another lesser relative of the beholder, this six-eyed creature feeds on magic.",
       "sprite": "floating_eye.png",
-      "serial": 590,
       "symbol": "e",
       "color": "D"
     },
@@ -55484,7 +54895,6 @@
       "spell_frequency": 2,
       "description": "A hive mother of the race of beholders, she can summon her brood to her aid whenever she wishes.",
       "sprite": "floating_eye.png",
-      "serial": 591,
       "symbol": "e",
       "color": "b"
     },
@@ -55543,7 +54953,6 @@
       "spell_frequency": 12,
       "description": "Believed to be an evil relative of the cricket, this creature gets its name from its incessant squeaking, which can best be described as \"neek-breek, neek-breek\". The noise can drive people frantic, and worse still, can be heard for quite some distance, alerting other monsters to your presence.",
       "sprite": "insect.png",
-      "serial": 592,
       "symbol": "I",
       "color": "D"
     },
@@ -55609,7 +55018,6 @@
       },
       "description": "Clouds of these monsters light up the dungeon - so brightly that you can barely see through them.",
       "sprite": "insect.png",
-      "serial": 593,
       "symbol": "I",
       "color": "r"
     },
@@ -55730,7 +55138,6 @@
       "spell_frequency": 2,
       "description": "A lord of the Teleri, Eol is a mighty metalsmith, the only one to ever forge weapons of meteorite iron. The mortal enemy of the Eldar, he is currently fleeing their wrath, following the murder of Princess Aredhel of Gondolin.",
       "sprite": "humanoid.png",
-      "serial": 594,
       "symbol": "h",
       "color": "D"
     },
@@ -55857,9 +55264,8 @@
         "summon_unique"
       ],
       "spell_frequency": 6,
-      "description": "The son of Eol the Dark Elf, Maeglin is every bit as evil as his father and more. His greed for gold led him to betray the Hidden Kingdom of Gondolin to Morgoth's forces. He is a mighty warrior himself, and some of Morgoth's greatest servants answer to his call.",
+      "description": "The son of Eol the Dark Elf, Maeglin is every bit as evil as his father and more. His greed for gold led him to betray the Hidden Kingdom of Gondolin to Morgoth\u0027s forces. He is a mighty warrior himself, and some of Morgoth\u0027s greatest servants answer to his call.",
       "sprite": "humanoid.png",
-      "serial": 595,
       "symbol": "h",
       "color": "D"
     },
@@ -56012,7 +55418,6 @@
       "spell_frequency": 5,
       "description": "A terrible robed undead figure, this creature has existed in its unlife for many centuries by stealing the life of others. It can summon the very shades of its victims from beyond the grave to come enslaved to its aid.",
       "sprite": "vampire.png",
-      "serial": 596,
       "symbol": "V",
       "color": "r"
     },
@@ -56135,7 +55540,6 @@
       "spell_frequency": 6,
       "description": "A figure carved from stone, with three vulture faces whose eyes glow with a malevolent light.",
       "sprite": "golem.png",
-      "serial": 597,
       "symbol": "g",
       "color": "r"
     },
@@ -56219,7 +55623,6 @@
       },
       "description": "Trained to hunt and kill without fear.",
       "sprite": "bird.png",
-      "serial": 598,
       "symbol": "B",
       "color": "u"
     },
@@ -56343,7 +55746,6 @@
         "hold"
       ],
       "spell_frequency": 9,
-      "serial": 599,
       "symbol": "z",
       "color": "U"
     },
@@ -56504,7 +55906,6 @@
         "hold"
       ],
       "spell_frequency": 7,
-      "serial": 600,
       "symbol": "z",
       "color": "u"
     },
@@ -56645,7 +56046,6 @@
         "breath_nexus"
       ],
       "spell_frequency": 8,
-      "serial": 601,
       "symbol": "R",
       "color": "D"
     },
@@ -56763,7 +56163,6 @@
       "spell_frequency": 6,
       "description": "An intelligent arachnid whose hairy legs weave spells in the air.",
       "sprite": "snake.png",
-      "serial": 602,
       "symbol": "S",
       "color": "R"
     },
@@ -56885,9 +56284,8 @@
         "summon_kin"
       ],
       "spell_frequency": 6,
-      "description": "A vast, bloated arachnid, master of its brood: among the more terrible of Ungoliant's descendants, this is a monster such as those who haunted the dread valley of Nan Dungortheb long ago.",
+      "description": "A vast, bloated arachnid, master of its brood: among the more terrible of Ungoliant\u0027s descendants, this is a monster such as those who haunted the dread valley of Nan Dungortheb long ago.",
       "sprite": "snake.png",
-      "serial": 603,
       "symbol": "S",
       "color": "r"
     },
@@ -56948,7 +56346,6 @@
       "spell_frequency": 5,
       "description": "A kobold who has stolen a handful of crude spells and wields them recklessly.",
       "sprite": "kobold_shaman.png",
-      "serial": 604,
       "symbol": "k",
       "color": "r"
     },
@@ -57028,7 +56425,6 @@
       "spell_frequency": 8,
       "description": "Fed with horrid meats and grown to enormous size, this slavering creature seeks livelier prey.",
       "sprite": "bat.png",
-      "serial": 605,
       "symbol": "b",
       "color": "g"
     },
@@ -57114,7 +56510,6 @@
       },
       "description": "It is a fast moving creature of chaos, a gigantic black bat surrounded by flickering bright red flames.",
       "sprite": "bat.png",
-      "serial": 606,
       "symbol": "b",
       "color": "R"
     },
@@ -57231,7 +56626,6 @@
       "spell_frequency": 8,
       "description": "A great wolf-chieftain whose pack is in the service of the Dark Lord, and whose howls strike fear into even the boldest heart.",
       "sprite": "canine.png",
-      "serial": 607,
       "symbol": "C",
       "color": "D"
     },
@@ -57388,7 +56782,6 @@
       "spell_frequency": 8,
       "description": "A skeletal form, black as night, constructed from the bones of its previous victims.",
       "sprite": "golem.png",
-      "serial": 608,
       "symbol": "g",
       "color": "D"
     },
@@ -57511,7 +56904,6 @@
       "spell_frequency": 8,
       "description": "A gigantic four-armed animated bronze statue of demonic shape, glowing with great heat.",
       "sprite": "golem.png",
-      "serial": 609,
       "symbol": "g",
       "color": "o"
     },
@@ -57620,7 +57012,6 @@
       },
       "description": "This ogre is leader of his tribe. He sneers at you as he advances towards you, wielding a huge club and pushing his own followers rudely aside.",
       "sprite": "ogre.png",
-      "serial": 610,
       "symbol": "O",
       "color": "b"
     },
@@ -57743,9 +57134,8 @@
         "summon_kin"
       ],
       "spell_frequency": 6,
-      "description": "Last and proudest king of ancient Numenor. Corrupted by power and avarice, he fell victim to Sauron's wiles, tried to fight the Valar themselves, and condemned Numenor to oblivion.",
+      "description": "Last and proudest king of ancient Numenor. Corrupted by power and avarice, he fell victim to Sauron\u0027s wiles, tried to fight the Valar themselves, and condemned Numenor to oblivion.",
       "sprite": "humanoid.png",
-      "serial": 611,
       "symbol": "p",
       "color": "y"
     },
@@ -57855,9 +57245,8 @@
         "no_fear": true,
         "alertness": 20
       },
-      "description": "This troll's great strength and size have won it the place of chieftain of its tribe. It fears nothing.",
+      "description": "This troll\u0027s great strength and size have won it the place of chieftain of its tribe. It fears nothing.",
       "sprite": "troll.png",
-      "serial": 612,
       "symbol": "T",
       "color": "v"
     },
@@ -57917,7 +57306,6 @@
       "spell_frequency": 4,
       "description": "A howling blast of razor-sharp mountain fragments, kept intact by perilous magics.",
       "sprite": "vortex.png",
-      "serial": 613,
       "symbol": "v",
       "color": "u"
     },
@@ -58009,7 +57397,6 @@
       "spell_frequency": 6,
       "description": "Howling through the disintegrating dungeon, this whirlpool of Unmagic rips the enchantments from everything it touches.",
       "sprite": "vortex.png",
-      "serial": 614,
       "symbol": "v",
       "color": "v"
     },
@@ -58190,7 +57577,6 @@
       "spell_frequency": 3,
       "description": "Once a powerful ruler, now an even more powerful undead menace.",
       "sprite": "zombie.png",
-      "serial": 615,
       "symbol": "z",
       "color": "y"
     },
@@ -58308,7 +57694,6 @@
       "spell_frequency": 5,
       "description": "Shimmering in rainbow hues, this hound is beautiful and deadly.",
       "sprite": "zephyr.png",
-      "serial": 616,
       "symbol": "Z",
       "color": "v"
     }
