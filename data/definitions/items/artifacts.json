@@ -18,21 +18,18 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "ILLUMINATION",
-        "recharge": {
-          "base": 10,
-          "dice": 10
-        }
-      },
       "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure.",
       "effects": {
         "capabilities": [],
         "resistances": [],
         "curses": [],
-        "activations": [
-          "ILLUMINATION"
-        ],
+        "activation": {
+          "id": "ILLUMINATION",
+          "recharge": {
+            "base": 10,
+            "dice": 10
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": []
@@ -57,13 +54,6 @@
         "SEE_INVIS",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "MAGIC_MAP",
-        "recharge": {
-          "base": 50,
-          "dice": 50
-        }
-      },
       "description": "The shining Star of the West, a treasured heirloom of Elendil's house.",
       "effects": {
         "capabilities": [
@@ -71,9 +61,13 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [
-          "MAGIC_MAP"
-        ],
+        "activation": {
+          "id": "MAGIC_MAP",
+          "recharge": {
+            "base": 50,
+            "dice": 50
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": []
@@ -101,13 +95,6 @@
         "RES_DARK",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "DETECT",
-        "recharge": {
-          "base": 30,
-          "dice": 30
-        }
-      },
       "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards.",
       "effects": {
         "capabilities": [
@@ -119,9 +106,13 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [
-          "DETECT"
-        ],
+        "activation": {
+          "id": "DETECT",
+          "recharge": {
+            "base": 30,
+            "dice": 30
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": []
@@ -143,13 +134,6 @@
         "RES_FIRE",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "PROT_EVIL",
-        "recharge": {
-          "base": 225,
-          "dice": 225
-        }
-      },
       "description": "A fiery circle of bronze, with mighty spells to ward off and banish evil.",
       "base_ac": 0,
       "damage": "0d0",
@@ -162,9 +146,13 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "PROT_EVIL"
-        ],
+        "activation": {
+          "id": "PROT_EVIL",
+          "recharge": {
+            "base": 225,
+            "dice": 225
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -198,13 +186,6 @@
         "RES_ELEC",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "DISP_EVIL",
-        "recharge": {
-          "base": 50,
-          "dice": 50
-        }
-      },
       "description": "The ancient heirloom of Ingwe, high lord of the Vanyar, against whom nothing of evil could stand.",
       "base_ac": 0,
       "damage": "0d0",
@@ -222,9 +203,13 @@
           "res_elec"
         ],
         "curses": [],
-        "activations": [
-          "DISP_EVIL"
-        ],
+        "activation": {
+          "id": "DISP_EVIL",
+          "recharge": {
+            "base": 50,
+            "dice": 50
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -284,7 +269,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -336,13 +321,6 @@
         "INSTA_ART",
         "HIDE_TYPE"
       ],
-      "activation": {
-        "id": "CLAIRVOYANCE",
-        "recharge": {
-          "base": 50,
-          "dice": 50
-        }
-      },
       "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it.",
       "effects": {
         "capabilities": [
@@ -356,9 +334,13 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [
-          "CLAIRVOYANCE"
-        ],
+        "activation": {
+          "id": "CLAIRVOYANCE",
+          "recharge": {
+            "base": 50,
+            "dice": 50
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -416,7 +398,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -469,13 +451,6 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "HASTE2",
-        "recharge": {
-          "base": 150,
-          "dice": 150
-        }
-      },
       "description": "The treasure of Tulkas, most fleet and wrathful of the Valar.",
       "base_ac": 0,
       "damage": "0d0",
@@ -488,9 +463,13 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [
-          "HASTE2"
-        ],
+        "activation": {
+          "id": "HASTE2",
+          "recharge": {
+            "base": 150,
+            "dice": 150
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -547,13 +526,6 @@
         "RES_FEAR",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "FIRE3",
-        "recharge": {
-          "base": 20,
-          "dice": 20
-        }
-      },
       "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -573,9 +545,13 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [
-          "FIRE3"
-        ],
+        "activation": {
+          "id": "FIRE3",
+          "recharge": {
+            "base": 20,
+            "dice": 20
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -656,13 +632,6 @@
         "TELEPATHY",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "FROST5",
-        "recharge": {
-          "base": 20,
-          "dice": 20
-        }
-      },
       "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -682,9 +651,13 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [
-          "FROST5"
-        ],
+        "activation": {
+          "id": "FROST5",
+          "recharge": {
+            "base": 20,
+            "dice": 20
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -766,13 +739,6 @@
         "RES_DISEN",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "ELEC2",
-        "recharge": {
-          "base": 20,
-          "dice": 20
-        }
-      },
       "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -793,9 +759,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "ELEC2"
-        ],
+        "activation": {
+          "id": "ELEC2",
+          "recharge": {
+            "base": 20,
+            "dice": 20
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -887,13 +857,6 @@
         "SUST_CHR",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "BIZZARE",
-        "recharge": {
-          "base": 30,
-          "dice": 30
-        }
-      },
       "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it.",
       "effects": {
         "capabilities": [
@@ -925,9 +888,13 @@
           "heavy_curse",
           "perma_curse"
         ],
-        "activations": [
-          "BIZZARE"
-        ],
+        "activation": {
+          "id": "BIZZARE",
+          "recharge": {
+            "base": 30,
+            "dice": 30
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -996,13 +963,6 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "HEAL1",
-        "recharge": {
-          "base": 200,
-          "dice": 0
-        }
-      },
       "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle.",
       "effects": {
         "capabilities": [],
@@ -1012,9 +972,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "HEAL1"
-        ],
+        "activation": {
+          "id": "HEAL1",
+          "recharge": {
+            "base": 200,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1068,13 +1032,6 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
-      "activation": {
-        "id": "RESTORE_LIFE",
-        "recharge": {
-          "base": 150,
-          "dice": 0
-        }
-      },
       "description": "A plain white jewel, given by Queen Arwen to Frodo Baggins before his return to the Shire.",
       "base_ac": 0,
       "damage": "0d0",
@@ -1093,9 +1050,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "RESTORE_LIFE"
-        ],
+        "activation": {
+          "id": "RESTORE_LIFE",
+          "recharge": {
+            "base": 150,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": []
@@ -1130,13 +1091,6 @@
         "AGGRAVATE",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "STAR_BALL",
-        "recharge": {
-          "base": 50,
-          "dice": 0
-        }
-      },
       "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on.",
       "effects": {
         "capabilities": [
@@ -1155,9 +1109,13 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [
-          "STAR_BALL"
-        ],
+        "activation": {
+          "id": "STAR_BALL",
+          "recharge": {
+            "base": 50,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1211,13 +1169,6 @@
         "RES_DISEN",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "RAGE_BLESS_RESIST",
-        "recharge": {
-          "base": 400,
-          "dice": 0
-        }
-      },
       "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal.",
       "effects": {
         "capabilities": [
@@ -1243,9 +1194,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "RAGE_BLESS_RESIST"
-        ],
+        "activation": {
+          "id": "RAGE_BLESS_RESIST",
+          "recharge": {
+            "base": 400,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1287,13 +1242,6 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "STAR_BALL",
-        "recharge": {
-          "base": 50,
-          "dice": 0
-        }
-      },
       "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer.",
       "effects": {
         "capabilities": [
@@ -1311,9 +1259,13 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [
-          "STAR_BALL"
-        ],
+        "activation": {
+          "id": "STAR_BALL",
+          "recharge": {
+            "base": 50,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1356,13 +1308,6 @@
         "RES_FEAR",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "HEAL2",
-        "recharge": {
-          "base": 444,
-          "dice": 0
-        }
-      },
       "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can.",
       "effects": {
         "capabilities": [
@@ -1380,9 +1325,13 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [
-          "HEAL2"
-        ],
+        "activation": {
+          "id": "HEAL2",
+          "recharge": {
+            "base": 444,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1438,7 +1387,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1492,7 +1441,7 @@
           "res_sound"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1681,7 +1630,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1728,13 +1677,6 @@
         "RES_CONFU",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "TRAP_DOOR_DEST",
-        "recharge": {
-          "base": 10,
-          "dice": 0
-        }
-      },
       "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path.",
       "effects": {
         "capabilities": [],
@@ -1744,9 +1686,13 @@
           "res_confu"
         ],
         "curses": [],
-        "activations": [
-          "TRAP_DOOR_DEST"
-        ],
+        "activation": {
+          "id": "TRAP_DOOR_DEST",
+          "recharge": {
+            "base": 10,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1793,13 +1739,6 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "PROT_EVIL",
-        "recharge": {
-          "base": 100,
-          "dice": 100
-        }
-      },
       "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth.",
       "effects": {
         "capabilities": [],
@@ -1809,9 +1748,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "PROT_EVIL"
-        ],
+        "activation": {
+          "id": "PROT_EVIL",
+          "recharge": {
+            "base": 100,
+            "dice": 100
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1856,7 +1799,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1900,7 +1843,7 @@
           "res_shard"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1951,13 +1894,6 @@
         "SUST_DEX",
         "SUST_CHR"
       ],
-      "activation": {
-        "id": "STAR_LIGHT",
-        "recharge": {
-          "base": 100,
-          "dice": 0
-        }
-      },
       "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth.",
       "effects": {
         "capabilities": [
@@ -1972,9 +1908,13 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [
-          "STAR_LIGHT"
-        ],
+        "activation": {
+          "id": "STAR_LIGHT",
+          "recharge": {
+            "base": 100,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2033,7 +1973,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2086,7 +2026,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2140,7 +2080,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2185,7 +2125,7 @@
           "res_shard"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2278,7 +2218,7 @@
           "heavy_curse",
           "perma_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2354,7 +2294,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2407,7 +2347,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2453,7 +2393,7 @@
           "res_confu"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2515,7 +2455,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2580,7 +2520,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2631,13 +2571,6 @@
         "SEE_INVIS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "DETECT",
-        "recharge": {
-          "base": 55,
-          "dice": 55
-        }
-      },
       "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness.",
       "effects": {
         "capabilities": [
@@ -2648,9 +2581,13 @@
           "res_confu"
         ],
         "curses": [],
-        "activations": [
-          "DETECT"
-        ],
+        "activation": {
+          "id": "DETECT",
+          "recharge": {
+            "base": 55,
+            "dice": 55
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2713,7 +2650,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2776,13 +2713,6 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "HEAL1",
-        "recharge": {
-          "base": 250,
-          "dice": 0
-        }
-      },
       "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world.",
       "effects": {
         "capabilities": [
@@ -2799,9 +2729,13 @@
           "res_chaos"
         ],
         "curses": [],
-        "activations": [
-          "HEAL1"
-        ],
+        "activation": {
+          "id": "HEAL1",
+          "recharge": {
+            "base": 250,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2878,7 +2812,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2935,13 +2869,6 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "RESIST",
-        "recharge": {
-          "base": 111,
-          "dice": 0
-        }
-      },
       "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements.",
       "effects": {
         "capabilities": [],
@@ -2953,9 +2880,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "RESIST"
-        ],
+        "activation": {
+          "id": "RESIST",
+          "recharge": {
+            "base": 111,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2989,13 +2920,6 @@
         "RES_ACID",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "SLEEP",
-        "recharge": {
-          "base": 55,
-          "dice": 0
-        }
-      },
       "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar.",
       "effects": {
         "capabilities": [],
@@ -3003,9 +2927,13 @@
           "res_acid"
         ],
         "curses": [],
-        "activations": [
-          "SLEEP"
-        ],
+        "activation": {
+          "id": "SLEEP",
+          "recharge": {
+            "base": 55,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3056,13 +2984,6 @@
         "RES_COLD",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "RECHARGE1",
-        "recharge": {
-          "base": 70,
-          "dice": 0
-        }
-      },
       "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water.",
       "effects": {
         "capabilities": [
@@ -3074,9 +2995,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "RECHARGE1"
-        ],
+        "activation": {
+          "id": "RECHARGE1",
+          "recharge": {
+            "base": 70,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3126,7 +3051,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3158,13 +3083,6 @@
         "RES_NEXUS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "TELEPORT",
-        "recharge": {
-          "base": 45,
-          "dice": 0
-        }
-      },
       "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission.",
       "effects": {
         "capabilities": [],
@@ -3172,9 +3090,13 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [
-          "TELEPORT"
-        ],
+        "activation": {
+          "id": "TELEPORT",
+          "recharge": {
+            "base": 45,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3219,13 +3141,6 @@
         "RES_COLD",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "RESTORE_LIFE",
-        "recharge": {
-          "base": 250,
-          "dice": 0
-        }
-      },
       "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death.",
       "effects": {
         "capabilities": [],
@@ -3235,9 +3150,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "RESTORE_LIFE"
-        ],
+        "activation": {
+          "id": "RESTORE_LIFE",
+          "recharge": {
+            "base": 250,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3302,7 +3221,7 @@
           "res_acid"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3345,13 +3264,6 @@
         "AGGRAVATE",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "MANA_BOLT",
-        "recharge": {
-          "base": 30,
-          "dice": 30
-        }
-      },
       "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle.",
       "effects": {
         "capabilities": [
@@ -3365,9 +3277,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "MANA_BOLT"
-        ],
+        "activation": {
+          "id": "MANA_BOLT",
+          "recharge": {
+            "base": 30,
+            "dice": 30
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3418,7 +3334,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3466,13 +3382,6 @@
         "LITE",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "MISSILE",
-        "recharge": {
-          "base": 2,
-          "dice": 0
-        }
-      },
       "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency.",
       "effects": {
         "capabilities": [
@@ -3483,9 +3392,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "MISSILE"
-        ],
+        "activation": {
+          "id": "MISSILE",
+          "recharge": {
+            "base": 2,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3519,13 +3432,6 @@
         "REGEN",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "FIRE1",
-        "recharge": {
-          "base": 8,
-          "dice": 8
-        }
-      },
       "description": "A set of gauntlets that smoulder with an unnatural heat.",
       "effects": {
         "capabilities": [
@@ -3535,9 +3441,13 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "FIRE1"
-        ],
+        "activation": {
+          "id": "FIRE1",
+          "recharge": {
+            "base": 8,
+            "dice": 8
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3567,13 +3477,6 @@
         "SLOW_DIGEST",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "FROST1",
-        "recharge": {
-          "base": 7,
-          "dice": 7
-        }
-      },
       "description": "A set of handgear, freezing with unnatural cold.",
       "effects": {
         "capabilities": [
@@ -3583,9 +3486,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "FROST1"
-        ],
+        "activation": {
+          "id": "FROST1",
+          "recharge": {
+            "base": 7,
+            "dice": 7
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3615,13 +3522,6 @@
         "LITE",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "LIGHTNING_BOLT",
-        "recharge": {
-          "base": 6,
-          "dice": 6
-        }
-      },
       "description": "A set of handgear with sparks that crackle across its knuckleguards.",
       "effects": {
         "capabilities": [],
@@ -3629,9 +3529,13 @@
           "res_elec"
         ],
         "curses": [],
-        "activations": [
-          "LIGHTNING_BOLT"
-        ],
+        "activation": {
+          "id": "LIGHTNING_BOLT",
+          "recharge": {
+            "base": 6,
+            "dice": 6
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3665,13 +3569,6 @@
         "FEATHER",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "ACID1",
-        "recharge": {
-          "base": 5,
-          "dice": 5
-        }
-      },
       "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished.",
       "effects": {
         "capabilities": [
@@ -3681,9 +3578,13 @@
           "res_acid"
         ],
         "curses": [],
-        "activations": [
-          "ACID1"
-        ],
+        "activation": {
+          "id": "ACID1",
+          "recharge": {
+            "base": 5,
+            "dice": 5
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3736,7 +3637,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3781,13 +3682,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "ARROW",
-        "recharge": {
-          "base": 30,
-          "dice": 30
-        }
-      },
       "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever.",
       "effects": {
         "capabilities": [
@@ -3797,9 +3691,13 @@
           "res_acid"
         ],
         "curses": [],
-        "activations": [
-          "ARROW"
-        ],
+        "activation": {
+          "id": "ARROW",
+          "recharge": {
+            "base": 30,
+            "dice": 30
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3842,13 +3740,6 @@
         "RES_NEXUS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "HASTE1",
-        "recharge": {
-          "base": 200,
-          "dice": 0
-        }
-      },
       "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\"",
       "effects": {
         "capabilities": [],
@@ -3856,9 +3747,13 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [
-          "HASTE1"
-        ],
+        "activation": {
+          "id": "HASTE1",
+          "recharge": {
+            "base": 200,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3897,13 +3792,6 @@
         "RES_CONFU",
         "SUST_CON"
       ],
-      "activation": {
-        "id": "REM_FEAR_POIS",
-        "recharge": {
-          "base": 5,
-          "dice": 0
-        }
-      },
       "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility.",
       "effects": {
         "capabilities": [
@@ -3916,9 +3804,13 @@
           "res_confu"
         ],
         "curses": [],
-        "activations": [
-          "REM_FEAR_POIS"
-        ],
+        "activation": {
+          "id": "REM_FEAR_POIS",
+          "recharge": {
+            "base": 5,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3961,7 +3853,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -4008,13 +3900,6 @@
         "HIDE_TYPE",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "PHASE",
-        "recharge": {
-          "base": 20,
-          "dice": 0
-        }
-      },
       "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward.",
       "effects": {
         "capabilities": [
@@ -4024,9 +3909,13 @@
         "curses": [
           "light_curse"
         ],
-        "activations": [
-          "PHASE"
-        ],
+        "activation": {
+          "id": "PHASE",
+          "recharge": {
+            "base": 20,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -4090,7 +3979,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_troll",
@@ -4159,7 +4048,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_acid",
@@ -4211,13 +4100,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FIRE1",
-        "recharge": {
-          "base": 8,
-          "dice": 8
-        }
-      },
       "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt.",
       "effects": {
         "capabilities": [],
@@ -4225,9 +4107,13 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "FIRE1"
-        ],
+        "activation": {
+          "id": "FIRE1",
+          "recharge": {
+            "base": 8,
+            "dice": 8
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire"
@@ -4264,13 +4150,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FROST1",
-        "recharge": {
-          "base": 7,
-          "dice": 7
-        }
-      },
       "description": "From the hilt of this dagger springs not so much a blade as an icicle.",
       "effects": {
         "capabilities": [],
@@ -4278,9 +4157,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "FROST1"
-        ],
+        "activation": {
+          "id": "FROST1",
+          "recharge": {
+            "base": 7,
+            "dice": 7
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold"
@@ -4317,13 +4200,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "LIGHTNING_BOLT",
-        "recharge": {
-          "base": 6,
-          "dice": 6
-        }
-      },
       "description": "In this dagger is bound the very force of the lightning.",
       "effects": {
         "capabilities": [],
@@ -4331,9 +4207,13 @@
           "res_elec"
         ],
         "curses": [],
-        "activations": [
-          "LIGHTNING_BOLT"
-        ],
+        "activation": {
+          "id": "LIGHTNING_BOLT",
+          "recharge": {
+            "base": 6,
+            "dice": 6
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_elec"
@@ -4372,13 +4252,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "STINKING_CLOUD",
-        "recharge": {
-          "base": 4,
-          "dice": 4
-        }
-      },
       "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune.",
       "effects": {
         "capabilities": [],
@@ -4387,9 +4260,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "STINKING_CLOUD"
-        ],
+        "activation": {
+          "id": "STINKING_CLOUD",
+          "recharge": {
+            "base": 4,
+            "dice": 4
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -4432,13 +4309,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FROST2",
-        "recharge": {
-          "base": 5,
-          "dice": 5
-        }
-      },
       "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind.",
       "effects": {
         "capabilities": [
@@ -4450,9 +4320,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "FROST2"
-        ],
+        "activation": {
+          "id": "FROST2",
+          "recharge": {
+            "base": 5,
+            "dice": 5
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold"
@@ -4512,7 +4386,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -4562,13 +4436,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FROST4",
-        "recharge": {
-          "base": 50,
-          "dice": 0
-        }
-      },
       "description": "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay.",
       "effects": {
         "capabilities": [
@@ -4580,9 +4447,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "FROST4"
-        ],
+        "activation": {
+          "id": "FROST4",
+          "recharge": {
+            "base": 50,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_demon",
@@ -4642,7 +4513,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -4708,7 +4579,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -4774,7 +4645,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -4841,7 +4712,7 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -4911,7 +4782,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -4989,7 +4860,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -5057,7 +4928,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -5111,7 +4982,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -5161,7 +5032,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -5209,13 +5080,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FROST3",
-        "recharge": {
-          "base": 40,
-          "dice": 0
-        }
-      },
       "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again.",
       "effects": {
         "capabilities": [
@@ -5230,9 +5094,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "FROST3"
-        ],
+        "activation": {
+          "id": "FROST3",
+          "recharge": {
+            "base": 40,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5295,13 +5163,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FIRE2",
-        "recharge": {
-          "base": 40,
-          "dice": 0
-        }
-      },
       "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it.",
       "effects": {
         "capabilities": [
@@ -5316,9 +5177,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "FIRE2"
-        ],
+        "activation": {
+          "id": "FIRE2",
+          "recharge": {
+            "base": 40,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5395,7 +5260,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5463,7 +5328,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_troll",
@@ -5523,7 +5388,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -5574,7 +5439,7 @@
         "capabilities": [],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -5642,7 +5507,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5717,7 +5582,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -5775,7 +5640,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -5845,7 +5710,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -5914,7 +5779,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois"
@@ -5963,13 +5828,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "DRAIN_LIFE2",
-        "recharge": {
-          "base": 40,
-          "dice": 0
-        }
-      },
       "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed.",
       "effects": {
         "capabilities": [
@@ -5978,9 +5836,13 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [
-          "DRAIN_LIFE2"
-        ],
+        "activation": {
+          "id": "DRAIN_LIFE2",
+          "recharge": {
+            "base": 40,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon"
@@ -6030,7 +5892,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -6078,7 +5940,7 @@
           "res_sound"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -6140,7 +6002,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -6200,13 +6062,6 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FROST3",
-        "recharge": {
-          "base": 35,
-          "dice": 0
-        }
-      },
       "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain.",
       "effects": {
         "capabilities": [
@@ -6218,9 +6073,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "FROST3"
-        ],
+        "activation": {
+          "id": "FROST3",
+          "recharge": {
+            "base": 35,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -6284,13 +6143,6 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "STONE_TO_MUD",
-        "recharge": {
-          "base": 5,
-          "dice": 0
-        }
-      },
       "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease.",
       "effects": {
         "capabilities": [
@@ -6302,9 +6154,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "STONE_TO_MUD"
-        ],
+        "activation": {
+          "id": "STONE_TO_MUD",
+          "recharge": {
+            "base": 5,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -6373,7 +6229,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -6434,7 +6290,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6515,7 +6371,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_acid",
@@ -6589,13 +6445,6 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "MASS_BANISHMENT",
-        "recharge": {
-          "base": 1000,
-          "dice": 0
-        }
-      },
       "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind.",
       "effects": {
         "capabilities": [
@@ -6608,9 +6457,13 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [
-          "MASS_BANISHMENT"
-        ],
+        "activation": {
+          "id": "MASS_BANISHMENT",
+          "recharge": {
+            "base": 1000,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6708,7 +6561,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_demon",
@@ -6766,21 +6619,18 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "CURE_WOUNDS",
-        "recharge": {
-          "base": 3,
-          "dice": 3
-        }
-      },
       "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor.",
       "effects": {
         "capabilities": [],
         "resistances": [],
         "curses": [],
-        "activations": [
-          "CURE_WOUNDS"
-        ],
+        "activation": {
+          "id": "CURE_WOUNDS",
+          "recharge": {
+            "base": 3,
+            "dice": 3
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_troll",
@@ -6840,7 +6690,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6890,7 +6740,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6951,7 +6801,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -7009,13 +6859,6 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "TELE_AWAY",
-        "recharge": {
-          "base": 50,
-          "dice": 0
-        }
-      },
       "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water.",
       "effects": {
         "capabilities": [
@@ -7031,9 +6874,13 @@
           "res_nethr"
         ],
         "curses": [],
-        "activations": [
-          "TELE_AWAY"
-        ],
+        "activation": {
+          "id": "TELE_AWAY",
+          "recharge": {
+            "base": 50,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -7084,13 +6931,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "WORD_OF_RECALL",
-        "recharge": {
-          "base": 200,
-          "dice": 0
-        }
-      },
       "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning.",
       "effects": {
         "capabilities": [
@@ -7103,9 +6943,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "WORD_OF_RECALL"
-        ],
+        "activation": {
+          "id": "WORD_OF_RECALL",
+          "recharge": {
+            "base": 200,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -7168,13 +7012,6 @@
         "SLAY_TROLL",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "BERSERKER",
-        "recharge": {
-          "base": 80,
-          "dice": 80
-        }
-      },
       "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog's troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\"",
       "effects": {
         "capabilities": [],
@@ -7184,9 +7021,13 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "BERSERKER"
-        ],
+        "activation": {
+          "id": "BERSERKER",
+          "recharge": {
+            "base": 80,
+            "dice": 80
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "kill_demon",
@@ -7256,7 +7097,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -7307,13 +7148,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "CONFUSE",
-        "recharge": {
-          "base": 15,
-          "dice": 0
-        }
-      },
       "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down.",
       "effects": {
         "capabilities": [],
@@ -7322,9 +7156,13 @@
           "res_confu"
         ],
         "curses": [],
-        "activations": [
-          "CONFUSE"
-        ],
+        "activation": {
+          "id": "CONFUSE",
+          "recharge": {
+            "base": 15,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -7385,7 +7223,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -7448,7 +7286,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -7492,13 +7330,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FIRE2",
-        "recharge": {
-          "base": 20,
-          "dice": 0
-        }
-      },
       "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath.",
       "effects": {
         "capabilities": [],
@@ -7506,9 +7337,13 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "FIRE2"
-        ],
+        "activation": {
+          "id": "FIRE2",
+          "recharge": {
+            "base": 20,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire"
@@ -7551,13 +7386,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "HASTE1",
-        "recharge": {
-          "base": 100,
-          "dice": 100
-        }
-      },
       "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows.",
       "effects": {
         "capabilities": [],
@@ -7566,9 +7394,13 @@
           "res_elec"
         ],
         "curses": [],
-        "activations": [
-          "HASTE1"
-        ],
+        "activation": {
+          "id": "HASTE1",
+          "recharge": {
+            "base": 100,
+            "dice": 100
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -7634,7 +7466,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -7696,7 +7528,7 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -7743,13 +7575,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "IDENTIFY",
-        "recharge": {
-          "base": 10,
-          "dice": 0
-        }
-      },
       "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things.",
       "effects": {
         "capabilities": [
@@ -7759,9 +7584,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "IDENTIFY"
-        ],
+        "activation": {
+          "id": "IDENTIFY",
+          "recharge": {
+            "base": 10,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil"
@@ -7821,13 +7650,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "PROBE",
-        "recharge": {
-          "base": 20,
-          "dice": 0
-        }
-      },
       "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals.",
       "effects": {
         "capabilities": [
@@ -7839,9 +7661,13 @@
           "res_nethr"
         ],
         "curses": [],
-        "activations": [
-          "PROBE"
-        ],
+        "activation": {
+          "id": "PROBE",
+          "recharge": {
+            "base": 20,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "kill_demon",
@@ -7918,7 +7744,7 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -7974,13 +7800,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "DRAIN_LIFE1",
-        "recharge": {
-          "base": 40,
-          "dice": 0
-        }
-      },
       "recharge_dice": 0,
       "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically.",
       "effects": {
@@ -7992,9 +7811,13 @@
           "res_lite"
         ],
         "curses": [],
-        "activations": [
-          "DRAIN_LIFE1"
-        ],
+        "activation": {
+          "id": "DRAIN_LIFE1",
+          "recharge": {
+            "base": 40,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -8062,13 +7885,6 @@
         "ACTIVATE",
         "SHOW_MODS"
       ],
-      "activation": {
-        "id": "FIRE3",
-        "recharge": {
-          "base": 15,
-          "dice": 0
-        }
-      },
       "description": "A great crackling Balrog's whip of flame, this weapon could bring even Ungoliant to heel.",
       "effects": {
         "capabilities": [
@@ -8083,9 +7899,13 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activations": [
-          "FIRE3"
-        ],
+        "activation": {
+          "id": "FIRE3",
+          "recharge": {
+            "base": 15,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -8152,7 +7972,7 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8212,7 +8032,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8261,22 +8081,19 @@
         "SHOW_MODS"
       ],
       "description": "A crossbow that grants fiery speed to he who finds it, and from which shoot bolts that blaze with flame unquenchable.",
-      "activation": {
-        "id": "FIREBRAND",
-        "recharge": {
-          "base": 999,
-          "dice": 0
-        }
-      },
       "effects": {
         "capabilities": [],
         "resistances": [
           "res_fire"
         ],
         "curses": [],
-        "activations": [
-          "FIREBRAND"
-        ],
+        "activation": {
+          "id": "FIREBRAND",
+          "recharge": {
+            "base": 999,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8323,13 +8140,6 @@
         "SHOW_MODS"
       ],
       "description": "A great brazen arbalest with arms of gleaming steel shooting quarrels with mighty power for those brave enough to risk betrayal.",
-      "activation": {
-        "id": "ARROW",
-        "recharge": {
-          "base": 20,
-          "dice": 20
-        }
-      },
       "effects": {
         "capabilities": [
           "aggravate_monsters"
@@ -8341,9 +8151,13 @@
           "res_elec"
         ],
         "curses": [],
-        "activations": [
-          "ARROW"
-        ],
+        "activation": {
+          "id": "ARROW",
+          "recharge": {
+            "base": 20,
+            "dice": 20
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8404,7 +8218,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8468,7 +8282,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8535,13 +8349,6 @@
         "ACTIVATE"
       ],
       "description": "A mighty Dwarven mattock, as good for hewing orc-necks as for hewing stone.  Nain, King of the Iron Hills, brought his mattock-wielding warriors to the Battle of Azanulbizar, and no Orc could withstand them, although Nain himself fell before their lord Azog.",
-      "activation": {
-        "id": "STONE_TO_MUD",
-        "recharge": {
-          "base": 2,
-          "dice": 0
-        }
-      },
       "effects": {
         "capabilities": [],
         "resistances": [
@@ -8549,9 +8356,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "STONE_TO_MUD"
-        ],
+        "activation": {
+          "id": "STONE_TO_MUD",
+          "recharge": {
+            "base": 2,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -8627,7 +8438,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -8692,13 +8503,7 @@
         "ACTIVATE"
       ],
       "description": "The weapon of a mighty dwarven priest, whose shade is rumoured to still haunt the halls of Angband itself.",
-      "activation": {
-        "id": "DISP_EVIL",
-        "recharge": {
-          "base": 100,
-          "dice": 100
-        }
-      },
+
       "effects": {
         "capabilities": [
           "hold_life"
@@ -8709,9 +8514,13 @@
           "res_nethr"
         ],
         "curses": [],
-        "activations": [
-          "DISP_EVIL"
-        ],
+        "activation": {
+          "id": "DISP_EVIL",
+          "recharge": {
+            "base": 100,
+            "dice": 100
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -8778,7 +8587,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon"
@@ -8822,13 +8631,6 @@
         "AGGRAVATE"
       ],
       "description": "The painted shield of a chieftain of Far Harad, gaudy and barbaric. Its wielder will fear nothing and fight with unnatural strength, but also draw attention to himself.",
-      "activation": {
-        "id": "BERSERKER",
-        "recharge": {
-          "base": 50,
-          "dice": 0
-        }
-      },
       "effects": {
         "capabilities": [
           "sust_str",
@@ -8841,9 +8643,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "BERSERKER"
-        ],
+        "activation": {
+          "id": "BERSERKER",
+          "recharge": {
+            "base": 50,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8893,7 +8699,7 @@
           "res_fire"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -8961,7 +8767,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activations": [],
+        "activation": [],
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
