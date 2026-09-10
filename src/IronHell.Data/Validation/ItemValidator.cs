@@ -14,6 +14,10 @@ internal static class ItemValidator
     private const string CombatModifiersDocument = "combat_modifiers.json";
     private const string CombatModifiersProperty = "combat_modifiers";
     private const string SourceFlagProperty = "source_flag";
+    private const string ItemAffixesDocument = "items/item_affixes.json";
+    private const string AffixesProperty = "affixes";
+    private const string EgoItemsProperty = "ego_items";
+    private const string ArtifactsProperty = "artifacts";
     private static readonly IReadOnlySet<string> CombatModifierFlags = new HashSet<string>(StringComparer.Ordinal)
     {
         "SLAY_ANIMAL", "SLAY_EVIL", "SLAY_UNDEAD", "SLAY_DEMON", "SLAY_ORC", "SLAY_TROLL", "SLAY_GIANT", "SLAY_DRAGON",
@@ -63,7 +67,7 @@ internal static class ItemValidator
                 modifier => modifier["id"]!.GetValue<string>(),
                 StringComparer.Ordinal);
 
-        foreach (var egoItem in egoDocument["ego_items"]?.AsArray().OfType<JsonObject>() ?? [])
+        foreach (var egoItem in egoDocument[EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
             var references = egoItem[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
@@ -89,12 +93,67 @@ internal static class ItemValidator
                 modifier => modifier["id"]!.GetValue<string>(),
                 StringComparer.Ordinal);
 
-        foreach (var artifact in artifactDocument["artifacts"]?.AsArray().OfType<JsonObject>() ?? [])
+        foreach (var artifact in artifactDocument[ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var artifactId = artifact["id"]?.GetValue<string>() ?? artifact["name"]?.GetValue<string>() ?? string.Empty;
             var references = artifact[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
             ValidateReferences(ArtifactsDocument, artifactId, references, modifierIds, report);
             ValidateCombatFlagCoverage(ArtifactsDocument, artifact, artifactId, references, flagToModifier, report);
+        }
+    }
+
+    public static void ValidateItemAffixes(
+        FrozenDictionary<string, JsonObject> documents,
+        DefinitionValidationReport report)
+    {
+        var affixes = documents["item_affixes"]["item_affixes"]?.AsArray().OfType<JsonObject>() ?? [];
+        var affixIds = affixes
+            .Where(affix => affix["id"] is not null)
+            .Select(affix => affix["id"]!.GetValue<string>())
+            .ToHashSet(StringComparer.Ordinal);
+
+        ValidateAffixReferences(
+            documents[ArtifactsProperty][ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [],
+            "artifacts",
+            artifact => artifact["id"]?.GetValue<string>() ?? string.Empty,
+            report,
+            affixIds);
+
+        ValidateAffixReferences(
+            documents[EgoItemsProperty][EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [],
+            "ego_items",
+            egoItem => egoItem["id"]?.GetValue<string>() ?? string.Empty,
+            report,
+            affixIds,
+            item => item["effects"]?[AffixesProperty]?.AsArray().OfType<JsonObject>() ?? []);
+    }
+
+    private static void ValidateAffixReferences(
+        IEnumerable<JsonObject> items,
+        string catalog,
+        Func<JsonObject, string> getId,
+        DefinitionValidationReport report,
+        IReadOnlySet<string> affixIds,
+        Func<JsonObject, IEnumerable<JsonObject>>? getAffixes = null)
+    {
+        foreach (var item in items)
+        {
+            var itemId = getId(item);
+            var references = (getAffixes?.Invoke(item) ?? item[AffixesProperty]?.AsArray().OfType<JsonObject>() ?? [])
+                .Select(affix => affix["id"]?.GetValue<string>())
+                .ToArray();
+            foreach (var duplicate in references.Where(id => id is not null)
+                         .GroupBy(id => id!, StringComparer.Ordinal)
+                         .Where(group => group.Count() > 1)
+                         .Select(group => group.Key))
+            {
+                report.Add(ItemAffixesDocument, itemId, $"{catalog}.{AffixesProperty}", "duplicate_affix_reference", $"Affix '{duplicate}' is referenced more than once.");
+            }
+
+            foreach (var reference in references.Where(id => !string.IsNullOrWhiteSpace(id)).Where(id => !affixIds.Contains(id!)))
+            {
+                report.Add(ItemAffixesDocument, itemId, $"{catalog}.{AffixesProperty}", "unknown_affix", $"Affix '{reference}' does not resolve in item_affixes.json.");
+            }
         }
     }
 

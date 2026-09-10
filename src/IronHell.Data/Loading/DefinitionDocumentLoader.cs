@@ -64,7 +64,13 @@ internal static class DefinitionDocumentLoader
 
         try
         {
-            return JsonNode.Parse(await File.ReadAllTextAsync(jsonPath, cancellationToken)) as JsonObject
+            var content = await File.ReadAllTextAsync(jsonPath, cancellationToken);
+            if (content.Length > 0 && content[0] == '\uFEFF')
+            {
+                content = content[1..];
+            }
+
+            return JsonNode.Parse(content) as JsonObject
                 ?? throw new JsonException("Root JSON value must be an object.");
         }
         catch (JsonException exception)

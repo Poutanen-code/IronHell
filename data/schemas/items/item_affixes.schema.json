@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/item_affixes.schema.json",
+  "title": "Item Affixes",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "item_affixes"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "item_affixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description", "value_type", "unit", "provenance_status"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "value_type": { "type": "string", "const": "integer" },
+          "unit": { "type": "string", "minLength": 1 },
+          "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "provenance_status": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

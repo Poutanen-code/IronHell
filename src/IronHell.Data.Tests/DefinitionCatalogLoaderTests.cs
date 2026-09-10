@@ -252,6 +252,28 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_UnknownArtifactAffix_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"to_hit\"", "\"missing_affix\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_affix");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownEgoAffix_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"affix_id\": \"stealth\"", "\"affix_id\": \"missing_affix\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_affix");
+    }
+
+    [Fact]
     public async Task LoadAsync_UnknownStartingEquipmentItem_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();

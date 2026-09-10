@@ -14,7 +14,7 @@
         "required": [
           "baseItemId", "id", "name", "pval", "depth", "rarity",
           "weight", "cost", "base_ac", "damage", "plus_to_hit",
-          "plus_to_dam", "plus_to_ac", "flags", "combat_modifiers", "description"
+          "plus_to_dam", "plus_to_ac", "flags", "combat_modifiers", "affixes", "description"
         ],
         "properties": {
           "baseItemId": { "type": "string", "minLength": 1 },
@@ -35,6 +35,19 @@
             "type": "array",
             "uniqueItems": true,
             "items": { "type": "string", "minLength": 1 }
+          },
+          "affixes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "value_source"],
+              "properties": {
+                "id": { "type": "string", "minLength": 1 },
+                "value_source": { "type": "string", "minLength": 1 }
+              }
+            }
           },
           "activation": {
             "type": "object",

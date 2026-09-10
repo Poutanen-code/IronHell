@@ -50,14 +50,6 @@
       "provenance_status": "observed"
     },
     {
-      "id": "armor",
-      "name": "Armor",
-      "description": "Flat bonus to armor class.",
-      "value_type": "integer",
-      "unit": "ac_points",
-      "provenance_status": "observed"
-    },
-    {
       "id": "speed",
       "name": "Speed",
       "description": "Modifies bearer movement speed.",
@@ -160,14 +152,6 @@
       "description": "Modifies launcher damage multiplier.",
       "value_type": "integer",
       "unit": "multiplier_steps",
-      "provenance_status": "derived"
-    },
-    {
-      "id": "regeneration_bonus",
-      "name": "Regeneration Bonus",
-      "description": "Passive regeneration intensity modifier.",
-      "value_type": "integer",
-      "unit": "rate_steps",
       "provenance_status": "derived"
     }
   ]

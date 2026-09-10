@@ -1,4 +1,4 @@
-﻿{
+{
   "artifacts": [
     {
       "baseItemId": "phial",
@@ -26,7 +26,8 @@
         }
       },
       "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": []
     },
     {
       "baseItemId": "star",
@@ -55,7 +56,8 @@
         }
       },
       "description": "The shining Star of the West, a treasured heirloom of Elendil's house.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": []
     },
     {
       "baseItemId": "stone",
@@ -87,7 +89,8 @@
         }
       },
       "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": []
     },
     {
       "baseItemId": "amulet",
@@ -118,7 +121,13 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "amulet",
@@ -156,7 +165,25 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "amulet",
@@ -185,7 +212,25 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "orb",
@@ -224,7 +269,25 @@
         }
       },
       "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -254,7 +317,37 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -287,7 +380,21 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -335,7 +442,45 @@
         }
       },
       "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -383,7 +528,45 @@
         }
       },
       "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -432,7 +615,45 @@
         }
       },
       "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "ring",
@@ -491,7 +712,45 @@
         }
       },
       "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "amulet",
@@ -527,7 +786,37 @@
         }
       },
       "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "jewel",
@@ -561,7 +850,8 @@
       "plus_to_hit": 0,
       "plus_to_dam": 0,
       "plus_to_ac": 0,
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": []
     },
     {
       "baseItemId": "multi_hued_dragon_scale_mail",
@@ -600,7 +890,21 @@
         }
       },
       "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "power_dragon_scale_mail",
@@ -645,7 +949,17 @@
         }
       },
       "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "balance_dragon_scale_mail",
@@ -682,7 +996,17 @@
         }
       },
       "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "adamantite_plate_mail",
@@ -720,7 +1044,21 @@
         }
       },
       "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "full_plate_armor",
@@ -747,7 +1085,17 @@
         "RES_NEXUS"
       ],
       "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability deeply engraved into its surface.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "metal_brigandine_armor",
@@ -776,7 +1124,21 @@
         "RES_SOUND"
       ],
       "description": "Small metal plates cover an inner layer of sturdy canvas, and both bear scenes of hunting and war.  You feel the spirit of Eorl the Young, matchless in combat, around you as you put his armour on.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "mithril_chain_mail",
@@ -810,7 +1172,21 @@
         }
       },
       "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "mithril_plate_mail",
@@ -846,7 +1222,25 @@
         }
       },
       "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "chain_mail",
@@ -874,7 +1268,25 @@
         "RES_NEXUS"
       ],
       "description": "A hauberk, leggings, and sleeves of interlocking steel rings, well padded with leather.  You feel as strong and tall as Arvedui, last king of Arnor, as you put it on.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "augmented_chain_mail",
@@ -908,7 +1320,29 @@
         }
       },
       "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "hard_leather_armor",
@@ -938,7 +1372,13 @@
         }
       },
       "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "soft_leather_armor",
@@ -964,7 +1404,17 @@
         "RES_DARK"
       ],
       "description": "Familar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "leather_scale_mail",
@@ -988,7 +1438,25 @@
         "RES_SHARD"
       ],
       "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather whose wearer moves with agility and assurance.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "large_metal_shield",
@@ -1026,7 +1494,25 @@
         }
       },
       "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "small_metal_shield",
@@ -1053,7 +1539,21 @@
         "RES_CHAOS"
       ],
       "description": "Invoking the strength and endurance of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "large_leather_shield",
@@ -1078,7 +1578,13 @@
         "RES_DARK"
       ],
       "description": "This shield emblazoned with a multitude of creatures unseen for ages once protected Celegorm, Lord of Himlad; around it a mystic balance lies, containing the conflicts of the elements.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "large_metal_shield",
@@ -1107,7 +1613,13 @@
         "SUST_CHR"
       ],
       "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "metal_cap",
@@ -1134,7 +1646,29 @@
         "RES_SHARD"
       ],
       "description": "A metal cap forged by the greatest Noldorin smith of the Second Age, this helm is of equal use in battle or at the forge, and its enchantment will never be diminished.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "massive_iron_crown",
@@ -1179,7 +1713,41 @@
         "INSTA_ART"
       ],
       "description": "Containing much of the power of he who once was mightiest among the Ainur, this plain iron crown has mounted upon it the two remaining Silmarils, greatest treasures of Middle-Earth.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "iron_crown",
@@ -1207,7 +1775,25 @@
         "HEAVY_CURSE"
       ],
       "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel, which grants extraordinary powers of sight and awareness at a terrible physical cost.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "hard_leather_cap",
@@ -1231,7 +1817,21 @@
         "TELEPATHY"
       ],
       "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "metal_cap",
@@ -1254,7 +1854,21 @@
         "HIDE_TYPE"
       ],
       "description": "A ridged helmet made of steel, and embossed with scenes of valor in fine- engraved silver.  It grants the wearer nobility and understanding.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "steel_helm",
@@ -1285,7 +1899,25 @@
         "RES_DARK"
       ],
       "description": "A great helm, as steady and as distinctive as the hero of the Westdike. Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode out time and again among his foes and slew many. Although they knew of his coming, none could stand against him.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "iron_helm",
@@ -1316,7 +1948,29 @@
         "TELEPATHY"
       ],
       "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "iron_helm",
@@ -1350,7 +2004,25 @@
         }
       },
       "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "iron_helm",
@@ -1379,7 +2051,33 @@
         "HEAVY_CURSE"
       ],
       "description": "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed succor.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "golden_crown",
@@ -1421,7 +2119,33 @@
         }
       },
       "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "jewel_encrusted_crown",
@@ -1455,7 +2179,37 @@
         "LITE"
       ],
       "description": "A crown of massive gold, set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "cloak",
@@ -1487,7 +2241,13 @@
         }
       },
       "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "cloak",
@@ -1520,7 +2280,29 @@
         }
       },
       "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "cloak",
@@ -1554,7 +2336,21 @@
         }
       },
       "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "cloak",
@@ -1577,7 +2373,13 @@
         "SEE_INVIS"
       ],
       "description": "This shimmering cloak of greens and browns was once worn by the young Aragorn, a keen-eyed captain of Gondor, valiant on both land and sea.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "cloak",
@@ -1608,7 +2410,21 @@
         }
       },
       "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "shadow_cloak",
@@ -1644,7 +2460,33 @@
         }
       },
       "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "shadow_cloak",
@@ -1670,7 +2512,21 @@
         "SEE_INVIS"
       ],
       "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo's kingly gift from a multitude of hostile eyes.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1704,7 +2560,25 @@
         }
       },
       "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "leather_gloves",
@@ -1728,7 +2602,29 @@
         "SHOW_MODS"
       ],
       "description": "A hero's handgear that lends great prowess in battle.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "leather_gloves",
@@ -1759,7 +2655,17 @@
         }
       },
       "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1788,7 +2694,13 @@
         }
       },
       "description": "A set of gauntlets that smoulder with an unnatural heat.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1817,7 +2729,13 @@
         }
       },
       "description": "A set of handgear, freezing with unnatural cold.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1846,7 +2764,17 @@
         }
       },
       "description": "A set of handgear with sparks that crackle across its knuckleguards.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1875,7 +2803,13 @@
         }
       },
       "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "gauntlets",
@@ -1905,7 +2839,25 @@
         "SHOW_MODS"
       ],
       "description": "A pair of gauntlets that sap combat ability, named after the empty hand of Beren that once clasped a Silmaril.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "set_of_cesti",
@@ -1937,7 +2889,25 @@
         }
       },
       "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "pair_of_hard_leather_boots",
@@ -1967,7 +2937,17 @@
         }
       },
       "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\"",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "pair_of_soft_leather_boots",
@@ -2001,7 +2981,17 @@
         }
       },
       "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "pair_of_metal_shod_boots",
@@ -2025,7 +3015,25 @@
         "RES_FEAR"
       ],
       "description": "Sturdy footwear of leather and steel as enduring as the long-suffering Dwarven king-in-exile who wore them.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "pair_of_soft_leather_boots",
@@ -2059,7 +3067,33 @@
         }
       },
       "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "main_gauche",
@@ -2090,6 +3124,28 @@
       "combat_modifiers": [
         "slay_troll",
         "slay_giant"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2126,6 +3182,28 @@
         "slay_evil",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -2158,6 +3236,16 @@
       "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt.",
       "combat_modifiers": [
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2190,6 +3278,16 @@
       "description": "From the hilt of this dagger springs not so much a blade as an icicle.",
       "combat_modifiers": [
         "brand_cold"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2222,6 +3320,16 @@
       "description": "In this dagger is bound the very force of the lightning.",
       "combat_modifiers": [
         "brand_elec"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2257,6 +3365,16 @@
       "combat_modifiers": [
         "slay_orc",
         "brand_pois"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2294,6 +3412,20 @@
       "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind.",
       "combat_modifiers": [
         "brand_cold"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2329,6 +3461,20 @@
         "slay_evil",
         "slay_demon",
         "slay_troll"
+      ],
+      "affixes": [
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2368,6 +3514,20 @@
       "combat_modifiers": [
         "slay_demon",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2404,6 +3564,24 @@
         "brand_fire",
         "slay_orc",
         "slay_demon"
+      ],
+      "affixes": [
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2440,6 +3618,24 @@
         "slay_troll",
         "slay_giant",
         "brand_elec"
+      ],
+      "affixes": [
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2476,6 +3672,24 @@
         "brand_cold",
         "slay_orc",
         "slay_dragon"
+      ],
+      "affixes": [
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2510,6 +3724,20 @@
         "brand_fire",
         "brand_pois",
         "kill_dragon"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2558,6 +3786,28 @@
         "slay_troll",
         "slay_giant",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2593,6 +3843,24 @@
         "brand_pois",
         "kill_dragon",
         "slay_undead"
+      ],
+      "affixes": [
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -2623,7 +3891,25 @@
         "SHOW_MODS"
       ],
       "description": "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade with a perfect edge shining cleanly in the sun, an object of hate to the men of Umbar who met it in combat.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "executioners_sword",
@@ -2657,6 +3943,16 @@
         "slay_troll",
         "slay_giant",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2681,7 +3977,17 @@
         "SHOW_MODS"
       ],
       "description": "An utterly perfect, cleanly chiseled sword, with a edge that effortlessly slices rock and bone and spells to render the wearer lithe and nimble.  It is combat incarnate.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        }
+      ]
     },
     {
       "baseItemId": "long_sword",
@@ -2730,6 +4036,24 @@
         "slay_undead",
         "kill_demon",
         "slay_troll"
+      ],
+      "affixes": [
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2780,6 +4104,28 @@
         "slay_troll",
         "slay_orc",
         "slay_undead"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -2818,6 +4164,32 @@
         "slay_evil",
         "brand_pois",
         "slay_demon"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2849,6 +4221,28 @@
       "combat_modifiers": [
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2877,6 +4271,20 @@
       "combat_modifiers": [
         "slay_animal",
         "brand_cold"
+      ],
+      "affixes": [
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2910,6 +4318,20 @@
         "slay_troll",
         "slay_giant",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "blows",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2950,6 +4372,40 @@
         "slay_undead",
         "slay_orc",
         "slay_animal"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "blows",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -2981,6 +4437,24 @@
         "slay_animal",
         "slay_evil",
         "slay_undead"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "blows",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3010,6 +4484,20 @@
       "combat_modifiers": [
         "brand_pois",
         "slay_animal"
+      ],
+      "affixes": [
+        {
+          "id": "blows",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3052,6 +4540,20 @@
         "brand_cold",
         "slay_troll",
         "slay_demon"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3084,6 +4586,24 @@
       "description": "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as he came to Valinor in wrath. Its envenomed bite pierced the Two Trees with wounds that would not heal.",
       "combat_modifiers": [
         "brand_pois"
+      ],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3120,6 +4640,24 @@
       "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed.",
       "combat_modifiers": [
         "slay_dragon"
+      ],
+      "affixes": [
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3141,7 +4679,13 @@
         "RES_FEAR"
       ],
       "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death's myrmidon down.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "halberd",
@@ -3174,6 +4718,20 @@
         "brand_fire",
         "slay_undead",
         "slay_giant"
+      ],
+      "affixes": [
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3211,6 +4769,24 @@
         "slay_demon",
         "slay_troll",
         "slay_giant"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3258,6 +4834,28 @@
         "slay_troll",
         "slay_orc",
         "kill_undead"
+      ],
+      "affixes": [
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3303,6 +4901,32 @@
         "brand_fire",
         "slay_giant",
         "slay_animal"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3334,6 +4958,24 @@
       "combat_modifiers": [
         "brand_cold",
         "slay_undead"
+      ],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3367,6 +5009,28 @@
         "slay_evil",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3412,6 +5076,32 @@
         "slay_demon",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "tunnel",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3464,6 +5154,44 @@
         "slay_undead",
         "kill_demon",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3504,6 +5232,32 @@
         "slay_demon",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3540,6 +5294,24 @@
       "combat_modifiers": [
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3571,6 +5343,16 @@
         "slay_evil",
         "slay_animal",
         "slay_demon"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3603,6 +5385,20 @@
         "slay_troll",
         "slay_giant",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3637,6 +5433,24 @@
         "brand_pois",
         "slay_evil",
         "kill_undead"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3681,6 +5495,20 @@
       "combat_modifiers": [
         "slay_dragon",
         "slay_animal"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3723,6 +5551,32 @@
       "combat_modifiers": [
         "brand_cold",
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3767,6 +5621,28 @@
         "brand_acid",
         "slay_dragon",
         "slay_troll"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3808,6 +5684,20 @@
         "kill_demon",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3844,6 +5734,20 @@
       "combat_modifiers": [
         "slay_evil",
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3882,6 +5786,24 @@
         "brand_elec",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3915,6 +5837,20 @@
         "slay_animal",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -3947,6 +5883,20 @@
       "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath.",
       "combat_modifiers": [
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -3982,6 +5932,16 @@
       "combat_modifiers": [
         "kill_dragon",
         "brand_elec"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4024,6 +5984,28 @@
         "brand_acid",
         "slay_undead",
         "slay_demon"
+      ],
+      "affixes": [
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "tunnel",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -4052,6 +6034,20 @@
       "combat_modifiers": [
         "slay_animal",
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4089,6 +6085,28 @@
       "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things.",
       "combat_modifiers": [
         "slay_evil"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4136,6 +6154,28 @@
         "brand_fire",
         "slay_troll",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4176,6 +6216,24 @@
         "slay_evil",
         "kill_undead",
         "brand_fire"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "tunnel",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4217,6 +6275,32 @@
       "combat_modifiers": [
         "brand_cold",
         "slay_orc"
+      ],
+      "affixes": [
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -4267,6 +6351,32 @@
         "kill_dragon",
         "slay_troll",
         "slay_giant"
+      ],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4293,7 +6403,33 @@
         "SHOW_MODS"
       ],
       "description": "The great bow of Beleg Cuthalion, made of black yew and strung with elven hair that faintly shimmers a pale clear gold.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "shots",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "long_bow",
@@ -4318,7 +6454,29 @@
         "SHOW_MODS"
       ],
       "description": "The great yew bow of grim-faced Bard, who shot the mightiest arrow that songs record.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "might",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "heavy_crossbow",
@@ -4349,7 +6507,21 @@
           "dice": 0
         }
       },
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "heavy_crossbow",
@@ -4386,7 +6558,29 @@
           "dice": 20
         }
       },
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "might",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "long_bow",
@@ -4412,7 +6606,29 @@
         "REGEN"
       ],
       "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "might",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "long_bow",
@@ -4441,7 +6657,41 @@
         "SLOW_DIGEST"
       ],
       "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "intelligence",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "shots",
+          "value_source": "pval"
+        },
+        {
+          "id": "might",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
+      ]
     },
     {
       "baseItemId": "mattock",
@@ -4483,6 +6733,32 @@
         "slay_troll",
         "slay_giant",
         "slay_dragon"
+      ],
+      "affixes": [
+        {
+          "id": "tunnel",
+          "value_source": "pval"
+        },
+        {
+          "id": "infra",
+          "value_source": "pval"
+        },
+        {
+          "id": "search",
+          "value_source": "pval"
+        },
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4520,6 +6796,32 @@
         "slay_troll",
         "slay_demon",
         "brand_acid"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "tunnel",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4561,6 +6863,36 @@
       "combat_modifiers": [
         "slay_evil",
         "slay_undead"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "wisdom",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "light_radius",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
       ]
     },
     {
@@ -4586,6 +6918,16 @@
       "description": "Azaghal, Dwarf-king of Beregost, fell before Glaurung in the Battle of Unnumbered Tears, but with his final stroke he dealt Glaurung such a blow that the Father of Dragons fled the field with all his kin, and was at first believed to be mortally wounded.",
       "combat_modifiers": [
         "kill_dragon"
+      ],
+      "affixes": [
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4622,7 +6964,21 @@
           "dice": 0
         }
       },
-      "combat_modifiers": []
+      "combat_modifiers": [],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "constitution",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_ac",
+          "value_source": "plus_to_ac"
+        }
+      ]
     },
     {
       "baseItemId": "broken_sword",
@@ -4652,6 +7008,28 @@
       "combat_modifiers": [
         "slay_orc",
         "slay_troll"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "dexterity",
+          "value_source": "pval"
+        },
+        {
+          "id": "blows",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     },
     {
@@ -4688,6 +7066,32 @@
         "kill_undead",
         "slay_giant",
         "slay_animal"
+      ],
+      "affixes": [
+        {
+          "id": "strength",
+          "value_source": "pval"
+        },
+        {
+          "id": "charisma",
+          "value_source": "pval"
+        },
+        {
+          "id": "stealth",
+          "value_source": "pval"
+        },
+        {
+          "id": "speed",
+          "value_source": "pval"
+        },
+        {
+          "id": "to_hit",
+          "value_source": "plus_to_hit"
+        },
+        {
+          "id": "to_damage",
+          "value_source": "plus_to_dam"
+        }
       ]
     }
   ]
