@@ -12,14 +12,14 @@
         "type": "object",
         "additionalProperties": true,
         "required": [
-          "name", "tval", "sval", "pval", "depth", "rarity",
+          "baseItemId", "id", "name", "pval", "depth", "rarity",
           "weight", "cost", "base_ac", "damage", "plus_to_hit",
-          "plus_to_dam", "plus_to_ac", "flags", "description"
+          "plus_to_dam", "plus_to_ac", "flags", "combat_modifiers", "description"
         ],
         "properties": {
+          "baseItemId": { "type": "string", "minLength": 1 },
+          "id": { "type": "string", "minLength": 1 },
           "name": { "type": "string" },
-          "tval": { "type": "integer" },
-          "sval": { "type": "integer" },
           "pval": { "type": "integer" },
           "depth": { "type": "integer" },
           "rarity": { "type": "integer" },
@@ -31,10 +31,26 @@
           "plus_to_dam": { "type": "integer" },
           "plus_to_ac": { "type": "integer" },
           "flags": { "type": "array", "items": { "type": "string" } },
+          "combat_modifiers": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
           "activation": {
-            "description": "Legacy activation ID. Must match an activation_id in activations.json. Kept as a plain string for backward compatibility.",
-            "type": "string",
-            "pattern": "^[A-Z][A-Z0-9_]*$"
+            "type": "object",
+            "additionalProperties": true,
+            "required": ["id", "recharge"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+              "recharge": {
+                "type": "object",
+                "required": ["base", "dice"],
+                "properties": {
+                  "base": { "type": "integer", "minimum": 0 },
+                  "dice": { "type": "integer", "minimum": 0 }
+                }
+              }
+            }
           },
           "recharge_base": { "type": "integer", "minimum": 0 },
           "recharge_dice": { "type": "integer", "minimum": 0 },
@@ -46,7 +62,7 @@
           }
         },
         "then": {
-          "required": ["activation", "recharge_base", "recharge_dice"]
+          "required": ["activation"]
         }
       }
     }

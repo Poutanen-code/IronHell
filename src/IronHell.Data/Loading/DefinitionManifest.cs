@@ -23,6 +23,7 @@ public static class DefinitionManifest
         new("potions", "items/potions.json", "../schemas/items/potions.schema.json"),
         new("scrolls", "items/scrolls.json", "../schemas/items/scrolls.schema.json"),
         new("ego_items", "items/ego_items.json", "../schemas/items/ego_items.schema.json"),
+        new("artifacts", "items/artifacts.json", "../schemas/items/artifacts.schema.json"),
         new("spell_books", "magic/spell_books.json", "../schemas/magic/spell_books.schema.json"),
         new("mage_spells", "magic/mage_spells.json", "../schemas/magic/spells.schema.json"),
         new("priest_prayers", "magic/priest_prayers.json", "../schemas/magic/spells.schema.json"),

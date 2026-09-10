@@ -241,6 +241,17 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_UnknownArtifactCombatModifier_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"slay_dragon\"", "\"missing_combat_modifier\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_combat_modifier");
+    }
+
+    [Fact]
     public async Task LoadAsync_UnknownStartingEquipmentItem_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();

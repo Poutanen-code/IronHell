@@ -25,7 +25,8 @@
           "dice": 10
         }
       },
-      "description": "A small crystal phial, with the light of Earendil\u0027s Star contained inside. Its light is imperishable, and near it darkness cannot endure."
+      "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "star",
@@ -53,7 +54,8 @@
           "dice": 50
         }
       },
-      "description": "The shining Star of the West, a treasured heirloom of Elendil\u0027s house."
+      "description": "The shining Star of the West, a treasured heirloom of Elendil's house.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "stone",
@@ -84,7 +86,8 @@
           "dice": 30
         }
       },
-      "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards."
+      "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "amulet",
@@ -114,7 +117,8 @@
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "amulet",
@@ -151,7 +155,8 @@
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "amulet",
@@ -179,7 +184,8 @@
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "orb",
@@ -217,7 +223,8 @@
           "dice": 50
         }
       },
-      "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it."
+      "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
@@ -241,12 +248,13 @@
         "RES_DARK",
         "INSTA_ART"
       ],
-      "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers, an ancient treasure of Isildur\u0027s house.",
+      "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers, an ancient treasure of Isildur's house.",
       "base_ac": 0,
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
@@ -278,12 +286,13 @@
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
       "id": "narya",
-      "name": "The Ring of Power \u0027Narya\u0027",
+      "name": "The Ring of Power 'Narya'",
       "pval": 1,
       "depth": 70,
       "rarity": 60,
@@ -325,12 +334,13 @@
           "dice": 20
         }
       },
-      "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
+      "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
       "id": "nenya",
-      "name": "The Ring of Power \u0027Nenya\u0027",
+      "name": "The Ring of Power 'Nenya'",
       "pval": 2,
       "depth": 80,
       "rarity": 70,
@@ -372,12 +382,13 @@
           "dice": 20
         }
       },
-      "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
+      "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
       "id": "vilya",
-      "name": "The Ring of Power \u0027Vilya\u0027",
+      "name": "The Ring of Power 'Vilya'",
       "pval": 3,
       "depth": 90,
       "rarity": 80,
@@ -420,12 +431,13 @@
           "dice": 20
         }
       },
-      "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron."
+      "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "ring",
       "id": "one_ring",
-      "name": "The Ring of Power \u0027The One Ring\u0027",
+      "name": "The Ring of Power 'The One Ring'",
       "pval": 5,
       "depth": 100,
       "rarity": 100,
@@ -478,12 +490,13 @@
           "dice": 30
         }
       },
-      "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur\u0027s Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it."
+      "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "amulet",
       "id": "elfstone_of_elrond",
-      "name": "The Elfstone \u0027Elessar\u0027",
+      "name": "The Elfstone 'Elessar'",
       "pval": 2,
       "depth": 60,
       "rarity": 60,
@@ -513,12 +526,13 @@
           "dice": 0
         }
       },
-      "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle."
+      "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "jewel",
       "id": "jewel_of_evenstar",
-      "name": "The Jewel \u0027Evenstar\u0027",
+      "name": "The Jewel 'Evenstar'",
       "pval": 0,
       "depth": 40,
       "rarity": 40,
@@ -546,12 +560,13 @@
       "damage": "0d0",
       "plus_to_hit": 0,
       "plus_to_dam": 0,
-      "plus_to_ac": 0
+      "plus_to_ac": 0,
+      "combat_modifiers": []
     },
     {
       "baseItemId": "multi_hued_dragon_scale_mail",
       "id": "razorback",
-      "name": "The Multi-Hued Dragon Scale Mail \u0027Razorback\u0027",
+      "name": "The Multi-Hued Dragon Scale Mail 'Razorback'",
       "pval": 0,
       "depth": 90,
       "rarity": 9,
@@ -584,12 +599,13 @@
           "dice": 0
         }
       },
-      "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on."
+      "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "power_dragon_scale_mail",
       "id": "bladeturner",
-      "name": "The Power Dragon Scale Mail \u0027Bladeturner\u0027",
+      "name": "The Power Dragon Scale Mail 'Bladeturner'",
       "pval": 0,
       "depth": 100,
       "rarity": 16,
@@ -628,12 +644,13 @@
           "dice": 0
         }
       },
-      "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal."
+      "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "balance_dragon_scale_mail",
       "id": "mediator",
-      "name": "The Balance Dragon Scale Mail \u0027Mediator\u0027",
+      "name": "The Balance Dragon Scale Mail 'Mediator'",
       "pval": 0,
       "depth": 95,
       "rarity": 12,
@@ -664,12 +681,13 @@
           "dice": 0
         }
       },
-      "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer."
+      "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "adamantite_plate_mail",
       "id": "soulkeeper",
-      "name": "The Adamantite Plate Mail \u0027Soulkeeper\u0027",
+      "name": "The Adamantite Plate Mail 'Soulkeeper'",
       "pval": 2,
       "depth": 75,
       "rarity": 9,
@@ -701,7 +719,8 @@
           "dice": 0
         }
       },
-      "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can."
+      "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "full_plate_armor",
@@ -727,7 +746,8 @@
         "RES_CONFU",
         "RES_NEXUS"
       ],
-      "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability deeply engraved into its surface."
+      "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability deeply engraved into its surface.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "metal_brigandine_armor",
@@ -755,12 +775,13 @@
         "RES_CONFU",
         "RES_SOUND"
       ],
-      "description": "Small metal plates cover an inner layer of sturdy canvas, and both bear scenes of hunting and war.  You feel the spirit of Eorl the Young, matchless in combat, around you as you put his armour on."
+      "description": "Small metal plates cover an inner layer of sturdy canvas, and both bear scenes of hunting and war.  You feel the spirit of Eorl the Young, matchless in combat, around you as you put his armour on.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "mithril_chain_mail",
       "id": "belegennon",
-      "name": "The Mithril Chain Mail \u0027Belegennon\u0027",
+      "name": "The Mithril Chain Mail 'Belegennon'",
       "pval": 4,
       "depth": 40,
       "rarity": 3,
@@ -788,7 +809,8 @@
           "dice": 0
         }
       },
-      "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within."
+      "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "mithril_plate_mail",
@@ -823,7 +845,8 @@
           "dice": 0
         }
       },
-      "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish."
+      "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "chain_mail",
@@ -850,7 +873,8 @@
         "RES_SHARD",
         "RES_NEXUS"
       ],
-      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, well padded with leather.  You feel as strong and tall as Arvedui, last king of Arnor, as you put it on."
+      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, well padded with leather.  You feel as strong and tall as Arvedui, last king of Arnor, as you put it on.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "augmented_chain_mail",
@@ -883,7 +907,8 @@
           "dice": 0
         }
       },
-      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer\u0027s path."
+      "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "hard_leather_armor",
@@ -912,12 +937,13 @@
           "dice": 100
         }
       },
-      "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth."
+      "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "soft_leather_armor",
       "id": "hithlomir",
-      "name": "The Soft Leather Armor \u0027Hithlomir\u0027",
+      "name": "The Soft Leather Armor 'Hithlomir'",
       "pval": 4,
       "depth": 20,
       "rarity": 3,
@@ -937,12 +963,13 @@
         "RES_COLD",
         "RES_DARK"
       ],
-      "description": "Familar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears."
+      "description": "Familar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "leather_scale_mail",
       "id": "thalkettoth",
-      "name": "The Leather Scale Mail \u0027Thalkettoth\u0027",
+      "name": "The Leather Scale Mail 'Thalkettoth'",
       "pval": 3,
       "depth": 20,
       "rarity": 3,
@@ -960,7 +987,8 @@
         "RES_ACID",
         "RES_SHARD"
       ],
-      "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather whose wearer moves with agility and assurance."
+      "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather whose wearer moves with agility and assurance.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "large_metal_shield",
@@ -997,7 +1025,8 @@
           "dice": 0
         }
       },
-      "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth."
+      "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "small_metal_shield",
@@ -1023,7 +1052,8 @@
         "RES_SOUND",
         "RES_CHAOS"
       ],
-      "description": "Invoking the strength and endurance of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth."
+      "description": "Invoking the strength and endurance of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "large_leather_shield",
@@ -1047,7 +1077,8 @@
         "RES_LITE",
         "RES_DARK"
       ],
-      "description": "This shield emblazoned with a multitude of creatures unseen for ages once protected Celegorm, Lord of Himlad; around it a mystic balance lies, containing the conflicts of the elements."
+      "description": "This shield emblazoned with a multitude of creatures unseen for ages once protected Celegorm, Lord of Himlad; around it a mystic balance lies, containing the conflicts of the elements.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "large_metal_shield",
@@ -1075,7 +1106,8 @@
         "SUST_CON",
         "SUST_CHR"
       ],
-      "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish."
+      "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "metal_cap",
@@ -1101,7 +1133,8 @@
         "RES_DISEN",
         "RES_SHARD"
       ],
-      "description": "A metal cap forged by the greatest Noldorin smith of the Second Age, this helm is of equal use in battle or at the forge, and its enchantment will never be diminished."
+      "description": "A metal cap forged by the greatest Noldorin smith of the Second Age, this helm is of equal use in battle or at the forge, and its enchantment will never be diminished.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "massive_iron_crown",
@@ -1145,7 +1178,8 @@
         "PERMA_CURSE",
         "INSTA_ART"
       ],
-      "description": "Containing much of the power of he who once was mightiest among the Ainur, this plain iron crown has mounted upon it the two remaining Silmarils, greatest treasures of Middle-Earth."
+      "description": "Containing much of the power of he who once was mightiest among the Ainur, this plain iron crown has mounted upon it the two remaining Silmarils, greatest treasures of Middle-Earth.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "iron_crown",
@@ -1172,7 +1206,8 @@
         "LIGHT_CURSE",
         "HEAVY_CURSE"
       ],
-      "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel, which grants extraordinary powers of sight and awareness at a terrible physical cost."
+      "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel, which grants extraordinary powers of sight and awareness at a terrible physical cost.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "hard_leather_cap",
@@ -1195,7 +1230,8 @@
         "RES_BLIND",
         "TELEPATHY"
       ],
-      "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain."
+      "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "metal_cap",
@@ -1217,7 +1253,8 @@
         "RES_CONFU",
         "HIDE_TYPE"
       ],
-      "description": "A ridged helmet made of steel, and embossed with scenes of valor in fine- engraved silver.  It grants the wearer nobility and understanding."
+      "description": "A ridged helmet made of steel, and embossed with scenes of valor in fine- engraved silver.  It grants the wearer nobility and understanding.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "steel_helm",
@@ -1247,7 +1284,8 @@
         "RES_COLD",
         "RES_DARK"
       ],
-      "description": "A great helm, as steady and as distinctive as the hero of the Westdike. Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode out time and again among his foes and slew many. Although they knew of his coming, none could stand against him."
+      "description": "A great helm, as steady and as distinctive as the hero of the Westdike. Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode out time and again among his foes and slew many. Although they knew of his coming, none could stand against him.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "iron_helm",
@@ -1277,12 +1315,13 @@
         "SEE_INVIS",
         "TELEPATHY"
       ],
-      "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth."
+      "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "iron_helm",
       "id": "holhenneth",
-      "name": "The Iron Helm \u0027Holhenneth\u0027",
+      "name": "The Iron Helm 'Holhenneth'",
       "pval": 2,
       "depth": 20,
       "rarity": 5,
@@ -1310,7 +1349,8 @@
           "dice": 55
         }
       },
-      "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness."
+      "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "iron_helm",
@@ -1338,7 +1378,8 @@
         "LIGHT_CURSE",
         "HEAVY_CURSE"
       ],
-      "description": "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed succor."
+      "description": "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed succor.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "golden_crown",
@@ -1379,7 +1420,8 @@
           "dice": 0
         }
       },
-      "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world."
+      "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "jewel_encrusted_crown",
@@ -1412,12 +1454,13 @@
         "RES_BLIND",
         "LITE"
       ],
-      "description": "A crown of massive gold, set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor."
+      "description": "A crown of massive gold, set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "cloak",
       "id": "colluin",
-      "name": "The Cloak \u0027Colluin\u0027",
+      "name": "The Cloak 'Colluin'",
       "pval": 0,
       "depth": 5,
       "rarity": 45,
@@ -1443,12 +1486,13 @@
           "dice": 0
         }
       },
-      "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements."
+      "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "cloak",
       "id": "holcolleth",
-      "name": "The Cloak \u0027Holcolleth\u0027",
+      "name": "The Cloak 'Holcolleth'",
       "pval": 2,
       "depth": 5,
       "rarity": 25,
@@ -1475,7 +1519,8 @@
           "dice": 0
         }
       },
-      "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar."
+      "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "cloak",
@@ -1508,7 +1553,8 @@
           "dice": 0
         }
       },
-      "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water."
+      "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "cloak",
@@ -1530,12 +1576,13 @@
         "RES_FEAR",
         "SEE_INVIS"
       ],
-      "description": "This shimmering cloak of greens and browns was once worn by the young Aragorn, a keen-eyed captain of Gondor, valiant on both land and sea."
+      "description": "This shimmering cloak of greens and browns was once worn by the young Aragorn, a keen-eyed captain of Gondor, valiant on both land and sea.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "cloak",
       "id": "colannon",
-      "name": "The Cloak \u0027Colannon\u0027",
+      "name": "The Cloak 'Colannon'",
       "pval": 3,
       "depth": 5,
       "rarity": 20,
@@ -1560,7 +1607,8 @@
           "dice": 0
         }
       },
-      "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission."
+      "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "shadow_cloak",
@@ -1595,7 +1643,8 @@
           "dice": 0
         }
       },
-      "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death."
+      "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "shadow_cloak",
@@ -1620,7 +1669,8 @@
         "RES_ACID",
         "SEE_INVIS"
       ],
-      "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo\u0027s kingly gift from a multitude of hostile eyes."
+      "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo's kingly gift from a multitude of hostile eyes.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
@@ -1653,12 +1703,13 @@
           "dice": 30
         }
       },
-      "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle."
+      "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "leather_gloves",
       "id": "cambeleg",
-      "name": "The Set of Leather Gloves \u0027Cambeleg\u0027",
+      "name": "The Set of Leather Gloves 'Cambeleg'",
       "pval": 2,
       "depth": 10,
       "rarity": 6,
@@ -1676,12 +1727,13 @@
         "FREE_ACT",
         "SHOW_MODS"
       ],
-      "description": "A hero\u0027s handgear that lends great prowess in battle."
+      "description": "A hero's handgear that lends great prowess in battle.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "leather_gloves",
       "id": "cammithrim",
-      "name": "The Set of Leather Gloves \u0027Cammithrim\u0027",
+      "name": "The Set of Leather Gloves 'Cammithrim'",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1706,12 +1758,13 @@
           "dice": 0
         }
       },
-      "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency."
+      "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
       "id": "paurhach",
-      "name": "The Set of Gauntlets \u0027Paurhach\u0027",
+      "name": "The Set of Gauntlets 'Paurhach'",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1734,12 +1787,13 @@
           "dice": 8
         }
       },
-      "description": "A set of gauntlets that smoulder with an unnatural heat."
+      "description": "A set of gauntlets that smoulder with an unnatural heat.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
       "id": "paurnimmen",
-      "name": "The Set of Gauntlets \u0027Paurnimmen\u0027",
+      "name": "The Set of Gauntlets 'Paurnimmen'",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1762,12 +1816,13 @@
           "dice": 7
         }
       },
-      "description": "A set of handgear, freezing with unnatural cold."
+      "description": "A set of handgear, freezing with unnatural cold.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
       "id": "pauraegen",
-      "name": "The Set of Gauntlets \u0027Pauraegen\u0027",
+      "name": "The Set of Gauntlets 'Pauraegen'",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1790,12 +1845,13 @@
           "dice": 6
         }
       },
-      "description": "A set of handgear with sparks that crackle across its knuckleguards."
+      "description": "A set of handgear with sparks that crackle across its knuckleguards.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
       "id": "paurnen",
-      "name": "The Set of Gauntlets \u0027Paurnen\u0027",
+      "name": "The Set of Gauntlets 'Paurnen'",
       "pval": 0,
       "depth": 10,
       "rarity": 3,
@@ -1818,12 +1874,13 @@
           "dice": 5
         }
       },
-      "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished."
+      "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "gauntlets",
       "id": "camlost",
-      "name": "The Set of Gauntlets \u0027Camlost\u0027",
+      "name": "The Set of Gauntlets 'Camlost'",
       "pval": -3,
       "depth": 10,
       "rarity": 20,
@@ -1847,7 +1904,8 @@
         "HEAVY_CURSE",
         "SHOW_MODS"
       ],
-      "description": "A pair of gauntlets that sap combat ability, named after the empty hand of Beren that once clasped a Silmaril."
+      "description": "A pair of gauntlets that sap combat ability, named after the empty hand of Beren that once clasped a Silmaril.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "set_of_cesti",
@@ -1878,7 +1936,8 @@
           "dice": 30
         }
       },
-      "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever."
+      "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "pair_of_hard_leather_boots",
@@ -1907,12 +1966,13 @@
           "dice": 0
         }
       },
-      "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero\u0027s challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\""
+      "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\"",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "pair_of_soft_leather_boots",
       "id": "dal-i-thalion",
-      "name": "The Pair of Soft Leather Boots \u0027Dal-i-thalion\u0027",
+      "name": "The Pair of Soft Leather Boots 'Dal-i-thalion'",
       "pval": 5,
       "depth": 10,
       "rarity": 25,
@@ -1940,7 +2000,8 @@
           "dice": 0
         }
       },
-      "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility."
+      "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "pair_of_metal_shod_boots",
@@ -1963,7 +2024,8 @@
         "HIDE_TYPE",
         "RES_FEAR"
       ],
-      "description": "Sturdy footwear of leather and steel as enduring as the long-suffering Dwarven king-in-exile who wore them."
+      "description": "Sturdy footwear of leather and steel as enduring as the long-suffering Dwarven king-in-exile who wore them.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "pair_of_soft_leather_boots",
@@ -1996,7 +2058,8 @@
           "dice": 0
         }
       },
-      "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward."
+      "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "main_gauche",
@@ -2023,12 +2086,16 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A short thrusting blade with a large guard worn by Maedhros the Tall, eldest son of Feanor, who lost his right hand in captivity in Angband."
+      "description": "A short thrusting blade with a large guard worn by Maedhros the Tall, eldest son of Feanor, who lost his right hand in captivity in Angband.",
+      "combat_modifiers": [
+        "slay_troll",
+        "slay_giant"
+      ]
     },
     {
       "baseItemId": "dagger",
       "id": "angrist",
-      "name": "Dagger \u0027Angrist\u0027",
+      "name": "Dagger 'Angrist'",
       "pval": 4,
       "depth": 20,
       "rarity": 80,
@@ -2053,12 +2120,18 @@
         "SUST_DEX",
         "SHOW_MODS"
       ],
-      "description": "Forged from meteoric iron by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a Silmaril out of Morgoth\u0027s crown, this long chopping dagger slices through ordinary metal as easily as its name, \"Iron Cleaver\", suggests."
+      "description": "Forged from meteoric iron by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a Silmaril out of Morgoth's crown, this long chopping dagger slices through ordinary metal as easily as its name, \"Iron Cleaver\", suggests.",
+      "combat_modifiers": [
+        "brand_acid",
+        "slay_evil",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "dagger",
       "id": "narthanc",
-      "name": "Dagger \u0027Narthanc\u0027",
+      "name": "Dagger 'Narthanc'",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2082,12 +2155,15 @@
           "dice": 8
         }
       },
-      "description": "A flame, instead of a blade, seems to spring forth from this dagger\u0027s hilt."
+      "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt.",
+      "combat_modifiers": [
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "dagger",
       "id": "nimthanc",
-      "name": "Dagger \u0027Nimthanc\u0027",
+      "name": "Dagger 'Nimthanc'",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2111,12 +2187,15 @@
           "dice": 7
         }
       },
-      "description": "From the hilt of this dagger springs not so much a blade as an icicle."
+      "description": "From the hilt of this dagger springs not so much a blade as an icicle.",
+      "combat_modifiers": [
+        "brand_cold"
+      ]
     },
     {
       "baseItemId": "dagger",
       "id": "dethanc",
-      "name": "Dagger \u0027Dethanc\u0027",
+      "name": "Dagger 'Dethanc'",
       "pval": 0,
       "depth": 4,
       "rarity": 3,
@@ -2140,7 +2219,10 @@
           "dice": 6
         }
       },
-      "description": "In this dagger is bound the very force of the lightning."
+      "description": "In this dagger is bound the very force of the lightning.",
+      "combat_modifiers": [
+        "brand_elec"
+      ]
     },
     {
       "baseItemId": "dagger",
@@ -2171,12 +2253,16 @@
           "dice": 4
         }
       },
-      "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune."
+      "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune.",
+      "combat_modifiers": [
+        "slay_orc",
+        "brand_pois"
+      ]
     },
     {
       "baseItemId": "dagger",
       "id": "belangil",
-      "name": "Dagger \u0027Belangil\u0027",
+      "name": "Dagger 'Belangil'",
       "pval": 2,
       "depth": 10,
       "rarity": 40,
@@ -2205,12 +2291,15 @@
           "dice": 5
         }
       },
-      "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind."
+      "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind.",
+      "combat_modifiers": [
+        "brand_cold"
+      ]
     },
     {
       "baseItemId": "bastard_sword",
       "id": "calris",
-      "name": "Bastard Sword \u0027Calris\u0027",
+      "name": "Bastard Sword 'Calris'",
       "pval": 5,
       "depth": 30,
       "rarity": 15,
@@ -2234,12 +2323,18 @@
         "HEAVY_CURSE",
         "SHOW_MODS"
       ],
-      "description": "This sword has runes of power incused on its ornate hint, and a single blood channel that gleams coldly blue as you grasp this mighty weapon of peril."
+      "description": "This sword has runes of power incused on its ornate hint, and a single blood channel that gleams coldly blue as you grasp this mighty weapon of peril.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "slay_evil",
+        "slay_demon",
+        "slay_troll"
+      ]
     },
     {
       "baseItemId": "broad_sword",
       "id": "arunruth",
-      "name": "Broad Sword \u0027Arunruth\u0027",
+      "name": "Broad Sword 'Arunruth'",
       "pval": 4,
       "depth": 20,
       "rarity": 45,
@@ -2269,12 +2364,16 @@
           "dice": 0
         }
       },
-      "description": "The beautiful sword of Thingol, justly named \"King\u0027s Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay."
+      "description": "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay.",
+      "combat_modifiers": [
+        "slay_demon",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "broad_sword",
       "id": "glamdring",
-      "name": "Broad Sword \u0027Glamdring\u0027",
+      "name": "Broad Sword 'Glamdring'",
       "pval": 1,
       "depth": 20,
       "rarity": 20,
@@ -2299,12 +2398,18 @@
         "SLOW_DIGEST",
         "SHOW_MODS"
       ],
-      "description": "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" from dying orcs who dared to behold hidden Gondolin."
+      "description": "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" from dying orcs who dared to behold hidden Gondolin.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_fire",
+        "slay_orc",
+        "slay_demon"
+      ]
     },
     {
       "baseItemId": "broad_sword",
       "id": "aeglin",
-      "name": "Broad Sword \u0027Aeglin\u0027",
+      "name": "Broad Sword 'Aeglin'",
       "pval": 1,
       "depth": 20,
       "rarity": 30,
@@ -2329,12 +2434,18 @@
         "SLOW_DIGEST",
         "SHOW_MODS"
       ],
-      "description": "Like unto Orcrist and Glamdring, and like them long lost, this sword is continually coved in tiny arcs of captive lightning that flash and dance eerily in the globes of light they create."
+      "description": "Like unto Orcrist and Glamdring, and like them long lost, this sword is continually coved in tiny arcs of captive lightning that flash and dance eerily in the globes of light they create.",
+      "combat_modifiers": [
+        "slay_orc",
+        "slay_troll",
+        "slay_giant",
+        "brand_elec"
+      ]
     },
     {
       "baseItemId": "broad_sword",
       "id": "orcrist",
-      "name": "Broad Sword \u0027Orcrist\u0027",
+      "name": "Broad Sword 'Orcrist'",
       "pval": 3,
       "depth": 20,
       "rarity": 20,
@@ -2359,12 +2470,18 @@
         "SLOW_DIGEST",
         "SHOW_MODS"
       ],
-      "description": "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by orcs who came to know its power all too well."
+      "description": "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by orcs who came to know its power all too well.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_cold",
+        "slay_orc",
+        "slay_dragon"
+      ]
     },
     {
       "baseItemId": "two_handed_sword",
       "id": "gurthang",
-      "name": "Two-Handed Sword \u0027Gurthang\u0027",
+      "name": "Two-Handed Sword 'Gurthang'",
       "pval": 2,
       "depth": 30,
       "rarity": 30,
@@ -2388,12 +2505,17 @@
         "REGEN",
         "SHOW_MODS"
       ],
-      "description": "A giant sword once wielded by mighty Turin, and an even greater dragonbane; for what wyrm could stand against the blade that bathed in Glaurung\u0027s blood?"
+      "description": "A giant sword once wielded by mighty Turin, and an even greater dragonbane; for what wyrm could stand against the blade that bathed in Glaurung's blood?",
+      "combat_modifiers": [
+        "brand_fire",
+        "brand_pois",
+        "kill_dragon"
+      ]
     },
     {
       "baseItemId": "two_handed_sword",
       "id": "zarcuthra",
-      "name": "Two-Handed Sword \u0027Zarcuthra\u0027",
+      "name": "Two-Handed Sword 'Zarcuthra'",
       "pval": 4,
       "depth": 30,
       "rarity": 180,
@@ -2425,12 +2547,23 @@
         "AGGRAVATE",
         "SHOW_MODS"
       ],
-      "description": "Runes dark and deadly stand stark against the naked steel of this awesome weapon, and you feel a wrathful power of slaying and rending as you slowly approach."
+      "description": "Runes dark and deadly stand stark against the naked steel of this awesome weapon, and you feel a wrathful power of slaying and rending as you slowly approach.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "slay_animal",
+        "slay_evil",
+        "brand_fire",
+        "slay_undead",
+        "slay_demon",
+        "slay_troll",
+        "slay_giant",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "two_handed_sword",
       "id": "mormegil",
-      "name": "Two-Handed Sword \u0027Mormegil\u0027",
+      "name": "Two-Handed Sword 'Mormegil'",
       "pval": -10,
       "depth": 30,
       "rarity": 15,
@@ -2455,12 +2588,17 @@
         "LIGHT_CURSE",
         "HEAVY_CURSE"
       ],
-      "description": "A foul, twisted sword with blackened spines and knobs, whose very name is a curse upon the lips of Elves and Men. It is said that it will drink the very lifeblood of its wielder."
+      "description": "A foul, twisted sword with blackened spines and knobs, whose very name is a curse upon the lips of Elves and Men. It is said that it will drink the very lifeblood of its wielder.",
+      "combat_modifiers": [
+        "brand_pois",
+        "kill_dragon",
+        "slay_undead"
+      ]
     },
     {
       "baseItemId": "cutlass",
       "id": "gondricam",
-      "name": "Cutlass \u0027Gondricam\u0027",
+      "name": "Cutlass 'Gondricam'",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -2484,12 +2622,13 @@
         "REGEN",
         "SHOW_MODS"
       ],
-      "description": "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade with a perfect edge shining cleanly in the sun, an object of hate to the men of Umbar who met it in combat."
+      "description": "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade with a perfect edge shining cleanly in the sun, an object of hate to the men of Umbar who met it in combat.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "executioners_sword",
       "id": "crisdurian",
-      "name": "Executioner\u0027s Sword \u0027Crisdurian\u0027",
+      "name": "Executioner's Sword 'Crisdurian'",
       "pval": 0,
       "depth": 40,
       "rarity": 25,
@@ -2510,12 +2649,20 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A giant\u0027s weapon, with a long blade tall and straight thrusting out from a massive double-pronged hilt.  On its blade are written doomspells against both the living and undead."
+      "description": "A giant's weapon, with a long blade tall and straight thrusting out from a massive double-pronged hilt.  On its blade are written doomspells against both the living and undead.",
+      "combat_modifiers": [
+        "slay_dragon",
+        "slay_evil",
+        "slay_undead",
+        "slay_troll",
+        "slay_giant",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "katana",
       "id": "aglarang",
-      "name": "Katana \u0027Aglarang\u0027",
+      "name": "Katana 'Aglarang'",
       "pval": 5,
       "depth": 30,
       "rarity": 25,
@@ -2533,12 +2680,13 @@
         "SUST_DEX",
         "SHOW_MODS"
       ],
-      "description": "An utterly perfect, cleanly chiseled sword, with a edge that effortlessly slices rock and bone and spells to render the wearer lithe and nimble.  It is combat incarnate."
+      "description": "An utterly perfect, cleanly chiseled sword, with a edge that effortlessly slices rock and bone and spells to render the wearer lithe and nimble.  It is combat incarnate.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "long_sword",
       "id": "ringil",
-      "name": "Long Sword \u0027Ringil\u0027",
+      "name": "Long Sword 'Ringil'",
       "pval": 10,
       "depth": 20,
       "rarity": 120,
@@ -2575,12 +2723,19 @@
           "dice": 0
         }
       },
-      "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again."
+      "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_cold",
+        "slay_undead",
+        "kill_demon",
+        "slay_troll"
+      ]
     },
     {
       "baseItemId": "long_sword",
       "id": "anduril",
-      "name": "Long Sword \u0027Anduril\u0027",
+      "name": "Long Sword 'Anduril'",
       "pval": 4,
       "depth": 20,
       "rarity": 40,
@@ -2618,12 +2773,19 @@
           "dice": 0
         }
       },
-      "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it."
+      "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_fire",
+        "slay_troll",
+        "slay_orc",
+        "slay_undead"
+      ]
     },
     {
       "baseItemId": "long_sword",
       "id": "anguirel",
-      "name": "Long Sword \u0027Anguirel\u0027",
+      "name": "Long Sword 'Anguirel'",
       "pval": 2,
       "depth": 20,
       "rarity": 30,
@@ -2651,12 +2813,17 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "Forged of black galvorn by the Dark-Elven smith Eol, and as deadly as any other blade he forged."
+      "description": "Forged of black galvorn by the Dark-Elven smith Eol, and as deadly as any other blade he forged.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_pois",
+        "slay_demon"
+      ]
     },
     {
       "baseItemId": "long_sword",
       "id": "elvagil",
-      "name": "Long Sword \u0027Elvagil\u0027",
+      "name": "Long Sword 'Elvagil'",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -2678,12 +2845,16 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "The \"Singing Blade\", whose wearer can slay Orcs and Trolls in the hidden and secret places of the earth."
+      "description": "The \"Singing Blade\", whose wearer can slay Orcs and Trolls in the hidden and secret places of the earth.",
+      "combat_modifiers": [
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "rapier",
       "id": "forasgil",
-      "name": "Rapier \u0027Forasgil\u0027",
+      "name": "Rapier 'Forasgil'",
       "pval": 0,
       "depth": 15,
       "rarity": 8,
@@ -2702,12 +2873,16 @@
         "LITE",
         "SHOW_MODS"
       ],
-      "description": "A slender, tapered needle of ice that coldly grips its impaled prey."
+      "description": "A slender, tapered needle of ice that coldly grips its impaled prey.",
+      "combat_modifiers": [
+        "slay_animal",
+        "brand_cold"
+      ]
     },
     {
       "baseItemId": "sabre",
       "id": "careth_asdriag",
-      "name": "Sabre \u0027Careth Asdriag\u0027",
+      "name": "Sabre 'Careth Asdriag'",
       "pval": 1,
       "depth": 15,
       "rarity": 8,
@@ -2728,12 +2903,19 @@
         "SLAY_ORC",
         "SHOW_MODS"
       ],
-      "description": "An heirloom of the dauntless Lords of Rhun far to the east, and a name of dismay to creatures natural and unnatural."
+      "description": "An heirloom of the dauntless Lords of Rhun far to the east, and a name of dismay to creatures natural and unnatural.",
+      "combat_modifiers": [
+        "slay_dragon",
+        "slay_animal",
+        "slay_troll",
+        "slay_giant",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "small_sword",
       "id": "sting",
-      "name": "Small Sword \u0027Sting\u0027",
+      "name": "Small Sword 'Sting'",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -2762,12 +2944,18 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "\"I will give you a name, and I shall call you Sting.\"  The perfect size for Bilbo, and stamped forever by the courage he found in Mirkwood, this sturdy little blade grants the wearer combat prowess and survival abilities he did not know he had."
+      "description": "\"I will give you a name, and I shall call you Sting.\"  The perfect size for Bilbo, and stamped forever by the courage he found in Mirkwood, this sturdy little blade grants the wearer combat prowess and survival abilities he did not know he had.",
+      "combat_modifiers": [
+        "slay_evil",
+        "slay_undead",
+        "slay_orc",
+        "slay_animal"
+      ]
     },
     {
       "baseItemId": "scimitar",
       "id": "haradekket",
-      "name": "Scimitar \u0027Haradekket\u0027",
+      "name": "Scimitar 'Haradekket'",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -2788,12 +2976,17 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A damascened scimitar that hefts with wondrous ease.  Famed in song as the \"Sickle of Harad\", and a deadly foe to the undead."
+      "description": "A damascened scimitar that hefts with wondrous ease.  Famed in song as the \"Sickle of Harad\", and a deadly foe to the undead.",
+      "combat_modifiers": [
+        "slay_animal",
+        "slay_evil",
+        "slay_undead"
+      ]
     },
     {
       "baseItemId": "short_sword",
       "id": "dagmor",
-      "name": "Short Sword \u0027Dagmor\u0027",
+      "name": "Short Sword 'Dagmor'",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -2813,12 +3006,16 @@
         "REGEN",
         "SHOW_MODS"
       ],
-      "description": "A stubby blade worn by Beren, whose horn sounded of old in the glades of Brethil."
+      "description": "A stubby blade worn by Beren, whose horn sounded of old in the glades of Brethil.",
+      "combat_modifiers": [
+        "brand_pois",
+        "slay_animal"
+      ]
     },
     {
       "baseItemId": "blade_of_chaos",
       "id": "doomcaller",
-      "name": "Blade of Chaos \u0027Doomcaller\u0027",
+      "name": "Blade of Chaos 'Doomcaller'",
       "pval": 0,
       "depth": 70,
       "rarity": 25,
@@ -2847,7 +3044,15 @@
         "AGGRAVATE",
         "SHOW_MODS"
       ],
-      "description": "This weapon of wrath, wrought by a desperate berserker gang, dives hungrily into the yielding flesh of your enemies.  You yourself fall under the shadow of death even as you inflict wounds that will not heal."
+      "description": "This weapon of wrath, wrought by a desperate berserker gang, dives hungrily into the yielding flesh of your enemies.  You yourself fall under the shadow of death even as you inflict wounds that will not heal.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "slay_animal",
+        "slay_evil",
+        "brand_cold",
+        "slay_troll",
+        "slay_demon"
+      ]
     },
     {
       "baseItemId": "spear",
@@ -2876,7 +3081,10 @@
         "RES_LITE",
         "RES_NETHR"
       ],
-      "description": "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as he came to Valinor in wrath. Its envenomed bite pierced the Two Trees with wounds that would not heal."
+      "description": "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as he came to Valinor in wrath. Its envenomed bite pierced the Two Trees with wounds that would not heal.",
+      "combat_modifiers": [
+        "brand_pois"
+      ]
     },
     {
       "baseItemId": "beaked_axe",
@@ -2909,7 +3117,10 @@
           "dice": 0
         }
       },
-      "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed."
+      "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed.",
+      "combat_modifiers": [
+        "slay_dragon"
+      ]
     },
     {
       "baseItemId": "glaive",
@@ -2929,12 +3140,13 @@
         "SHOW_MODS",
         "RES_FEAR"
       ],
-      "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death\u0027s myrmidon down."
+      "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death's myrmidon down.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "halberd",
       "id": "osondir",
-      "name": "Halberd \u0027Osondir\u0027",
+      "name": "Halberd 'Osondir'",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -2957,12 +3169,17 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "Lordly and tall did Osondir stand against the wrath of giants, and clear-eyed in barrows fell, wielding a halberd glowing ruby red."
+      "description": "Lordly and tall did Osondir stand against the wrath of giants, and clear-eyed in barrows fell, wielding a halberd glowing ruby red.",
+      "combat_modifiers": [
+        "brand_fire",
+        "slay_undead",
+        "slay_giant"
+      ]
     },
     {
       "baseItemId": "pike",
       "id": "til_i_arc",
-      "name": "Pike \u0027Til-i-arc\u0027",
+      "name": "Pike 'Til-i-arc'",
       "pval": 2,
       "depth": 20,
       "rarity": 15,
@@ -2987,12 +3204,19 @@
         "SLOW_DIGEST",
         "SHOW_MODS"
       ],
-      "description": "Within this long two-handed spear dwell the spirits of frost giants and fire demons, who war forever, fettered in sorcerous binds."
+      "description": "Within this long two-handed spear dwell the spirits of frost giants and fire demons, who war forever, fettered in sorcerous binds.",
+      "combat_modifiers": [
+        "brand_cold",
+        "brand_fire",
+        "slay_demon",
+        "slay_troll",
+        "slay_giant"
+      ]
     },
     {
       "baseItemId": "spear",
       "id": "aeglos",
-      "name": "Spear \u0027Aeglos\u0027",
+      "name": "Spear 'Aeglos'",
       "pval": 4,
       "depth": 15,
       "rarity": 45,
@@ -3027,7 +3251,14 @@
           "dice": 0
         }
       },
-      "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain."
+      "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain.",
+      "combat_modifiers": [
+        "brand_cold",
+        "slay_evil",
+        "slay_troll",
+        "slay_orc",
+        "kill_undead"
+      ]
     },
     {
       "baseItemId": "spear",
@@ -3067,12 +3298,17 @@
           "dice": 0
         }
       },
-      "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease."
+      "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease.",
+      "combat_modifiers": [
+        "brand_fire",
+        "slay_giant",
+        "slay_animal"
+      ]
     },
     {
       "baseItemId": "spear",
       "id": "nimloth",
-      "name": "Spear \u0027Nimloth\u0027",
+      "name": "Spear 'Nimloth'",
       "pval": 3,
       "depth": 15,
       "rarity": 12,
@@ -3094,7 +3330,11 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a legendary tree, and spells to break the wills of the undead and strike cold into the breasts of your enemies lay upon this perfectly balanced spear."
+      "description": "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a legendary tree, and spells to break the wills of the undead and strike cold into the breasts of your enemies lay upon this perfectly balanced spear.",
+      "combat_modifiers": [
+        "brand_cold",
+        "slay_undead"
+      ]
     },
     {
       "baseItemId": "lance",
@@ -3122,7 +3362,12 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "\"Forth Eorlingas!\"  To the field of Cormallen Eorl the Young came beyond hope to save beleaguered Gondor, and from his lance fled massive trolls and dire wolves."
+      "description": "\"Forth Eorlingas!\"  To the field of Cormallen Eorl the Young came beyond hope to save beleaguered Gondor, and from his lance fled massive trolls and dire wolves.",
+      "combat_modifiers": [
+        "slay_evil",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "great_axe",
@@ -3159,7 +3404,15 @@
         "RES_CHAOS",
         "SHOW_MODS"
       ],
-      "description": "The twin massive axe heads of this ancient demon\u0027s dread gleam with mithril inlay, which tell sagas of endurance, invoking the powers of Kazad-dum to protect the wearer and slay all evils found underground."
+      "description": "The twin massive axe heads of this ancient demon's dread gleam with mithril inlay, which tell sagas of endurance, invoking the powers of Kazad-dum to protect the wearer and slay all evils found underground.",
+      "combat_modifiers": [
+        "brand_acid",
+        "brand_fire",
+        "kill_dragon",
+        "slay_demon",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "great_axe",
@@ -3204,7 +3457,14 @@
           "dice": 0
         }
       },
-      "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind."
+      "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_cold",
+        "slay_undead",
+        "kill_demon",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "battle_axe",
@@ -3239,12 +3499,17 @@
         "REGEN",
         "SHOW_MODS"
       ],
-      "description": "The twin blades of this weapon were forged in Belegost, and powerful forces to resist and endure lie ready for he who shall wield it once more."
+      "description": "The twin blades of this weapon were forged in Belegost, and powerful forces to resist and endure lie ready for he who shall wield it once more.",
+      "combat_modifiers": [
+        "slay_demon",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "battle_axe",
       "id": "lotharang",
-      "name": "Battle Axe \u0027Lotharang\u0027",
+      "name": "Battle Axe 'Lotharang'",
       "pval": 1,
       "depth": 30,
       "rarity": 15,
@@ -3271,12 +3536,16 @@
           "dice": 3
         }
       },
-      "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor."
+      "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor.",
+      "combat_modifiers": [
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "lochaber_axe",
       "id": "mundwine",
-      "name": "Lochaber Axe \u0027Mundwine\u0027",
+      "name": "Lochaber Axe 'Mundwine'",
       "pval": 0,
       "depth": 30,
       "rarity": 8,
@@ -3297,12 +3566,17 @@
         "RES_COLD",
         "SHOW_MODS"
       ],
-      "description": "A massive axe with twin razor-sharp heads, so large that it usually requires two hands to wield, with spells to ward off the elements intricately engraved upon its surface in filleted gold."
+      "description": "A massive axe with twin razor-sharp heads, so large that it usually requires two hands to wield, with spells to ward off the elements intricately engraved upon its surface in filleted gold.",
+      "combat_modifiers": [
+        "slay_evil",
+        "slay_animal",
+        "slay_demon"
+      ]
     },
     {
       "baseItemId": "broad_axe",
       "id": "barukkheled",
-      "name": "Broad Axe \u0027Barukkheled\u0027",
+      "name": "Broad Axe 'Barukkheled'",
       "pval": 3,
       "depth": 20,
       "rarity": 8,
@@ -3323,7 +3597,13 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "A royal heirloom of the southern coast, strong in combat against the evil creatures of earth."
+      "description": "A royal heirloom of the southern coast, strong in combat against the evil creatures of earth.",
+      "combat_modifiers": [
+        "slay_evil",
+        "slay_troll",
+        "slay_giant",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "trident",
@@ -3352,7 +3632,12 @@
         "BLESSED",
         "SHOW_MODS"
       ],
-      "description": "A massive triple-pronged spear, so great it normally requires two hands to wield, evoking the spirit of Osse who with it pierced legions of evil and undead."
+      "description": "A massive triple-pronged spear, so great it normally requires two hands to wield, evoking the spirit of Osse who with it pierced legions of evil and undead.",
+      "combat_modifiers": [
+        "brand_pois",
+        "slay_evil",
+        "kill_undead"
+      ]
     },
     {
       "baseItemId": "trident",
@@ -3392,12 +3677,16 @@
           "dice": 0
         }
       },
-      "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water."
+      "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water.",
+      "combat_modifiers": [
+        "slay_dragon",
+        "slay_animal"
+      ]
     },
     {
       "baseItemId": "scythe",
       "id": "avavir",
-      "name": "Scythe \u0027Avavir\u0027",
+      "name": "Scythe 'Avavir'",
       "pval": 3,
       "depth": 40,
       "rarity": 8,
@@ -3430,7 +3719,11 @@
           "dice": 0
         }
       },
-      "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning."
+      "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning.",
+      "combat_modifiers": [
+        "brand_cold",
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "beaked_axe",
@@ -3468,12 +3761,18 @@
           "dice": 80
         }
       },
-      "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog\u0027s troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\""
+      "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog's troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\"",
+      "combat_modifiers": [
+        "kill_demon",
+        "brand_acid",
+        "slay_dragon",
+        "slay_troll"
+      ]
     },
     {
       "baseItemId": "mighty_hammer",
       "id": "grond",
-      "name": "Mighty Hammer \u0027Grond\u0027",
+      "name": "Mighty Hammer 'Grond'",
       "pval": 0,
       "depth": 100,
       "rarity": 1,
@@ -3499,12 +3798,22 @@
         "SHOW_MODS",
         "INSTA_ART"
       ],
-      "description": "The mighty Hammer of the Underworld, blackened by doomspells of shattering, whose wielder holds the lives of all Morgoth\u0027s servants in his hand."
+      "description": "The mighty Hammer of the Underworld, blackened by doomspells of shattering, whose wielder holds the lives of all Morgoth's servants in his hand.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "slay_animal",
+        "slay_evil",
+        "impact",
+        "kill_undead",
+        "kill_demon",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "flail",
       "id": "totila",
-      "name": "Flail \u0027Totila\u0027",
+      "name": "Flail 'Totila'",
       "pval": 2,
       "depth": 20,
       "rarity": 8,
@@ -3531,12 +3840,16 @@
           "dice": 0
         }
       },
-      "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down."
+      "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down.",
+      "combat_modifiers": [
+        "slay_evil",
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "two_handed_flail",
       "id": "thunderfist",
-      "name": "Two-Handed Flail \u0027Thunderfist\u0027",
+      "name": "Two-Handed Flail 'Thunderfist'",
       "pval": 4,
       "depth": 45,
       "rarity": 38,
@@ -3562,12 +3875,19 @@
         "RES_DARK",
         "SHOW_MODS"
       ],
-      "description": "The long-lost weapon of Kzurin, Dwarven champion of ancient Belegost, with runes of strength in its handle, and flames and sparks that roar and crackle around its massive head."
+      "description": "The long-lost weapon of Kzurin, Dwarven champion of ancient Belegost, with runes of strength in its handle, and flames and sparks that roar and crackle around its massive head.",
+      "combat_modifiers": [
+        "slay_animal",
+        "brand_fire",
+        "brand_elec",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "morning_star",
       "id": "bloodspike",
-      "name": "Morning Star \u0027Bloodspike\u0027",
+      "name": "Morning Star 'Bloodspike'",
       "pval": 4,
       "depth": 20,
       "rarity": 30,
@@ -3589,12 +3909,18 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "You feel strong and firm of foot as you whip the chain-suspended spiked orb this weapon bears around and bathe it in the blood of your foes."
+      "description": "You feel strong and firm of foot as you whip the chain-suspended spiked orb this weapon bears around and bathe it in the blood of your foes.",
+      "combat_modifiers": [
+        "brand_pois",
+        "slay_animal",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "morning_star",
       "id": "firestar",
-      "name": "Morning Star \u0027Firestar\u0027",
+      "name": "Morning Star 'Firestar'",
       "pval": 0,
       "depth": 20,
       "rarity": 15,
@@ -3618,12 +3944,15 @@
           "dice": 0
         }
       },
-      "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath."
+      "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath.",
+      "combat_modifiers": [
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "mace",
       "id": "taratol",
-      "name": "Mace \u0027Taratol\u0027",
+      "name": "Mace 'Taratol'",
       "pval": 0,
       "depth": 20,
       "rarity": 15,
@@ -3649,7 +3978,11 @@
           "dice": 100
         }
       },
-      "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows."
+      "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "brand_elec"
+      ]
     },
     {
       "baseItemId": "war_hammer",
@@ -3684,12 +4017,19 @@
         "SEE_INVIS",
         "SHOW_MODS"
       ],
-      "description": "The wondrous hammer of Aule, creator of the wise Dwarven lords of old. It bears magics of demolishing that no serpent or demon can withstand, and invokes the strength of mountains to ward off the tumult of the elements."
+      "description": "The wondrous hammer of Aule, creator of the wise Dwarven lords of old. It bears magics of demolishing that no serpent or demon can withstand, and invokes the strength of mountains to ward off the tumult of the elements.",
+      "combat_modifiers": [
+        "kill_dragon",
+        "slay_evil",
+        "brand_acid",
+        "slay_undead",
+        "slay_demon"
+      ]
     },
     {
       "baseItemId": "quarterstaff",
       "id": "nar_i_vagil",
-      "name": "Quarterstaff \u0027Nar-i-vagil\u0027",
+      "name": "Quarterstaff 'Nar-i-vagil'",
       "pval": 3,
       "depth": 20,
       "rarity": 18,
@@ -3708,12 +4048,16 @@
         "RES_FIRE",
         "SHOW_MODS"
       ],
-      "description": "Named for a fiery star and set with gems of great worth binding mystic virtues of protection and thought."
+      "description": "Named for a fiery star and set with gems of great worth binding mystic virtues of protection and thought.",
+      "combat_modifiers": [
+        "slay_animal",
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "quarterstaff",
       "id": "eriril",
-      "name": "Quarterstaff \u0027Eriril\u0027",
+      "name": "Quarterstaff 'Eriril'",
       "pval": 4,
       "depth": 20,
       "rarity": 18,
@@ -3742,7 +4086,10 @@
           "dice": 0
         }
       },
-      "description": "The radiant golden staff of an Istar of legend; this wizard\u0027s companion grants keen sight and clear knowledge of many hidden things."
+      "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things.",
+      "combat_modifiers": [
+        "slay_evil"
+      ]
     },
     {
       "baseItemId": "quarterstaff",
@@ -3782,12 +4129,19 @@
           "dice": 0
         }
       },
-      "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals."
+      "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals.",
+      "combat_modifiers": [
+        "kill_demon",
+        "slay_evil",
+        "brand_fire",
+        "slay_troll",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "mace",
       "id": "deathwreaker",
-      "name": "Mace of Disruption \u0027Deathwreaker\u0027",
+      "name": "Mace of Disruption 'Deathwreaker'",
       "pval": 6,
       "depth": 80,
       "rarity": 38,
@@ -3815,12 +4169,19 @@
         "AGGRAVATE",
         "SHOW_MODS"
       ],
-      "description": "A weapon so massive it seems beyond the strength of mortals, yet you feel the might of giants within you as you heft it.  As you grip the handle of ebony and steel, coronas of fire blaze and mighty spells to preserve magic activate around you.  You wield the Fear of Dragons and the Despair of the Undead!"
+      "description": "A weapon so massive it seems beyond the strength of mortals, yet you feel the might of giants within you as you heft it.  As you grip the handle of ebony and steel, coronas of fire blaze and mighty spells to preserve magic activate around you.  You wield the Fear of Dragons and the Despair of the Undead!",
+      "combat_modifiers": [
+        "slay_dragon",
+        "slay_animal",
+        "slay_evil",
+        "kill_undead",
+        "brand_fire"
+      ]
     },
     {
       "baseItemId": "lucerne_hammer",
       "id": "turmil",
-      "name": "Lucerne Hammer \u0027Turmil\u0027",
+      "name": "Lucerne Hammer 'Turmil'",
       "pval": 4,
       "depth": 20,
       "rarity": 15,
@@ -3852,7 +4213,11 @@
         }
       },
       "recharge_dice": 0,
-      "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically."
+      "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically.",
+      "combat_modifiers": [
+        "brand_cold",
+        "slay_orc"
+      ]
     },
     {
       "baseItemId": "whip",
@@ -3895,12 +4260,19 @@
           "dice": 0
         }
       },
-      "description": "A great crackling Balrog\u0027s whip of flame, this weapon could bring even Ungoliant to heel."
+      "description": "A great crackling Balrog's whip of flame, this weapon could bring even Ungoliant to heel.",
+      "combat_modifiers": [
+        "brand_fire",
+        "slay_animal",
+        "kill_dragon",
+        "slay_troll",
+        "slay_giant"
+      ]
     },
     {
       "baseItemId": "long_bow",
       "id": "belthronding",
-      "name": "The Long Bow \u0027Belthronding\u0027",
+      "name": "The Long Bow 'Belthronding'",
       "pval": 1,
       "depth": 40,
       "rarity": 20,
@@ -3920,7 +4292,8 @@
         "RES_DISEN",
         "SHOW_MODS"
       ],
-      "description": "The great bow of Beleg Cuthalion, made of black yew and strung with elven hair that faintly shimmers a pale clear gold."
+      "description": "The great bow of Beleg Cuthalion, made of black yew and strung with elven hair that faintly shimmers a pale clear gold.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "long_bow",
@@ -3944,12 +4317,13 @@
         "FREE_ACT",
         "SHOW_MODS"
       ],
-      "description": "The great yew bow of grim-faced Bard, who shot the mightiest arrow that songs record."
+      "description": "The great yew bow of grim-faced Bard, who shot the mightiest arrow that songs record.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "heavy_crossbow",
       "id": "cubragol",
-      "name": "\u0027Cubragol\u0027",
+      "name": "'Cubragol'",
       "pval": 10,
       "depth": 50,
       "rarity": 25,
@@ -3974,7 +4348,8 @@
           "base": 999,
           "dice": 0
         }
-      }
+      },
+      "combat_modifiers": []
     },
     {
       "baseItemId": "heavy_crossbow",
@@ -4010,7 +4385,8 @@
           "base": 20,
           "dice": 20
         }
-      }
+      },
+      "combat_modifiers": []
     },
     {
       "baseItemId": "long_bow",
@@ -4035,7 +4411,8 @@
         "RES_COLD",
         "REGEN"
       ],
-      "description": "A hunting bow, once wielded by one of Feanor\u0027s last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
+      "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "long_bow",
@@ -4063,7 +4440,8 @@
         "RES_COLD",
         "SLOW_DIGEST"
       ],
-      "description": "A hunting bow, once wielded by one of Feanor\u0027s last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand."
+      "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
+      "combat_modifiers": []
     },
     {
       "baseItemId": "mattock",
@@ -4099,7 +4477,13 @@
           "base": 2,
           "dice": 0
         }
-      }
+      },
+      "combat_modifiers": [
+        "slay_orc",
+        "slay_troll",
+        "slay_giant",
+        "slay_dragon"
+      ]
     },
     {
       "baseItemId": "dwarven_pick",
@@ -4130,7 +4514,13 @@
         "RES_LITE",
         "RES_DARK"
       ],
-      "description": "A fine dwarven pick, good for a miner, and suitable as a weapon should the wielder ever tunnel through into a foe\u0027s stronghold."
+      "description": "A fine dwarven pick, good for a miner, and suitable as a weapon should the wielder ever tunnel through into a foe's stronghold.",
+      "combat_modifiers": [
+        "slay_orc",
+        "slay_troll",
+        "slay_demon",
+        "brand_acid"
+      ]
     },
     {
       "baseItemId": "mighty_hammer",
@@ -4167,7 +4557,11 @@
           "base": 100,
           "dice": 100
         }
-      }
+      },
+      "combat_modifiers": [
+        "slay_evil",
+        "slay_undead"
+      ]
     },
     {
       "baseItemId": "mighty_hammer",
@@ -4189,7 +4583,10 @@
         "RES_ACID",
         "RES_FEAR"
       ],
-      "description": "Azaghal, Dwarf-king of Beregost, fell before Glaurung in the Battle of Unnumbered Tears, but with his final stroke he dealt Glaurung such a blow that the Father of Dragons fled the field with all his kin, and was at first believed to be mortally wounded."
+      "description": "Azaghal, Dwarf-king of Beregost, fell before Glaurung in the Battle of Unnumbered Tears, but with his final stroke he dealt Glaurung such a blow that the Father of Dragons fled the field with all his kin, and was at first believed to be mortally wounded.",
+      "combat_modifiers": [
+        "kill_dragon"
+      ]
     },
     {
       "baseItemId": "small_metal_shield",
@@ -4224,12 +4621,13 @@
           "base": 50,
           "dice": 0
         }
-      }
+      },
+      "combat_modifiers": []
     },
     {
       "baseItemId": "broken_sword",
       "id": "narsil",
-      "name": "\u0027Narsil\u0027",
+      "name": "'Narsil'",
       "pval": 2,
       "depth": 10,
       "rarity": 4,
@@ -4250,7 +4648,11 @@
         "BLESSED",
         "HIDE_TYPE"
       ],
-      "description": "The remnants of the sword whose shattered hilt once cut the One Ring off the hand of Sauron."
+      "description": "The remnants of the sword whose shattered hilt once cut the One Ring off the hand of Sauron.",
+      "combat_modifiers": [
+        "slay_orc",
+        "slay_troll"
+      ]
     },
     {
       "baseItemId": "long_sword",
@@ -4280,7 +4682,13 @@
         "RES_DARK",
         "RES_COLD"
       ],
-      "description": "The blade of the legendary Shieldmaiden of Rohan, who struck a mighty blow against the Morgul-lord whom no mortal Man could hinder, and also slew his foul steed."
+      "description": "The blade of the legendary Shieldmaiden of Rohan, who struck a mighty blow against the Morgul-lord whom no mortal Man could hinder, and also slew his foul steed.",
+      "combat_modifiers": [
+        "slay_evil",
+        "kill_undead",
+        "slay_giant",
+        "slay_animal"
+      ]
     }
   ]
 }

@@ -56,6 +56,7 @@ internal static class DefinitionCatalogBuilder
         CoreCatalogValidator.ValidateStatuses(documents["statuses"], statusRegistry, report);
         ItemValidator.Validate(documents, actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, report);
         ItemValidator.ValidateEgoCombatModifiers(documents["ego_items"], documents["combat_modifiers"], report);
+        ItemValidator.ValidateArtifactCombatModifiers(documents["artifacts"], documents["combat_modifiers"], report);
         SpellValidator.Validate(documents, validationRegistries, report);
         ActivationValidator.Validate(documents["activations"], validationRegistries, report);
         MonsterValidator.ValidateAbilities(documents["monster_abilities"], validationRegistries, report);
