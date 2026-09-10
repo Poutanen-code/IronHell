@@ -1484,13 +1484,6 @@
         "RES_POIS",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "PHASE",
-        "recharge": {
-          "base": 2,
-          "dice": 0
-        }
-      },
       "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within.",
       "effects": {
         "capabilities": [],
@@ -1502,9 +1495,13 @@
           "res_pois"
         ],
         "curses": [],
-        "activations": [
-          "PHASE"
-        ],
+        "activation": {
+          "id": "PHASE",
+          "recharge": {
+            "base": 2,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1549,13 +1546,6 @@
         "RES_DISEN",
         "ACTIVATE"
       ],
-      "activation": {
-        "id": "BANISHMENT",
-        "recharge": {
-          "base": 500,
-          "dice": 0
-        }
-      },
       "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish.",
       "effects": {
         "capabilities": [],
@@ -1568,9 +1558,13 @@
           "res_disen"
         ],
         "curses": [],
-        "activations": [
-          "BANISHMENT"
-        ],
+        "activation": {
+          "id": "BANISHMENT",
+          "recharge": {
+            "base": 500,
+            "dice": 0
+          }
+        },
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -4506,6 +4500,7 @@
       "description": "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" from dying orcs who dared to behold hidden Gondolin.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "slow_digest"
         ],
         "resistances": [
@@ -4572,6 +4567,7 @@
       "description": "Like unto Orcrist and Glamdring, and like them long lost, this sword is continually coved in tiny arcs of captive lightning that flash and dance eerily in the globes of light they create.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "slow_digest"
         ],
         "resistances": [
@@ -4638,6 +4634,7 @@
       "description": "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by orcs who came to know its power all too well.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "slow_digest"
         ],
         "resistances": [
@@ -5083,6 +5080,7 @@
       "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "free_act",
           "see_invis",
           "slow_digest",
@@ -5166,6 +5164,7 @@
       "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "free_act",
           "sust_str",
           "sust_dex",
@@ -6066,7 +6065,8 @@
       "effects": {
         "capabilities": [
           "free_act",
-          "slow_digest"
+          "slow_digest",
+          "blessed_item"
         ],
         "resistances": [
           "res_fear",
@@ -6147,7 +6147,8 @@
       "effects": {
         "capabilities": [
           "feather",
-          "see_invis"
+          "see_invis",
+          "blessed_item"
         ],
         "resistances": [
           "res_fire",
@@ -6223,6 +6224,7 @@
       "description": "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a legendary tree, and spells to break the wills of the undead and strike cold into the breasts of your enemies lay upon this perfectly balanced spear.",
       "effects": {
         "capabilities": [
+          "blessed_item",
           "see_invis"
         ],
         "resistances": [
@@ -6449,7 +6451,8 @@
       "effects": {
         "capabilities": [
           "free_act",
-          "see_invis"
+          "see_invis",
+          "blessed_item"
         ],
         "resistances": [
           "res_fear",
@@ -6794,7 +6797,8 @@
       "description": "A massive triple-pronged spear, so great it normally requires two hands to wield, evoking the spirit of Osse who with it pierced legions of evil and undead.",
       "effects": {
         "capabilities": [
-          "see_invis"
+          "see_invis",
+          "blessed_item"
         ],
         "resistances": [
           "res_lite",
@@ -6866,7 +6870,8 @@
           "hold_life",
           "see_invis",
           "slow_digest",
-          "regen"
+          "regen",
+          "blessed_item"
         ],
         "resistances": [
           "imm_acid",
@@ -8503,7 +8508,6 @@
         "ACTIVATE"
       ],
       "description": "The weapon of a mighty dwarven priest, whose shade is rumoured to still haunt the halls of Angband itself.",
-
       "effects": {
         "capabilities": [
           "hold_life"
@@ -8694,7 +8698,9 @@
       ],
       "description": "The remnants of the sword whose shattered hilt once cut the One Ring off the hand of Sauron.",
       "effects": {
-        "capabilities": [],
+        "capabilities": [
+          "blessed_item"
+        ],
         "resistances": [
           "res_fire"
         ],
