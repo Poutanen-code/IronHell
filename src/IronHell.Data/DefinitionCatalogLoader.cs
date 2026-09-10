@@ -25,6 +25,6 @@ public static class DefinitionCatalogLoader
         var catalog = DefinitionCatalogBuilder.Build(documents, report);
         return report.HasErrors
             ? new DefinitionLoadFailure(report.ToImmutable())
-            : new DefinitionLoadSuccess(catalog!);
+            : new DefinitionLoadSuccess(catalog!, report.ToImmutable());
     }
 }

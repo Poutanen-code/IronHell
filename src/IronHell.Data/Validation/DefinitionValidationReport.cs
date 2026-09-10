@@ -5,6 +5,7 @@ namespace IronHell.Data.Validation;
 public sealed class DefinitionValidationReport
 {
     private readonly List<DefinitionValidationError> _errors = [];
+    private readonly List<DefinitionValidationError> _warnings = [];
 
     public bool HasErrors => _errors.Count > 0;
 
@@ -13,8 +14,19 @@ public sealed class DefinitionValidationReport
         _errors.Add(new DefinitionValidationError(documentPath, definitionId, fieldPath, code, message));
     }
 
+    public void AddWarning(string documentPath, string? definitionId, string fieldPath, string code, string message)
+    {
+        _warnings.Add(new DefinitionValidationError(documentPath, definitionId, fieldPath, code, message));
+    }
+
     public DefinitionValidationReportSnapshot ToImmutable() => new(
         _errors
+            .OrderBy(error => error.DocumentPath, StringComparer.Ordinal)
+            .ThenBy(error => error.DefinitionId, StringComparer.Ordinal)
+            .ThenBy(error => error.FieldPath, StringComparer.Ordinal)
+            .ThenBy(error => error.Code, StringComparer.Ordinal)
+            .ToImmutableArray(),
+        _warnings
             .OrderBy(error => error.DocumentPath, StringComparer.Ordinal)
             .ThenBy(error => error.DefinitionId, StringComparer.Ordinal)
             .ThenBy(error => error.FieldPath, StringComparer.Ordinal)
@@ -22,7 +34,9 @@ public sealed class DefinitionValidationReport
             .ToImmutableArray());
 }
 
-public sealed record DefinitionValidationReportSnapshot(ImmutableArray<DefinitionValidationError> Errors);
+public sealed record DefinitionValidationReportSnapshot(
+    ImmutableArray<DefinitionValidationError> Errors,
+    ImmutableArray<DefinitionValidationError> Warnings);
 
 public sealed record DefinitionValidationError(
     string DocumentPath,
