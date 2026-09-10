@@ -11,4 +11,9 @@
   <ItemGroup>
     <ProjectReference Include="..\IronHell.Core\IronHell.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>IronHell.Data.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

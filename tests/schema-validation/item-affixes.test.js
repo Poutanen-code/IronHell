@@ -31,10 +31,11 @@ describe("item affix catalog", () => {
     assert.equal(catalog.item_affixes.length, 18);
   });
 
-  it("validates artifact affix references and preserves legacy fields", () => {
+  it("validates canonical artifact effects affix references", () => {
     assert.equal(artifacts.artifacts.length, 136);
     for (const artifact of artifacts.artifacts) {
-      assertAffixesResolve(artifact, artifact.affixes, artifact.id);
+      assert.equal(Object.hasOwn(artifact, "affixes"), false, `${artifact.id} has deprecated top-level affixes`);
+      assertAffixesResolve(artifact, artifact.effects.affixes, artifact.id);
       assert.ok(Array.isArray(artifact.flags));
       assert.equal(typeof artifact.pval, "number");
       assert.equal(typeof artifact.plus_to_hit, "number");

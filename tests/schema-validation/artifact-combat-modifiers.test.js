@@ -8,7 +8,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 
 function loadJSON(relPath) {
-  return JSON.parse(readFileSync(resolve(root, relPath), "utf8"));
+  let content = readFileSync(resolve(root, relPath), "utf8");
+  if (content.charCodeAt(0) === 0xfeff) content = content.slice(1);
+  return JSON.parse(content);
 }
 
 const artifactsData = loadJSON("data/definitions/items/artifacts.json");
@@ -23,9 +25,10 @@ function artifactName(artifact) {
 describe("artifact combat modifier references", () => {
   it("references only known combat modifier IDs without duplicates", () => {
     for (const artifact of artifactsData.artifacts) {
-      assert.ok(Array.isArray(artifact.combat_modifiers), `${artifactName(artifact)} is missing combat_modifiers`);
-      assert.equal(new Set(artifact.combat_modifiers).size, artifact.combat_modifiers.length, `${artifactName(artifact)} has duplicate references`);
-      for (const id of artifact.combat_modifiers) {
+      assert.equal(Object.hasOwn(artifact, "combat_modifiers"), false, `${artifactName(artifact)} has a deprecated top-level combat_modifiers property`);
+      assert.ok(Array.isArray(artifact.effects.combat_modifiers), `${artifactName(artifact)} is missing effects.combat_modifiers`);
+      assert.equal(new Set(artifact.effects.combat_modifiers).size, artifact.effects.combat_modifiers.length, `${artifactName(artifact)} has duplicate references`);
+      for (const id of artifact.effects.combat_modifiers) {
         assert.ok(combatIds.has(id), `${artifactName(artifact)} references unknown combat modifier ${id}`);
       }
     }
@@ -36,7 +39,7 @@ describe("artifact combat modifier references", () => {
       for (const flag of artifact.flags) {
         const modifierId = combatByFlag.get(flag);
         if (modifierId) {
-          assert.ok(artifact.combat_modifiers.includes(modifierId), `${artifactName(artifact)} is missing ${modifierId} for ${flag}`);
+          assert.ok(artifact.effects.combat_modifiers.includes(modifierId), `${artifactName(artifact)} is missing ${modifierId} for ${flag}`);
         }
       }
     }

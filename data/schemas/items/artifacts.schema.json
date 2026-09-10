@@ -14,8 +14,9 @@
         "required": [
           "baseItemId", "id", "name", "pval", "depth", "rarity",
           "weight", "cost", "base_ac", "damage", "plus_to_hit",
-          "plus_to_dam", "plus_to_ac", "flags", "combat_modifiers", "affixes", "description"
+          "plus_to_dam", "plus_to_ac", "flags", "effects", "description"
         ],
+        "not": { "required": ["affixes"] },
         "properties": {
           "baseItemId": { "type": "string", "minLength": 1 },
           "id": { "type": "string", "minLength": 1 },
@@ -31,22 +32,29 @@
           "plus_to_dam": { "type": "integer" },
           "plus_to_ac": { "type": "integer" },
           "flags": { "type": "array", "items": { "type": "string" } },
-          "combat_modifiers": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": { "type": "string", "minLength": 1 }
-          },
-          "affixes": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": ["id", "value_source"],
-              "properties": {
-                "id": { "type": "string", "minLength": 1 },
-                "value_source": { "type": "string", "minLength": 1 }
-              }
+          "effects": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["affixes", "combat_modifiers", "capabilities", "resistances", "activations", "curses", "display_flags"],
+            "properties": {
+              "affixes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["id", "value_source"],
+                  "properties": {
+                    "id": { "type": "string", "minLength": 1 },
+                    "value_source": { "type": "string", "minLength": 1 }
+                  }
+                }
+              },
+              "combat_modifiers": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "capabilities": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "resistances": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "activations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "curses": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "display_flags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
             }
           },
           "activation": {

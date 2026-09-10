@@ -252,6 +252,17 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_DuplicateArtifactCombatModifier_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"slay_dragon\"", "\"slay_dragon\", \"slay_dragon\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_combat_modifier_reference");
+    }
+
+    [Fact]
     public async Task LoadAsync_UnknownArtifactAffix_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();

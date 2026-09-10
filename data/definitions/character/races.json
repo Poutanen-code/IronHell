@@ -21,7 +21,8 @@
       "male_weight_mod": 25,
       "female_weight": 150,
       "female_weight_mod": 20,
-      "capability_ids": [],
+      "resistances": [],
+      "capabilities": [],
       "size": "medium",
       "lore": "Humans are the most numerous and diverse inhabitants of the realm. Though they lack the specialized traits of other races, their adaptability and ambition drive them to excel in any field they pursue.",
       "provenance_status": "observed"
@@ -46,7 +47,8 @@
       "male_weight_mod": 15,
       "female_weight": 100,
       "female_weight_mod": 10,
-      "capability_ids": ["sust_dex"],
+      "resistances": [],
+      "capabilities": ["sust_dex"],
       "size": "medium",
       "lore": "Half-elves inherit the best of both races—elven grace and human drive. Though sometimes caught between two cultures, they forge unique paths all their own.",
       "provenance_status": "observed"
@@ -71,7 +73,8 @@
       "male_weight_mod": 6,
       "female_weight": 80,
       "female_weight_mod": 6,
-      "capability_ids": ["sust_dex", "res_lite"],
+      "resistances": ["res_lite"],
+      "capabilities": ["sust_dex"],
       "size": "medium",
       "lore": "Elves have walked the world for millennia, perfecting the arts of magic and archery. Their connection to the natural and arcane worlds makes them formidable spellcasters and scouts.",
       "provenance_status": "observed"
@@ -96,7 +99,8 @@
       "male_weight_mod": 3,
       "female_weight": 50,
       "female_weight_mod": 3,
-      "capability_ids": ["hold_life"],
+      "resistances": [],
+      "capabilities": ["hold_life"],
       "size": "small",
       "lore": "Hobbits are a cheerful and adventurous people, often underestimated by larger races. Their luck and stealth make them excellent rogues and scouts.",
       "provenance_status": "observed"
@@ -121,7 +125,8 @@
       "male_weight_mod": 6,
       "female_weight": 75,
       "female_weight_mod": 3,
-      "capability_ids": ["free_act"],
+      "resistances": [],
+      "capabilities": ["free_act"],
       "size": "small",
       "lore": "Gnomes are curious inventors and pranksters, their minds always racing with new ideas. They excel at combining magic and technology in unexpected ways.",
       "provenance_status": "observed"
@@ -146,7 +151,8 @@
       "male_weight_mod": 10,
       "female_weight": 120,
       "female_weight_mod": 10,
-      "capability_ids": ["res_blind"],
+      "resistances": ["res_blind"],
+      "capabilities": [],
       "size": "medium",
       "lore": "Born of stone and fire, dwarves are renowned for their unbreakable will and masterful craftsmanship. Their mountain halls contain treasures that rival even the deepest dungeons.",
       "provenance_status": "observed"
@@ -171,7 +177,8 @@
       "male_weight_mod": 5,
       "female_weight": 120,
       "female_weight_mod": 5,
-      "capability_ids": ["res_dark"],
+      "resistances": ["res_dark"],
+      "capabilities": [],
       "size": "medium",
       "lore": "Half-orcs struggle for acceptance in both human and orc societies, forging their own path through strength and determination. Many find purpose as warriors and adventurers.",
       "provenance_status": "observed"
@@ -196,7 +203,8 @@
       "male_weight_mod": 50,
       "female_weight": 225,
       "female_weight_mod": 40,
-      "capability_ids": ["sust_str", "regen"],
+      "capabilities": ["sust_str", "regen"],
+      "resistances": [],
       "size": "large",
       "lore": "Half-trolls are the result of troll and human crossbreeding. Their immense physical power and regenerative abilities make them fearsome warriors, though they struggle with magic and subtlety.",
       "provenance_status": "observed"
@@ -221,7 +229,8 @@
       "male_weight_mod": 20,
       "female_weight": 180,
       "female_weight_mod": 15,
-      "capability_ids": ["sust_con"],
+      "capabilities": ["sust_con"],
+      "resistances": [],
       "size": "medium",
       "lore": "The Dúnedain are the last descendants of the ancient kings, blessed with long life and exceptional abilities. Their presence inspires allies and strikes fear into the hearts of evil.",
       "provenance_status": "observed"
@@ -246,7 +255,8 @@
       "male_weight_mod": 20,
       "female_weight": 180,
       "female_weight_mod": 15,
-      "capability_ids": ["res_lite", "see_invis"],
+      "resistances": ["res_lite"],
+      "capabilities": ["see_invis"],
       "size": "medium",
       "lore": "High-elves are the noblest and most powerful of the elven kindred. Their ancient bloodline grants them incredible magical aptitude and keen senses that pierce even invisibility.",
       "provenance_status": "observed"
@@ -271,7 +281,8 @@
       "male_weight_mod": 5,
       "female_weight": 60,
       "female_weight_mod": 4,
-      "capability_ids": ["res_pois"],
+      "resistances": ["res_pois"],
+      "capabilities": [],
       "size": "small",
       "lore": "Kobolds are small, cunning reptilian creatures that thrive in the dark tunnels and caverns of the world. Their resistance to poison and natural stealth make them surprisingly effective adventurers.",
       "provenance_status": "observed"
