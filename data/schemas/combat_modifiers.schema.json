@@ -1,0 +1,221 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://ironhell.local/schemas/combat_modifiers.schema.json",
+    "title": "IronHell Combat Modifier Catalog",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "schema_version",
+        "combat_modifiers"
+    ],
+    "properties": {
+        "schema_version": {
+            "type": "integer",
+            "const": 1
+        },
+        "combat_modifiers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/combat_modifier"
+            }
+        }
+    },
+    "$defs": {
+        "combat_modifier": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "modifier_kind",
+                "source_flag",
+                "name",
+                "description",
+                "category",
+                "scope",
+                "canonical_owner",
+                "grant_sources",
+                "provenance_status"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "modifier_kind": {
+                    "type": "string",
+                    "enum": [
+                        "impact",
+                        "slay",
+                        "kill",
+                        "brand"
+                    ]
+                },
+                "source_flag": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "category": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "canonical_owner": {
+                    "type": "string",
+                    "const": "combat_modifier"
+                },
+                "element": {
+                    "type": "string",
+                    "enum": [
+                        "acid",
+                        "elec",
+                        "fire",
+                        "cold",
+                        "pois"
+                    ]
+                },
+                "grant_sources": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "provenance_status": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "type",
+                            "multiplier"
+                        ],
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "const": "damage_modifier"
+                            },
+                            "monster_species": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "monster_category": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "monster_alignment": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "multiplier": {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                            }
+                        },
+                        "oneOf": [
+                            {
+                                "required": [
+                                    "monster_species"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "monster_category"
+                                ]
+                            },
+                            {
+                                "required": [
+                                    "monster_alignment"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "scope": {
+                    "type": "string",
+                    "const": "equipment_modifier"
+                }
+            },
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "modifier_kind": {
+                                "enum": [
+                                    "slay",
+                                    "kill"
+                                ]
+                            }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "effects"
+                        ],
+                        "properties": {
+                            "effects": {
+                                "minItems": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "modifier_kind": {
+                                "const": "brand"
+                            }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "element"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "modifier_kind": {
+                                "const": "impact"
+                            }
+                        }
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "element"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "modifier_kind": {
+                                "const": "brand"
+                            }
+                        }
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "effects"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

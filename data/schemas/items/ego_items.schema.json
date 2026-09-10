@@ -15,7 +15,7 @@
         "required": [
           "name", "rating", "xtra", "max_to_hit", "max_to_dam",
           "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
-          "slots", "item_categories", "flags"
+          "slots", "item_categories", "flags", "combat_modifiers"
         ],
         "properties": {
           "name": { "type": "string" },
@@ -42,7 +42,12 @@
           },
           "slots": { "type": "array", "items": { "type": "string" } },
           "item_categories": { "type": "array", "items": { "type": "string" } },
-          "flags": { "type": "array", "items": { "type": "string" } }
+          "flags": { "type": "array", "items": { "type": "string" } },
+          "combat_modifiers": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          }
         }
       }
     }
