@@ -23,6 +23,8 @@ internal static class ItemValidator
     private const string ResistancesProperty = "resistances";
     private const string ActivationsProperty = "activations";
     private const string CursesProperty = "curses";
+    private const string DisplayFlagsProperty = "display_flags";
+    private const string GenerationProperty = "generation";
     private const string ValueSourceProperty = "value_source";
     private static readonly IReadOnlySet<string> ArtifactAffixValueSources = new HashSet<string>(StringComparer.Ordinal)
     {
@@ -52,6 +54,10 @@ internal static class ItemValidator
     private static readonly IReadOnlyDictionary<string, string> CurseFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
     {
         ["LIGHT_CURSE"] = "light_curse", ["HEAVY_CURSE"] = "heavy_curse", ["PERMA_CURSE"] = "perma_curse",
+    };
+    private static readonly IReadOnlyDictionary<string, string> DisplayFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
+    {
+        ["SHOW_MODS"] = "show_mods", ["HIDE_TYPE"] = "hide_type",
     };
     private static readonly IReadOnlySet<string> CurseIds = new HashSet<string>(CurseFlagMappings.Values, StringComparer.Ordinal);
 
@@ -209,6 +215,11 @@ internal static class ItemValidator
         ValidateFlagCoverage(flags, CapabilityFlagMappings, effects?[CapabilitiesProperty]?.AsArray(), artifactId, CapabilitiesProperty, report);
         ValidateFlagCoverage(flags, ResistanceFlagMappings, effects?[ResistancesProperty]?.AsArray(), artifactId, ResistancesProperty, report);
         ValidateFlagCoverage(flags, CurseFlagMappings, effects?[CursesProperty]?.AsArray(), artifactId, CursesProperty, report);
+        ValidateFlagCoverage(flags, DisplayFlagMappings, effects?[DisplayFlagsProperty]?.AsArray(), artifactId, DisplayFlagsProperty, report);
+        if (flags.Contains("INSTA_ART") && artifact[GenerationProperty]?["insta_art"]?.GetValue<bool>() != true)
+        {
+            report.Add(ArtifactsDocument, artifactId, $"{GenerationProperty}.insta_art", "missing_generation_metadata", "Flag 'INSTA_ART' must be represented by generation.insta_art=true.");
+        }
         if (artifact["activation"]?["id"]?.GetValue<string>() is { } activationId && effects?[ActivationsProperty]?.AsArray().Any(value => value?.GetValue<string>() == activationId) != true)
         {
             report.Add(ArtifactsDocument, artifactId, $"{EffectsProperty}.activations", "missing_activation_reference", $"Activation '{activationId}' must be referenced by canonical effects.");

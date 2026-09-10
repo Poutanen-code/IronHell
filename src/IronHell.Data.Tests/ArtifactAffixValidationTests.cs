@@ -101,6 +101,51 @@ public sealed class ArtifactAffixValidationTests
         Assert.Contains(report.Errors, error => error.Code == "duplicate_affix_reference");
     }
 
+    [Fact]
+    public void ValidateArtifactEffects_DisplayAndGenerationMappings_Succeed()
+    {
+        var report = ValidateArtifactEffects("""
+            {
+              "id": "artifact",
+              "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART", "LIGHT_CURSE", "HEAVY_CURSE", "PERMA_CURSE"],
+              "generation": { "insta_art": true },
+              "effects": {
+                "capabilities": [],
+                "resistances": [],
+                "activations": [],
+                "curses": ["light_curse", "heavy_curse", "perma_curse"],
+                "display_flags": ["show_mods", "hide_type"],
+                "combat_modifiers": [],
+                "affixes": []
+              }
+            }
+            """);
+
+        Assert.Empty(report.Errors);
+    }
+
+    [Fact]
+    public void ValidateArtifactEffects_MissingDisplayOrGenerationMappings_ReturnsValidationErrors()
+    {
+        var report = ValidateArtifactEffects("""
+            {
+              "id": "artifact",
+              "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART"],
+              "effects": {
+                "capabilities": [],
+                "resistances": [],
+                "activations": [],
+                "curses": [],
+                "display_flags": [],
+                "combat_modifiers": [],
+                "affixes": []
+              }
+            }
+            """);
+
+        Assert.Equal(3, report.Errors.Count(error => error.Code is "missing_canonical_effect" or "missing_generation_metadata"));
+    }
+
     private static DefinitionValidationReportSnapshot ValidateArtifactAffixes(string artifactJson)
     {
         var report = new DefinitionValidationReport();
@@ -129,4 +174,25 @@ public sealed class ArtifactAffixValidationTests
         ItemValidator.ValidateItemAffixes(documents, report);
         return report.ToImmutable();
     }
+
+      private static DefinitionValidationReportSnapshot ValidateArtifactEffects(string artifactJson)
+      {
+        var report = new DefinitionValidationReport();
+        var documents = new Dictionary<string, JsonObject>(StringComparer.Ordinal)
+        {
+          ["artifacts"] = JsonNode.Parse($$"""
+            {
+              "artifacts": [
+              {{artifactJson}}
+              ]
+            }
+            """)!.AsObject(),
+          ["capabilities"] = JsonNode.Parse("{ \"capabilities\": [] }")!.AsObject(),
+          ["resistances"] = JsonNode.Parse("{ \"resistances\": [] }")!.AsObject(),
+          ["activations"] = JsonNode.Parse("{ \"activations\": [] }")!.AsObject(),
+        }.ToFrozenDictionary(StringComparer.Ordinal);
+
+        ItemValidator.ValidateArtifactEffects(documents, report);
+        return report.ToImmutable();
+      }
 }

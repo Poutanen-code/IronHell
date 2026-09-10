@@ -74,6 +74,20 @@ describe("artifact canonical effects", () => {
     }
   });
 
+  it("maps legacy display and generation flags to canonical metadata", () => {
+    for (const artifact of artifactsData.artifacts) {
+      const displayFlags = new Set(artifact.effects.display_flags);
+      if (artifact.flags.includes("SHOW_MODS")) assert.ok(displayFlags.has("show_mods"), `${artifact.id} is missing show_mods`);
+      if (artifact.flags.includes("HIDE_TYPE")) assert.ok(displayFlags.has("hide_type"), `${artifact.id} is missing hide_type`);
+      if (artifact.flags.includes("INSTA_ART")) assert.equal(artifact.generation?.insta_art, true, `${artifact.id} is missing generation.insta_art`);
+    }
+  });
+
+  it("preserves canonical curse mappings", () => {
+    const curseFlags = { LIGHT_CURSE: "light_curse", HEAVY_CURSE: "heavy_curse", PERMA_CURSE: "perma_curse" };
+    for (const artifact of artifactsData.artifacts) assertCoverage(artifact, curseFlags, "curses");
+  });
+
   it("rejects duplicate canonical effect references through the artifact schema", () => {
     const invalid = structuredClone(artifactsData);
     invalid.artifacts[0].effects.capabilities = ["see_invis", "see_invis"];

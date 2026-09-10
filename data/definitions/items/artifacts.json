@@ -18,6 +18,7 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A small crystal phial, with the light of Earendil's Star contained inside. Its light is imperishable, and near it darkness cannot endure.",
       "effects": {
         "capabilities": [],
@@ -54,6 +55,7 @@
         "SEE_INVIS",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The shining Star of the West, a treasured heirloom of Elendil's house.",
       "effects": {
         "capabilities": [
@@ -95,6 +97,7 @@
         "RES_DARK",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A great globe seemingly filled with moonlight, the famed Heart of the Mountain, which splinters the light that falls upon it into a thousand glowing shards.",
       "effects": {
         "capabilities": [
@@ -134,6 +137,7 @@
         "RES_FIRE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A fiery circle of bronze, with mighty spells to ward off and banish evil.",
       "base_ac": 0,
       "damage": "0d0",
@@ -153,7 +157,7 @@
             "dice": 225
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -186,6 +190,7 @@
         "RES_ELEC",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The ancient heirloom of Ingwe, high lord of the Vanyar, against whom nothing of evil could stand.",
       "base_ac": 0,
       "damage": "0d0",
@@ -210,7 +215,7 @@
             "dice": 50
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -253,6 +258,7 @@
         "RES_FEAR",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The Nauglamir; a carencet of gold set with a multitude of shining gems of Valinor, accenting a radiant Silmaril.  The sturdy spirits of Dwarvish craftsmen who labored long in mountain smithies lie within it still, and as gossamer it rests upon the bearer.",
       "base_ac": 0,
       "damage": "0d0",
@@ -270,7 +276,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -321,6 +327,7 @@
         "INSTA_ART",
         "HIDE_TYPE"
       ],
+      "generation": { "insta_art": true },
       "description": "A great globe with a heart of fire, providing the wearer with sight of far places - at a cost, for those espied upon are aware of it.",
       "effects": {
         "capabilities": [
@@ -341,7 +348,7 @@
             "dice": 50
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -385,6 +392,7 @@
         "RES_DARK",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A ring shaped into twinned serpents with eyes of emerald meeting beneath a crown of flowers, an ancient treasure of Isildur's house.",
       "base_ac": 0,
       "damage": "0d0",
@@ -399,7 +407,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -451,6 +459,7 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The treasure of Tulkas, most fleet and wrathful of the Valar.",
       "base_ac": 0,
       "damage": "0d0",
@@ -470,7 +479,7 @@
             "dice": 150
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -526,6 +535,7 @@
         "RES_FEAR",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The Ring of Fire, set with a ruby that glows like flame.  Narya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -552,7 +562,7 @@
             "dice": 20
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -632,6 +642,7 @@
         "TELEPATHY",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The Ring of Adamant, with a pure white stone as centerpiece.  Nenya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -658,7 +669,7 @@
             "dice": 20
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -739,6 +750,7 @@
         "RES_DISEN",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The Ring of Sapphire, with clear blue gems that shine like stars, glittering untouchable despite all that Morgoth ever wrought.  Vilya is one of the three Rings of Power created by the Elves and hidden by them from Sauron.",
       "effects": {
         "capabilities": [
@@ -766,7 +778,7 @@
             "dice": 20
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -857,6 +869,7 @@
         "SUST_CHR",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "\"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\"  Made of massive gold, and set with runes in the foul speech of Mordor, Isildur's Bane possesses powers so great that it inevitably twists and masters any earthly being who wears it.",
       "effects": {
         "capabilities": [
@@ -895,7 +908,7 @@
             "dice": 30
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -963,6 +976,7 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A green stone, imbued with the power of Elvendom and fit to be borne by a true King of Men, one such as brings healing after victory in battle.",
       "effects": {
         "capabilities": [],
@@ -979,7 +993,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1032,6 +1046,7 @@
         "ACTIVATE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "A plain white jewel, given by Queen Arwen to Frodo Baggins before his return to the Shire.",
       "base_ac": 0,
       "damage": "0d0",
@@ -1442,7 +1457,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1502,7 +1517,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1565,7 +1580,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1625,7 +1640,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1687,7 +1702,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1794,7 +1809,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1838,7 +1853,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1909,7 +1924,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -1968,7 +1983,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2188,6 +2203,7 @@
         "PERMA_CURSE",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "Containing much of the power of he who once was mightiest among the Ainur, this plain iron crown has mounted upon it the two remaining Silmarils, greatest treasures of Middle-Earth.",
       "effects": {
         "capabilities": [
@@ -2213,7 +2229,7 @@
           "perma_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2289,7 +2305,7 @@
           "heavy_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2342,7 +2358,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2388,7 +2404,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2450,7 +2466,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2515,7 +2531,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2582,7 +2598,7 @@
             "dice": 55
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2645,7 +2661,7 @@
           "heavy_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2730,7 +2746,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2807,7 +2823,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2928,7 +2944,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -2996,7 +3012,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3091,7 +3107,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3151,7 +3167,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3216,7 +3232,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3329,7 +3345,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3632,7 +3648,7 @@
           "heavy_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3692,7 +3708,7 @@
             "dice": 30
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3748,7 +3764,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3805,7 +3821,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3848,7 +3864,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3910,7 +3926,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -3974,7 +3990,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_troll",
           "slay_giant"
@@ -4043,7 +4059,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_acid",
           "slay_evil",
@@ -4108,7 +4124,7 @@
             "dice": 8
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "brand_fire"
         ],
@@ -4158,7 +4174,7 @@
             "dice": 7
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "brand_cold"
         ],
@@ -4208,7 +4224,7 @@
             "dice": 6
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "brand_elec"
         ],
@@ -4261,7 +4277,7 @@
             "dice": 4
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_orc",
           "brand_pois"
@@ -4321,7 +4337,7 @@
             "dice": 5
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold"
         ],
@@ -4381,7 +4397,7 @@
           "heavy_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "kill_dragon",
           "slay_evil",
@@ -4448,7 +4464,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_demon",
           "slay_orc"
@@ -4509,7 +4525,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "brand_fire",
@@ -4576,7 +4592,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_orc",
           "slay_troll",
@@ -4643,7 +4659,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "brand_cold",
@@ -4710,7 +4726,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_fire",
           "brand_pois",
@@ -4780,7 +4796,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "kill_dragon",
           "slay_animal",
@@ -4858,7 +4874,7 @@
           "heavy_curse"
         ],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_pois",
           "kill_dragon",
@@ -4926,7 +4942,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -4980,7 +4996,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_dragon",
           "slay_evil",
@@ -5030,7 +5046,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -5099,7 +5115,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_evil",
           "brand_cold",
@@ -5183,7 +5199,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "brand_fire",
@@ -5260,7 +5276,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "brand_pois",
@@ -5328,7 +5344,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_troll",
           "slay_orc"
@@ -5388,7 +5404,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_animal",
           "brand_cold"
@@ -5439,7 +5455,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_dragon",
           "slay_animal",
@@ -5507,7 +5523,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "slay_undead",
@@ -5582,7 +5598,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_animal",
           "slay_evil",
@@ -5640,7 +5656,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_pois",
           "slay_animal"
@@ -5710,7 +5726,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "kill_dragon",
           "slay_animal",
@@ -5842,7 +5858,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_dragon"
         ],
@@ -5892,7 +5908,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -5940,7 +5956,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_fire",
           "slay_undead",
@@ -6002,7 +6018,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold",
           "brand_fire",
@@ -6080,7 +6096,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold",
           "slay_evil",
@@ -6162,7 +6178,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_fire",
           "slay_giant",
@@ -6232,7 +6248,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold",
           "slay_undead"
@@ -6293,7 +6309,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "slay_troll",
@@ -6374,7 +6390,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_acid",
           "brand_fire",
@@ -6467,7 +6483,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "brand_cold",
@@ -6565,7 +6581,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_demon",
           "slay_troll",
@@ -6634,7 +6650,7 @@
             "dice": 3
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_troll",
           "slay_orc"
@@ -6694,7 +6710,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_evil",
           "slay_animal",
@@ -6744,7 +6760,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "slay_troll",
@@ -6806,7 +6822,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_pois",
           "slay_evil",
@@ -6886,7 +6902,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_dragon",
           "slay_animal"
@@ -6955,7 +6971,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold",
           "brand_fire"
@@ -7033,7 +7049,7 @@
             "dice": 80
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "kill_demon",
           "brand_acid",
@@ -7093,6 +7109,7 @@
         "SHOW_MODS",
         "INSTA_ART"
       ],
+      "generation": { "insta_art": true },
       "description": "The mighty Hammer of the Underworld, blackened by doomspells of shattering, whose wielder holds the lives of all Morgoth's servants in his hand.",
       "effects": {
         "capabilities": [
@@ -7103,7 +7120,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "kill_dragon",
           "slay_animal",
@@ -7168,7 +7185,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "slay_evil",
           "brand_fire"
@@ -7229,7 +7246,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_animal",
           "brand_fire",
@@ -7292,7 +7309,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_pois",
           "slay_animal",
@@ -7349,7 +7366,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "brand_fire"
         ],
@@ -7406,7 +7423,7 @@
             "dice": 100
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods"],
         "combat_modifiers": [
           "kill_dragon",
           "brand_elec"
@@ -7472,7 +7489,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "kill_dragon",
           "slay_evil",
@@ -7534,7 +7551,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_animal",
           "brand_fire"
@@ -7596,7 +7613,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_evil"
         ],
@@ -7673,7 +7690,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "kill_demon",
           "slay_evil",
@@ -7750,7 +7767,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "slay_dragon",
           "slay_animal",
@@ -7823,7 +7840,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_cold",
           "slay_orc"
@@ -7911,7 +7928,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [
           "brand_fire",
           "slay_animal",
@@ -7978,7 +7995,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -8038,7 +8055,7 @@
         "resistances": [],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -8099,7 +8116,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -8163,7 +8180,7 @@
             "dice": 20
           }
         },
-        "display_flags": [],
+        "display_flags": ["show_mods", "hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -8444,7 +8461,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [
           "slay_orc",
           "slay_troll",
@@ -8525,7 +8542,7 @@
             "dice": 100
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [
           "slay_evil",
           "slay_undead"
@@ -8654,7 +8671,7 @@
             "dice": 0
           }
         },
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [],
         "affixes": [
           {
@@ -8706,7 +8723,7 @@
         ],
         "curses": [],
         "activation": {},
-        "display_flags": [],
+        "display_flags": ["hide_type"],
         "combat_modifiers": [
           "slay_orc",
           "slay_troll"

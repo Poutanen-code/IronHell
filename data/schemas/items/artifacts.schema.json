@@ -20,6 +20,13 @@
         "properties": {
           "baseItemId": { "type": "string", "minLength": 1 },
           "id": { "type": "string", "minLength": 1 },
+          "generation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "insta_art": { "type": "boolean" }
+            }
+          },
           "name": { "type": "string" },
           "pval": { "type": "integer" },
           "depth": { "type": "integer" },
@@ -54,7 +61,11 @@
               "resistances": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
               "activations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
               "curses": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
-              "display_flags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+              "display_flags": {
+                "type": "array",
+                "items": { "type": "string", "enum": ["show_mods", "hide_type"] },
+                "uniqueItems": true
+              }
             }
           },
           "activation": {
