@@ -398,7 +398,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1387,7 +1387,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1441,7 +1441,7 @@
           "res_sound"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1630,7 +1630,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1799,7 +1799,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1843,7 +1843,7 @@
           "res_shard"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -1973,7 +1973,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2026,7 +2026,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2080,7 +2080,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2125,7 +2125,7 @@
           "res_shard"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2218,7 +2218,7 @@
           "heavy_curse",
           "perma_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2294,7 +2294,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2347,7 +2347,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2393,7 +2393,7 @@
           "res_confu"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2455,7 +2455,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2520,7 +2520,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2650,7 +2650,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -2812,7 +2812,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3051,7 +3051,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3221,7 +3221,7 @@
           "res_acid"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3334,7 +3334,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3637,7 +3637,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3853,7 +3853,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -3979,7 +3979,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_troll",
@@ -4048,7 +4048,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_acid",
@@ -4386,7 +4386,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -4513,7 +4513,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -4579,7 +4579,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -4645,7 +4645,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -4712,7 +4712,7 @@
           "res_pois"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -4782,7 +4782,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -4860,7 +4860,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -4928,7 +4928,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -4982,7 +4982,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -5032,7 +5032,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -5260,7 +5260,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5328,7 +5328,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_troll",
@@ -5388,7 +5388,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -5439,7 +5439,7 @@
         "capabilities": [],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -5507,7 +5507,7 @@
           "res_lite"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -5582,7 +5582,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -5640,7 +5640,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -5710,7 +5710,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -5779,7 +5779,7 @@
           "light_curse",
           "heavy_curse"
         ],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois"
@@ -5892,7 +5892,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -5940,7 +5940,7 @@
           "res_sound"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_fire",
@@ -6002,7 +6002,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -6229,7 +6229,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_cold",
@@ -6290,7 +6290,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6371,7 +6371,7 @@
           "res_chaos"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_acid",
@@ -6561,7 +6561,7 @@
           "res_blind"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_demon",
@@ -6690,7 +6690,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6740,7 +6740,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
@@ -6801,7 +6801,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -7097,7 +7097,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -7223,7 +7223,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -7286,7 +7286,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "brand_pois",
@@ -7466,7 +7466,7 @@
           "res_nexus"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon",
@@ -7528,7 +7528,7 @@
           "res_fire"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_animal",
@@ -7744,7 +7744,7 @@
           "res_disen"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_dragon",
@@ -7972,7 +7972,7 @@
           "res_disen"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8032,7 +8032,7 @@
         ],
         "resistances": [],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8218,7 +8218,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8282,7 +8282,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [],
         "affixes": [
@@ -8438,7 +8438,7 @@
           "res_dark"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -8587,7 +8587,7 @@
           "res_fear"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "kill_dragon"
@@ -8699,7 +8699,7 @@
           "res_fire"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_orc",
@@ -8767,7 +8767,7 @@
           "res_cold"
         ],
         "curses": [],
-        "activation": [],
+        "activation": {},
         "display_flags": [],
         "combat_modifiers": [
           "slay_evil",
