@@ -37,6 +37,7 @@
           "female_weight",
           "female_weight_mod",
           "capability_ids",
+          "resistance_ids",
           "size",
           "lore",
           "provenance_status"
@@ -64,6 +65,11 @@
           "capability_ids": {
             "type": "array",
             "items": { "$ref": "common.schema.json#/$defs/CapabilityReference" },
+            "uniqueItems": true
+          },
+          "resistance_ids": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/$defs/ResistanceReference" },
             "uniqueItems": true
           },
           "size": {
