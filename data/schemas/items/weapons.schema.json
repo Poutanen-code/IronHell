@@ -21,7 +21,7 @@
         "id", "name", "type", "subtype", "tval", "sval",
         "damage_dice", "to_hit_bonus", "to_damage_bonus",
         "weight", "sell_value", "stats",
-        "allocation_table", "capability_ids", "description", "provenance_status"
+        "allocation_table", "capability_ids", "resistance_ids", "description", "provenance_status"
       ],
       "properties": {
         "id": { "$ref": "common_item.schema.json#/$defs/Id" },
@@ -58,6 +58,11 @@
         },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
         "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "resistance_ids": {
           "type": "array",
           "items": { "$ref": "common_item.schema.json#/$defs/Id" },
           "uniqueItems": true

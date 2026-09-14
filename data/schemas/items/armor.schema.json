@@ -21,7 +21,7 @@
         "id", "name", "type", "armor_weight", "tval", "sval",
         "base_ac", "to_ac_bonus", "to_hit_bonus",
         "weight", "sell_value", "stats",
-        "allocation_table", "capability_ids", "affixes",
+        "allocation_table", "capability_ids", "resistance_ids", "affixes",
         "description", "provenance_status"
       ],
       "properties": {
@@ -51,6 +51,11 @@
         },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
         "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "resistance_ids": {
           "type": "array",
           "items": { "$ref": "common_item.schema.json#/$defs/Id" },
           "uniqueItems": true

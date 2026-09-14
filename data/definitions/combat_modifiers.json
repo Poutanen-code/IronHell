@@ -69,6 +69,7 @@
             "source_flag": "SLAY_UNDEAD",
             "name": "Slay Undead",
             "description": "Deals increased melee damage against undead creatures.",
+            "category": "combat",
             "scope": "equipment_modifier",
             "canonical_owner": "combat_modifier",
             "grant_sources": [
@@ -148,7 +149,7 @@
             "effects": [
                 {
                     "type": "damage_modifier",
-                    "monster_species": "troll",
+                    "monster_category": "troll",
                     "multiplier": 3.0
                 }
             ],
@@ -171,7 +172,7 @@
             "effects": [
                 {
                     "type": "damage_modifier",
-                    "monster_species": "giant",
+                    "monster_category": "giant",
                     "multiplier": 3.0
                 }
             ],

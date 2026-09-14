@@ -13,6 +13,7 @@
             "capability_ids": [
                 "feather"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 5,
@@ -37,6 +38,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -62,6 +64,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -84,6 +87,7 @@
             "capability_ids": [
                 "teleportation"
             ],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -106,6 +110,7 @@
             "capability_ids": [
                 "slow_digest"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 5,
@@ -124,9 +129,10 @@
             "weight": 2,
             "sell_value": 250,
             "affixes": [],
-            "capability_ids": [
-                "res_fire",
-                "ignore_fire"
+            "capability_ids": [],
+            "resistance_ids": [
+                "ignore_fire",
+                "res_fire"
             ],
             "allocation_table": [
                 {
@@ -146,9 +152,10 @@
             "weight": 2,
             "sell_value": 250,
             "affixes": [],
-            "capability_ids": [
-                "res_cold",
-                "ignore_cold"
+            "capability_ids": [],
+            "resistance_ids": [
+                "ignore_cold",
+                "res_cold"
             ],
             "allocation_table": [
                 {
@@ -171,6 +178,7 @@
             "capability_ids": [
                 "sust_str"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -192,6 +200,7 @@
             "capability_ids": [
                 "sust_int"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -213,6 +222,7 @@
             "capability_ids": [
                 "sust_wis"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -234,6 +244,7 @@
             "capability_ids": [
                 "sust_con"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -255,6 +266,7 @@
             "capability_ids": [
                 "sust_dex"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -276,6 +288,7 @@
             "capability_ids": [
                 "sust_chr"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -301,6 +314,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 10,
@@ -319,7 +333,8 @@
             "weight": 2,
             "sell_value": 3000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_fire",
                 "ignore_fire"
             ],
@@ -341,7 +356,8 @@
             "weight": 2,
             "sell_value": 3000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_cold",
                 "ignore_cold"
             ],
@@ -363,7 +379,8 @@
             "weight": 2,
             "sell_value": 16000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_pois"
             ],
             "allocation_table": [
@@ -387,6 +404,7 @@
             "capability_ids": [
                 "free_act"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -408,6 +426,7 @@
             "capability_ids": [
                 "see_invis"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -426,7 +445,10 @@
             "weight": 2,
             "sell_value": 250,
             "affixes": [],
-            "capability_ids": ["searching"],
+            "capability_ids": [
+                "searching"
+            ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 5,
@@ -454,6 +476,7 @@
             "capability_ids": [
                 "sust_str"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -481,6 +504,7 @@
             "capability_ids": [
                 "sust_int"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -508,6 +532,7 @@
             "capability_ids": [
                 "sust_dex"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -535,6 +560,7 @@
             "capability_ids": [
                 "sust_con"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -560,6 +586,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -585,6 +612,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 20,
@@ -615,6 +643,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 40,
@@ -640,6 +669,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 75,
@@ -658,7 +688,8 @@
             "weight": 2,
             "sell_value": 5000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_elec",
                 "ignore_elec"
             ],
@@ -680,7 +711,8 @@
             "weight": 2,
             "sell_value": 3000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_acid",
                 "ignore_acid"
             ],
@@ -714,6 +746,7 @@
             "capability_ids": [
                 "teleportation"
             ],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -736,6 +769,7 @@
             "capability_ids": [
                 "aggravate_monsters"
             ],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -758,6 +792,7 @@
             "capability_ids": [
                 "teleportation"
             ],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -778,6 +813,7 @@
             "sell_value": 20,
             "affixes": [],
             "capability_ids": [],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 10,
@@ -822,6 +858,7 @@
                 }
             ],
             "capability_ids": [],
+            "resistance_ids": [],
             "is_cursed": true,
             "allocation_table": [
                 {
@@ -849,6 +886,7 @@
             "capability_ids": [
                 "slow_digest"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 15,
@@ -872,7 +910,8 @@
                     "value": 4
                 }
             ],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_acid",
                 "ignore_acid"
             ],
@@ -903,7 +942,10 @@
                     "value": 2
                 }
             ],
-            "capability_ids": ["searching"],
+            "capability_ids": [
+                "searching"
+            ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 15,
@@ -931,6 +973,7 @@
             "capability_ids": [
                 "sust_wis"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -958,6 +1001,7 @@
             "capability_ids": [
                 "sust_chr"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -975,23 +1019,24 @@
             "sval": 8,
             "weight": 3,
             "sell_value": 30000,
-            "generated_affixes":
-            [
+            "generated_affixes": [
                 {
-                    "type":"intelligence",
-                    "min_value":1,
-                    "max_value":6
+                    "type": "intelligence",
+                    "min_value": 1,
+                    "max_value": 6
                 },
                 {
-                    "type":"searching",
-                    "min_value":1,
-                    "max_value":10
+                    "type": "searching",
+                    "min_value": 1,
+                    "max_value": 10
                 }
             ],
             "capability_ids": [
                 "free_act",
                 "see_invis",
-                "sust_int",
+                "sust_int"
+            ],
+            "resistance_ids": [
                 "res_confu",
                 "ignore_acid",
                 "ignore_elec",
@@ -1030,6 +1075,7 @@
                 "ignore_fire",
                 "ignore_cold"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 60,
@@ -1049,7 +1095,9 @@
             "sell_value": 25000,
             "affixes": [],
             "capability_ids": [
-                "telepathy",
+                "telepathy"
+            ],
+            "resistance_ids": [
                 "ignore_acid",
                 "ignore_elec",
                 "ignore_fire",
@@ -1073,7 +1121,8 @@
             "weight": 3,
             "sell_value": 20000,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_fire",
                 "res_acid",
                 "res_elec",
@@ -1104,6 +1153,7 @@
             "capability_ids": [
                 "regeneration"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 30,
@@ -1125,6 +1175,7 @@
             "capability_ids": [
                 "infravision"
             ],
+            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 10,
@@ -1143,7 +1194,8 @@
             "weight": 3,
             "sell_value": 300,
             "affixes": [],
-            "capability_ids": [
+            "capability_ids": [],
+            "resistance_ids": [
                 "res_elec",
                 "ignore_elec"
             ],
@@ -1167,7 +1219,9 @@
             "affixes": [],
             "capability_ids": [
                 "see_invis",
-                "infravision",
+                "infravision"
+            ],
+            "resistance_ids": [
                 "ignore_acid",
                 "ignore_elec",
                 "ignore_fire",
@@ -1197,7 +1251,9 @@
             "affixes": [],
             "capability_ids": [
                 "see_invis",
-                "free_act",
+                "free_act"
+            ],
+            "resistance_ids": [
                 "ignore_acid",
                 "ignore_elec",
                 "ignore_fire",
@@ -1237,10 +1293,12 @@
             "capability_ids": [
                 "sust_wis",
                 "sust_chr",
+                "hold_life"
+            ],
+            "resistance_ids": [
                 "res_dark",
                 "res_lite",
-                "res_fire",
-                "hold_life"
+                "res_fire"
             ],
             "allocation_table": [
                 {
@@ -1268,7 +1326,9 @@
             "capability_ids": [
                 "sust_str",
                 "sust_con",
-                "free_act",
+                "free_act"
+            ],
+            "resistance_ids": [
                 "res_fear",
                 "res_disen"
             ],
@@ -1300,7 +1360,9 @@
                 }
             ],
             "capability_ids": [
-                "sust_dex",
+                "sust_dex"
+            ],
+            "resistance_ids": [
                 "res_nexus",
                 "res_pois"
             ],

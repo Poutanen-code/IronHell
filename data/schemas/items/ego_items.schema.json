@@ -32,11 +32,11 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["tval", "minSval", "maxSval"],
+              "required": ["tval", "min_sval", "max_sval"],
               "properties": {
                 "tval": { "type": "integer" },
-                "minSval": { "type": "integer" },
-                "maxSval": { "type": "integer" }
+                "min_sval": { "type": "integer" },
+                "max_sval": { "type": "integer" }
               }
             }
           },

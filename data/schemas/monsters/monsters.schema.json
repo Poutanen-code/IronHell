@@ -102,7 +102,7 @@
               "additionalProperties": false,
               "required": [
                 "id",
-                "type",
+                "species",
                 "dungeon_levels",
                 "ai_behavior",
                 "sprite",
@@ -110,7 +110,7 @@
               ],
               "properties": {
                 "id": { "type": "string", "minLength": 1 },
-                "type": { "type": "string", "minLength": 1 },
+                "species": { "type": "string", "minLength": 1 },
                 "dungeon_levels": { "type": "string", "minLength": 1 },
                 "ai_behavior": { "type": "string", "minLength": 1 },
                 "sprite": { "type": "string", "minLength": 1 },
@@ -225,7 +225,7 @@
         "name": { "type": "string", "minLength": 1 },
         "species": {
           "type": "string",
-          "enum": ["beast", "humanoid", "undead", "demon", "dragon", "construct", "aberration"]
+          "enum": ["beast", "humanoid", "undead", "demon", "dragon", "construct", "aberration", "elemental"]
         },
         "categories": {
           "type": "array",
@@ -233,7 +233,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "enum": ["animal", "orc", "undead", "demon", "dragon"]
+            "enum": ["animal", "orc", "undead", "demon", "dragon", "giant", "troll"]
           }
         },
         "alignment": {

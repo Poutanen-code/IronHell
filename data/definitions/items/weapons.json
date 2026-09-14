@@ -13,9 +13,22 @@
       "to_damage_bonus": -4,
       "weight": 5,
       "sell_value": 1,
-      "stats": { "attack_speed": 1.25, "durability_max": 40 },
-      "allocation_table": [{ "depth": 0, "rarity": 2 }, { "depth": 5, "rarity": 2 }],
+      "stats": {
+        "attack_speed": 1.25,
+        "durability_max": 40
+      },
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 2
+        },
+        {
+          "depth": 5,
+          "rarity": 2
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Cracked edge, but still pointy enough for close work.",
       "provenance_status": "verified"
     },
@@ -31,14 +44,30 @@
       "to_damage_bonus": 0,
       "weight": 12,
       "sell_value": 10,
-      "stats": { "attack_speed": 1.2, "durability_max": 60 },
+      "stats": {
+        "attack_speed": 1.2,
+        "durability_max": 60
+      },
       "allocation_table": [
-        { "depth": 0, "rarity": 1 },
-        { "depth": 5, "rarity": 1 },
-        { "depth": 10, "rarity": 1 },
-        { "depth": 20, "rarity": 1 }
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 5,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 20,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A short, quick blade favored by scouts and thieves.",
       "provenance_status": "verified"
     },
@@ -54,9 +83,18 @@
       "to_damage_bonus": 0,
       "weight": 30,
       "sell_value": 25,
-      "stats": { "attack_speed": 1.18, "durability_max": 70 },
-      "allocation_table": [{ "depth": 3, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.18,
+        "durability_max": 70
+      },
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A broad parrying dagger with a wicked thrust.",
       "provenance_status": "verified"
     },
@@ -72,9 +110,18 @@
       "to_damage_bonus": 0,
       "weight": 40,
       "sell_value": 42,
-      "stats": { "attack_speed": 1.12, "durability_max": 85 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.12,
+        "durability_max": 85
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Narrow and elegant, made for precision strikes.",
       "provenance_status": "verified"
     },
@@ -90,9 +137,18 @@
       "to_damage_bonus": 0,
       "weight": 75,
       "sell_value": 48,
-      "stats": { "attack_speed": 1.08, "durability_max": 95 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.08,
+        "durability_max": 95
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A dependable sidearm for militia and delvers alike.",
       "provenance_status": "verified"
     },
@@ -108,9 +164,18 @@
       "to_damage_bonus": 0,
       "weight": 80,
       "sell_value": 90,
-      "stats": { "attack_speed": 1.05, "durability_max": 100 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.05,
+        "durability_max": 100
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Compact and balanced, ideal in cramped corridors.",
       "provenance_status": "verified"
     },
@@ -126,9 +191,18 @@
       "to_damage_bonus": 0,
       "weight": 50,
       "sell_value": 50,
-      "stats": { "attack_speed": 1.04, "durability_max": 105 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.04,
+        "durability_max": 105
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Curved steel made for fast cutting strokes.",
       "provenance_status": "verified"
     },
@@ -144,9 +218,18 @@
       "to_damage_bonus": 0,
       "weight": 110,
       "sell_value": 85,
-      "stats": { "attack_speed": 1.0, "durability_max": 110 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 110
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A heavy naval blade that bites deep.",
       "provenance_status": "verified"
     },
@@ -162,9 +245,18 @@
       "to_damage_bonus": 0,
       "weight": 100,
       "sell_value": 200,
-      "stats": { "attack_speed": 1.0, "durability_max": 125 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 125
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A broad curved sword prized by caravan guards.",
       "provenance_status": "observed"
     },
@@ -180,12 +272,22 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 255,
-      "stats": { "attack_speed": 0.96, "durability_max": 135 },
+      "stats": {
+        "attack_speed": 0.96,
+        "durability_max": 135
+      },
       "allocation_table": [
-        { "depth": 10, "rarity": 1 },
-        { "depth": 15, "rarity": 1 }
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 15,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A wide blade with brutal chopping force.",
       "provenance_status": "verified"
     },
@@ -201,12 +303,22 @@
       "to_damage_bonus": 0,
       "weight": 130,
       "sell_value": 300,
-      "stats": { "attack_speed": 0.95, "durability_max": 145 },
+      "stats": {
+        "attack_speed": 0.95,
+        "durability_max": 145
+      },
       "allocation_table": [
-        { "depth": 10, "rarity": 1 },
-        { "depth": 20, "rarity": 1 }
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 20,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A knightly standard with excellent reach and weight.",
       "provenance_status": "verified"
     },
@@ -222,9 +334,18 @@
       "to_damage_bonus": 0,
       "weight": 130,
       "sell_value": 250,
-      "stats": { "attack_speed": 0.96, "durability_max": 135 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.96,
+        "durability_max": 135
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A sweeping curved blade favored by desert raiders.",
       "provenance_status": "verified"
     },
@@ -240,9 +361,18 @@
       "to_damage_bonus": 0,
       "weight": 120,
       "sell_value": 400,
-      "stats": { "attack_speed": 0.9, "durability_max": 165 },
-      "allocation_table": [{ "depth": 20, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 165
+      },
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A masterwork curved blade with a terrifying draw-cut.",
       "provenance_status": "verified"
     },
@@ -258,9 +388,18 @@
       "to_damage_bonus": 0,
       "weight": 140,
       "sell_value": 350,
-      "stats": { "attack_speed": 0.9, "durability_max": 180 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 180
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Versatile and heavy, used by veterans in deep halls.",
       "provenance_status": "verified"
     },
@@ -276,12 +415,22 @@
       "to_damage_bonus": 0,
       "weight": 200,
       "sell_value": 775,
-      "stats": { "attack_speed": 0.86, "durability_max": 195 },
+      "stats": {
+        "attack_speed": 0.86,
+        "durability_max": 195
+      },
       "allocation_table": [
-        { "depth": 30, "rarity": 1 },
-        { "depth": 40, "rarity": 1 }
+        {
+          "depth": 30,
+          "rarity": 1
+        },
+        {
+          "depth": 40,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A great slab of steel that ends fights quickly.",
       "provenance_status": "verified"
     },
@@ -297,9 +446,18 @@
       "to_damage_bonus": 0,
       "weight": 260,
       "sell_value": 850,
-      "stats": { "attack_speed": 0.8, "durability_max": 200 },
-      "allocation_table": [{ "depth": 40, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.8,
+        "durability_max": 200
+      },
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A massive blade designed for finishing blows.",
       "provenance_status": "verified"
     },
@@ -315,9 +473,20 @@
       "to_damage_bonus": 0,
       "weight": 180,
       "sell_value": 4000,
-      "stats": { "attack_speed": 0.85, "durability_max": 220 },
-      "allocation_table": [{ "depth": 70, "rarity": 5 }],
-      "capability_ids": ["res_chaos"],
+      "stats": {
+        "attack_speed": 0.85,
+        "durability_max": 220
+      },
+      "allocation_table": [
+        {
+          "depth": 70,
+          "rarity": 5
+        }
+      ],
+      "capability_ids": [],
+      "resistance_ids": [
+        "res_chaos"
+      ],
       "description": "Forged in the pits of Chaos — potent but perilous.",
       "provenance_status": "verified"
     },
@@ -333,9 +502,22 @@
       "to_damage_bonus": -4,
       "weight": 30,
       "sell_value": 2,
-      "stats": { "attack_speed": 1.2, "durability_max": 30 },
-      "allocation_table": [{ "depth": 0, "rarity": 2 }, { "depth": 5, "rarity": 2 }],
+      "stats": {
+        "attack_speed": 1.2,
+        "durability_max": 30
+      },
+      "allocation_table": [
+        {
+          "depth": 0,
+          "rarity": 2
+        },
+        {
+          "depth": 5,
+          "rarity": 2
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A blade snapped near the hilt — still useful as a last resort.",
       "provenance_status": "verified"
     },
@@ -351,9 +533,18 @@
       "to_damage_bonus": 0,
       "weight": 30,
       "sell_value": 30,
-      "stats": { "attack_speed": 1.15, "durability_max": 70 },
-      "allocation_table": [{ "depth": 3, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.15,
+        "durability_max": 70
+      },
+      "allocation_table": [
+        {
+          "depth": 3,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Snaps fast and stings through light armor.",
       "provenance_status": "verified"
     },
@@ -369,9 +560,18 @@
       "to_damage_bonus": 0,
       "weight": 120,
       "sell_value": 130,
-      "stats": { "attack_speed": 1.0, "durability_max": 120 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 120
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A solid iron head that crushes with each swing.",
       "provenance_status": "verified"
     },
@@ -387,9 +587,18 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 200,
-      "stats": { "attack_speed": 0.95, "durability_max": 155 },
-      "allocation_table": [{ "depth": 20, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.95,
+        "durability_max": 155
+      },
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A spiked iron ball on a chain — difficult to parry.",
       "provenance_status": "verified"
     },
@@ -405,9 +614,18 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 200,
-      "stats": { "attack_speed": 1.0, "durability_max": 120 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 120
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A double-ended fighting staff for monks and scholars.",
       "provenance_status": "verified"
     },
@@ -423,9 +641,18 @@
       "to_damage_bonus": 0,
       "weight": 120,
       "sell_value": 225,
-      "stats": { "attack_speed": 0.92, "durability_max": 150 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.92,
+        "durability_max": 150
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Dense iron head for crushing plate and bone alike.",
       "provenance_status": "verified"
     },
@@ -441,9 +668,18 @@
       "to_damage_bonus": 0,
       "weight": 120,
       "sell_value": 376,
-      "stats": { "attack_speed": 0.92, "durability_max": 155 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.92,
+        "durability_max": 155
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A polearm hybrid with hammerhead and spike.",
       "provenance_status": "verified"
     },
@@ -459,9 +695,18 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 396,
-      "stats": { "attack_speed": 0.95, "durability_max": 155 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.95,
+        "durability_max": 155
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Flanged and spiked, penetrating mail with ease.",
       "provenance_status": "verified"
     },
@@ -477,9 +722,18 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 353,
-      "stats": { "attack_speed": 0.9, "durability_max": 160 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 160
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A chained head that punishes those behind shields.",
       "provenance_status": "verified"
     },
@@ -495,9 +749,18 @@
       "to_damage_bonus": 0,
       "weight": 180,
       "sell_value": 502,
-      "stats": { "attack_speed": 0.88, "durability_max": 175 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.88,
+        "durability_max": 175
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Filled with lead for devastating skull-cracking weight.",
       "provenance_status": "verified"
     },
@@ -513,9 +776,18 @@
       "to_damage_bonus": 0,
       "weight": 280,
       "sell_value": 590,
-      "stats": { "attack_speed": 0.84, "durability_max": 195 },
-      "allocation_table": [{ "depth": 45, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.84,
+        "durability_max": 195
+      },
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Swings with lethal momentum, impossible to deflect.",
       "provenance_status": "verified"
     },
@@ -531,9 +803,20 @@
       "to_damage_bonus": 0,
       "weight": 400,
       "sell_value": 4300,
-      "stats": { "attack_speed": 0.88, "durability_max": 240 },
-      "allocation_table": [{ "depth": 80, "rarity": 5 }],
-      "capability_ids": ["slay_undead"],
+      "stats": {
+        "attack_speed": 0.88,
+        "durability_max": 240
+      },
+      "allocation_table": [
+        {
+          "depth": 80,
+          "rarity": 5
+        }
+      ],
+      "capability_ids": [
+        "slay_undead"
+      ],
+      "resistance_ids": [],
       "description": "Holy wrath made iron — undeads dissolve before its strike.",
       "provenance_status": "verified"
     },
@@ -549,9 +832,18 @@
       "to_damage_bonus": 0,
       "weight": 200,
       "sell_value": 1000,
-      "stats": { "attack_speed": 0.85, "durability_max": 120 },
-      "allocation_table": [{ "depth": 15, "rarity": 6 }],
+      "stats": {
+        "attack_speed": 0.85,
+        "durability_max": 120
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 6
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Mighty Hammer.",
       "provenance_status": "ironhell_specific"
     },
@@ -567,9 +859,18 @@
       "to_damage_bonus": 0,
       "weight": 50,
       "sell_value": 36,
-      "stats": { "attack_speed": 1.0, "durability_max": 90 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 90
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Reach and speed — a classic infantry weapon.",
       "provenance_status": "verified"
     },
@@ -585,9 +886,18 @@
       "to_damage_bonus": 0,
       "weight": 70,
       "sell_value": 120,
-      "stats": { "attack_speed": 0.96, "durability_max": 105 },
-      "allocation_table": [{ "depth": 5, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.96,
+        "durability_max": 105
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Three-pronged, capable of trapping and piercing.",
       "provenance_status": "verified"
     },
@@ -603,9 +913,18 @@
       "to_damage_bonus": 0,
       "weight": 160,
       "sell_value": 340,
-      "stats": { "attack_speed": 0.93, "durability_max": 120 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.93,
+        "durability_max": 120
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A pole-mounted spike designed to pierce heavy armor.",
       "provenance_status": "verified"
     },
@@ -621,9 +940,18 @@
       "to_damage_bonus": 0,
       "weight": 160,
       "sell_value": 358,
-      "stats": { "attack_speed": 0.9, "durability_max": 125 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 125
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A long thrusting weapon used in formation combat.",
       "provenance_status": "verified"
     },
@@ -639,9 +967,18 @@
       "to_damage_bonus": 0,
       "weight": 180,
       "sell_value": 408,
-      "stats": { "attack_speed": 0.9, "durability_max": 140 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 140
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Hook-shaped pick for rending mail.",
       "provenance_status": "verified"
     },
@@ -657,9 +994,18 @@
       "to_damage_bonus": 0,
       "weight": 160,
       "sell_value": 304,
-      "stats": { "attack_speed": 0.9, "durability_max": 140 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 140
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Wide-bladed for powerful cleaving strikes.",
       "provenance_status": "verified"
     },
@@ -675,9 +1021,18 @@
       "to_damage_bonus": 0,
       "weight": 190,
       "sell_value": 363,
-      "stats": { "attack_speed": 0.88, "durability_max": 145 },
-      "allocation_table": [{ "depth": 20, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.88,
+        "durability_max": 145
+      },
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A single-edged blade mounted on a long pole.",
       "provenance_status": "verified"
     },
@@ -693,9 +1048,18 @@
       "to_damage_bonus": 0,
       "weight": 190,
       "sell_value": 430,
-      "stats": { "attack_speed": 0.86, "durability_max": 165 },
-      "allocation_table": [{ "depth": 25, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.86,
+        "durability_max": 165
+      },
+      "allocation_table": [
+        {
+          "depth": 25,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Axe, spike, and hook combined into one vicious weapon.",
       "provenance_status": "verified"
     },
@@ -711,9 +1075,18 @@
       "to_damage_bonus": 0,
       "weight": 250,
       "sell_value": 800,
-      "stats": { "attack_speed": 0.85, "durability_max": 160 },
-      "allocation_table": [{ "depth": 45, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.85,
+        "durability_max": 160
+      },
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Repurposed harvest blade, terrifying in close quarters.",
       "provenance_status": "verified"
     },
@@ -729,9 +1102,18 @@
       "to_damage_bonus": 0,
       "weight": 300,
       "sell_value": 230,
-      "stats": { "attack_speed": 0.88, "durability_max": 145 },
-      "allocation_table": [{ "depth": 10, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.88,
+        "durability_max": 145
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Made for mounted charges — unwieldy underground.",
       "provenance_status": "verified"
     },
@@ -747,9 +1129,18 @@
       "to_damage_bonus": 0,
       "weight": 170,
       "sell_value": 334,
-      "stats": { "attack_speed": 0.9, "durability_max": 150 },
-      "allocation_table": [{ "depth": 15, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "durability_max": 150
+      },
+      "allocation_table": [
+        {
+          "depth": 15,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Built for split mail and shattered shields.",
       "provenance_status": "verified"
     },
@@ -765,9 +1156,18 @@
       "to_damage_bonus": 0,
       "weight": 230,
       "sell_value": 500,
-      "stats": { "attack_speed": 0.82, "durability_max": 190 },
-      "allocation_table": [{ "depth": 40, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.82,
+        "durability_max": 190
+      },
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A towering axehead that can fell ogres in two swings.",
       "provenance_status": "verified"
     },
@@ -783,9 +1183,18 @@
       "to_damage_bonus": 0,
       "weight": 250,
       "sell_value": 750,
-      "stats": { "attack_speed": 0.82, "durability_max": 195 },
-      "allocation_table": [{ "depth": 45, "rarity": 1 }],
+      "stats": {
+        "attack_speed": 0.82,
+        "durability_max": 195
+      },
+      "allocation_table": [
+        {
+          "depth": 45,
+          "rarity": 1
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A highland war-axe with hook for pulling riders down.",
       "provenance_status": "verified"
     },
@@ -801,9 +1210,18 @@
       "to_damage_bonus": 0,
       "weight": 250,
       "sell_value": 3500,
-      "stats": { "attack_speed": 0.8, "durability_max": 220 },
-      "allocation_table": [{ "depth": 60, "rarity": 3 }],
+      "stats": {
+        "attack_speed": 0.8,
+        "durability_max": 220
+      },
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 3
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "An artifact-grade harvest blade that cuts through almost anything.",
       "provenance_status": "verified"
     },
@@ -819,12 +1237,23 @@
       "to_damage_bonus": 0,
       "weight": 5,
       "sell_value": 5,
-      "stats": { "attack_speed": 1.1, "range": 20, "durability_max": 65 },
+      "stats": {
+        "attack_speed": 1.1,
+        "range": 20,
+        "durability_max": 65
+      },
       "allocation_table": [
-        { "depth": 1, "rarity": 1 },
-        { "depth": 40, "rarity": 2 }
+        {
+          "depth": 1,
+          "rarity": 1
+        },
+        {
+          "depth": 40,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A simple sling. In skilled hands, stones become lethal.",
       "provenance_status": "verified"
     },
@@ -840,12 +1269,23 @@
       "to_damage_bonus": 0,
       "weight": 30,
       "sell_value": 50,
-      "stats": { "attack_speed": 1.0, "range": 20, "durability_max": 80 },
+      "stats": {
+        "attack_speed": 1.0,
+        "range": 20,
+        "durability_max": 80
+      },
       "allocation_table": [
-        { "depth": 3, "rarity": 1 },
-        { "depth": 50, "rarity": 2 }
+        {
+          "depth": 3,
+          "rarity": 1
+        },
+        {
+          "depth": 50,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A basic short bow. Fast and dependable for dungeon skirmishes.",
       "provenance_status": "verified"
     },
@@ -861,12 +1301,23 @@
       "to_damage_bonus": 0,
       "weight": 40,
       "sell_value": 120,
-      "stats": { "attack_speed": 0.95, "range": 25, "durability_max": 110 },
+      "stats": {
+        "attack_speed": 0.95,
+        "range": 25,
+        "durability_max": 110
+      },
       "allocation_table": [
-        { "depth": 10, "rarity": 1 },
-        { "depth": 70, "rarity": 2 }
+        {
+          "depth": 10,
+          "rarity": 1
+        },
+        {
+          "depth": 70,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A long bow with stronger draw and better range.",
       "provenance_status": "verified"
     },
@@ -882,12 +1333,23 @@
       "to_damage_bonus": 0,
       "weight": 110,
       "sell_value": 140,
-      "stats": { "attack_speed": 0.9, "range": 25, "durability_max": 140 },
+      "stats": {
+        "attack_speed": 0.9,
+        "range": 25,
+        "durability_max": 140
+      },
       "allocation_table": [
-        { "depth": 15, "rarity": 1 },
-        { "depth": 60, "rarity": 2 }
+        {
+          "depth": 15,
+          "rarity": 1
+        },
+        {
+          "depth": 60,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A light crossbow that fires bolts with strong penetration.",
       "provenance_status": "verified"
     },
@@ -903,12 +1365,23 @@
       "to_damage_bonus": 0,
       "weight": 200,
       "sell_value": 300,
-      "stats": { "attack_speed": 0.78, "range": 30, "durability_max": 190 },
+      "stats": {
+        "attack_speed": 0.78,
+        "range": 30,
+        "durability_max": 190
+      },
       "allocation_table": [
-        { "depth": 30, "rarity": 1 },
-        { "depth": 80, "rarity": 2 }
+        {
+          "depth": 30,
+          "rarity": 1
+        },
+        {
+          "depth": 80,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A heavy crossbow with tremendous draw force and reach.",
       "provenance_status": "verified"
     },
@@ -924,12 +1397,22 @@
       "to_damage_bonus": 0,
       "weight": 4,
       "sell_value": 1,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 0, "rarity": 1 },
-        { "depth": 10, "rarity": 2 }
+        {
+          "depth": 0,
+          "rarity": 1
+        },
+        {
+          "depth": 10,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A smooth pebble for sling fire.",
       "provenance_status": "verified"
     },
@@ -945,12 +1428,22 @@
       "to_damage_bonus": 0,
       "weight": 5,
       "sell_value": 2,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 3, "rarity": 1 },
-        { "depth": 40, "rarity": 2 }
+        {
+          "depth": 3,
+          "rarity": 1
+        },
+        {
+          "depth": 40,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Dense metal shot for slings.",
       "provenance_status": "verified"
     },
@@ -966,13 +1459,26 @@
       "to_damage_bonus": 0,
       "weight": 2,
       "sell_value": 1,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 3, "rarity": 1 },
-        { "depth": 15, "rarity": 1 },
-        { "depth": 50, "rarity": 1 }
+        {
+          "depth": 3,
+          "rarity": 1
+        },
+        {
+          "depth": 15,
+          "rarity": 1
+        },
+        {
+          "depth": 50,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Standard wooden arrow for bows.",
       "provenance_status": "verified"
     },
@@ -988,12 +1494,22 @@
       "to_damage_bonus": 0,
       "weight": 2,
       "sell_value": 20,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 55, "rarity": 2 },
-        { "depth": 80, "rarity": 2 }
+        {
+          "depth": 55,
+          "rarity": 2
+        },
+        {
+          "depth": 80,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A heavier war arrow designed for deep penetration.",
       "provenance_status": "verified"
     },
@@ -1009,13 +1525,26 @@
       "to_damage_bonus": 0,
       "weight": 3,
       "sell_value": 2,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 3, "rarity": 1 },
-        { "depth": 25, "rarity": 1 },
-        { "depth": 60, "rarity": 1 }
+        {
+          "depth": 3,
+          "rarity": 1
+        },
+        {
+          "depth": 25,
+          "rarity": 1
+        },
+        {
+          "depth": 60,
+          "rarity": 1
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A standard quarrel for crossbows.",
       "provenance_status": "verified"
     },
@@ -1031,12 +1560,22 @@
       "to_damage_bonus": 0,
       "weight": 3,
       "sell_value": 25,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
       "allocation_table": [
-        { "depth": 65, "rarity": 2 },
-        { "depth": 90, "rarity": 2 }
+        {
+          "depth": 65,
+          "rarity": 2
+        },
+        {
+          "depth": 90,
+          "rarity": 2
+        }
       ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A heavy bolt built to pierce thick hides and plate.",
       "provenance_status": "verified"
     },
@@ -1052,9 +1591,24 @@
       "to_damage_bonus": 5,
       "weight": 4,
       "sell_value": 20,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
-      "allocation_table": [{ "depth": 40, "rarity": 4 }, { "depth": 65, "rarity": 1 }],
-      "capability_ids": ["ignore_acid"],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        },
+        {
+          "depth": 65,
+          "rarity": 1
+        }
+      ],
+      "capability_ids": [],
+      "resistance_ids": [
+        "ignore_acid"
+      ],
       "description": "Mithril shot that carries force with uncanny consistency.",
       "provenance_status": "verified"
     },
@@ -1070,9 +1624,25 @@
       "to_damage_bonus": 0,
       "weight": 2,
       "sell_value": 25,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
-      "allocation_table": [{ "depth": 50, "rarity": 4 }, { "depth": 90, "rarity": 3 }],
-      "capability_ids": ["ignore_acid", "ignore_fire"],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 4
+        },
+        {
+          "depth": 90,
+          "rarity": 3
+        }
+      ],
+      "capability_ids": [],
+      "resistance_ids": [
+        "ignore_acid",
+        "ignore_fire"
+      ],
       "description": "A mithril arrow with exceptional flight and impact.",
       "provenance_status": "verified"
     },
@@ -1088,9 +1658,25 @@
       "to_damage_bonus": 0,
       "weight": 2,
       "sell_value": 30,
-      "stats": { "attack_speed": 1.0, "durability_max": 1 },
-      "allocation_table": [{ "depth": 60, "rarity": 4 }, { "depth": 95, "rarity": 3 }],
-      "capability_ids": ["ignore_acid", "ignore_fire"],
+      "stats": {
+        "attack_speed": 1.0,
+        "durability_max": 1
+      },
+      "allocation_table": [
+        {
+          "depth": 60,
+          "rarity": 4
+        },
+        {
+          "depth": 95,
+          "rarity": 3
+        }
+      ],
+      "capability_ids": [],
+      "resistance_ids": [
+        "ignore_acid",
+        "ignore_fire"
+      ],
       "description": "A mithril bolt for elite crossbowmen.",
       "provenance_status": "verified"
     },
@@ -1106,9 +1692,19 @@
       "to_damage_bonus": 0,
       "weight": 60,
       "sell_value": 10,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 1, "durability_max": 80 },
-      "allocation_table": [{ "depth": 5, "rarity": 2 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 1,
+        "durability_max": 80
+      },
+      "allocation_table": [
+        {
+          "depth": 5,
+          "rarity": 2
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Can move rubble and dig through soft earth.",
       "provenance_status": "verified"
     },
@@ -1124,9 +1720,19 @@
       "to_damage_bonus": 0,
       "weight": 60,
       "sell_value": 100,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 2, "durability_max": 100 },
-      "allocation_table": [{ "depth": 20, "rarity": 3 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 2,
+        "durability_max": 100
+      },
+      "allocation_table": [
+        {
+          "depth": 20,
+          "rarity": 3
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Gnomish engineering for faster tunnel work.",
       "provenance_status": "verified"
     },
@@ -1142,9 +1748,19 @@
       "to_damage_bonus": 0,
       "weight": 120,
       "sell_value": 200,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 3, "durability_max": 140 },
-      "allocation_table": [{ "depth": 40, "rarity": 4 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 3,
+        "durability_max": 140
+      },
+      "allocation_table": [
+        {
+          "depth": 40,
+          "rarity": 4
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Dwarven-forged to cut through solid granite.",
       "provenance_status": "verified"
     },
@@ -1160,9 +1776,19 @@
       "to_damage_bonus": 0,
       "weight": 150,
       "sell_value": 50,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 1, "durability_max": 120 },
-      "allocation_table": [{ "depth": 10, "rarity": 2 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 1,
+        "durability_max": 120
+      },
+      "allocation_table": [
+        {
+          "depth": 10,
+          "rarity": 2
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "A mining pick — slow but effective against stone.",
       "provenance_status": "verified"
     },
@@ -1178,9 +1804,19 @@
       "to_damage_bonus": 0,
       "weight": 180,
       "sell_value": 300,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 2, "durability_max": 150 },
-      "allocation_table": [{ "depth": 30, "rarity": 3 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 2,
+        "durability_max": 150
+      },
+      "allocation_table": [
+        {
+          "depth": 30,
+          "rarity": 3
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Crude orcish tool but surprisingly effective at digging.",
       "provenance_status": "verified"
     },
@@ -1196,9 +1832,19 @@
       "to_damage_bonus": 0,
       "weight": 200,
       "sell_value": 600,
-      "stats": { "attack_speed": 1.0, "tunnel_power": 3, "durability_max": 180 },
-      "allocation_table": [{ "depth": 50, "rarity": 4 }],
+      "stats": {
+        "attack_speed": 1.0,
+        "tunnel_power": 3,
+        "durability_max": 180
+      },
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 4
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Master dwarven craft that chews through bedrock.",
       "provenance_status": "verified"
     },
@@ -1214,9 +1860,19 @@
       "to_damage_bonus": 0,
       "weight": 250,
       "sell_value": 700,
-      "stats": { "attack_speed": 0.9, "tunnel_power": 3, "durability_max": 180 },
-      "allocation_table": [{ "depth": 50, "rarity": 2 }],
+      "stats": {
+        "attack_speed": 0.9,
+        "tunnel_power": 3,
+        "durability_max": 180
+      },
+      "allocation_table": [
+        {
+          "depth": 50,
+          "rarity": 2
+        }
+      ],
       "capability_ids": [],
+      "resistance_ids": [],
       "description": "Heavy digging blade — also viable as a weapon in desperation.",
       "provenance_status": "verified"
     }

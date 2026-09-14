@@ -20,7 +20,7 @@
       "required": [
         "id", "name", "type", "tval", "sval",
         "weight", "sell_value", "affixes",
-        "capability_ids", "allocation_table",
+        "capability_ids", "resistance_ids", "allocation_table",
         "description", "provenance_status"
       ],
       "properties": {
@@ -39,6 +39,11 @@
           "items": { "$ref": "common_item.schema.json#/$defs/Affix" }
         },
         "capability_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "resistance_ids": {
           "type": "array",
           "items": { "$ref": "common_item.schema.json#/$defs/Id" },
           "uniqueItems": true

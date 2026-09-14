@@ -74,6 +74,11 @@
           "$ref": "common.schema.json#/$defs/Id",
           "description": "Required for oppose semantics to bind timed status channel definitions."
         },
+        "grant_sources": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
         "notes": { "type": "string" },
         "provenance_status": { "$ref": "common.schema.json#/$defs/ProvenanceStatus" }
       },

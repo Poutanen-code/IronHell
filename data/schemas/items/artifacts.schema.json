@@ -42,7 +42,7 @@
           "effects": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["affixes", "combat_modifiers", "capabilities", "resistances", "activations", "curses", "display_flags"],
+            "required": ["affixes", "combat_modifiers", "capability_ids", "resistance_ids", "activations", "curses", "display_flags"],
             "properties": {
               "affixes": {
                 "type": "array",
@@ -57,8 +57,8 @@
                 }
               },
               "combat_modifiers": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
-              "capabilities": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
-              "resistances": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "capability_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+              "resistance_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
               "activations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
               "curses": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
               "display_flags": {

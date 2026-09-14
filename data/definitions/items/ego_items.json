@@ -373,7 +373,7 @@
         "IGNORE_ELEC",
         "IGNORE_FIRE"
       ],
-      "note": "inert_flags are stored but have no runtime effect in current IronHell implementation (src/game/systems/character/resistances.ts flagsToAffixes does not map them). IGNORE_* are item preservation flags and may intentionally remain inert in a PvE context. MIGHT/SHOTS are explicitly active combat affixes and are not inert."
+      "note": "inert_flags are stored but have no runtime effect in current IronHell implementation (src/game/systems/character/resistance_ids.ts flagsToAffixes does not map them). IGNORE_* are item preservation flags and may intentionally remain inert in a PvE context. MIGHT/SHOTS are explicitly active combat affixes and are not inert."
     },
     "combat_modifiers": {
       "concepts": [
@@ -445,10 +445,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_acid"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_acid",
           "res_acid"
         ],
         "activations": [],
@@ -496,10 +495,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_elec"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_elec",
           "res_elec"
         ],
         "activations": [],
@@ -547,10 +545,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_fire"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_fire",
           "res_fire"
         ],
         "activations": [],
@@ -598,10 +595,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_cold"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_cold",
           "res_cold"
         ],
         "activations": [],
@@ -655,13 +651,12 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -724,13 +719,12 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -781,10 +775,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -839,20 +833,20 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "sust_str",
           "sust_dex",
           "sust_con",
           "sust_int",
           "sust_wis",
           "sust_chr",
-          "hold_life",
+          "hold_life"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -915,12 +909,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "free_act",
+        "capability_ids": [
+          "free_act"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -962,10 +957,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_acid"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_acid",
           "res_acid"
         ],
         "activations": [],
@@ -1007,10 +1001,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_elec"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_elec",
           "res_elec"
         ],
         "activations": [],
@@ -1053,10 +1046,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "ignore_fire"
         ],
-        "resistances": [
+        "resistance_ids": [
           "res_fire"
         ],
         "activations": [],
@@ -1098,10 +1091,9 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_cold"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_cold",
           "res_cold"
         ],
         "activations": [],
@@ -1148,13 +1140,12 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -1211,13 +1202,12 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire",
           "ignore_cold",
-          "ignore_elec"
-        ],
-        "resistances": [
+          "ignore_elec",
           "res_fire",
           "res_cold",
           "res_acid",
@@ -1269,17 +1259,17 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "sust_str",
           "sust_con",
           "sust_dex",
-          "hold_life",
+          "hold_life"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_disen"
         ],
         "activations": [],
@@ -1321,10 +1311,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -1371,10 +1361,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_int"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1419,10 +1409,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_wis"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1467,10 +1457,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_chr"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1523,14 +1513,14 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "sust_int",
+        "capability_ids": [
+          "sust_int"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -1597,17 +1587,18 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_str",
           "sust_dex",
           "sust_con",
-          "free_act",
+          "free_act"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1663,15 +1654,15 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_wis",
-          "sust_chr",
+          "sust_chr"
+        ],
+        "resistance_ids": [          
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_fear"
         ],
         "activations": [],
@@ -1725,10 +1716,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "see_invis"
         ],
-        "resistances": [
+        "resistance_ids": [
           "res_blind"
         ],
         "activations": [],
@@ -1775,8 +1766,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -1823,8 +1814,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
           "res_lite"
         ],
         "activations": [],
@@ -1871,10 +1862,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "telepathy"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1919,10 +1910,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "regen"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -1962,10 +1953,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "teleportation"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2008,8 +1999,8 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
           "res_sound",
           "res_confu",
           "res_fear"
@@ -2062,11 +2053,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "see_invis",
-          "ignore_acid"
+        "capability_ids": [
+          "see_invis"
         ],
-        "resistances": [
+        "resistance_ids": [
+          "ignore_acid",
           "res_lite",
           "res_dark",
           "res_blind"
@@ -2131,8 +2122,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2195,8 +2186,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2241,13 +2232,12 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_shard"
         ],
         "activations": [],
@@ -2293,8 +2283,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -2342,13 +2332,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -2400,11 +2390,12 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "sust_int",
+        "capability_ids": [
+          "sust_int"
+        ],
+        "resistance_ids": [
           "ignore_acid"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -2451,8 +2442,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2494,10 +2485,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2545,10 +2536,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2589,10 +2580,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "free_act"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -2636,8 +2627,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -2682,8 +2673,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -2735,8 +2726,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -2795,11 +2786,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "feather",
           "free_act"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -2857,10 +2848,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -2908,8 +2899,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -2959,8 +2950,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -3003,10 +2994,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "feather"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -3051,8 +3042,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -3093,10 +3084,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "free_act"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -3141,8 +3132,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -3184,10 +3175,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "feather"
         ],
-        "resistances": [
+        "resistance_ids": [
           "res_nexus"
         ],
         "activations": [],
@@ -3242,12 +3233,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "feather",
+        "capability_ids": [
+          "feather"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -3295,8 +3287,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -3352,10 +3344,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -3425,11 +3417,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "see_invis",
           "blessed_item"
         ],
-        "resistances": [
+        "resistance_ids": [
           "res_fear"
         ],
         "activations": [],
@@ -3500,17 +3492,17 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "free_act",
           "see_invis",
           "feather",
-          "regen",
+          "regen"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -3573,10 +3565,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "blessed_item"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -3647,13 +3639,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "see_invis",
-          "free_act",
-          "ignore_acid",
-          "ignore_fire"
+          "free_act"
         ],
-        "resistances": [
+        "resistance_ids": [
+          "ignore_acid",
+          "ignore_fire",
           "res_dark"
         ],
         "activations": [],
@@ -3731,11 +3723,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "free_act",
           "see_invis"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -3793,8 +3785,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -3863,12 +3855,12 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "aggravate_monsters",
-          "ignore_acid",
-          "ignore_fire"
+        "capability_ids": [
+          "aggravate_monsters"
         ],
-        "resistances": [
+        "resistance_ids": [
+          "ignore_acid",
+          "ignore_fire",
           "res_fear"
         ],
         "activations": [],
@@ -3928,10 +3920,9 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_acid"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_acid",
           "res_acid"
         ],
         "activations": [],
@@ -3989,10 +3980,9 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_elec"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_elec",
           "res_elec"
         ],
         "activations": [],
@@ -4050,10 +4040,9 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_fire"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_fire",
           "res_fire"
         ],
         "activations": [],
@@ -4111,10 +4100,9 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
-          "ignore_cold"
-        ],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
+          "ignore_cold",
           "res_cold"
         ],
         "activations": [],
@@ -4170,8 +4158,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4225,8 +4213,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4280,8 +4268,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4335,8 +4323,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4390,8 +4378,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4445,8 +4433,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4500,8 +4488,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4555,8 +4543,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4610,8 +4598,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4672,10 +4660,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "slow_digest"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4736,10 +4724,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "blessed_item"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4800,10 +4788,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "see_invis"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4865,8 +4853,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
           "res_fire"
         ],
         "activations": [],
@@ -4928,10 +4916,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_dex"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -4992,10 +4980,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "regen"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5056,10 +5044,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "sust_str"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5120,8 +5108,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [
+        "capability_ids": [],
+        "resistance_ids": [
           "res_fear"
         ],
         "activations": [],
@@ -5171,8 +5159,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5183,7 +5171,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that enhance tunneling capabilities and deal acid damage."
+      "description": "Weapons that enhance tunneling capability_ids and deal acid damage."
     },
     {
       "id": "of_earthquakes",
@@ -5227,8 +5215,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5241,7 +5229,7 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that can cause earthquakes, enhance tunneling capabilities, deal acid damage and grant increased strength."
+      "description": "Weapons that can cause earthquakes, enhance tunneling capability_ids, deal acid damage and grant increased strength."
     },
     {
       "id": "of_morgul",
@@ -5291,13 +5279,13 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "see_invis",
           "aggravate_monsters",
           "hold_life",
           "drain_exp"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "HEAVY_CURSE",
@@ -5338,8 +5326,8 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5376,8 +5364,8 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5430,12 +5418,13 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
-          "free_act",
+        "capability_ids": [
+          "free_act"
+        ],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5489,11 +5478,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5540,8 +5529,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5588,8 +5577,8 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5648,11 +5637,11 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -5695,11 +5684,11 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "drain_exp",
           "see_invis"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -5754,8 +5743,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5808,8 +5797,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5861,8 +5850,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5915,8 +5904,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -5970,10 +5959,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6027,10 +6016,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_elec"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6083,8 +6072,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6137,8 +6126,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6197,11 +6186,11 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_fire",
           "ignore_acid"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6254,8 +6243,8 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6309,10 +6298,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_fire"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6366,10 +6355,10 @@
       ],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_cold"
         ],
-        "resistances": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6418,8 +6407,8 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6470,8 +6459,8 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [],
-        "resistances": [],
+        "capability_ids": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [
           "LIGHT_CURSE"
@@ -6525,13 +6514,12 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -6576,11 +6564,11 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "hold_life",
           "free_act"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
@@ -6627,13 +6615,12 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -6693,13 +6680,12 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [],
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
-          "ignore_cold"
-        ],
-        "resistances": [
+          "ignore_cold",
           "res_acid",
           "res_elec",
           "res_fire",
@@ -6760,10 +6746,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "free_act"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": [
@@ -6805,10 +6791,10 @@
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capabilities": [
+        "capability_ids": [
           "free_act"
         ],
-        "resistances": [
+        "resistance_ids": [
           "res_pois"
         ],
         "activations": [],
@@ -6855,10 +6841,10 @@
             "value_source": "pval"
           }
         ],
-        "capabilities": [
+        "capability_ids": [
           "regen"
         ],
-        "resistances": [],
+        "resistance_ids": [],
         "activations": [],
         "curses": [],
         "display_flags": []
