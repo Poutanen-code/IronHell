@@ -7,6 +7,7 @@ namespace IronHell.Data.Serialization;
 internal static class CharacterDefinitionReader
 {
     private const string CapabilityIdsProperty = "capability_ids";
+    private const string ResistanceIdsProperty = "resistance_ids";
 
     public static List<RaceDefinition> ReadRaces(JsonObject document, DefinitionValidationReport report)
     {
@@ -27,7 +28,8 @@ internal static class CharacterDefinitionReader
             definitions.Add(new RaceDefinition(
                 id, RequiredString(race, "name", "races.json", report) ?? string.Empty,
                 ReadStats(race["stat_modifiers"]), ReadSkills(race["skill_modifiers"]),
-                ReadInt(race, "hit_die"), ReadInt(race, "exp_factor"), ReadInt(race, "infravision"), ReadInt(race, "history_chart"), ReadIds(race, CapabilityIdsProperty)));
+                ReadInt(race, "hit_die"), ReadInt(race, "exp_factor"), ReadInt(race, "infravision"), ReadInt(race, "history_chart"),
+                ReadIds(race, CapabilityIdsProperty), ReadIds(race, ResistanceIdsProperty)));
         }
 
         ValidationHelpers.ValidateDuplicates("races", definitions, report);

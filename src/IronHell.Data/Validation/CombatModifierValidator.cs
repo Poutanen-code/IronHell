@@ -14,7 +14,7 @@ internal static class CombatModifierValidator
     };
     private static readonly IReadOnlySet<string> CategoryTargets = new HashSet<string>(StringComparer.Ordinal)
     {
-        "animal", "orc", "undead", "demon", "dragon",
+        "animal", "orc", "undead", "demon", "dragon", "giant", "troll",
     };
     private static readonly IReadOnlySet<string> AlignmentTargets = new HashSet<string>(StringComparer.Ordinal)
     {

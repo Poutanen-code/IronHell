@@ -9,6 +9,7 @@ namespace IronHell.Data.Validation;
 internal static class ItemValidator
 {
     private const string CapabilityIdsProperty = "capability_ids";
+    private const string ResistanceIdsProperty = "resistance_ids";
     private const string EgoItemsDocument = "items/ego_items.json";
     private const string ArtifactsDocument = "items/artifacts.json";
     private const string CombatModifiersDocument = "combat_modifiers.json";
@@ -18,9 +19,11 @@ internal static class ItemValidator
     private const string AffixesProperty = "affixes";
     private const string EgoItemsProperty = "ego_items";
     private const string ArtifactsProperty = "artifacts";
+    private const string CapabilitiesDocument = "capabilities";
+    private const string ResistancesDocument = "resistances";
     private const string EffectsProperty = "effects";
-    private const string CapabilitiesProperty = "capabilities";
-    private const string ResistancesProperty = "resistances";
+    private const string CapabilitiesProperty = "capability_ids";
+    private const string ResistancesProperty = "resistance_ids";
     private const string ActivationsProperty = "activations";
     private const string CursesProperty = "curses";
     private const string DisplayFlagsProperty = "display_flags";
@@ -76,7 +79,12 @@ internal static class ItemValidator
                 var id = item["id"]?.GetValue<string>() ?? string.Empty;
                 foreach (var capabilityId in item[CapabilityIdsProperty]?.AsArray() ?? [])
                 {
-                    ValidationHelpers.ValidateCapabilityReference(capabilityId?.GetValue<string>(), capabilities, resistances, $"items/{catalog.DocumentName}.json", id, report);
+                    ValidationHelpers.ValidateCapabilityReference(capabilityId?.GetValue<string>(), capabilities, $"items/{catalog.DocumentName}.json", id, report);
+                }
+
+                foreach (var resistanceId in item[ResistanceIdsProperty]?.AsArray() ?? [])
+                {
+                    ValidationHelpers.ValidateReference(resistanceId?.GetValue<string>(), resistances, $"items/{catalog.DocumentName}.json", id, ResistanceIdsProperty, "unknown_resistance", report);
                 }
 
                 foreach (var action in item["actions"]?.AsArray().OfType<JsonObject>() ?? [])
@@ -171,8 +179,8 @@ internal static class ItemValidator
         FrozenDictionary<string, JsonObject> documents,
         DefinitionValidationReport report)
     {
-        var capabilityIds = GetDefinitionIds(documents[CapabilitiesProperty], CapabilitiesProperty, "id");
-        var resistanceIds = GetDefinitionIds(documents[ResistancesProperty], ResistancesProperty, "id");
+        var capabilityIds = GetDefinitionIds(documents[CapabilitiesDocument], CapabilitiesDocument, "id");
+        var resistanceIds = GetDefinitionIds(documents[ResistancesDocument], ResistancesDocument, "id");
         var activationIds = GetDefinitionIds(documents[ActivationsProperty], ActivationsProperty, "activation_id");
         foreach (var artifact in documents[ArtifactsProperty][ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
@@ -183,6 +191,21 @@ internal static class ItemValidator
             ValidateEffectReferences(effects?[ActivationsProperty]?.AsArray(), activationIds, artifactId, ActivationsProperty, "unknown_activation", report);
             ValidateEffectReferences(effects?[CursesProperty]?.AsArray(), CurseIds, artifactId, CursesProperty, "unknown_curse", report);
             ValidateArtifactEffectCoverage(artifact, artifactId, effects, report);
+        }
+    }
+
+    public static void ValidateEgoEffects(
+        FrozenDictionary<string, JsonObject> documents,
+        DefinitionValidationReport report)
+    {
+        var capabilityIds = GetDefinitionIds(documents[CapabilitiesDocument], CapabilitiesDocument, "id");
+        var resistanceIds = GetDefinitionIds(documents[ResistancesDocument], ResistancesDocument, "id");
+        foreach (var egoItem in documents[EgoItemsProperty][EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
+            var effects = egoItem[EffectsProperty]?.AsObject();
+            ValidateEffectReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilityIds, egoId, CapabilitiesProperty, "unknown_capability", report, EgoItemsDocument);
+            ValidateEffectReferences(effects?[ResistancesProperty]?.AsArray(), resistanceIds, egoId, ResistancesProperty, "unknown_resistance", report, EgoItemsDocument);
         }
     }
 
@@ -198,14 +221,15 @@ internal static class ItemValidator
         string artifactId,
         string effectProperty,
         string errorCode,
-        DefinitionValidationReport report)
+        DefinitionValidationReport report,
+        string documentPath = ArtifactsDocument)
     {
         var unknownReferences = references?.Select(value => value?.GetValue<string>())
             .Where(value => !string.IsNullOrWhiteSpace(value))
             .Where(value => !knownIds.Contains(value!)) ?? [];
         foreach (var reference in unknownReferences)
         {
-            report.Add(ArtifactsDocument, artifactId, $"{EffectsProperty}.{effectProperty}", errorCode, $"{effectProperty} reference '{reference}' does not resolve.");
+            report.Add(documentPath, artifactId, $"{EffectsProperty}.{effectProperty}", errorCode, $"{effectProperty} reference '{reference}' does not resolve.");
         }
     }
 

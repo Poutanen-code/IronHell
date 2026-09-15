@@ -28,6 +28,15 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task RaceDefinition_LoadsResistanceIds()
+    {
+        var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+
+        var catalog = Assert.IsType<DefinitionLoadSuccess>(result).Catalog;
+        Assert.Equal(["res_lite"], catalog.Races.GetRequired("elf").ResistanceIds);
+    }
+
+    [Fact]
     public async Task CharacterBootstrapService_CreateHumanWarrior_PopulatesInventoryWithValidDefinitions()
     {
         var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
@@ -329,14 +338,36 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
-    public async Task LoadAsync_UnknownCapabilityResistance_ReturnsValidationReport()
+    public async Task CapabilityValidator_RejectsResistanceIds()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "capabilities.json"), "\"resistance_id\": \"res_blind\"", "\"resistance_id\": \"missing_resistance\"");
+        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"capability_ids\": [\"sust_dex\"]", "\"capability_ids\": [\"res_lite\"]");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_capability");
+    }
+
+    [Fact]
+    public async Task ResistanceValidator_RejectsCapabilityIds()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"resistance_ids\": [\"res_lite\"]", "\"resistance_ids\": [\"see_invis\"]");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
         AssertError(result, "unknown_resistance");
+    }
+
+    [Fact]
+    public async Task IgnoreFire_MustBeResistanceOnly()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"capability_ids\": [\"see_invis\"]", "\"capability_ids\": [\"ignore_fire\"]");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_capability");
     }
 
     [Fact]

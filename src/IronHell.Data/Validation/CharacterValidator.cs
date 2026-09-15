@@ -10,13 +10,11 @@ internal sealed record CharacterDefinitionSet(
 
 internal static class CharacterValidator
 {
-    private const string CapabilityIdsProperty = "capability_ids";
-    private const string UnknownCapabilityError = "unknown_capability";
-
     public static void Validate(
         IDefinitionRegistry<RaceDefinition> races,
         IDefinitionRegistry<ClassDefinition> classes,
         IDefinitionRegistry<CapabilityDefinition> capabilities,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
         IDefinitionRegistry<ItemDefinition> items,
         CharacterDefinitionSet characterDefinitions,
         DefinitionValidationReport report)
@@ -29,6 +27,7 @@ internal static class CharacterValidator
 
         ValidateCapabilityReferences(characterDefinitions.Races, capabilities, report);
         ValidateCapabilityReferences(characterDefinitions.Classes, capabilities, report);
+        ValidateResistanceReferences(characterDefinitions.Races, resistances, report);
         ValidateStartingEquipment(characterDefinitions.Classes, items, report);
     }
 
@@ -70,7 +69,21 @@ internal static class CharacterValidator
             };
             foreach (var capabilityId in capabilityIds)
             {
-                if (!capabilities.TryGet(capabilityId, out _)) report.Add("character", definition.Id, CapabilityIdsProperty, UnknownCapabilityError, $"Capability '{capabilityId}' does not resolve.");
+                ValidationHelpers.ValidateCapabilityReference(capabilityId, capabilities, "character", definition.Id, report);
+            }
+        }
+    }
+
+    private static void ValidateResistanceReferences(
+        IEnumerable<RaceDefinition> races,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
+        DefinitionValidationReport report)
+    {
+        foreach (var race in races)
+        {
+            foreach (var resistanceId in race.ResistanceIds)
+            {
+                ValidationHelpers.ValidateReference(resistanceId, resistances, "character", race.Id, "resistance_ids", "unknown_resistance", report);
             }
         }
     }

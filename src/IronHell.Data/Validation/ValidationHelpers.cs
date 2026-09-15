@@ -1,4 +1,3 @@
-using System.Collections.Frozen;
 using System.Text.Json.Nodes;
 using IronHell.Core.Definitions;
 using IronHell.Data.Registries;
@@ -12,11 +11,6 @@ internal static class ValidationHelpers
     private const string ActionIdProperty = "action_id";
     private const string CapabilityIdsProperty = "capability_ids";
     private const string UnknownCapabilityError = "unknown_capability";
-
-    public static readonly FrozenSet<string> LegacyCapabilityIds = new[]
-    {
-        "regeneration", "searching", "slay_undead", "stealth",
-    }.ToFrozenSet(StringComparer.Ordinal);
 
     public static void ValidateDuplicates<T>(string catalog, IEnumerable<T> definitions, DefinitionValidationReport report) where T : IIdentifiedDefinition
     {
@@ -53,17 +47,11 @@ internal static class ValidationHelpers
     public static void ValidateCapabilityReference(
         string? id,
         IDefinitionRegistry<CapabilityDefinition> capabilities,
-        IDefinitionRegistry<ResistanceDefinition> resistances,
         string documentPath,
         string definitionId,
         DefinitionValidationReport report)
     {
-        if (string.IsNullOrWhiteSpace(id) || capabilities.TryGet(id, out _) || resistances.TryGet(id, out _) || LegacyCapabilityIds.Contains(id))
-        {
-            return;
-        }
-
-        report.Add(documentPath, definitionId, CapabilityIdsProperty, UnknownCapabilityError, $"Capability '{id}' does not resolve.");
+        ValidateReference(id, capabilities, documentPath, definitionId, CapabilityIdsProperty, UnknownCapabilityError, report);
     }
 
     public static void ValidateActionReference(

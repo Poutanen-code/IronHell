@@ -138,15 +138,19 @@ internal static class DefinitionDocumentLoader
 
     private static string BundleCommonItemDefinitions(string schemaPath, JsonObject? commonItemDefinitions)
     {
+        var schema = JsonNode.Parse(File.ReadAllText(schemaPath))?.AsObject()
+            ?? throw new JsonException("Item schema root must be an object.");
+
+        var definitions = schema["$defs"]?.AsObject();
+        if (definitions is null)
+        {
+            return schema.ToJsonString();
+        }
+
         if (commonItemDefinitions is null)
         {
             throw new JsonException("The common item schema does not define '$defs'.");
         }
-
-        var schema = JsonNode.Parse(File.ReadAllText(schemaPath))?.AsObject()
-            ?? throw new JsonException("Item schema root must be an object.");
-        var definitions = schema["$defs"]?.AsObject()
-            ?? throw new JsonException("Item schema does not define '$defs'.");
 
         foreach (var definition in commonItemDefinitions)
         {

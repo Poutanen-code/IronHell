@@ -110,8 +110,8 @@ public sealed class ArtifactAffixValidationTests
               "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART", "LIGHT_CURSE", "HEAVY_CURSE", "PERMA_CURSE"],
               "generation": { "insta_art": true },
               "effects": {
-                "capabilities": [],
-                "resistances": [],
+                "capability_ids": [],
+                "resistance_ids": [],
                 "activations": [],
                 "curses": ["light_curse", "heavy_curse", "perma_curse"],
                 "display_flags": ["show_mods", "hide_type"],
@@ -132,8 +132,8 @@ public sealed class ArtifactAffixValidationTests
               "id": "artifact",
               "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART"],
               "effects": {
-                "capabilities": [],
-                "resistances": [],
+                "capability_ids": [],
+                "resistance_ids": [],
                 "activations": [],
                 "curses": [],
                 "display_flags": [],
