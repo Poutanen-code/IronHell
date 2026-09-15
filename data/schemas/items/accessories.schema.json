@@ -18,7 +18,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "type", "tval", "sval",
+        "id", "name", "type",
         "weight", "sell_value", "affixes",
         "capability_ids", "resistance_ids", "allocation_table",
         "description", "provenance_status"
@@ -30,8 +30,6 @@
           "type": "string",
           "enum": ["ring", "amulet"]
         },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "weight": { "type": "integer", "minimum": 0 },
         "sell_value": { "type": "integer", "minimum": 0 },
         "affixes": {

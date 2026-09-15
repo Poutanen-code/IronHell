@@ -18,7 +18,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "tval", "sval", "weight", "sell_value",
+        "id", "name", "weight", "sell_value",
         "trap_chance", "lock_difficulty", "gold_multiplier",
         "allocation_table", "trap_ids", "loot_actions", "state_policy",
         "description", "provenance_status"
@@ -26,8 +26,6 @@
       "properties": {
         "id": { "$ref": "common_item.schema.json#/$defs/Id" },
         "name": { "type": "string", "minLength": 1 },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "weight": { "type": "integer", "minimum": 0 },
         "sell_value": { "type": "integer", "minimum": 0 },
         "trap_chance": { "type": "number", "minimum": 0, "maximum": 1 },

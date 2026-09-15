@@ -18,7 +18,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "type", "tval", "sval",
+        "id", "name", "type",
         "cooldown_ticks", "stack_size", "weight", "sell_value",
         "capability_ids", "allocation_table",
         "description", "provenance_status"
@@ -30,8 +30,6 @@
           "type": "string",
           "enum": ["mushroom", "food"]
         },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "cooldown_ticks": { "type": "integer", "minimum": 0 },
         "stack_size": { "type": "integer", "minimum": 1 },
         "weight": { "type": "number", "minimum": 0 },

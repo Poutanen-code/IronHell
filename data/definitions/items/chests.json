@@ -4,8 +4,6 @@
         {
             "id": "ruined_chest",
             "name": "Ruined chest",
-            "tval": 7,
-            "sval": 0,
             "weight": 250,
             "sell_value": 0,
             "trap_chance": 0,
@@ -30,8 +28,6 @@
         {
             "id": "small_wooden_chest",
             "name": "Small wooden chest",
-            "tval": 7,
-            "sval": 1,
             "weight": 250,
             "sell_value": 20,
             "trap_chance": 0.15,
@@ -82,8 +78,6 @@
         {
             "id": "small_iron_chest",
             "name": "Small iron chest",
-            "tval": 7,
-            "sval": 2,
             "weight": 300,
             "sell_value": 100,
             "trap_chance": 0.35,
@@ -137,8 +131,6 @@
         {
             "id": "small_steel_chest",
             "name": "Small steel chest",
-            "tval": 7,
-            "sval": 3,
             "weight": 500,
             "sell_value": 200,
             "trap_chance": 0.55,
@@ -192,8 +184,6 @@
         {
             "id": "large_wooden_chest",
             "name": "Large wooden chest",
-            "tval": 7,
-            "sval": 5,
             "weight": 500,
             "sell_value": 60,
             "trap_chance": 0.25,
@@ -245,8 +235,6 @@
         {
             "id": "large_iron_chest",
             "name": "Large iron chest",
-            "tval": 7,
-            "sval": 6,
             "weight": 1000,
             "sell_value": 150,
             "trap_chance": 0.45,
@@ -300,8 +288,6 @@
         {
             "id": "large_steel_chest",
             "name": "Large steel chest",
-            "tval": 7,
-            "sval": 7,
             "weight": 1000,
             "sell_value": 250,
             "trap_chance": 0.65,
