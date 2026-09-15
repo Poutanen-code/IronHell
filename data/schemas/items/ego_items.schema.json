@@ -15,7 +15,7 @@
         "required": [
           "name", "rating", "xtra", "max_to_hit", "max_to_dam",
           "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
-          "slots", "item_categories", "flags", "combat_modifiers"
+          "slots", "item_categories", "combat_modifiers"
         ],
         "properties": {
           "name": { "type": "string" },

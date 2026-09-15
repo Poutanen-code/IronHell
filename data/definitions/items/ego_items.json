@@ -28,353 +28,6 @@
       "2": "Random resistance: one of RES_BLIND/CONFU/SOUND/SHARD/NEXUS/NETHR/CHAOS/DISEN/LITE/DARK",
       "3": "Random ability: one of FREE_ACT/HOLD_LIFE/FEATHER/LITE/SEE_INVIS/TELEPATHY/SLOW_DIGEST/REGEN"
     },
-    "flag_effects": {
-      "STR": {
-        "classification": "affix",
-        "affix_id": "strength"
-      },
-      "DEX": {
-        "classification": "affix",
-        "affix_id": "dexterity"
-      },
-      "CON": {
-        "classification": "affix",
-        "affix_id": "constitution"
-      },
-      "INT": {
-        "classification": "affix",
-        "affix_id": "intelligence"
-      },
-      "WIS": {
-        "classification": "affix",
-        "affix_id": "wisdom"
-      },
-      "CHR": {
-        "classification": "affix",
-        "affix_id": "charisma"
-      },
-      "SPEED": {
-        "classification": "affix",
-        "affix_id": "speed"
-      },
-      "STEALTH": {
-        "classification": "affix",
-        "affix_id": "stealth"
-      },
-      "INFRA": {
-        "classification": "affix",
-        "affix_id": "infra"
-      },
-      "TUNNEL": {
-        "classification": "affix",
-        "affix_id": "tunnel"
-      },
-      "SEARCH": {
-        "classification": "affix",
-        "affix_id": "search"
-      },
-      "BLOWS": {
-        "classification": "affix",
-        "affix_id": "blows"
-      },
-      "MIGHT": {
-        "classification": "affix",
-        "affix_id": "might"
-      },
-      "SHOTS": {
-        "classification": "affix",
-        "affix_id": "shots"
-      },
-      "SUST_STR": {
-        "classification": "capability",
-        "capability_id": "sust_str"
-      },
-      "SUST_DEX": {
-        "classification": "capability",
-        "capability_id": "sust_dex"
-      },
-      "SUST_CON": {
-        "classification": "capability",
-        "capability_id": "sust_con"
-      },
-      "SUST_INT": {
-        "classification": "capability",
-        "capability_id": "sust_int"
-      },
-      "SUST_WIS": {
-        "classification": "capability",
-        "capability_id": "sust_wis"
-      },
-      "SUST_CHR": {
-        "classification": "capability",
-        "capability_id": "sust_chr"
-      },
-      "RES_FIRE": {
-        "classification": "resistance",
-        "resistance_id": "res_fire"
-      },
-      "RES_COLD": {
-        "classification": "resistance",
-        "resistance_id": "res_cold"
-      },
-      "RES_ELEC": {
-        "classification": "resistance",
-        "resistance_id": "res_elec"
-      },
-      "RES_ACID": {
-        "classification": "resistance",
-        "resistance_id": "res_acid"
-      },
-      "RES_POIS": {
-        "classification": "resistance",
-        "resistance_id": "res_pois"
-      },
-      "RES_FEAR": {
-        "classification": "resistance",
-        "resistance_id": "res_fear"
-      },
-      "RES_LITE": {
-        "classification": "resistance",
-        "resistance_id": "res_lite"
-      },
-      "RES_DARK": {
-        "classification": "resistance",
-        "resistance_id": "res_dark"
-      },
-      "RES_BLIND": {
-        "classification": "resistance",
-        "resistance_id": "res_blind"
-      },
-      "RES_CONFU": {
-        "classification": "resistance",
-        "resistance_id": "res_confu"
-      },
-      "RES_SOUND": {
-        "classification": "resistance",
-        "resistance_id": "res_sound"
-      },
-      "RES_SHARD": {
-        "classification": "resistance",
-        "resistance_id": "res_shard"
-      },
-      "RES_NEXUS": {
-        "classification": "resistance",
-        "resistance_id": "res_nexus"
-      },
-      "RES_NETHR": {
-        "classification": "resistance",
-        "resistance_id": "res_nethr"
-      },
-      "RES_CHAOS": {
-        "classification": "resistance",
-        "resistance_id": "res_chaos"
-      },
-      "RES_DISEN": {
-        "classification": "resistance",
-        "resistance_id": "res_disen"
-      },
-      "IM_FIRE": {
-        "classification": "resistance",
-        "resistance_id": "imm_fire"
-      },
-      "IM_COLD": {
-        "classification": "resistance",
-        "resistance_id": "imm_cold"
-      },
-      "IM_ELEC": {
-        "classification": "resistance",
-        "resistance_id": "imm_elec"
-      },
-      "IM_ACID": {
-        "classification": "resistance",
-        "resistance_id": "imm_acid"
-      },
-      "REGEN": {
-        "classification": "capability",
-        "capability_id": "regen"
-      },
-      "FREE_ACT": {
-        "classification": "capability",
-        "capability_id": "free_act"
-      },
-      "SEE_INVIS": {
-        "classification": "capability",
-        "capability_id": "see_invis"
-      },
-      "HOLD_LIFE": {
-        "classification": "capability",
-        "capability_id": "hold_life"
-      },
-      "FEATHER": {
-        "classification": "capability",
-        "capability_id": "feather"
-      },
-      "TELEPATHY": {
-        "classification": "capability",
-        "capability_id": "telepathy"
-      },
-      "SLOW_DIGEST": {
-        "classification": "capability",
-        "capability_id": "slow_digest"
-      },
-      "LITE": {
-        "classification": "affix",
-        "affix_id": "light_radius"
-      },
-      "BLESSED": {
-        "classification": "capability",
-        "capability_id": "blessed_item"
-      },
-      "IMPACT": {
-        "classification": "capability",
-        "capability_id": "impact"
-      },
-      "ACTIVATE": {
-        "classification": "activation",
-        "reference_note": "Activation payload is item/serial-specific and defined in activation catalogs.",
-        "inert_in_runtime": true
-      },
-      "SLAY_EVIL": {
-        "classification": "slay",
-        "slay_flag": "SLAY_EVIL"
-      },
-      "SLAY_UNDEAD": {
-        "classification": "slay",
-        "slay_flag": "SLAY_UNDEAD"
-      },
-      "SLAY_DEMON": {
-        "classification": "slay",
-        "slay_flag": "SLAY_DEMON"
-      },
-      "SLAY_ORC": {
-        "classification": "slay",
-        "slay_flag": "SLAY_ORC"
-      },
-      "SLAY_TROLL": {
-        "classification": "slay",
-        "slay_flag": "SLAY_TROLL"
-      },
-      "SLAY_GIANT": {
-        "classification": "slay",
-        "slay_flag": "SLAY_GIANT"
-      },
-      "SLAY_DRAGON": {
-        "classification": "slay",
-        "slay_flag": "SLAY_DRAGON"
-      },
-      "SLAY_ANIMAL": {
-        "classification": "slay",
-        "slay_flag": "SLAY_ANIMAL"
-      },
-      "KILL_UNDEAD": {
-        "classification": "slay",
-        "slay_flag": "KILL_UNDEAD"
-      },
-      "KILL_DEMON": {
-        "classification": "slay",
-        "slay_flag": "KILL_DEMON"
-      },
-      "KILL_DRAGON": {
-        "classification": "slay",
-        "slay_flag": "KILL_DRAGON"
-      },
-      "BRAND_ACID": {
-        "classification": "brand",
-        "brand_flag": "BRAND_ACID"
-      },
-      "BRAND_ELEC": {
-        "classification": "brand",
-        "brand_flag": "BRAND_ELEC"
-      },
-      "BRAND_FIRE": {
-        "classification": "brand",
-        "brand_flag": "BRAND_FIRE"
-      },
-      "BRAND_COLD": {
-        "classification": "brand",
-        "brand_flag": "BRAND_COLD"
-      },
-      "BRAND_POIS": {
-        "classification": "brand",
-        "brand_flag": "BRAND_POIS"
-      },
-      "IGNORE_ACID": {
-        "classification": "resistance",
-        "resistance_id": "ignore_acid",
-        "inert_in_runtime": true
-      },
-      "IGNORE_ELEC": {
-        "classification": "resistance",
-        "resistance_id": "ignore_elec",
-        "inert_in_runtime": true
-      },
-      "IGNORE_FIRE": {
-        "classification": "resistance",
-        "resistance_id": "ignore_fire",
-        "inert_in_runtime": true
-      },
-      "IGNORE_COLD": {
-        "classification": "resistance",
-        "resistance_id": "ignore_cold",
-        "inert_in_runtime": true
-      },
-      "LIGHT_CURSE": {
-        "classification": "curse",
-        "curse_flag": "LIGHT_CURSE"
-      },
-      "HEAVY_CURSE": {
-        "classification": "curse",
-        "curse_flag": "HEAVY_CURSE"
-      },
-      "PERMA_CURSE": {
-        "classification": "curse",
-        "curse_flag": "PERMA_CURSE"
-      },
-      "AGGRAVATE": {
-        "classification": "capability",
-        "capability_id": "aggravate_monsters"
-      },
-      "TELEPORT": {
-        "classification": "capability",
-        "capability_id": "teleportation"
-      },
-      "DRAIN_EXP": {
-        "classification": "capability",
-        "capability_id": "drain_exp"
-      },
-      "HIDE_TYPE": {
-        "classification": "display metadata",
-        "display_flag": "HIDE_TYPE"
-      },
-      "SHOW_MODS": {
-        "classification": "affix",
-        "affix_id": "to_hit"
-      }
-    },
-    "runtime_notes": {
-      "applied_fields": [
-        "depth",
-        "rarity",
-        "flags",
-        "pval",
-        "xtra",
-        "cost",
-        "applicable_types"
-      ],
-      "not_yet_applied": [
-        "max_to_hit",
-        "max_to_dam",
-        "max_to_ac"
-      ],
-      "inert_flags": [
-        "ACTIVATE",
-        "IGNORE_ACID",
-        "IGNORE_COLD",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE"
-      ],
-      "note": "inert_flags are stored but have no runtime effect in current IronHell implementation (src/game/systems/character/resistance_ids.ts flagsToAffixes does not map them). IGNORE_* are item preservation flags and may intentionally remain inert in a PvE context. MIGHT/SHOTS are explicitly active combat affixes and are not inert."
-    },
     "combat_modifiers": {
       "concepts": [
         "SLAY_*",
@@ -438,10 +91,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "RES_ACID",
-        "IGNORE_ACID"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -487,10 +136,6 @@
           "max_sval": 99,
           "tval_name": "hard_armor"
         }
-      ],
-      "flags": [
-        "RES_ELEC",
-        "IGNORE_ELEC"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -538,10 +183,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "RES_FIRE",
-        "IGNORE_FIRE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -588,10 +229,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "RES_COLD",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -637,16 +274,6 @@
           "max_sval": 99,
           "tval_name": "hard_armor"
         }
-      ],
-      "flags": [
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -700,17 +327,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "STEALTH",
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -749,7 +365,7 @@
       "xtra": 0,
       "max_to_hit": 0,
       "max_to_dam": 0,
-      "max_to_ac": 50,
+      "max_to_ac": -50,
       "pval": 0,
       "depth": 0,
       "rarity": 2,
@@ -768,10 +384,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "AGGRAVATE",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -781,7 +393,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -812,23 +424,6 @@
           "max_sval": 2,
           "tval_name": "soft_armor"
         }
-      ],
-      "flags": [
-        "SUST_STR",
-        "SUST_DEX",
-        "SUST_CON",
-        "SUST_INT",
-        "SUST_WIS",
-        "SUST_CHR",
-        "HOLD_LIFE",
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -884,15 +479,6 @@
           "tval_name": "hard_armor"
         }
       ],
-      "flags": [
-        "IGNORE_ACID",
-        "IGNORE_FIRE",
-        "FREE_ACT",
-        "STR",
-        "CON",
-        "INFRA",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -919,7 +505,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -949,10 +535,6 @@
           "max_sval": 99,
           "tval_name": "shield"
         }
-      ],
-      "flags": [
-        "RES_ACID",
-        "IGNORE_ACID"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -993,10 +575,6 @@
           "max_sval": 99,
           "tval_name": "shield"
         }
-      ],
-      "flags": [
-        "RES_ELEC",
-        "IGNORE_ELEC"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1039,17 +617,12 @@
         }
       ],
       "description": "Grants resistance to fire and ignores fire damage.",
-      "flags": [
-        "RES_FIRE",
-        "IGNORE_FIRE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
-        "capability_ids": [
-          "ignore_fire"
-        ],
+        "capability_ids": [],
         "resistance_ids": [
+          "ignore_fire",
           "res_fire"
         ],
         "activations": [],
@@ -1084,10 +657,6 @@
         }
       ],
       "description": "Grants resistance to cold and ignores cold damage.",
-      "flags": [
-        "RES_COLD",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1126,16 +695,6 @@
           "max_sval": 99,
           "tval_name": "shield"
         }
-      ],
-      "flags": [
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1182,17 +741,6 @@
           "max_sval": 99,
           "tval_name": "shield"
         }
-      ],
-      "flags": [
-        "STEALTH",
-        "RES_FIRE",
-        "RES_COLD",
-        "RES_ACID",
-        "RES_ELEC",
-        "IGNORE_ACID",
-        "IGNORE_FIRE",
-        "IGNORE_COLD",
-        "IGNORE_ELEC"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1245,17 +793,6 @@
           "tval_name": "shield"
         }
       ],
-      "flags": [
-        "RES_DISEN",
-        "SUST_STR",
-        "SUST_CON",
-        "SUST_DEX",
-        "HOLD_LIFE",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1291,7 +828,7 @@
       "xtra": 0,
       "max_to_hit": 0,
       "max_to_dam": 0,
-      "max_to_ac": 50,
+      "max_to_ac": -50,
       "pval": 0,
       "depth": 0,
       "rarity": 2,
@@ -1304,10 +841,6 @@
           "tval_name": "shield"
         }
       ],
-      "flags": [
-        "AGGRAVATE",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1317,7 +850,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -1348,10 +881,6 @@
           "max_sval": 99,
           "tval_name": "helm"
         }
-      ],
-      "flags": [
-        "INT",
-        "SUST_INT"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1397,10 +926,6 @@
           "tval_name": "helm"
         }
       ],
-      "flags": [
-        "WIS",
-        "SUST_WIS"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1445,10 +970,6 @@
           "tval_name": "helm"
         }
       ],
-      "flags": [
-        "CHR",
-        "SUST_CHR"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1492,18 +1013,6 @@
           "max_sval": 99,
           "tval_name": "crown"
         }
-      ],
-      "flags": [
-        "INT",
-        "SUST_INT",
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1557,19 +1066,6 @@
           "max_sval": 99,
           "tval_name": "crown"
         }
-      ],
-      "flags": [
-        "STR",
-        "DEX",
-        "CON",
-        "SUST_STR",
-        "SUST_DEX",
-        "SUST_CON",
-        "FREE_ACT",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1630,17 +1126,6 @@
           "max_sval": 99,
           "tval_name": "crown"
         }
-      ],
-      "flags": [
-        "WIS",
-        "CHR",
-        "SUST_WIS",
-        "SUST_CHR",
-        "RES_FEAR",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1703,11 +1188,6 @@
           "tval_name": "helm"
         }
       ],
-      "flags": [
-        "SEARCH",
-        "RES_BLIND",
-        "SEE_INVIS"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1754,10 +1234,6 @@
           "tval_name": "helm"
         }
       ],
-      "flags": [
-        "INFRA",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1771,7 +1247,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Grants infravision and hides the item type.",
@@ -1790,7 +1266,7 @@
       "max_to_hit": 0,
       "max_to_dam": 0,
       "max_to_ac": 0,
-      "pval": 0,
+      "pval": 2,
       "depth": 0,
       "rarity": 2,
       "cost": 1000,
@@ -1801,10 +1277,6 @@
           "max_sval": 99,
           "tval_name": "helm"
         }
-      ],
-      "flags": [
-        "LITE",
-        "RES_LITE"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -1856,9 +1328,6 @@
           "tval_name": "crown"
         }
       ],
-      "flags": [
-        "TELEPATHY"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1904,9 +1373,6 @@
           "tval_name": "crown"
         }
       ],
-      "flags": [
-        "REGEN"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1946,10 +1412,6 @@
           "tval_name": "helm"
         }
       ],
-      "flags": [
-        "TELEPORT",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1959,7 +1421,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -1991,11 +1453,6 @@
           "tval_name": "crown"
         }
       ],
-      "flags": [
-        "RES_SOUND",
-        "RES_CONFU",
-        "RES_FEAR"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2025,7 +1482,7 @@
       "max_to_hit": 0,
       "max_to_dam": 0,
       "max_to_ac": 0,
-      "pval": 0,
+      "pval": 2,
       "depth": 35,
       "rarity": 6,
       "cost": 4000,
@@ -2036,14 +1493,6 @@
           "max_sval": 99,
           "tval_name": "crown"
         }
-      ],
-      "flags": [
-        "RES_LITE",
-        "RES_DARK",
-        "LITE",
-        "SEE_INVIS",
-        "RES_BLIND",
-        "IGNORE_ACID"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -2100,12 +1549,6 @@
           "tval_name": "crown"
         }
       ],
-      "flags": [
-        "INT",
-        "WIS",
-        "CHR",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2126,7 +1569,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -2152,23 +1595,11 @@
       "cost": 0,
       "applicable_types": [
         {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        },
-        {
           "tval": 33,
           "min_sval": 0,
           "max_sval": 99,
           "tval_name": "crown"
         }
-      ],
-      "flags": [
-        "STR",
-        "DEX",
-        "CON",
-        "LIGHT_CURSE"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -2190,7 +1621,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -2221,13 +1652,6 @@
           "max_sval": 99,
           "tval_name": "cloak"
         }
-      ],
-      "flags": [
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD",
-        "RES_SHARD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -2272,9 +1696,6 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "STEALTH"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2316,13 +1737,6 @@
           "max_sval": 99,
           "tval_name": "cloak"
         }
-      ],
-      "flags": [
-        "STEALTH",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -2371,13 +1785,6 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "INT",
-        "SUST_INT",
-        "STEALTH",
-        "HIDE_TYPE",
-        "IGNORE_ACID"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2399,7 +1806,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Cloak that grants intelligence, sustains intelligence, provides stealth, and resists acid.",
@@ -2430,25 +1837,18 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "SHOW_MODS",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
-        "affixes": [
-          {
-            "id": "to_hit",
-            "value_source": "pval"
-          }
-        ],
+        "affixes": [],
         "capability_ids": [],
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
-        "display_flags": []
+        "display_flags": [
+          "show_mods"
+        ]
       },
       "description": "Cloak that decreases to-hit and to-damage, but carries a light curse.",
       "slots": [
@@ -2478,10 +1878,6 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "AGGRAVATE",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2491,7 +1887,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -2523,28 +1919,20 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "AGGRAVATE",
-        "SHOW_MODS",
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
-        "affixes": [
-          {
-            "id": "to_hit",
-            "value_source": "pval"
-          }
-        ],
+        "affixes": [],
         "capability_ids": [
           "aggravate_monsters"
         ],
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
-        "display_flags": []
+        "display_flags": [
+          "show_mods"
+        ]
       },
       "description": "Cloak that decreases to-hit and to-damage, carries a light curse and aggravates enemies.",
       "slots": [
@@ -2573,9 +1961,6 @@
           "max_sval": 99,
           "tval_name": "gloves"
         }
-      ],
-      "flags": [
-        "FREE_ACT"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -2616,22 +2001,16 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "SHOW_MODS"
-      ],
       "combat_modifiers": [],
       "effects": {
-        "affixes": [
-          {
-            "id": "to_hit",
-            "value_source": "pval"
-          }
-        ],
+        "affixes": [],
         "capability_ids": [],
         "resistance_ids": [],
         "activations": [],
         "curses": [],
-        "display_flags": []
+        "display_flags": [
+          "show_mods"
+        ]
       },
       "description": "They boost your to-hit and to-dam values.",
       "slots": [
@@ -2661,10 +2040,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "DEX",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2678,7 +2053,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Gloves that increase dexterity.",
@@ -2709,20 +2084,11 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "STR",
-        "SHOW_MODS",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
             "id": "strength",
-            "value_source": "pval"
-          },
-          {
-            "id": "to_hit",
             "value_source": "pval"
           }
         ],
@@ -2731,7 +2097,8 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "show_mods",
+          "hide_type"
         ]
       },
       "description": "Gloves that increase strength and to-hit and to-damage.",
@@ -2762,14 +2129,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "DEX",
-        "SEARCH",
-        "SHOW_MODS",
-        "FEATHER",
-        "FREE_ACT",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2779,10 +2138,6 @@
           },
           {
             "id": "search",
-            "value_source": "pval"
-          },
-          {
-            "id": "to_hit",
             "value_source": "pval"
           }
         ],
@@ -2794,7 +2149,8 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "show_mods",
+          "hide_type"
         ]
       },
       "description": "Gloves that increase dexterity, searching ability, and provide feather and free action.",
@@ -2825,13 +2181,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "STR",
-        "CON",
-        "SHOW_MODS",
-        "AGGRAVATE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2842,10 +2191,6 @@
           {
             "id": "constitution",
             "value_source": "pval"
-          },
-          {
-            "id": "to_hit",
-            "value_source": "pval"
           }
         ],
         "capability_ids": [
@@ -2855,7 +2200,8 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "show_mods",
+          "hide_type"
         ]
       },
       "description": "Gloves that increase strength, constitution, and to-hit, but aggravate enemies.",
@@ -2886,11 +2232,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "STR",
-        "LIGHT_CURSE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2903,10 +2244,10 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Gloves that decrease strength and carry a light curse.",
@@ -2937,11 +2278,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "DEX",
-        "LIGHT_CURSE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2954,10 +2290,10 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Gloves that decrease dexterity and carry a light curse.",
@@ -2987,9 +2323,6 @@
           "max_sval": 99,
           "tval_name": "boots"
         }
-      ],
-      "flags": [
-        "FEATHER"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -3030,10 +2363,6 @@
           "tval_name": "boots"
         }
       ],
-      "flags": [
-        "STEALTH",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3047,7 +2376,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Boots that enhance stealth and hide the type.",
@@ -3077,9 +2406,6 @@
           "max_sval": 99,
           "tval_name": "boots"
         }
-      ],
-      "flags": [
-        "FREE_ACT"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -3120,10 +2446,6 @@
           "tval_name": "boots"
         }
       ],
-      "flags": [
-        "SPEED",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3137,7 +2459,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Boots that increase speed and hide the type.",
@@ -3167,10 +2489,6 @@
           "max_sval": 99,
           "tval_name": "boots"
         }
-      ],
-      "flags": [
-        "RES_NEXUS",
-        "FEATHER"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -3213,14 +2531,6 @@
           "tval_name": "boots"
         }
       ],
-      "flags": [
-        "STEALTH",
-        "SPEED",
-        "HIDE_TYPE",
-        "FEATHER",
-        "IGNORE_ACID",
-        "IGNORE_FIRE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3243,7 +2553,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Boots that enhance stealth, increase speed, hide the type, provide feather falling, and ignore acid and fire.",
@@ -3274,11 +2584,6 @@
           "tval_name": "boots"
         }
       ],
-      "flags": [
-        "SPEED",
-        "LIGHT_CURSE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3291,10 +2596,10 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Boots that decrease speed, carry a light curse.",
@@ -3325,13 +2630,6 @@
           "tval_name": "boots"
         }
       ],
-      "flags": [
-        "SPEED",
-        "STEALTH",
-        "AGGRAVATE",
-        "LIGHT_CURSE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3350,10 +2648,10 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Boots that decrease speed, stealth, aggravate enemies, and carry a light curse.",
@@ -3395,15 +2693,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "WIS",
-        "SLAY_EVIL",
-        "SLAY_UNDEAD",
-        "SLAY_DEMON",
-        "SEE_INVIS",
-        "BLESSED",
-        "RES_FEAR"
       ],
       "combat_modifiers": [
         "slay_evil",
@@ -3468,21 +2757,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "STEALTH",
-        "FREE_ACT",
-        "SEE_INVIS",
-        "FEATHER",
-        "REGEN",
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -3553,10 +2827,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "WIS",
-        "BLESSED"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3613,18 +2883,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "SLAY_DEMON",
-        "SLAY_ORC",
-        "SLAY_TROLL",
-        "SLAY_DRAGON",
-        "LITE",
-        "RES_DARK",
-        "SEE_INVIS",
-        "FREE_ACT",
-        "IGNORE_ACID",
-        "IGNORE_FIRE"
       ],
       "combat_modifiers": [
         "slay_demon",
@@ -3692,16 +2950,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "STR",
-        "DEX",
-        "CON",
-        "SLAY_ORC",
-        "SLAY_TROLL",
-        "SLAY_GIANT",
-        "FREE_ACT",
-        "SEE_INVIS"
       ],
       "combat_modifiers": [
         "slay_orc",
@@ -3773,10 +3021,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "BLOWS",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3790,7 +3034,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Weapons that grant extra attacks and hide the type.",
@@ -3834,15 +3078,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "STR",
-        "BLOWS",
-        "AGGRAVATE",
-        "RES_FEAR",
-        "HIDE_TYPE",
-        "IGNORE_ACID",
-        "IGNORE_FIRE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3866,7 +3101,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "description": "Weapons that increase strength, grant extra attacks, aggravate enemies, provide resistance to fear, hide the type, and ignore acid and fire.",
@@ -3909,11 +3144,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "BRAND_ACID",
-        "RES_ACID",
-        "IGNORE_ACID"
       ],
       "combat_modifiers": [
         "brand_acid"
@@ -3970,11 +3200,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "BRAND_ELEC",
-        "RES_ELEC",
-        "IGNORE_ELEC"
-      ],
       "combat_modifiers": [
         "brand_elec"
       ],
@@ -4029,11 +3254,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "BRAND_FIRE",
-        "RES_FIRE",
-        "IGNORE_FIRE"
       ],
       "combat_modifiers": [
         "brand_fire"
@@ -4090,11 +3310,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "BRAND_COLD",
-        "RES_COLD",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [
         "brand_cold"
       ],
@@ -4150,9 +3365,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "BRAND_POIS"
-      ],
       "combat_modifiers": [
         "brand_pois"
       ],
@@ -4204,9 +3416,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "SLAY_ANIMAL"
       ],
       "combat_modifiers": [
         "slay_animal"
@@ -4260,9 +3469,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "SLAY_EVIL"
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -4314,9 +3520,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "SLAY_UNDEAD"
       ],
       "combat_modifiers": [
         "slay_undead"
@@ -4370,9 +3573,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "SLAY_DEMON"
-      ],
       "combat_modifiers": [
         "slay_demon"
       ],
@@ -4424,9 +3624,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "SLAY_ORC"
       ],
       "combat_modifiers": [
         "slay_orc"
@@ -4480,9 +3677,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "SLAY_TROLL"
-      ],
       "combat_modifiers": [
         "slay_troll"
       ],
@@ -4534,9 +3728,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "SLAY_GIANT"
       ],
       "combat_modifiers": [
         "slay_giant"
@@ -4590,9 +3781,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "SLAY_DRAGON"
-      ],
       "combat_modifiers": [
         "slay_dragon"
       ],
@@ -4644,11 +3832,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "INT",
-        "SLAY_ANIMAL",
-        "SLOW_DIGEST"
       ],
       "combat_modifiers": [
         "slay_animal"
@@ -4709,11 +3892,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "WIS",
-        "SLAY_EVIL",
-        "BLESSED"
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -4772,11 +3950,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "KILL_UNDEAD",
-        "WIS",
-        "SEE_INVIS"
       ],
       "combat_modifiers": [
         "kill_undead"
@@ -4838,11 +4011,6 @@
         }
       ],
       "description": "Weapons that are extra effective against demons, grant intelligence, and provide fire resistance.",
-      "flags": [
-        "KILL_DEMON",
-        "INT",
-        "RES_FIRE"
-      ],
       "combat_modifiers": [
         "kill_demon"
       ],
@@ -4900,11 +4068,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "DEX",
-        "SLAY_ORC",
-        "SUST_DEX"
       ],
       "combat_modifiers": [
         "slay_orc"
@@ -4965,11 +4128,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "STR",
-        "SLAY_TROLL",
-        "REGEN"
-      ],
       "combat_modifiers": [
         "slay_troll"
       ],
@@ -5028,11 +4186,6 @@
           "max_sval": 99,
           "tval_name": "sword"
         }
-      ],
-      "flags": [
-        "STR",
-        "SLAY_GIANT",
-        "SUST_STR"
       ],
       "combat_modifiers": [
         "slay_giant"
@@ -5093,11 +4246,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "CON",
-        "KILL_DRAGON",
-        "RES_FEAR"
-      ],
       "combat_modifiers": [
         "kill_dragon"
       ],
@@ -5145,10 +4293,6 @@
           "tval_name": "digger"
         }
       ],
-      "flags": [
-        "TUNNEL",
-        "BRAND_ACID"
-      ],
       "combat_modifiers": [
         "brand_acid"
       ],
@@ -5193,13 +4337,6 @@
           "tval_name": "digger"
         }
       ],
-      "flags": [
-        "STR",
-        "TUNNEL",
-        "BRAND_ACID",
-        "IMPACT",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [
         "brand_acid",
         "impact"
@@ -5220,7 +4357,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5263,16 +4400,6 @@
           "tval_name": "sword"
         }
       ],
-      "flags": [
-        "SEE_INVIS",
-        "AGGRAVATE",
-        "HEAVY_CURSE",
-        "LIGHT_CURSE",
-        "HOLD_LIFE",
-        "DRAIN_EXP",
-        "SLAY_UNDEAD",
-        "BRAND_POIS"
-      ],
       "combat_modifiers": [
         "slay_undead",
         "brand_pois"
@@ -5288,8 +4415,8 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "HEAVY_CURSE",
-          "LIGHT_CURSE"
+          "heavy_curse",
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -5322,7 +4449,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5360,7 +4486,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5398,14 +4523,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "DEX",
-        "MIGHT",
-        "FREE_ACT",
-        "IGNORE_ACID",
-        "IGNORE_FIRE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5428,7 +4545,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5459,13 +4576,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "MIGHT",
-        "SHOTS",
-        "IGNORE_ACID",
-        "IGNORE_FIRE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5486,7 +4596,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5517,10 +4627,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "MIGHT",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5534,7 +4640,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5565,10 +4671,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "SHOTS",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5582,7 +4684,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5613,14 +4715,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "DEX",
-        "SHOTS",
-        "MIGHT",
-        "IGNORE_ACID",
-        "IGNORE_FIRE",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5645,7 +4739,7 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "hide_type"
         ]
       },
       "slots": [
@@ -5676,11 +4770,6 @@
           "tval_name": "bow"
         }
       ],
-      "flags": [
-        "LIGHT_CURSE",
-        "DRAIN_EXP",
-        "SEE_INVIS"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5691,7 +4780,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -5734,9 +4823,6 @@
           "max_sval": 99,
           "tval_name": "bolt"
         }
-      ],
-      "flags": [
-        "SLAY_ANIMAL"
       ],
       "combat_modifiers": [
         "slay_animal"
@@ -5789,9 +4875,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "SLAY_EVIL"
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -5841,9 +4924,6 @@
           "max_sval": 99,
           "tval_name": "bolt"
         }
-      ],
-      "flags": [
-        "SLAY_UNDEAD"
       ],
       "combat_modifiers": [
         "slay_undead"
@@ -5896,9 +4976,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "SLAY_DEMON"
-      ],
       "combat_modifiers": [
         "slay_demon"
       ],
@@ -5949,10 +5026,6 @@
           "max_sval": 99,
           "tval_name": "bolt"
         }
-      ],
-      "flags": [
-        "BRAND_ACID",
-        "IGNORE_ACID"
       ],
       "combat_modifiers": [
         "brand_acid"
@@ -6007,10 +5080,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "BRAND_ELEC",
-        "IGNORE_ELEC"
-      ],
       "combat_modifiers": [
         "brand_elec"
       ],
@@ -6064,9 +5133,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "SLAY_GIANT"
-      ],
       "combat_modifiers": [
         "slay_giant"
       ],
@@ -6118,9 +5184,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "SLAY_DRAGON"
-      ],
       "combat_modifiers": [
         "slay_dragon"
       ],
@@ -6171,13 +5234,6 @@
           "max_sval": 99,
           "tval_name": "bolt"
         }
-      ],
-      "flags": [
-        "SLAY_EVIL",
-        "SLAY_DEMON",
-        "SLAY_UNDEAD",
-        "IGNORE_FIRE",
-        "IGNORE_ACID"
       ],
       "combat_modifiers": [
         "slay_evil",
@@ -6235,9 +5291,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "BRAND_POIS"
-      ],
       "combat_modifiers": [
         "brand_pois"
       ],
@@ -6288,10 +5341,6 @@
           "max_sval": 99,
           "tval_name": "bolt"
         }
-      ],
-      "flags": [
-        "BRAND_FIRE",
-        "IGNORE_FIRE"
       ],
       "combat_modifiers": [
         "brand_fire"
@@ -6346,10 +5395,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "BRAND_COLD",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [
         "brand_cold"
       ],
@@ -6403,7 +5448,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -6453,9 +5497,6 @@
           "tval_name": "bolt"
         }
       ],
-      "flags": [
-        "LIGHT_CURSE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -6463,7 +5504,7 @@
         "resistance_ids": [],
         "activations": [],
         "curses": [
-          "LIGHT_CURSE"
+          "light_curse"
         ],
         "display_flags": []
       },
@@ -6494,17 +5535,6 @@
           "max_sval": 99,
           "tval_name": "shield"
         }
-      ],
-      "flags": [
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "CON",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -6557,10 +5587,6 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "HOLD_LIFE",
-        "FREE_ACT"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -6600,17 +5626,6 @@
           "max_sval": 99,
           "tval_name": "cloak"
         }
-      ],
-      "flags": [
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "ACTIVATE",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -6667,16 +5682,6 @@
           "tval_name": "cloak"
         }
       ],
-      "flags": [
-        "RES_ACID",
-        "RES_ELEC",
-        "RES_FIRE",
-        "RES_COLD",
-        "IGNORE_ACID",
-        "IGNORE_ELEC",
-        "IGNORE_FIRE",
-        "IGNORE_COLD"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -6723,13 +5728,6 @@
           "tval_name": "gloves"
         }
       ],
-      "flags": [
-        "INT",
-        "WIS",
-        "FREE_ACT",
-        "SHOW_MODS",
-        "HIDE_TYPE"
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -6740,10 +5738,6 @@
           {
             "id": "wisdom",
             "value_source": "pval"
-          },
-          {
-            "id": "to_hit",
-            "value_source": "pval"
           }
         ],
         "capability_ids": [
@@ -6753,7 +5747,8 @@
         "activations": [],
         "curses": [],
         "display_flags": [
-          "HIDE_TYPE"
+          "show_mods",
+          "hide_type"
         ]
       },
       "slots": [
@@ -6783,10 +5778,6 @@
           "max_sval": 99,
           "tval_name": "boots"
         }
-      ],
-      "flags": [
-        "FREE_ACT",
-        "RES_POIS"
       ],
       "combat_modifiers": [],
       "effects": {
@@ -6828,10 +5819,6 @@
           "max_sval": 99,
           "tval_name": "bow"
         }
-      ],
-      "flags": [
-        "REGEN",
-        "MIGHT"
       ],
       "combat_modifiers": [],
       "effects": {

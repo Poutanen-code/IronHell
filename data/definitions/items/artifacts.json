@@ -14,10 +14,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "ACTIVATE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -55,11 +51,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "ACTIVATE",
-                "SEE_INVIS",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -99,14 +90,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "ACTIVATE",
-                "SEE_INVIS",
-                "HOLD_LIFE",
-                "RES_LITE",
-                "RES_DARK",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -145,13 +128,6 @@
             "rarity": 10,
             "weight": 3,
             "cost": 60000,
-            "flags": [
-                "CON",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "RES_FIRE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -198,20 +174,6 @@
             "rarity": 30,
             "weight": 3,
             "cost": 90000,
-            "flags": [
-                "INT",
-                "WIS",
-                "CHR",
-                "INFRA",
-                "HIDE_TYPE",
-                "SEE_INVIS",
-                "FREE_ACT",
-                "ACTIVATE",
-                "RES_ACID",
-                "RES_COLD",
-                "RES_ELEC",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -275,18 +237,6 @@
             "rarity": 50,
             "weight": 3,
             "cost": 75000,
-            "flags": [
-                "STR",
-                "CON",
-                "INFRA",
-                "HIDE_TYPE",
-                "SEE_INVIS",
-                "FREE_ACT",
-                "REGEN",
-                "LITE",
-                "RES_FEAR",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -345,21 +295,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "ACTIVATE",
-                "INT",
-                "WIS",
-                "SEARCH",
-                "INFRA",
-                "SEE_INVIS",
-                "TELEPATHY",
-                "RES_CHAOS",
-                "RES_BLIND",
-                "AGGRAVATE",
-                "DRAIN_EXP",
-                "INSTA_ART",
-                "HIDE_TYPE"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -419,19 +354,6 @@
             "rarity": 25,
             "weight": 2,
             "cost": 65000,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_POIS",
-                "RES_DARK",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -494,15 +416,6 @@
             "rarity": 50,
             "weight": 2,
             "cost": 150000,
-            "flags": [
-                "STR",
-                "DEX",
-                "CON",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "ACTIVATE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -562,30 +475,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 6,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "SPEED",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "SLOW_DIGEST",
-                "REGEN",
-                "SUST_STR",
-                "SUST_CON",
-                "SUST_WIS",
-                "SUST_CHR",
-                "IM_FIRE",
-                "RES_FIRE",
-                "RES_NETHR",
-                "RES_FEAR",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -676,30 +565,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 8,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "SPEED",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "HOLD_LIFE",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "FEATHER",
-                "REGEN",
-                "SUST_INT",
-                "SUST_WIS",
-                "SUST_CHR",
-                "IM_COLD",
-                "RES_COLD",
-                "RES_BLIND",
-                "TELEPATHY",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -790,31 +655,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 10,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "SPEED",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "HOLD_LIFE",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "FEATHER",
-                "SLOW_DIGEST",
-                "REGEN",
-                "SUST_STR",
-                "SUST_DEX",
-                "SUST_CON",
-                "IM_ELEC",
-                "RES_ELEC",
-                "RES_POIS",
-                "RES_DISEN",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -906,41 +746,6 @@
             "plus_to_hit": 15,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "SPEED",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "PERMA_CURSE",
-                "AGGRAVATE",
-                "DRAIN_EXP",
-                "SEE_INVIS",
-                "REGEN",
-                "IM_FIRE",
-                "IM_COLD",
-                "IM_ELEC",
-                "IM_ACID",
-                "RES_POIS",
-                "RES_NETHR",
-                "TELEPATHY",
-                "RES_BLIND",
-                "RES_DISEN",
-                "RES_FEAR",
-                "SUST_STR",
-                "SUST_DEX",
-                "SUST_CON",
-                "SUST_INT",
-                "SUST_WIS",
-                "SUST_CHR",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -1043,18 +848,6 @@
             "plus_to_hit": 7,
             "plus_to_dam": 7,
             "plus_to_ac": 10,
-            "flags": [
-                "STR",
-                "WIS",
-                "CHR",
-                "SPEED",
-                "RES_FEAR",
-                "RES_FIRE",
-                "RES_POIS",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -1122,16 +915,6 @@
             "rarity": 40,
             "weight": 3,
             "cost": 25000,
-            "flags": [
-                "HOLD_LIFE",
-                "SUST_CON",
-                "SUST_WIS",
-                "SUST_INT",
-                "RES_DARK",
-                "RES_COLD",
-                "ACTIVATE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -1172,7 +955,7 @@
             "baseItemId": "multi_hued_dragon_scale_mail",
             "id": "razorback",
             "name": "The Multi-Hued Dragon Scale Mail 'Razorback'",
-            "pval": 0,
+            "pval": 1,
             "depth": 90,
             "rarity": 9,
             "weight": 500,
@@ -1182,21 +965,6 @@
             "plus_to_hit": -4,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "FREE_ACT",
-                "IM_ELEC",
-                "RES_ELEC",
-                "RES_ACID",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_POIS",
-                "RES_LITE",
-                "RES_DARK",
-                "LITE",
-                "SEE_INVIS",
-                "AGGRAVATE",
-                "ACTIVATE"
-            ],
             "description": "A massive suit of heavy dragon scales deeply saturated with many colors. It throbs with angry energies, and you feel the raw elemental might of untamed Lightning as you put it on.",
             "effects": {
                 "capability_ids": [
@@ -1257,27 +1025,6 @@
             "plus_to_hit": -8,
             "plus_to_dam": 0,
             "plus_to_ac": 35,
-            "flags": [
-                "HOLD_LIFE",
-                "REGEN",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_POIS",
-                "RES_FEAR",
-                "RES_LITE",
-                "RES_DARK",
-                "RES_BLIND",
-                "RES_CONFU",
-                "RES_SOUND",
-                "RES_SHARD",
-                "RES_NETHR",
-                "RES_NEXUS",
-                "RES_CHAOS",
-                "RES_DISEN",
-                "ACTIVATE"
-            ],
             "description": "A suit of adamant, set with scales of every color, surrounded in a nimbus of perfectly untramelled yet inextricably intermingled and utterly mastered powers elemental and ethereal.",
             "effects": {
                 "capability_ids": [
@@ -1341,19 +1088,6 @@
             "plus_to_hit": -4,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "RES_CHAOS",
-                "RES_DISEN",
-                "RES_SHARD",
-                "RES_SOUND",
-                "RES_CONFU",
-                "RES_NEXUS",
-                "AGGRAVATE",
-                "FREE_ACT",
-                "SLOW_DIGEST",
-                "REGEN",
-                "ACTIVATE"
-            ],
             "description": "A great suit of dragon hide, set with scales of many hues. Even the mightiest wyrms of Law and Chaos fear the judgement of its wearer.",
             "effects": {
                 "capability_ids": [
@@ -1409,20 +1143,6 @@
             "plus_to_hit": -4,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "CON",
-                "HOLD_LIFE",
-                "SUST_CON",
-                "RES_ACID",
-                "RES_COLD",
-                "RES_DARK",
-                "RES_NETHR",
-                "RES_NEXUS",
-                "RES_CHAOS",
-                "RES_CONFU",
-                "RES_FEAR",
-                "ACTIVATE"
-            ],
             "description": "A suit of imperishable adamant, with unconquerable strength to endure evil and disruptive magics, that protects the life force of its wearer as nothing else can.",
             "effects": {
                 "capability_ids": [
@@ -1482,16 +1202,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "CON",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_SOUND",
-                "RES_CONFU",
-                "RES_NEXUS"
-            ],
             "description": "A gleaming steel suit covering the wearer from neck to foot, with runes of warding and stability deeply engraved into its surface.",
             "effects": {
                 "capability_ids": [],
@@ -1534,18 +1244,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "STR",
-                "DEX",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_CONFU",
-                "RES_SOUND"
-            ],
             "description": "Small metal plates cover an inner layer of sturdy canvas, and both bear scenes of hunting and war.  You feel the spirit of Eorl the Young, matchless in combat, around you as you put his armour on.",
             "effects": {
                 "capability_ids": [],
@@ -1594,16 +1292,6 @@
             "plus_to_hit": -1,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_POIS",
-                "ACTIVATE"
-            ],
             "description": "This wondrous suit of fine-linked chain shimmers as though of pure silver. It stands untouched amidst the fury of the elements, and a power of concealment rests within.",
             "effects": {
                 "capability_ids": [],
@@ -1659,18 +1347,6 @@
             "plus_to_hit": -3,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "STR",
-                "CHR",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_DARK",
-                "RES_DISEN",
-                "ACTIVATE"
-            ],
             "description": "A shimmering suit of true-silver, forged long ago by dwarven smiths of legend.  It gleams with purest white as you gaze upon it, and mighty are its powers to protect and banish.",
             "effects": {
                 "capability_ids": [],
@@ -1731,17 +1407,6 @@
             "plus_to_hit": -2,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "STR",
-                "CHR",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_SHARD",
-                "RES_NEXUS"
-            ],
             "description": "A hauberk, leggings, and sleeves of interlocking steel rings, well padded with leather.  You feel as strong and tall as Arvedui, last king of Arnor, as you put it on.",
             "effects": {
                 "capability_ids": [],
@@ -1793,16 +1458,6 @@
             "plus_to_hit": -2,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "INT",
-                "WIS",
-                "CON",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_POIS",
-                "RES_CONFU",
-                "ACTIVATE"
-            ],
             "description": "A hauberk, leggings, and sleeves of interlocking steel rings, strategically reinforced at vital locations with a second layer of chain.  Magics to enhance body and mind lie within, and no door can bar the wearer's path.",
             "effects": {
                 "capability_ids": [],
@@ -1864,12 +1519,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_CHAOS",
-                "RES_NETHR",
-                "RES_POIS",
-                "ACTIVATE"
-            ],
             "description": "Contained within this studded cuirass of pliable leather is the memory of unvanquished Himring, defiant fortress surrounded by the legions of Morgoth.",
             "effects": {
                 "capability_ids": [],
@@ -1913,15 +1562,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_DARK"
-            ],
             "description": "Familar with the secret ways hidden in darkness, this leather cuirass is truly more than it appears.",
             "effects": {
                 "capability_ids": [],
@@ -1964,13 +1604,6 @@
             "plus_to_hit": -1,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "DEX",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_SHARD"
-            ],
             "description": "An amazingly light tunic and skirt sewn with thick, overlapping scales of hardened leather whose wearer moves with agility and assurance.",
             "effects": {
                 "capability_ids": [],
@@ -2018,20 +1651,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "ACTIVATE",
-                "LITE",
-                "WIS",
-                "CHR",
-                "RES_ELEC",
-                "RES_ACID",
-                "RES_DISEN",
-                "RES_DARK",
-                "HIDE_TYPE",
-                "SUST_WIS",
-                "SUST_DEX",
-                "SUST_CHR"
-            ],
             "description": "The legendary shield of Ereinion Gil-galad, who fought his way to the gates of the Dark Tower, and with whom came light even to Gorgoroth.",
             "effects": {
                 "capability_ids": [
@@ -2094,16 +1713,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 25,
-            "flags": [
-                "STR",
-                "CON",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "FREE_ACT",
-                "IM_ACID",
-                "RES_SOUND",
-                "RES_CHAOS"
-            ],
             "description": "Invoking the strength and endurance of Thorin, King under the Mountain, this little metal shield is proof against the Element of Earth.",
             "effects": {
                 "capability_ids": [
@@ -2151,14 +1760,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_LITE",
-                "RES_DARK"
-            ],
             "description": "This shield emblazoned with a multitude of creatures unseen for ages once protected Celegorm, Lord of Himlad; around it a mystic balance lies, containing the conflicts of the elements.",
             "effects": {
                 "capability_ids": [],
@@ -2196,18 +1797,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "SUST_STR",
-                "SUST_INT",
-                "SUST_WIS",
-                "SUST_DEX",
-                "SUST_CON",
-                "SUST_CHR"
-            ],
             "description": "The great metal-bound shield of Anarion, son of Elendil, whom Sauron found himself powerless to wither or diminish.",
             "effects": {
                 "capability_ids": [
@@ -2250,16 +1839,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 18,
-            "flags": [
-                "INT",
-                "DEX",
-                "CHR",
-                "SEARCH",
-                "RES_FIRE",
-                "RES_ACID",
-                "RES_DISEN",
-                "RES_SHARD"
-            ],
             "description": "A metal cap forged by the greatest Noldorin smith of the Second Age, this helm is of equal use in battle or at the forge, and its enchantment will never be diminished.",
             "effects": {
                 "capability_ids": [],
@@ -2311,34 +1890,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "INFRA",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_POIS",
-                "RES_LITE",
-                "RES_DARK",
-                "RES_CONFU",
-                "RES_NEXUS",
-                "RES_NETHR",
-                "LITE",
-                "SEE_INVIS",
-                "TELEPATHY",
-                "RES_FEAR",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "PERMA_CURSE",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -2421,17 +1972,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STR",
-                "DEX",
-                "CON",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "TELEPATHY",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE"
-            ],
             "description": "The midnight-hued steel circlet of the sorceress-queen Beruthiel, which grants extraordinary powers of sight and awareness at a terrible physical cost.",
             "effects": {
                 "capability_ids": [
@@ -2483,13 +2023,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 10,
-            "flags": [
-                "INT",
-                "WIS",
-                "HIDE_TYPE",
-                "RES_BLIND",
-                "TELEPATHY"
-            ],
             "description": "The hunting cap of King Thranduil, to whose ears come all the secrets of his forest domain.",
             "effects": {
                 "capability_ids": [
@@ -2534,12 +2067,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 12,
-            "flags": [
-                "WIS",
-                "CHR",
-                "RES_CONFU",
-                "HIDE_TYPE"
-            ],
             "description": "A ridged helmet made of steel, and embossed with scenes of valor in fine- engraved silver.  It grants the wearer nobility and understanding.",
             "effects": {
                 "capability_ids": [],
@@ -2582,20 +2109,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STR",
-                "DEX",
-                "CON",
-                "HIDE_TYPE",
-                "SUST_STR",
-                "SUST_DEX",
-                "SUST_CON",
-                "AGGRAVATE",
-                "RES_ACID",
-                "RES_NEXUS",
-                "RES_COLD",
-                "RES_DARK"
-            ],
             "description": "A great helm, as steady and as distinctive as the hero of the Westdike. Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode out time and again among his foes and slew many. Although they knew of his coming, none could stand against him.",
             "effects": {
                 "capability_ids": [
@@ -2650,20 +2163,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STR",
-                "DEX",
-                "CON",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "LITE",
-                "SEE_INVIS",
-                "TELEPATHY"
-            ],
             "description": "The legendary dragon helm of Turin Turambar, an object of dread to the servants of Morgoth.",
             "effects": {
                 "capability_ids": [
@@ -2721,16 +2220,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 10,
-            "flags": [
-                "INT",
-                "WIS",
-                "SEARCH",
-                "HIDE_TYPE",
-                "RES_BLIND",
-                "RES_CONFU",
-                "SEE_INVIS",
-                "ACTIVATE"
-            ],
             "description": "A famous helm of forged iron granting extraordinary powers of mind and awareness.",
             "effects": {
                 "capability_ids": [
@@ -2789,18 +2278,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 8,
             "plus_to_ac": 10,
-            "flags": [
-                "INT",
-                "WIS",
-                "SEARCH",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "SEE_INVIS",
-                "FREE_ACT",
-                "AGGRAVATE",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE"
-            ],
             "description": "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed succor.",
             "effects": {
                 "capability_ids": [
@@ -2862,24 +2339,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "STR",
-                "WIS",
-                "CON",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_COLD",
-                "RES_FIRE",
-                "RES_LITE",
-                "RES_BLIND",
-                "RES_CONFU",
-                "RES_SOUND",
-                "RES_CHAOS",
-                "LITE",
-                "SEE_INVIS",
-                "REGEN",
-                "ACTIVATE"
-            ],
             "description": "The shining winged circlet brought by Elendil from dying Numenor, emblem of Gondor through an age of the world.",
             "effects": {
                 "capability_ids": [
@@ -2952,23 +2411,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 18,
-            "flags": [
-                "INT",
-                "DEX",
-                "CHR",
-                "SEARCH",
-                "SPEED",
-                "HIDE_TYPE",
-                "SEE_INVIS",
-                "FREE_ACT",
-                "RES_SHARD",
-                "RES_SOUND",
-                "RES_COLD",
-                "RES_LITE",
-                "RES_DARK",
-                "RES_BLIND",
-                "LITE"
-            ],
             "description": "A crown of massive gold, set with wondrous jewels of thought and warding, worn by the kings of ancient Numenor.",
             "effects": {
                 "capability_ids": [
@@ -3035,14 +2477,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_POIS",
-                "ACTIVATE"
-            ],
             "description": "A cape worn by a hero from Valinor, a land utterly beyond the strife of Elements.",
             "effects": {
                 "capability_ids": [],
@@ -3088,15 +2522,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 4,
-            "flags": [
-                "INT",
-                "WIS",
-                "SPEED",
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "ACTIVATE"
-            ],
             "description": "This elven-grey mantle possesses great powers of tranquility and of concealment, and grants the wearer the knowledge and understanding of the Sindar.",
             "effects": {
                 "capability_ids": [],
@@ -3156,16 +2581,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 18,
-            "flags": [
-                "DEX",
-                "CHR",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "RES_ACID",
-                "RES_FIRE",
-                "RES_COLD",
-                "ACTIVATE"
-            ],
             "description": "A cloak of translucent, pearly grey, with glowing elven-runes to restore magic showing calm and clear as moonlight on still water.",
             "effects": {
                 "capability_ids": [
@@ -3221,12 +2636,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 10,
-            "flags": [
-                "FREE_ACT",
-                "RES_ACID",
-                "RES_FEAR",
-                "SEE_INVIS"
-            ],
             "description": "This shimmering cloak of greens and browns was once worn by the young Aragorn, a keen-eyed captain of Gondor, valiant on both land and sea.",
             "effects": {
                 "capability_ids": [
@@ -3263,13 +2672,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "STEALTH",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_NEXUS",
-                "ACTIVATE"
-            ],
             "description": "A crystal-blue cape of fine silk worn by a silent messenger of the forces of Law. Seldom will the wearer be diverted from his mission.",
             "effects": {
                 "capability_ids": [],
@@ -3321,18 +2723,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "INT",
-                "WIS",
-                "CHR",
-                "SPEED",
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_FIRE",
-                "RES_COLD",
-                "ACTIVATE"
-            ],
             "description": "The opaque midnight folds of this cloak, inset with a multitude of tiny diamonds, swirl around you and you feel a hint, a fragment of the knowledge and power to restore that lay in Luthien, the most beautiful being who ever knew death.",
             "effects": {
                 "capability_ids": [],
@@ -3398,15 +2788,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 12,
-            "flags": [
-                "STEALTH",
-                "DEX",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "IM_ACID",
-                "RES_ACID",
-                "SEE_INVIS"
-            ],
             "description": "From the ruin of Gondolin did Tuor escape, through secret ways and travail, mantled by sea-commanding Ulmo's kingly gift from a multitude of hostile eyes.",
             "effects": {
                 "capability_ids": [
@@ -3453,16 +2834,6 @@
             "plus_to_hit": -5,
             "plus_to_dam": -5,
             "plus_to_ac": 15,
-            "flags": [
-                "INT",
-                "FREE_ACT",
-                "FEATHER",
-                "RES_ELEC",
-                "RES_DARK",
-                "RES_POIS",
-                "AGGRAVATE",
-                "ACTIVATE"
-            ],
             "description": "The iron-shod gauntlets of the Dark Elven smith Eol, tingling with magics that he could channel in battle.",
             "effects": {
                 "capability_ids": [
@@ -3522,13 +2893,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 8,
             "plus_to_ac": 15,
-            "flags": [
-                "STR",
-                "CON",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "SHOW_MODS"
-            ],
             "description": "A hero's handgear that lends great prowess in battle.",
             "effects": {
                 "capability_ids": [
@@ -3580,13 +2944,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 10,
-            "flags": [
-                "FREE_ACT",
-                "RES_LITE",
-                "SUST_CON",
-                "LITE",
-                "ACTIVATE"
-            ],
             "description": "These gloves glow so brightly as to light the way for the player and cast magical bolts with great frequency.",
             "effects": {
                 "capability_ids": [
@@ -3635,11 +2992,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_FIRE",
-                "REGEN",
-                "ACTIVATE"
-            ],
             "description": "A set of gauntlets that smoulder with an unnatural heat.",
             "effects": {
                 "capability_ids": [
@@ -3683,11 +3035,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_COLD",
-                "SLOW_DIGEST",
-                "ACTIVATE"
-            ],
             "description": "A set of handgear, freezing with unnatural cold.",
             "effects": {
                 "capability_ids": [
@@ -3731,11 +3078,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_ELEC",
-                "LITE",
-                "ACTIVATE"
-            ],
             "description": "A set of handgear with sparks that crackle across its knuckleguards.",
             "effects": {
                 "capability_ids": [],
@@ -3781,11 +3123,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "RES_ACID",
-                "FEATHER",
-                "ACTIVATE"
-            ],
             "description": "A set of gauntlets that gives off a foul, acrid odour yet remains untarnished.",
             "effects": {
                 "capability_ids": [
@@ -3829,19 +3166,6 @@
             "plus_to_hit": -12,
             "plus_to_dam": -12,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "HIDE_TYPE",
-                "RES_FIRE",
-                "RES_DISEN",
-                "FREE_ACT",
-                "DRAIN_EXP",
-                "AGGRAVATE",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "SHOW_MODS"
-            ],
             "description": "A pair of gauntlets that sap combat ability, named after the empty hand of Beren that once clasped a Silmaril.",
             "effects": {
                 "capability_ids": [
@@ -3897,14 +3221,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 10,
             "plus_to_ac": 20,
-            "flags": [
-                "DEX",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "RES_ACID",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The hand-sheathing of Fingolfin, warrior-king of Elves and Men, who dealt Morgoth seven mighty wounds and pain that will last forever.",
             "effects": {
                 "capability_ids": [
@@ -3963,12 +3279,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_NEXUS",
-                "ACTIVATE"
-            ],
             "description": "This wondrous pair of leather boots once sped Feanor, creator of the Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge and do battle for a Middle-Earth held in thrall.  \"Dear-bought those songs shall be accounted, and yet shall be well-bought.  For the price could be no other.\"",
             "effects": {
                 "capability_ids": [],
@@ -4016,16 +3326,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "DEX",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "FREE_ACT",
-                "RES_NETHR",
-                "RES_CHAOS",
-                "RES_CONFU",
-                "SUST_CON"
-            ],
             "description": "A pair of high-laced shoes, strong against the powers of corruption and withering, that grant the wearer extraordinary agility.",
             "effects": {
                 "capability_ids": [
@@ -4078,13 +3378,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 20,
-            "flags": [
-                "STR",
-                "CON",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_FEAR"
-            ],
             "description": "Sturdy footwear of leather and steel as enduring as the long-suffering Dwarven king-in-exile who wore them.",
             "effects": {
                 "capability_ids": [],
@@ -4131,16 +3424,6 @@
             "plus_to_hit": -8,
             "plus_to_dam": -8,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "DEX",
-                "STEALTH",
-                "SPEED",
-                "FEATHER",
-                "LIGHT_CURSE",
-                "HIDE_TYPE",
-                "ACTIVATE"
-            ],
             "description": "A pair of running shoes once used by the treacherous Grima son of Galmod, the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, a spy... or a coward.",
             "effects": {
                 "capability_ids": [
@@ -4206,17 +3489,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "DEX",
-                "SPEED",
-                "HIDE_TYPE",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "A short thrusting blade with a large guard worn by Maedhros the Tall, eldest son of Feanor, who lost his right hand in captivity in Angband.",
             "effects": {
                 "capability_ids": [
@@ -4272,20 +3544,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 15,
             "plus_to_ac": 5,
-            "flags": [
-                "DEX",
-                "SPEED",
-                "BRAND_ACID",
-                "RES_ACID",
-                "HIDE_TYPE",
-                "SLAY_EVIL",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "FREE_ACT",
-                "RES_DARK",
-                "SUST_DEX",
-                "SHOW_MODS"
-            ],
             "description": "Forged from meteoric iron by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a Silmaril out of Morgoth's crown, this long chopping dagger slices through ordinary metal as easily as its name, \"Iron Cleaver\", suggests.",
             "effects": {
                 "capability_ids": [
@@ -4346,12 +3604,6 @@
             "plus_to_hit": 4,
             "plus_to_dam": 6,
             "plus_to_ac": 0,
-            "flags": [
-                "BRAND_FIRE",
-                "RES_FIRE",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A flame, instead of a blade, seems to spring forth from this dagger's hilt.",
             "effects": {
                 "capability_ids": [],
@@ -4401,12 +3653,6 @@
             "plus_to_hit": 4,
             "plus_to_dam": 6,
             "plus_to_ac": 0,
-            "flags": [
-                "BRAND_COLD",
-                "RES_COLD",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "From the hilt of this dagger springs not so much a blade as an icicle.",
             "effects": {
                 "capability_ids": [],
@@ -4456,12 +3702,6 @@
             "plus_to_hit": 4,
             "plus_to_dam": 6,
             "plus_to_ac": 0,
-            "flags": [
-                "BRAND_ELEC",
-                "RES_ELEC",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "In this dagger is bound the very force of the lightning.",
             "effects": {
                 "capability_ids": [],
@@ -4511,14 +3751,6 @@
             "plus_to_hit": 4,
             "plus_to_dam": 3,
             "plus_to_ac": 0,
-            "flags": [
-                "SLAY_ORC",
-                "BRAND_POIS",
-                "RES_POIS",
-                "RES_DISEN",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A large stiletto dagger that glistens with odorless poison, to which the wearer seems oddly immune.",
             "effects": {
                 "capability_ids": [],
@@ -4570,17 +3802,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 9,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "HIDE_TYPE",
-                "BRAND_COLD",
-                "RES_COLD",
-                "SEE_INVIS",
-                "SLOW_DIGEST",
-                "REGEN",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an edge to wound the wind.",
             "effects": {
                 "capability_ids": [
@@ -4639,19 +3860,6 @@
             "plus_to_hit": -20,
             "plus_to_dam": 20,
             "plus_to_ac": 0,
-            "flags": [
-                "CON",
-                "HIDE_TYPE",
-                "KILL_DRAGON",
-                "SLAY_EVIL",
-                "SLAY_DEMON",
-                "SLAY_TROLL",
-                "RES_DISEN",
-                "AGGRAVATE",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "SHOW_MODS"
-            ],
             "description": "This sword has runes of power incused on its ornate hint, and a single blood channel that gleams coldly blue as you grasp this mighty weapon of peril.",
             "effects": {
                 "capability_ids": [
@@ -4705,18 +3913,6 @@
             "plus_to_hit": 20,
             "plus_to_dam": 12,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "HIDE_TYPE",
-                "SLAY_DEMON",
-                "SLAY_ORC",
-                "FREE_ACT",
-                "RES_COLD",
-                "FEATHER",
-                "SLOW_DIGEST",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens icy enough to freeze the hearts of demons, and you feel supple and lightfooted as you clasp its hilt of gold and silver inlay.",
             "effects": {
                 "capability_ids": [
@@ -4776,20 +3972,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "SEARCH",
-                "HIDE_TYPE",
-                "BLESSED",
-                "LITE",
-                "SLAY_EVIL",
-                "BRAND_FIRE",
-                "SLAY_ORC",
-                "SLAY_DEMON",
-                "RES_FIRE",
-                "RES_LITE",
-                "SLOW_DIGEST",
-                "SHOW_MODS"
-            ],
             "description": "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" from dying orcs who dared to behold hidden Gondolin.",
             "effects": {
                 "capability_ids": [
@@ -4846,20 +4028,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 16,
             "plus_to_ac": 0,
-            "flags": [
-                "SEARCH",
-                "HIDE_TYPE",
-                "BLESSED",
-                "LITE",
-                "SLAY_ORC",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "BRAND_ELEC",
-                "RES_ELEC",
-                "RES_BLIND",
-                "SLOW_DIGEST",
-                "SHOW_MODS"
-            ],
             "description": "Like unto Orcrist and Glamdring, and like them long lost, this sword is continually coved in tiny arcs of captive lightning that flash and dance eerily in the globes of light they create.",
             "effects": {
                 "capability_ids": [
@@ -4916,20 +4084,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "SEARCH",
-                "HIDE_TYPE",
-                "BLESSED",
-                "LITE",
-                "SLAY_EVIL",
-                "BRAND_COLD",
-                "SLAY_ORC",
-                "SLAY_DRAGON",
-                "RES_COLD",
-                "RES_DARK",
-                "SLOW_DIGEST",
-                "SHOW_MODS"
-            ],
             "description": "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by orcs who came to know its power all too well.",
             "effects": {
                 "capability_ids": [
@@ -4986,19 +4140,6 @@
             "plus_to_hit": 13,
             "plus_to_dam": 17,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "HIDE_TYPE",
-                "RES_FIRE",
-                "RES_POIS",
-                "BRAND_FIRE",
-                "BRAND_POIS",
-                "KILL_DRAGON",
-                "FREE_ACT",
-                "SLOW_DIGEST",
-                "REGEN",
-                "SHOW_MODS"
-            ],
             "description": "A giant sword once wielded by mighty Turin, and an even greater dragonbane; for what wyrm could stand against the blade that bathed in Glaurung's blood?",
             "effects": {
                 "capability_ids": [
@@ -5051,27 +4192,6 @@
             "plus_to_hit": 19,
             "plus_to_dam": 21,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CHR",
-                "INFRA",
-                "HIDE_TYPE",
-                "KILL_DRAGON",
-                "SLAY_ANIMAL",
-                "SLAY_EVIL",
-                "BRAND_FIRE",
-                "SLAY_UNDEAD",
-                "SLAY_DEMON",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "SLAY_ORC",
-                "RES_FIRE",
-                "RES_CHAOS",
-                "FREE_ACT",
-                "SEE_INVIS",
-                "AGGRAVATE",
-                "SHOW_MODS"
-            ],
             "description": "Runes dark and deadly stand stark against the naked steel of this awesome weapon, and you feel a wrathful power of slaying and rending as you slowly approach.",
             "effects": {
                 "capability_ids": [
@@ -5138,20 +4258,6 @@
             "plus_to_hit": -15,
             "plus_to_dam": -15,
             "plus_to_ac": -10,
-            "flags": [
-                "BRAND_POIS",
-                "KILL_DRAGON",
-                "SLAY_UNDEAD",
-                "SPEED",
-                "HIDE_TYPE",
-                "SEE_INVIS",
-                "HOLD_LIFE",
-                "SHOW_MODS",
-                "AGGRAVATE",
-                "DRAIN_EXP",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE"
-            ],
             "description": "A foul, twisted sword with blackened spines and knobs, whose very name is a curse upon the lips of Elves and Men. It is said that it will drink the very lifeblood of its wielder.",
             "effects": {
                 "capability_ids": [
@@ -5209,19 +4315,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 11,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "STEALTH",
-                "HIDE_TYPE",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "FEATHER",
-                "SEE_INVIS",
-                "REGEN",
-                "SHOW_MODS"
-            ],
             "description": "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade with a perfect edge shining cleanly in the sun, an object of hate to the men of Umbar who met it in combat.",
             "effects": {
                 "capability_ids": [
@@ -5276,16 +4369,6 @@
             "plus_to_hit": 18,
             "plus_to_dam": 19,
             "plus_to_ac": 0,
-            "flags": [
-                "SLAY_DRAGON",
-                "SLAY_EVIL",
-                "SLAY_UNDEAD",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "SLAY_ORC",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "A giant's weapon, with a long blade tall and straight thrusting out from a massive double-pronged hilt.  On its blade are written doomspells against both the living and undead.",
             "effects": {
                 "capability_ids": [
@@ -5331,13 +4414,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "SPEED",
-                "HIDE_TYPE",
-                "SUST_DEX",
-                "SHOW_MODS"
-            ],
             "description": "An utterly perfect, cleanly chiseled sword, with a edge that effortlessly slices rock and bone and spells to render the wearer lithe and nimble.  It is combat incarnate.",
             "effects": {
                 "capability_ids": [
@@ -5377,25 +4453,6 @@
             "plus_to_hit": 22,
             "plus_to_dam": 25,
             "plus_to_ac": 0,
-            "flags": [
-                "SPEED",
-                "RES_FEAR",
-                "BLESSED",
-                "SLAY_EVIL",
-                "BRAND_COLD",
-                "SLAY_UNDEAD",
-                "KILL_DEMON",
-                "SLAY_TROLL",
-                "FREE_ACT",
-                "RES_COLD",
-                "RES_LITE",
-                "LITE",
-                "SEE_INVIS",
-                "SLOW_DIGEST",
-                "REGEN",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The weapon of Fingolfin, High King of the Noldor; it shines like a column of ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of old; his lame foot will remind him of its might should he face it again.",
             "effects": {
                 "capability_ids": [
@@ -5465,26 +4522,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 15,
             "plus_to_ac": 10,
-            "flags": [
-                "STR",
-                "DEX",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "FREE_ACT",
-                "BLESSED",
-                "SLAY_EVIL",
-                "BRAND_FIRE",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "SLAY_UNDEAD",
-                "RES_FIRE",
-                "RES_DISEN",
-                "SUST_STR",
-                "SUST_DEX",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The famed \"Flame of the West\", the Sword that was Broken and is forged again.  It glows with the essence of fire, its wearer is mighty in combat, and no creature of Sauron can withstand it.",
             "effects": {
                 "capability_ids": [
@@ -5559,23 +4596,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 12,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CON",
-                "SPEED",
-                "HIDE_TYPE",
-                "AGGRAVATE",
-                "SLAY_EVIL",
-                "BRAND_POIS",
-                "SLAY_DEMON",
-                "FREE_ACT",
-                "RES_ELEC",
-                "RES_LITE",
-                "RES_DARK",
-                "LITE",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "Forged of black galvorn by the Dark-Elven smith Eol, and as deadly as any other blade he forged.",
             "effects": {
                 "capability_ids": [
@@ -5641,17 +4661,6 @@
             "plus_to_hit": 2,
             "plus_to_dam": 7,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "CHR",
-                "STEALTH",
-                "HIDE_TYPE",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "FEATHER",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "The \"Singing Blade\", whose wearer can slay Orcs and Trolls in the hidden and secret places of the earth.",
             "effects": {
                 "capability_ids": [
@@ -5707,14 +4716,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 19,
             "plus_to_ac": 0,
-            "flags": [
-                "SLAY_ANIMAL",
-                "BRAND_COLD",
-                "RES_COLD",
-                "RES_LITE",
-                "LITE",
-                "SHOW_MODS"
-            ],
             "description": "A slender, tapered needle of ice that coldly grips its impaled prey.",
             "effects": {
                 "capability_ids": [],
@@ -5761,16 +4762,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 8,
             "plus_to_ac": 0,
-            "flags": [
-                "BLOWS",
-                "HIDE_TYPE",
-                "SLAY_DRAGON",
-                "SLAY_ANIMAL",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "SLAY_ORC",
-                "SHOW_MODS"
-            ],
             "description": "An heirloom of the dauntless Lords of Rhun far to the east, and a name of dismay to creatures natural and unnatural.",
             "effects": {
                 "capability_ids": [],
@@ -5818,24 +4809,6 @@
             "plus_to_hit": 7,
             "plus_to_dam": 8,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "CON",
-                "BLOWS",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "SLAY_EVIL",
-                "SLAY_UNDEAD",
-                "SLAY_ORC",
-                "SLAY_ANIMAL",
-                "FREE_ACT",
-                "RES_LITE",
-                "LITE",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "\"I will give you a name, and I shall call you Sting.\"  The perfect size for Bilbo, and stamped forever by the courage he found in Mirkwood, this sturdy little blade grants the wearer combat prowess and survival abilities he did not know he had.",
             "effects": {
                 "capability_ids": [
@@ -5908,16 +4881,6 @@
             "plus_to_hit": 9,
             "plus_to_dam": 11,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "BLOWS",
-                "HIDE_TYPE",
-                "SLAY_ANIMAL",
-                "SLAY_EVIL",
-                "SLAY_UNDEAD",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "A damascened scimitar that hefts with wondrous ease.  Famed in song as the \"Sickle of Harad\", and a deadly foe to the undead.",
             "effects": {
                 "capability_ids": [
@@ -5969,15 +4932,6 @@
             "plus_to_hit": 3,
             "plus_to_dam": 7,
             "plus_to_ac": 0,
-            "flags": [
-                "BLOWS",
-                "HIDE_TYPE",
-                "BRAND_POIS",
-                "SLAY_ANIMAL",
-                "SLOW_DIGEST",
-                "REGEN",
-                "SHOW_MODS"
-            ],
             "description": "A stubby blade worn by Beren, whose horn sounded of old in the glades of Brethil.",
             "effects": {
                 "capability_ids": [
@@ -6025,24 +4979,6 @@
             "plus_to_hit": 18,
             "plus_to_dam": 28,
             "plus_to_ac": -50,
-            "flags": [
-                "KILL_DRAGON",
-                "SLAY_ANIMAL",
-                "SLAY_EVIL",
-                "BRAND_COLD",
-                "SLAY_TROLL",
-                "SLAY_DEMON",
-                "FREE_ACT",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_CHAOS",
-                "SEE_INVIS",
-                "TELEPATHY",
-                "AGGRAVATE",
-                "SHOW_MODS"
-            ],
             "description": "This weapon of wrath, wrought by a desperate berserker gang, dives hungrily into the yielding flesh of your enemies.  You yourself fall under the shadow of death even as you inflict wounds that will not heal.",
             "effects": {
                 "capability_ids": [
@@ -6101,19 +5037,6 @@
             "plus_to_hit": -12,
             "plus_to_dam": 20,
             "plus_to_ac": 0,
-            "flags": [
-                "STEALTH",
-                "WIS",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "DRAIN_EXP",
-                "AGGRAVATE",
-                "BRAND_POIS",
-                "RES_DARK",
-                "RES_BLIND",
-                "RES_LITE",
-                "RES_NETHR"
-            ],
             "description": "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as he came to Valinor in wrath. Its envenomed bite pierced the Two Trees with wounds that would not heal.",
             "effects": {
                 "capability_ids": [
@@ -6169,16 +5092,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 10,
             "plus_to_ac": 0,
-            "flags": [
-                "WIS",
-                "CON",
-                "HIDE_TYPE",
-                "SLAY_DRAGON",
-                "TELEPATHY",
-                "SLOW_DIGEST",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The narrow axe head of this weapon would pierce the armour of a very Dragon, and the designs of your enemies stand naked and revealed.",
             "effects": {
                 "capability_ids": [
@@ -6238,10 +5151,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 30,
             "plus_to_ac": 0,
-            "flags": [
-                "SHOW_MODS",
-                "RES_FEAR"
-            ],
             "description": "The massive cleaver that crowns this glaive glows blood-red and black; fell spells of annihilation swirl and dance as you swing death's myrmidon down.",
             "effects": {
                 "capability_ids": [],
@@ -6276,18 +5185,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 9,
             "plus_to_ac": 0,
-            "flags": [
-                "CHR",
-                "HIDE_TYPE",
-                "BRAND_FIRE",
-                "SLAY_UNDEAD",
-                "SLAY_GIANT",
-                "RES_FIRE",
-                "RES_SOUND",
-                "FEATHER",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "Lordly and tall did Osondir stand against the wrath of giants, and clear-eyed in barrows fell, wielding a halberd glowing ruby red.",
             "effects": {
                 "capability_ids": [
@@ -6339,20 +5236,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 12,
             "plus_to_ac": 10,
-            "flags": [
-                "INT",
-                "HIDE_TYPE",
-                "BRAND_COLD",
-                "BRAND_FIRE",
-                "SLAY_DEMON",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "RES_FIRE",
-                "RES_COLD",
-                "SUST_INT",
-                "SLOW_DIGEST",
-                "SHOW_MODS"
-            ],
             "description": "Within this long two-handed spear dwell the spirits of frost giants and fire demons, who war forever, fettered in sorcerous binds.",
             "effects": {
                 "capability_ids": [
@@ -6410,23 +5293,6 @@
             "plus_to_hit": 15,
             "plus_to_dam": 25,
             "plus_to_ac": 5,
-            "flags": [
-                "WIS",
-                "DEX",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "BRAND_COLD",
-                "RES_COLD",
-                "SLAY_EVIL",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "KILL_UNDEAD",
-                "FREE_ACT",
-                "SLOW_DIGEST",
-                "ACTIVATE",
-                "BLESSED",
-                "SHOW_MODS"
-            ],
             "description": "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of Elves, against which all the foul corruptions of Sauron dashed in vain.",
             "effects": {
                 "capability_ids": [
@@ -6498,23 +5364,6 @@
             "plus_to_hit": 15,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "SPEED",
-                "INFRA",
-                "HIDE_TYPE",
-                "BRAND_FIRE",
-                "SLAY_GIANT",
-                "SLAY_ANIMAL",
-                "RES_FIRE",
-                "RES_LITE",
-                "FEATHER",
-                "LITE",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "BLESSED",
-                "SHOW_MODS"
-            ],
             "description": "The thrusting spear of wise Orome the Vala, strong against giants of frost, and able to pierce rock or flesh with ease.",
             "effects": {
                 "capability_ids": [
@@ -6588,17 +5437,6 @@
             "plus_to_hit": 11,
             "plus_to_dam": 13,
             "plus_to_ac": 0,
-            "flags": [
-                "STEALTH",
-                "SPEED",
-                "HIDE_TYPE",
-                "BLESSED",
-                "BRAND_COLD",
-                "SLAY_UNDEAD",
-                "RES_COLD",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a legendary tree, and spells to break the wills of the undead and strike cold into the breasts of your enemies lay upon this perfectly balanced spear.",
             "effects": {
                 "capability_ids": [
@@ -6652,18 +5490,6 @@
             "plus_to_hit": 13,
             "plus_to_dam": 21,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "SLAY_EVIL",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "\"Forth Eorlingas!\"  To the field of Cormallen Eorl the Young came beyond hope to save beleaguered Gondor, and from his lance fled massive trolls and dire wolves.",
             "effects": {
                 "capability_ids": [
@@ -6721,27 +5547,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 20,
             "plus_to_ac": 15,
-            "flags": [
-                "STR",
-                "CON",
-                "TUNNEL",
-                "HIDE_TYPE",
-                "BRAND_ACID",
-                "BRAND_FIRE",
-                "KILL_DRAGON",
-                "SLAY_DEMON",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "FREE_ACT",
-                "RES_CONFU",
-                "RES_FEAR",
-                "RES_ACID",
-                "RES_FIRE",
-                "RES_LITE",
-                "RES_DARK",
-                "RES_CHAOS",
-                "SHOW_MODS"
-            ],
             "description": "The twin massive axe heads of this ancient demon's dread gleam with mithril inlay, which tell sagas of endurance, invoking the powers of Kazad-dum to protect the wearer and slay all evils found underground.",
             "effects": {
                 "capability_ids": [
@@ -6812,28 +5617,6 @@
             "plus_to_hit": 15,
             "plus_to_dam": 18,
             "plus_to_ac": 8,
-            "flags": [
-                "STR",
-                "INT",
-                "WIS",
-                "DEX",
-                "CON",
-                "CHR",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "SLAY_EVIL",
-                "BRAND_COLD",
-                "SLAY_UNDEAD",
-                "KILL_DEMON",
-                "SLAY_ORC",
-                "FREE_ACT",
-                "IM_COLD",
-                "RES_COLD",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "BLESSED",
-                "SHOW_MODS"
-            ],
             "description": "The axe of Eonwe, leader of the Hosts of the West before the gates of Thangorodrim, strikes with icy wrath at the undead, disperses hosts of evil at a word, and grants Maia-like powers of body and mind.",
             "effects": {
                 "capability_ids": [
@@ -6922,25 +5705,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 11,
             "plus_to_ac": 5,
-            "flags": [
-                "STR",
-                "CON",
-                "STEALTH",
-                "HIDE_TYPE",
-                "SLAY_DEMON",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "FREE_ACT",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_BLIND",
-                "FEATHER",
-                "SEE_INVIS",
-                "REGEN",
-                "SHOW_MODS"
-            ],
             "description": "The twin blades of this weapon were forged in Belegost, and powerful forces to resist and endure lie ready for he who shall wield it once more.",
             "effects": {
                 "capability_ids": [
@@ -7009,15 +5773,6 @@
             "plus_to_hit": 4,
             "plus_to_dam": 3,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "HIDE_TYPE",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A superbly crafted double-bladed axe once borne by Ceruthain, commander of the Rangers of Arnor.",
             "effects": {
                 "capability_ids": [],
@@ -7075,16 +5830,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 17,
             "plus_to_ac": 0,
-            "flags": [
-                "SLAY_EVIL",
-                "SLAY_ANIMAL",
-                "SLAY_DEMON",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "SHOW_MODS"
-            ],
             "description": "A massive axe with twin razor-sharp heads, so large that it usually requires two hands to wield, with spells to ward off the elements intricately engraved upon its surface in filleted gold.",
             "effects": {
                 "capability_ids": [],
@@ -7130,16 +5875,6 @@
             "plus_to_hit": 13,
             "plus_to_dam": 19,
             "plus_to_ac": 0,
-            "flags": [
-                "CON",
-                "HIDE_TYPE",
-                "SLAY_EVIL",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "SLAY_ORC",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "A royal heirloom of the southern coast, strong in combat against the evil creatures of earth.",
             "effects": {
                 "capability_ids": [
@@ -7188,19 +5923,6 @@
             "plus_to_hit": 16,
             "plus_to_dam": 18,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "HIDE_TYPE",
-                "BRAND_POIS",
-                "SLAY_EVIL",
-                "KILL_UNDEAD",
-                "RES_LITE",
-                "RES_DARK",
-                "SEE_INVIS",
-                "BLESSED",
-                "SHOW_MODS"
-            ],
             "description": "A massive triple-pronged spear, so great it normally requires two hands to wield, evoking the spirit of Osse who with it pierced legions of evil and undead.",
             "effects": {
                 "capability_ids": [
@@ -7256,23 +5978,6 @@
             "plus_to_hit": 15,
             "plus_to_dam": 19,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "HIDE_TYPE",
-                "SLAY_DRAGON",
-                "SLAY_ANIMAL",
-                "FREE_ACT",
-                "HOLD_LIFE",
-                "IM_ACID",
-                "RES_ACID",
-                "RES_NETHR",
-                "SEE_INVIS",
-                "SLOW_DIGEST",
-                "REGEN",
-                "ACTIVATE",
-                "BLESSED",
-                "SHOW_MODS"
-            ],
             "description": "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightest of all the powers of good save Manwe himself, Ulmo laughs to scorn the dread powers of the undead, and is utterly in command of the Element of water.",
             "effects": {
                 "capability_ids": [
@@ -7337,21 +6042,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 8,
             "plus_to_ac": 10,
-            "flags": [
-                "DEX",
-                "CHR",
-                "HIDE_TYPE",
-                "BRAND_COLD",
-                "BRAND_FIRE",
-                "FREE_ACT",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_LITE",
-                "LITE",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "Binding elemental powers whose struggles turn this weapon red and purest white, this shining reaper bears within it a power of going forth and returning.",
             "effects": {
                 "capability_ids": [
@@ -7424,21 +6114,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "ACTIVATE",
-                "KILL_DEMON",
-                "STR",
-                "CON",
-                "HIDE_TYPE",
-                "BRAND_ACID",
-                "RES_ACID",
-                "RES_DARK",
-                "RES_FIRE",
-                "LITE",
-                "SLAY_DRAGON",
-                "SLAY_TROLL",
-                "SHOW_MODS"
-            ],
             "description": "Wielded by Hurin Thalion, last lord of Dor-Lomin at the Battle of Tears Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe smoking in the black blood of Gothmog's troll-guard.  No less than seventy times, as he slew his foes, did he utter his mighty war-cry: \"Aure entuluva!\" - \"Day shall come again!\"",
             "effects": {
                 "capability_ids": [],
@@ -7506,21 +6181,6 @@
             "plus_to_hit": 5,
             "plus_to_dam": 25,
             "plus_to_ac": 10,
-            "flags": [
-                "KILL_DRAGON",
-                "SLAY_ANIMAL",
-                "SLAY_EVIL",
-                "IMPACT",
-                "KILL_UNDEAD",
-                "KILL_DEMON",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "SEE_INVIS",
-                "TELEPATHY",
-                "AGGRAVATE",
-                "SHOW_MODS",
-                "INSTA_ART"
-            ],
             "generation": {
                 "insta_art": true
             },
@@ -7577,15 +6237,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 8,
             "plus_to_ac": 0,
-            "flags": [
-                "STEALTH",
-                "SLAY_EVIL",
-                "BRAND_FIRE",
-                "RES_FIRE",
-                "RES_CONFU",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A flail whose head befuddles those who stare as you whirl it round, and becomes a fiery comet as you bring it down.",
             "effects": {
                 "capability_ids": [],
@@ -7641,21 +6292,6 @@
             "plus_to_hit": 5,
             "plus_to_dam": 18,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CON",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "SLAY_ANIMAL",
-                "BRAND_FIRE",
-                "BRAND_ELEC",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_DARK",
-                "SHOW_MODS"
-            ],
             "description": "The long-lost weapon of Kzurin, Dwarven champion of ancient Belegost, with runes of strength in its handle, and flames and sparks that roar and crackle around its massive head.",
             "effects": {
                 "capability_ids": [],
@@ -7712,17 +6348,6 @@
             "plus_to_hit": 8,
             "plus_to_dam": 22,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "HIDE_TYPE",
-                "BRAND_POIS",
-                "SLAY_ANIMAL",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "RES_NEXUS",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "You feel strong and firm of foot as you whip the chain-suspended spiked orb this weapon bears around and bathe it in the blood of your foes.",
             "effects": {
                 "capability_ids": [
@@ -7773,12 +6398,6 @@
             "plus_to_hit": 5,
             "plus_to_dam": 7,
             "plus_to_ac": 2,
-            "flags": [
-                "BRAND_FIRE",
-                "RES_FIRE",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A famed battle-lord of old with a ruddy head, coloured as embers are that can yet rise up in wrath.",
             "effects": {
                 "capability_ids": [],
@@ -7832,14 +6451,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 12,
             "plus_to_ac": 0,
-            "flags": [
-                "KILL_DRAGON",
-                "BRAND_ELEC",
-                "IM_ELEC",
-                "RES_ELEC",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A great ridged mace that surrounds you in a nimbus of living lightning; you remain utterly untouched, even as fat sparks crackle around your fingers and eyebrows.",
             "effects": {
                 "capability_ids": [],
@@ -7891,25 +6502,6 @@
             "plus_to_hit": 19,
             "plus_to_dam": 21,
             "plus_to_ac": 5,
-            "flags": [
-                "WIS",
-                "TUNNEL",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "KILL_DRAGON",
-                "SLAY_EVIL",
-                "BRAND_ACID",
-                "SLAY_UNDEAD",
-                "SLAY_DEMON",
-                "FREE_ACT",
-                "RES_ACID",
-                "RES_ELEC",
-                "RES_FIRE",
-                "RES_COLD",
-                "RES_NEXUS",
-                "SEE_INVIS",
-                "SHOW_MODS"
-            ],
             "description": "The wondrous hammer of Aule, creator of the wise Dwarven lords of old. It bears magics of demolishing that no serpent or demon can withstand, and invokes the strength of mountains to ward off the tumult of the elements.",
             "effects": {
                 "capability_ids": [
@@ -7975,14 +6567,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 20,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "HIDE_TYPE",
-                "SLAY_ANIMAL",
-                "BRAND_FIRE",
-                "RES_FIRE",
-                "SHOW_MODS"
-            ],
             "description": "Named for a fiery star and set with gems of great worth binding mystic virtues of protection and thought.",
             "effects": {
                 "capability_ids": [],
@@ -8029,17 +6613,6 @@
             "plus_to_hit": 3,
             "plus_to_dam": 5,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "WIS",
-                "HIDE_TYPE",
-                "SLAY_EVIL",
-                "RES_LITE",
-                "LITE",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "The radiant golden staff of an Istar of legend; this wizard's companion grants keen sight and clear knowledge of many hidden things.",
             "effects": {
                 "capability_ids": [
@@ -8104,23 +6677,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 13,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "WIS",
-                "CHR",
-                "HIDE_TYPE",
-                "KILL_DEMON",
-                "SLAY_EVIL",
-                "BRAND_FIRE",
-                "SLAY_TROLL",
-                "SLAY_ORC",
-                "HOLD_LIFE",
-                "RES_FIRE",
-                "RES_NETHR",
-                "SEE_INVIS",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that invoke the element of Earth stand bold upon its gnarled surface, and no creature who lives in the shadow of mountains can withstand the blows it deals.",
             "effects": {
                 "capability_ids": [
@@ -8191,23 +6747,6 @@
             "plus_to_hit": 18,
             "plus_to_dam": 18,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "TUNNEL",
-                "HIDE_TYPE",
-                "SLAY_DRAGON",
-                "SLAY_ANIMAL",
-                "SLAY_EVIL",
-                "KILL_UNDEAD",
-                "BRAND_FIRE",
-                "IM_FIRE",
-                "RES_FIRE",
-                "RES_DARK",
-                "RES_CHAOS",
-                "RES_DISEN",
-                "AGGRAVATE",
-                "SHOW_MODS"
-            ],
             "description": "A weapon so massive it seems beyond the strength of mortals, yet you feel the might of giants within you as you heft it.  As you grip the handle of ebony and steel, coronas of fire blaze and mighty spells to preserve magic activate around you.  You wield the Fear of Dragons and the Despair of the Undead!",
             "effects": {
                 "capability_ids": [
@@ -8267,19 +6806,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 6,
             "plus_to_ac": 8,
-            "flags": [
-                "WIS",
-                "INFRA",
-                "HIDE_TYPE",
-                "BRAND_COLD",
-                "SLAY_ORC",
-                "RES_COLD",
-                "RES_LITE",
-                "LITE",
-                "REGEN",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "recharge_dice": 0,
             "description": "Wielded by the High Priest of Meneltarma, this great mace gleams coldly as though moonlit, and it can strike as mighty a blow spiritually as physically.",
             "effects": {
@@ -8351,26 +6877,6 @@
             "plus_to_hit": 13,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "DEX",
-                "WIS",
-                "HIDE_TYPE",
-                "LIGHT_CURSE",
-                "HEAVY_CURSE",
-                "AGGRAVATE",
-                "BRAND_FIRE",
-                "IM_FIRE",
-                "RES_ELEC",
-                "RES_DARK",
-                "LITE",
-                "SLAY_ANIMAL",
-                "KILL_DRAGON",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A great crackling Balrog's whip of flame, this weapon could bring even Ungoliant to heel.",
             "effects": {
                 "capability_ids": [
@@ -8448,15 +6954,6 @@
             "plus_to_hit": 20,
             "plus_to_dam": 22,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "SPEED",
-                "STEALTH",
-                "SHOTS",
-                "HIDE_TYPE",
-                "RES_DISEN",
-                "SHOW_MODS"
-            ],
             "description": "The great bow of Beleg Cuthalion, made of black yew and strung with elven hair that faintly shimmers a pale clear gold.",
             "effects": {
                 "capability_ids": [],
@@ -8512,14 +7009,6 @@
             "plus_to_hit": 17,
             "plus_to_dam": 19,
             "plus_to_ac": 0,
-            "flags": [
-                "DEX",
-                "SPEED",
-                "MIGHT",
-                "HIDE_TYPE",
-                "FREE_ACT",
-                "SHOW_MODS"
-            ],
             "description": "The great yew bow of grim-faced Bard, who shot the mightiest arrow that songs record.",
             "effects": {
                 "capability_ids": [
@@ -8571,13 +7060,6 @@
             "plus_to_hit": 10,
             "plus_to_dam": 14,
             "plus_to_ac": 0,
-            "flags": [
-                "SPEED",
-                "HIDE_TYPE",
-                "RES_FIRE",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A crossbow that grants fiery speed to he who finds it, and from which shoot bolts that blaze with flame unquenchable.",
             "effects": {
                 "capability_ids": [],
@@ -8630,19 +7112,6 @@
             "plus_to_hit": 18,
             "plus_to_dam": 18,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CON",
-                "MIGHT",
-                "AGGRAVATE",
-                "RES_LITE",
-                "RES_DARK",
-                "RES_BLIND",
-                "RES_ELEC",
-                "HIDE_TYPE",
-                "ACTIVATE",
-                "SHOW_MODS"
-            ],
             "description": "A great brazen arbalest with arms of gleaming steel shooting quarrels with mighty power for those brave enough to risk betrayal.",
             "effects": {
                 "capability_ids": [
@@ -8708,15 +7177,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CON",
-                "MIGHT",
-                "RES_FIRE",
-                "RES_ELEC",
-                "RES_COLD",
-                "REGEN"
-            ],
             "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
             "effects": {
                 "capability_ids": [
@@ -8769,18 +7229,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 15,
             "plus_to_ac": 0,
-            "flags": [
-                "INT",
-                "WIS",
-                "DEX",
-                "SHOTS",
-                "MIGHT",
-                "SPEED",
-                "RES_FIRE",
-                "RES_ELEC",
-                "RES_COLD",
-                "SLOW_DIGEST"
-            ],
             "description": "A hunting bow, once wielded by one of Feanor's last two twin sons, like and yet unlike as they were, in their abode among the Green-elves of Ossiriand.",
             "effects": {
                 "capability_ids": [
@@ -8845,19 +7293,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 18,
             "plus_to_ac": 0,
-            "flags": [
-                "TUNNEL",
-                "INFRA",
-                "SEARCH",
-                "STR",
-                "SLAY_ORC",
-                "SLAY_TROLL",
-                "SLAY_GIANT",
-                "SLAY_DRAGON",
-                "RES_DARK",
-                "RES_DISEN",
-                "ACTIVATE"
-            ],
             "description": "A mighty Dwarven mattock, as good for hewing orc-necks as for hewing stone.  Nain, King of the Iron Hills, brought his mattock-wielding warriors to the Battle of Azanulbizar, and no Orc could withstand them, although Nain himself fell before their lord Azog.",
             "effects": {
                 "capability_ids": [],
@@ -8925,21 +7360,6 @@
             "plus_to_hit": 5,
             "plus_to_dam": 20,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CON",
-                "TUNNEL",
-                "SUST_STR",
-                "HIDE_TYPE",
-                "LITE",
-                "SLAY_ORC",
-                "SLAY_TROLL",
-                "SLAY_DEMON",
-                "BRAND_ACID",
-                "RES_CHAOS",
-                "RES_LITE",
-                "RES_DARK"
-            ],
             "description": "A fine dwarven pick, good for a miner, and suitable as a weapon should the wielder ever tunnel through into a foe's stronghold.",
             "effects": {
                 "capability_ids": [
@@ -9003,20 +7423,6 @@
             "plus_to_hit": 13,
             "plus_to_dam": 17,
             "plus_to_ac": 10,
-            "flags": [
-                "STR",
-                "WIS",
-                "SPEED",
-                "LITE",
-                "HIDE_TYPE",
-                "SLAY_EVIL",
-                "SLAY_UNDEAD",
-                "RES_FIRE",
-                "RES_ELEC",
-                "RES_NETHR",
-                "HOLD_LIFE",
-                "ACTIVATE"
-            ],
             "description": "The weapon of a mighty dwarven priest, whose shade is rumoured to still haunt the halls of Angband itself.",
             "effects": {
                 "capability_ids": [
@@ -9091,12 +7497,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 14,
             "plus_to_ac": 0,
-            "flags": [
-                "KILL_DRAGON",
-                "IM_FIRE",
-                "RES_ACID",
-                "RES_FEAR"
-            ],
             "description": "Azaghal, Dwarf-king of Beregost, fell before Glaurung in the Battle of Unnumbered Tears, but with his final stroke he dealt Glaurung such a blow that the Father of Dragons fled the field with all his kin, and was at first believed to be mortally wounded.",
             "effects": {
                 "capability_ids": [],
@@ -9137,18 +7537,6 @@
             "plus_to_hit": 0,
             "plus_to_dam": 0,
             "plus_to_ac": 15,
-            "flags": [
-                "ACTIVATE",
-                "STR",
-                "CON",
-                "SUST_STR",
-                "SUST_CON",
-                "HIDE_TYPE",
-                "RES_FEAR",
-                "RES_BLIND",
-                "RES_POIS",
-                "AGGRAVATE"
-            ],
             "description": "The painted shield of a chieftain of Far Harad, gaudy and barbaric. Its wielder will fear nothing and fight with unnatural strength, but also draw attention to himself.",
             "effects": {
                 "capability_ids": [
@@ -9206,16 +7594,6 @@
             "plus_to_hit": 6,
             "plus_to_dam": 10,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "DEX",
-                "BLOWS",
-                "SLAY_ORC",
-                "SLAY_TROLL",
-                "RES_FIRE",
-                "BLESSED",
-                "HIDE_TYPE"
-            ],
             "description": "The remnants of the sword whose shattered hilt once cut the One Ring off the hand of Sauron.",
             "effects": {
                 "capability_ids": [
@@ -9271,20 +7649,6 @@
             "plus_to_hit": 12,
             "plus_to_dam": 16,
             "plus_to_ac": 0,
-            "flags": [
-                "STR",
-                "CHR",
-                "STEALTH",
-                "SPEED",
-                "SLAY_EVIL",
-                "KILL_UNDEAD",
-                "SLAY_GIANT",
-                "SLAY_ANIMAL",
-                "RES_NETHR",
-                "RES_FEAR",
-                "RES_DARK",
-                "RES_COLD"
-            ],
             "description": "The blade of the legendary Shieldmaiden of Rohan, who struck a mighty blow against the Morgul-lord whom no mortal Man could hinder, and also slew his foul steed.",
             "effects": {
                 "capability_ids": [],

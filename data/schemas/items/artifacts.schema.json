@@ -14,7 +14,7 @@
         "required": [
           "baseItemId", "id", "name", "pval", "depth", "rarity",
           "weight", "cost", "base_ac", "damage", "plus_to_hit",
-          "plus_to_dam", "plus_to_ac", "flags", "effects", "description"
+           "plus_to_dam", "plus_to_ac", "effects", "description"
         ],
         "not": { "required": ["affixes"] },
         "properties": {

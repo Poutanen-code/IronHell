@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronHell.Data.Tests", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ironhell-catalog-diagnostic", "..\..\Users\santeri.poutanen\AppData\Local\Temp\ironhell-catalog-diagnostic\ironhell-catalog-diagnostic.csproj", "{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,18 @@ Global
 		{7D8E9F01-2345-6789-ABCD-EF0123456789}.Release|x64.Build.0 = Release|Any CPU
 		{7D8E9F01-2345-6789-ABCD-EF0123456789}.Release|x86.ActiveCfg = Release|Any CPU
 		{7D8E9F01-2345-6789-ABCD-EF0123456789}.Release|x86.Build.0 = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|x64.Build.0 = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Debug|x86.Build.0 = Debug|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|x64.ActiveCfg = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|x64.Build.0 = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E9B5C2C-C39C-4D1C-8BEF-E7883D0CDBD6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
