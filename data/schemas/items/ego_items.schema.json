@@ -42,7 +42,6 @@
           },
           "slots": { "type": "array", "items": { "type": "string" } },
           "item_categories": { "type": "array", "items": { "type": "string" } },
-          "flags": { "type": "array", "items": { "type": "string" } },
           "combat_modifiers": {
             "type": "array",
             "uniqueItems": true,

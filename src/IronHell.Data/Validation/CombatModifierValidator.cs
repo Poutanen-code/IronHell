@@ -7,7 +7,6 @@ internal static class CombatModifierValidator
     private const string Document = "combat_modifiers.json";
     private const string EffectsProperty = "effects";
     private const string IdProperty = "id";
-    private const string SourceFlagProperty = "source_flag";
     private static readonly IReadOnlySet<string> SpeciesTargets = new HashSet<string>(StringComparer.Ordinal)
     {
         "beast", "humanoid", "undead", "demon", "dragon", "construct", "aberration", "troll", "giant",
@@ -55,14 +54,6 @@ internal static class CombatModifierValidator
                      .Select(group => group.Key))
         {
             report.Add(Document, duplicateId, IdProperty, "duplicate_combat_modifier_id", $"Duplicate combat modifier identifier '{duplicateId}'.");
-        }
-
-        foreach (var duplicateFlag in modifiers.Where(modifier => modifier[SourceFlagProperty] is not null)
-                     .GroupBy(modifier => modifier[SourceFlagProperty]!.GetValue<string>(), StringComparer.Ordinal)
-                     .Where(group => group.Count() > 1)
-                     .Select(group => group.Key))
-        {
-            report.Add(Document, duplicateFlag, SourceFlagProperty, "duplicate_combat_modifier_source_flag", $"Duplicate combat modifier source flag '{duplicateFlag}'.");
         }
     }
 

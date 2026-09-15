@@ -107,7 +107,6 @@ public sealed class ArtifactAffixValidationTests
         var report = ValidateArtifactEffects("""
             {
               "id": "artifact",
-              "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART", "LIGHT_CURSE", "HEAVY_CURSE", "PERMA_CURSE"],
               "generation": { "insta_art": true },
               "effects": {
                 "capability_ids": [],
@@ -125,12 +124,11 @@ public sealed class ArtifactAffixValidationTests
     }
 
     [Fact]
-    public void ValidateArtifactEffects_MissingDisplayOrGenerationMappings_ReturnsValidationErrors()
+    public void ValidateArtifactEffects_AbsentLegacyFlags_DoesNotRequireLegacyMappings()
     {
         var report = ValidateArtifactEffects("""
             {
               "id": "artifact",
-              "flags": ["SHOW_MODS", "HIDE_TYPE", "INSTA_ART"],
               "effects": {
                 "capability_ids": [],
                 "resistance_ids": [],
@@ -143,7 +141,7 @@ public sealed class ArtifactAffixValidationTests
             }
             """);
 
-        Assert.Equal(3, report.Errors.Count(error => error.Code is "missing_canonical_effect" or "missing_generation_metadata"));
+          Assert.Empty(report.Errors);
     }
 
     private static DefinitionValidationReportSnapshot ValidateArtifactAffixes(string artifactJson)

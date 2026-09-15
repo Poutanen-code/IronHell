@@ -15,7 +15,6 @@ function loadJSON(relPath) {
 
 const artifactsData = loadJSON("data/definitions/items/artifacts.json");
 const combatData = loadJSON("data/definitions/combat_modifiers.json");
-const combatByFlag = new Map(combatData.combat_modifiers.map((modifier) => [modifier.source_flag, modifier.id]));
 const combatIds = new Set(combatData.combat_modifiers.map((modifier) => modifier.id));
 
 function artifactName(artifact) {
@@ -34,19 +33,13 @@ describe("artifact combat modifier references", () => {
     }
   });
 
-  it("maps every combat legacy flag to its canonical reference", () => {
+  it("does not retain legacy flags", () => {
     for (const artifact of artifactsData.artifacts) {
-      for (const flag of artifact.flags) {
-        const modifierId = combatByFlag.get(flag);
-        if (modifierId) {
-          assert.ok(artifact.effects.combat_modifiers.includes(modifierId), `${artifactName(artifact)} is missing ${modifierId} for ${flag}`);
-        }
-      }
+      assert.equal(Object.hasOwn(artifact, "flags"), false, `${artifactName(artifact)} retains legacy flags`);
     }
   });
 
-  it("preserves legacy flags and artifact count", () => {
-    assert.ok(artifactsData.artifacts.every((artifact) => Array.isArray(artifact.flags)));
+  it("preserves artifact count", () => {
     assert.equal(artifactsData.artifacts.length, 136);
   });
 });

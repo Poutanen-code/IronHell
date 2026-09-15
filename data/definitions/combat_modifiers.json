@@ -4,7 +4,6 @@
         {
             "id": "impact",
             "modifier_kind": "impact",
-            "source_flag": "IMPACT",
             "name": "Impact",
             "description": "Melee hits can trigger earthquake-style terrain disruption.",
             "category": "combat",
@@ -20,7 +19,6 @@
         {
             "id": "slay_dragon",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_DRAGON",
             "name": "Slay Dragon",
             "description": "Deals increased melee damage against dragons.",
             "category": "combat",
@@ -43,7 +41,6 @@
         {
             "id": "slay_evil",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_EVIL",
             "name": "Slay Evil",
             "description": "Deals increased melee damage against evil creatures.",
             "category": "combat",
@@ -66,7 +63,6 @@
         {
             "id": "slay_undead",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_UNDEAD",
             "name": "Slay Undead",
             "description": "Deals increased melee damage against undead creatures.",
             "category": "combat",
@@ -89,7 +85,6 @@
         {
             "id": "slay_demon",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_DEMON",
             "name": "Slay Demon",
             "description": "Deals increased melee damage against demon creatures.",
             "category": "combat",
@@ -112,7 +107,6 @@
         {
             "id": "slay_orc",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_ORC",
             "name": "Slay Orc",
             "description": "Deals increased melee damage against orc creatures.",
             "category": "combat",
@@ -135,7 +129,6 @@
         {
             "id": "slay_troll",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_TROLL",
             "name": "Slay Troll",
             "description": "Deals increased melee damage against troll creatures.",
             "category": "combat",
@@ -158,7 +151,6 @@
         {
             "id": "slay_giant",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_GIANT",
             "name": "Slay Giant",
             "description": "Deals increased melee damage against giant creatures.",
             "category": "combat",
@@ -181,7 +173,6 @@
         {
             "id": "slay_animal",
             "modifier_kind": "slay",
-            "source_flag": "SLAY_ANIMAL",
             "name": "Slay Animal",
             "description": "Deals increased melee damage against animal creatures.",
             "category": "combat",
@@ -204,7 +195,6 @@
         {
             "id": "kill_undead",
             "modifier_kind": "kill",
-            "source_flag": "KILL_UNDEAD",
             "name": "Kill Undead",
             "description": "Deals exceptional melee damage against undead creatures.",
             "category": "combat",
@@ -227,7 +217,6 @@
         {
             "id": "kill_demon",
             "modifier_kind": "kill",
-            "source_flag": "KILL_DEMON",
             "name": "Kill Demon",
             "description": "Deals exceptional melee damage against demon creatures.",
             "category": "combat",
@@ -250,7 +239,6 @@
         {
             "id": "kill_dragon",
             "modifier_kind": "kill",
-            "source_flag": "KILL_DRAGON",
             "name": "Kill Dragon",
             "description": "Deals exceptional melee damage against dragons.",
             "category": "combat",
@@ -274,7 +262,6 @@
             "id": "brand_fire",
             "modifier_kind": "brand",
             "element": "fire",
-            "source_flag": "BRAND_FIRE",
             "name": "Fire Brand",
             "description": "Adds fire-branded melee damage.",
             "category": "combat",
@@ -285,13 +272,19 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_species": "all",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
             "id": "brand_acid",
             "modifier_kind": "brand",
             "element": "acid",
-            "source_flag": "BRAND_ACID",
             "name": "Acid Brand",
             "description": "Adds acid-branded melee damage.",
             "category": "combat",
@@ -302,13 +295,19 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_species": "all",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
             "id": "brand_elec",
             "modifier_kind": "brand",
             "element": "elec",
-            "source_flag": "BRAND_ELEC",
             "name": "Electric Brand",
             "description": "Adds electric-branded melee damage.",
             "category": "combat",
@@ -319,13 +318,19 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_species": "all",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
             "id": "brand_cold",
             "modifier_kind": "brand",
             "element": "cold",
-            "source_flag": "BRAND_COLD",
             "name": "Cold Brand",
             "description": "Adds cold-branded melee damage.",
             "category": "combat",
@@ -336,13 +341,19 @@
                 "artifact",
                 "ego_item"
             ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_species": "all",
+                    "multiplier": 3.0
+                }
+            ],
             "provenance_status": "derived"
         },
         {
             "id": "brand_pois",
             "modifier_kind": "brand",
             "element": "pois",
-            "source_flag": "BRAND_POIS",
             "name": "Poison Brand",
             "description": "Adds poison-branded melee damage.",
             "category": "combat",
@@ -352,6 +363,13 @@
                 "weapon",
                 "artifact",
                 "ego_item"
+            ],
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "monster_species": "all",
+                    "multiplier": 3.0
+                }
             ],
             "provenance_status": "derived"
         }

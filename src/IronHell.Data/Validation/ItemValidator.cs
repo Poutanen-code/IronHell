@@ -1,7 +1,6 @@
 using System.Collections.Frozen;
 using System.Text.Json.Nodes;
 using IronHell.Core.Definitions;
-using IronHell.Data.Registries;
 using IronHell.Data.Serialization;
 
 namespace IronHell.Data.Validation;
@@ -14,7 +13,6 @@ internal static class ItemValidator
     private const string ArtifactsDocument = "items/artifacts.json";
     private const string CombatModifiersDocument = "combat_modifiers.json";
     private const string CombatModifiersProperty = "combat_modifiers";
-    private const string SourceFlagProperty = "source_flag";
     private const string ItemAffixesDocument = "items/item_affixes.json";
     private const string AffixesProperty = "affixes";
     private const string EgoItemsProperty = "ego_items";
@@ -26,43 +24,15 @@ internal static class ItemValidator
     private const string ResistancesProperty = "resistance_ids";
     private const string ActivationsProperty = "activations";
     private const string CursesProperty = "curses";
-    private const string DisplayFlagsProperty = "display_flags";
-    private const string GenerationProperty = "generation";
     private const string ValueSourceProperty = "value_source";
     private static readonly IReadOnlySet<string> ArtifactAffixValueSources = new HashSet<string>(StringComparer.Ordinal)
     {
         "pval", "plus_to_hit", "plus_to_dam", "plus_to_ac",
     };
-    private static readonly IReadOnlySet<string> CombatModifierFlags = new HashSet<string>(StringComparer.Ordinal)
+    private static readonly IReadOnlySet<string> CurseIds = new HashSet<string>(StringComparer.Ordinal)
     {
-        "SLAY_ANIMAL", "SLAY_EVIL", "SLAY_UNDEAD", "SLAY_DEMON", "SLAY_ORC", "SLAY_TROLL", "SLAY_GIANT", "SLAY_DRAGON",
-        "KILL_DRAGON", "KILL_DEMON", "KILL_UNDEAD", "BRAND_ACID", "BRAND_ELEC", "BRAND_FIRE", "BRAND_COLD", "BRAND_POIS", "IMPACT",
+        "light_curse", "heavy_curse", "perma_curse",
     };
-    private static readonly IReadOnlyDictionary<string, string> CapabilityFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
-    {
-        ["FREE_ACT"] = "free_act", ["SEE_INVIS"] = "see_invis", ["HOLD_LIFE"] = "hold_life", ["REGEN"] = "regen",
-        ["SLOW_DIGEST"] = "slow_digest", ["TELEPATHY"] = "telepathy", ["FEATHER"] = "feather", ["SUST_STR"] = "sust_str",
-        ["SUST_INT"] = "sust_int", ["SUST_WIS"] = "sust_wis", ["SUST_DEX"] = "sust_dex", ["SUST_CON"] = "sust_con",
-        ["SUST_CHR"] = "sust_chr", ["AGGRAVATE"] = "aggravate_monsters", ["DRAIN_EXP"] = "drain_exp",
-    };
-    private static readonly IReadOnlyDictionary<string, string> ResistanceFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
-    {
-        ["RES_ACID"] = "res_acid", ["RES_ELEC"] = "res_elec", ["RES_FIRE"] = "res_fire", ["RES_COLD"] = "res_cold",
-        ["RES_POIS"] = "res_pois", ["RES_FEAR"] = "res_fear", ["RES_CONFU"] = "res_confu", ["RES_SOUND"] = "res_sound",
-        ["RES_SHARD"] = "res_shard", ["RES_NEXUS"] = "res_nexus", ["RES_NETHR"] = "res_nethr", ["RES_CHAOS"] = "res_chaos",
-        ["RES_DISEN"] = "res_disen", ["RES_LITE"] = "res_lite", ["RES_DARK"] = "res_dark", ["RES_BLIND"] = "res_blind",
-        ["IM_ACID"] = "imm_acid", ["IM_ELEC"] = "imm_elec", ["IM_FIRE"] = "imm_fire", ["IM_COLD"] = "imm_cold",
-        ["IGNORE_ACID"] = "ignore_acid", ["IGNORE_ELEC"] = "ignore_elec", ["IGNORE_FIRE"] = "ignore_fire", ["IGNORE_COLD"] = "ignore_cold",
-    };
-    private static readonly IReadOnlyDictionary<string, string> CurseFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
-    {
-        ["LIGHT_CURSE"] = "light_curse", ["HEAVY_CURSE"] = "heavy_curse", ["PERMA_CURSE"] = "perma_curse",
-    };
-    private static readonly IReadOnlyDictionary<string, string> DisplayFlagMappings = new Dictionary<string, string>(StringComparer.Ordinal)
-    {
-        ["SHOW_MODS"] = "show_mods", ["HIDE_TYPE"] = "hide_type",
-    };
-    private static readonly IReadOnlySet<string> CurseIds = new HashSet<string>(CurseFlagMappings.Values, StringComparer.Ordinal);
 
     public static void Validate(
         FrozenDictionary<string, JsonObject> documents,
@@ -105,19 +75,11 @@ internal static class ItemValidator
             .Where(modifier => modifier["id"] is not null)
             .Select(modifier => modifier["id"]!.GetValue<string>())
             .ToHashSet(StringComparer.Ordinal);
-        var flagToModifier = modifiers
-            .Where(modifier => modifier[SourceFlagProperty] is not null && modifier["id"] is not null)
-            .ToDictionary(
-                modifier => modifier[SourceFlagProperty]!.GetValue<string>(),
-                modifier => modifier["id"]!.GetValue<string>(),
-                StringComparer.Ordinal);
-
         foreach (var egoItem in egoDocument[EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
             var references = egoItem[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
             ValidateReferences(EgoItemsDocument, egoId, references, modifierIds, report);
-            ValidateCombatFlagCoverage(EgoItemsDocument, egoItem, egoId, references, flagToModifier, report);
         }
     }
 
@@ -131,19 +93,11 @@ internal static class ItemValidator
             .Where(modifier => modifier["id"] is not null)
             .Select(modifier => modifier["id"]!.GetValue<string>())
             .ToHashSet(StringComparer.Ordinal);
-        var flagToModifier = modifiers
-            .Where(modifier => modifier[SourceFlagProperty] is not null && modifier["id"] is not null)
-            .ToDictionary(
-                modifier => modifier[SourceFlagProperty]!.GetValue<string>(),
-                modifier => modifier["id"]!.GetValue<string>(),
-                StringComparer.Ordinal);
-
         foreach (var artifact in artifactDocument[ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var artifactId = artifact["id"]?.GetValue<string>() ?? artifact["name"]?.GetValue<string>() ?? string.Empty;
             var references = artifact[EffectsProperty]?[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
             ValidateReferences(ArtifactsDocument, artifactId, references, modifierIds, report);
-            ValidateCombatFlagCoverage(ArtifactsDocument, artifact, artifactId, references, flagToModifier, report);
         }
     }
 
@@ -190,7 +144,7 @@ internal static class ItemValidator
             ValidateEffectReferences(effects?[ResistancesProperty]?.AsArray(), resistanceIds, artifactId, ResistancesProperty, "unknown_resistance", report);
             ValidateEffectReferences(effects?[ActivationsProperty]?.AsArray(), activationIds, artifactId, ActivationsProperty, "unknown_activation", report);
             ValidateEffectReferences(effects?[CursesProperty]?.AsArray(), CurseIds, artifactId, CursesProperty, "unknown_curse", report);
-            ValidateArtifactEffectCoverage(artifact, artifactId, effects, report);
+            ValidateArtifactActivationReference(artifact, artifactId, effects, report);
         }
     }
 
@@ -233,38 +187,11 @@ internal static class ItemValidator
         }
     }
 
-    private static void ValidateArtifactEffectCoverage(JsonObject artifact, string artifactId, JsonObject? effects, DefinitionValidationReport report)
+    private static void ValidateArtifactActivationReference(JsonObject artifact, string artifactId, JsonObject? effects, DefinitionValidationReport report)
     {
-        var flags = artifact["flags"]?.AsArray().Select(value => value?.GetValue<string>()).Where(value => value is not null) ?? [];
-        ValidateFlagCoverage(flags, CapabilityFlagMappings, effects?[CapabilitiesProperty]?.AsArray(), artifactId, CapabilitiesProperty, report);
-        ValidateFlagCoverage(flags, ResistanceFlagMappings, effects?[ResistancesProperty]?.AsArray(), artifactId, ResistancesProperty, report);
-        ValidateFlagCoverage(flags, CurseFlagMappings, effects?[CursesProperty]?.AsArray(), artifactId, CursesProperty, report);
-        ValidateFlagCoverage(flags, DisplayFlagMappings, effects?[DisplayFlagsProperty]?.AsArray(), artifactId, DisplayFlagsProperty, report);
-        if (flags.Contains("INSTA_ART") && artifact[GenerationProperty]?["insta_art"]?.GetValue<bool>() != true)
-        {
-            report.Add(ArtifactsDocument, artifactId, $"{GenerationProperty}.insta_art", "missing_generation_metadata", "Flag 'INSTA_ART' must be represented by generation.insta_art=true.");
-        }
         if (artifact["activation"]?["id"]?.GetValue<string>() is { } activationId && effects?[ActivationsProperty]?.AsArray().Any(value => value?.GetValue<string>() == activationId) != true)
         {
             report.Add(ArtifactsDocument, artifactId, $"{EffectsProperty}.activations", "missing_activation_reference", $"Activation '{activationId}' must be referenced by canonical effects.");
-        }
-    }
-
-    private static void ValidateFlagCoverage(
-        IEnumerable<string?> flags,
-        IReadOnlyDictionary<string, string> mappings,
-        JsonArray? references,
-        string artifactId,
-        string effectProperty,
-        DefinitionValidationReport report)
-    {
-        foreach (var flag in flags.Where(flag => flag is not null && mappings.ContainsKey(flag)))
-        {
-            var id = mappings[flag!];
-            if (references?.Any(reference => reference?.GetValue<string>() == id) != true)
-            {
-                report.Add(ArtifactsDocument, artifactId, $"{EffectsProperty}.{effectProperty}", "missing_canonical_effect", $"Flag '{flag}' must be represented by '{id}'.");
-            }
         }
     }
 
@@ -340,21 +267,4 @@ internal static class ItemValidator
         }
     }
 
-    private static void ValidateCombatFlagCoverage(
-        string document,
-        JsonObject egoItem,
-        string egoId,
-        string?[] references,
-        IReadOnlyDictionary<string, string> flagToModifier,
-        DefinitionValidationReport report)
-    {
-        var flags = egoItem["flags"]?.AsArray().Select(flag => flag?.GetValue<string>()).Where(flag => flag is not null) ?? [];
-        foreach (var flag in flags.Where(flag => CombatModifierFlags.Contains(flag!)))
-        {
-            if (!flagToModifier.TryGetValue(flag!, out var modifierId) || !references.Contains(modifierId, StringComparer.Ordinal))
-            {
-                report.Add(document, egoId, "flags", "missing_combat_modifier_reference", $"Combat flag '{flag}' does not have its canonical combat modifier reference.");
-            }
-        }
-    }
 }

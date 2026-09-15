@@ -1,9 +1,103 @@
 namespace IronHell.Core.Definitions;
 
 public sealed record ActionDefinition(
-	string Id,
+	string ActionId,
 	IReadOnlySet<ActionSourceType>? AllowedSourceTypes = null,
-	IReadOnlySet<ActionTargetMode>? AllowedTargetModes = null) : IIdentifiedDefinition;
+	IReadOnlySet<ActionTargetMode>? AllowedTargetModes = null,
+	string Name = "",
+	string Description = "",
+	ActionCategory Category = ActionCategory.Utility,
+	ActionConfidence Confidence = ActionConfidence.Medium,
+	IReadOnlySet<ActionSourceFamily>? AllowedSourceFamilies = null,
+	ActionParameterContract? ParameterContract = null,
+	ActionValidationRules? ValidationRules = null,
+	string? ProvenanceStatus = null,
+	ActionProvenance? Provenance = null) : IIdentifiedDefinition
+{
+	public string Id => ActionId;
+}
+
+public enum ActionCategory
+{
+	Damage,
+	Healing,
+	Status,
+	Movement,
+	Information,
+	Item,
+	Terrain,
+	Control,
+	Summoning,
+	Utility,
+	Attribute,
+	Progression,
+}
+
+public enum ActionConfidence
+{
+	High,
+	Medium,
+}
+
+public enum ActionSourceFamily
+{
+	Spell,
+	Prayer,
+	MonsterAttack,
+	MonsterAbility,
+	Rod,
+	Wand,
+	Staff,
+	Potion,
+	Scroll,
+	Consumable,
+	Activation,
+	Trap,
+	Chest,
+	Treasure,
+	DeathDrop,
+	Environmental,
+	ItemProperty,
+	MonsterBlow,
+	MonsterSpell,
+}
+
+public enum ActionParameterValueType
+{
+	Integer,
+	Boolean,
+	Id,
+	IdList,
+	Enum,
+	EnumList,
+	Token,
+	StructuredAmount,
+	Duration,
+}
+
+public sealed record ActionParameterDefinition(
+	string Id,
+	string Description,
+	ActionParameterValueType ValueType,
+	bool Required,
+	string? ReferenceDomain = null,
+	IReadOnlySet<string>? AllowedValues = null,
+	int? Minimum = null,
+	int? Maximum = null,
+	int? MinItems = null,
+	int? MaxItems = null,
+	string? Notes = null);
+
+public sealed record ActionParameterContract(
+	bool Closed,
+	IReadOnlyList<ActionParameterDefinition> Parameters);
+
+public sealed record ActionValidationRules(
+	bool RejectUnknownParameters,
+	bool RequireDeclaredRequiredParameters,
+	bool EnforceDeclaredValueTypes);
+
+public sealed record ActionProvenance(string Summary);
 
 public enum ActionSourceType
 {

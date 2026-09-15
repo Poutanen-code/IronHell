@@ -27,7 +27,6 @@
             "required": [
                 "id",
                 "modifier_kind",
-                "source_flag",
                 "name",
                 "description",
                 "category",
@@ -49,10 +48,6 @@
                         "kill",
                         "brand"
                     ]
-                },
-                "source_flag": {
-                    "type": "string",
-                    "minLength": 1
                 },
                 "name": {
                     "type": "string",

@@ -8,12 +8,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 
 function loadJSON(relPath) {
-  return JSON.parse(readFileSync(resolve(root, relPath), "utf8"));
+  let content = readFileSync(resolve(root, relPath), "utf8");
+  if (content.charCodeAt(0) === 0xfeff) content = content.slice(1);
+  return JSON.parse(content);
 }
 
 const egoData = loadJSON("data/definitions/items/ego_items.json");
 const combatData = loadJSON("data/definitions/combat_modifiers.json");
-const combatByFlag = new Map(combatData.combat_modifiers.map((modifier) => [modifier.source_flag, modifier.id]));
 const combatIds = new Set(combatData.combat_modifiers.map((modifier) => modifier.id));
 
 describe("ego item combat modifier references", () => {
@@ -27,19 +28,13 @@ describe("ego item combat modifier references", () => {
     }
   });
 
-  it("maps every combat legacy flag to its canonical reference", () => {
+  it("does not retain legacy flags", () => {
     for (const ego of egoData.ego_items) {
-      for (const flag of ego.flags) {
-        const modifierId = combatByFlag.get(flag);
-        if (modifierId) {
-          assert.ok(ego.combat_modifiers.includes(modifierId), `${ego.id} is missing ${modifierId} for ${flag}`);
-        }
-      }
+      assert.equal(Object.hasOwn(ego, "flags"), false, `${ego.id} retains legacy flags`);
     }
   });
 
-  it("preserves legacy flags as the source compatibility representation", () => {
-    assert.ok(egoData.ego_items.every((ego) => Array.isArray(ego.flags)));
+  it("preserves ego item count", () => {
     assert.equal(egoData.ego_items.length, 116);
   });
 });

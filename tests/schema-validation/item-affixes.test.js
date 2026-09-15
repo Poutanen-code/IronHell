@@ -36,7 +36,7 @@ describe("item affix catalog", () => {
     for (const artifact of artifacts.artifacts) {
       assert.equal(Object.hasOwn(artifact, "affixes"), false, `${artifact.id} has deprecated top-level affixes`);
       assertAffixesResolve(artifact, artifact.effects.affixes, artifact.id);
-      assert.ok(Array.isArray(artifact.flags));
+      assert.equal(Object.hasOwn(artifact, "flags"), false, `${artifact.id} retains legacy flags`);
       assert.equal(typeof artifact.pval, "number");
       assert.equal(typeof artifact.plus_to_hit, "number");
       assert.equal(typeof artifact.plus_to_dam, "number");
@@ -48,6 +48,7 @@ describe("item affix catalog", () => {
     for (const ego of egoItems.ego_items) {
       const affixes = ego.effects?.affixes ?? [];
       assertAffixesResolve(ego, affixes, ego.id);
+      assert.equal(Object.hasOwn(ego, "flags"), false, `${ego.id} retains legacy flags`);
     }
   });
 });

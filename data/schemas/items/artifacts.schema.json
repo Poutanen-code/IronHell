@@ -38,7 +38,6 @@
           "plus_to_hit": { "type": "integer" },
           "plus_to_dam": { "type": "integer" },
           "plus_to_ac": { "type": "integer" },
-          "flags": { "type": "array", "items": { "type": "string" } },
           "effects": {
             "type": "object",
             "additionalProperties": false,
@@ -87,14 +86,6 @@
           "recharge_base": { "type": "integer", "minimum": 0 },
           "recharge_dice": { "type": "integer", "minimum": 0 },
           "description": { "type": "string" }
-        },
-        "if": {
-          "properties": {
-            "flags": { "contains": { "const": "ACTIVATE" } }
-          }
-        },
-        "then": {
-          "required": ["activation"]
         }
       }
     }

@@ -979,14 +979,14 @@ describe("artifacts.json activation references", () => {
     }
   });
 
-  it("all artifact activation IDs exist in activations.json", () => {
+  it("all artifact activation references exist in activations.json", () => {
     const knownActivations = new Set(
       activationsData.activations.map((a) => a.activation_id)
     );
     const missing = [];
     for (const artifact of artifactsData.artifacts) {
-      if (artifact.activation && !knownActivations.has(artifact.activation)) {
-        missing.push(`'${artifact.name}' uses '${artifact.activation}'`);
+      if (artifact.activation && !knownActivations.has(artifact.activation.id)) {
+        missing.push(`'${artifact.name}' uses '${artifact.activation.id}'`);
       }
     }
     assert.equal(
@@ -996,17 +996,17 @@ describe("artifacts.json activation references", () => {
     );
   });
 
-  it("artifacts with ACTIVATE flag have an activation field", () => {
+  it("artifact activation metadata is referenced by canonical effects", () => {
     const missing = [];
     for (const artifact of artifactsData.artifacts) {
-      if (artifact.flags.includes("ACTIVATE") && !artifact.activation) {
+      if (artifact.activation && !artifact.effects.activations.includes(artifact.activation.id)) {
         missing.push(artifact.name);
       }
     }
     assert.equal(
       missing.length,
       0,
-      `Artifacts with ACTIVATE flag are missing 'activation' field:\n  ${missing.join("\n  ")}`
+      `Artifact activation metadata is missing from effects.activations:\n  ${missing.join("\n  ")}`
     );
   });
 });
