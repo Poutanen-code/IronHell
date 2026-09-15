@@ -23,9 +23,13 @@ public static class CharacterFactory
             throw new InvalidOperationException(
                 $"Race '{race.Id}' cannot be class '{@class.Id}'.");
 
-        // Race capabilities come first; class capabilities follow. Duplicates removed, order preserved.
+        // Capabilities and resistances are separate ownership collections.
         var capabilities = race.CapabilityIds
             .Concat(@class.CapabilityIds)
+            .Distinct()
+            .ToList()
+            .AsReadOnly();
+        var resistances = race.ResistanceIds
             .Distinct()
             .ToList()
             .AsReadOnly();
@@ -36,6 +40,7 @@ public static class CharacterFactory
             CombinedStatModifiers: race.StatModifiers + @class.StatModifiers,
             BaseSkills:            race.SkillModifiers + @class.BaseSkills,
             CapabilityIds:         capabilities,
+            ResistanceIds:         resistances,
             StartingEquipment:     @class.StartingEquipment,
             HitDie:                race.HitDie  + @class.HitDie,
             ExpFact:               race.ExpFactor + @class.ExpFactor);

@@ -48,7 +48,7 @@ internal static class DefinitionCatalogBuilder
         var trapRegistry = new DefinitionRegistry<TrapDefinition>(traps);
 
         var characterDefinitions = new CharacterDefinitionSet(rules, races, classes);
-        CharacterValidator.Validate(raceRegistry, classRegistry, capabilityRegistry, itemRegistry, characterDefinitions, report);
+        CharacterValidator.Validate(raceRegistry, classRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, characterDefinitions, report);
 
         var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterRegistry, terrainRegistry, trapRegistry);
         CoreCatalogValidator.ValidateCapabilities(documents["capabilities"], resistanceRegistry, report);
@@ -59,6 +59,7 @@ internal static class DefinitionCatalogBuilder
         ItemValidator.ValidateArtifactCombatModifiers(documents["artifacts"], documents["combat_modifiers"], report);
         ItemValidator.ValidateItemAffixes(documents, report);
         ItemValidator.ValidateArtifactEffects(documents, report);
+        ItemValidator.ValidateEgoEffects(documents, report);
         SpellValidator.Validate(documents, validationRegistries, report);
         ActivationValidator.Validate(documents["activations"], validationRegistries, report);
         MonsterValidator.ValidateAbilities(documents["monster_abilities"], validationRegistries, report);

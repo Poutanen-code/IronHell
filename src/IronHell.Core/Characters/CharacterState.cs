@@ -15,6 +15,8 @@ public sealed record CharacterDefinitionState(
     SkillSet BaseSkills,
     /// <summary>Race capability IDs followed by class capability IDs, deduplicated, order preserved.</summary>
     IReadOnlyList<string> CapabilityIds,
+    /// <summary>Race resistance IDs, deduplicated, order preserved.</summary>
+    IReadOnlyList<string> ResistanceIds,
     /// <summary>Class starting equipment with verified min/max counts. Copied verbatim from class definition.</summary>
     IReadOnlyList<StartingEquipmentEntry> StartingEquipment,
     /// <summary>race.hit_die + class.hit_die. Die size used in HP pre-roll array.</summary>

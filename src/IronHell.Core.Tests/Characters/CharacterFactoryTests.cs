@@ -45,7 +45,7 @@ public sealed class CharacterFactoryTests
         SkillModifiers: new(0,  0,  0,  0,  0, 10,  0,  0),
         HitDie: 10, ExpFactor: 100,
         Infravision: 0, HistoryChart: 1,
-        CapabilityIds: []);
+        CapabilityIds: [], ResistanceIds: []);
 
     private static RaceDefinition HighElf() => new(
         Id: "high_elf", Name: "High-Elf",
@@ -53,7 +53,7 @@ public sealed class CharacterFactoryTests
         SkillModifiers: new( 4, 20, 20,  3,  3, 14, 10, 25),
         HitDie: 10, ExpFactor: 200,
         Infravision: 4, HistoryChart: 7,
-        CapabilityIds: ["res_lite", "see_invis"]);
+        CapabilityIds: ["see_invis"], ResistanceIds: ["res_lite"]);
 
     private static RaceDefinition Dwarf() => new(
         Id: "dwarf", Name: "Dwarf",
@@ -61,7 +61,7 @@ public sealed class CharacterFactoryTests
         SkillModifiers: new( 2,  9,  9, -1,  7, 10, 15,  0),
         HitDie: 11, ExpFactor: 120,
         Infravision: 5, HistoryChart: 16,
-        CapabilityIds: ["res_blind"]);
+        CapabilityIds: [], ResistanceIds: ["res_blind"]);
 
     // -- Classes --
 
@@ -233,8 +233,18 @@ public sealed class CharacterFactoryTests
 
         // Race capabilities first, then class; no duplicates
         Assert.Equal(
-            ["res_lite", "see_invis", "cumber_glove", "zero_fail", "beam", "choose_spells", "hp_bonus"],
+            ["see_invis", "cumber_glove", "zero_fail", "beam", "choose_spells", "hp_bonus"],
             state.CapabilityIds);
+        Assert.Equal(["res_lite"], state.ResistanceIds);
+    }
+
+    [Fact]
+    public void CharacterFactory_PreservesSeparateResistanceCollections()
+    {
+        var state = CharacterFactory.Create(HighElf(), Mage(), AllowedCombinations);
+
+        Assert.DoesNotContain("res_lite", state.CapabilityIds);
+        Assert.Equal(["res_lite"], state.ResistanceIds);
     }
 
     [Fact]
@@ -300,7 +310,8 @@ public sealed class CharacterFactoryTests
     {
         var state = CharacterFactory.Create(Dwarf(), Paladin(), AllowedCombinations);
 
-        Assert.Equal(["res_blind", "pseudo_id_heavy", "pseudo_id_improv"], state.CapabilityIds);
+        Assert.Equal(["pseudo_id_heavy", "pseudo_id_improv"], state.CapabilityIds);
+        Assert.Equal(["res_blind"], state.ResistanceIds);
     }
 
     [Fact]
@@ -356,7 +367,7 @@ public sealed class CharacterFactoryTests
             new(10, 12, 12, 3, 6, 13, -8, 12),
             HitDie: 8, ExpFactor: 125,
             Infravision: 4, HistoryChart: 13,
-            CapabilityIds: ["free_act", "res_fire"]);  // res_fire appears in class too
+            CapabilityIds: ["free_act"], ResistanceIds: ["res_fire"]);
 
         var @class = new ClassDefinition(
             "warrior", "Warrior",
@@ -367,13 +378,13 @@ public sealed class CharacterFactoryTests
             SpellStat: null, FirstSpellLevel: 0, SpellWeight: 0,
             MaxAttacks: 6, MinWeight: 30, AttackMultiplier: 5,
             SenseBase: 9000, SenseDiv: 40,
-            CapabilityIds: ["res_fire", "bravery_30"],  // res_fire is duplicate
+            CapabilityIds: ["bravery_30"],
             StartingEquipment: []);
 
         var rules = new[] { new RaceClassRule("gnome", "warrior") };
         var state = CharacterFactory.Create(race, @class, rules);
 
-        // res_fire appears once (from race position), free_act from race, bravery_30 from class
-        Assert.Equal(["free_act", "res_fire", "bravery_30"], state.CapabilityIds);
+        Assert.Equal(["free_act", "bravery_30"], state.CapabilityIds);
+        Assert.Equal(["res_fire"], state.ResistanceIds);
     }
 }
