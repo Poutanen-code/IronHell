@@ -19,7 +19,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "type", "tval", "sval",
+        "id", "name", "type",
         "fuel_pval", "light_radius", "stack_size",
         "weight", "sell_value",
         "capability_ids", "allocation_table",
@@ -32,8 +32,6 @@
           "type": "string",
           "enum": ["torch", "lantern"]
         },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "fuel_pval": { "type": "integer", "minimum": 0, "description": "Default fuel level when found. Max torch fuel is 5000; max lantern fuel is 7500." },
         "light_radius": { "type": "integer", "minimum": 1, "maximum": 5 },
         "stack_size": { "type": "integer", "minimum": 1 },
