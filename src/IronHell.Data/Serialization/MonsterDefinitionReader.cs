@@ -9,6 +9,28 @@ internal static class MonsterDefinitionReader
     public static List<MonsterAbilityDefinition> ReadAbilities(JsonObject document, DefinitionValidationReport report) =>
         SimpleDefinitionReader.Read<MonsterAbilityDefinition>(document, "abilities", "id", id => new MonsterAbilityDefinition(id), report);
 
+    public static List<MonsterCapabilityDefinition> ReadCapabilities(JsonObject document, DefinitionValidationReport report)
+    {
+        var definitions = new List<MonsterCapabilityDefinition>();
+        foreach (var capability in document["capabilities"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var id = capability["id"]?.GetValue<string>();
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                report.Add("monster_capabilities.json", null, "$.capabilities", "missing_id", "Definition identifier is required.");
+                continue;
+            }
+
+            definitions.Add(new MonsterCapabilityDefinition(
+                id,
+                capability["name"]?.GetValue<string>() ?? string.Empty,
+                capability["description"]?.GetValue<string>() ?? string.Empty));
+        }
+
+        ValidationHelpers.ValidateDuplicates("monster_capabilities", definitions, report);
+        return definitions;
+    }
+
     public static List<MonsterDefinition> ReadMonsters(JsonObject document, DefinitionValidationReport report)
     {
         var definitions = new List<MonsterDefinition>();
@@ -22,10 +44,19 @@ internal static class MonsterDefinitionReader
             }
 
             var hpRoll = monster["hp_roll"]?.AsObject();
+            var ai = monster["ai"]?.AsObject();
+            var capabilities = monster["capabilities"]?.AsArray()
+                .Select(capability => capability?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
             definitions.Add(new MonsterDefinition(id, new DiceRollDefinition(
                 hpRoll?["kind"]?.GetValue<string>() ?? string.Empty,
                 hpRoll?["count"]?.GetValue<int>() ?? 0,
-                hpRoll?["sides"]?.GetValue<int>() ?? 0)));
+                hpRoll?["sides"]?.GetValue<int>() ?? 0),
+                new MonsterAiDefinition(
+                    ai?["behavior"]?.GetValue<string>() ?? string.Empty,
+                    ai?["random_move_chance"]?.GetValue<int>() ?? 0,
+                    ai?["stupid"]?.GetValue<bool>() ?? false),
+                Array.AsReadOnly(capabilities)));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);

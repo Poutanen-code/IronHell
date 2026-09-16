@@ -154,9 +154,23 @@ public sealed record ActivationDefinition(string Id) : IIdentifiedDefinition;
 
 public sealed record MonsterAbilityDefinition(string Id) : IIdentifiedDefinition;
 
+public sealed record MonsterCapabilityDefinition(
+	string Id,
+	string Name,
+	string Description) : IIdentifiedDefinition;
+
 public sealed record DiceRollDefinition(string Kind, int Count, int Sides);
 
-public sealed record MonsterDefinition(string Id, DiceRollDefinition HpRoll) : IIdentifiedDefinition;
+public sealed record MonsterAiDefinition(
+	string Behavior,
+	int RandomMoveChance,
+	bool Stupid);
+
+public sealed record MonsterDefinition(
+	string Id,
+	DiceRollDefinition HpRoll,
+	MonsterAiDefinition Ai,
+	IReadOnlyList<string> Capabilities) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 

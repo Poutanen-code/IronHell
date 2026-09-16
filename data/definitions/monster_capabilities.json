@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "capabilities": [
+    {
+      "id": "open_doors",
+      "name": "Open Doors",
+      "description": "Monster can open closed doors."
+    },
+    {
+      "id": "bash_doors",
+      "name": "Bash Doors",
+      "description": "Monster can bash through closed doors."
+    },
+    {
+      "id": "take_items",
+      "name": "Take Items",
+      "description": "Monster can pick up items."
+    },
+    {
+      "id": "take_gold",
+      "name": "Take Gold",
+      "description": "Monster can pick up gold."
+    },
+    {
+      "id": "pass_walls",
+      "name": "Pass Walls",
+      "description": "Monster can move through walls."
+    },
+    {
+      "id": "kill_walls",
+      "name": "Kill Walls",
+      "description": "Monster can destroy walls while moving."
+    },
+    {
+      "id": "move_body",
+      "name": "Move Body",
+      "description": "Monster can push weaker monsters aside."
+    },
+    {
+      "id": "kill_body",
+      "name": "Kill Body",
+      "description": "Monster can destroy weaker monsters blocking its path."
+    },
+    {
+      "id": "multiply",
+      "name": "Multiply",
+      "description": "Monster can reproduce."
+    },
+    {
+      "id": "regenerate",
+      "name": "Regenerate",
+      "description": "Monster regenerates hit points."
+    },
+    {
+      "id": "invisible",
+      "name": "Invisible",
+      "description": "Monster is invisible to normal sight."
+    }
+  ]
+}

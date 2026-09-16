@@ -15,11 +15,15 @@ public sealed class MonsterFactoryTests
 
         var monster = factory.Create("monster-1", new MonsterDefinition(
             "test_monster",
-            new DiceRollDefinition("dice", 4, 5)));
+            new DiceRollDefinition("dice", 4, 5),
+            new MonsterAiDefinition("coward", 75, true),
+            ["open_doors", "take_items"]));
 
         Assert.Equal((4, 5), randomSource.LastRoll);
         Assert.Equal(13, monster.MaxHp);
         Assert.Equal(monster.MaxHp, monster.CurrentHp);
+        Assert.Equal(new MonsterAiDefinition("coward", 75, true), monster.Ai);
+        Assert.Equal(["open_doors", "take_items"], monster.Capabilities);
     }
 
     private sealed class RecordingRandomSource(int rolledValue) : IRandomSource

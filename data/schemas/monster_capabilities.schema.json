@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/monster_capabilities.schema.json",
+  "title": "Gameplay Architecture V2 Monster Capabilities",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "capabilities"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/MonsterCapability" }
+    }
+  },
+  "$defs": {
+    "MonsterCapability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

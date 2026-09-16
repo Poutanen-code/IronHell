@@ -9,6 +9,7 @@ internal static class MonsterValidator
     private const string MonsterAbilitiesDocument = "monsters/monster_abilities.json";
     private const string MonstersDocument = "monsters/monsters.json";
     private const string AbilitiesProperty = "abilities";
+    private const string CapabilitiesProperty = "capabilities";
     private const string ActionIdProperty = "action_id";
     private const string CapabilityIdProperty = "capability_id";
     private const string ResistanceIdProperty = "resistance_id";
@@ -46,12 +47,38 @@ internal static class MonsterValidator
         {
             var monsterId = monster["id"]?.GetValue<string>() ?? string.Empty;
             ValidateHpRoll(monster, monsterId, report);
+            ValidateAi(monster, monsterId, report);
             foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
             {
                 ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
             }
 
+            var seenCapabilities = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var capabilityIdNode in monster[CapabilitiesProperty]?.AsArray() ?? [])
+            {
+                var capabilityId = capabilityIdNode?.GetValue<string>();
+                ValidationHelpers.ValidateReference(capabilityId, registries.MonsterCapabilities, MonstersDocument, monsterId, CapabilitiesProperty, "unknown_monster_capability", report);
+                if (capabilityId is not null && !seenCapabilities.Add(capabilityId))
+                {
+                    report.Add(MonstersDocument, monsterId, CapabilitiesProperty, "duplicate_monster_capability", $"Monster capability '{capabilityId}' is duplicated.");
+                }
+            }
+
             ValidateMonsterNode(monster, monsterId, registries, report);
+        }
+    }
+
+    private static void ValidateAi(JsonObject monster, string monsterId, DefinitionValidationReport report)
+    {
+        if (monster["ai"] is not JsonObject ai || string.IsNullOrWhiteSpace(ai["behavior"]?.GetValue<string>()))
+        {
+            report.Add(MonstersDocument, monsterId, "ai.behavior", "missing_monster_ai", "Monster AI behavior is required.");
+            return;
+        }
+
+        if (ai["random_move_chance"]?.GetValue<int>() is not >= 0 or > 100)
+        {
+            report.Add(MonstersDocument, monsterId, "ai.random_move_chance", "invalid_random_move_chance", "Monster random movement chance must be between 0 and 100.");
         }
     }
 

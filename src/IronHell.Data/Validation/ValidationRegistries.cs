@@ -13,6 +13,7 @@ internal sealed record ValidationRegistries(
     IDefinitionRegistry<SpellDefinition> PriestPrayers,
     IDefinitionRegistry<ActivationDefinition> Activations,
     IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities,
+    IDefinitionRegistry<MonsterCapabilityDefinition> MonsterCapabilities,
     IDefinitionRegistry<MonsterDefinition> Monsters,
     IDefinitionRegistry<TerrainDefinition> Terrain,
     IDefinitionRegistry<TrapDefinition> Traps);

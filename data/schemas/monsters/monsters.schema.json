@@ -102,7 +102,8 @@
                 "id",
                 "species",
                 "dungeon_levels",
-                "ai_behavior",
+                "ai",
+                "capabilities",
                 "sprite",
                 "can_dig"
               ],
@@ -110,7 +111,8 @@
                 "id": { "type": "string", "minLength": 1 },
                 "species": { "type": "string", "minLength": 1 },
                 "dungeon_levels": { "type": "string", "minLength": 1 },
-                "ai_behavior": { "type": "string", "minLength": 1 },
+                "ai": { "type": "string", "minLength": 1 },
+                "capabilities": { "type": "string", "minLength": 1 },
                 "sprite": { "type": "string", "minLength": 1 },
                 "can_dig": { "type": "string", "minLength": 1 }
               }
@@ -209,7 +211,8 @@
         "dungeon_levels",
         "stats",
         "hp_roll",
-        "ai_behavior",
+        "ai",
+        "capabilities",
         "description",
         "sprite",
         "symbol",
@@ -256,24 +259,14 @@
           "type": "array",
           "items": { "$ref": "#/$defs/ability_type" }
         },
-        "ai_behavior": {
-          "type": "string",
-          "enum": [
-            "aggressive_melee",
-            "aggressive_ranged",
-            "ranged_kiting",
-            "defensive",
-            "territorial",
-            "pack_hunter",
-            "ambusher",
-            "support",
-            "berserker",
-            "coward",
-            "flee_when_hurt",
-            "stalker",
-            "boss_phase",
-            "wanderer"
-          ]
+        "ai": { "$ref": "#/$defs/monster_ai" },
+        "capabilities": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
         },
         "can_dig": { "type": "boolean" },
         "attacks": {
@@ -328,6 +321,34 @@
         "kind": { "const": "dice" },
         "count": { "type": "integer", "minimum": 1 },
         "sides": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "monster_ai": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["behavior", "random_move_chance"],
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "enum": [
+            "aggressive_melee",
+            "aggressive_ranged",
+            "ranged_kiting",
+            "defensive",
+            "territorial",
+            "pack_hunter",
+            "ambusher",
+            "support",
+            "berserker",
+            "coward",
+            "flee_when_hurt",
+            "stalker",
+            "boss_phase",
+            "wanderer"
+          ]
+        },
+        "random_move_chance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "stupid": { "type": "boolean" }
       }
     },
     "ability_type": {
@@ -482,18 +503,8 @@
         "drop_4d2": { "type": "boolean" },
         "drop_good": { "type": "boolean" },
         "drop_great": { "type": "boolean" },
-        "open_door": { "type": "boolean" },
-        "bash_door": { "type": "boolean" },
-        "pass_wall": { "type": "boolean" },
-        "kill_wall": { "type": "boolean" },
-        "move_body": { "type": "boolean" },
-        "kill_body": { "type": "boolean" },
         "kill_item": { "type": "boolean" },
-        "invisible": { "type": "boolean" },
-        "regenerate": { "type": "boolean" },
-        "multiply": { "type": "boolean" },
         "smart": { "type": "boolean" },
-        "stupid": { "type": "boolean" },
         "cold_blood": { "type": "boolean" },
         "empty_mind": { "type": "boolean" },
         "weird_mind": { "type": "boolean" },
@@ -501,9 +512,6 @@
         "never_blow": { "type": "boolean" },
         "never_move": { "type": "boolean" },
         "wanderer": { "type": "boolean" },
-        "rand25": { "type": "boolean" },
-        "rand50": { "type": "boolean" },
-        "take_item": { "type": "boolean" },
         "orc": { "type": "boolean" },
         "troll": { "type": "boolean" },
         "giant": { "type": "boolean" },

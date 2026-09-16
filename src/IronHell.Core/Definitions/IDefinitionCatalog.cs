@@ -26,6 +26,8 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities { get; }
 
+    IDefinitionRegistry<MonsterCapabilityDefinition> MonsterCapabilities { get; }
+
     IDefinitionRegistry<MonsterDefinition> Monsters { get; }
 
     IDefinitionRegistry<TerrainDefinition> Terrain { get; }
