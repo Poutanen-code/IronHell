@@ -14,9 +14,9 @@ function loadJson(relativePath) {
 }
 
 const monsterSchema = loadJson("data/schemas/monsters/monsters.schema.json");
-const capabilitySchema = loadJson("data/schemas/monster_capabilities.schema.json");
+const capabilitySchema = loadJson("data/schemas/monsters/monster_capabilities.schema.json");
 const monsters = loadJson("data/definitions/monsters/monsters.json");
-const capabilityCatalog = loadJson("data/definitions/monster_capabilities.json");
+const capabilityCatalog = loadJson("data/definitions/monsters/monster_capabilities.json");
 const ajv = new Ajv2020({ strict: false, allErrors: true });
 const validateMonsters = ajv.compile(monsterSchema);
 const validateCapabilities = ajv.compile(capabilitySchema);

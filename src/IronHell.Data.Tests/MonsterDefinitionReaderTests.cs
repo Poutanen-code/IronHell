@@ -32,7 +32,7 @@ public sealed class MonsterDefinitionReaderTests
         var report = new DefinitionValidationReport();
 
         var capabilities = MonsterDefinitionReader.ReadCapabilities(
-            LoadJson("data/definitions/monster_capabilities.json"), report);
+            LoadJson("data/definitions/monsters/monster_capabilities.json"), report);
 
         Assert.False(report.HasErrors);
         Assert.Equal(11, capabilities.Count);

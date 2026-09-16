@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ironhell.local/schemas/monster_capabilities.schema.json",
+  "$id": "https://ironhell.local/schemas/monsters/monster_capabilities.schema.json",
   "title": "Gameplay Architecture V2 Monster Capabilities",
   "type": "object",
   "additionalProperties": false,
