@@ -3,7 +3,6 @@
     "capabilities": [
         {
             "id": "back_stab",
-            "source_flag": "BACK_STAB",
             "name": "Back Stab",
             "description": "Deals extra damage to sleeping and fleeing creatures.",
             "category": "class_combat",
@@ -12,7 +11,6 @@
         },
         {
             "id": "beam",
-            "source_flag": "BEAM",
             "name": "Beam",
             "description": "Improves chance of spell bolts becoming beams.",
             "category": "class_magic",
@@ -21,7 +19,6 @@
         },
         {
             "id": "bless_weapon",
-            "source_flag": "BLESS_WEAPON",
             "name": "Bless Weapon",
             "description": "Enables blessed weapon interaction for priestly classes.",
             "category": "class_magic",
@@ -30,7 +27,6 @@
         },
         {
             "id": "bravery_30",
-            "source_flag": "BRAVERY_30",
             "name": "Bravery 30",
             "description": "Provides class-based fear resistance progression.",
             "category": "class_combat",
@@ -39,7 +35,6 @@
         },
         {
             "id": "choose_spells",
-            "source_flag": "CHOOSE_SPELLS",
             "name": "Choose Spells",
             "description": "Allows spells to be selected rather than strictly assigned.",
             "category": "class_magic",
@@ -48,7 +43,6 @@
         },
         {
             "id": "cumber_glove",
-            "source_flag": "CUMBER_GLOVE",
             "name": "Cumber Glove",
             "description": "Gloves can interfere with spellcasting performance.",
             "category": "class_magic",
@@ -57,7 +51,6 @@
         },
         {
             "id": "extra_shot",
-            "source_flag": "EXTRA_SHOT",
             "name": "Extra Shot",
             "description": "Can gain additional ranged shots with matching ammo.",
             "category": "class_combat",
@@ -66,7 +59,6 @@
         },
         {
             "id": "free_act",
-            "source_flag": "FREE_ACT",
             "name": "Free Action",
             "description": "Immune to paralysis.",
             "category": "survival",
@@ -82,7 +74,6 @@
         },
         {
             "id": "hold_life",
-            "source_flag": "HOLD_LIFE",
             "name": "Hold Life",
             "description": "Resistant to experience drain attacks.",
             "category": "survival",
@@ -97,7 +88,6 @@
         },
         {
             "id": "hp_bonus",
-            "source_flag": "HP_BONUS",
             "name": "HP Bonus",
             "description": "Applies class-specific hit point bonus behavior.",
             "category": "class_magic",
@@ -106,7 +96,6 @@
         },
         {
             "id": "pseudo_id_heavy",
-            "source_flag": "PSEUDO_ID_HEAVY",
             "name": "Pseudo ID Heavy",
             "description": "Uses heavy pseudo-identification behavior.",
             "category": "class_misc",
@@ -115,7 +104,6 @@
         },
         {
             "id": "pseudo_id_improv",
-            "source_flag": "PSEUDO_ID_IMPROV",
             "name": "Pseudo ID Improved",
             "description": "Pseudo-identification improves with level.",
             "category": "class_misc",
@@ -124,7 +112,6 @@
         },
         {
             "id": "regen",
-            "source_flag": "REGEN",
             "name": "Regeneration",
             "description": "Regenerates hit points faster than normal.",
             "category": "survival",
@@ -138,7 +125,6 @@
         },
         {
             "id": "see_invis",
-            "source_flag": "SEE_INVIS",
             "name": "See Invisible",
             "description": "Can see invisible creatures.",
             "category": "perception",
@@ -157,7 +143,6 @@
         },
         {
             "id": "speed_bonus",
-            "source_flag": "SPEED_BONUS",
             "name": "Speed Bonus",
             "description": "Gains class speed bonuses at level milestones.",
             "category": "class_combat",
@@ -166,7 +151,6 @@
         },
         {
             "id": "stealing_improv",
-            "source_flag": "STEALING_IMPROV",
             "name": "Stealing Improved",
             "description": "Stealing effectiveness improves with level.",
             "category": "class_misc",
@@ -175,7 +159,6 @@
         },
         {
             "id": "stealth_mode",
-            "source_flag": "STEALTH_MODE",
             "name": "Stealth Mode",
             "description": "Replaces class search mode behavior with stealth mode behavior.",
             "category": "class_misc",
@@ -184,7 +167,6 @@
         },
         {
             "id": "sust_con",
-            "source_flag": "SUST_CON",
             "name": "Sustain Constitution",
             "description": "Constitution cannot be reduced by attacks.",
             "category": "sustain",
@@ -199,7 +181,6 @@
         },
         {
             "id": "sust_dex",
-            "source_flag": "SUST_DEX",
             "name": "Sustain Dexterity",
             "description": "Dexterity cannot be reduced by attacks.",
             "category": "sustain",
@@ -214,7 +195,6 @@
         },
         {
             "id": "sust_str",
-            "source_flag": "SUST_STR",
             "name": "Sustain Strength",
             "description": "Strength cannot be reduced by attacks.",
             "category": "sustain",
@@ -229,7 +209,6 @@
         },
         {
             "id": "zero_fail",
-            "source_flag": "ZERO_FAIL",
             "name": "Zero Fail",
             "description": "Spell failure rate can reach zero percent.",
             "category": "class_magic",
@@ -238,7 +217,6 @@
         },
         {
             "id": "aggravate_monsters",
-            "source_flag": "AGGRAVATE",
             "name": "Aggravate Monsters",
             "description": "Wakes all nearby monsters and makes them hostile.",
             "category": "curse",
@@ -255,7 +233,6 @@
         },
         {
             "id": "feather",
-            "source_flag": "FEATHER",
             "name": "Feather Falling",
             "description": "Eliminates damage from falling into pits.",
             "category": "survival",
@@ -270,7 +247,6 @@
         },
         {
             "id": "infravision",
-            "source_flag": "INFRA",
             "name": "Infravision",
             "description": "Extends the range of infravision by one increment.",
             "category": "perception",
@@ -284,7 +260,6 @@
         },
         {
             "id": "drain_exp",
-            "source_flag": "DRAIN_EXP",
             "name": "Drain Experience",
             "description": "Passively drains experience while equipped.",
             "category": "curse",
@@ -301,7 +276,6 @@
         },
         {
             "id": "slow_digest",
-            "source_flag": "SLOW_DIGEST",
             "name": "Slow Digestion",
             "description": "Reduces the rate at which the character consumes food.",
             "category": "survival",
@@ -316,7 +290,6 @@
         },
         {
             "id": "sust_chr",
-            "source_flag": "SUST_CHR",
             "name": "Sustain Charisma",
             "description": "Charisma cannot be reduced by attacks.",
             "category": "sustain",
@@ -330,7 +303,6 @@
         },
         {
             "id": "sust_int",
-            "source_flag": "SUST_INT",
             "name": "Sustain Intelligence",
             "description": "Intelligence cannot be reduced by attacks.",
             "category": "sustain",
@@ -344,7 +316,6 @@
         },
         {
             "id": "sust_wis",
-            "source_flag": "SUST_WIS",
             "name": "Sustain Wisdom",
             "description": "Wisdom cannot be reduced by attacks.",
             "category": "sustain",
@@ -358,7 +329,6 @@
         },
         {
             "id": "teleportation",
-            "source_flag": "TELEPORT",
             "name": "Teleportation",
             "description": "Randomly teleports the wearer at unpredictable intervals.",
             "category": "curse",
@@ -375,7 +345,6 @@
         },
         {
             "id": "telepathy",
-            "source_flag": "TELEPATHY",
             "name": "Telepathy",
             "description": "Detects the presence of nearby minded creatures (ESP).",
             "category": "perception",
@@ -389,7 +358,6 @@
         },
         {
             "id": "blessed_item",
-            "source_flag": "BLESSED",
             "name": "Blessed Item",
             "description": "Marks an item as blessed for weapon-usage and holy interaction rules.",
             "category": "combat",

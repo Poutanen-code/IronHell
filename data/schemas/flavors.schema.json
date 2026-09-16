@@ -4,21 +4,35 @@
   "title": "Flavors",
   "type": "object",
   "additionalProperties": false,
-  "required": ["flavors"],
+  "required": ["schema_version", "flavors"],
   "properties": {
+    "schema_version": { "type": "integer", "const": 2 },
     "flavors": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "tval", "character", "color", "text"],
+        "required": ["id", "category", "display_name", "glyph", "color", "legacy", "provenance_status"],
         "properties": {
-          "id": { "type": "integer" },
-          "tval": { "type": "integer" },
-          "sval": { "type": "integer" },
-          "character": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "category": {
+            "type": "string",
+            "enum": ["ring", "amulet", "staff", "wand", "rod", "potion", "mushroom", "scroll"]
+          },
+          "display_name": { "type": "string", "minLength": 1 },
+          "glyph": { "type": "string", "minLength": 1, "maxLength": 1 },
           "color": { "type": "string", "minLength": 1, "maxLength": 1 },
-          "text": { "type": "string" }
+          "legacy": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["mangband_index", "tval"],
+            "properties": {
+              "mangband_index": { "type": "integer" },
+              "tval": { "type": "integer" },
+              "sval": { "type": ["integer", "null"] }
+            }
+          },
+          "provenance_status": { "type": "string" }
         }
       }
     }

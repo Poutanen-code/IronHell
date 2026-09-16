@@ -7,6 +7,7 @@
   "scripts": {
     "test": "node --test tests/schema-validation/validate.test.js",
     "test:wands-parity": "node --test tests/schema-validation/wands-parity.test.js",
+    "test:flavors-parity": "node --test tests/schema-validation/flavors-parity.test.js",
     "test:monster-blow-migration": "node --test tests/schema-validation/monster-blow-migration.test.js",
     "test:monster-ability-migration": "node --test tests/schema-validation/monster-ability-migration.test.js",
     "test:watch": "node --test --watch tests/schema-validation/validate.test.js",
