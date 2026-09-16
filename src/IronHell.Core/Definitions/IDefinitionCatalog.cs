@@ -16,6 +16,8 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<ItemDefinition> Items { get; }
 
+    IDefinitionRegistry<FlavorDefinition> Flavors { get; }
+
     IDefinitionRegistry<SpellDefinition> MageSpells { get; }
 
     IDefinitionRegistry<SpellDefinition> PriestPrayers { get; }

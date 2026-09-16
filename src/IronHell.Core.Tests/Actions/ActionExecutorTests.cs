@@ -416,6 +416,7 @@ public sealed class ActionExecutorTests
         public IDefinitionRegistry<RaceDefinition> Races { get; } = TestRegistry<RaceDefinition>.Empty;
         public IDefinitionRegistry<ClassDefinition> Classes { get; } = TestRegistry<ClassDefinition>.Empty;
         public IDefinitionRegistry<ItemDefinition> Items { get; } = TestRegistry<ItemDefinition>.Empty;
+        public IDefinitionRegistry<FlavorDefinition> Flavors { get; } = TestRegistry<FlavorDefinition>.Empty;
         public IDefinitionRegistry<SpellDefinition> MageSpells { get; } = TestRegistry<SpellDefinition>.Empty;
         public IDefinitionRegistry<SpellDefinition> PriestPrayers { get; } = TestRegistry<SpellDefinition>.Empty;
         public IDefinitionRegistry<ActivationDefinition> Activations { get; } = TestRegistry<ActivationDefinition>.Empty;

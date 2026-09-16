@@ -45,12 +45,29 @@ internal static class MonsterValidator
         foreach (var monster in document["monsters"]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var monsterId = monster["id"]?.GetValue<string>() ?? string.Empty;
+            ValidateHpRoll(monster, monsterId, report);
             foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
             {
                 ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
             }
 
             ValidateMonsterNode(monster, monsterId, registries, report);
+        }
+    }
+
+    private static void ValidateHpRoll(JsonObject monster, string monsterId, DefinitionValidationReport report)
+    {
+        if (monster["hp_roll"] is not JsonObject hpRoll)
+        {
+            report.Add(MonstersDocument, monsterId, "hp_roll", "missing_hp_roll", "Monster HP roll is required.");
+            return;
+        }
+
+        if (hpRoll["kind"]?.GetValue<string>() != "dice" ||
+            hpRoll["count"]?.GetValue<int>() is not > 0 ||
+            hpRoll["sides"]?.GetValue<int>() is not > 0)
+        {
+            report.Add(MonstersDocument, monsterId, "hp_roll", "invalid_hp_roll", "Monster HP roll must use positive dice count and sides.");
         }
     }
 

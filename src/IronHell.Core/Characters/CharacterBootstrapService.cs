@@ -1,5 +1,6 @@
 using IronHell.Core.Definitions;
 using IronHell.Core.Items;
+using IronHell.Core.World;
 
 namespace IronHell.Core.Characters;
 
@@ -9,7 +10,8 @@ public static class CharacterBootstrapService
         IDefinitionCatalog catalog,
         string characterId,
         string raceId,
-        string classId)
+        string classId,
+        WorldRuntimeState? world = null)
     {
         ArgumentNullException.ThrowIfNull(catalog);
         ArgumentException.ThrowIfNullOrWhiteSpace(characterId);
@@ -24,11 +26,11 @@ public static class CharacterBootstrapService
         var instanceNumber = 0;
         foreach (var equipment in state.StartingEquipment)
         {
-            catalog.Items.GetRequired(equipment.Id);
+            var definition = catalog.Items.GetRequired(equipment.Id);
             for (var count = 0; count < equipment.Min; count++)
             {
                 instanceNumber++;
-                character.Inventory.Add(new ItemInstance($"{characterId}:item:{instanceNumber}", equipment.Id));
+                character.Inventory.Add(ItemInstanceFactory.Create($"{characterId}:item:{instanceNumber}", definition, world?.FlavorAssignments));
             }
         }
 

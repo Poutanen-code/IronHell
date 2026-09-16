@@ -10,6 +10,7 @@ internal sealed record DefinitionCatalog(
     IDefinitionRegistry<RaceDefinition> Races,
     IDefinitionRegistry<ClassDefinition> Classes,
     IDefinitionRegistry<ItemDefinition> Items,
+    IDefinitionRegistry<FlavorDefinition> Flavors,
     IDefinitionRegistry<SpellDefinition> MageSpells,
     IDefinitionRegistry<SpellDefinition> PriestPrayers,
     IDefinitionRegistry<ActivationDefinition> Activations,

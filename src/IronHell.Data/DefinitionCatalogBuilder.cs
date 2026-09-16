@@ -16,6 +16,7 @@ internal static class DefinitionCatalogBuilder
         var capabilities = SimpleDefinitionReader.Read<CapabilityDefinition>(documents["capabilities"], "capabilities", "id", id => new CapabilityDefinition(id), report);
         var resistances = SimpleDefinitionReader.Read<ResistanceDefinition>(documents["resistances"], "resistances", "id", id => new ResistanceDefinition(id), report);
         var items = ItemDefinitionReader.Read(documents, report);
+        var flavors = FlavorDefinitionReader.Read(documents["flavors"], report);
         var mageSpells = SpellDefinitionReader.Read(documents["mage_spells"], report);
         var priestPrayers = SpellDefinitionReader.Read(documents["priest_prayers"], report);
         var activations = SimpleDefinitionReader.Read<ActivationDefinition>(documents["activations"], "activations", "activation_id", id => new ActivationDefinition(id), report);
@@ -39,6 +40,7 @@ internal static class DefinitionCatalogBuilder
         var raceRegistry = new DefinitionRegistry<RaceDefinition>(races);
         var classRegistry = new DefinitionRegistry<ClassDefinition>(classes);
         var itemRegistry = new DefinitionRegistry<ItemDefinition>(items);
+        var flavorRegistry = new DefinitionRegistry<FlavorDefinition>(flavors);
         var mageSpellRegistry = new DefinitionRegistry<SpellDefinition>(mageSpells);
         var priestPrayerRegistry = new DefinitionRegistry<SpellDefinition>(priestPrayers);
         var activationRegistry = new DefinitionRegistry<ActivationDefinition>(activations);
@@ -55,6 +57,7 @@ internal static class DefinitionCatalogBuilder
         CoreCatalogValidator.ValidateResistances(documents["resistances"], statusRegistry, report);
         CoreCatalogValidator.ValidateStatuses(documents["statuses"], statusRegistry, report);
         ItemValidator.Validate(documents, actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, report);
+        ItemValidator.ValidateFlavorCategoryAlignment(itemRegistry, flavorRegistry, report);
         ItemValidator.ValidateEgoCombatModifiers(documents["ego_items"], documents["combat_modifiers"], report);
         ItemValidator.ValidateArtifactCombatModifiers(documents["artifacts"], documents["combat_modifiers"], report);
         ItemValidator.ValidateItemAffixes(documents, report);
@@ -81,6 +84,7 @@ internal static class DefinitionCatalogBuilder
             raceRegistry,
             classRegistry,
             itemRegistry,
+            flavorRegistry,
             mageSpellRegistry,
             priestPrayerRegistry,
             activationRegistry,

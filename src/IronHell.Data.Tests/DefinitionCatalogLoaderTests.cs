@@ -597,8 +597,66 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
 
         var success = Assert.IsType<DefinitionLoadSuccess>(result);
         var ids = success.Catalog.Monsters.All.Select(monster => monster.Id).ToArray();
-        Assert.True(success.Catalog.Monsters.TryGet("filthy_street_urchin", out _));
+        var monster = success.Catalog.Monsters.GetRequired("filthy_street_urchin");
+        Assert.Equal(new DiceRollDefinition("dice", 1, 4), monster.HpRoll);
         Assert.Equal(ids.OrderBy(id => id, StringComparer.Ordinal), ids);
+    }
+
+    [Fact]
+    public async Task LoadAsync_MissingMonsterHpRoll_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"),
+            "      \"hp_roll\": {\n        \"kind\": \"dice\",\n        \"count\": 1,\n        \"sides\": 4\n      },\n",
+            string.Empty);
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_NonPositiveMonsterHpRollCount_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"), "\"count\": 1", "\"count\": 0");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_NonPositiveMonsterHpRollSides_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"), "\"sides\": 4", "\"sides\": 0");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_LegacyMonsterStatsHp_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"), "\"level\": 0", "\"level\": 0,\n        \"hp\": 2");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_LegacyMonsterHpDice_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "monsters", "monsters.json"), "\"level\": 0", "\"level\": 0,\n        \"hp_dice\": \"1d4\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
     }
 
     [Fact]
@@ -817,7 +875,8 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     {
         var content = File.ReadAllText(path);
         Assert.Contains(oldValue, content, StringComparison.Ordinal);
-        File.WriteAllText(path, content.Replace(oldValue, newValue, StringComparison.Ordinal));
+        var index = content.IndexOf(oldValue, StringComparison.Ordinal);
+        File.WriteAllText(path, string.Concat(content.AsSpan(0, index), newValue, content.AsSpan(index + oldValue.Length)));
     }
 
     private static void AssertError(IDefinitionLoadResult result, string code)

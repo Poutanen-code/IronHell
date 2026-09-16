@@ -65,6 +65,31 @@ internal static class ItemValidator
         }
     }
 
+    private static readonly IReadOnlyDictionary<ItemCategory, FlavorCategory> FlavorAlignedItemCategories = new Dictionary<ItemCategory, FlavorCategory>
+    {
+        [ItemCategory.Ring] = FlavorCategory.Ring,
+        [ItemCategory.Amulet] = FlavorCategory.Amulet,
+        [ItemCategory.Staff] = FlavorCategory.Staff,
+        [ItemCategory.Wand] = FlavorCategory.Wand,
+        [ItemCategory.Rod] = FlavorCategory.Rod,
+    };
+
+    public static void ValidateFlavorCategoryAlignment(
+        IDefinitionRegistry<ItemDefinition> items,
+        IDefinitionRegistry<FlavorDefinition> flavors,
+        DefinitionValidationReport report)
+    {
+        foreach (var (itemCategory, flavorCategory) in FlavorAlignedItemCategories)
+        {
+            var hasItems = items.All.Any(item => item.Category == itemCategory);
+            var hasFlavors = flavors.All.Any(flavor => flavor.Category == flavorCategory);
+            if (hasItems && !hasFlavors)
+            {
+                report.Add("items/flavors.json", null, "category", "missing_flavor_category", $"Item category '{itemCategory}' has definitions but no matching flavor category '{flavorCategory}'.");
+            }
+        }
+    }
+
     public static void ValidateEgoCombatModifiers(
         JsonObject egoDocument,
         JsonObject combatModifierDocument,

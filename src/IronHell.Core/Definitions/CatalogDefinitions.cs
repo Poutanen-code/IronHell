@@ -154,7 +154,9 @@ public sealed record ActivationDefinition(string Id) : IIdentifiedDefinition;
 
 public sealed record MonsterAbilityDefinition(string Id) : IIdentifiedDefinition;
 
-public sealed record MonsterDefinition(string Id) : IIdentifiedDefinition;
+public sealed record DiceRollDefinition(string Kind, int Count, int Sides);
+
+public sealed record MonsterDefinition(string Id, DiceRollDefinition HpRoll) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 
@@ -169,6 +171,34 @@ public enum ItemCategory
 	Potion,
 	Scroll,
 	SpellBook,
+	Ring,
+	Amulet,
+	Staff,
+	Wand,
+	Rod,
 }
 
 public sealed record ItemDefinition(string Id, ItemCategory Category, string? Type) : IIdentifiedDefinition;
+
+public enum FlavorCategory
+{
+	Ring,
+	Amulet,
+	Staff,
+	Wand,
+	Rod,
+	Potion,
+	Mushroom,
+	Scroll,
+}
+
+public sealed record FlavorLegacyMetadata(int MangbandIndex, int Tval, int? Sval);
+
+public sealed record FlavorDefinition(
+	string Id,
+	FlavorCategory Category,
+	string DisplayName,
+	string Glyph,
+	string Color,
+	FlavorLegacyMetadata Legacy,
+	string ProvenanceStatus) : IIdentifiedDefinition;
