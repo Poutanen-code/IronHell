@@ -62,12 +62,12 @@ describe("MAngband 1.5.3 chest parity", () => {
 
   it("uses exact MAngband reward counts and executable loot actions", () => {
     for (const chest of chestsData.chests) {
-      const itemAction = chest.loot_actions.find((action) => action.action_id === "CreateItems");
-      const goldAction = chest.loot_actions.find((action) => action.action_id === "CreateGold");
+      const itemAction = chest.open_actions.find((action) => action.action_id === "CreateItems");
+      const goldAction = chest.open_actions.find((action) => action.action_id === "CreateGold");
       assert.ok(itemAction || expectedRewardCounts.get(chest.id) === 0, `${chest.id} is missing CreateItems`);
       if (itemAction) assert.equal(itemAction.parameters.amount.value, expectedRewardCounts.get(chest.id));
       if (goldAction) assert.equal(goldAction.parameters.amount.kind, "chest_gold");
-      for (const actionRef of chest.loot_actions) assertActionRef(actionRef);
+      for (const actionRef of chest.open_actions) assertActionRef(actionRef);
     }
   });
 
