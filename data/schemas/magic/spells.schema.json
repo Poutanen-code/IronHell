@@ -73,7 +73,7 @@
         "id",
         "name",
         "policy",
-        "action_refs",
+        "actions",
         "provenance_status"
       ],
       "properties": {
@@ -87,7 +87,7 @@
         "policy": {
           "$ref": "#/$defs/SpellPolicy"
         },
-        "action_refs": {
+        "actions": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/ActionReference"

@@ -18,7 +18,7 @@
     "MonsterAbility": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "category", "confidence", "provenance_status", "source_formula", "action_refs"],
+      "required": ["id", "name", "category", "confidence", "provenance_status", "source_formula", "actions"],
       "properties": {
         "id": { "$ref": "../common.schema.json#/$defs/Id" },
         "name": { "type": "string", "minLength": 1 },
@@ -27,7 +27,7 @@
         "provenance_status": { "$ref": "../common.schema.json#/$defs/ProvenanceStatus" },
         "source_formula": { "type": "string", "minLength": 1 },
         "notes": { "type": "string" },
-        "action_refs": {
+        "actions": {
           "type": "array",
           "minItems": 1,
           "items": {

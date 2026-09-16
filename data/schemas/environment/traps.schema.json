@@ -65,7 +65,7 @@
             "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
             "uniqueItems": true
           },
-          "action_refs": {
+          "actions": {
             "type": "array",
             "items": {
               "type": "object",

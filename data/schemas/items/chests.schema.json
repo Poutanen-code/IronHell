@@ -20,7 +20,7 @@
       "required": [
         "id", "name", "weight", "sell_value",
         "trap_chance", "lock_difficulty", "gold_multiplier",
-        "allocation_table", "trap_ids", "loot_actions", "state_policy",
+        "allocation_table", "trap_ids", "open_actions", "state_policy",
         "description", "provenance_status"
       ],
       "properties": {
@@ -37,7 +37,7 @@
           "uniqueItems": true,
           "items": { "$ref": "common_item.schema.json#/$defs/Id" }
         },
-        "loot_actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
+        "open_actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
         "state_policy": {
           "type": "object",
           "additionalProperties": false,

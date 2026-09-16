@@ -1,0 +1,83 @@
+{
+    "schema_version": 1,
+    "sounds": [
+        {
+            "id": "water_drip",
+            "volume": 30,
+            "interval": 20,
+            "soundType": "ambient"
+        },
+        {
+            "id": "fire_crackle",
+            "volume": 40,
+            "interval": 15,
+            "soundType": "ambient"
+        },
+        {
+            "id": "wind_blow",
+            "volume": 50,
+            "interval": 10,
+            "soundType": "ambient"
+        },
+        {
+            "id": "thunder",
+            "volume": 70,
+            "interval": 500,
+            "soundType": "ambient"
+        },
+        {
+            "id": "rain",
+            "volume": 60,
+            "interval": 1,
+            "soundType": "ambient"
+        },
+        {
+            "id": "birds_chirping",
+            "volume": 35,
+            "interval": 12,
+            "soundType": "ambient"
+        },
+        {
+            "id": "crickets",
+            "volume": 25,
+            "interval": 15,
+            "soundType": "ambient"
+        },
+        {
+            "id": "smithy_hammer",
+            "volume": 40,
+            "interval": 15,
+            "soundType": "ambient"
+        },
+        {
+            "id": "temple_ambience",
+            "volume": 30,
+            "interval": 20,
+            "soundType": "ambient"
+        },
+        {
+            "id": "frog_croak",
+            "volume": 30,
+            "interval": 20,
+            "soundType": "ambient"
+        },
+        {
+            "id": "cave_drip",
+            "volume": 30,
+            "interval": 25,
+            "soundType": "ambient"
+        },
+        {
+            "id": "cave_rockfall",
+            "volume": 30,
+            "interval": 300,
+            "soundType": "ambient"
+        },
+        {
+            "id": "forest_ambience",
+            "volume": 40,
+            "interval": 18,
+            "soundType": "ambient"
+        }
+    ]
+}

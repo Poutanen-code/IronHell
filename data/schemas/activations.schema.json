@@ -22,9 +22,9 @@
     "ActivationDefinition": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["activation_id", "name", "actions"],
+      "required": ["id", "name", "actions"],
       "properties": {
-        "activation_id": {
+        "id": {
           "description": "The legacy uppercase activation name used in artifacts.json. Must not be changed.",
           "$ref": "#/$defs/ActivationId"
         },

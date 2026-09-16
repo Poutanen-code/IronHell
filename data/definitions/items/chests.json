@@ -15,7 +15,7 @@
                 }
             ],
             "trap_ids": [],
-            "loot_actions": [],
+            "open_actions": [],
             "state_policy": {
                 "initial_locked": false,
                 "initial_trapped": false,
@@ -43,7 +43,7 @@
                 "dart_constitution",
                 "gas_poison"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
@@ -96,7 +96,7 @@
                 "summon_rune",
                 "explosive_trap"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
@@ -149,7 +149,7 @@
                 "summon_rune",
                 "explosive_trap"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
@@ -200,7 +200,7 @@
                 "gas_poison",
                 "summon_rune"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
@@ -253,7 +253,7 @@
                 "summon_rune",
                 "explosive_trap"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
@@ -306,7 +306,7 @@
                 "summon_rune",
                 "explosive_trap"
             ],
-            "loot_actions": [
+            "open_actions": [
                 {
                     "action_id": "CreateItems",
                     "parameters": {
