@@ -75,6 +75,9 @@
     },
     "CapabilityReference": {
       "$ref": "#/$defs/Id"
+    },
+    "ResistanceReference": {
+      "$ref": "#/$defs/Id"
     }
   }
 }

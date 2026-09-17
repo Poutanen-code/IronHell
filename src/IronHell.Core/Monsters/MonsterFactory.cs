@@ -30,6 +30,8 @@ public sealed class MonsterFactory
             definition.Id,
             maxHp,
             definition.Ai,
-            Array.AsReadOnly(definition.Capabilities.ToArray()));
+            Array.AsReadOnly(definition.Capabilities.ToArray()),
+            Array.AsReadOnly(definition.Resistances.ToArray()),
+            definition.Senses);
     }
 }

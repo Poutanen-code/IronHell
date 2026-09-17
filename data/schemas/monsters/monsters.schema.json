@@ -56,6 +56,8 @@
                 "color",
                 "stats",
                 "hp_roll",
+                "resistances",
+                "senses",
                 "flags",
                 "attacks",
                 "abilities",
@@ -88,6 +90,8 @@
                   }
                 },
                 "hp_roll": { "type": "string", "minLength": 1 },
+                "resistances": { "type": "string", "minLength": 1 },
+                "senses": { "type": "string", "minLength": 1 },
                 "flags": { "type": "string", "minLength": 1 },
                 "attacks": { "type": "string", "minLength": 1 },
                 "abilities": { "type": "string", "minLength": 1 },
@@ -213,6 +217,8 @@
         "hp_roll",
         "ai",
         "capabilities",
+        "resistances",
+        "senses",
         "description",
         "sprite",
         "symbol",
@@ -268,6 +274,15 @@
             "pattern": "^[a-z][a-z0-9_]*$"
           }
         },
+        "resistances": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        },
+        "senses": { "$ref": "#/$defs/monster_senses" },
         "can_dig": { "type": "boolean" },
         "attacks": {
           "type": "array",
@@ -348,7 +363,20 @@
           ]
         },
         "random_move_chance": { "type": "integer", "minimum": 0, "maximum": 100 },
-        "stupid": { "type": "boolean" }
+        "stupid": { "type": "boolean" },
+        "smart": { "type": "boolean" }
+      }
+    },
+    "monster_senses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alertness", "telepathy_profile"],
+      "properties": {
+        "alertness": { "type": "integer", "minimum": 0 },
+        "telepathy_profile": {
+          "type": "string",
+          "enum": ["normal", "weird_mind", "empty_mind"]
+        }
       }
     },
     "ability_type": {
@@ -506,8 +534,6 @@
         "kill_item": { "type": "boolean" },
         "smart": { "type": "boolean" },
         "cold_blood": { "type": "boolean" },
-        "empty_mind": { "type": "boolean" },
-        "weird_mind": { "type": "boolean" },
         "powerful": { "type": "boolean" },
         "never_blow": { "type": "boolean" },
         "never_move": { "type": "boolean" },
@@ -522,16 +548,7 @@
         "animal": { "type": "boolean" },
         "hurt_light": { "type": "boolean" },
         "hurt_rock": { "type": "boolean" },
-        "immune_acid": { "type": "boolean" },
-        "immune_elec": { "type": "boolean" },
-        "immune_fire": { "type": "boolean" },
-        "immune_cold": { "type": "boolean" },
-        "immune_pois": { "type": "boolean" },
-        "no_fear": { "type": "boolean" },
-        "no_stun": { "type": "boolean" },
-        "no_conf": { "type": "boolean" },
-        "no_sleep": { "type": "boolean" },
-        "alertness": { "type": "integer", "minimum": 0 }
+        "no_stun": { "type": "boolean" }
       }
     }
   }

@@ -48,6 +48,10 @@ internal static class MonsterDefinitionReader
             var capabilities = monster["capabilities"]?.AsArray()
                 .Select(capability => capability?.GetValue<string>() ?? string.Empty)
                 .ToArray() ?? [];
+            var resistances = monster["resistances"]?.AsArray()
+                .Select(resistance => resistance?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
+            var senses = monster["senses"]?.AsObject();
             definitions.Add(new MonsterDefinition(id, new DiceRollDefinition(
                 hpRoll?["kind"]?.GetValue<string>() ?? string.Empty,
                 hpRoll?["count"]?.GetValue<int>() ?? 0,
@@ -55,11 +59,23 @@ internal static class MonsterDefinitionReader
                 new MonsterAiDefinition(
                     ai?["behavior"]?.GetValue<string>() ?? string.Empty,
                     ai?["random_move_chance"]?.GetValue<int>() ?? 0,
-                    ai?["stupid"]?.GetValue<bool>() ?? false),
-                Array.AsReadOnly(capabilities)));
+                    ai?["stupid"]?.GetValue<bool>() ?? false,
+                    ai?["smart"]?.GetValue<bool>() ?? false),
+                Array.AsReadOnly(capabilities),
+                Array.AsReadOnly(resistances),
+                new MonsterSensesDefinition(
+                    senses?["alertness"]?.GetValue<int>() ?? 0,
+                    ParseTelepathyProfile(senses?["telepathy_profile"]?.GetValue<string>()))));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);
         return definitions;
     }
+
+    private static MonsterTelepathyProfile ParseTelepathyProfile(string? profile) => profile switch
+    {
+        "weird_mind" => MonsterTelepathyProfile.WeirdMind,
+        "empty_mind" => MonsterTelepathyProfile.EmptyMind,
+        _ => MonsterTelepathyProfile.Normal,
+    };
 }

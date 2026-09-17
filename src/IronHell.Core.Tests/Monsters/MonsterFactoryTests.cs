@@ -16,14 +16,18 @@ public sealed class MonsterFactoryTests
         var monster = factory.Create("monster-1", new MonsterDefinition(
             "test_monster",
             new DiceRollDefinition("dice", 4, 5),
-            new MonsterAiDefinition("coward", 75, true),
-            ["open_doors", "take_items"]));
+            new MonsterAiDefinition("coward", 75, true, false),
+            ["open_doors", "take_items"],
+            ["imm_fire", "imm_sleep"],
+            new MonsterSensesDefinition(20, MonsterTelepathyProfile.WeirdMind)));
 
         Assert.Equal((4, 5), randomSource.LastRoll);
         Assert.Equal(13, monster.MaxHp);
         Assert.Equal(monster.MaxHp, monster.CurrentHp);
-        Assert.Equal(new MonsterAiDefinition("coward", 75, true), monster.Ai);
+        Assert.Equal(new MonsterAiDefinition("coward", 75, true, false), monster.Ai);
         Assert.Equal(["open_doors", "take_items"], monster.Capabilities);
+        Assert.Equal(["imm_fire", "imm_sleep"], monster.Resistances);
+        Assert.Equal(new MonsterSensesDefinition(20, MonsterTelepathyProfile.WeirdMind), monster.Senses);
     }
 
     private sealed class RecordingRandomSource(int rolledValue) : IRandomSource

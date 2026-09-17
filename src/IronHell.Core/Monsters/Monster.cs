@@ -9,7 +9,9 @@ public sealed class Monster
         string definitionId,
         int maxHp,
         MonsterAiDefinition ai,
-        IReadOnlyList<string> capabilities)
+        IReadOnlyList<string> capabilities,
+        IReadOnlyList<string> resistances,
+        MonsterSensesDefinition senses)
     {
         InstanceId = instanceId;
         DefinitionId = definitionId;
@@ -17,6 +19,8 @@ public sealed class Monster
         CurrentHp = maxHp;
         Ai = ai;
         Capabilities = capabilities;
+        Resistances = resistances;
+        Senses = senses;
     }
 
     public string InstanceId { get; }
@@ -30,4 +34,8 @@ public sealed class Monster
     public MonsterAiDefinition Ai { get; }
 
     public IReadOnlyList<string> Capabilities { get; }
+
+    public IReadOnlyList<string> Resistances { get; }
+
+    public MonsterSensesDefinition Senses { get; }
 }

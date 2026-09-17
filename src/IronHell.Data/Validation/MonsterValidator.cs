@@ -10,6 +10,7 @@ internal static class MonsterValidator
     private const string MonstersDocument = "monsters/monsters.json";
     private const string AbilitiesProperty = "abilities";
     private const string CapabilitiesProperty = "capabilities";
+    private const string ResistancesProperty = "resistances";
     private const string ActionIdProperty = "action_id";
     private const string CapabilityIdProperty = "capability_id";
     private const string ResistanceIdProperty = "resistance_id";
@@ -48,6 +49,7 @@ internal static class MonsterValidator
             var monsterId = monster["id"]?.GetValue<string>() ?? string.Empty;
             ValidateHpRoll(monster, monsterId, report);
             ValidateAi(monster, monsterId, report);
+            ValidateSenses(monster, monsterId, report);
             foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
             {
                 ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
@@ -64,7 +66,37 @@ internal static class MonsterValidator
                 }
             }
 
+            var seenResistances = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var resistanceIdNode in monster[ResistancesProperty]?.AsArray() ?? [])
+            {
+                var resistanceId = resistanceIdNode?.GetValue<string>();
+                ValidationHelpers.ValidateReference(resistanceId, registries.Resistances, MonstersDocument, monsterId, ResistancesProperty, "unknown_monster_resistance", report);
+                if (resistanceId is not null && !seenResistances.Add(resistanceId))
+                {
+                    report.Add(MonstersDocument, monsterId, ResistancesProperty, "duplicate_monster_resistance", $"Monster resistance '{resistanceId}' is duplicated.");
+                }
+            }
+
             ValidateMonsterNode(monster, monsterId, registries, report);
+        }
+    }
+
+    private static void ValidateSenses(JsonObject monster, string monsterId, DefinitionValidationReport report)
+    {
+        if (monster["senses"] is not JsonObject senses)
+        {
+            report.Add(MonstersDocument, monsterId, "senses", "missing_monster_senses", "Monster senses are required.");
+            return;
+        }
+
+        if (senses["alertness"]?.GetValue<int>() is not >= 0)
+        {
+            report.Add(MonstersDocument, monsterId, "senses.alertness", "invalid_monster_alertness", "Monster alertness must be non-negative.");
+        }
+
+        if (senses["telepathy_profile"]?.GetValue<string>() is not ("normal" or "weird_mind" or "empty_mind"))
+        {
+            report.Add(MonstersDocument, monsterId, "senses.telepathy_profile", "invalid_telepathy_profile", "Monster telepathy profile is invalid.");
         }
     }
 

@@ -235,6 +235,20 @@
       "provenance_status": "verified"
     },
     {
+      "id": "res_sleep",
+      "name": "Resist Sleep",
+      "description": "Permanent bearer mitigation for sleep effects.",
+      "semantic_kind": "resist",
+      "target_scope": "bearer",
+      "channel": "sleep",
+      "grant_sources": [
+        "amulet",
+        "armor",
+        "artifact"
+      ],
+      "provenance_status": "verified"
+    },
+    {
       "id": "oppose_acid",
       "name": "Oppose Acid",
       "description": "Timed oppose mitigation for acid.",
@@ -329,6 +343,42 @@
       "semantic_kind": "immunity",
       "target_scope": "bearer",
       "channel": "cold",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_pois",
+      "name": "Immunity Poison",
+      "description": "Permanent bearer immunity to poison damage.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "pois",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_sleep",
+      "name": "Immunity Sleep",
+      "description": "Permanent bearer immunity to sleep effects.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "sleep",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_fear",
+      "name": "Immunity Fear",
+      "description": "Permanent bearer immunity to fear effects.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "fear",
+      "provenance_status": "verified"
+    },
+    {
+      "id": "imm_confu",
+      "name": "Immunity Confusion",
+      "description": "Permanent bearer immunity to confusion effects.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "confu",
       "provenance_status": "verified"
     },
     {

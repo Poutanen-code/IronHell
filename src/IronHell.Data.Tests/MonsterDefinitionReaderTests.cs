@@ -19,11 +19,16 @@ public sealed class MonsterDefinitionReaderTests
 
         Assert.False(report.HasErrors);
         Assert.Equal(616, monsters.Count);
-        Assert.Equal(new MonsterAiDefinition("wanderer", 25, false), Get(monsters, "filthy_street_urchin").Ai);
-        Assert.Equal(50, Get(monsters, "singing_happy_drunk").Ai.RandomMoveChance);
+        Assert.Equal(new MonsterAiDefinition("wanderer", 25, false, false), Get(monsters, "filthy_street_urchin").Ai);
+        Assert.Equal(new MonsterAiDefinition("wanderer", 50, false, false), Get(monsters, "singing_happy_drunk").Ai);
         Assert.Equal(75, Get(monsters, "white_icky_thing").Ai.RandomMoveChance);
         Assert.True(Get(monsters, "grey_mold").Ai.Stupid);
         Assert.Equal(["open_doors", "take_items"], Get(monsters, "filthy_street_urchin").Capabilities);
+        Assert.Equal(new MonsterSensesDefinition(40, MonsterTelepathyProfile.Normal), Get(monsters, "filthy_street_urchin").Senses);
+        Assert.Equal(MonsterTelepathyProfile.WeirdMind, Get(monsters, "giant_yellow_centipede").Senses.TelepathyProfile);
+        Assert.Equal(MonsterTelepathyProfile.EmptyMind, Get(monsters, "grey_mold").Senses.TelepathyProfile);
+        Assert.Equal(["imm_sleep", "imm_confu"], Get(monsters, "farmer_maggot").Resistances);
+        Assert.Equal(["imm_pois", "imm_sleep", "imm_fear", "imm_confu"], Get(monsters, "grey_mold").Resistances);
     }
 
     [Fact]
@@ -53,6 +58,45 @@ public sealed class MonsterDefinitionReaderTests
         var report = ValidateMonsterCapabilities(["open_doors", "open_doors"]);
 
         Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_monster_capability");
+    }
+
+    [Fact]
+    public void ValidateMonsters_UnknownResistance_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["resistances"] = new JsonArray("missing_resistance");
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "unknown_monster_resistance");
+    }
+
+    [Fact]
+    public void ValidateMonsters_DuplicateResistance_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["resistances"] = new JsonArray("imm_fire", "imm_fire");
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_monster_resistance");
+    }
+
+    [Theory]
+    [InlineData(-1, "normal", "invalid_monster_alertness")]
+    [InlineData(0, "unknown", "invalid_telepathy_profile")]
+    public void ValidateMonsters_InvalidSenses_ReturnsValidationError(int alertness, string profile, string expectedCode)
+    {
+        var monster = CreateMonsterNode([]);
+        monster["senses"] = new JsonObject
+        {
+            ["alertness"] = alertness,
+            ["telepathy_profile"] = profile,
+        };
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == expectedCode);
     }
 
     [Fact]
@@ -106,6 +150,8 @@ public sealed class MonsterDefinitionReaderTests
         ["hp_roll"] = new JsonObject { ["kind"] = "dice", ["count"] = 1, ["sides"] = 1 },
         ["ai"] = new JsonObject { ["behavior"] = "wanderer", ["random_move_chance"] = 0 },
         ["capabilities"] = new JsonArray(capabilityIds.Select(id => (JsonNode?)JsonValue.Create(id)).ToArray()),
+        ["resistances"] = new JsonArray(),
+        ["senses"] = new JsonObject { ["alertness"] = 0, ["telepathy_profile"] = "normal" },
     };
 
     private static DefinitionValidationReport ValidateMonster(JsonObject monster)
@@ -123,7 +169,7 @@ public sealed class MonsterDefinitionReaderTests
         new DefinitionRegistry<ActionDefinition>([]),
         new DefinitionRegistry<StatusDefinition>([]),
         new DefinitionRegistry<CapabilityDefinition>([]),
-        new DefinitionRegistry<ResistanceDefinition>([]),
+        new DefinitionRegistry<ResistanceDefinition>([new("imm_fire"), new("imm_sleep"), new("imm_fear"), new("imm_confu")]),
         new DefinitionRegistry<ItemDefinition>([]),
         new DefinitionRegistry<SpellDefinition>([]),
         new DefinitionRegistry<SpellDefinition>([]),

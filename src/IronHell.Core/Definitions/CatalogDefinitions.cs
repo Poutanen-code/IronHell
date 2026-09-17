@@ -164,13 +164,27 @@ public sealed record DiceRollDefinition(string Kind, int Count, int Sides);
 public sealed record MonsterAiDefinition(
 	string Behavior,
 	int RandomMoveChance,
-	bool Stupid);
+	bool Stupid,
+	bool Smart);
+
+public enum MonsterTelepathyProfile
+{
+	Normal,
+	WeirdMind,
+	EmptyMind,
+}
+
+public sealed record MonsterSensesDefinition(
+	int Alertness,
+	MonsterTelepathyProfile TelepathyProfile);
 
 public sealed record MonsterDefinition(
 	string Id,
 	DiceRollDefinition HpRoll,
 	MonsterAiDefinition Ai,
-	IReadOnlyList<string> Capabilities) : IIdentifiedDefinition;
+	IReadOnlyList<string> Capabilities,
+	IReadOnlyList<string> Resistances,
+	MonsterSensesDefinition Senses) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 
