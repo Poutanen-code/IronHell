@@ -52,6 +52,7 @@ internal static class MonsterDefinitionReader
                 .Select(resistance => resistance?.GetValue<string>() ?? string.Empty)
                 .ToArray() ?? [];
             var senses = monster["senses"]?.AsObject();
+            var spawnPolicy = monster["spawn_policy"] as JsonObject;
             definitions.Add(new MonsterDefinition(id, new DiceRollDefinition(
                 hpRoll?["kind"]?.GetValue<string>() ?? string.Empty,
                 hpRoll?["count"]?.GetValue<int>() ?? 0,
@@ -65,7 +66,17 @@ internal static class MonsterDefinitionReader
                 Array.AsReadOnly(resistances),
                 new MonsterSensesDefinition(
                     senses?["alertness"]?.GetValue<int>() ?? 0,
-                    ParseTelepathyProfile(senses?["telepathy_profile"]?.GetValue<string>()))));
+                    ParseTelepathyProfile(senses?["telepathy_profile"]?.GetValue<string>())),
+                new SpawnPolicy(
+                    ReadBoolean(spawnPolicy, "unique"),
+                    ReadBoolean(spawnPolicy, "questor"),
+                    ReadBoolean(spawnPolicy, "force_depth"),
+                    ReadBoolean(spawnPolicy, "force_max_hp"),
+                    ReadBoolean(spawnPolicy, "force_sleep"),
+                    ReadBoolean(spawnPolicy, "escort"),
+                    ReadBoolean(spawnPolicy, "escorts"),
+                    ReadBoolean(spawnPolicy, "friends"),
+                    ReadBoolean(spawnPolicy, "wanderer"))));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);
@@ -78,4 +89,7 @@ internal static class MonsterDefinitionReader
         "empty_mind" => MonsterTelepathyProfile.EmptyMind,
         _ => MonsterTelepathyProfile.Normal,
     };
+
+    private static bool ReadBoolean(JsonObject? policy, string property) =>
+        policy?[property] is JsonValue value && value.TryGetValue<bool>(out var result) && result;
 }

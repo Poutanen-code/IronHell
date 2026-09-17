@@ -178,13 +178,25 @@ public sealed record MonsterSensesDefinition(
 	int Alertness,
 	MonsterTelepathyProfile TelepathyProfile);
 
+public sealed record SpawnPolicy(
+	bool Unique,
+	bool Questor,
+	bool ForceDepth,
+	bool ForceMaxHp,
+	bool ForceSleep,
+	bool Escort,
+	bool Escorts,
+	bool Friends,
+	bool Wanderer);
+
 public sealed record MonsterDefinition(
 	string Id,
 	DiceRollDefinition HpRoll,
 	MonsterAiDefinition Ai,
 	IReadOnlyList<string> Capabilities,
 	IReadOnlyList<string> Resistances,
-	MonsterSensesDefinition Senses) : IIdentifiedDefinition;
+	MonsterSensesDefinition Senses,
+	SpawnPolicy SpawnPolicy) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 

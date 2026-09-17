@@ -11,7 +11,8 @@ public sealed class Monster
         MonsterAiDefinition ai,
         IReadOnlyList<string> capabilities,
         IReadOnlyList<string> resistances,
-        MonsterSensesDefinition senses)
+        MonsterSensesDefinition senses,
+        SpawnPolicy spawnPolicy)
     {
         InstanceId = instanceId;
         DefinitionId = definitionId;
@@ -21,6 +22,7 @@ public sealed class Monster
         Capabilities = capabilities;
         Resistances = resistances;
         Senses = senses;
+        SpawnPolicy = spawnPolicy;
     }
 
     public string InstanceId { get; }
@@ -38,4 +40,6 @@ public sealed class Monster
     public IReadOnlyList<string> Resistances { get; }
 
     public MonsterSensesDefinition Senses { get; }
+
+    public SpawnPolicy SpawnPolicy { get; }
 }

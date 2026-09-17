@@ -18,6 +18,11 @@ internal static class MonsterValidator
     private const string ResistanceIdsProperty = "resistance_ids";
     private const string UnknownCapabilityError = "unknown_capability";
     private const string UnknownResistanceError = "unknown_resistance";
+    private static readonly string[] SpawnPolicyProperties =
+    [
+        "unique", "questor", "force_depth", "force_max_hp", "force_sleep",
+        "escort", "escorts", "friends", "wanderer",
+    ];
 
     public static void ValidateAbilities(
         JsonObject document,
@@ -50,6 +55,7 @@ internal static class MonsterValidator
             ValidateHpRoll(monster, monsterId, report);
             ValidateAi(monster, monsterId, report);
             ValidateSenses(monster, monsterId, report);
+            ValidateSpawnPolicy(monster, monsterId, report);
             foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
             {
                 ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
@@ -97,6 +103,33 @@ internal static class MonsterValidator
         if (senses["telepathy_profile"]?.GetValue<string>() is not ("normal" or "weird_mind" or "empty_mind"))
         {
             report.Add(MonstersDocument, monsterId, "senses.telepathy_profile", "invalid_telepathy_profile", "Monster telepathy profile is invalid.");
+        }
+    }
+
+    private static void ValidateSpawnPolicy(JsonObject monster, string monsterId, DefinitionValidationReport report)
+    {
+        if (monster["spawn_policy"] is JsonObject policy)
+        {
+            var knownProperties = SpawnPolicyProperties.ToHashSet(StringComparer.Ordinal);
+            foreach (var property in policy)
+            {
+                if (!knownProperties.Contains(property.Key) || property.Value is not JsonValue value || !value.TryGetValue<bool>(out _))
+                {
+                    report.Add(MonstersDocument, monsterId, $"spawn_policy.{property.Key}", "invalid_spawn_policy", "Spawn policy settings must be unique known boolean properties.");
+                }
+            }
+        }
+        else if (monster["spawn_policy"] is not null)
+        {
+            report.Add(MonstersDocument, monsterId, "spawn_policy", "invalid_spawn_policy", "Spawn policy must be an object.");
+        }
+
+        if (monster["flags"] is JsonObject flags)
+        {
+            foreach (var property in SpawnPolicyProperties.Where(property => flags[property] is not null))
+            {
+                report.Add(MonstersDocument, monsterId, $"flags.{property}", "legacy_spawn_policy_flag", "Spawn policy flags must be moved to spawn_policy.");
+            }
         }
     }
 

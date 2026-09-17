@@ -29,6 +29,7 @@ public sealed class MonsterDefinitionReaderTests
         Assert.Equal(MonsterTelepathyProfile.EmptyMind, Get(monsters, "grey_mold").Senses.TelepathyProfile);
         Assert.Equal(["imm_sleep", "imm_confu"], Get(monsters, "farmer_maggot").Resistances);
         Assert.Equal(["imm_pois", "imm_sleep", "imm_fear", "imm_confu"], Get(monsters, "grey_mold").Resistances);
+        Assert.Equal(new SpawnPolicy(false, false, false, false, false, false, false, false, true), Get(monsters, "mean_mercenary").SpawnPolicy);
     }
 
     [Fact]
@@ -80,6 +81,66 @@ public sealed class MonsterDefinitionReaderTests
         var report = ValidateMonster(monster);
 
         Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_monster_resistance");
+    }
+
+    [Fact]
+    public void ReadMonsters_LoadsSpawnPolicy()
+    {
+        var report = new DefinitionValidationReport();
+        var document = new JsonObject
+        {
+            ["monsters"] = new JsonArray { CreateMonsterNode([]) },
+        };
+        document["monsters"]![0]! ["spawn_policy"] = new JsonObject
+        {
+            ["unique"] = true,
+            ["questor"] = true,
+            ["force_depth"] = true,
+            ["force_max_hp"] = true,
+            ["force_sleep"] = true,
+            ["escort"] = true,
+            ["escorts"] = true,
+            ["friends"] = true,
+            ["wanderer"] = true,
+        };
+
+        var monster = Assert.Single(MonsterDefinitionReader.ReadMonsters(document, report));
+
+        Assert.False(report.HasErrors);
+        Assert.Equal(new SpawnPolicy(true, true, true, true, true, true, true, true, true), monster.SpawnPolicy);
+    }
+
+    [Fact]
+    public void ValidateMonsters_AllowsUniqueAndQuestorTogether()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["spawn_policy"] = new JsonObject { ["unique"] = true, ["questor"] = true };
+
+        var report = ValidateMonster(monster);
+
+        Assert.False(report.HasErrors);
+    }
+
+    [Fact]
+    public void ValidateMonsters_InvalidSpawnPolicy_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["spawn_policy"] = new JsonObject { ["friends"] = "yes", ["unknown"] = true };
+
+        var report = ValidateMonster(monster);
+
+        Assert.Equal(2, report.ToImmutable().Errors.Count(error => error.Code == "invalid_spawn_policy"));
+    }
+
+    [Fact]
+    public void ValidateMonsters_LegacySpawnPolicyFlag_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["flags"] = new JsonObject { ["friends"] = true };
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "legacy_spawn_policy_flag");
     }
 
     [Theory]

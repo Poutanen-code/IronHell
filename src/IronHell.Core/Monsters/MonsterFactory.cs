@@ -32,6 +32,7 @@ public sealed class MonsterFactory
             definition.Ai,
             Array.AsReadOnly(definition.Capabilities.ToArray()),
             Array.AsReadOnly(definition.Resistances.ToArray()),
-            definition.Senses);
+            definition.Senses,
+            definition.SpawnPolicy);
     }
 }

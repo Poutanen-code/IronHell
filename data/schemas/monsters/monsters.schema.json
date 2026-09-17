@@ -283,6 +283,7 @@
           }
         },
         "senses": { "$ref": "#/$defs/monster_senses" },
+        "spawn_policy": { "$ref": "#/$defs/spawn_policy" },
         "can_dig": { "type": "boolean" },
         "attacks": {
           "type": "array",
@@ -377,6 +378,21 @@
           "type": "string",
           "enum": ["normal", "weird_mind", "empty_mind"]
         }
+      }
+    },
+    "spawn_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unique": { "type": "boolean" },
+        "questor": { "type": "boolean" },
+        "force_depth": { "type": "boolean" },
+        "force_max_hp": { "type": "boolean" },
+        "force_sleep": { "type": "boolean" },
+        "escort": { "type": "boolean" },
+        "escorts": { "type": "boolean" },
+        "friends": { "type": "boolean" },
+        "wanderer": { "type": "boolean" }
       }
     },
     "ability_type": {
@@ -511,16 +527,8 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "unique": { "type": "boolean" },
-        "questor": { "type": "boolean" },
         "male": { "type": "boolean" },
         "female": { "type": "boolean" },
-        "friends": { "type": "boolean" },
-        "escort": { "type": "boolean" },
-        "escorts": { "type": "boolean" },
-        "force_depth": { "type": "boolean" },
-        "force_max_hp": { "type": "boolean" },
-        "force_sleep": { "type": "boolean" },
         "only_gold": { "type": "boolean" },
         "only_item": { "type": "boolean" },
         "drop_60": { "type": "boolean" },
@@ -532,20 +540,10 @@
         "drop_good": { "type": "boolean" },
         "drop_great": { "type": "boolean" },
         "kill_item": { "type": "boolean" },
-        "smart": { "type": "boolean" },
         "cold_blood": { "type": "boolean" },
         "powerful": { "type": "boolean" },
         "never_blow": { "type": "boolean" },
         "never_move": { "type": "boolean" },
-        "wanderer": { "type": "boolean" },
-        "orc": { "type": "boolean" },
-        "troll": { "type": "boolean" },
-        "giant": { "type": "boolean" },
-        "dragon": { "type": "boolean" },
-        "demon": { "type": "boolean" },
-        "undead": { "type": "boolean" },
-        "evil": { "type": "boolean" },
-        "animal": { "type": "boolean" },
         "hurt_light": { "type": "boolean" },
         "hurt_rock": { "type": "boolean" },
         "no_stun": { "type": "boolean" }
