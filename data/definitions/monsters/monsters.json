@@ -1,4 +1,4 @@
-﻿{
+{
   "_meta": {
     "source": "IronHell 1.5.3 lib/edit/monster.txt",
     "generated_from": "reference-mIronHell-1_5_3/lib/edit/monster.txt",
@@ -1077,7 +1077,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -1125,8 +1127,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "A small strange grey growth.",
       "sprite": "grey_mold.png",
       "symbol": "m",
@@ -1161,7 +1162,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -1205,8 +1208,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -1877,7 +1879,8 @@
         "stupid": true
       },
       "capabilities": [
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois",
@@ -1907,8 +1910,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -1942,7 +1944,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_fear"
       ],
@@ -1970,9 +1975,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "description": "A disembodied eye, floating a few feet above the ground.",
       "sprite": "floating_eye.png",
       "symbol": "e",
@@ -2256,7 +2259,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move",
+        "never_blow"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -2268,9 +2274,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "shriek"
@@ -2762,7 +2766,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -2806,8 +2812,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -2842,7 +2847,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -2873,9 +2881,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "description": "Its a large pile of white flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -3407,7 +3413,8 @@
         "stupid": true
       },
       "capabilities": [
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_acid",
@@ -3437,8 +3444,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -3850,7 +3856,9 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -3884,10 +3892,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blink"
@@ -4117,7 +4123,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -4148,8 +4156,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -4184,7 +4191,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -4244,9 +4254,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "drain_mana"
@@ -4286,7 +4294,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -4317,9 +4328,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "drain_mana"
@@ -4499,7 +4508,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -4530,8 +4541,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is a strange yellow growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -4632,7 +4642,8 @@
         "stupid": true
       },
       "capabilities": [
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fear"
@@ -4671,8 +4682,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -4711,7 +4721,8 @@
       },
       "capabilities": [
         "multiply",
-        "invisible"
+        "invisible",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois",
@@ -4741,8 +4752,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a disgusting mass of poisonous worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -4776,7 +4786,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_fear"
       ],
@@ -4814,9 +4827,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -5099,7 +5110,11 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_cold",
         "imm_sleep",
@@ -5130,10 +5145,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+},
       "description": "It's a large pile of pulsing blue flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -5168,7 +5180,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -5218,9 +5231,8 @@
       ],
       "flags": {
         "only_gold": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "description": "It appears to be a pile of copper coins.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -5321,7 +5333,9 @@
         "stupid": true
       },
       "capabilities": [
-        "multiply"
+        "multiply",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -5351,9 +5365,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "hurt_light": true
-      },
+},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -5787,7 +5799,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_sleep",
@@ -5824,9 +5837,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true
-      },
+        "drop_90": true
+},
       "description": "It is a very ugly green ghost with a voracious appetite.",
       "sprite": "ghost.png",
       "symbol": "G",
@@ -5861,7 +5873,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_acid",
         "imm_sleep",
@@ -5892,9 +5907,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "description": "It is a large pile of pulsing green flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -5998,7 +6011,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -6031,8 +6045,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is a small animated kobold skeleton.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -6125,7 +6138,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_fear"
       ],
@@ -6148,9 +6164,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "drain_mana"
@@ -6194,7 +6208,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -6224,8 +6239,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -6325,7 +6339,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -6419,8 +6435,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -6696,7 +6711,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -6740,8 +6757,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "A strange brown growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -6908,7 +6924,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -6959,9 +6976,8 @@
       "flags": {
         "only_gold": true,
         "drop_60": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "description": "It appears to be a pile of silver coins.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -6999,7 +7015,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -7027,9 +7044,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "A weak orc footman, dangerous in numbers.",
       "sprite": "snaga_orc.png",
       "symbol": "o",
@@ -7135,7 +7151,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -7163,9 +7180,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "He is often found in huge numbers in deep caves.",
       "sprite": "cave_orc.png",
       "symbol": "o",
@@ -7357,7 +7373,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_fear"
       ],
@@ -7398,9 +7417,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "drain_mana"
@@ -7532,7 +7549,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -7572,9 +7592,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "description": "It is a large pulsating mound of red flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -7746,7 +7764,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -7796,8 +7815,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is an animated kobold corpse. Flesh falls off in large chunks as it shambles forward.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -7836,7 +7854,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -7883,9 +7902,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -7927,7 +7945,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -7972,9 +7991,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_90": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "description": "A lithe figure of dark elven blood, resting in the shadows.",
       "sprite": "dark_elf.png",
       "ability_cooldown_ticks": 20,
@@ -8689,7 +8707,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_acid",
         "imm_pois",
@@ -8734,8 +8754,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is a strange growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -8774,7 +8793,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -8807,8 +8827,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is an animated orc skeleton.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -9500,7 +9519,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -9545,9 +9565,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_90": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blink",
@@ -10581,7 +10600,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois"
@@ -10629,9 +10649,8 @@
       "flags": {
         "male": true,
         "only_item": true,
-        "drop_1d2": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -10819,7 +10838,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -10864,9 +10884,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_1d2": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "description": "A skilled dark elven swordsman, battle-trained in the pits below.",
       "sprite": "dark_elven_warrior.png",
       "symbol": "h",
@@ -10903,7 +10922,9 @@
       },
       "capabilities": [
         "multiply",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "never_move"
       ],
       "resistances": [
         "imm_sleep",
@@ -10934,9 +10955,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -11163,7 +11182,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -11194,8 +11215,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is a strange hairy growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -11230,7 +11250,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -11268,8 +11290,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -11493,7 +11514,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -11545,9 +11567,8 @@
       "flags": {
         "only_gold": true,
         "drop_90": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "description": "It appears to be a pile of gold coins, until it starts crawling towards you on tiny legs.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -12073,7 +12094,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -12140,8 +12162,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is a shambling orcish corpse leaving behind a trail of flesh.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -12402,7 +12423,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -12432,9 +12456,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -12478,7 +12500,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fear"
@@ -12506,8 +12529,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a disgusting mass of dark worms, eating each other, the floor, the air, you....",
       "sprite": "worm.png",
       "symbol": "w",
@@ -12849,7 +12871,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -12895,9 +12918,8 @@
       "flags": {
         "male": true,
         "only_item": true,
-        "drop_1d2": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "heal_self",
@@ -12945,7 +12967,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -12978,8 +13001,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "A whirlwind of sentient air.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -13017,7 +13039,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -13050,8 +13073,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is an animated human skeleton.",
       "sprite": "skeleton_human.png",
       "symbol": "s",
@@ -13089,7 +13111,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -13139,8 +13162,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is a shambling human corpse dropping chunks of flesh behind it.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -13275,7 +13297,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -13335,9 +13358,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -13560,7 +13582,11 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_acid",
         "imm_pois",
@@ -13626,10 +13652,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+},
       "description": "A strange jelly thing, covered in discoloured blotches.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -14028,7 +14051,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -14080,9 +14104,8 @@
       "flags": {
         "only_gold": true,
         "drop_90": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "It appears to be a pile of sentient mithril coins that doesn't like being picked up.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -14299,7 +14322,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -14344,9 +14368,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "A large black orc clad in crude armor, swinging iron in both hands.",
       "sprite": "black_orc.png",
       "ability_cooldown_ticks": 18,
@@ -14392,7 +14415,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -14459,8 +14483,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "A fast moving highly acidic jelly thing, that is eating away the floor it rests on.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -15180,7 +15203,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "never_move"
       ],
       "resistances": [
         "imm_sleep",
@@ -15228,9 +15253,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "description": "A strange creature that merges with the dungeon floor, trapping its victims by enveloping them within its perfectly disguised form.",
       "sprite": "humanoid.png",
       "symbol": ".",
@@ -15466,7 +15489,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -15551,8 +15576,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -16723,7 +16747,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_elec",
@@ -16775,9 +16801,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "hurt_rock": true
-      },
+},
       "description": "It is a massive animated statue made out of hardened clay.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -16815,7 +16839,9 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_walls"
+        "kill_walls",
+        "cold_blooded",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_pois",
@@ -16898,9 +16924,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "hurt_rock": true
-      },
+},
       "description": "This bizarre creature has glaring eyes and large mandibles capable of slicing through rock.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -17049,7 +17073,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -17120,9 +17145,8 @@
       ],
       "flags": {
         "drop_1d2": true,
-        "drop_4d2": true,
-        "cold_blood": true
-      },
+        "drop_4d2": true
+},
       "description": "It is a strange, vast gelatinous structure that assumes cubic proportions as it lines all four walls of the corridors it patrols. Through its transparent jelly structure you can see treasures it has engulfed, and a few corpses as well.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -17654,7 +17678,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_fire"
@@ -17701,9 +17726,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "blink",
@@ -17756,7 +17780,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -17818,9 +17843,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "A large forest troll that hunts among the roots of ancient trees.",
       "sprite": "forest_troll.png",
       "symbol": "T",
@@ -18089,7 +18113,8 @@
         "random_move_chance": 25
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -18139,8 +18164,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "A whirlpool of sentient liquid.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -18265,7 +18289,9 @@
         "random_move_chance": 25
       },
       "capabilities": [
-        "pass_walls"
+        "pass_walls",
+        "cold_blooded",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_elec",
@@ -18317,9 +18343,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "hurt_rock": true
-      },
+},
       "description": "A whirling form of sentient rock.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -18761,7 +18785,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -18825,9 +18852,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -19478,7 +19503,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "never_blow"
       ],
       "resistances": [
         "imm_acid"
@@ -19488,8 +19514,7 @@
         "telepathy_profile": "weird_mind"
       },
       "flags": {
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_acid"
@@ -19532,7 +19557,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_elec",
@@ -19586,9 +19613,7 @@
       "description": "A carved sentinel animated by old warding runes.",
       "sprite": "stone_golem.png",
       "flags": {
-        "cold_blood": true,
-        "hurt_rock": true
-      },
+},
       "symbol": "g",
       "color": "W"
     },
@@ -19621,7 +19646,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_fire",
         "imm_pois",
@@ -19653,8 +19680,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is a strange red growth on the dungeon floor; it seems to burn with flame.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -20702,7 +20728,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -20714,9 +20742,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -20960,7 +20986,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [],
       "senses": {
@@ -21006,9 +21033,8 @@
       "flags": {
         "male": true,
         "only_item": true,
-        "drop_2d2": true,
-        "hurt_light": true
-      },
+        "drop_2d2": true
+},
       "description": "A powerful dark elf noble sleeping in a luxurious underground chamber.",
       "sprite": "dark_elven_lord.png",
       "ability_cooldown_ticks": 10,
@@ -21477,7 +21503,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -21558,9 +21587,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -21608,7 +21635,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -21640,8 +21668,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_fire"
@@ -21684,7 +21711,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -21716,8 +21744,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_acid"
@@ -21760,7 +21787,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -21792,8 +21820,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_cold"
@@ -21836,7 +21863,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -21868,8 +21896,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_elec"
@@ -21916,7 +21943,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -21966,9 +21994,8 @@
         }
       ],
       "flags": {
-        "drop_90": true,
-        "cold_blood": true
-      },
+        "drop_90": true
+},
       "description": "It is an orcish figure covered in wrappings.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -22083,7 +22110,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -22118,8 +22146,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "slow"
@@ -22756,7 +22783,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -22767,8 +22795,7 @@
         "telepathy_profile": "weird_mind"
       },
       "flags": {
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_confusion"
@@ -22814,7 +22841,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -22880,10 +22909,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "description": "A wight that haunts the wooded barrows, draining life with a touch.",
       "sprite": "forest_wight.png",
       "ability_cooldown_ticks": 20,
@@ -23317,7 +23344,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -23368,9 +23396,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_90": true,
-        "cold_blood": true
-      },
+        "drop_90": true
+},
       "description": "It is a human form encased in mouldy wrappings.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -23408,7 +23435,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "regenerate"
+        "regenerate",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -23480,8 +23508,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "A blood-sucking bat that flies at your neck hungrily.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -23790,7 +23817,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -23840,9 +23868,8 @@
       ],
       "flags": {
         "female": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -23883,7 +23910,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_elec",
@@ -23935,9 +23964,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "hurt_rock": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "slow",
@@ -23983,7 +24010,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois",
@@ -24050,9 +24078,8 @@
       "flags": {
         "male": true,
         "only_item": true,
-        "drop_1d2": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -24104,7 +24131,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light",
+        "hurt_by_rock_removal"
       ],
       "resistances": [],
       "senses": {
@@ -24166,10 +24195,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true,
-        "hurt_rock": true
-      },
+        "drop_60": true
+},
       "description": "He is a giant troll with scabrous black skin.",
       "sprite": "stone_troll.png",
       "symbol": "T",
@@ -24211,7 +24238,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_sleep",
@@ -24276,9 +24304,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_90": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blink",
@@ -25059,7 +25086,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -25124,10 +25153,8 @@
         }
       ],
       "flags": {
-        "drop_1d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "description": "A ghostly white form that drains experience from those it touches.",
       "sprite": "white_wraith.png",
       "ability_cooldown_ticks": 16,
@@ -25174,7 +25201,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -25258,9 +25286,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -25524,7 +25551,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -25610,9 +25638,8 @@
       "flags": {
         "only_gold": true,
         "drop_90": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "It appears to be a pile of coins made of precious adamant, slithering toward you on lots of tiny legs.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -26246,7 +26273,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -26351,11 +26380,9 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "drop_60": true,
-        "drop_1d2": true,
-        "hurt_light": true
-      },
+"drop_60": true,
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "teleport_to",
@@ -26521,7 +26548,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -26571,8 +26599,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "bolt_elec"
@@ -27607,7 +27634,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold"
@@ -27688,9 +27716,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "He is a white troll with powerfully clawed hands.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -27831,7 +27858,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -27916,9 +27944,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -28110,7 +28137,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -28191,9 +28221,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -28693,7 +28721,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -28780,9 +28809,8 @@
       ],
       "flags": {
         "only_gold": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "It is a massive statue of purest mithril. It looks expensive!",
       "sprite": "golem.png",
       "symbol": "g",
@@ -28952,7 +28980,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -29019,8 +29048,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is a troll skeleton animated by dark dweomers.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -29311,7 +29339,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -29377,10 +29407,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "description": "A wight that has risen from a grave, lying still as death until disturbed.",
       "sprite": "grave_wight.png",
       "ability_cooldown_ticks": 16,
@@ -29509,7 +29537,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -29613,9 +29642,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "description": "You do not believe in it, but it believes in you... An invisible undead spirit that drains your very mind.",
       "sprite": "ghost.png",
       "ability_cooldown_ticks": 30,
@@ -29870,7 +29898,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -29882,9 +29912,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "blink",
@@ -29931,7 +29959,8 @@
         "smart": true
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_acid",
@@ -30040,9 +30069,8 @@
         "only_item": true,
         "drop_1d2": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -30221,7 +30249,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -30294,8 +30324,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "forget"
@@ -30444,7 +30473,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois"
@@ -30525,9 +30555,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "Huge and dimwitted, but terrifying in close quarters.",
       "sprite": "cave_troll.png",
       "symbol": "T",
@@ -30827,7 +30856,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -30892,10 +30923,8 @@
         }
       ],
       "flags": {
-        "drop_60": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "An ancient wight resting in its burial mound, waiting to drain the unwary.",
       "sprite": "barrow_wight.png",
       "ability_cooldown_ticks": 16,
@@ -30947,7 +30976,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -31031,8 +31061,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "It is the animated form of a massive two-headed troll.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -31550,7 +31579,9 @@
         "bash_doors",
         "take_items",
         "move_body",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_cold",
@@ -31617,10 +31648,8 @@
         "male": true,
         "only_item": true,
         "drop_1d2": true,
-        "drop_good": true,
-        "hurt_light": true,
-        "hurt_rock": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31671,7 +31700,9 @@
         "bash_doors",
         "take_items",
         "move_body",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_cold",
@@ -31738,10 +31769,8 @@
         "male": true,
         "only_item": true,
         "drop_1d2": true,
-        "drop_good": true,
-        "hurt_light": true,
-        "hurt_rock": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31792,7 +31821,9 @@
         "bash_doors",
         "take_items",
         "move_body",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_cold",
@@ -31859,10 +31890,8 @@
         "male": true,
         "only_item": true,
         "drop_1d2": true,
-        "drop_good": true,
-        "hurt_light": true,
-        "hurt_rock": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31911,7 +31940,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -31989,9 +32019,8 @@
       "flags": {
         "only_item": true,
         "drop_90": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -32041,7 +32070,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -32119,9 +32149,8 @@
       "flags": {
         "only_item": true,
         "drop_90": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -32171,7 +32200,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -32253,9 +32283,8 @@
       ],
       "flags": {
         "male": true,
-        "drop_60": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "He is a troll that reeks of brine.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -32295,7 +32324,9 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -32347,9 +32378,7 @@
         }
       ],
       "flags": {
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "description": "A roiling mass of living flame given rudimentary will.",
       "sprite": "fire_elemental.png",
       "ability_cooldown_ticks": 12,
@@ -32396,7 +32425,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -32484,9 +32514,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -32537,7 +32566,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -32606,10 +32638,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_cold"
@@ -32654,7 +32683,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -32721,9 +32752,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "powerful": true
-      },
+},
       "description": "It is impossible to define its form but its violence is legendary.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -33136,7 +33165,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -33233,10 +33264,8 @@
         }
       ],
       "flags": {
-        "drop_1d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -33293,7 +33322,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -33398,10 +33429,8 @@
         }
       ],
       "flags": {
-        "drop_4d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_4d2": true
+},
       "description": "A humanoid figure dressed in robes, sleeping in its coffin. Power emanates from its chilling frame.",
       "sprite": "master_vampire.png",
       "ability_cooldown_ticks": 12,
@@ -33534,7 +33563,11 @@
       },
       "capabilities": [
         "pass_walls",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "hurt_by_rock_removal",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_elec",
@@ -33603,11 +33636,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true,
-        "hurt_rock": true
-      },
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_acid"
@@ -33651,7 +33680,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -33733,10 +33765,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_elec"
@@ -33888,7 +33917,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -33975,9 +34005,8 @@
       ],
       "flags": {
         "only_gold": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "It is a massive deep brown statue, striding towards you with an all-too-familiar purpose. Your magic surprisingly feels much less powerful now.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -34405,7 +34434,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -34492,8 +34522,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "drop_1d2": true,
+"drop_1d2": true,
         "drop_4d2": true
       },
       "description": "A disgusting animated blob of destruction. Flee its gruesome hunger!",
@@ -34789,7 +34818,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -34867,9 +34897,8 @@
       "flags": {
         "only_item": true,
         "drop_60": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -34916,7 +34945,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -34985,10 +35017,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_acid",
@@ -35033,7 +35062,9 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_elec",
@@ -35085,9 +35116,7 @@
         }
       ],
       "flags": {
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "darkness",
@@ -35541,7 +35570,10 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "pass_walls"
+        "pass_walls",
+        "cold_blooded",
+        "hurt_by_rock_removal",
+        "destroy_items"
       ],
       "resistances": [
         "imm_elec",
@@ -35626,10 +35658,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "hurt_rock": true
-      },
+},
       "description": "A huge creature of the element Earth. Able to merge with its element, it has four huge arms protruding from its enormous torso.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -35670,7 +35699,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -35772,9 +35802,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "teleport_to",
@@ -35822,7 +35851,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -35924,9 +35954,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "forget"
@@ -35972,7 +36001,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -36038,10 +36069,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_90": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_90": true
+},
       "description": "A tangible but ghostly form made of grey fog. The air around it feels deathly cold.",
       "sprite": "grey_wraith.png",
       "ability_cooldown_ticks": 14,
@@ -36209,7 +36238,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -36295,8 +36325,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "description": "An enormous construct resembling a titan made from stone. It strides purposefully towards you, swinging its slow fists with earth-shattering power.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -37031,7 +37060,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "never_move"
       ],
       "resistances": [
         "imm_sleep",
@@ -37137,9 +37168,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "cold_blood": true
-      },
+},
       "description": "A larger cousin of the lurker, this creature traps unsuspecting victims and paralyzes them, to be slowly digested later.",
       "sprite": "humanoid.png",
       "symbol": ".",
@@ -37291,7 +37320,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -37360,10 +37392,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_ice",
@@ -37763,7 +37792,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -37813,9 +37843,8 @@
         }
       ],
       "flags": {
-        "drop_60": true,
-        "cold_blood": true
-      },
+        "drop_60": true
+},
       "description": "It is a massive figure clothed in wrappings. You are wary of its massive fists.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -37990,7 +38019,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -38073,8 +38103,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -38122,7 +38151,9 @@
       },
       "capabilities": [
         "pass_walls",
-        "kill_body"
+        "kill_body",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -38191,9 +38222,7 @@
         }
       ],
       "flags": {
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "bolt_plasma",
@@ -38240,7 +38269,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "take_items"
+        "take_items",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -38329,9 +38359,8 @@
       "flags": {
         "drop_60": true,
         "drop_90": true,
-        "drop_1d2": true,
-        "cold_blood": true
-      },
+        "drop_1d2": true
+},
       "description": "A lump of rotting black flesh that slurrrrrrrps across the dungeon floor.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -38472,7 +38501,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -38503,8 +38533,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_nexus"
@@ -38547,7 +38576,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -38597,8 +38627,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_plasma"
@@ -39228,7 +39257,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold"
@@ -39293,9 +39323,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "A humanoid figure in armor of ancient form. From beneath its helmet, eyes glow a baleful red that pierce like lances of fire.",
       "sprite": "death_knight.png",
       "ability_cooldown_ticks": 10,
@@ -39478,7 +39507,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -39520,8 +39550,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_time"
@@ -39564,7 +39593,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -39638,8 +39668,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_light",
@@ -39687,7 +39716,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -39753,9 +39783,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -39806,7 +39835,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -39871,9 +39901,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -40087,7 +40116,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -40170,10 +40201,8 @@
       "flags": {
         "only_item": true,
         "drop_90": true,
-        "drop_4d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_4d2": true
+},
       "description": "Your life force is torn from your body as this powerful unearthly being approaches from its ancient throne room.",
       "sprite": "emperor_wight.png",
       "ability_cooldown_ticks": 12,
@@ -40224,7 +40253,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -40313,9 +40343,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "heal_self",
@@ -40367,7 +40396,9 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -40453,9 +40484,7 @@
         }
       ],
       "flags": {
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "bolt_plasma",
@@ -40504,7 +40533,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -40587,10 +40618,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_2d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_2d2": true
+},
       "description": "A wraith of pure shadow and malice that drains the life force from those it touches.",
       "sprite": "black_wraith.png",
       "ability_cooldown_ticks": 14,
@@ -40641,7 +40670,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -40702,9 +40732,8 @@
       "flags": {
         "female": true,
         "only_item": true,
-        "drop_60": true,
-        "powerful": true
-      },
+        "drop_60": true
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "blind",
@@ -40753,7 +40782,9 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -40836,10 +40867,8 @@
       "flags": {
         "only_item": true,
         "drop_90": true,
-        "drop_4d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -41105,7 +41134,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -41191,10 +41223,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "bolt_ice",
@@ -41245,7 +41274,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -41333,9 +41363,8 @@
         "male": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_acid",
@@ -41392,7 +41421,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -41458,9 +41488,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -41510,7 +41539,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_pois",
@@ -41577,9 +41607,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -41773,7 +41802,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -41881,9 +41911,8 @@
       ],
       "flags": {
         "only_gold": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+        "drop_2d2": true
+},
       "description": "A fearsome skeletal horse with glowing eyes, that watch you with little more than a hatred of all that lives.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -41925,7 +41954,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -42031,10 +42062,8 @@
       ],
       "flags": {
         "drop_60": true,
-        "drop_4d2": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_4d2": true
+},
       "description": "An ancient noble of the undead who commands lesser vampires.",
       "sprite": "vampire_lord.png",
       "ability_cooldown_ticks": 14,
@@ -42090,7 +42119,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -42156,9 +42186,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -42209,7 +42238,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "multiply"
+        "multiply",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fear"
@@ -42245,8 +42275,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "description": "It is a strange mass of squirming worms. Magical energy crackles around its disgusting form.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -42283,7 +42312,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -42295,9 +42326,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -43130,7 +43159,10 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "pass_walls"
+        "pass_walls",
+        "cold_blooded",
+        "hurt_by_rock_removal",
+        "destroy_items"
       ],
       "resistances": [
         "imm_elec",
@@ -43215,12 +43247,9 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "kill_item": true,
-        "only_gold": true,
-        "drop_2d2": true,
-        "hurt_rock": true
-      },
+"only_gold": true,
+        "drop_2d2": true
+},
       "description": "It is a tougher relative of the Xorn. Its hide glitters with metal ores.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -43361,7 +43390,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -43469,10 +43500,8 @@
         "male": true,
         "only_item": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "description": "A tall black cloaked Ringwraith, he is a master of horsemanship. He longs to taste your blood.",
       "sprite": "wraith.png",
       "symbol": "W",
@@ -43771,7 +43800,8 @@
         "take_items",
         "pass_walls",
         "move_body",
-        "invisible"
+        "invisible",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -43849,9 +43879,8 @@
       "flags": {
         "only_item": true,
         "drop_2d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "slow",
@@ -43903,7 +43932,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -43969,9 +43999,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "spell_frequency": 6,
       "ability_cooldown_ticks": 12,
       "abilities": [
@@ -44022,7 +44051,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -44087,9 +44117,8 @@
       ],
       "flags": {
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -44140,7 +44169,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -44207,9 +44237,8 @@
       "flags": {
         "only_item": true,
         "drop_2d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "slow",
@@ -44259,7 +44288,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -44325,9 +44355,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_60": true,
-        "powerful": true
-      },
+        "drop_60": true
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blind",
@@ -44511,7 +44540,9 @@
       "capabilities": [
         "pass_walls",
         "move_body",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -44619,10 +44650,8 @@
         "female": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -44678,7 +44707,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_sleep",
@@ -44745,9 +44775,8 @@
         "male": true,
         "only_item": true,
         "drop_90": true,
-        "drop_4d2": true,
-        "hurt_light": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -44807,7 +44836,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -44906,9 +44936,8 @@
       "flags": {
         "only_item": true,
         "drop_2d2": true,
-        "drop_4d2": true,
-        "cold_blood": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -44965,7 +44994,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -45014,9 +45044,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "powerful": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "bolt_fire",
@@ -45066,7 +45095,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -45176,10 +45207,8 @@
         "male": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -45388,7 +45417,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -45504,9 +45534,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "teleport_to",
@@ -45558,7 +45587,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -45607,9 +45637,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_90": true,
-        "powerful": true
-      },
+        "drop_90": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "bolt_fire",
@@ -45659,7 +45688,9 @@
         "open_doors",
         "bash_doors",
         "move_body",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -45770,10 +45801,8 @@
         "male": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -45828,7 +45857,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -45894,9 +45924,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "powerful": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "blind",
@@ -45945,7 +45974,8 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -46070,8 +46100,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "slow",
@@ -46131,7 +46160,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -46208,9 +46238,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_60": true,
-        "cold_blood": true
-      },
+        "drop_60": true
+},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -46362,7 +46391,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -46434,9 +46464,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -46492,7 +46521,8 @@
       "capabilities": [
         "pass_walls",
         "move_body",
-        "invisible"
+        "invisible",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -46558,9 +46588,8 @@
       "flags": {
         "only_item": true,
         "drop_2d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -46613,7 +46642,9 @@
         "open_doors",
         "bash_doors",
         "move_body",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -46722,10 +46753,8 @@
         "male": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -46782,7 +46811,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -46866,9 +46896,8 @@
       "flags": {
         "female": true,
         "only_item": true,
-        "drop_1d2": true,
-        "powerful": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "blind",
@@ -46915,7 +46944,11 @@
       },
       "capabilities": [
         "pass_walls",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "hurt_by_rock_removal",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_elec",
@@ -47002,12 +47035,8 @@
         }
       ],
       "flags": {
-        "male": true,
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true,
-        "hurt_rock": true
-      },
+        "male": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_acid",
@@ -47057,7 +47086,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -47137,9 +47167,8 @@
         "only_item": true,
         "drop_1d2": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -47187,7 +47216,10 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "cold_blooded",
+        "powerful",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -47299,11 +47331,8 @@
         }
       ],
       "flags": {
-        "female": true,
-        "cold_blood": true,
-        "kill_item": true,
-        "powerful": true
-      },
+        "female": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_elec",
@@ -47609,7 +47638,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -47714,9 +47744,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_4d2": true,
-        "cold_blood": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "teleport_level",
@@ -47770,7 +47799,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -47856,8 +47886,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -47909,7 +47938,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -47995,9 +48025,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -48049,7 +48078,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -48160,10 +48191,8 @@
         "male": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -48220,7 +48249,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -48306,9 +48336,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -48361,7 +48390,9 @@
       "capabilities": [
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -48440,10 +48471,8 @@
       "flags": {
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "confuse",
@@ -48680,7 +48709,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -48765,9 +48795,8 @@
       "flags": {
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "hold",
@@ -48813,7 +48842,9 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_acid",
         "imm_elec",
@@ -48931,8 +48962,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is the epitome of all that is evil, in a mold. Its lifeless form draws power from sucking the souls of those that approach it, a nimbus of pure evil surrounds it. Luckily for you, it can't move.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -48974,7 +49004,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -49060,9 +49091,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -49113,7 +49143,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -49202,9 +49233,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "powerful": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -49407,7 +49437,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -49489,9 +49520,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -49546,7 +49576,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -49645,10 +49677,8 @@
       "flags": {
         "only_item": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -50083,7 +50113,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -50095,9 +50127,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -50147,7 +50177,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -50233,9 +50264,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -50584,7 +50614,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -50695,10 +50727,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -50908,7 +50938,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_acid",
@@ -51019,10 +51051,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_level",
@@ -51208,7 +51238,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -51294,9 +51325,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -51489,7 +51519,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -51596,10 +51628,8 @@
         "only_item": true,
         "drop_1d2": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -51651,7 +51681,11 @@
         "random_move_chance": 0,
         "smart": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move",
+        "never_blow"
+      ],
       "resistances": [
         "imm_cold",
         "imm_pois",
@@ -51664,10 +51698,7 @@
         "telepathy_profile": "normal"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "teleport_away",
@@ -51723,7 +51754,11 @@
         "random_move_chance": 0,
         "smart": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move",
+        "never_blow"
+      ],
       "resistances": [
         "imm_fire",
         "imm_cold",
@@ -51737,10 +51772,7 @@
         "telepathy_profile": "normal"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "bolt_mana",
@@ -51790,7 +51822,11 @@
         "random_move_chance": 0,
         "smart": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move",
+        "never_blow"
+      ],
       "resistances": [
         "imm_fire",
         "imm_cold",
@@ -51804,10 +51840,7 @@
         "telepathy_profile": "normal"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true,
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "slow",
@@ -51859,7 +51892,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -51993,8 +52027,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_chaos"
@@ -52037,7 +52070,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -52124,8 +52158,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_acid",
@@ -52191,7 +52224,8 @@
         "open_doors",
         "bash_doors",
         "kill_body",
-        "regenerate"
+        "regenerate",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -52276,9 +52310,8 @@
       "flags": {
         "only_gold": true,
         "drop_3d2": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "scare",
@@ -52336,7 +52369,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -52472,10 +52507,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -52533,7 +52566,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -52619,9 +52653,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -52670,7 +52703,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -52682,9 +52717,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -52880,7 +52913,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -52968,9 +53002,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -53027,7 +53060,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -53137,9 +53171,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -53194,7 +53227,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -53286,9 +53320,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "powerful": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "breath_acid",
@@ -53344,7 +53377,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_elec",
@@ -53459,10 +53494,8 @@
       "flags": {
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -53515,7 +53548,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -53636,9 +53670,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -53863,7 +53896,8 @@
       "capabilities": [
         "take_items",
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -53991,9 +54025,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_3d2": true,
-        "drop_4d2": true,
-        "cold_blood": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -54490,7 +54523,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -54576,9 +54610,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "spell_frequency": 4,
       "ability_cooldown_ticks": 8,
       "abilities": [
@@ -54632,7 +54665,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -54718,9 +54752,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -54774,7 +54807,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -54861,9 +54895,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -54918,7 +54951,8 @@
       },
       "capabilities": [
         "pass_walls",
-        "invisible"
+        "invisible",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -55025,9 +55059,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -55083,7 +55116,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -55173,9 +55207,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_poison",
@@ -55233,7 +55266,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "kill_walls"
+        "kill_walls",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -55353,9 +55387,8 @@
         "only_item": true,
         "drop_1d2": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "cold_blood": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "teleport_to",
@@ -55411,7 +55444,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -55423,9 +55458,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55473,7 +55506,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -55485,9 +55520,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55535,7 +55568,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -55547,9 +55582,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55599,7 +55632,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -55725,9 +55759,8 @@
         "drop_2d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "cold_blood": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55968,7 +56001,8 @@
         "smart": true
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_acid",
@@ -56076,9 +56110,8 @@
         "female": true,
         "only_item": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -56459,7 +56492,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -56471,9 +56506,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true
-      },
+},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "summon_animal",
@@ -56525,7 +56558,9 @@
         "random_move_chance": 0
       },
       "capabilities": [
-        "invisible"
+        "invisible",
+        "never_move",
+        "never_blow"
       ],
       "resistances": [
         "imm_sleep",
@@ -56537,9 +56572,7 @@
         "telepathy_profile": "empty_mind"
       },
       "flags": {
-        "never_move": true,
-        "never_blow": true,
-        "only_item": true,
+"only_item": true,
         "drop_4d2": true
       },
       "ability_cooldown_ticks": 2,
@@ -56602,7 +56635,9 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -56712,10 +56747,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_away",
@@ -57030,7 +57063,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_fire",
@@ -57143,9 +57177,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "cold_blood": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -57203,7 +57236,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -57279,9 +57313,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "breath_fire",
@@ -57332,7 +57365,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -57414,9 +57448,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -57611,7 +57644,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -57737,9 +57771,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "cold_blood": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_self",
@@ -58084,7 +58117,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -58168,9 +58202,8 @@
         "drop_3d2": true,
         "drop_4d2": true,
         "drop_good": true,
-        "drop_great": true,
-        "powerful": true
-      },
+        "drop_great": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -58695,7 +58728,10 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_pois",
         "imm_sleep",
@@ -58759,9 +58795,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "description": "It is a large pile of rotting flesh, whose touch spoils your food. The terrible smell it exudes is also very hard to get rid of...",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -59124,7 +59158,9 @@
         "random_move_chance": 0,
         "stupid": true
       },
-      "capabilities": [],
+      "capabilities": [
+        "never_move"
+      ],
       "resistances": [
         "imm_elec",
         "imm_pois",
@@ -59173,8 +59209,7 @@
         }
       ],
       "flags": {
-        "never_move": true
-      },
+},
       "description": "It is a strange growth on the dungeon floor, glowing and crackling with sparks.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -59316,7 +59351,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "never_move"
+      ],
       "resistances": [
         "imm_sleep",
         "imm_fear",
@@ -59423,10 +59461,8 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "drop_2d2": true,
-        "cold_blood": true
-      },
+"drop_2d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -59478,7 +59514,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -59578,9 +59615,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_3d2": true,
-        "drop_good": true,
-        "cold_blood": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -59643,7 +59679,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "pass_walls"
+        "pass_walls",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_cold",
@@ -59743,9 +59780,8 @@
         "only_item": true,
         "drop_4d2": true,
         "drop_2d2": true,
-        "drop_good": true,
-        "cold_blood": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -60643,7 +60679,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_pois",
@@ -60736,9 +60773,8 @@
       ],
       "flags": {
         "only_item": true,
-        "drop_1d2": true,
-        "powerful": true
-      },
+        "drop_1d2": true
+},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -60787,7 +60823,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -60855,9 +60892,8 @@
       "flags": {
         "only_item": true,
         "drop_3d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_poison",
@@ -60911,7 +60947,8 @@
         "open_doors",
         "bash_doors",
         "move_body",
-        "invisible"
+        "invisible",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -61029,9 +61066,8 @@
       "flags": {
         "only_item": true,
         "drop_3d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "ball_elec",
@@ -61083,7 +61119,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "regenerate"
+        "regenerate",
+        "powerful"
       ],
       "resistances": [
         "imm_cold",
@@ -61179,9 +61216,8 @@
       "flags": {
         "only_item": true,
         "drop_good": true,
-        "drop_4d2": true,
-        "powerful": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_cold",
@@ -61237,7 +61273,8 @@
         "open_doors",
         "bash_doors",
         "kill_body",
-        "regenerate"
+        "regenerate",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -61326,9 +61363,8 @@
         "only_item": true,
         "drop_good": true,
         "drop_4d2": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "haste_self",
@@ -61380,7 +61416,8 @@
         "open_doors",
         "bash_doors",
         "move_body",
-        "regenerate"
+        "regenerate",
+        "powerful"
       ],
       "resistances": [
         "imm_fire",
@@ -61476,9 +61513,8 @@
         "only_item": true,
         "drop_good": true,
         "drop_4d2": true,
-        "drop_2d2": true,
-        "powerful": true
-      },
+        "drop_2d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "summon_hi_demon",
@@ -61533,7 +61569,8 @@
       "capabilities": [
         "open_doors",
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_elec",
@@ -61615,9 +61652,8 @@
         "only_item": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "confuse",
@@ -61897,7 +61933,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_pois",
@@ -61983,9 +62020,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -62036,7 +62072,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -62147,9 +62184,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -62199,7 +62235,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_acid",
@@ -62285,9 +62322,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -62337,7 +62373,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "move_body"
+        "move_body",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -62422,9 +62459,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -62998,7 +63034,8 @@
       },
       "capabilities": [
         "bash_doors",
-        "kill_body"
+        "kill_body",
+        "destroy_items"
       ],
       "resistances": [
         "imm_acid",
@@ -63069,9 +63106,8 @@
         "drop_2d2": true,
         "drop_3d2": true,
         "drop_good": true,
-        "only_item": true,
-        "kill_item": true
-      },
+        "only_item": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "boulder",
@@ -63127,7 +63163,8 @@
         "bash_doors",
         "take_items",
         "kill_walls",
-        "kill_body"
+        "kill_body",
+        "hurt_by_rock_removal"
       ],
       "resistances": [
         "imm_acid",
@@ -63242,9 +63279,8 @@
         "male": true,
         "only_item": true,
         "drop_good": true,
-        "drop_4d2": true,
-        "hurt_rock": true
-      },
+        "drop_4d2": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "boulder"
@@ -63488,7 +63524,10 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "hurt_by_light",
+        "never_move"
+      ],
       "resistances": [
         "imm_fear"
       ],
@@ -63531,9 +63570,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "hold",
@@ -64188,7 +64225,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -64259,9 +64297,8 @@
         "only_item": true,
         "drop_2d2": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -64472,7 +64509,9 @@
         "bash_doors",
         "pass_walls",
         "regenerate",
-        "invisible"
+        "invisible",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -64580,10 +64619,8 @@
       "flags": {
         "drop_60": true,
         "drop_4d2": true,
-        "drop_good": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_good": true
+},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "hold",
@@ -64634,7 +64671,12 @@
         "behavior": "territorial",
         "random_move_chance": 0
       },
-      "capabilities": [],
+      "capabilities": [
+        "cold_blooded",
+        "hurt_by_light",
+        "hurt_by_rock_removal",
+        "never_move"
+      ],
       "resistances": [
         "imm_elec",
         "imm_fire",
@@ -64719,11 +64761,7 @@
         }
       ],
       "flags": {
-        "never_move": true,
-        "hurt_rock": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "shriek",
@@ -64869,7 +64907,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -64959,10 +64999,8 @@
         }
       ],
       "flags": {
-        "drop_60": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "An emaciated undead creature that paralyzes with its touch, haunting old graveyards.",
       "sprite": "ghoul.png",
       "ability_cooldown_ticks": 18,
@@ -65009,7 +65047,9 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_cold",
@@ -65136,10 +65176,8 @@
         }
       ],
       "flags": {
-        "drop_60": true,
-        "cold_blood": true,
-        "hurt_light": true
-      },
+        "drop_60": true
+},
       "description": "A more powerful form of ghoul that paralysis with terrible force and drains constitution.",
       "sprite": "ghast.png",
       "ability_cooldown_ticks": 14,
@@ -65186,7 +65224,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_pois",
@@ -65294,9 +65333,8 @@
       "flags": {
         "only_item": true,
         "drop_1d2": true,
-        "drop_good": true,
-        "powerful": true
-      },
+        "drop_good": true
+},
       "description": "An enormous serpent whose gaze can turn flesh to stone.",
       "sprite": "greater_basilisk.png",
       "ability_cooldown_ticks": 16,
@@ -65342,7 +65380,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_pois"
@@ -65422,8 +65461,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_fire",
@@ -65476,7 +65514,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "hurt_by_light"
       ],
       "resistances": [
         "imm_fire",
@@ -65557,8 +65596,7 @@
         }
       ],
       "flags": {
-        "hurt_light": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -66014,7 +66052,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_elec",
@@ -66134,8 +66173,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "teleport_to",
@@ -66185,7 +66223,8 @@
       },
       "capabilities": [
         "open_doors",
-        "bash_doors"
+        "bash_doors",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -66271,8 +66310,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true
-      },
+},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_plasma",
@@ -66713,7 +66751,8 @@
         "random_move_chance": 50
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -66744,8 +66783,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_shards"
@@ -66788,7 +66826,8 @@
         "random_move_chance": 75
       },
       "capabilities": [
-        "bash_doors"
+        "bash_doors",
+        "powerful"
       ],
       "resistances": [
         "imm_sleep",
@@ -66850,8 +66889,7 @@
         }
       ],
       "flags": {
-        "powerful": true
-      },
+},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_disenchant"
@@ -66900,7 +66938,8 @@
         "open_doors",
         "bash_doors",
         "take_items",
-        "move_body"
+        "move_body",
+        "cold_blooded"
       ],
       "resistances": [
         "imm_acid",
@@ -67030,8 +67069,7 @@
         }
       ],
       "flags": {
-        "cold_blood": true,
-        "only_item": true,
+"only_item": true,
         "drop_1d2": true,
         "drop_2d2": true
       },

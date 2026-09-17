@@ -24,12 +24,19 @@ public sealed class MonsterDefinitionReaderTests
         Assert.Equal(75, Get(monsters, "white_icky_thing").Ai.RandomMoveChance);
         Assert.True(Get(monsters, "grey_mold").Ai.Stupid);
         Assert.Equal(["open_doors", "take_items"], Get(monsters, "filthy_street_urchin").Capabilities);
+        Assert.Contains("cold_blooded", Get(monsters, "poltergeist").Capabilities);
+        Assert.Contains("hurt_by_light", Get(monsters, "poltergeist").Capabilities);
+        Assert.Contains("hurt_by_rock_removal", Get(monsters, "earth_spirit").Capabilities);
+        Assert.Contains("powerful", Get(monsters, "fire_vortex").Capabilities);
+        Assert.Contains("never_move", Get(monsters, "grey_mold").Capabilities);
+        Assert.Contains("never_blow", Get(monsters, "giant_black_dragon_fly").Capabilities);
+        Assert.Contains("destroy_items", Get(monsters, "fire_elemental").Capabilities);
         Assert.Equal(new MonsterSensesDefinition(40, MonsterTelepathyProfile.Normal), Get(monsters, "filthy_street_urchin").Senses);
         Assert.Equal(MonsterTelepathyProfile.WeirdMind, Get(monsters, "giant_yellow_centipede").Senses.TelepathyProfile);
         Assert.Equal(MonsterTelepathyProfile.EmptyMind, Get(monsters, "grey_mold").Senses.TelepathyProfile);
         Assert.Equal(["imm_sleep", "imm_confu"], Get(monsters, "farmer_maggot").Resistances);
         Assert.Equal(["imm_pois", "imm_sleep", "imm_fear", "imm_confu"], Get(monsters, "grey_mold").Resistances);
-        Assert.Equal(new SpawnPolicy(false, false, false, false, false, false, false, false, true), Get(monsters, "mean_mercenary").SpawnPolicy);
+        Assert.Equal(new SpawnPolicy(false, false, false, false, false, false, false, false, false), Get(monsters, "mean_mercenary").SpawnPolicy);
     }
 
     [Fact]
@@ -41,7 +48,7 @@ public sealed class MonsterDefinitionReaderTests
             LoadJson("data/definitions/monsters/monster_capabilities.json"), report);
 
         Assert.False(report.HasErrors);
-        Assert.Equal(11, capabilities.Count);
+        Assert.Equal(18, capabilities.Count);
         Assert.Equal("Open Doors", capabilities.Single(capability => capability.Id == "open_doors").Name);
     }
 

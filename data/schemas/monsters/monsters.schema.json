@@ -539,13 +539,6 @@
         "drop_4d2": { "type": "boolean" },
         "drop_good": { "type": "boolean" },
         "drop_great": { "type": "boolean" },
-        "kill_item": { "type": "boolean" },
-        "cold_blood": { "type": "boolean" },
-        "powerful": { "type": "boolean" },
-        "never_blow": { "type": "boolean" },
-        "never_move": { "type": "boolean" },
-        "hurt_light": { "type": "boolean" },
-        "hurt_rock": { "type": "boolean" },
         "no_stun": { "type": "boolean" }
       }
     }

@@ -55,6 +55,41 @@
       "id": "invisible",
       "name": "Invisible",
       "description": "Monster is invisible to normal sight."
+    },
+    {
+      "id": "cold_blooded",
+      "name": "Cold-Blooded",
+      "description": "Monster is cold-blooded and does not leave warm-blood traces."
+    },
+    {
+      "id": "hurt_by_light",
+      "name": "Hurt by Light",
+      "description": "Monster is harmed by bright light, as with the original HURT_LITE flag."
+    },
+    {
+      "id": "hurt_by_rock_removal",
+      "name": "Hurt by Rock Removal",
+      "description": "Monster is harmed when rock is removed around it, as with the original HURT_ROCK flag."
+    },
+    {
+      "id": "powerful",
+      "name": "Powerful",
+      "description": "Monster is powerful; its breath attacks use the larger radius associated with the original POWERFUL flag."
+    },
+    {
+      "id": "never_move",
+      "name": "Never Move",
+      "description": "Monster never moves from its grid position, as with the original NEVER_MOVE flag."
+    },
+    {
+      "id": "never_blow",
+      "name": "Never Blow",
+      "description": "Monster never makes melee blows, as with the original NEVER_BLOW flag."
+    },
+    {
+      "id": "destroy_items",
+      "name": "Destroy Items",
+      "description": "Monster destroys items it encounters, as with the original KILL_ITEM flag."
     }
   ]
 }
