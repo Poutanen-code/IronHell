@@ -382,6 +382,15 @@
       "provenance_status": "verified"
     },
     {
+      "id": "imm_stun",
+      "name": "Immunity Stun",
+      "description": "Permanent bearer immunity to stun effects.",
+      "semantic_kind": "immunity",
+      "target_scope": "bearer",
+      "channel": "stun",
+      "provenance_status": "verified"
+    },
+    {
       "id": "ignore_acid",
       "name": "Ignore Acid",
       "description": "Item-self protection against acid destruction.",
