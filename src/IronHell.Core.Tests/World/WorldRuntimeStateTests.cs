@@ -101,6 +101,7 @@ public sealed class WorldRuntimeStateTests
         public IDefinitionRegistry<ActivationDefinition> Activations { get; } = TestRegistry<ActivationDefinition>.Empty;
         public IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities { get; } = TestRegistry<MonsterAbilityDefinition>.Empty;
         public IDefinitionRegistry<MonsterCapabilityDefinition> MonsterCapabilities { get; } = TestRegistry<MonsterCapabilityDefinition>.Empty;
+        public IDefinitionRegistry<MonsterLootProfileDefinition> MonsterLootProfiles { get; } = TestRegistry<MonsterLootProfileDefinition>.Empty;
         public IDefinitionRegistry<MonsterDefinition> Monsters { get; } = TestRegistry<MonsterDefinition>.Empty;
         public IDefinitionRegistry<TerrainDefinition> Terrain { get; } = TestRegistry<TerrainDefinition>.Empty;
         public IDefinitionRegistry<TrapDefinition> Traps { get; } = TestRegistry<TrapDefinition>.Empty;

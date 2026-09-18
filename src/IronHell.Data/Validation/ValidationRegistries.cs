@@ -14,6 +14,7 @@ internal sealed record ValidationRegistries(
     IDefinitionRegistry<ActivationDefinition> Activations,
     IDefinitionRegistry<MonsterAbilityDefinition> MonsterAbilities,
     IDefinitionRegistry<MonsterCapabilityDefinition> MonsterCapabilities,
+    IDefinitionRegistry<MonsterLootProfileDefinition> MonsterLootProfiles,
     IDefinitionRegistry<MonsterDefinition> Monsters,
     IDefinitionRegistry<TerrainDefinition> Terrain,
     IDefinitionRegistry<TrapDefinition> Traps);

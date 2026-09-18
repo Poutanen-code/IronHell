@@ -20,7 +20,8 @@ public sealed class MonsterFactoryTests
             ["open_doors", "take_items"],
             ["imm_fire", "imm_sleep"],
             new MonsterSensesDefinition(20, MonsterTelepathyProfile.WeirdMind),
-            new SpawnPolicy(false, false, false, false, false, false, false, false, false)));
+            new SpawnPolicy(false, false, false, false, false, false, false, false, false),
+            "test_loot"));
 
         Assert.Equal((4, 5), randomSource.LastRoll);
         Assert.Equal(13, monster.MaxHp);
@@ -30,6 +31,7 @@ public sealed class MonsterFactoryTests
         Assert.Equal(["imm_fire", "imm_sleep"], monster.Resistances);
         Assert.Equal(new MonsterSensesDefinition(20, MonsterTelepathyProfile.WeirdMind), monster.Senses);
         Assert.Equal(new SpawnPolicy(false, false, false, false, false, false, false, false, false), monster.SpawnPolicy);
+        Assert.Equal("test_loot", monster.LootProfileId);
     }
 
     private sealed class RecordingRandomSource(int rolledValue) : IRandomSource

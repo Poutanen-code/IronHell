@@ -28,6 +28,8 @@ public interface IDefinitionCatalog
 
     IDefinitionRegistry<MonsterCapabilityDefinition> MonsterCapabilities { get; }
 
+    IDefinitionRegistry<MonsterLootProfileDefinition> MonsterLootProfiles { get; }
+
     IDefinitionRegistry<MonsterDefinition> Monsters { get; }
 
     IDefinitionRegistry<TerrainDefinition> Terrain { get; }

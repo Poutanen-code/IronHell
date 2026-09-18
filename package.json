@@ -13,6 +13,7 @@
     "test:monster-hp-roll": "node --test tests/schema-validation/monster-hp-roll.test.js",
     "test:monster-ai-capabilities": "node --test tests/schema-validation/monster-ai-capabilities.test.js",
     "test:monster-resistance-senses": "node --test tests/schema-validation/monster-resistance-senses.test.js",
+    "test:monster-loot-profiles": "node --test tests/schema-validation/monster-loot-profiles.test.js",
     "test:watch": "node --test --watch tests/schema-validation/validate.test.js",
     "test:phase1-catalogs": "node --test tests/schema-validation/phase1-catalogs.test.js"
   },

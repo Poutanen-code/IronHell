@@ -20,6 +20,7 @@ internal static class DefinitionCatalogBuilder
         var mageSpells = SpellDefinitionReader.Read(documents["mage_spells"], report);
         var priestPrayers = SpellDefinitionReader.Read(documents["priest_prayers"], report);
         var activations = SimpleDefinitionReader.Read<ActivationDefinition>(documents["activations"], "activations", "activation_id", id => new ActivationDefinition(id), report);
+        var monsterLootProfiles = MonsterDefinitionReader.ReadLootProfiles(documents["monster_loot"], report);
         var monsterCapabilities = MonsterDefinitionReader.ReadCapabilities(documents["monster_capabilities"], report);
         var monsterAbilities = MonsterDefinitionReader.ReadAbilities(documents["monster_abilities"], report);
         var monsters = MonsterDefinitionReader.ReadMonsters(documents["monsters"], report);
@@ -45,6 +46,7 @@ internal static class DefinitionCatalogBuilder
         var mageSpellRegistry = new DefinitionRegistry<SpellDefinition>(mageSpells);
         var priestPrayerRegistry = new DefinitionRegistry<SpellDefinition>(priestPrayers);
         var activationRegistry = new DefinitionRegistry<ActivationDefinition>(activations);
+        var monsterLootProfileRegistry = new DefinitionRegistry<MonsterLootProfileDefinition>(monsterLootProfiles);
         var monsterCapabilityRegistry = new DefinitionRegistry<MonsterCapabilityDefinition>(monsterCapabilities);
         var monsterAbilityRegistry = new DefinitionRegistry<MonsterAbilityDefinition>(monsterAbilities);
         var monsterRegistry = new DefinitionRegistry<MonsterDefinition>(monsters);
@@ -54,7 +56,7 @@ internal static class DefinitionCatalogBuilder
         var characterDefinitions = new CharacterDefinitionSet(rules, races, classes);
         CharacterValidator.Validate(raceRegistry, classRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, characterDefinitions, report);
 
-        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterCapabilityRegistry, monsterRegistry, terrainRegistry, trapRegistry);
+        var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterCapabilityRegistry, monsterLootProfileRegistry, monsterRegistry, terrainRegistry, trapRegistry);
         CoreCatalogValidator.ValidateCapabilities(documents["capabilities"], resistanceRegistry, report);
         CoreCatalogValidator.ValidateResistances(documents["resistances"], statusRegistry, report);
         CoreCatalogValidator.ValidateStatuses(documents["statuses"], statusRegistry, report);
@@ -68,6 +70,7 @@ internal static class DefinitionCatalogBuilder
         SpellValidator.Validate(documents, validationRegistries, report);
         ActivationValidator.Validate(documents["activations"], validationRegistries, report);
         MonsterValidator.ValidateAbilities(documents["monster_abilities"], validationRegistries, report);
+        MonsterValidator.ValidateLootProfiles(documents["monster_loot"], report);
         MonsterValidator.ValidateMonsters(documents["monsters"], validationRegistries, report);
         CombatModifierValidator.Validate(documents["combat_modifiers"], documents["monsters"], report);
         TerrainValidator.Validate(documents["terrain"], terrainRegistry, report);
@@ -92,6 +95,7 @@ internal static class DefinitionCatalogBuilder
             activationRegistry,
             monsterAbilityRegistry,
             monsterCapabilityRegistry,
+            monsterLootProfileRegistry,
             monsterRegistry,
             terrainRegistry,
             trapRegistry,

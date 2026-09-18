@@ -12,6 +12,7 @@ public static class DefinitionManifest
         new("resistances", "resistances.json", "../schemas/resistances.schema.json"),
         new("combat_modifiers", "combat_modifiers.json", "../schemas/combat_modifiers.schema.json"),
         new("activations", "activations.json", "../schemas/activations.schema.json"),
+        new("monster_loot", "monsters/monster_loot.json", "../schemas/monsters/monster_loot.schema.json"),
         new("monster_capabilities", "monsters/monster_capabilities.json", "../schemas/monsters/monster_capabilities.schema.json"),
         new("monster_abilities", "monsters/monster_abilities.json", "../schemas/monsters/monster_abilities.schema.json"),
         new("monsters", "monsters/monsters.json", "../schemas/monsters/monsters.schema.json"),

@@ -7,6 +7,7 @@ namespace IronHell.Data.Validation;
 internal static class MonsterValidator
 {
     private const string MonsterAbilitiesDocument = "monsters/monster_abilities.json";
+    private const string MonsterLootDocument = "monsters/monster_loot.json";
     private const string MonstersDocument = "monsters/monsters.json";
     private const string AbilitiesProperty = "abilities";
     private const string CapabilitiesProperty = "capabilities";
@@ -16,12 +17,18 @@ internal static class MonsterValidator
     private const string ResistanceIdProperty = "resistance_id";
     private const string CapabilityIdsProperty = "capability_ids";
     private const string ResistanceIdsProperty = "resistance_ids";
+    private const string LootProfileProperty = "loot_profile";
     private const string UnknownCapabilityError = "unknown_capability";
     private const string UnknownResistanceError = "unknown_resistance";
     private static readonly string[] SpawnPolicyProperties =
     [
         "unique", "questor", "force_depth", "force_max_hp", "force_sleep",
         "escort", "escorts", "friends", "wanderer",
+    ];
+    private static readonly string[] LegacyLootFlagProperties =
+    [
+        "only_gold", "only_item", "drop_60", "drop_90", "drop_1d2", "drop_2d2",
+        "drop_3d2", "drop_4d2", "drop_good", "drop_great", "drop_useful", "drop_chosen",
     ];
 
     public static void ValidateAbilities(
@@ -56,6 +63,7 @@ internal static class MonsterValidator
             ValidateAi(monster, monsterId, report);
             ValidateSenses(monster, monsterId, report);
             ValidateSpawnPolicy(monster, monsterId, report);
+            ValidateLootProfileReference(monster, monsterId, registries, report);
             foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
             {
                 ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
@@ -84,6 +92,112 @@ internal static class MonsterValidator
             }
 
             ValidateMonsterNode(monster, monsterId, registries, report);
+        }
+    }
+
+    public static void ValidateLootProfiles(JsonObject document, DefinitionValidationReport report)
+    {
+        foreach (var profile in document["loot_profiles"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var profileId = profile["id"]?.GetValue<string>() ?? string.Empty;
+            ValidateLootProfile(profile, profileId, report);
+        }
+    }
+
+    private static void ValidateLootProfile(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        ValidateLootDropKind(profile, profileId, report);
+        ValidateLootQuantity(profile, profileId, report);
+        ValidateGenerationRules(profile, profileId, report);
+        ValidateBonusDropRules(profile, profileId, report);
+        ValidateSpecialRewards(profile, profileId, report);
+    }
+
+    private static void ValidateLootDropKind(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        if (profile["drop_kind"]?.GetValue<string>() is not ("mixed" or "items_only" or "gold_only"))
+        {
+            report.Add(MonsterLootDocument, profileId, "drop_kind", "invalid_loot_drop_kind", "Loot profile drop_kind is invalid.");
+        }
+    }
+
+    private static void ValidateLootQuantity(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        if (profile["quantity"] is not JsonObject quantity ||
+            quantity["kind"]?.GetValue<string>() != "dice" ||
+            quantity["count"]?.GetValue<int>() is not >= 0 ||
+            quantity["sides"]?.GetValue<int>() is not > 0)
+        {
+            report.Add(MonsterLootDocument, profileId, "quantity", "invalid_loot_quantity", "Loot profile quantity must use non-negative dice count and positive sides.");
+        }
+    }
+
+    private static void ValidateGenerationRules(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        var generationRules = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var ruleNode in profile["generation_rules"]?.AsArray() ?? [])
+        {
+            var rule = ruleNode?.GetValue<string>();
+            if (rule is not ("good" or "great"))
+            {
+                report.Add(MonsterLootDocument, profileId, "generation_rules", "invalid_generation_rule", "Loot generation rule is invalid.");
+            }
+            else if (!generationRules.Add(rule))
+            {
+                report.Add(MonsterLootDocument, profileId, "generation_rules", "duplicate_generation_rule", $"Loot generation rule '{rule}' is duplicated.");
+            }
+        }
+    }
+
+    private static void ValidateBonusDropRules(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        var bonusDropRules = new HashSet<(int Chance, int Drops)>();
+        foreach (var rule in profile["bonus_drop_rules"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var chance = rule["chance"]?.GetValue<int>() ?? 0;
+            var drops = rule["drops"]?.GetValue<int>() ?? 0;
+            if (chance is < 1 or > 100 || drops < 1)
+            {
+                report.Add(MonsterLootDocument, profileId, "bonus_drop_rules", "invalid_bonus_drop_rule", "Bonus drop rules must use 1-100 chance and positive drops.");
+            }
+            else if (!bonusDropRules.Add((chance, drops)))
+            {
+                report.Add(MonsterLootDocument, profileId, "bonus_drop_rules", "duplicate_bonus_drop_rule", $"Bonus drop rule {chance}%/{drops} is duplicated.");
+            }
+        }
+    }
+
+    private static void ValidateSpecialRewards(JsonObject profile, string profileId, DefinitionValidationReport report)
+    {
+        var specialRewards = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var rewardNode in profile["special_rewards"]?.AsArray() ?? [])
+        {
+            var reward = rewardNode?.GetValue<string>();
+            if (reward != "morgoth_victory")
+            {
+                report.Add(MonsterLootDocument, profileId, "special_rewards", "invalid_special_reward", "Loot special reward is invalid.");
+            }
+            else if (!specialRewards.Add(reward))
+            {
+                report.Add(MonsterLootDocument, profileId, "special_rewards", "duplicate_special_reward", $"Loot special reward '{reward}' is duplicated.");
+            }
+        }
+    }
+
+    private static void ValidateLootProfileReference(
+        JsonObject monster,
+        string monsterId,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        ValidationHelpers.ValidateReference(monster[LootProfileProperty]?.GetValue<string>(), registries.MonsterLootProfiles, MonstersDocument, monsterId, LootProfileProperty, "unknown_monster_loot_profile", report);
+
+        if (monster["flags"] is JsonObject flags)
+        {
+            foreach (var property in LegacyLootFlagProperties.Where(property => flags[property] is not null))
+            {
+                report.Add(MonstersDocument, monsterId, $"flags.{property}", "legacy_loot_flag", "Monster loot flags must be moved to loot_profile.");
+            }
         }
     }
 

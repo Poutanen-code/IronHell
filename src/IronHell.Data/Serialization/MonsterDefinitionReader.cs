@@ -9,6 +9,47 @@ internal static class MonsterDefinitionReader
     public static List<MonsterAbilityDefinition> ReadAbilities(JsonObject document, DefinitionValidationReport report) =>
         SimpleDefinitionReader.Read<MonsterAbilityDefinition>(document, "abilities", "id", id => new MonsterAbilityDefinition(id), report);
 
+    public static List<MonsterLootProfileDefinition> ReadLootProfiles(JsonObject document, DefinitionValidationReport report)
+    {
+        var definitions = new List<MonsterLootProfileDefinition>();
+        foreach (var profile in document["loot_profiles"]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var id = profile["id"]?.GetValue<string>();
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                report.Add("monsters/monster_loot.json", null, "$.loot_profiles", "missing_id", "Definition identifier is required.");
+                continue;
+            }
+
+            var quantity = profile["quantity"]?.AsObject();
+            var bonusDropRules = profile["bonus_drop_rules"]?.AsArray().OfType<JsonObject>()
+                .Select(rule => new BonusDropRuleDefinition(
+                    rule["chance"]?.GetValue<int>() ?? 0,
+                    rule["drops"]?.GetValue<int>() ?? 0))
+                .ToArray() ?? [];
+            var generationRules = profile["generation_rules"]?.AsArray()
+                .Select(rule => rule?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
+            var specialRewards = profile["special_rewards"]?.AsArray()
+                .Select(reward => reward?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
+
+            definitions.Add(new MonsterLootProfileDefinition(
+                id,
+                profile["drop_kind"]?.GetValue<string>() ?? string.Empty,
+                new DiceRollDefinition(
+                    quantity?["kind"]?.GetValue<string>() ?? string.Empty,
+                    quantity?["count"]?.GetValue<int>() ?? 0,
+                    quantity?["sides"]?.GetValue<int>() ?? 0),
+                Array.AsReadOnly(bonusDropRules),
+                Array.AsReadOnly(generationRules),
+                Array.AsReadOnly(specialRewards)));
+        }
+
+        ValidationHelpers.ValidateDuplicates("monster_loot", definitions, report);
+        return definitions;
+    }
+
     public static List<MonsterCapabilityDefinition> ReadCapabilities(JsonObject document, DefinitionValidationReport report)
     {
         var definitions = new List<MonsterCapabilityDefinition>();
@@ -17,7 +58,7 @@ internal static class MonsterDefinitionReader
             var id = capability["id"]?.GetValue<string>();
             if (string.IsNullOrWhiteSpace(id))
             {
-                report.Add("monster_capabilities.json", null, "$.capabilities", "missing_id", "Definition identifier is required.");
+                report.Add("monsters/monster_capabilities.json", null, "$.capabilities", "missing_id", "Definition identifier is required.");
                 continue;
             }
 
@@ -76,7 +117,8 @@ internal static class MonsterDefinitionReader
                     ReadBoolean(spawnPolicy, "escort"),
                     ReadBoolean(spawnPolicy, "escorts"),
                     ReadBoolean(spawnPolicy, "friends"),
-                    ReadBoolean(spawnPolicy, "wanderer"))));
+                    ReadBoolean(spawnPolicy, "wanderer")),
+                monster["loot_profile"]?.GetValue<string>()));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);

@@ -219,6 +219,7 @@
         "capabilities",
         "resistances",
         "senses",
+        "loot_profile",
         "description",
         "sprite",
         "symbol",
@@ -290,6 +291,11 @@
           "items": { "$ref": "#/$defs/monster_blow" }
         },
         "flags": { "$ref": "#/$defs/monster_flags" },
+        "loot_profile": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+          "minLength": 1
+        },
         "spells": {
           "type": "array",
           "items": { "$ref": "#/$defs/monster_spell" }
@@ -528,18 +534,7 @@
       "additionalProperties": false,
       "properties": {
         "male": { "type": "boolean" },
-        "female": { "type": "boolean" },
-        "only_gold": { "type": "boolean" },
-        "only_item": { "type": "boolean" },
-        "drop_60": { "type": "boolean" },
-        "drop_90": { "type": "boolean" },
-        "drop_1d2": { "type": "boolean" },
-        "drop_2d2": { "type": "boolean" },
-        "drop_3d2": { "type": "boolean" },
-        "drop_4d2": { "type": "boolean" },
-        "drop_good": { "type": "boolean" },
-        "drop_great": { "type": "boolean" },
-        "no_stun": { "type": "boolean" }
+        "female": { "type": "boolean" }
       }
     }
   }

@@ -34,6 +34,9 @@ public sealed class MonsterDefinitionReaderTests
         Assert.Equal(new MonsterSensesDefinition(40, MonsterTelepathyProfile.Normal), Get(monsters, "filthy_street_urchin").Senses);
         Assert.Equal(MonsterTelepathyProfile.WeirdMind, Get(monsters, "giant_yellow_centipede").Senses.TelepathyProfile);
         Assert.Equal(MonsterTelepathyProfile.EmptyMind, Get(monsters, "grey_mold").Senses.TelepathyProfile);
+        Assert.Equal("smeagol", Get(monsters, "smeagol").LootProfileId);
+        Assert.Equal("items_9d2", Get(monsters, "ancient_multi_hued_dragon").LootProfileId);
+        Assert.Equal("morgoth", Get(monsters, "morgoth_lord_of_darkness").LootProfileId);
         Assert.Equal(["imm_sleep", "imm_confu"], Get(monsters, "farmer_maggot").Resistances);
         Assert.Equal(["imm_pois", "imm_sleep", "imm_fear", "imm_confu"], Get(monsters, "grey_mold").Resistances);
         Assert.Equal(new SpawnPolicy(false, false, false, false, false, false, false, false, false), Get(monsters, "mean_mercenary").SpawnPolicy);
@@ -50,6 +53,40 @@ public sealed class MonsterDefinitionReaderTests
         Assert.False(report.HasErrors);
         Assert.Equal(18, capabilities.Count);
         Assert.Equal("Open Doors", capabilities.Single(capability => capability.Id == "open_doors").Name);
+    }
+
+    [Fact]
+    public void ReadLootProfiles_RepositoryDefinitions_LoadsCanonicalCatalog()
+    {
+        var report = new DefinitionValidationReport();
+
+        var profiles = MonsterDefinitionReader.ReadLootProfiles(
+            LoadJson("data/definitions/monsters/monster_loot.json"), report);
+
+        Assert.False(report.HasErrors);
+        Assert.Equal(61, profiles.Count);
+        var sauron = profiles.Single(profile => profile.Id == "sauron");
+        Assert.Equal("items_only", sauron.DropKind);
+        Assert.Equal(new DiceRollDefinition("dice", 9, 2), sauron.Quantity);
+        Assert.Equal(["good", "great"], sauron.GenerationRules);
+        Assert.Empty(sauron.BonusDropRules);
+        Assert.Equal(["morgoth_victory"], profiles.Single(profile => profile.Id == "morgoth").SpecialRewards);
+    }
+
+    [Fact]
+    public void ReadLootProfiles_DuplicateDefinitionId_ReturnsValidationError()
+    {
+        var report = new DefinitionValidationReport();
+        var document = JsonNode.Parse("""
+            { "loot_profiles": [
+              { "id": "same", "drop_kind": "mixed", "quantity": { "kind": "dice", "count": 0, "sides": 2 }, "bonus_drop_rules": [], "generation_rules": [], "special_rewards": [] },
+              { "id": "same", "drop_kind": "mixed", "quantity": { "kind": "dice", "count": 1, "sides": 2 }, "bonus_drop_rules": [], "generation_rules": [], "special_rewards": [] }
+            ] }
+            """)!.AsObject();
+
+        MonsterDefinitionReader.ReadLootProfiles(document, report);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_id");
     }
 
     [Fact]
@@ -88,6 +125,58 @@ public sealed class MonsterDefinitionReaderTests
         var report = ValidateMonster(monster);
 
         Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_monster_resistance");
+    }
+
+    [Fact]
+    public void ValidateMonsters_UnknownLootProfile_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["loot_profile"] = "missing_loot";
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "unknown_monster_loot_profile");
+    }
+
+    [Fact]
+    public void ValidateMonsters_LegacyLootFlag_ReturnsValidationError()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["flags"] = new JsonObject { ["drop_good"] = true };
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "legacy_loot_flag");
+    }
+
+    [Fact]
+    public void ValidateLootProfiles_DuplicateGenerationRule_ReturnsValidationError()
+    {
+        var report = new DefinitionValidationReport();
+        var document = JsonNode.Parse("""
+            { "loot_profiles": [
+              { "id": "duplicated_rules", "drop_kind": "mixed", "quantity": { "kind": "dice", "count": 0, "sides": 2 }, "bonus_drop_rules": [], "generation_rules": ["good", "good"], "special_rewards": [] }
+            ] }
+            """)!.AsObject();
+
+        MonsterValidator.ValidateLootProfiles(document, report);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_generation_rule");
+    }
+
+    [Fact]
+    public void ValidateLootProfiles_DuplicateBonusDropRule_ReturnsValidationError()
+    {
+        var report = new DefinitionValidationReport();
+        var document = JsonNode.Parse("""
+            { "loot_profiles": [
+              { "id": "duplicated_bonus", "drop_kind": "mixed", "quantity": { "kind": "dice", "count": 0, "sides": 2 }, "bonus_drop_rules": [{ "chance": 60, "drops": 1 }, { "chance": 60, "drops": 1 }], "generation_rules": [], "special_rewards": [] }
+            ] }
+            """)!.AsObject();
+
+        MonsterValidator.ValidateLootProfiles(document, report);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_bonus_drop_rule");
     }
 
     [Fact]
@@ -220,6 +309,7 @@ public sealed class MonsterDefinitionReaderTests
         ["capabilities"] = new JsonArray(capabilityIds.Select(id => (JsonNode?)JsonValue.Create(id)).ToArray()),
         ["resistances"] = new JsonArray(),
         ["senses"] = new JsonObject { ["alertness"] = 0, ["telepathy_profile"] = "normal" },
+        ["loot_profile"] = "test_loot",
     };
 
     private static DefinitionValidationReport ValidateMonster(JsonObject monster)
@@ -244,6 +334,7 @@ public sealed class MonsterDefinitionReaderTests
         new DefinitionRegistry<ActivationDefinition>([]),
         new DefinitionRegistry<MonsterAbilityDefinition>([]),
         new DefinitionRegistry<MonsterCapabilityDefinition>([new("open_doors", "Open Doors", "Monster can open doors.")]),
+        new DefinitionRegistry<MonsterLootProfileDefinition>([new("test_loot", "mixed", new DiceRollDefinition("dice", 0, 2), [], [], [])]),
         new DefinitionRegistry<MonsterDefinition>([]),
         new DefinitionRegistry<TerrainDefinition>([]),
         new DefinitionRegistry<TrapDefinition>([]));

@@ -1,0 +1,929 @@
+{
+  "schema_version": 1,
+  "_meta": {
+    "source": "MAngband 1.5.3 monster death-drop flags",
+    "description": "Canonical reusable monster loot profiles. DROP_60 and DROP_90 remain independent bonus rules; equivalent Xd2 rules are combined only when dice sides are identical; DROP_CHOSEN is represented as a special reward rather than normal generation; DROP_USEFUL is preserved only as optional metadata because it does not affect loot generation.",
+    "schema_path": "data/schemas/monsters/monster_loot.schema.json",
+    "notes": [
+      "drop_kind mirrors ONLY_ITEM and ONLY_GOLD restrictions, defaulting to mixed when neither restriction exists.",
+      "generation_rules preserves staged GOOD and GREAT semantics rather than flattening them into a single quality value.",
+      "Generated profiles: 61; monsters migrated from legacy loot flags: 344; every monster references one profile.",
+      "DROP_USEFUL is omitted unless present in source data; it has no runtime loot generation behavior.",
+      "Morgoth uses special_rewards: [\"morgoth_victory\"] to preserve DROP_CHOSEN behavior outside normal random loot generation."
+    ]
+  },
+  "loot_profiles": [
+    {
+      "id": "gold_1d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_1d2_plus60",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_1d2_plus90",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_2d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_2d2_plus90",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_3d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 3,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_4d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_5d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 5,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_6d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_7d2",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 7,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_no_base_plus60",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "gold_no_base_plus90",
+      "drop_kind": "gold_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_1d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_1d2_good_great",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_1d2_plus60",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_1d2_plus90_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_2d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_2d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_2d2_good_great",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_2d2_plus60",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_2d2_plus90",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_3d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 3,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_3d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 3,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_4d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_4d2_good_great",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_4d2_plus90",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_5d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 5,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_5d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 5,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_6d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_6d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_6d2_good_great",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_6d2_plus90",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_7d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 7,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_7d2_good_great",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 7,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_9d2",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 9,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_9d2_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 9,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "items_no_base_plus60",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_no_base_plus60_plus90",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        },
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_no_base_plus90",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "items_no_base_plus90_good",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "major_unique",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "minor_unique",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_1d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_1d2_plus60",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_1d2_plus60_plus90",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 1,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        },
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_2d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_2d2_plus90",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_3d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 3,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_4d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_4d2_plus60",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_4d2_plus60_good",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 4,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [
+        "good"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_5d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 5,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_6d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 6,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_7d2",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 7,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_no_base_plus60",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_no_base_plus60_plus90",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 60,
+          "drops": 1
+        },
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "mixed_no_base_plus90",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "morgoth",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 10,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": [
+        "morgoth_victory"
+      ]
+    },
+    {
+      "id": "none",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [],
+      "special_rewards": []
+    },
+    {
+      "id": "sauron",
+      "drop_kind": "items_only",
+      "quantity": {
+        "kind": "dice",
+        "count": 9,
+        "sides": 2
+      },
+      "bonus_drop_rules": [],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    },
+    {
+      "id": "smeagol",
+      "drop_kind": "mixed",
+      "quantity": {
+        "kind": "dice",
+        "count": 0,
+        "sides": 2
+      },
+      "bonus_drop_rules": [
+        {
+          "chance": 90,
+          "drops": 1
+        }
+      ],
+      "generation_rules": [
+        "good",
+        "great"
+      ],
+      "special_rewards": []
+    }
+  ]
+}

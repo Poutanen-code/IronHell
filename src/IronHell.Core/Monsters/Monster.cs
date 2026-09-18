@@ -6,23 +6,19 @@ public sealed class Monster
 {
     internal Monster(
         string instanceId,
-        string definitionId,
-        int maxHp,
-        MonsterAiDefinition ai,
-        IReadOnlyList<string> capabilities,
-        IReadOnlyList<string> resistances,
-        MonsterSensesDefinition senses,
-        SpawnPolicy spawnPolicy)
+        MonsterDefinition definition,
+        int maxHp)
     {
         InstanceId = instanceId;
-        DefinitionId = definitionId;
+        DefinitionId = definition.Id;
         MaxHp = maxHp;
         CurrentHp = maxHp;
-        Ai = ai;
-        Capabilities = capabilities;
-        Resistances = resistances;
-        Senses = senses;
-        SpawnPolicy = spawnPolicy;
+        Ai = definition.Ai;
+        Capabilities = Array.AsReadOnly(definition.Capabilities.ToArray());
+        Resistances = Array.AsReadOnly(definition.Resistances.ToArray());
+        Senses = definition.Senses;
+        SpawnPolicy = definition.SpawnPolicy;
+        LootProfileId = definition.LootProfileId;
     }
 
     public string InstanceId { get; }
@@ -42,4 +38,6 @@ public sealed class Monster
     public MonsterSensesDefinition Senses { get; }
 
     public SpawnPolicy SpawnPolicy { get; }
+
+    public string? LootProfileId { get; }
 }

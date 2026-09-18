@@ -159,6 +159,16 @@ public sealed record MonsterCapabilityDefinition(
 	string Name,
 	string Description) : IIdentifiedDefinition;
 
+public sealed record MonsterLootProfileDefinition(
+	string Id,
+	string DropKind,
+	DiceRollDefinition Quantity,
+	IReadOnlyList<BonusDropRuleDefinition> BonusDropRules,
+	IReadOnlyList<string> GenerationRules,
+	IReadOnlyList<string> SpecialRewards) : IIdentifiedDefinition;
+
+public sealed record BonusDropRuleDefinition(int Chance, int Drops);
+
 public sealed record DiceRollDefinition(string Kind, int Count, int Sides);
 
 public sealed record MonsterAiDefinition(
@@ -196,7 +206,8 @@ public sealed record MonsterDefinition(
 	IReadOnlyList<string> Capabilities,
 	IReadOnlyList<string> Resistances,
 	MonsterSensesDefinition Senses,
-	SpawnPolicy SpawnPolicy) : IIdentifiedDefinition;
+	SpawnPolicy SpawnPolicy,
+	string? LootProfileId = null) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 

@@ -25,14 +25,6 @@ public sealed class MonsterFactory
         }
 
         var maxHp = _randomSource.RollDice(hpRoll.Count, hpRoll.Sides);
-        return new Monster(
-            instanceId,
-            definition.Id,
-            maxHp,
-            definition.Ai,
-            Array.AsReadOnly(definition.Capabilities.ToArray()),
-            Array.AsReadOnly(definition.Resistances.ToArray()),
-            definition.Senses,
-            definition.SpawnPolicy);
+        return new Monster(instanceId, definition, maxHp);
     }
 }
