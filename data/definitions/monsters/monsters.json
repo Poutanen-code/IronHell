@@ -78,7 +78,7 @@
       "id": "filthy_street_urchin",
       "name": "Filthy street urchin",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -158,7 +158,7 @@
       "name": "Scrawny cat",
       "species": "beast",
       "categories": [
-        "animal"
+        "animal", "town"
       ],
       "alignment": "neutral",
       "dungeon_levels": [
@@ -220,7 +220,7 @@
       "name": "Scruffy little dog",
       "species": "beast",
       "categories": [
-        "animal"
+        "animal", "town"
       ],
       "alignment": "neutral",
       "dungeon_levels": [
@@ -281,7 +281,7 @@
       "id": "farmer_maggot",
       "name": "Farmer Maggot",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -370,7 +370,7 @@
       "id": "blubbering_idiot",
       "name": "Blubbering idiot",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -434,7 +434,7 @@
       "id": "boilcovered_wretch",
       "name": "Boil-covered wretch",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -500,7 +500,7 @@
       "id": "village_idiot",
       "name": "Village idiot",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -564,7 +564,7 @@
       "id": "pitiful_beggar",
       "name": "Pitiful-looking beggar",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -629,7 +629,7 @@
       "id": "mangylooking_leper",
       "name": "Mangy-looking leper",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -694,7 +694,7 @@
       "id": "squint_eyed_rogue",
       "name": "Squint-eyed rogue",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "evil",
       "dungeon_levels": [
         0,
@@ -788,7 +788,7 @@
       "id": "singing_happy_drunk",
       "name": "Singing, happy drunk",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -854,7 +854,7 @@
       "id": "aimless_merchant",
       "name": "Aimless-looking merchant",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -920,7 +920,7 @@
       "id": "mean_mercenary",
       "name": "Mean-looking mercenary",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "evil",
       "dungeon_levels": [
         0,
@@ -988,7 +988,7 @@
       "id": "battle_scarred_veteran",
       "name": "Battle-scarred veteran",
       "species": "humanoid",
-      "categories": [],
+      "categories": ["town"],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -5560,7 +5560,7 @@
     },
     {
       "id": "novice_mage",
-      "name": "Novice mage",
+      "name": "Novice Mage",
       "species": "humanoid",
       "categories": [],
       "alignment": "neutral",
@@ -6460,7 +6460,7 @@
     },
     {
       "id": "novice_priest",
-      "name": "Novice priest",
+      "name": "Novice Priest",
       "species": "humanoid",
       "categories": [],
       "alignment": "neutral",
@@ -6536,7 +6536,7 @@
     },
     {
       "id": "novice_warrior",
-      "name": "Novice warrior",
+      "name": "Novice Warrior",
       "species": "humanoid",
       "categories": [],
       "alignment": "neutral",
@@ -6687,7 +6687,7 @@
           ]
         }
       ],
-      "description": "A back-alley sneak armed with a chipped blade.",
+      "description": "A back-alley sneak armed with a chipped blade. A rather shifty individual.",
       "sprite": "novice_rogue.png",
       "flags": {
         "male": true
@@ -8527,7 +8527,7 @@
     },
     {
       "id": "novice_ranger",
-      "name": "Novice ranger",
+      "name": "Novice Ranger",
       "species": "humanoid",
       "categories": [],
       "alignment": "neutral",
@@ -8846,7 +8846,7 @@
     },
     {
       "id": "novice_paladin",
-      "name": "Novice paladin",
+      "name": "Novice Paladin",
       "species": "humanoid",
       "categories": [],
       "alignment": "neutral",

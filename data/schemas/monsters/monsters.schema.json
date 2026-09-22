@@ -242,7 +242,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "enum": ["animal", "orc", "undead", "demon", "dragon", "giant", "troll"]
+            "enum": ["town", "animal", "orc", "undead", "demon", "dragon", "giant", "troll"]
           }
         },
         "alignment": {
