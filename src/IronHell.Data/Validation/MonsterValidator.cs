@@ -191,14 +191,6 @@ internal static class MonsterValidator
         DefinitionValidationReport report)
     {
         ValidationHelpers.ValidateReference(monster[LootProfileProperty]?.GetValue<string>(), registries.MonsterLootProfiles, MonstersDocument, monsterId, LootProfileProperty, "unknown_monster_loot_profile", report);
-
-        if (monster["flags"] is JsonObject flags)
-        {
-            foreach (var property in LegacyLootFlagProperties.Where(property => flags[property] is not null))
-            {
-                report.Add(MonstersDocument, monsterId, $"flags.{property}", "legacy_loot_flag", "Monster loot flags must be moved to loot_profile.");
-            }
-        }
     }
 
     private static void ValidateSenses(JsonObject monster, string monsterId, DefinitionValidationReport report)
@@ -236,14 +228,6 @@ internal static class MonsterValidator
         else if (monster["spawn_policy"] is not null)
         {
             report.Add(MonstersDocument, monsterId, "spawn_policy", "invalid_spawn_policy", "Spawn policy must be an object.");
-        }
-
-        if (monster["flags"] is JsonObject flags)
-        {
-            foreach (var property in SpawnPolicyProperties.Where(property => flags[property] is not null))
-            {
-                report.Add(MonstersDocument, monsterId, $"flags.{property}", "legacy_spawn_policy_flag", "Spawn policy flags must be moved to spawn_policy.");
-            }
         }
     }
 

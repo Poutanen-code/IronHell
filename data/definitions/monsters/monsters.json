@@ -17,7 +17,6 @@
           "xp_reward": "IronHell experience reward (W: exp)",
           "rarity": "IronHell rarity value (W: rarity)"
         },
-        "flags": "Boolean monster status flags; alertness is represented in senses.alertness.",
         "attacks": "IronHell B: melee attack tuples (method, effect, dice_count, dice_sides)",
         "abilities": "IronHell monster ability type identifiers; shared cooldown lives in monster-level ability_cooldown_ticks",
         "spell_frequency": "IronHell S: frequency divisor (lower = more frequent)",
@@ -78,7 +77,9 @@
       "id": "filthy_street_urchin",
       "name": "Filthy street urchin",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -141,9 +142,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A grubby child that begs passersby and sometimes snatches a coin.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -158,7 +156,8 @@
       "name": "Scrawny cat",
       "species": "beast",
       "categories": [
-        "animal", "town"
+        "animal",
+        "town"
       ],
       "alignment": "neutral",
       "dungeon_levels": [
@@ -208,7 +207,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A mangy, half-starved cat prowling the village for scraps.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -220,7 +218,8 @@
       "name": "Scruffy little dog",
       "species": "beast",
       "categories": [
-        "animal", "town"
+        "animal",
+        "town"
       ],
       "alignment": "neutral",
       "dungeon_levels": [
@@ -270,7 +269,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A scruffy mongrel that barks and occasionally bites.",
       "sprite": "dog.png",
       "symbol": "C",
@@ -281,7 +279,9 @@
       "id": "farmer_maggot",
       "name": "Farmer Maggot",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -353,9 +353,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He's lost his dogs. He's had his mushrooms stolen. He's not a happy hobbit!",
       "sprite": "farmer_maggot.png",
       "symbol": "h",
@@ -370,7 +367,9 @@
       "id": "blubbering_idiot",
       "name": "Blubbering idiot",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -421,9 +420,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He tends to blubber a lot.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -434,7 +430,9 @@
       "id": "boilcovered_wretch",
       "name": "Boil-covered wretch",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -487,9 +485,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "Ugly doesn't begin to describe him.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -500,7 +495,9 @@
       "id": "village_idiot",
       "name": "Village idiot",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -551,9 +548,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A shambling figure that drools and wanders with no clear purpose.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -564,7 +558,9 @@
       "id": "pitiful_beggar",
       "name": "Pitiful-looking beggar",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -616,9 +612,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A hollow-eyed figure that shuffles around asking for alms.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -629,7 +622,9 @@
       "id": "mangylooking_leper",
       "name": "Mangy-looking leper",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -681,9 +676,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "You feel it isn't safe to touch him.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -694,7 +686,9 @@
       "id": "squint_eyed_rogue",
       "name": "Squint-eyed rogue",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "evil",
       "dungeon_levels": [
         0,
@@ -775,9 +769,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A shady character who leers at passers-by and has quick fingers.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -788,7 +779,9 @@
       "id": "singing_happy_drunk",
       "name": "Singing, happy drunk",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -841,9 +834,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He makes you glad to be sober.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -854,7 +844,9 @@
       "id": "aimless_merchant",
       "name": "Aimless-looking merchant",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -907,9 +899,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A distracted trader who mumbles about lost shipments and bad prices.",
       "sprite": "merchant.png",
       "symbol": "t",
@@ -920,7 +909,9 @@
       "id": "mean_mercenary",
       "name": "Mean-looking mercenary",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "evil",
       "dungeon_levels": [
         0,
@@ -975,9 +966,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A scarred sell-sword looking for trouble or coin or probably both.",
       "sprite": "mercenary.png",
       "symbol": "t",
@@ -988,7 +976,9 @@
       "id": "battle_scarred_veteran",
       "name": "Battle-scarred veteran",
       "species": "humanoid",
-      "categories": ["town"],
+      "categories": [
+        "town"
+      ],
       "alignment": "neutral",
       "dungeon_levels": [
         0,
@@ -1043,9 +1033,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A grim old soldier nursing old wounds and older grudges.",
       "sprite": "humanoid.png",
       "symbol": "t",
@@ -1130,7 +1117,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small strange grey growth.",
       "sprite": "grey_mold.png",
       "symbol": "m",
@@ -1211,7 +1197,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -1290,7 +1275,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -1371,7 +1355,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -1431,7 +1414,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a smallish, slimy, icky creature.",
       "sprite": "icky_thing.png",
       "symbol": "i",
@@ -1493,7 +1475,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a smallish, slimy, icky, blobby creature.",
       "sprite": "icky_thing.png",
       "symbol": "i",
@@ -1557,7 +1538,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An oversized vermin from the cellar depths.",
       "sprite": "giant_white_mouse.png",
       "symbol": "r",
@@ -1638,7 +1618,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -1719,7 +1698,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about eight feet long.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -1784,7 +1762,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a squat and ugly humanoid figure with a canine face.",
       "sprite": "small_kobold.png",
       "symbol": "k",
@@ -1849,7 +1826,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small, dog-headed humanoid that lurks in shallow tunnels.",
       "sprite": "kobold.png",
       "symbol": "k",
@@ -1918,7 +1894,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -1983,7 +1958,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A disembodied eye, floating a few feet above the ground.",
       "sprite": "floating_eye.png",
       "symbol": "e",
@@ -2045,7 +2019,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a small lizard with a hardened hide.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -2107,7 +2080,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a yapping snarling dog, dangerous when in a pack.",
       "sprite": "canine.png",
       "symbol": "C",
@@ -2174,7 +2146,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large ant with powerful mandibles.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -2236,7 +2207,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fast-moving pest.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -2286,7 +2256,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "shriek"
@@ -2370,7 +2339,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a smallish, slimy, icky, hungry creature.",
       "sprite": "icky_thing.png",
       "symbol": "i",
@@ -2434,7 +2402,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -2514,9 +2481,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He looks inexperienced but tough.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -2591,9 +2555,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A rather shifty individual.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -2656,9 +2617,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 24,
       "abilities": [
         "heal_self",
@@ -2731,9 +2689,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 24,
       "abilities": [
         "blink",
@@ -2824,7 +2779,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -2893,7 +2847,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Its a large pile of white flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -2957,7 +2910,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is as big as a wolf.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -3021,7 +2973,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about three feet long.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -3085,7 +3036,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small black and orange lizard.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -3181,9 +3131,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A flying, screeching bird with a woman's face.",
       "sprite": "hybrid.png",
       "symbol": "H",
@@ -3250,7 +3197,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small humanoid figure.",
       "sprite": "yeek.png",
       "symbol": "y",
@@ -3317,7 +3263,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A rather vicious dog belonging to Farmer Maggot. It thinks you are stealing mushrooms.",
       "sprite": "farmers_dog.png",
       "symbol": "C",
@@ -3388,7 +3333,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A rather vicious dog belonging to Farmer Maggot. It thinks you are stealing mushrooms.",
       "sprite": "farmers_dog.png",
       "symbol": "C",
@@ -3461,7 +3405,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -3542,7 +3485,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -3606,7 +3548,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Hangs from cracks and strikes when footsteps pass beneath.",
       "sprite": "cave_spider.png",
       "symbol": "S",
@@ -3690,7 +3631,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A larger than normal feline, hissing loudly. Its velvet paws conceal a fistful of needles.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -3761,9 +3701,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "Usually known as Gollum. He's been sneaking, and he wants his 'precious.'",
       "sprite": "smeagol.png",
       "symbol": "h",
@@ -3834,7 +3771,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It's green and it's oozing.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -3908,7 +3844,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blink"
@@ -3977,7 +3912,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -4041,7 +3975,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is six inches long.",
       "sprite": "lizard.png",
       "symbol": "l",
@@ -4103,9 +4036,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A large black serpent's body with a female torso.",
       "sprite": "naga.png",
       "symbol": "n",
@@ -4173,7 +4103,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -4271,7 +4200,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "drain_mana"
@@ -4345,7 +4273,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "drain_mana"
@@ -4425,9 +4352,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A short little guy, in bedraggled clothes. He appears to be looking for a good tavern.",
       "sprite": "humanoid.png",
       "symbol": "h",
@@ -4491,7 +4415,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about two feet long and has sharp pincers.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -4559,7 +4482,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange yellow growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -4623,7 +4545,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -4701,7 +4622,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -4771,7 +4691,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a disgusting mass of poisonous worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -4846,7 +4765,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -4913,7 +4831,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an armored lizard with a powerful bite.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -4993,9 +4910,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 18,
       "abilities": [
         "arrow_1",
@@ -5084,9 +4998,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -5165,7 +5076,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It's a large pile of pulsing blue flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -5250,7 +5160,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It appears to be a pile of copper coins.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -5314,7 +5223,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a very vicious rodent.",
       "sprite": "rat.png",
       "symbol": "r",
@@ -5384,7 +5292,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -5465,7 +5372,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about ten feet long.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -5545,9 +5451,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a sturdy hobbit who is renowned for his unusual strength and vigour. He can prove a troublesome opponent.",
       "sprite": "humanoid.png",
       "symbol": "h",
@@ -5614,9 +5517,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 24,
       "abilities": [
         "blink",
@@ -5710,9 +5610,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A large green serpent with a female's torso. Her green skin glistens with acid.",
       "sprite": "naga.png",
       "symbol": "n",
@@ -5778,7 +5675,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It's blue and it's oozing.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -5853,7 +5749,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a very ugly green ghost with a voracious appetite.",
       "sprite": "ghost.png",
       "symbol": "G",
@@ -5922,7 +5817,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large pile of pulsing green flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -5987,7 +5881,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It a man-sized figure with the all too recognizable face of a kobold.",
       "sprite": "kobold.png",
       "symbol": "k",
@@ -6059,7 +5952,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a small animated kobold skeleton.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -6119,7 +6011,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a smallish, slimy, icky, nasty creature.",
       "sprite": "icky_thing.png",
       "symbol": "i",
@@ -6179,7 +6070,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "drain_mana"
@@ -6254,7 +6144,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large slimy mass of worms.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -6320,7 +6209,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It has a copper head and sharp venomous fangs.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -6451,7 +6339,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -6514,9 +6401,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 24,
       "abilities": [
         "heal_self",
@@ -6607,9 +6491,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He looks inexperienced but tough.",
       "sprite": "novice_warrior.png",
       "symbol": "p",
@@ -6689,9 +6570,6 @@
       ],
       "description": "A back-alley sneak armed with a chipped blade. A rather shifty individual.",
       "sprite": "novice_rogue.png",
-      "flags": {
-        "male": true
-      },
       "symbol": "p",
       "color": "b",
       "spawn_policy": {
@@ -6773,7 +6651,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strange brown growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -6835,7 +6712,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It screeches as it attacks.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -6902,7 +6778,6 @@
       ],
       "description": "Small and mean, it peppers enemies from a distance.",
       "sprite": "kobold_archer.png",
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "arrow_2"
@@ -6990,7 +6865,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It appears to be a pile of silver coins.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -7056,9 +6930,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A weak orc footman, dangerous in numbers.",
       "sprite": "snaga_orc.png",
       "symbol": "o",
@@ -7127,7 +6998,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is recognized by the hard-scaled end of its body that is often rattled to frighten its prey.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -7193,9 +7063,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is often found in huge numbers in deep caves.",
       "sprite": "cave_orc.png",
       "symbol": "o",
@@ -7281,7 +7148,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It scuttles towards you.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -7352,7 +7218,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a minor but aggressive demon.",
       "sprite": "demon.png",
       "symbol": "u",
@@ -7433,7 +7298,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "drain_mana"
@@ -7528,9 +7392,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A large red snake with a woman's torso.",
       "sprite": "naga.png",
       "symbol": "n",
@@ -7608,7 +7469,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large pulsating mound of red flesh.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -7682,7 +7542,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It looks poisonous.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -7744,7 +7603,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a smallish, slimy, icky, acidic creature.",
       "sprite": "icky_thing.png",
       "symbol": "i",
@@ -7833,7 +7691,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an animated kobold corpse. Flesh falls off in large chunks as it shambles forward.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -7919,7 +7776,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -8006,9 +7862,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A lithe figure of dark elven blood, resting in the shadows.",
       "sprite": "dark_elf.png",
       "ability_cooldown_ticks": 20,
@@ -8096,7 +7949,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a black lizard with overlapping scales and a powerful jaw.",
       "sprite": "reptile.png",
       "symbol": "R",
@@ -8195,9 +8047,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "Strong and powerful, for a kobold.",
       "sprite": "kobold.png",
       "symbol": "k",
@@ -8312,9 +8161,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "heal_self",
@@ -8444,9 +8290,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A captain of a regiment of weaker orcs, Lagduf keeps his troop in order with displays of excessive violence.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -8518,7 +8361,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange small humanoid.",
       "sprite": "yeek.png",
       "symbol": "y",
@@ -8598,9 +8440,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 18,
       "abilities": [
         "arrow_1",
@@ -8674,7 +8513,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "breath_fire"
@@ -8764,7 +8602,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -8837,7 +8674,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an animated orc skeleton.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -8917,9 +8753,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -8997,7 +8830,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is the larval form of a major demon.",
       "sprite": "demon.png",
       "symbol": "u",
@@ -9065,9 +8897,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A brutish orc from the hills, charging with crude iron weapons.",
       "sprite": "hill_orc.png",
       "symbol": "o",
@@ -9145,9 +8974,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is after your cash!",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -9248,7 +9074,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large white figure covered in shaggy fur.",
       "sprite": "hydra.png",
       "symbol": "Y",
@@ -9327,7 +9152,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -9398,7 +9222,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a rodent of unusual size.",
       "sprite": "rat.png",
       "symbol": "r",
@@ -9494,9 +9317,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A woman's face on the body of a vicious black bird.",
       "sprite": "hybrid.png",
       "symbol": "H",
@@ -9579,9 +9399,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blink",
@@ -9692,7 +9509,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A tiny but fierce blue dragon sleeping coiled in its small lair.",
       "sprite": "baby_blue_dragon.png",
       "ability_cooldown_ticks": 24,
@@ -9802,7 +9618,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small white dragon curled asleep on a pile of frozen bones.",
       "sprite": "baby_white_dragon.png",
       "ability_cooldown_ticks": 24,
@@ -9912,7 +9727,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small green dragon sleeping amid the reek of its own poison breath.",
       "sprite": "baby_green_dragon.png",
       "ability_cooldown_ticks": 24,
@@ -10022,7 +9836,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small black dragon sleeping in a pool of corrosive slime.",
       "sprite": "baby_black_dragon.png",
       "ability_cooldown_ticks": 24,
@@ -10132,7 +9945,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A small red dragon sleeping on its first hoard, crackling with heat.",
       "sprite": "baby_red_dragon.png",
       "ability_cooldown_ticks": 24,
@@ -10232,7 +10044,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is large and has venomous mandibles.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -10346,9 +10157,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A nasty piece of work, Brodda picks on defenseless women and children.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -10448,7 +10256,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large snake with a hooded face.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -10565,7 +10372,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a vast black spider whose bulbous body is bloated with poison.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -10648,9 +10454,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -10781,9 +10584,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -10881,9 +10681,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A skilled dark elven swordsman, battle-trained in the pits below.",
       "sprite": "dark_elven_warrior.png",
       "symbol": "h",
@@ -10953,7 +10750,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Yum! It looks quite tasty.",
       "sprite": "mushroom.png",
       "symbol": ",",
@@ -11071,9 +10867,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a cunning and devious orc with a chaotic nature.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -11144,7 +10937,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -11212,7 +11004,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange hairy growth on the dungeon floor.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -11287,7 +11078,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -11390,7 +11180,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "confuse",
@@ -11470,7 +11259,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -11562,7 +11350,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It appears to be a pile of gold coins, until it starts crawling towards you on tiny legs.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -11626,7 +11413,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It howls and snaps at you.",
       "sprite": "canine.png",
       "symbol": "C",
@@ -11693,7 +11479,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fast-breeding, annoying pest.",
       "sprite": "insect.png",
       "symbol": "I",
@@ -11774,7 +11559,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large black cat, stalking you with intent. It thinks you're its next meal.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -11849,9 +11633,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is eyeing your backpack.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -11956,7 +11737,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 24,
       "abilities": [
         "breath_acid",
@@ -12050,7 +11830,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strange hybrid of eagle and horse. It looks weird.",
       "sprite": "hybrid.png",
       "symbol": "H",
@@ -12157,7 +11936,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a shambling orcish corpse leaving behind a trail of flesh.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -12220,9 +11998,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -12299,7 +12074,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It has glistening black skin, a sleek body and highly venomous fangs.",
       "sprite": "snake.png",
       "symbol": "J",
@@ -12382,7 +12156,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large and muscled wolf from the northern wastes. Its breath is cold and icy and its fur coated in frost.",
       "sprite": "canine.png",
       "symbol": "C",
@@ -12453,7 +12226,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -12526,7 +12298,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a disgusting mass of dark worms, eating each other, the floor, the air, you....",
       "sprite": "worm.png",
       "symbol": "w",
@@ -12647,9 +12418,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A leader of a band of raiding orcs, he picks on hobbits.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -12721,7 +12489,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -12815,9 +12582,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -12910,9 +12674,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "heal_self",
@@ -12994,7 +12755,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A whirlwind of sentient air.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -13066,7 +12826,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an animated human skeleton.",
       "sprite": "skeleton_human.png",
       "symbol": "s",
@@ -13155,7 +12914,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a shambling human corpse dropping chunks of flesh behind it.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -13253,7 +13011,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "One of the largest of its species, a sleek orange and black shape creeps towards you, ready to pounce.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -13351,7 +13108,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -13440,9 +13196,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A warrior of considerable skill.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -13540,7 +13293,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a vast armored centipede with massive mandibles and a spiked tail.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -13645,7 +13397,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strange jelly thing, covered in discoloured blotches.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -13743,7 +13494,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "confuse",
@@ -13817,7 +13567,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a vicious insect with a tough carapace.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -13919,9 +13668,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -14004,7 +13750,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A hideous, smallish giant that is often found near or with orcs.",
       "sprite": "ogre.png",
       "symbol": "O",
@@ -14093,7 +13838,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It appears to be a pile of sentient mithril coins that doesn't like being picked up.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -14157,9 +13901,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "haste_self",
@@ -14255,9 +13996,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "summon_animal",
@@ -14355,9 +14093,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A large black orc clad in crude armor, swinging iron in both hands.",
       "sprite": "black_orc.png",
       "ability_cooldown_ticks": 18,
@@ -14471,7 +14206,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fast moving highly acidic jelly thing, that is eating away the floor it rests on.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -14536,7 +14270,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It makes you itch just to look at it.",
       "sprite": "insect.png",
       "symbol": "I",
@@ -14655,9 +14388,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A strong orc guarding the pass of Cirith Ungol. He is mortally afraid of spiders.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -14728,7 +14458,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_cold"
@@ -14847,7 +14576,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blind",
@@ -14939,7 +14667,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "boulder"
@@ -15028,7 +14755,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A shambling humanoid monster with long scars.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -15092,7 +14818,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large wolf with eyes full of cunning, hunting in packs.",
       "sprite": "warg.png",
       "symbol": "C",
@@ -15159,7 +14884,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It makes you itch just to look at it.",
       "sprite": "lizard.png",
       "symbol": "l",
@@ -15244,7 +14968,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strange creature that merges with the dungeon floor, trapping its victims by enveloping them within its perfectly disguised form.",
       "sprite": "humanoid.png",
       "symbol": ".",
@@ -15346,7 +15069,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "blink",
@@ -15439,7 +15161,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive orc-like figure with black skin and powerful arms.",
       "sprite": "ogre.png",
       "symbol": "O",
@@ -15564,7 +15285,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -15672,9 +15392,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "description": "A giant snake-like figure with a woman's torso.",
       "sprite": "naga.png",
       "symbol": "n",
@@ -15772,7 +15489,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_light"
@@ -15879,7 +15595,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A sleek black hound with shadow-laced fur.",
       "sprite": "dark_hound.png",
       "ability_cooldown_ticks": 10,
@@ -15970,9 +15685,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a hideous deformed cross-breed with man and orc, combining man's strength and cunning with orcish evil. The traitorous wizard Saruman is generally believed to be responsible for this abomination.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -16075,7 +15787,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant spider with hairy black and red legs.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -16157,7 +15868,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about four feet long and carnivorous.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -16257,7 +15967,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strong and powerful spider from Mirkwood forest.",
       "sprite": "mirkwood_spider.png",
       "symbol": "S",
@@ -16344,7 +16053,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A mountain brute wrapped in rune-inscribed furs.",
       "sprite": "frost_giant.png",
       "ability_cooldown_ticks": 20,
@@ -16430,7 +16138,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is half lion, half eagle. It flies menacingly towards you.",
       "sprite": "hybrid.png",
       "symbol": "H",
@@ -16527,7 +16234,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a small demonic spirit full of malevolence.",
       "sprite": "demon.png",
       "symbol": "u",
@@ -16590,9 +16296,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -16703,7 +16406,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A completely translucent hound.",
       "sprite": "zephyr.png",
       "symbol": "Z",
@@ -16795,7 +16497,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a massive animated statue made out of hardened clay.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -16918,7 +16619,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "This bizarre creature has glaring eyes and large mandibles capable of slicing through rock.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -17019,9 +16719,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A drilled warleader carrying brutal steel.",
       "sprite": "orc_captain.png",
       "ability_cooldown_ticks": 18,
@@ -17138,7 +16835,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange, vast gelatinous structure that assumes cubic proportions as it lines all four walls of the corridors it patrols. Through its transparent jelly structure you can see treasures it has engulfed, and a few corpses as well.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -17207,7 +16903,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_poison"
@@ -17299,7 +16994,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "boulder"
@@ -17381,7 +17075,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant buzzing wasp, its stinger drips venom.",
       "sprite": "insect.png",
       "symbol": "I",
@@ -17496,9 +17189,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -17614,7 +17304,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "blink",
@@ -17714,7 +17403,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "blink",
@@ -17829,9 +17517,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A large forest troll that hunts among the roots of ancient trees.",
       "sprite": "forest_troll.png",
       "symbol": "T",
@@ -17954,9 +17639,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -18053,7 +17735,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "scare"
@@ -18147,7 +17828,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A whirlpool of sentient liquid.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -18238,7 +17918,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is fast and poisonous.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -18327,7 +18006,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A whirling form of sentient rock.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -18412,7 +18090,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A whirlwind of sentient flame.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -18512,7 +18189,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_fire"
@@ -18621,7 +18297,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_cold"
@@ -18730,7 +18405,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_elec"
@@ -18840,7 +18514,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -18916,7 +18589,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -19009,9 +18681,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A proud Uruk-hai, bred for war and wearing heavy black armor.",
       "sprite": "uruk.png",
       "ability_cooldown_ticks": 18,
@@ -19138,9 +18807,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is an orc of power and great cunning, leader of the garrison at Cirith Ungol.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -19263,9 +18929,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is an orc of power and great cunning, leader of the garrison at Minas Morgul.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -19355,7 +19018,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "shriek"
@@ -19443,7 +19105,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A towering giant whose skin has hardened to near-stone.",
       "sprite": "stone_giant.png",
       "ability_cooldown_ticks": 10,
@@ -19496,7 +19157,6 @@
         "alertness": 50,
         "telepathy_profile": "weird_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_acid"
@@ -19595,7 +19255,6 @@
       ],
       "description": "A carved sentinel animated by old warding runes.",
       "sprite": "stone_golem.png",
-      "flags": {},
       "symbol": "g",
       "color": "W",
       "loot_profile": "none"
@@ -19662,7 +19321,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange red growth on the dungeon floor; it seems to burn with flame.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -19728,7 +19386,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_sound"
@@ -19854,9 +19511,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A large and powerful orc, he looks just like his father. He is tall and fast, but fortunately blessed with orcish brains.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -19961,7 +19615,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blink",
@@ -20070,7 +19723,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare"
@@ -20193,7 +19845,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_shards"
@@ -20319,7 +19970,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_poison"
@@ -20443,7 +20093,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fierce and dangerous cat, its huge tusks and sharp claws would lacerate even the strongest armor.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -20560,7 +20209,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_acid"
@@ -20667,7 +20315,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_fire"
@@ -20726,7 +20373,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -20836,7 +20482,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A tall shaggy, furry humanoid, it could call the yeti brother.",
       "sprite": "hydra.png",
       "symbol": "Y",
@@ -20936,7 +20581,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A man-wolf that moves with unnatural speed, hackles raised.",
       "sprite": "werewolf.png",
       "symbol": "C",
@@ -21017,9 +20661,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A powerful dark elf noble sleeping in a luxurious underground chamber.",
       "sprite": "dark_elven_lord.png",
       "ability_cooldown_ticks": 10,
@@ -21117,7 +20758,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "boulder"
@@ -21240,9 +20880,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A large and powerful orc, captain of one of Saruman's orcish regiments.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -21369,9 +21006,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A strong and cunning orc warrior, the commander of Saruman's orcish horde.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -21442,7 +21076,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_elec"
@@ -21568,7 +21201,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -21649,7 +21281,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_fire"
@@ -21725,7 +21356,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_acid"
@@ -21801,7 +21431,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_cold"
@@ -21877,7 +21506,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_elec"
@@ -21975,7 +21603,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an orcish figure covered in wrappings.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -22056,7 +21683,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant beetle with vicious claws.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -22127,7 +21753,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "slow"
@@ -22216,7 +21841,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant scorpion with a sharp stinger.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -22286,7 +21910,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "drain_mana"
@@ -22372,9 +21995,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A scarred warrior who moves with confidence.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -22475,9 +22095,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is also known as the King of Khazad-dum. His ego is renowned to be bigger than his head.",
       "sprite": "orc.png",
       "symbol": "o",
@@ -22587,9 +22204,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A thief of great power and shifty speed.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -22655,7 +22269,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_fire"
@@ -22727,7 +22340,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is looking for prey.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -22776,7 +22388,6 @@
         "alertness": 50,
         "telepathy_profile": "weird_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "breath_confusion"
@@ -22889,7 +22500,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A wight that haunts the wooded barrows, draining life with a touch.",
       "sprite": "forest_wight.png",
       "ability_cooldown_ticks": 20,
@@ -23012,9 +22622,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 16,
       "abilities": [
         "heal_self",
@@ -23140,9 +22747,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 16,
       "abilities": [
         "heal_self",
@@ -23271,7 +22875,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "scare"
@@ -23368,7 +22971,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a human form encased in mouldy wrappings.",
       "sprite": "mummy.png",
       "symbol": "z",
@@ -23479,7 +23081,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A blood-sucking bat that flies at your neck hungrily.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -23598,9 +23199,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "slow",
@@ -23730,9 +23328,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "slow",
@@ -23832,9 +23427,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 30,
       "abilities": [
         "teleport_self",
@@ -23929,7 +23521,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "slow",
@@ -24041,9 +23632,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -24158,9 +23746,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a giant troll with scabrous black skin.",
       "sprite": "stone_troll.png",
       "symbol": "T",
@@ -24267,9 +23852,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blink",
@@ -24398,7 +23980,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A huge wormlike shape dripping acid, twisted by evil sorcery into a foul monster that breeds on death.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -24505,7 +24086,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A hideous centipede covered in slime and with glowing tentacles around its head.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -24579,7 +24159,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant beetle with poisonous mandibles.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -24644,7 +24223,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is an ant encased in shaggy grey fur.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -24742,9 +24320,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A short and swarthy Easterling.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -24864,7 +24439,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a huge black panther, clubbed tentacles sprouting from its shoulders.",
       "sprite": "cat.png",
       "symbol": "f",
@@ -24930,7 +24504,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is smoking and burning with great heat.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -25012,7 +24585,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant orc-like figure with an awesomely muscled frame.",
       "sprite": "ogre.png",
       "symbol": "O",
@@ -25120,7 +24692,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A ghostly white form that drains experience from those it touches.",
       "sprite": "white_wraith.png",
       "ability_cooldown_ticks": 16,
@@ -25251,7 +24822,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -25380,9 +24950,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -25478,7 +25045,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant beetle wreathed in flames.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -25598,7 +25164,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It appears to be a pile of coins made of precious adamant, slithering toward you on lots of tiny legs.",
       "sprite": "coins.png",
       "symbol": "$",
@@ -25698,7 +25263,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A powerful troll form. Venom drips from its needlelike claws.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -25819,7 +25383,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_sound"
@@ -25946,7 +25509,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_nexus"
@@ -26071,7 +25633,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A hideous ogre wrapped in black sorcerous robes who rests between bouts of dark study.",
       "sprite": "ogre_mage.png",
       "ability_cooldown_ticks": 8,
@@ -26184,9 +25745,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "An ogre renowned for acts of surpassing cruelty, Lokkak quickly became the leader of a large band of violent ogres.",
       "sprite": "ogre.png",
       "symbol": "O",
@@ -26337,7 +25895,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "teleport_to",
@@ -26461,7 +26018,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "breath_fire"
@@ -26555,7 +26111,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "bolt_elec"
@@ -26681,9 +26236,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -26812,7 +26364,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "scare",
@@ -26918,9 +26469,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blind",
@@ -27047,9 +26595,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 20,
       "abilities": [
         "summon_kin"
@@ -27138,9 +26683,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "haste_self",
@@ -27259,7 +26801,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blind",
@@ -27392,7 +26933,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blink",
@@ -27530,7 +27070,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "breath_poison"
@@ -27655,9 +27194,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a white troll with powerfully clawed hands.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -27761,7 +27297,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive worm form many feet in length whose vast maw drips with acid.",
       "sprite": "purple_worm.png",
       "symbol": "w",
@@ -27884,7 +27419,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -28040,7 +27574,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A strange ox-like form with a huge head but a thin, weak neck, it looks likes the creation of some deranged alchemist.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -28158,7 +27691,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -28276,7 +27808,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -28387,7 +27918,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -28498,7 +28028,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -28609,7 +28138,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -28741,7 +28269,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a massive statue of purest mithril. It looks expensive!",
       "sprite": "golem.png",
       "symbol": "g",
@@ -28856,7 +28383,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A dragon-like form wrapped in shadow with glowing red eyes, surrounded by an aura of deathly cold.",
       "sprite": "shadow_drake.png",
       "ability_cooldown_ticks": 12,
@@ -28977,7 +28503,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a troll skeleton animated by dark dweomers.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -29090,7 +28615,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "arrow_4"
@@ -29165,7 +28689,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant ant that crackles with energy.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -29230,7 +28753,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An armored form moving with purpose. Powerful on its own, flee when hordes of them march.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -29338,7 +28860,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A wight that has risen from a grave, lying still as death until disturbed.",
       "sprite": "grave_wight.png",
       "ability_cooldown_ticks": 16,
@@ -29429,7 +28950,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a beetle with deadly sharp cutting mandibles and a rock-hard carapace.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -29572,7 +29092,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "You do not believe in it, but it believes in you... An invisible undead spirit that drains your very mind.",
       "sprite": "ghost.png",
       "ability_cooldown_ticks": 30,
@@ -29676,7 +29195,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant beetle that produces a chilling sound.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -29775,7 +29293,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "teleport_self",
@@ -29840,7 +29357,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "blink",
@@ -29993,9 +29509,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -30137,9 +29650,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A humanoid clothed in black who moves with blinding speed.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -30249,7 +29759,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "forget"
@@ -30343,7 +29852,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "boulder",
@@ -30478,9 +29986,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "Huge and dimwitted, but terrifying in close quarters.",
       "sprite": "cave_troll.png",
       "symbol": "T",
@@ -30602,9 +30107,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A huge, ugly, half-human in search of plunder.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -30727,9 +30229,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -30845,7 +30344,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An ancient wight resting in its burial mound, waiting to drain the unwary.",
       "sprite": "barrow_wight.png",
       "ability_cooldown_ticks": 16,
@@ -30982,7 +30480,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is the animated form of a massive two-headed troll.",
       "sprite": "skeleton.png",
       "symbol": "s",
@@ -31088,7 +30585,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -31204,7 +30700,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -31321,7 +30816,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -31438,7 +30932,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -31558,9 +31051,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31677,9 +31167,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31796,9 +31283,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -31924,7 +31408,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -32051,7 +31534,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -32183,9 +31665,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "He is a troll that reeks of brine.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -32279,7 +31758,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A roiling mass of living flame given rudimentary will.",
       "sprite": "fire_elemental.png",
       "ability_cooldown_ticks": 12,
@@ -32413,7 +31891,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -32536,7 +32013,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_cold"
@@ -32650,7 +32126,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is impossible to define its form but its violence is legendary.",
       "sprite": "elemental.png",
       "symbol": "E",
@@ -32757,7 +32232,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A hideous centipede covered in slime and with glowing tentacles around its head.",
       "sprite": "centipede.png",
       "symbol": "c",
@@ -32887,9 +32361,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "traps",
@@ -33011,9 +32482,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 20,
       "abilities": [
         "summon_kin"
@@ -33160,7 +32628,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blink",
@@ -33324,7 +32791,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A humanoid figure dressed in robes, sleeping in its coffin. Power emanates from its chilling frame.",
       "sprite": "master_vampire.png",
       "ability_cooldown_ticks": 12,
@@ -33422,7 +32888,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant grey scorpion. It looks poisonous.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -33531,7 +32996,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_acid"
@@ -33660,7 +33124,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_elec"
@@ -33769,7 +33232,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_fire"
@@ -33900,7 +33362,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a massive deep brown statue, striding towards you with an all-too-familiar purpose. Your magic surprisingly feels much less powerful now.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -34020,7 +33481,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a massive intelligent troll with needle-sharp fangs.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -34161,9 +33621,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A human warrior, moving with lightning speed.",
       "sprite": "humanoid.png",
       "symbol": "p",
@@ -34281,7 +33738,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_gravity"
@@ -34416,7 +33872,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A disgusting animated blob of destruction. Flee its gruesome hunger!",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -34537,7 +33992,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_inertia"
@@ -34664,7 +34118,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A deep brown shape is visible before you, its canine form strikes you with an almost physical force. The dungeon floor buckles as if struck by a powerful blow as it stalks towards you.",
       "sprite": "zephyr.png",
       "ability_cooldown_ticks": 10,
@@ -34789,7 +34242,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -34908,7 +34360,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_acid",
@@ -35007,7 +34458,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "darkness",
@@ -35117,7 +34567,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -35225,7 +34674,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive elephantine form with eyes twisted by madness.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -35309,7 +34757,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant ant covered in shaggy fur. Its powerful jaws glow with heat.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -35416,7 +34863,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -35549,7 +34995,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A huge creature of the element Earth. Able to merge with its element, it has four huge arms protruding from its enormous torso.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -35692,7 +35137,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "teleport_to",
@@ -35842,7 +35286,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "forget"
@@ -35955,7 +35398,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A tangible but ghostly form made of grey fog. The air around it feels deathly cold.",
       "sprite": "grey_wraith.png",
       "ability_cooldown_ticks": 14,
@@ -36072,7 +35514,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "scare",
@@ -36208,7 +35649,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An enormous construct resembling a titan made from stone. It strides purposefully towards you, swinging its slow fists with earth-shattering power.",
       "sprite": "golem.png",
       "symbol": "g",
@@ -36310,7 +35750,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -36442,9 +35881,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 14,
       "abilities": [
         "boulder"
@@ -36556,7 +35992,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -36668,7 +36103,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -36779,7 +36213,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "confuse",
@@ -36891,7 +36324,6 @@
           ]
         }
       ],
-      "flags": {},
       "spell_frequency": 10,
       "ability_cooldown_ticks": 20,
       "abilities": [
@@ -37044,7 +36476,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A larger cousin of the lurker, this creature traps unsuspecting victims and paralyzes them, to be slowly digested later.",
       "sprite": "humanoid.png",
       "symbol": ".",
@@ -37151,7 +36582,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "bolt_fire",
@@ -37269,7 +36699,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_ice",
@@ -37359,9 +36788,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "haste_self",
@@ -37500,9 +36926,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "teleport_to",
@@ -37611,9 +37034,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_self",
@@ -37716,7 +37136,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a massive figure clothed in wrappings. You are wary of its massive fists.",
       "sprite": "zombie.png",
       "symbol": "z",
@@ -37838,9 +37257,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "summon_kin"
@@ -37973,7 +37389,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -38092,7 +37507,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "bolt_plasma",
@@ -38227,7 +37641,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A lump of rotting black flesh that slurrrrrrrps across the dungeon floor.",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -38331,7 +37744,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a giant beetle, whose carapace shimmers with vibrant energies.",
       "sprite": "beetle.png",
       "symbol": "K",
@@ -38401,7 +37813,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_nexus"
@@ -38495,7 +37906,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_plasma"
@@ -38605,7 +38015,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "confuse",
@@ -38717,7 +38126,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "confuse",
@@ -38831,7 +38239,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -38945,7 +38352,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "scare",
@@ -39062,7 +38468,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "blind",
@@ -39179,7 +38584,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A humanoid figure in armor of ancient form. From beneath its helmet, eyes glow a baleful red that pierce like lances of fire.",
       "sprite": "death_knight.png",
       "ability_cooldown_ticks": 10,
@@ -39308,9 +38712,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -39403,7 +38804,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_time"
@@ -39521,7 +38921,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_light",
@@ -39635,7 +39034,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -39751,7 +39149,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -39908,7 +39305,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blind",
@@ -40049,7 +39445,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Your life force is torn from your body as this powerful unearthly being approaches from its ancient throne room.",
       "sprite": "emperor_wight.png",
       "ability_cooldown_ticks": 12,
@@ -40188,7 +39583,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 22,
       "abilities": [
         "heal_self",
@@ -40328,7 +39722,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "bolt_plasma",
@@ -40460,7 +39853,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A wraith of pure shadow and malice that drains the life force from those it touches.",
       "sprite": "black_wraith.png",
       "ability_cooldown_ticks": 14,
@@ -40571,9 +39963,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 14,
       "abilities": [
         "blind",
@@ -40705,7 +40094,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -40823,7 +40211,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive troll, larger and stronger than many men together.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -40929,7 +40316,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive two-headed troll of huge strength, ettins are stupid but violent. They are also living proof that two heads are not more intelligent than one...",
       "sprite": "troll.png",
       "symbol": "T",
@@ -41057,7 +40443,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "bolt_ice",
@@ -41194,9 +40579,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_acid",
@@ -41319,7 +40701,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -41436,7 +40817,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -41579,7 +40959,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "scare",
@@ -41735,7 +41114,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fearsome skeletal horse with glowing eyes, that watch you with little more than a hatred of all that lives.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -41884,7 +41262,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An ancient noble of the undead who commands lesser vampires.",
       "sprite": "vampire_lord.png",
       "ability_cooldown_ticks": 14,
@@ -42006,7 +41383,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -42094,7 +41470,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange mass of squirming worms. Magical energy crackles around its disgusting form.",
       "sprite": "worm.png",
       "symbol": "w",
@@ -42145,7 +41520,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -42263,7 +41637,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A weird ghostly troll-like being from the ethereal plane.",
       "sprite": "ghost.png",
       "symbol": "G",
@@ -42436,7 +41809,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "boulder",
@@ -42567,7 +41939,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "scare",
@@ -42677,9 +42048,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blind",
@@ -42792,9 +42160,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -42908,9 +42273,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -43053,7 +42415,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a tougher relative of the Xorn. Its hide glitters with metal ores.",
       "sprite": "xorn.png",
       "symbol": "X",
@@ -43156,7 +42517,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A vast legendary bird, its iron talons rake the most impenetrable of surfaces and its screech echoes through the many winding dungeon corridors.",
       "sprite": "bird.png",
       "symbol": "B",
@@ -43302,9 +42662,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "A tall black cloaked Ringwraith, he is a master of horsemanship. He longs to taste your blood.",
       "sprite": "wraith.png",
       "symbol": "W",
@@ -43421,7 +42778,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a cross between a human and a bull.",
       "sprite": "hybrid.png",
       "symbol": "H",
@@ -43541,9 +42897,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "hold",
@@ -43678,7 +43031,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "slow",
@@ -43796,7 +43148,6 @@
           ]
         }
       ],
-      "flags": {},
       "spell_frequency": 6,
       "ability_cooldown_ticks": 12,
       "abilities": [
@@ -43912,7 +43263,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "blind",
@@ -44029,7 +43379,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "slow",
@@ -44145,7 +43494,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "blind",
@@ -44272,7 +43620,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "blind",
@@ -44432,9 +43779,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -44555,9 +43899,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -44715,7 +44056,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -44821,7 +44161,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "bolt_fire",
@@ -44980,9 +44319,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -45136,9 +44472,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "cause_3",
@@ -45303,7 +44636,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "teleport_to",
@@ -45404,7 +44736,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "bolt_fire",
@@ -45564,9 +44895,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -45687,7 +45015,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "blind",
@@ -45862,7 +45189,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "slow",
@@ -45999,7 +45325,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 30,
       "abilities": [
         "blind",
@@ -46110,7 +45435,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A massive elephantine form with eyes twisted by madness.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -46222,7 +45546,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -46343,7 +45666,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -46504,9 +45826,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -46646,9 +45965,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 18,
       "abilities": [
         "blind",
@@ -46786,9 +46102,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_acid",
@@ -46916,7 +46229,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -47079,9 +46391,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "bolt_elec",
@@ -47212,7 +46521,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "scare",
@@ -47325,9 +46633,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -47486,7 +46791,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 18,
       "abilities": [
         "teleport_level",
@@ -47627,7 +46931,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -47762,9 +47065,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -47926,9 +47226,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -48068,9 +47365,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -48202,7 +47496,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "confuse",
@@ -48383,7 +47676,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "boulder",
@@ -48519,7 +47811,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "hold",
@@ -48685,7 +47976,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is the epitome of all that is evil, in a mold. Its lifeless form draws power from sucking the souls of those that approach it, a nimbus of pure evil surrounds it. Luckily for you, it can't move.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -48810,9 +48100,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -48947,9 +48234,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -49099,9 +48383,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "summon_animal",
@@ -49228,9 +48509,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "confuse",
@@ -49384,7 +48662,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -49518,7 +48795,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_nether"
@@ -49646,7 +48922,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_time"
@@ -49776,7 +49051,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_plasma"
@@ -49836,7 +49110,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -49969,7 +49242,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -50099,9 +49371,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -50260,9 +49529,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "traps"
@@ -50421,9 +49687,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -50577,9 +49840,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -50741,9 +50001,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_level",
@@ -50882,7 +50139,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_nether"
@@ -51013,7 +50269,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -51148,7 +50403,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "bolt_fire",
@@ -51309,7 +50563,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -51378,7 +50631,6 @@
         "alertness": 10,
         "telepathy_profile": "normal"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "teleport_away",
@@ -51452,7 +50704,6 @@
         "alertness": 10,
         "telepathy_profile": "normal"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "bolt_mana",
@@ -51520,7 +50771,6 @@
         "alertness": 10,
         "telepathy_profile": "normal"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "slow",
@@ -51707,7 +50957,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_chaos"
@@ -51838,7 +51087,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_acid",
@@ -51988,7 +51236,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "scare",
@@ -52179,9 +51426,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -52322,7 +51566,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -52385,7 +51628,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -52518,9 +51760,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -52663,9 +51902,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -52829,9 +52065,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -52973,9 +52206,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "breath_acid",
@@ -53146,7 +52376,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -53317,9 +52546,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -53469,9 +52695,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -53665,7 +52888,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -53852,9 +53074,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "teleport_to",
@@ -53982,7 +53201,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "cause_4",
@@ -54110,7 +53328,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_chaos"
@@ -54241,7 +53458,6 @@
           ]
         }
       ],
-      "flags": {},
       "spell_frequency": 4,
       "ability_cooldown_ticks": 8,
       "abilities": [
@@ -54378,7 +53594,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -54516,7 +53731,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -54675,9 +53889,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -54820,7 +54031,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_poison",
@@ -54996,7 +54206,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "teleport_to",
@@ -55066,7 +54275,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55128,7 +54336,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55190,7 +54397,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55362,9 +54568,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blink",
@@ -55544,9 +54747,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blind",
@@ -55712,9 +54912,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -55856,7 +55053,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_acid",
@@ -56033,9 +55229,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -56107,7 +55300,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "summon_animal",
@@ -56173,7 +55365,6 @@
         "alertness": 0,
         "telepathy_profile": "empty_mind"
       },
-      "flags": {},
       "ability_cooldown_ticks": 2,
       "abilities": [
         "summon_animal",
@@ -56341,9 +55532,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_away",
@@ -56491,9 +55679,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "mind_blast",
@@ -56608,7 +55793,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A blazing hound from the depths of the pit, sleeping in a heat shimmer.",
       "sprite": "hellhound.png",
       "ability_cooldown_ticks": 10,
@@ -56765,9 +55949,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_to",
@@ -56899,7 +56080,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 4,
       "abilities": [
         "breath_fire",
@@ -57028,9 +56208,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -57168,9 +56345,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "scare",
@@ -57344,9 +56518,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_self",
@@ -57494,9 +56665,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_cold",
@@ -57632,9 +56800,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "breath_dark",
@@ -57766,9 +56931,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blind",
@@ -57939,9 +57101,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "teleport_self",
@@ -58155,9 +57314,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "ball_mana",
@@ -58248,7 +57404,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is about three feet long with large teeth. As the light of your lamp falls on it, it seems to grow stronger.",
       "sprite": "rat.png",
       "symbol": "r",
@@ -58350,7 +57505,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a large pile of rotting flesh, whose touch spoils your food. The terrible smell it exudes is also very hard to get rid of...",
       "sprite": "jelly.png",
       "symbol": "j",
@@ -58459,7 +57613,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant bat, the beating of whose wings produces a strangely unnerving noise.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -58526,7 +57679,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant silver ant with a caustic bite.",
       "sprite": "giant_ant.png",
       "symbol": "a",
@@ -58622,7 +57774,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is moving slowly towards you.",
       "sprite": "snake.png",
       "symbol": "S",
@@ -58679,7 +57830,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A giant bat which feeds on raw magical energy.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -58768,7 +57918,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a strange growth on the dungeon floor, glowing and crackling with sparks.",
       "sprite": "mold.png",
       "symbol": "m",
@@ -58871,7 +58020,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A fast-moving and deadly draconian animal. Beware its poisonous sting!",
       "sprite": "small_dragon.png",
       "symbol": "d",
@@ -59018,7 +58166,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "blind",
@@ -59168,7 +58315,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -59329,7 +58475,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "blink",
@@ -59433,7 +58578,6 @@
       "sprite": "bird.png",
       "symbol": "B",
       "color": "s",
-      "flags": {},
       "loot_profile": "none"
     },
     {
@@ -59512,7 +58656,6 @@
       "sprite": "bird.png",
       "symbol": "B",
       "color": "D",
-      "flags": {},
       "loot_profile": "none"
     },
     {
@@ -59587,7 +58730,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "shriek"
@@ -59733,7 +58875,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_nether",
@@ -59838,7 +58979,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A large bear appears to have made its home in this cave. It is hungry, and you are trespassing in its territory.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -59953,7 +59093,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A huge, beastly bear, more savage than most of its kind.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -60069,7 +59208,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "In the eyes of this bear, there glimmers the faintest light of intelligence. And then its form begins to change... The combination of animal cunning, human intelligence and the great physical strength of the bear makes for a dangerous enemy.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -60186,9 +59324,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "Beorn is only occasionally seen in human form these days, preferring to appear in the shape of a giant black bear: he also prefers the company of beasts to that of humans. He has never taken kindly to strangers, even in human form - and still less when in bear's shape, as he is now.",
       "sprite": "quylthulg.png",
       "symbol": "q",
@@ -60325,7 +59460,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 20,
       "abilities": [
         "scare",
@@ -60441,7 +59575,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_poison",
@@ -60612,7 +59745,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "ball_elec",
@@ -60759,7 +59891,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_cold",
@@ -60902,7 +60033,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "haste_self",
@@ -61048,7 +60178,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "summon_hi_demon",
@@ -61183,7 +60312,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "confuse",
@@ -61301,7 +60429,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 24,
       "abilities": [
         "breath_confusion"
@@ -61409,7 +60536,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 24,
       "abilities": [
         "breath_sound"
@@ -61540,7 +60666,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -61699,7 +60824,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -61832,7 +60956,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -61964,7 +61087,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "blind",
@@ -62057,9 +61179,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "summon_animal",
@@ -62150,9 +61269,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "heal_self",
@@ -62267,9 +61383,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "summon_animal",
@@ -62387,9 +61500,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 8,
       "abilities": [
         "haste_self",
@@ -62487,7 +61597,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "boulder"
@@ -62602,9 +61711,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "boulder",
@@ -62773,9 +61879,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 10,
       "abilities": [
         "boulder"
@@ -62961,9 +62064,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 6,
       "abilities": [
         "boulder",
@@ -63062,7 +62162,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 14,
       "abilities": [
         "hold",
@@ -63191,7 +62290,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "forget",
@@ -63344,7 +62442,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "cause_2",
@@ -63516,9 +62613,6 @@
           ]
         }
       ],
-      "flags": {
-        "female": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "blind",
@@ -63603,7 +62697,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 24,
       "abilities": [
         "shriek"
@@ -63685,7 +62778,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Clouds of these monsters light up the dungeon - so brightly that you can barely see through them.",
       "sprite": "insect.png",
       "symbol": "I",
@@ -63790,9 +62882,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 4,
       "abilities": [
         "heal_self",
@@ -63940,9 +63029,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "summon_animal",
@@ -64107,7 +63193,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "hold",
@@ -64248,7 +63333,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "shriek",
@@ -64357,7 +63441,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "Trained to hunt and kill without fear.",
       "sprite": "bird.png",
       "symbol": "B",
@@ -64487,7 +63570,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An emaciated undead creature that paralyzes with its touch, haunting old graveyards.",
       "sprite": "ghoul.png",
       "ability_cooldown_ticks": 18,
@@ -64663,7 +63745,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "A more powerful form of ghoul that paralysis with terrible force and drains constitution.",
       "sprite": "ghast.png",
       "ability_cooldown_ticks": 14,
@@ -64817,7 +63898,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "An enormous serpent whose gaze can turn flesh to stone.",
       "sprite": "greater_basilisk.png",
       "ability_cooldown_ticks": 16,
@@ -64944,7 +64024,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "bolt_fire",
@@ -65079,7 +64158,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "slow",
@@ -65163,7 +64241,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "missile",
@@ -65255,7 +64332,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "scare",
@@ -65365,7 +64441,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "It is a fast moving creature of chaos, a gigantic black bat surrounded by flickering bright red flames.",
       "sprite": "bat.png",
       "symbol": "b",
@@ -65487,9 +64562,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 16,
       "abilities": [
         "darkness"
@@ -65656,7 +64728,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "teleport_to",
@@ -65793,7 +64864,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 16,
       "abilities": [
         "bolt_plasma",
@@ -65924,9 +64994,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "description": "This ogre is leader of his tribe. He sneers at you as he advances towards you, wielding a huge club and pushing his own followers rudely aside.",
       "sprite": "ogre.png",
       "symbol": "O",
@@ -66051,9 +65118,6 @@
           ]
         }
       ],
-      "flags": {
-        "male": true
-      },
       "ability_cooldown_ticks": 12,
       "abilities": [
         "heal_self",
@@ -66189,7 +65253,6 @@
           ]
         }
       ],
-      "flags": {},
       "description": "This troll's great strength and size have won it the place of chieftain of its tribe. It fears nothing.",
       "sprite": "troll.png",
       "symbol": "T",
@@ -66260,7 +65323,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 8,
       "abilities": [
         "breath_shards"
@@ -66366,7 +65428,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 12,
       "abilities": [
         "breath_disenchant"
@@ -66546,7 +65607,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 6,
       "abilities": [
         "heal_self",
@@ -66691,7 +65751,6 @@
           ]
         }
       ],
-      "flags": {},
       "ability_cooldown_ticks": 10,
       "abilities": [
         "breath_acid",

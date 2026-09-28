@@ -19,21 +19,6 @@ const lootSchema = loadJson("data/schemas/monsters/monster_loot.schema.json");
 const ajv = new Ajv2020({ strict: false, allErrors: true });
 const validateLoot = ajv.compile(lootSchema);
 
-const legacyLootFlags = [
-  "only_gold",
-  "only_item",
-  "drop_60",
-  "drop_90",
-  "drop_1d2",
-  "drop_2d2",
-  "drop_3d2",
-  "drop_4d2",
-  "drop_good",
-  "drop_great",
-  "drop_useful",
-  "drop_chosen"
-];
-
 function profile(id) {
   const found = lootCatalog.loot_profiles.find((entry) => entry.id === id);
   assert.ok(found, `missing loot profile ${id}`);
@@ -57,14 +42,6 @@ test("all monster loot profile references resolve", () => {
   for (const entry of monsters.monsters) {
     assert.equal(typeof entry.loot_profile, "string", `${entry.id} is missing loot_profile`);
     assert.ok(profileIds.has(entry.loot_profile), `${entry.id} references unknown loot profile ${entry.loot_profile}`);
-  }
-});
-
-test("legacy monster loot flags are removed from production monsters", () => {
-  for (const entry of monsters.monsters) {
-    for (const flag of legacyLootFlags) {
-      assert.equal(Object.hasOwn(entry.flags ?? {}, flag), false, `${entry.id} still has legacy loot flag ${flag}`);
-    }
   }
 });
 

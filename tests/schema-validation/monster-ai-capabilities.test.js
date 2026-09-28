@@ -60,15 +60,3 @@ test("monster schema rejects invalid AI and duplicate capabilities", () => {
   duplicateCapability.monsters[0].capabilities.push(duplicateCapability.monsters[0].capabilities[0]);
   assert.equal(validateMonsters(duplicateCapability), false);
 });
-
-test("monster schema rejects migrated legacy fields", () => {
-  const legacyBehavior = structuredClone(monsters);
-  legacyBehavior.monsters[0].ai_behavior = "wanderer";
-  assert.equal(validateMonsters(legacyBehavior), false);
-
-  for (const legacyFlag of ["rand25", "rand50", "stupid", "open_door", "bash_door", "take_item", "take_gold", "pass_wall", "kill_wall", "move_body", "kill_body", "multiply", "regenerate", "invisible"]) {
-    const legacyMonster = structuredClone(monsters);
-    legacyMonster.monsters[0].flags[legacyFlag] = true;
-    assert.equal(validateMonsters(legacyMonster), false, `${legacyFlag} should be rejected`);
-  }
-});

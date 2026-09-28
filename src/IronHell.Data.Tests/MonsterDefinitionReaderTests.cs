@@ -139,17 +139,6 @@ public sealed class MonsterDefinitionReaderTests
     }
 
     [Fact]
-    public void ValidateMonsters_LegacyLootFlag_ReturnsValidationError()
-    {
-        var monster = CreateMonsterNode([]);
-        monster["flags"] = new JsonObject { ["drop_good"] = true };
-
-        var report = ValidateMonster(monster);
-
-        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "legacy_loot_flag");
-    }
-
-    [Fact]
     public void ValidateLootProfiles_DuplicateGenerationRule_ReturnsValidationError()
     {
         var report = new DefinitionValidationReport();
@@ -226,17 +215,6 @@ public sealed class MonsterDefinitionReaderTests
         var report = ValidateMonster(monster);
 
         Assert.Equal(2, report.ToImmutable().Errors.Count(error => error.Code == "invalid_spawn_policy"));
-    }
-
-    [Fact]
-    public void ValidateMonsters_LegacySpawnPolicyFlag_ReturnsValidationError()
-    {
-        var monster = CreateMonsterNode([]);
-        monster["flags"] = new JsonObject { ["friends"] = true };
-
-        var report = ValidateMonster(monster);
-
-        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "legacy_spawn_policy_flag");
     }
 
     [Theory]

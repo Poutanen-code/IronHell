@@ -23,7 +23,6 @@ ajv.addSchema(commonSchema);
 const validateResistances = ajv.compile(resistanceSchema);
 const validateResistanceList = ajv.compile(monsterSchema.$defs.monster.properties.resistances);
 const validateSenses = ajv.compile(monsterSchema.$defs.monster_senses);
-const validateFlags = ajv.compile(monsterSchema.$defs.monster_flags);
 
 test("canonical resistance catalog contains parity-confirmed status immunities", () => {
   assert.equal(validateResistances(resistanceCatalog), true, JSON.stringify(validateResistances.errors?.slice(0, 5)));
@@ -76,13 +75,4 @@ test("monster schema rejects invalid senses and duplicate resistances", () => {
   const duplicateResistance = structuredClone(monsters);
   duplicateResistance.monsters[0].resistances = ["imm_fire", "imm_fire"];
   assert.equal(validateResistanceList(duplicateResistance.monsters[0].resistances), false);
-});
-
-test("monster schema rejects migrated legacy resistance and sensing flags", () => {
-  for (const legacyFlag of ["immune_acid", "immune_elec", "immune_fire", "immune_cold", "immune_pois", "no_sleep", "no_fear", "no_conf", "alertness", "weird_mind", "empty_mind"]) {
-    const legacyMonster = structuredClone(monsters);
-    legacyMonster.monsters[0].flags ??= {};
-    legacyMonster.monsters[0].flags[legacyFlag] = legacyFlag === "alertness" ? 20 : true;
-    assert.equal(validateFlags(legacyMonster.monsters[0].flags), false, `${legacyFlag} should be rejected`);
-  }
 });
