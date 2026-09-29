@@ -400,15 +400,12 @@
         "fail_rate": 50,
         "experience_value": 5,
         "book_id": "conjurings_and_tricks",
-        "realm": "magic"
+        "realm": "magic",
+        "execution_policy": "spell_wonder"
       },
-      "actions": [
-        {
-          "action_id": "RandomSpellEffect"
-        }
-      ],
-      "notes": "Wonder dispatches a random effect from a pool via spell_wonder(). Behavior is not deterministically representable as canonical actions. Resolved at the Policy layer.",
-      "provenance_status": "verified"
+      "actions": [],
+      "notes": "MAngband spell_wonder() selects an effect using randint1(100) + player_level / 5. Policy behavior is not yet executable.",
+      "provenance_status": "unresolved"
     },
     {
       "id": "magic_frost_bolt",
@@ -1626,7 +1623,8 @@
           }
         }
       ],
-      "provenance_status": "Needs parity research."
+      "notes": "MAngband parity research remains unresolved.",
+      "provenance_status": "unresolved"
     },
     {
       "id": "magic_mass_banishment",
@@ -1680,7 +1678,8 @@
           }
         }
       ],
-      "provenance_status": "Needs parity research."
+      "notes": "MAngband parity research remains unresolved.",
+      "provenance_status": "unresolved"
     },
     {
       "id": "magic_mana_storm",

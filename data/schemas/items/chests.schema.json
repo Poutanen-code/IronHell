@@ -19,7 +19,7 @@
       "additionalProperties": false,
       "required": [
         "id", "name", "weight", "sell_value",
-        "trap_chance", "lock_difficulty", "gold_multiplier",
+        "trap_chance", "lock_difficulty",
         "allocation_table", "trap_ids", "open_actions", "state_policy",
         "description", "provenance_status"
       ],
@@ -30,7 +30,6 @@
         "sell_value": { "type": "integer", "minimum": 0 },
         "trap_chance": { "type": "number", "minimum": 0, "maximum": 1 },
         "lock_difficulty": { "type": "integer", "minimum": 0 },
-        "gold_multiplier": { "type": "integer", "minimum": 1 },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
         "trap_ids": {
           "type": "array",

@@ -17,8 +17,6 @@ internal static class ItemValidator
     private const string AffixesProperty = "affixes";
     private const string EgoItemsProperty = "ego_items";
     private const string ArtifactsProperty = "artifacts";
-    private const string CapabilitiesDocument = "capabilities";
-    private const string ResistancesDocument = "resistances";
     private const string EffectsProperty = "effects";
     private const string CapabilitiesProperty = "capability_ids";
     private const string ResistancesProperty = "resistance_ids";
@@ -33,6 +31,14 @@ internal static class ItemValidator
     {
         "light_curse", "heavy_curse", "perma_curse",
     };
+    private readonly record struct ItemReferenceContext(
+        string Document,
+        string ItemId,
+        IDefinitionRegistry<ActionDefinition> Actions,
+        IDefinitionRegistry<StatusDefinition> Statuses,
+        IDefinitionRegistry<CapabilityDefinition> Capabilities,
+        IDefinitionRegistry<ResistanceDefinition> Resistances,
+        IReadOnlySet<string> CombatModifierIds);
 
     public static void Validate(
         FrozenDictionary<string, JsonObject> documents,
@@ -42,26 +48,89 @@ internal static class ItemValidator
         IDefinitionRegistry<ResistanceDefinition> resistances,
         DefinitionValidationReport report)
     {
+        var combatModifierIds = GetDefinitionIds(documents[CombatModifiersProperty], CombatModifiersProperty, "id");
         foreach (var catalog in ItemDefinitionReader.ItemCatalogs.Where(catalog => catalog.Category != ItemCategory.SpellBook))
         {
             foreach (var item in documents[catalog.DocumentName][catalog.CollectionName]?.AsArray().OfType<JsonObject>() ?? [])
             {
-                var id = item["id"]?.GetValue<string>() ?? string.Empty;
-                foreach (var capabilityId in item[CapabilityIdsProperty]?.AsArray() ?? [])
-                {
-                    ValidationHelpers.ValidateCapabilityReference(capabilityId?.GetValue<string>(), capabilities, $"items/{catalog.DocumentName}.json", id, report);
-                }
-
-                foreach (var resistanceId in item[ResistanceIdsProperty]?.AsArray() ?? [])
-                {
-                    ValidationHelpers.ValidateReference(resistanceId?.GetValue<string>(), resistances, $"items/{catalog.DocumentName}.json", id, ResistanceIdsProperty, "unknown_resistance", report);
-                }
-
-                foreach (var action in item["actions"]?.AsArray().OfType<JsonObject>() ?? [])
-                {
-                    ValidationHelpers.ValidateActionReference(action, actions, statuses, $"items/{catalog.DocumentName}.json", id, report);
-                }
+                ValidateItemReferences(item, new ItemReferenceContext(
+                    $"items/{catalog.DocumentName}.json",
+                    item["id"]?.GetValue<string>() ?? string.Empty,
+                    actions,
+                    statuses,
+                    capabilities,
+                    resistances,
+                    combatModifierIds), report);
             }
+        }
+    }
+
+    private static void ValidateItemReferences(
+        JsonObject item,
+        ItemReferenceContext context,
+        DefinitionValidationReport report)
+    {
+        ValidateItemCapabilityReferences(item[CapabilityIdsProperty]?.AsArray(), context.Capabilities, context.Document, context.ItemId, report);
+        ValidateItemResistanceReferences(item[ResistanceIdsProperty]?.AsArray(), context.Resistances, context.Document, context.ItemId, report);
+        ValidateItemCombatModifierReferences(item[CombatModifiersProperty]?.AsArray(), context.CombatModifierIds, context.Document, context.ItemId, report);
+        ValidateItemActionReferences(item["actions"]?.AsArray(), context.Actions, context.Statuses, context.Document, context.ItemId, report);
+    }
+
+    private static void ValidateItemCapabilityReferences(
+        JsonArray? references,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
+        string document,
+        string itemId,
+        DefinitionValidationReport report)
+    {
+        foreach (var reference in references ?? [])
+        {
+            ValidateCapabilityGrant(reference?.GetValue<string>(), capabilities, document, itemId, CapabilityIdsProperty, report);
+        }
+    }
+
+    private static void ValidateItemResistanceReferences(
+        JsonArray? references,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
+        string document,
+        string itemId,
+        DefinitionValidationReport report)
+    {
+        foreach (var node in references ?? [])
+        {
+            var reference = node?.GetValue<string>();
+            ValidationHelpers.ValidateReference(reference, resistances, document, itemId, ResistanceIdsProperty, "unknown_resistance", report);
+            if (reference is not null && resistances.TryGet(reference, out var resistance) && resistance.SemanticKind == ResistanceSemanticKind.Oppose)
+            {
+                report.Add(document, itemId, ResistanceIdsProperty, "invalid_item_resistance_semantics", $"Item '{itemId}' cannot grant timed Oppose resistance '{reference}' as a permanent item property.");
+            }
+        }
+    }
+
+    private static void ValidateItemCombatModifierReferences(
+        JsonArray? references,
+        IReadOnlySet<string> combatModifierIds,
+        string document,
+        string itemId,
+        DefinitionValidationReport report)
+    {
+        if (references is not null)
+        {
+            ValidateReferences(document, itemId, references.Select(modifier => modifier?.GetValue<string>()).ToArray(), combatModifierIds, report);
+        }
+    }
+
+    private static void ValidateItemActionReferences(
+        JsonArray? actions,
+        IDefinitionRegistry<ActionDefinition> actionRegistry,
+        IDefinitionRegistry<StatusDefinition> statuses,
+        string document,
+        string itemId,
+        DefinitionValidationReport report)
+    {
+        foreach (var action in actions?.OfType<JsonObject>() ?? [])
+        {
+            ValidationHelpers.ValidateActionReference(action, actionRegistry, statuses, document, itemId, report);
         }
     }
 
@@ -156,17 +225,17 @@ internal static class ItemValidator
 
     public static void ValidateArtifactEffects(
         FrozenDictionary<string, JsonObject> documents,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
         DefinitionValidationReport report)
     {
-        var capabilityIds = GetDefinitionIds(documents[CapabilitiesDocument], CapabilitiesDocument, "id");
-        var resistanceIds = GetDefinitionIds(documents[ResistancesDocument], ResistancesDocument, "id");
-        var activationIds = GetDefinitionIds(documents[ActivationsProperty], ActivationsProperty, "activation_id");
+        var activationIds = GetDefinitionIds(documents[ActivationsProperty], ActivationsProperty, "id");
         foreach (var artifact in documents[ArtifactsProperty][ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var artifactId = artifact["id"]?.GetValue<string>() ?? string.Empty;
             var effects = artifact[EffectsProperty]?.AsObject();
-            ValidateEffectReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilityIds, artifactId, CapabilitiesProperty, "unknown_capability", report);
-            ValidateEffectReferences(effects?[ResistancesProperty]?.AsArray(), resistanceIds, artifactId, ResistancesProperty, "unknown_resistance", report);
+            ValidateCapabilityGrantReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilities, artifactId, ArtifactsDocument, report);
+            ValidateResistanceGrantReferences(effects?[ResistancesProperty]?.AsArray(), resistances, artifactId, ArtifactsDocument, report);
             ValidateEffectReferences(effects?[ActivationsProperty]?.AsArray(), activationIds, artifactId, ActivationsProperty, "unknown_activation", report);
             ValidateEffectReferences(effects?[CursesProperty]?.AsArray(), CurseIds, artifactId, CursesProperty, "unknown_curse", report);
             ValidateArtifactActivationReference(artifact, artifactId, effects, report);
@@ -175,16 +244,16 @@ internal static class ItemValidator
 
     public static void ValidateEgoEffects(
         FrozenDictionary<string, JsonObject> documents,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
         DefinitionValidationReport report)
     {
-        var capabilityIds = GetDefinitionIds(documents[CapabilitiesDocument], CapabilitiesDocument, "id");
-        var resistanceIds = GetDefinitionIds(documents[ResistancesDocument], ResistancesDocument, "id");
         foreach (var egoItem in documents[EgoItemsProperty][EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
             var effects = egoItem[EffectsProperty]?.AsObject();
-            ValidateEffectReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilityIds, egoId, CapabilitiesProperty, "unknown_capability", report, EgoItemsDocument);
-            ValidateEffectReferences(effects?[ResistancesProperty]?.AsArray(), resistanceIds, egoId, ResistancesProperty, "unknown_resistance", report, EgoItemsDocument);
+            ValidateCapabilityGrantReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilities, egoId, EgoItemsDocument, report);
+            ValidateResistanceGrantReferences(effects?[ResistancesProperty]?.AsArray(), resistances, egoId, EgoItemsDocument, report);
         }
     }
 
@@ -209,6 +278,52 @@ internal static class ItemValidator
         foreach (var reference in unknownReferences)
         {
             report.Add(documentPath, artifactId, $"{EffectsProperty}.{effectProperty}", errorCode, $"{effectProperty} reference '{reference}' does not resolve.");
+        }
+    }
+
+    private static void ValidateCapabilityGrantReferences(
+        JsonArray? references,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
+        string definitionId,
+        string documentPath,
+        DefinitionValidationReport report)
+    {
+        foreach (var reference in references ?? [])
+        {
+            ValidateCapabilityGrant(reference?.GetValue<string>(), capabilities, documentPath, definitionId, $"{EffectsProperty}.{CapabilitiesProperty}", report);
+        }
+    }
+
+    private static void ValidateResistanceGrantReferences(
+        JsonArray? references,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
+        string definitionId,
+        string documentPath,
+        DefinitionValidationReport report)
+    {
+        foreach (var node in references ?? [])
+        {
+            var reference = node?.GetValue<string>();
+            ValidationHelpers.ValidateReference(reference, resistances, documentPath, definitionId, ResistancesProperty, "unknown_resistance", report);
+            if (reference is not null && resistances.TryGet(reference, out var resistance) && resistance.SemanticKind == ResistanceSemanticKind.Oppose)
+            {
+                report.Add(documentPath, definitionId, $"{EffectsProperty}.{ResistancesProperty}", "invalid_item_resistance_semantics", $"Item '{definitionId}' cannot grant timed Oppose resistance '{reference}' as a permanent item property.");
+            }
+        }
+    }
+
+    private static void ValidateCapabilityGrant(
+        string? capabilityId,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
+        string documentPath,
+        string definitionId,
+        string property,
+        DefinitionValidationReport report)
+    {
+        ValidationHelpers.ValidateCapabilityReference(capabilityId, capabilities, documentPath, definitionId, report);
+        if (capabilityId is not null && capabilities.TryGet(capabilityId, out var capability) && capability.Scope == CapabilityScope.NativeIdentity)
+        {
+            report.Add(documentPath, definitionId, property, "invalid_item_capability_scope", $"Item '{definitionId}' cannot grant native identity capability '{capabilityId}'.");
         }
     }
 

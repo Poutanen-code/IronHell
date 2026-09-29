@@ -1,23 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ironhell.local/schemas/ego_items.schema.json",
+  "$id": "https://ironhell.local/schemas/items/ego_items.schema.json",
   "title": "Ego Items",
   "type": "object",
   "additionalProperties": false,
-  "required": ["_meta", "ego_items"],
+  "required": ["schema_version", "_meta", "ego_items"],
   "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
     "_meta": { "type": "object" },
     "ego_items": {
       "type": "array",
       "items": {
         "type": "object",
-        "additionalProperties": true,
+        "additionalProperties": false,
         "required": [
-          "name", "rating", "xtra", "max_to_hit", "max_to_dam",
+          "id", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
           "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
-          "slots", "item_categories", "combat_modifiers"
+          "slots", "item_categories", "combat_modifiers", "effects"
         ],
         "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
           "name": { "type": "string" },
           "rating": { "type": "integer" },
           "xtra": { "type": "integer" },
@@ -32,21 +34,73 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["tval", "min_sval", "max_sval"],
+              "additionalProperties": false,
+              "required": ["tval", "min_sval", "max_sval", "tval_name"],
               "properties": {
                 "tval": { "type": "integer" },
                 "min_sval": { "type": "integer" },
-                "max_sval": { "type": "integer" }
+                "max_sval": { "type": "integer" },
+                "tval_name": { "type": "string", "minLength": 1 }
               }
             }
           },
-          "slots": { "type": "array", "items": { "type": "string" } },
-          "item_categories": { "type": "array", "items": { "type": "string" } },
+          "slots": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "enum": ["mainHand", "offHand", "head", "chest", "back", "hands", "feet", "ranged", "ammo"] }
+          },
+          "item_categories": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "enum": ["weapon", "armor", "ranged", "ammo"] }
+          },
           "combat_modifiers": {
             "type": "array",
             "uniqueItems": true,
             "items": { "type": "string", "minLength": 1 }
-          }
+          },
+          "effects": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["affixes", "capability_ids", "resistance_ids", "activations", "curses", "display_flags"],
+            "properties": {
+              "affixes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["id", "value_source"],
+                  "properties": {
+                    "id": { "type": "string", "minLength": 1 },
+                    "value_source": { "type": "string", "enum": ["pval", "plus_to_hit", "plus_to_dam", "plus_to_ac"] }
+                  }
+                }
+              },
+              "capability_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common_item.schema.json#/$defs/Id" } },
+              "resistance_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common_item.schema.json#/$defs/Id" } },
+              "activations": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" } },
+              "curses": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["light_curse", "heavy_curse", "perma_curse"] } },
+              "display_flags": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["show_mods", "hide_type"] } }
+            }
+          },
+          "activation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "recharge"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+              "recharge": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["base", "dice"],
+                "properties": {
+                  "base": { "type": "integer", "minimum": 0 },
+                  "dice": { "type": "integer", "minimum": 0 }
+                }
+              }
+            }
+          },
+          "description": { "type": "string", "minLength": 1 }
         }
       }
     }

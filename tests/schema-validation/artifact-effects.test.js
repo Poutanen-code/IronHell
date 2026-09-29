@@ -18,13 +18,14 @@ const artifactsData = loadJSON("data/definitions/items/artifacts.json");
 const artifactsSchema = loadJSON("data/schemas/items/artifacts.schema.json");
 const capabilities = new Set(loadJSON("data/definitions/capabilities.json").capabilities.map((entry) => entry.id));
 const resistances = new Set(loadJSON("data/definitions/resistances.json").resistances.map((entry) => entry.id));
-const activations = new Set(loadJSON("data/definitions/activations.json").activations.map((entry) => entry.activation_id));
+const activations = new Set(loadJSON("data/definitions/activations.json").activations.map((entry) => entry.id));
 
 const validateArtifacts = new Ajv({ strict: false, allErrors: true }).compile(artifactsSchema);
 
 describe("artifact canonical effects", () => {
   it("contains a complete effects object for every artifact", () => {
     assert.equal(artifactsData.artifacts.length, 136);
+    assert.equal(validateArtifacts(artifactsData), true, JSON.stringify(validateArtifacts.errors));
     for (const artifact of artifactsData.artifacts) {
       assert.deepEqual(Object.keys(artifact.effects).sort(), ["activations", "affixes", "capability_ids", "combat_modifiers", "curses", "display_flags", "resistance_ids"]);
       assert.equal(Object.hasOwn(artifact, "affixes"), false, `${artifact.id} has deprecated top-level affixes`);

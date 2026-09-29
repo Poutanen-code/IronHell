@@ -1,6 +1,11 @@
+using System.Text.Json.Nodes;
+using System.Text.Json;
 using IronHell.Core.Characters;
 using IronHell.Core.Definitions;
 using IronHell.Core.Items;
+using IronHell.Data.Registries;
+using IronHell.Data.Serialization;
+using IronHell.Data.Validation;
 using Xunit;
 
 namespace IronHell.Data.Tests;
@@ -19,6 +24,12 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
         var warrior = success.Catalog.Classes.GetRequired("warrior");
 
         Assert.All(warrior.StartingEquipment, equipment => Assert.True(success.Catalog.Items.TryGet(equipment.Id, out _)));
+        Assert.Equal(["slay_undead"], success.Catalog.Items.GetRequired("mace_of_disruption").CombatModifierIds);
+        Assert.Equal(CapabilityScope.BearerPassive, success.Catalog.Capabilities.GetRequired("regen").Scope);
+        var ignoreFire = success.Catalog.Resistances.GetRequired("ignore_fire");
+        Assert.Equal(ResistanceSemanticKind.Ignore, ignoreFire.SemanticKind);
+        Assert.Equal(ResistanceTargetScope.ItemSelf, ignoreFire.TargetScope);
+        Assert.Equal(ResistanceChannel.Fire, ignoreFire.Channel);
 
         var character = CharacterFactory.Create(human, warrior, success.Catalog.RaceClassRules);
 
@@ -102,6 +113,46 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
         Assert.Equal(1, duration.DiceCount);
         Assert.Equal(12, duration.DiceSides);
         Assert.Null(duration.LevelMultiplier);
+    }
+
+    [Fact]
+    public void StatusDefinitionReader_ReadsFlatDiceAndLevelDuration()
+    {
+        var document = JsonNode.Parse("""
+            { "statuses": [{
+              "status_id": "protected_from_evil",
+              "replacement_policy": "replace_existing",
+              "default_duration": { "base": 0, "kind": "dice", "count": 1, "sides": 25, "level_multiplier": 3 }
+            }] }
+            """)!.AsObject();
+        var report = new DefinitionValidationReport();
+
+        var status = Assert.Single(StatusDefinitionReader.Read(document, report));
+
+        Assert.False(report.HasErrors);
+        Assert.Equal(new StatusDurationDefinition(0, 1, 25, 3), status.Duration);
+    }
+
+    [Fact]
+    public void SpellDefinitionReader_ReadsActionsAndPolicySeparately()
+    {
+        var document = JsonNode.Parse("""
+            { "spells": [{
+              "id": "test_spell",
+              "policy": { "level": 3, "mana": 4, "fail_rate": 20, "experience_value": 5, "book_id": "test_book", "realm": "magic" },
+                            "actions": [{ "action_id": "HealHP", "parameters": { "amount": { "kind": "dice", "count": { "kind": "linear", "base": 2, "per_level_divisor": 5 }, "sides": 8 }, "target_mode": "self" } }]
+            }] }
+            """)!.AsObject();
+        var report = new DefinitionValidationReport();
+
+        var spell = Assert.Single(SpellDefinitionReader.Read(document, report));
+
+        Assert.False(report.HasErrors);
+        Assert.Equal(new SpellPolicyDefinition(3, 4, 20, 5, "test_book", "magic"), spell.Policy);
+        var action = Assert.Single(spell.ActionRefs!);
+        Assert.Equal("HealHP", action.ActionId);
+        Assert.Null(action.Amount?.DiceCount);
+        Assert.Equal(JsonValueKind.Object, action.Parameters!.Value.GetProperty("amount").GetProperty("count").ValueKind);
     }
 
     [Fact]
@@ -261,6 +312,91 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_UnknownWeaponCombatModifier_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "weapons.json"), "\"slay_undead\"", "\"missing_combat_modifier\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_combat_modifier");
+    }
+
+    [Fact]
+    public async Task LoadAsync_ItemCannotGrantNativeIdentityCapability()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "accessories.json"), "\"regen\"", "\"back_stab\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_item_capability_scope");
+    }
+
+    [Fact]
+    public async Task LoadAsync_ItemCannotGrantTimedOpposeAsPassiveResistance()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "accessories.json"), "\"res_fire\"", "\"oppose_fire\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_item_resistance_semantics");
+    }
+
+    [Fact]
+    public async Task LoadAsync_ArtifactCannotGrantTimedOpposeAsPassiveResistance()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"res_fire\"", "\"oppose_fire\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_item_resistance_semantics");
+    }
+
+    [Fact]
+    public async Task LoadAsync_EgoCannotGrantTimedOpposeAsPassiveResistance()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"res_acid\"", "\"oppose_acid\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_item_resistance_semantics");
+    }
+
+    [Fact]
+    public async Task LoadAsync_RaceCannotGrantItemSelfIgnoreResistance()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"res_lite\"", "\"ignore_fire\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_character_resistance_semantics");
+    }
+
+    [Fact]
+    public void CapabilityResistanceCrossLink_RejectsItemSelfToBearerMismatch()
+    {
+        var capability = new CapabilityDefinition(
+            "test_item_ignore", "Test Item Ignore", "Test", CapabilityCategory.ItemIgnore, CapabilityScope.ItemSelfPassive,
+            "inferred", [], "res_fire", [], null, null, null, [], null);
+        var resistance = new ResistanceDefinition(
+            "res_fire", "Resist Fire", "Test", ResistanceSemanticKind.Resist, ResistanceTargetScope.Bearer,
+            ResistanceChannel.Fire, "verified", null, [], null);
+        var report = new DefinitionValidationReport();
+
+        CoreCatalogValidator.ValidateCapabilities(
+            new DefinitionRegistry<CapabilityDefinition>([capability]),
+            new DefinitionRegistry<ResistanceDefinition>([resistance]),
+            report);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "capability_resistance_scope_mismatch");
+    }
+
+    [Fact]
     public async Task LoadAsync_DuplicateArtifactCombatModifier_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();
@@ -268,7 +404,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
-        AssertError(result, "duplicate_combat_modifier_reference");
+        AssertError(result, "schema_validation");
     }
 
     [Fact]
@@ -286,7 +422,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task LoadAsync_UnknownEgoAffix_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"affix_id\": \"stealth\"", "\"affix_id\": \"missing_affix\"");
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"id\": \"stealth\"", "\"id\": \"missing_affix\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
@@ -341,7 +477,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task CapabilityValidator_RejectsResistanceIds()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"capability_ids\": [\"sust_dex\"]", "\"capability_ids\": [\"res_lite\"]");
+        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"sust_dex\"", "\"res_lite\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
@@ -352,7 +488,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task ResistanceValidator_RejectsCapabilityIds()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"resistance_ids\": [\"res_lite\"]", "\"resistance_ids\": [\"see_invis\"]");
+        ReplaceFirst(Path.Combine(root, "character", "races.json"), "\"res_lite\"", "\"see_invis\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
@@ -363,7 +499,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task IgnoreFire_MustBeResistanceOnly()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"capability_ids\": [\"see_invis\"]", "\"capability_ids\": [\"ignore_fire\"]");
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"see_invis\"", "\"ignore_fire\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 
@@ -479,6 +615,9 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     {
         var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
 
+        Assert.True(result is DefinitionLoadSuccess, result is DefinitionLoadFailure failure
+            ? string.Join(Environment.NewLine, failure.Report.Errors.Select(error => $"{error.DocumentPath}: {error.Code} {error.Message}"))
+            : "Expected definition loading to succeed.");
         var success = Assert.IsType<DefinitionLoadSuccess>(result);
         var ids = success.Catalog.Activations.All.Select(activation => activation.Id).ToArray();
         Assert.True(success.Catalog.Activations.TryGet("ILLUMINATION", out _));
@@ -489,7 +628,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task LoadAsync_DuplicateActivationId_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "activations.json"), "\"activation_id\": \"MAGIC_MAP\"", "\"activation_id\": \"ILLUMINATION\"");
+        ReplaceFirst(Path.Combine(root, "activations.json"), "\"id\": \"MAGIC_MAP\"", "\"id\": \"ILLUMINATION\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 

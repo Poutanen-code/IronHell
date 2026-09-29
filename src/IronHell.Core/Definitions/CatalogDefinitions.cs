@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace IronHell.Core.Definitions;
 
 public sealed record ActionDefinition(
@@ -133,9 +135,92 @@ public sealed record StatusDefinition(
 	StatusApplicationPolicy ApplicationPolicy,
 	StatusDurationDefinition Duration) : IIdentifiedDefinition;
 
-public sealed record CapabilityDefinition(string Id) : IIdentifiedDefinition;
+public enum CapabilityCategory
+{
+	Resistance,
+	ItemIgnore,
+	Sustain,
+	Perception,
+	Survival,
+	Curse,
+	Combat,
+	ClassCombat,
+	ClassMagic,
+	ClassMisc,
+	OffensiveModifier,
+}
 
-public sealed record ResistanceDefinition(string Id) : IIdentifiedDefinition;
+public enum CapabilityScope
+{
+	NativeIdentity,
+	BearerPassive,
+	ItemSelfPassive,
+}
+
+public sealed record CapabilityDefinition(
+	string Id,
+	string Name,
+	string Description,
+	CapabilityCategory Category,
+	CapabilityScope Scope,
+	string ProvenanceStatus,
+	IReadOnlyList<string> GrantSources,
+	string? ResistanceId,
+	IReadOnlyList<string> Aliases,
+	bool? Deprecated,
+	string? CanonicalOwner,
+	string? MigrationTargetId,
+	IReadOnlyList<string> PolicyHooks,
+	string? Notes) : IIdentifiedDefinition;
+
+public enum ResistanceSemanticKind
+{
+	Resist,
+	Oppose,
+	Immunity,
+	Ignore,
+}
+
+public enum ResistanceTargetScope
+{
+	Bearer,
+	ItemSelf,
+}
+
+public enum ResistanceChannel
+{
+	Acid,
+	Elec,
+	Fire,
+	Cold,
+	Pois,
+	Lite,
+	Dark,
+	Blind,
+	Confu,
+	Sound,
+	Shard,
+	Nexus,
+	Nethr,
+	Chaos,
+	Disen,
+	Fear,
+	Sleep,
+	Stun,
+	ElementalBundle,
+}
+
+public sealed record ResistanceDefinition(
+	string Id,
+	string Name,
+	string Description,
+	ResistanceSemanticKind SemanticKind,
+	ResistanceTargetScope TargetScope,
+	ResistanceChannel Channel,
+	string ProvenanceStatus,
+	string? StatusId,
+	IReadOnlyList<string> GrantSources,
+	string? Notes) : IIdentifiedDefinition;
 
 public sealed record SpellActionAmount(string Kind, int? Value, int? DiceCount, int? DiceSides);
 
@@ -144,11 +229,22 @@ public sealed record SpellActionRef(
 	ActionTargetMode TargetMode,
 	SpellActionAmount? Amount = null,
 	string? StatusId = null,
-	IReadOnlyList<string>? StatusIds = null);
+	IReadOnlyList<string>? StatusIds = null,
+	JsonElement? Parameters = null);
 
 public sealed record SpellDefinition(
 	string Id,
-	IReadOnlyList<SpellActionRef>? ActionRefs = null) : IIdentifiedDefinition;
+	IReadOnlyList<SpellActionRef>? ActionRefs = null,
+	SpellPolicyDefinition? Policy = null) : IIdentifiedDefinition;
+
+public sealed record SpellPolicyDefinition(
+	int Level,
+	int Mana,
+	int FailRate,
+	int ExperienceValue,
+	string BookId,
+	string Realm,
+	string? ExecutionPolicyId = null);
 
 public sealed record ActivationDefinition(string Id) : IIdentifiedDefinition;
 
@@ -229,7 +325,25 @@ public enum ItemCategory
 	Rod,
 }
 
-public sealed record ItemDefinition(string Id, ItemCategory Category, string? Type) : IIdentifiedDefinition;
+public sealed record ItemDefinition(
+	string Id,
+	ItemCategory Category,
+	string? Type,
+	IReadOnlyList<string>? CombatModifierIds = null,
+	IReadOnlyList<string>? CapabilityIds = null,
+	IReadOnlyList<string>? ResistanceIds = null,
+	IReadOnlyList<ItemAffixDefinition>? Affixes = null,
+	IReadOnlyList<GeneratedItemAffixDefinition>? GeneratedAffixes = null,
+	string? Name = null,
+	int? FuelPval = null,
+	int? LightRadius = null,
+	int? StackSize = null,
+	double? Weight = null,
+	int? SellValue = null) : IIdentifiedDefinition;
+
+public sealed record ItemAffixDefinition(string Type, double Value);
+
+public sealed record GeneratedItemAffixDefinition(string Type, int MinValue, int MaxValue);
 
 public enum FlavorCategory
 {

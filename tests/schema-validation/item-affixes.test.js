@@ -3,6 +3,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import Ajv2020 from "ajv/dist/2020.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
@@ -14,9 +15,15 @@ function loadJSON(relPath) {
 }
 
 const catalog = loadJSON("data/definitions/items/item_affixes.json");
+const accessories = loadJSON("data/definitions/items/accessories.json");
+const accessoriesSchema = loadJSON("data/schemas/items/accessories.schema.json");
+const commonItemSchema = loadJSON("data/schemas/items/common_item.schema.json");
 const artifacts = loadJSON("data/definitions/items/artifacts.json");
 const egoItems = loadJSON("data/definitions/items/ego_items.json");
 const affixIds = new Set(catalog.item_affixes.map((affix) => affix.id));
+const ajv = new Ajv2020({ strict: false, allErrors: true });
+ajv.addSchema(commonItemSchema);
+const validateAccessories = ajv.compile(accessoriesSchema);
 
 function assertAffixesResolve(item, affixes, label) {
   assert.ok(Array.isArray(affixes), `${label} is missing affixes`);
@@ -26,6 +33,31 @@ function assertAffixesResolve(item, affixes, label) {
 }
 
 describe("item affix catalog", () => {
+  it("validates fixed and generated accessory affixes as exclusive forms", () => {
+    assert.equal(validateAccessories(accessories), true, JSON.stringify(validateAccessories.errors));
+
+    const mixedForms = structuredClone(accessories);
+    mixedForms.accessories[0].generated_affixes = [{ type: "strength", min_value: 1, max_value: 2 }];
+    assert.equal(validateAccessories(mixedForms), false);
+
+    const missingForms = structuredClone(accessories);
+    delete missingForms.accessories[0].affixes;
+    assert.equal(validateAccessories(missingForms), false);
+
+    const invalidRangeType = structuredClone(accessories);
+    invalidRangeType.accessories.find((item) => item.generated_affixes).generated_affixes[0].max_value = "6";
+    assert.equal(validateAccessories(invalidRangeType), false);
+  });
+
+  it("preserves MAngband searching bonus ranges", () => {
+    const ring = accessories.accessories.find((item) => item.id === "ring_of_searching");
+    const amulet = accessories.accessories.find((item) => item.id === "amulet_of_searching");
+    assert.deepEqual(ring.generated_affixes, [{ type: "search", min_value: 1, max_value: 6 }]);
+    assert.deepEqual(amulet.generated_affixes, [{ type: "search", min_value: 1, max_value: 10 }]);
+    assert.deepEqual(ring.capability_ids, []);
+    assert.deepEqual(amulet.capability_ids, []);
+  });
+
   it("has unique canonical IDs", () => {
     assert.equal(new Set(catalog.item_affixes.map((affix) => affix.id)).size, catalog.item_affixes.length);
     assert.equal(catalog.item_affixes.length, 18);

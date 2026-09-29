@@ -89,7 +89,7 @@ public sealed class SpellExecutionBootstrapTests
                 Assert.Equal(ActionTargetMode.Self, actionRef.TargetMode);
                 Assert.Equal("dice", actionRef.Amount?.Kind);
                 Assert.Equal(2, actionRef.Amount?.DiceCount);
-                Assert.Equal(10, actionRef.Amount?.DiceSides);
+                Assert.Equal(8, actionRef.Amount?.DiceSides);
             },
             actionRef =>
             {

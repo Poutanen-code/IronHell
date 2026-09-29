@@ -148,7 +148,8 @@
                             "modifier_kind": {
                                 "enum": [
                                     "slay",
-                                    "kill"
+                                    "kill",
+                                    "brand"
                                 ]
                             }
                         }
@@ -190,22 +191,6 @@
                         "not": {
                             "required": [
                                 "element"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "if": {
-                        "properties": {
-                            "modifier_kind": {
-                                "const": "brand"
-                            }
-                        }
-                    },
-                    "then": {
-                        "not": {
-                            "required": [
-                                "effects"
                             ]
                         }
                     }

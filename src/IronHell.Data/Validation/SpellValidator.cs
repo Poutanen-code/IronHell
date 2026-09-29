@@ -49,7 +49,7 @@ internal static class SpellValidator
             var policy = spell["policy"]?.AsObject();
             ValidateSpellPolicy(policy, expectedRealm, documentPath, spellId, registries.Items, report);
 
-            foreach (var action in spell["action_refs"]?.AsArray().OfType<JsonObject>() ?? [])
+            foreach (var action in spell["actions"]?.AsArray().OfType<JsonObject>() ?? [])
             {
                 ValidationHelpers.ValidateActionReference(action, registries.Actions, registries.Statuses, documentPath, spellId, report);
             }

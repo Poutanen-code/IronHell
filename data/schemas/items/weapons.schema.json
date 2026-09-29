@@ -26,11 +26,11 @@
       "properties": {
         "id": { "$ref": "common_item.schema.json#/$defs/Id" },
         "name": { "type": "string", "minLength": 1 },
-        "type": {
+        "subtype": {
           "type": "string",
           "enum": ["sword", "dagger", "axe", "mace", "polearm", "staff", "bow", "crossbow", "shot", "arrow", "bolt", "digger"]
         },
-        "subtype": {
+        "type": {
           "type": "string",
           "enum": ["one_handed", "two_handed", "ranged", "ammo", "digging"]
         },
@@ -63,6 +63,11 @@
           "uniqueItems": true
         },
         "resistance_ids": {
+          "type": "array",
+          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
+          "uniqueItems": true
+        },
+        "combat_modifiers": {
           "type": "array",
           "items": { "$ref": "common_item.schema.json#/$defs/Id" },
           "uniqueItems": true

@@ -7,7 +7,7 @@ namespace IronHell.Data.Validation;
 internal static class TrapValidator
 {
     private const string TrapsDocument = "environment/traps.json";
-    private const string ActionRefsProperty = "action_refs";
+    private const string ActionsProperty = "actions";
     private const string CapabilityIdProperty = "capability_id";
     private const string ResistanceIdProperty = "resistance_id";
     private const string CapabilityIdsProperty = "capability_ids";
@@ -23,7 +23,7 @@ internal static class TrapValidator
         foreach (var trap in document["traps"]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var trapId = trap["id"]?.GetValue<string>() ?? string.Empty;
-            foreach (var action in trap[ActionRefsProperty]?.AsArray().OfType<JsonObject>() ?? [])
+            foreach (var action in trap[ActionsProperty]?.AsArray().OfType<JsonObject>() ?? [])
             {
                 ValidationHelpers.ValidateActionReference(action, registries.Actions, registries.Statuses, TrapsDocument, trapId, report);
             }

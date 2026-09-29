@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ironhell.local/schemas/artifacts.schema.json",
+  "$id": "https://ironhell.local/schemas/items/artifacts.schema.json",
   "title": "Artifacts",
   "type": "object",
   "additionalProperties": false,
@@ -10,13 +10,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "additionalProperties": true,
+        "additionalProperties": false,
         "required": [
           "baseItemId", "id", "name", "pval", "depth", "rarity",
           "weight", "cost", "base_ac", "damage", "plus_to_hit",
            "plus_to_dam", "plus_to_ac", "effects", "description"
         ],
-        "not": { "required": ["affixes"] },
         "properties": {
           "baseItemId": { "type": "string", "minLength": 1 },
           "id": { "type": "string", "minLength": 1 },

@@ -18,27 +18,25 @@
     "StatusId": {
       "$ref": "common.schema.json#/$defs/Id"
     },
-    "DiceRoll": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["count", "sides"],
-      "properties": {
-        "count": { "type": "integer", "minimum": 1 },
-        "sides": { "type": "integer", "minimum": 1 }
-      }
-    },
     "DurationContract": {
       "type": "object",
       "additionalProperties": false,
       "required": ["base"],
       "properties": {
         "base": { "type": "integer", "minimum": 0 },
-        "dice": { "$ref": "#/$defs/DiceRoll" },
+        "kind": { "const": "dice" },
+        "count": { "type": "integer", "minimum": 1 },
+        "sides": { "type": "integer", "minimum": 1 },
         "level_multiplier": {
           "type": "integer",
           "minimum": 1,
           "description": "Adds (player_level * level_multiplier) to the resolved duration. Canonical representation for level-scaled durations (e.g. Protection from Evil: 3 * player_level + 1d25)."
         }
+      },
+      "dependentRequired": {
+        "kind": ["count", "sides"],
+        "count": ["kind", "sides"],
+        "sides": ["kind", "count"]
       },
       "anyOf": [
         {
@@ -48,7 +46,7 @@
           "required": ["base"]
         },
         {
-          "required": ["dice"]
+          "required": ["kind", "count", "sides"]
         },
         {
           "required": ["level_multiplier"]

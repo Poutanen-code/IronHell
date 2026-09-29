@@ -10,20 +10,19 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 
 function loadJSON(relPath) {
-  return JSON.parse(readFileSync(resolve(root, relPath), "utf-8"));
+  return JSON.parse(readFileSync(resolve(root, relPath), "utf-8").replace(/^\uFEFF/, ""));
 }
 
 const monstersData = loadJSON("data/definitions/monsters/monsters.json");
 const monstersSchema = loadJSON("data/schemas/monsters/monsters.schema.json");
 const modifiersData = loadJSON("data/definitions/combat_modifiers.json");
 const modifiersSchema = loadJSON("data/schemas/combat_modifiers.schema.json");
+const speciesValues = new Set(monstersSchema.$defs.monster.properties.species.enum);
+const categoryValues = new Set(monstersSchema.$defs.monster.properties.categories.items.enum);
+const alignmentValues = new Set(monstersSchema.$defs.monster.properties.alignment.enum);
 const ajv = new Ajv({ strict: false, allErrors: true });
 const validateMonsters = ajv.compile(monstersSchema);
 const validateModifiers = ajv.compile(modifiersSchema);
-
-const speciesValues = new Set(["beast", "humanoid", "undead", "demon", "dragon", "construct", "aberration"]);
-const categoryValues = new Set(["animal", "orc", "undead", "demon", "dragon"]);
-const alignmentValues = new Set(["good", "neutral", "evil"]);
 
 function assertValid(validate, value, label) {
   assert.equal(validate(value), true, `${label} failed validation: ${JSON.stringify(validate.errors)}`);
@@ -83,8 +82,8 @@ describe("combat modifier taxonomy metadata", () => {
     assert.equal(effects.slay_dragon.monster_species, "dragon");
     assert.equal(effects.slay_undead.monster_species, "undead");
     assert.equal(effects.slay_demon.monster_species, "demon");
-    assert.equal(effects.slay_troll.monster_species, "troll");
-    assert.equal(effects.slay_giant.monster_species, "giant");
+    assert.equal(effects.slay_troll.monster_category, "troll");
+    assert.equal(effects.slay_giant.monster_category, "giant");
   });
 
   it("declares one explicit modifier kind for every entry", () => {
@@ -98,7 +97,11 @@ describe("combat modifier taxonomy metadata", () => {
     const elements = new Set(["acid", "elec", "fire", "cold", "pois"]);
     for (const modifier of modifiersData.combat_modifiers.filter((entry) => entry.modifier_kind === "brand")) {
       assert.ok(elements.has(modifier.element), `${modifier.id} has an invalid brand element`);
-      assert.equal(Object.hasOwn(modifier, "effects"), false, `${modifier.id} unexpectedly defines an effect payload`);
+      assert.deepEqual(modifier.effects, [{
+        type: "damage_modifier",
+        monster_species: "all",
+        multiplier: 3.0,
+      }]);
     }
   });
 
@@ -121,11 +124,12 @@ describe("combat modifier taxonomy metadata", () => {
     }
   });
 
-  it("has unique modifier IDs and source flags", () => {
+  it("has unique modifier IDs and omits legacy source flags", () => {
     const ids = modifiersData.combat_modifiers.map((modifier) => modifier.id);
-    const sourceFlags = modifiersData.combat_modifiers.map((modifier) => modifier.source_flag);
     assert.equal(new Set(ids).size, ids.length);
-    assert.equal(new Set(sourceFlags).size, sourceFlags.length);
+    for (const modifier of modifiersData.combat_modifiers) {
+      assert.equal(Object.hasOwn(modifier, "source_flag"), false, `${modifier.id} retains a legacy source flag`);
+    }
   });
 
   it("reports zero-coverage target families without changing monster data", () => {
@@ -136,7 +140,7 @@ describe("combat modifier taxonomy metadata", () => {
       .filter(({ effect }) => !monstersData.monsters.some((monster) => matches(monster, effect)))
       .map(({ id }) => id);
 
-    assert.deepEqual(zeroCoverage, ["slay_troll", "slay_giant"]);
+    assert.deepEqual(zeroCoverage, []);
   });
 
   it("does not change the canonical monster target rules", () => {
@@ -149,8 +153,8 @@ describe("combat modifier taxonomy metadata", () => {
       slay_undead: "species",
       slay_demon: "species",
       slay_orc: "category",
-      slay_troll: "species",
-      slay_giant: "species",
+      slay_troll: "category",
+      slay_giant: "category",
       slay_dragon: "species",
     };
 

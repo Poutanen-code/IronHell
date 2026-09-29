@@ -41,6 +41,23 @@ public sealed class SpellExecutionServiceTests
     }
 
     [Fact]
+    public void Execute_UnresolvedExecutionPolicy_ReturnsExplicitFailureWithoutMutation()
+    {
+        var caster = CreateCharacter(5);
+        var wonder = new SpellDefinition(
+            "magic_wonder",
+            [],
+            new SpellPolicyDefinition(7, 10, 50, 5, "conjurings_and_tricks", "magic", "spell_wonder"));
+
+        var result = CreateService().Execute(CreateCatalog(wonder), "magic_wonder", caster);
+
+        Assert.False(result.Success);
+        Assert.Equal("Spell 'magic_wonder' uses unresolved execution policy 'spell_wonder'.", Assert.Single(result.ValidationFailures));
+        Assert.Empty(result.Events);
+        Assert.Equal(5, caster.State.CurrentHp);
+    }
+
+    [Fact]
     public void Execute_SelfTargetSpell_HealsCasterAndEmitsEvent()
     {
         var caster = CreateCharacter(4);

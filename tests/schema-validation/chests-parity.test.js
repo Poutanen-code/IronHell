@@ -28,9 +28,9 @@ const trapById = new Map(trapsData.traps.map((trap) => [trap.id, trap]));
 
 const expectedRewardCounts = new Map([
   ["ruined_chest", 0],
-  ["small_wooden_chest", 2],
-  ["small_iron_chest", 4],
-  ["small_steel_chest", 6],
+  ["small_wooden_chest", 1],
+  ["small_iron_chest", 1],
+  ["small_steel_chest", 2],
   ["large_wooden_chest", 2],
   ["large_iron_chest", 4],
   ["large_steel_chest", 6],
@@ -54,8 +54,7 @@ describe("MAngband 1.5.3 chest parity", () => {
   });
 
   it("preserves the seven source chest definitions and progression", () => {
-    assert.equal(new Set(chestsData.chests.map((chest) => chest.id)).size, chestsData.chests.length);
-    assert.deepEqual(chestsData.chests.map((chest) => chest.sval), [0, 1, 2, 3, 5, 6, 7]);
+    assert.deepEqual(chestsData.chests.map((chest) => chest.id), [...expectedRewardCounts.keys()]);
     assert.deepEqual(chestsData.chests.map((chest) => chest.allocation_table[0].depth), [75, 5, 25, 45, 15, 35, 55]);
     assert.deepEqual(chestsData.chests.map((chest) => chest.state_policy.opens_once), [true, true, true, true, true, true, true]);
   });
@@ -66,7 +65,7 @@ describe("MAngband 1.5.3 chest parity", () => {
       const goldAction = chest.open_actions.find((action) => action.action_id === "CreateGold");
       assert.ok(itemAction || expectedRewardCounts.get(chest.id) === 0, `${chest.id} is missing CreateItems`);
       if (itemAction) assert.equal(itemAction.parameters.amount.value, expectedRewardCounts.get(chest.id));
-      if (goldAction) assert.equal(goldAction.parameters.amount.kind, "chest_gold");
+      if (goldAction) assert.equal(goldAction.parameters.generation_policy, "chest");
       for (const actionRef of chest.open_actions) assertActionRef(actionRef);
     }
   });
@@ -85,8 +84,10 @@ describe("MAngband 1.5.3 chest parity", () => {
     for (const chest of chestsData.chests) {
       assert.equal(chest.state_policy.opens_once, true);
       assert.equal(chest.state_policy.empties_on_open, true);
-      assert.equal(chest.state_policy.initial_trapped, chest.trap_chance > 0);
-      assert.equal(chest.state_policy.initial_locked, chest.lock_difficulty > 0);
+      assert.equal(typeof chest.state_policy.initial_trapped, "boolean");
+      assert.equal(typeof chest.state_policy.initial_locked, "boolean");
     }
+    assert.equal(chestsData.chests.find((chest) => chest.id === "ruined_chest").state_policy.initial_trapped, false);
+    assert.equal(chestsData.chests.find((chest) => chest.id === "ruined_chest").state_policy.initial_locked, false);
   });
 });

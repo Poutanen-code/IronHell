@@ -32,7 +32,7 @@ internal static class DefinitionDocumentLoader
                 });
                 foreach (var error in GetSchemaErrors(evaluation).Where(error => !IsSchemaBranchNoise(entry, error)))
                 {
-                    report.Add(entry.JsonPath, null, "$", "schema_validation", error);
+                    report.Add(entry.JsonPath, null, error.InstancePath, "schema_validation", error.Message);
                 }
             }
 
@@ -184,23 +184,35 @@ internal static class DefinitionDocumentLoader
         }
     }
 
-    private static IEnumerable<string> GetSchemaErrors(EvaluationResults evaluation)
+    private sealed record SchemaValidationMessage(string EvaluationPath, string InstancePath, string Message);
+
+    private static IEnumerable<SchemaValidationMessage> GetSchemaErrors(EvaluationResults evaluation)
     {
         if (evaluation.IsValid)
         {
             return [];
         }
 
-        if (evaluation.Errors is not null)
-        {
-            return evaluation.Errors.Values;
-        }
-
-        return evaluation.Details?.SelectMany(GetSchemaErrors) ?? [];
+        var errors = evaluation.Errors?.Values
+            .Select(message => new SchemaValidationMessage(
+                evaluation.EvaluationPath.ToString(),
+                evaluation.InstanceLocation.ToString(),
+                message)) ?? [];
+        var nestedErrors = evaluation.Details?
+            .Where(detail => !detail.IsValid)
+            .SelectMany(GetSchemaErrors) ?? [];
+        return errors.Concat(nestedErrors);
     }
 
-    private static bool IsSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
-        IsItemSchemaBranchNoise(entry, error) || IsMonsterSchemaBranchNoise(entry, error) || IsTrapSchemaBranchNoise(entry, error);
+    private static bool IsSchemaBranchNoise(DefinitionManifestEntry entry, SchemaValidationMessage error)
+    {
+        var isAlternativeBranch = error.EvaluationPath.Contains("/oneOf", StringComparison.Ordinal) ||
+            error.EvaluationPath.Contains("/anyOf", StringComparison.Ordinal);
+        return isAlternativeBranch &&
+            (IsItemSchemaBranchNoise(entry, error.Message) ||
+             IsMonsterSchemaBranchNoise(entry, error.Message) ||
+             IsTrapSchemaBranchNoise(entry, error.Message));
+    }
 
     private static bool IsItemSchemaBranchNoise(DefinitionManifestEntry entry, string error) =>
         entry.JsonPath.StartsWith("items/", StringComparison.Ordinal) &&

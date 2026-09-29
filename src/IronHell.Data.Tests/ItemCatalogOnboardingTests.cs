@@ -50,6 +50,27 @@ public sealed class ItemCatalogOnboardingTests
     }
 
     [Fact]
+    public void Read_RepositoryItemCatalogs_PreservesStaticEffectAndLightFields()
+    {
+        var (items, report) = ReadRepositoryItems();
+        Assert.False(report.HasErrors);
+
+        var torch = items.Single(item => item.Id == "wooden_torch");
+        Assert.Equal(4000, torch.FuelPval);
+        Assert.Equal(1, torch.LightRadius);
+        Assert.Equal(7, torch.StackSize);
+        Assert.Equal(10000, items.Single(item => item.Id == "dwarven_lantern").FuelPval);
+        Assert.Equal(10000, items.Single(item => item.Id == "feanorian_lamp").FuelPval);
+
+        var ring = items.Single(item => item.Id == "ring_of_searching");
+        Assert.Equal(new GeneratedItemAffixDefinition("search", 1, 6), Assert.Single(ring.GeneratedAffixes!));
+        Assert.Empty(ring.CapabilityIds!);
+
+        Assert.Equal(["slay_undead"], items.Single(item => item.Id == "mace_of_disruption").CombatModifierIds);
+        Assert.Contains("ignore_fire", items.Single(item => item.Id == "amulet_of_sustenance").ResistanceIds!);
+    }
+
+    [Fact]
     public void Read_AccessoryWithInvalidType_ReturnsValidationError()
     {
         var documents = LoadRepositoryDocuments();

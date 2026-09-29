@@ -7,7 +7,7 @@ namespace IronHell.Data.Validation;
 internal static class ActivationValidator
 {
     private const string ActivationsDocument = "activations.json";
-    private const string ActivationIdProperty = "activation_id";
+    private const string ActivationIdProperty = "id";
     private const string ActionIdProperty = "action_id";
     private const string CapabilityIdProperty = "capability_id";
     private const string ResistanceIdProperty = "resistance_id";

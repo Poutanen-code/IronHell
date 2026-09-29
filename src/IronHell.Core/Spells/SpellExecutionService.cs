@@ -41,7 +41,10 @@ public sealed class SpellExecutionService
 
         if (spell.ActionRefs is not { Count: > 0 })
         {
-            failures.Add($"Spell '{spellId}' has no executable action references.");
+            var executionPolicyId = spell.Policy?.ExecutionPolicyId;
+            failures.Add(executionPolicyId is null
+                ? $"Spell '{spellId}' has no executable action references."
+                : $"Spell '{spellId}' uses unresolved execution policy '{executionPolicyId}'.");
             return CreateResult(changes, failures, events);
         }
 

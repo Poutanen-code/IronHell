@@ -23,6 +23,7 @@ public sealed class MonsterDefinitionReaderTests
         Assert.Equal(new MonsterAiDefinition("wanderer", 50, false, false), Get(monsters, "singing_happy_drunk").Ai);
         Assert.Equal(75, Get(monsters, "white_icky_thing").Ai.RandomMoveChance);
         Assert.True(Get(monsters, "grey_mold").Ai.Stupid);
+        Assert.True(Get(monsters, "ancient_green_dragon").Ai.Smart);
         Assert.Equal(["open_doors", "take_items"], Get(monsters, "filthy_street_urchin").Capabilities);
         Assert.Contains("cold_blooded", Get(monsters, "poltergeist").Capabilities);
         Assert.Contains("hurt_by_light", Get(monsters, "poltergeist").Capabilities);
@@ -125,6 +126,17 @@ public sealed class MonsterDefinitionReaderTests
         var report = ValidateMonster(monster);
 
         Assert.Contains(report.ToImmutable().Errors, error => error.Code == "duplicate_monster_resistance");
+    }
+
+    [Fact]
+    public void ValidateMonsters_RejectsItemSelfIgnoreResistance()
+    {
+        var monster = CreateMonsterNode([]);
+        monster["resistances"] = new JsonArray("ignore_fire");
+
+        var report = ValidateMonster(monster);
+
+        Assert.Contains(report.ToImmutable().Errors, error => error.Code == "invalid_monster_resistance_semantics");
     }
 
     [Fact]
@@ -305,7 +317,13 @@ public sealed class MonsterDefinitionReaderTests
         new DefinitionRegistry<ActionDefinition>([]),
         new DefinitionRegistry<StatusDefinition>([]),
         new DefinitionRegistry<CapabilityDefinition>([]),
-        new DefinitionRegistry<ResistanceDefinition>([new("imm_fire"), new("imm_sleep"), new("imm_fear"), new("imm_confu")]),
+        new DefinitionRegistry<ResistanceDefinition>([
+            TestResistance("imm_fire", ResistanceChannel.Fire),
+            TestResistance("imm_sleep", ResistanceChannel.Sleep),
+            TestResistance("imm_fear", ResistanceChannel.Fear),
+            TestResistance("imm_confu", ResistanceChannel.Confu),
+            TestResistance("ignore_fire", ResistanceChannel.Fire, ResistanceSemanticKind.Ignore, ResistanceTargetScope.ItemSelf),
+        ]),
         new DefinitionRegistry<ItemDefinition>([]),
         new DefinitionRegistry<SpellDefinition>([]),
         new DefinitionRegistry<SpellDefinition>([]),
@@ -319,6 +337,13 @@ public sealed class MonsterDefinitionReaderTests
 
     private static MonsterDefinition Get(IEnumerable<MonsterDefinition> monsters, string id) =>
         monsters.Single(monster => monster.Id == id);
+
+    private static ResistanceDefinition TestResistance(
+        string id,
+        ResistanceChannel channel,
+        ResistanceSemanticKind semanticKind = ResistanceSemanticKind.Immunity,
+        ResistanceTargetScope targetScope = ResistanceTargetScope.Bearer) =>
+        new(id, id, id, semanticKind, targetScope, channel, "verified", null, [], null);
 
     private static JsonObject LoadJson(string relativePath) =>
         JsonNode.Parse(File.ReadAllText(Path.Combine(RepositoryRoot, relativePath)).TrimStart('\uFEFF'))!.AsObject();

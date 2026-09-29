@@ -63,6 +63,11 @@
         },
         "realm": {
           "$ref": "#/$defs/Realm"
+        },
+        "execution_policy": {
+          "type": "string",
+          "enum": ["spell_wonder"],
+          "description": "Special spell policy whose MAngband behavior is not yet executable through canonical Actions."
         }
       }
     },

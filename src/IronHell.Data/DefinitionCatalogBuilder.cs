@@ -13,13 +13,13 @@ internal static class DefinitionCatalogBuilder
     {
         var actions = ActionDefinitionReader.Read(documents["actions"], report);
         var statuses = StatusDefinitionReader.Read(documents["statuses"], report);
-        var capabilities = SimpleDefinitionReader.Read<CapabilityDefinition>(documents["capabilities"], "capabilities", "id", id => new CapabilityDefinition(id), report);
-        var resistances = SimpleDefinitionReader.Read<ResistanceDefinition>(documents["resistances"], "resistances", "id", id => new ResistanceDefinition(id), report);
+        var capabilities = GameplayDefinitionReader.ReadCapabilities(documents["capabilities"], report);
+        var resistances = GameplayDefinitionReader.ReadResistances(documents["resistances"], report);
         var items = ItemDefinitionReader.Read(documents, report);
         var flavors = FlavorDefinitionReader.Read(documents["flavors"], report);
         var mageSpells = SpellDefinitionReader.Read(documents["mage_spells"], report);
         var priestPrayers = SpellDefinitionReader.Read(documents["priest_prayers"], report);
-        var activations = SimpleDefinitionReader.Read<ActivationDefinition>(documents["activations"], "activations", "activation_id", id => new ActivationDefinition(id), report);
+        var activations = SimpleDefinitionReader.Read<ActivationDefinition>(documents["activations"], "activations", "id", id => new ActivationDefinition(id), report);
         var monsterLootProfiles = MonsterDefinitionReader.ReadLootProfiles(documents["monster_loot"], report);
         var monsterCapabilities = MonsterDefinitionReader.ReadCapabilities(documents["monster_capabilities"], report);
         var monsterAbilities = MonsterDefinitionReader.ReadAbilities(documents["monster_abilities"], report);
@@ -57,16 +57,16 @@ internal static class DefinitionCatalogBuilder
         CharacterValidator.Validate(raceRegistry, classRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, characterDefinitions, report);
 
         var validationRegistries = new ValidationRegistries(actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, mageSpellRegistry, priestPrayerRegistry, activationRegistry, monsterAbilityRegistry, monsterCapabilityRegistry, monsterLootProfileRegistry, monsterRegistry, terrainRegistry, trapRegistry);
-        CoreCatalogValidator.ValidateCapabilities(documents["capabilities"], resistanceRegistry, report);
-        CoreCatalogValidator.ValidateResistances(documents["resistances"], statusRegistry, report);
+        CoreCatalogValidator.ValidateCapabilities(capabilityRegistry, resistanceRegistry, report);
+        CoreCatalogValidator.ValidateResistances(resistanceRegistry, statusRegistry, report);
         CoreCatalogValidator.ValidateStatuses(documents["statuses"], statusRegistry, report);
         ItemValidator.Validate(documents, actionRegistry, statusRegistry, capabilityRegistry, resistanceRegistry, report);
         ItemValidator.ValidateFlavorCategoryAlignment(itemRegistry, flavorRegistry, report);
         ItemValidator.ValidateEgoCombatModifiers(documents["ego_items"], documents["combat_modifiers"], report);
         ItemValidator.ValidateArtifactCombatModifiers(documents["artifacts"], documents["combat_modifiers"], report);
         ItemValidator.ValidateItemAffixes(documents, report);
-        ItemValidator.ValidateArtifactEffects(documents, report);
-        ItemValidator.ValidateEgoEffects(documents, report);
+        ItemValidator.ValidateArtifactEffects(documents, capabilityRegistry, resistanceRegistry, report);
+        ItemValidator.ValidateEgoEffects(documents, capabilityRegistry, resistanceRegistry, report);
         SpellValidator.Validate(documents, validationRegistries, report);
         ActivationValidator.Validate(documents["activations"], validationRegistries, report);
         MonsterValidator.ValidateAbilities(documents["monster_abilities"], validationRegistries, report);

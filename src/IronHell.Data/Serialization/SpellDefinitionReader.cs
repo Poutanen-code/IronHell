@@ -1,4 +1,5 @@
 using System.Text.Json.Nodes;
+using System.Text.Json;
 using IronHell.Core.Definitions;
 using IronHell.Data.Validation;
 
@@ -18,7 +19,7 @@ internal static class SpellDefinitionReader
                 continue;
             }
 
-            definitions.Add(new SpellDefinition(id, ReadActionRefs(entry)));
+            definitions.Add(new SpellDefinition(id, ReadActionRefs(entry), ReadPolicy(entry)));
         }
 
         ValidationHelpers.ValidateDuplicates("spells", definitions, report);
@@ -28,7 +29,7 @@ internal static class SpellDefinitionReader
     private static IReadOnlyList<SpellActionRef> ReadActionRefs(JsonObject spell)
     {
         var actionRefs = new List<SpellActionRef>();
-        foreach (var actionRef in spell["action_refs"]?.AsArray().OfType<JsonObject>() ?? [])
+        foreach (var actionRef in spell["actions"]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var actionId = actionRef["action_id"]?.GetValue<string>();
             if (string.IsNullOrWhiteSpace(actionId))
@@ -42,19 +43,49 @@ internal static class SpellDefinitionReader
                 MapTargetMode(parameters?["target_mode"]?.GetValue<string>()),
                 ReadAmount(parameters?["amount"]?.AsObject()),
                 parameters?["status_id"]?.GetValue<string>(),
-                ReadStatusIds(parameters?["status_ids"]?.AsArray())));
+                ReadStatusIds(parameters?["status_ids"]?.AsArray()),
+                ReadParameters(parameters)));
         }
 
         return Array.AsReadOnly(actionRefs.ToArray());
+    }
+
+    private static SpellPolicyDefinition? ReadPolicy(JsonObject spell)
+    {
+        var policy = spell["policy"] as JsonObject;
+        return policy is null
+            ? null
+            : new SpellPolicyDefinition(
+                policy["level"]?.GetValue<int>() ?? 0,
+                policy["mana"]?.GetValue<int>() ?? 0,
+                policy["fail_rate"]?.GetValue<int>() ?? 0,
+                policy["experience_value"]?.GetValue<int>() ?? 0,
+                policy["book_id"]?.GetValue<string>() ?? string.Empty,
+                policy["realm"]?.GetValue<string>() ?? string.Empty,
+                policy["execution_policy"]?.GetValue<string>());
     }
 
     private static SpellActionAmount? ReadAmount(JsonObject? amount) => amount is null
         ? null
         : new SpellActionAmount(
             amount["kind"]?.GetValue<string>() ?? string.Empty,
-            amount["value"]?.GetValue<int>(),
-            amount["count"]?.GetValue<int>(),
-            amount["sides"]?.GetValue<int>());
+            ReadInteger(amount["value"]),
+            ReadInteger(amount["count"]),
+            ReadInteger(amount["sides"]));
+
+    private static int? ReadInteger(JsonNode? node) =>
+        node is JsonValue value && value.TryGetValue<int>(out var result) ? result : null;
+
+    private static JsonElement? ReadParameters(JsonObject? parameters)
+    {
+        if (parameters is null)
+        {
+            return null;
+        }
+
+        using var document = JsonDocument.Parse(parameters.ToJsonString());
+        return document.RootElement.Clone();
+    }
 
     private static IReadOnlyList<string>? ReadStatusIds(JsonArray? statusIds) => statusIds is null
         ? null

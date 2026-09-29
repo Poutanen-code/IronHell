@@ -25,12 +25,6 @@ internal static class MonsterValidator
         "unique", "questor", "force_depth", "force_max_hp", "force_sleep",
         "escort", "escorts", "friends", "wanderer",
     ];
-    private static readonly string[] LegacyLootFlagProperties =
-    [
-        "only_gold", "only_item", "drop_60", "drop_90", "drop_1d2", "drop_2d2",
-        "drop_3d2", "drop_4d2", "drop_good", "drop_great", "drop_useful", "drop_chosen",
-    ];
-
     public static void ValidateAbilities(
         JsonObject document,
         ValidationRegistries registries,
@@ -39,7 +33,7 @@ internal static class MonsterValidator
         foreach (var ability in document[AbilitiesProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var abilityId = ability["id"]?.GetValue<string>() ?? string.Empty;
-            foreach (var action in ability["action_refs"]?.AsArray().OfType<JsonObject>() ?? [])
+            foreach (var action in ability["actions"]?.AsArray().OfType<JsonObject>() ?? [])
             {
                 ValidationHelpers.ValidateActionReference(action, registries.Actions, registries.Statuses, MonsterAbilitiesDocument, abilityId, report);
             }
@@ -64,34 +58,82 @@ internal static class MonsterValidator
             ValidateSenses(monster, monsterId, report);
             ValidateSpawnPolicy(monster, monsterId, report);
             ValidateLootProfileReference(monster, monsterId, registries, report);
-            foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
-            {
-                ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
-            }
-
-            var seenCapabilities = new HashSet<string>(StringComparer.Ordinal);
-            foreach (var capabilityIdNode in monster[CapabilitiesProperty]?.AsArray() ?? [])
-            {
-                var capabilityId = capabilityIdNode?.GetValue<string>();
-                ValidationHelpers.ValidateReference(capabilityId, registries.MonsterCapabilities, MonstersDocument, monsterId, CapabilitiesProperty, "unknown_monster_capability", report);
-                if (capabilityId is not null && !seenCapabilities.Add(capabilityId))
-                {
-                    report.Add(MonstersDocument, monsterId, CapabilitiesProperty, "duplicate_monster_capability", $"Monster capability '{capabilityId}' is duplicated.");
-                }
-            }
-
-            var seenResistances = new HashSet<string>(StringComparer.Ordinal);
-            foreach (var resistanceIdNode in monster[ResistancesProperty]?.AsArray() ?? [])
-            {
-                var resistanceId = resistanceIdNode?.GetValue<string>();
-                ValidationHelpers.ValidateReference(resistanceId, registries.Resistances, MonstersDocument, monsterId, ResistancesProperty, "unknown_monster_resistance", report);
-                if (resistanceId is not null && !seenResistances.Add(resistanceId))
-                {
-                    report.Add(MonstersDocument, monsterId, ResistancesProperty, "duplicate_monster_resistance", $"Monster resistance '{resistanceId}' is duplicated.");
-                }
-            }
-
+            ValidateMonsterReferences(monster, monsterId, registries, report);
             ValidateMonsterNode(monster, monsterId, registries, report);
+        }
+    }
+
+    private static void ValidateMonsterReferences(
+        JsonObject monster,
+        string monsterId,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        ValidateMonsterAbilityReferences(monster, monsterId, registries, report);
+        ValidateMonsterCapabilityReferences(monster, monsterId, registries, report);
+        ValidateMonsterResistanceReferences(monster, monsterId, registries, report);
+    }
+
+    private static void ValidateMonsterAbilityReferences(
+        JsonObject monster,
+        string monsterId,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        foreach (var abilityId in monster[AbilitiesProperty]?.AsArray() ?? [])
+        {
+            ValidationHelpers.ValidateReference(abilityId?.GetValue<string>(), registries.MonsterAbilities, MonstersDocument, monsterId, AbilitiesProperty, "unknown_monster_ability", report);
+        }
+    }
+
+    private static void ValidateMonsterCapabilityReferences(
+        JsonObject monster,
+        string monsterId,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        var seenCapabilities = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var capabilityIdNode in monster[CapabilitiesProperty]?.AsArray() ?? [])
+        {
+            var capabilityId = capabilityIdNode?.GetValue<string>();
+            ValidationHelpers.ValidateReference(capabilityId, registries.MonsterCapabilities, MonstersDocument, monsterId, CapabilitiesProperty, "unknown_monster_capability", report);
+            if (capabilityId is not null && !seenCapabilities.Add(capabilityId))
+            {
+                report.Add(MonstersDocument, monsterId, CapabilitiesProperty, "duplicate_monster_capability", $"Monster capability '{capabilityId}' is duplicated.");
+            }
+        }
+    }
+
+    private static void ValidateMonsterResistanceReferences(
+        JsonObject monster,
+        string monsterId,
+        ValidationRegistries registries,
+        DefinitionValidationReport report)
+    {
+        var seenResistances = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var resistanceIdNode in monster[ResistancesProperty]?.AsArray() ?? [])
+        {
+            var resistanceId = resistanceIdNode?.GetValue<string>();
+            ValidationHelpers.ValidateReference(resistanceId, registries.Resistances, MonstersDocument, monsterId, ResistancesProperty, "unknown_monster_resistance", report);
+            ValidateMonsterResistanceSemantics(resistanceId, monsterId, registries.Resistances, report);
+            if (resistanceId is not null && !seenResistances.Add(resistanceId))
+            {
+                report.Add(MonstersDocument, monsterId, ResistancesProperty, "duplicate_monster_resistance", $"Monster resistance '{resistanceId}' is duplicated.");
+            }
+        }
+    }
+
+    private static void ValidateMonsterResistanceSemantics(
+        string? resistanceId,
+        string monsterId,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
+        DefinitionValidationReport report)
+    {
+        if (resistanceId is not null &&
+            resistances.TryGet(resistanceId, out var resistance) &&
+            resistance.SemanticKind is ResistanceSemanticKind.Ignore or ResistanceSemanticKind.Oppose)
+        {
+            report.Add(MonstersDocument, monsterId, ResistancesProperty, "invalid_monster_resistance_semantics", $"Monster '{monsterId}' cannot have item-self Ignore or timed Oppose resistance '{resistanceId}'.");
         }
     }
 

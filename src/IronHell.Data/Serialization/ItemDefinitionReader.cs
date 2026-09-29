@@ -47,7 +47,21 @@ internal static class ItemDefinitionReader
                 }
 
                 ValidateItemCategory(type, catalog.DocumentName, category.Value, id, report);
-                items.Add(new ItemDefinition(id, category.Value, type));
+                items.Add(new ItemDefinition(
+                    id,
+                    category.Value,
+                    type,
+                    ReadStringIds(entry?["combat_modifiers"]),
+                    ReadStringIds(entry?["capability_ids"]),
+                    ReadStringIds(entry?["resistance_ids"]),
+                    ReadAffixes(entry?["affixes"]),
+                    ReadGeneratedAffixes(entry?["generated_affixes"]),
+                    entry?["name"]?.GetValue<string>(),
+                    entry?["fuel_pval"]?.GetValue<int>(),
+                    entry?["light_radius"]?.GetValue<int>(),
+                    entry?["stack_size"]?.GetValue<int>(),
+                    ReadNumber(entry?["weight"]),
+                    entry?["sell_value"]?.GetValue<int>()));
             }
         }
 
@@ -83,6 +97,47 @@ internal static class ItemDefinitionReader
         {
             report.Add($"items/{documentName}.json", id, "type", InvalidCategoryError, "Item type is not valid for its catalog.");
         }
+    }
+
+    private static IReadOnlyList<string>? ReadStringIds(JsonNode? node) => node is JsonArray array
+        ? Array.AsReadOnly(array.Select(value => value?.GetValue<string>() ?? string.Empty).ToArray())
+        : null;
+
+    private static IReadOnlyList<ItemAffixDefinition>? ReadAffixes(JsonNode? node) => node is JsonArray array
+        ? Array.AsReadOnly(array.OfType<JsonObject>()
+            .Select(affix => new ItemAffixDefinition(
+                affix["type"]?.GetValue<string>() ?? string.Empty,
+                ReadNumber(affix["value"]) ?? throw new InvalidOperationException("Static item affix value must be numeric.")))
+            .ToArray())
+        : null;
+
+    private static IReadOnlyList<GeneratedItemAffixDefinition>? ReadGeneratedAffixes(JsonNode? node) => node is JsonArray array
+        ? Array.AsReadOnly(array.OfType<JsonObject>()
+            .Select(affix => new GeneratedItemAffixDefinition(
+                affix["type"]?.GetValue<string>() ?? string.Empty,
+                affix["min_value"]?.GetValue<int>() ?? 0,
+                affix["max_value"]?.GetValue<int>() ?? 0))
+            .ToArray())
+        : null;
+
+    private static double? ReadNumber(JsonNode? node)
+    {
+        if (node is not JsonValue value)
+        {
+            return null;
+        }
+
+        if (value.TryGetValue<double>(out var number))
+        {
+            return number;
+        }
+
+        if (value.TryGetValue<int>(out var integer))
+        {
+            return integer;
+        }
+
+        return null;
     }
 }
 

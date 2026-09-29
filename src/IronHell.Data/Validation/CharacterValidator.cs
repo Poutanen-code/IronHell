@@ -84,6 +84,10 @@ internal static class CharacterValidator
             foreach (var resistanceId in race.ResistanceIds)
             {
                 ValidationHelpers.ValidateReference(resistanceId, resistances, "character", race.Id, "resistance_ids", "unknown_resistance", report);
+                if (resistances.TryGet(resistanceId, out var resistance) && resistance.SemanticKind is ResistanceSemanticKind.Ignore or ResistanceSemanticKind.Oppose)
+                {
+                    report.Add("character/races.json", race.Id, "resistance_ids", "invalid_character_resistance_semantics", $"Race '{race.Id}' cannot grant item-self Ignore or timed Oppose resistance '{resistanceId}'.");
+                }
             }
         }
     }

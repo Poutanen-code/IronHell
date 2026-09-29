@@ -32,6 +32,7 @@
         "is_harmful": { "type": "boolean" },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
         "actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
+        "notes": { "type": "string", "minLength": 1 },
         "description": { "type": "string", "minLength": 1 },
         "provenance_status": { "$ref": "common_item.schema.json#/$defs/ProvenanceStatus" }
       }

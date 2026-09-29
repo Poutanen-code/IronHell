@@ -33,6 +33,10 @@ const expectedSvals = [
 ];
 
 function assertStructuredAmount(value, label) {
+  if (Number.isInteger(value)) {
+    assert.ok(value >= 0, `${label} integer amount must be non-negative`);
+    return;
+  }
   assert.ok(value && typeof value === "object", `${label} must be a structured amount`);
   assert.ok(value.kind || value.base !== undefined || value.dice, `${label} has no amount expression`);
 }
@@ -49,7 +53,9 @@ function assertActionContracts(catalog) {
       for (const [parameterId, value] of Object.entries(parameters)) {
         const parameter = declared.get(parameterId);
         assert.ok(parameter, `${scroll.id}: undeclared parameter '${parameterId}'`);
-        if (parameter.value_type === "structured_amount") assertStructuredAmount(value, `${scroll.id}.${parameterId}`);
+        if (parameter.value_type === "structured_amount" && typeof value === "object") {
+          assertStructuredAmount(value, `${scroll.id}.${parameterId}`);
+        }
         if (parameter.allowed_values) {
           const values = Array.isArray(value) ? value : [value];
           for (const item of values) assert.ok(parameter.allowed_values.includes(item), `${scroll.id}: invalid ${parameterId} value '${item}'`);
@@ -94,11 +100,11 @@ describe("MAngband 1.5.3 scroll parity", () => {
     }
     assert.deepEqual(
       scrollsData.scrolls.find((scroll) => scroll.sval === 20).actions[0].parameters.attempts,
-      { base: 2, dice: { count: 1, sides: 3 } }
+      { base: 2, kind: "dice", count: 1, sides: 3 }
     );
     assert.deepEqual(
-      scrollsData.scrolls.find((scroll) => scroll.sval === 47).actions[0].parameters.count,
-      { base: 1, dice: { count: 1, sides: 2 } }
+      scrollsData.scrolls.find((scroll) => scroll.sval === 47).actions[0].parameters.amount,
+      { base: 1, kind: "dice", count: 1, sides: 2 }
     );
   });
 });

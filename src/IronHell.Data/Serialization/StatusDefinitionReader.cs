@@ -50,11 +50,23 @@ internal static class StatusDefinitionReader
             return null;
         }
 
-        var dice = duration["dice"]?.AsObject();
+        var kind = duration["kind"]?.GetValue<string>();
+        var diceCount = duration["count"]?.GetValue<int>();
+        var diceSides = duration["sides"]?.GetValue<int>();
+        var levelMultiplier = duration["level_multiplier"]?.GetValue<int>();
+        var hasDice = kind is not null || diceCount is not null || diceSides is not null;
+        if ((hasDice && (kind != "dice" || diceCount is not > 0 || diceSides is not > 0)) ||
+            (levelMultiplier is <= 0) ||
+            (fixedDuration == 0 && !hasDice && levelMultiplier is null))
+        {
+            report.Add(StatusesDocument, statusId, "default_duration", "invalid_duration", "Status duration dice and level scaling must be complete and positive when present.");
+            return null;
+        }
+
         return new StatusDurationDefinition(
             fixedDuration,
-            dice?["count"]?.GetValue<int>(),
-            dice?["sides"]?.GetValue<int>(),
-            duration["level_multiplier"]?.GetValue<int>());
+            diceCount,
+            diceSides,
+            levelMultiplier);
     }
 }

@@ -1,5 +1,7 @@
 using System.Collections.Frozen;
 using System.Text.Json.Nodes;
+using IronHell.Core.Definitions;
+using IronHell.Data.Registries;
 using IronHell.Data.Validation;
 using Xunit;
 
@@ -190,7 +192,11 @@ public sealed class ArtifactAffixValidationTests
           ["activations"] = JsonNode.Parse("{ \"activations\": [] }")!.AsObject(),
         }.ToFrozenDictionary(StringComparer.Ordinal);
 
-        ItemValidator.ValidateArtifactEffects(documents, report);
+        ItemValidator.ValidateArtifactEffects(
+          documents,
+          new DefinitionRegistry<CapabilityDefinition>([]),
+          new DefinitionRegistry<ResistanceDefinition>([]),
+          report);
         return report.ToImmutable();
       }
 }

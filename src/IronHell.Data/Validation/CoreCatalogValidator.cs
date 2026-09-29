@@ -12,30 +12,43 @@ internal static class CoreCatalogValidator
     private const string UnknownStatusError = "unknown_status";
 
     public static void ValidateCapabilities(
-        JsonObject document,
+        IDefinitionRegistry<CapabilityDefinition> capabilities,
         IDefinitionRegistry<ResistanceDefinition> resistances,
         DefinitionValidationReport report)
     {
-        foreach (var capability in document["capabilities"]?.AsArray().OfType<JsonObject>() ?? [])
+        foreach (var capability in capabilities.All)
         {
-            var id = capability["id"]?.GetValue<string>() ?? string.Empty;
-            ValidationHelpers.ValidateReference(capability[ResistanceIdProperty]?.GetValue<string>(), resistances, "capabilities.json", id, ResistanceIdProperty, UnknownResistanceError, report);
-            if (capability["canonical_owner"]?.GetValue<string>() == "resistance")
+            ValidationHelpers.ValidateReference(capability.ResistanceId, resistances, "capabilities.json", capability.Id, ResistanceIdProperty, UnknownResistanceError, report);
+            if (capability.CanonicalOwner == "resistance")
             {
-                ValidationHelpers.ValidateReference(capability["migration_target_id"]?.GetValue<string>(), resistances, "capabilities.json", id, "migration_target_id", UnknownResistanceError, report);
+                ValidationHelpers.ValidateReference(capability.MigrationTargetId, resistances, "capabilities.json", capability.Id, "migration_target_id", UnknownResistanceError, report);
+            }
+
+            if (capability.ResistanceId is { } resistanceId && resistances.TryGet(resistanceId, out var resistance))
+            {
+                var capabilityIsItemSelf = capability.Scope == CapabilityScope.ItemSelfPassive;
+                var resistanceIsItemSelfIgnore = resistance.SemanticKind == ResistanceSemanticKind.Ignore &&
+                    resistance.TargetScope == ResistanceTargetScope.ItemSelf;
+                if (capabilityIsItemSelf != resistanceIsItemSelfIgnore || resistance.SemanticKind == ResistanceSemanticKind.Oppose)
+                {
+                    report.Add("capabilities.json", capability.Id, ResistanceIdProperty, "capability_resistance_scope_mismatch", "Capability and resistance scopes/semantics must agree; timed Oppose belongs to Statuses.");
+                }
             }
         }
     }
 
     public static void ValidateResistances(
-        JsonObject document,
+        IDefinitionRegistry<ResistanceDefinition> resistances,
         IDefinitionRegistry<StatusDefinition> statuses,
         DefinitionValidationReport report)
     {
-        foreach (var resistance in document["resistances"]?.AsArray().OfType<JsonObject>() ?? [])
+        foreach (var resistance in resistances.All)
         {
-            var id = resistance["id"]?.GetValue<string>() ?? string.Empty;
-            ValidationHelpers.ValidateReference(resistance[StatusIdProperty]?.GetValue<string>(), statuses, "resistances.json", id, StatusIdProperty, UnknownStatusError, report);
+            ValidationHelpers.ValidateReference(resistance.StatusId, statuses, "resistances.json", resistance.Id, StatusIdProperty, UnknownStatusError, report);
+            if (resistance.SemanticKind == ResistanceSemanticKind.Oppose && string.IsNullOrWhiteSpace(resistance.StatusId))
+            {
+                report.Add("resistances.json", resistance.Id, StatusIdProperty, "missing_oppose_status", "Oppose resistance must reference its timed Status definition.");
+            }
         }
     }
 

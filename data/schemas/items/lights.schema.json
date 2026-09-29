@@ -32,7 +32,7 @@
           "type": "string",
           "enum": ["torch", "lantern"]
         },
-        "fuel_pval": { "type": "integer", "minimum": 0, "description": "Default fuel level when found. Max torch fuel is 5000; max lantern fuel is 7500." },
+        "fuel_pval": { "type": "integer", "minimum": 0, "description": "Fuel pval recorded by this definition; runtime limits and infinite-fuel behavior are policy-dependent." },
         "light_radius": { "type": "integer", "minimum": 1, "maximum": 5 },
         "stack_size": { "type": "integer", "minimum": 1 },
         "weight": { "type": "integer", "minimum": 1 },

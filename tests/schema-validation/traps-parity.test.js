@@ -28,10 +28,10 @@ const expectedMangbandTrapIds = [
   "trap_door", "pit", "spiked_pit", "poison_pit",
   "summon_rune", "teleport_rune", "fire_spot", "acid_spot", "dart_slow",
   "dart_strength", "dart_dexterity", "dart_constitution", "gas_blind",
-  "gas_confuse", "gas_poison", "gas_sleep",
+  "gas_poison",
 ];
 
-const expectedCustomTrapIds = [];
+const expectedCustomTrapIds = ["gas_paralyze", "gas_confuse", "gas_sleep"];
 const expectedChestTrapIds = ["gas_paralyze", "explosive_trap"];
 
 const canonicalTrapActions = {
@@ -63,11 +63,6 @@ function assertActionContract(actionId) {
 }
 
 function assertTrapActions(trap) {
-  if (trap.provenance_status === "ironhell_specific") {
-    assert.deepEqual(trap.actions || [], [], `${trap.id} must remain a generic non-executable trap`);
-    return;
-  }
-
   assert.ok(Array.isArray(trap.actions) && trap.actions.length > 0, `${trap.id} must define executable actions`);
   for (const actionRef of trap.actions) {
     const action = actionById.get(actionRef.action_id);
@@ -118,7 +113,7 @@ describe("MAngband 1.5.3 trap parity", () => {
     );
     assert.deepEqual(
       new Set(trapsData.traps.filter((trap) => trap.provenance_status === "verified").map((trap) => trap.id)),
-      new Set([...expectedMangbandTrapIds, ...expectedChestTrapIds])
+      new Set([...expectedMangbandTrapIds, "explosive_trap"])
     );
     assert.ok(trapsData.traps.some((trap) => trap.actions.some((action) => action.action_id === "ApplyDamage")));
     assert.ok(trapsData.traps.some((trap) => trap.actions.some((action) => action.action_id === "ApplyStatus")));
