@@ -22,7 +22,7 @@
         "id", "name", "type",
         "fuel_pval", "light_radius", "stack_size",
         "weight", "sell_value",
-        "capability_ids", "allocation_table",
+        "resistance_ids", "allocation_table",
         "description", "provenance_status"
       ],
       "properties": {
@@ -35,9 +35,9 @@
         "fuel_pval": { "type": "integer", "minimum": 0, "description": "Default fuel level when found. Max torch fuel is 5000; max lantern fuel is 7500." },
         "light_radius": { "type": "integer", "minimum": 1, "maximum": 5 },
         "stack_size": { "type": "integer", "minimum": 1 },
-        "weight": { "type": "integer", "minimum": 0 },
+        "weight": { "type": "integer", "minimum": 1 },
         "sell_value": { "type": "integer", "minimum": 0 },
-        "capability_ids": {
+        "resistance_ids": {
           "type": "array",
           "items": { "$ref": "common_item.schema.json#/$defs/Id" },
           "uniqueItems": true
