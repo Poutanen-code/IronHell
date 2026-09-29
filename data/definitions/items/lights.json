@@ -38,7 +38,7 @@
       "id": "dwarven_lantern",
       "name": "Dwarven Lantern",
       "type": "lantern",
-      "fuel_pval": 7500,
+      "fuel_pval": 10000,
       "light_radius": 2,
       "stack_size": 1,
       "weight": 10,
@@ -47,14 +47,14 @@
       "allocation_table": [
         { "depth": 20, "rarity": 20 }
       ],
-      "description": "A dwarven lantern with a radius of 2. It has infinite fuel.",
+      "description": "A dwarven lantern with a radius of 2. It has an infinite fuel.",
       "provenance_status": "verified"
     },
     {
       "id": "feanorian_lamp",
       "name": "Feanorian Lamp",
       "type": "lantern",
-      "fuel_pval": 7500,
+      "fuel_pval": 10000,
       "light_radius": 3,
       "stack_size": 1,
       "weight": 10,

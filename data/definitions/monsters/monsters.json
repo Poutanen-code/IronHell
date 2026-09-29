@@ -40747,7 +40747,8 @@
       },
       "ai": {
         "behavior": "aggressive_melee",
-        "random_move_chance": 0
+        "random_move_chance": 0,
+        "smart": true
       },
       "capabilities": [
         "bash_doors",
@@ -40761,8 +40762,7 @@
       ],
       "senses": {
         "alertness": 80,
-        "telepathy_profile": "normal",
-        "smart": true
+        "telepathy_profile": "normal"
       },
       "attacks": [
         {

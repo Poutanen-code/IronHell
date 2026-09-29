@@ -1154,7 +1154,7 @@
         }
       ],
       "capability_ids": [
-        "regeneration"
+        "regen"
       ],
       "resistance_ids": [],
       "affixes": [],
@@ -1290,16 +1290,19 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [
-        "stealth"
-      ],
+      "capability_ids": [],
       "resistance_ids": [
         "ignore_acid",
         "ignore_elec",
         "ignore_fire",
         "ignore_cold"
       ],
-      "affixes": [],
+      "affixes": [
+        {
+          "type": "stealth",
+          "value": 5
+        }
+      ],
       "description": "Pair of Witan Boots providing exceptional protection and agility.",
       "provenance_status": "verified"
     },

@@ -404,10 +404,14 @@
             "type": "ring",
             "weight": 2,
             "sell_value": 250,
-            "affixes": [],
-            "capability_ids": [
-                "searching"
+            "generated_affixes": [
+                {
+                    "type": "search",
+                    "min_value": 1,
+                    "max_value": 6
+                }
             ],
+            "capability_ids": [],
             "resistance_ids": [],
             "allocation_table": [
                 {
@@ -856,19 +860,14 @@
             "type": "amulet",
             "weight": 3,
             "sell_value": 600,
-            "affixes": [
+            "generated_affixes": [
                 {
-                    "type": "wisdom",
-                    "value": 8
-                },
-                {
-                    "type": "light_radius",
-                    "value": 2
+                    "type": "search",
+                    "min_value": 1,
+                    "max_value": 10
                 }
             ],
-            "capability_ids": [
-                "searching"
-            ],
+            "capability_ids": [],
             "resistance_ids": [],
             "allocation_table": [
                 {
@@ -985,13 +984,14 @@
                 "sust_con",
                 "sust_chr",
                 "hold_life",
-                "slow_digest",
+                "slow_digest"
+            ],
+            "resistance_ids": [
                 "ignore_acid",
                 "ignore_elec",
                 "ignore_fire",
                 "ignore_cold"
             ],
-            "resistance_ids": [],
             "allocation_table": [
                 {
                     "depth": 60,
@@ -1061,7 +1061,7 @@
             "sell_value": 600,
             "affixes": [],
             "capability_ids": [
-                "regeneration"
+                "regen"
             ],
             "resistance_ids": [],
             "allocation_table": [
