@@ -19,17 +19,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "res_acid"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -58,17 +52,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 400,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_elec",
           "res_elec"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -97,17 +85,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 800,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_fire",
           "res_fire"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -136,17 +118,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 600,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_cold",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -175,10 +151,7 @@
       "depth": 0,
       "rarity": 2,
       "cost": 12500,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -188,10 +161,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -220,7 +190,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 15000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -228,7 +197,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -238,10 +206,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -270,18 +235,13 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -310,9 +270,7 @@
       "depth": 0,
       "rarity": 4,
       "cost": 30000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "sust_str",
           "sust_dex",
@@ -331,10 +289,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "chest"
@@ -362,7 +317,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 5000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -385,8 +339,6 @@
           "ignore_acid",
           "ignore_fire"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -429,17 +381,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "res_acid"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "offHand"
@@ -467,17 +413,11 @@
       "depth": 0,
       "rarity": 1,
       "cost": 400,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_elec",
           "res_elec"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "offHand"
@@ -506,17 +446,11 @@
       "rarity": 1,
       "cost": 800,
       "description": "Grants resistance to fire and ignores fire damage.",
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_fire",
           "res_fire"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "offHand"
@@ -544,17 +478,11 @@
       "rarity": 1,
       "cost": 600,
       "description": "Grants resistance to cold and ignores cold damage.",
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_cold",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "offHand"
@@ -581,10 +509,7 @@
       "depth": 0,
       "rarity": 2,
       "cost": 12500,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -594,10 +519,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
       "slots": [
@@ -625,7 +547,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 18000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -633,7 +554,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_fire",
@@ -643,10 +563,7 @@
           "res_cold",
           "res_acid",
           "res_elec"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
       "slots": [
@@ -674,9 +591,7 @@
       "depth": 60,
       "rarity": 4,
       "cost": 24000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "sust_str",
           "sust_con",
@@ -689,10 +604,7 @@
           "ignore_fire",
           "ignore_cold",
           "res_disen"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants resistance to disenchantment, sustains various stats, hold life, and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
@@ -720,18 +632,13 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "description": "Cursed shield that aggravates enemies and carries a light curse.",
       "slots": [
@@ -759,7 +666,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -769,11 +675,7 @@
         ],
         "capability_ids": [
           "sust_int"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Helm that increases intelligence and sustains the intelligence stat.",
       "slots": [
@@ -801,7 +703,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -811,11 +712,7 @@
         ],
         "capability_ids": [
           "sust_wis"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Helm that increases wisdom and sustains the wisdom stat.",
       "slots": [
@@ -843,7 +740,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -853,11 +749,7 @@
         ],
         "capability_ids": [
           "sust_chr"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Helm that increases charisma and sustains the charisma stat.",
       "slots": [
@@ -885,7 +777,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 7500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -905,10 +796,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "head"
@@ -936,7 +824,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 7500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -963,10 +850,7 @@
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "head"
@@ -994,7 +878,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 7500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1016,10 +899,7 @@
           "ignore_fire",
           "ignore_cold",
           "res_fear"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Crown that increases wisdom and charisma, sustains these stats, grants resistance to fear, and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
@@ -1047,7 +927,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 2000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1060,10 +939,7 @@
         ],
         "resistance_ids": [
           "res_blind"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants search ability, resistance to blindness, and the ability to see invisible.",
       "slots": [
@@ -1092,7 +968,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1100,10 +975,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -1134,7 +1005,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1142,13 +1012,9 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "res_lite"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants light and resistance to light.",
       "slots": [
@@ -1176,16 +1042,10 @@
       "depth": 0,
       "rarity": 6,
       "cost": 50000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "telepathy"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants telepathy.",
       "slots": [
@@ -1214,16 +1074,10 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1500,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "regen"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants regeneration.",
       "slots": [
@@ -1252,18 +1106,13 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "teleportation"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "description": "Grants teleportation and carries a curse.",
       "slots": [
@@ -1291,18 +1140,12 @@
       "depth": 0,
       "rarity": 6,
       "cost": 4000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "res_sound",
           "res_confu",
           "res_fear"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants resistance to sound, confusion, and fear.",
       "slots": [
@@ -1330,7 +1173,6 @@
       "depth": 35,
       "rarity": 6,
       "cost": 4000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1346,10 +1188,7 @@
           "res_lite",
           "res_dark",
           "res_blind"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Grants resistance to light, dark and blindness, provides light, allows seeing invisible, and ignores damage from acid.",
       "slots": [
@@ -1377,7 +1216,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1393,13 +1231,9 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "description": "Helm that decreases intelligence, wisdom, and charisma, and carries a light curse.",
       "slots": [
@@ -1428,7 +1262,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1444,13 +1277,9 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "description": "Crown that decreases strength, dexterity, and constitution, and carries a light curse.",
       "slots": [
@@ -1478,20 +1307,14 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1500,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold",
           "res_shard"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Cloak that grants resistance to shards and ignores damage from acid, electricity, fire, and cold.",
       "slots": [
@@ -1519,19 +1342,13 @@
       "depth": 0,
       "rarity": 1,
       "cost": 500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
             "id": "stealth",
             "value_source": "pval"
           }
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Cloak that grants stealth.",
       "slots": [
@@ -1559,7 +1376,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 4000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1567,16 +1383,12 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
           "ignore_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Cloak that grants stealth to its wearer. Cloak resists acid, electricity, fire, and cold.",
       "slots": [
@@ -1604,7 +1416,6 @@
       "depth": 30,
       "rarity": 3,
       "cost": 2000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1622,8 +1433,6 @@
         "resistance_ids": [
           "ignore_acid"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -1654,12 +1463,7 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -1693,18 +1497,13 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "description": "Cloak that decreases armor class and carries a light curse.",
       "slots": [
@@ -1732,14 +1531,10 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -1773,16 +1568,10 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "free_act"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Gloves that grant free action.",
       "slots": [
@@ -1810,13 +1599,7 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1500,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "show_mods"
         ]
@@ -1847,7 +1630,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1855,10 +1637,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -1889,7 +1667,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 2500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1897,10 +1674,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "show_mods",
           "hide_type"
@@ -1932,7 +1705,6 @@
       "depth": 40,
       "rarity": 12,
       "cost": 5000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1948,9 +1720,6 @@
           "feather",
           "free_act"
         ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "show_mods",
           "hide_type"
@@ -1982,7 +1751,6 @@
       "depth": 50,
       "rarity": 12,
       "cost": 7000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -1997,9 +1765,6 @@
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "show_mods",
           "hide_type"
@@ -2033,7 +1798,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2041,9 +1805,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -2077,7 +1838,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2085,9 +1845,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -2121,16 +1878,10 @@
       "depth": 0,
       "rarity": 5,
       "cost": 250,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "feather"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Boots that slow descent.",
       "slots": [
@@ -2158,7 +1909,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 500,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2166,10 +1916,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -2200,16 +1946,10 @@
       "depth": 0,
       "rarity": 8,
       "cost": 1000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "free_act"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Boots that grant free action.",
       "slots": [
@@ -2237,7 +1977,6 @@
       "depth": 0,
       "rarity": 24,
       "cost": 100000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2245,10 +1984,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -2279,18 +2014,13 @@
       "depth": 0,
       "rarity": 10,
       "cost": 5000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "feather"
         ],
         "resistance_ids": [
           "res_nexus"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Boots that provide resistance to nexus, and feather falling.",
       "slots": [
@@ -2318,7 +2048,6 @@
       "depth": 60,
       "rarity": 30,
       "cost": 200000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2337,8 +2066,6 @@
           "ignore_acid",
           "ignore_fire"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -2372,7 +2099,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2380,9 +2106,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -2416,7 +2139,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2431,8 +2153,6 @@
         "capability_ids": [
           "aggravate_monsters"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
         ],
@@ -2484,10 +2204,7 @@
         ],
         "resistance_ids": [
           "res_fear"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that increase wisdom, slay evil, undead, and demons, grant see invisibility, are blessed, and provide resistance to fear.",
       "slots": [
@@ -2521,7 +2238,6 @@
       "depth": 0,
       "rarity": 12,
       "cost": 15000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2544,10 +2260,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that enhance stealth, grant free action, see invisibility, feather falling, regeneration, and provide resistance and immunity to various elements.",
       "slots": [
@@ -2581,7 +2294,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 5000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2591,11 +2303,7 @@
         ],
         "capability_ids": [
           "blessed_item"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that increase wisdom and are blessed.",
       "slots": [
@@ -2650,10 +2358,7 @@
           "ignore_acid",
           "ignore_fire",
           "res_dark"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that slay demons, orcs, trolls, and dragons, emit light, provide resistance to darkness, grant see invisibility and free action, and ignore acid and fire.",
       "slots": [
@@ -2710,11 +2415,7 @@
         "capability_ids": [
           "free_act",
           "see_invis"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that increase strength, dexterity, and constitution, slay orcs, trolls, and giants, and grant free action and see invisibility.",
       "slots": [
@@ -2748,7 +2449,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 10000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2756,10 +2456,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -2796,7 +2492,6 @@
       "depth": 40,
       "rarity": 20,
       "cost": 20000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -2816,8 +2511,6 @@
           "ignore_fire",
           "res_fear"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -2876,15 +2569,10 @@
         "brand_acid"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "res_acid"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that provide acid branding, resistance to acid, and ignore acid.",
       "slots": [
@@ -2922,15 +2610,10 @@
         "brand_elec"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_elec",
           "res_elec"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that provide lightning branding, resistance to lightning, and ignore lightning.",
       "slots": [
@@ -2968,15 +2651,10 @@
         "brand_fire"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_fire",
           "res_fire"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that provide fire branding, resistance to fire, and ignore fire.",
       "slots": [
@@ -3014,15 +2692,10 @@
         "brand_cold"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_cold",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that provide cold branding, resistance to cold, and ignore cold.",
       "slots": [
@@ -3059,14 +2732,6 @@
       "combat_modifiers": [
         "brand_pois"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are poisonous.",
       "slots": [
         "mainHand",
@@ -3102,14 +2767,6 @@
       "combat_modifiers": [
         "slay_animal"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against animals.",
       "slots": [
         "mainHand",
@@ -3145,14 +2802,6 @@
       "combat_modifiers": [
         "slay_evil"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against evil creatures.",
       "slots": [
         "mainHand",
@@ -3188,14 +2837,6 @@
       "combat_modifiers": [
         "slay_undead"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against undead creatures.",
       "slots": [
         "mainHand",
@@ -3241,14 +2882,6 @@
       "combat_modifiers": [
         "slay_demon"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against demons.",
       "slots": [
         "mainHand",
@@ -3284,14 +2917,6 @@
       "combat_modifiers": [
         "slay_orc"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against orcs.",
       "slots": [
         "mainHand",
@@ -3327,14 +2952,6 @@
       "combat_modifiers": [
         "slay_troll"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against trolls.",
       "slots": [
         "mainHand",
@@ -3370,14 +2987,6 @@
       "combat_modifiers": [
         "slay_giant"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against giants.",
       "slots": [
         "mainHand",
@@ -3413,14 +3022,6 @@
       "combat_modifiers": [
         "slay_dragon"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "description": "Weapons that are effective against dragons.",
       "slots": [
         "mainHand",
@@ -3465,11 +3066,7 @@
         ],
         "capability_ids": [
           "slow_digest"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that are extra effective against animals, grant intelligence and slow digestion.",
       "slots": [
@@ -3515,11 +3112,7 @@
         ],
         "capability_ids": [
           "blessed_item"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that are extra effective against evil creatures, grant wisdom, and are blessed.",
       "slots": [
@@ -3565,11 +3158,7 @@
         ],
         "capability_ids": [
           "see_invis"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that are extra effective against undead creatures, grant wisdom, and allow seeing invisible.",
       "slots": [
@@ -3624,13 +3213,9 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "res_fire"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand",
@@ -3675,11 +3260,7 @@
         ],
         "capability_ids": [
           "sust_dex"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "description": "Weapons that are extra effective against orcs, grant dexterity, and sustain dexterity.",
       "slots": [
@@ -3725,11 +3306,7 @@
         ],
         "capability_ids": [
           "regen"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand",
@@ -3775,11 +3352,7 @@
         ],
         "capability_ids": [
           "sust_str"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand",
@@ -3823,13 +3396,9 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "res_fear"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand",
@@ -3872,12 +3441,7 @@
             "id": "tunnel",
             "value_source": "pval"
           }
-        ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand"
@@ -3920,10 +3484,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -3959,20 +3519,16 @@
         "brand_pois"
       ],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "see_invis",
           "aggravate_monsters",
           "hold_life",
           "drain_exp"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "heavy_curse",
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "slots": [
         "mainHand",
@@ -4006,15 +3562,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "combat_modifiers": [],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ranged"
       ],
@@ -4041,15 +3588,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "combat_modifiers": [],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ranged"
       ],
@@ -4076,7 +3614,6 @@
       "depth": 50,
       "rarity": 4,
       "cost": 20000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4095,8 +3632,6 @@
           "ignore_acid",
           "ignore_fire"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -4127,7 +3662,6 @@
       "depth": 50,
       "rarity": 4,
       "cost": 20000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4139,13 +3673,10 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -4176,7 +3707,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 10000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4184,10 +3714,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -4218,7 +3744,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 10000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4226,10 +3751,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -4260,7 +3781,6 @@
       "depth": 40,
       "rarity": 4,
       "cost": 20000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4276,13 +3796,10 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_fire"
         ],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "hide_type"
         ]
@@ -4313,19 +3830,14 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "drain_exp",
           "see_invis"
         ],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ranged"
@@ -4356,14 +3868,6 @@
       "combat_modifiers": [
         "slay_animal"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4395,14 +3899,6 @@
       "combat_modifiers": [
         "slay_evil"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4437,14 +3933,6 @@
       "combat_modifiers": [
         "slay_undead"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4476,14 +3964,6 @@
       "combat_modifiers": [
         "slay_demon"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4516,14 +3996,9 @@
         "brand_acid"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4557,14 +4032,9 @@
         "brand_elec"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_elec"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4597,14 +4067,6 @@
       "combat_modifiers": [
         "slay_giant"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4636,14 +4098,6 @@
       "combat_modifiers": [
         "slay_dragon"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4678,15 +4132,10 @@
         "slay_undead"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_fire",
           "ignore_acid"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4721,14 +4170,6 @@
       "combat_modifiers": [
         "brand_pois"
       ],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4765,14 +4206,9 @@
         "brand_fire"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_fire"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4806,14 +4242,9 @@
         "brand_cold"
       ],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4843,15 +4274,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 20,
-      "combat_modifiers": [],
-      "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
-      },
       "slots": [
         "ammo"
       ],
@@ -4880,16 +4302,10 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
-        "resistance_ids": [],
-        "activations": [],
         "curses": [
           "light_curse"
-        ],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ammo"
@@ -4919,7 +4335,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 80000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -4927,7 +4342,6 @@
             "value_source": "pval"
           }
         ],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -4937,10 +4351,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "offHand"
@@ -4968,17 +4379,11 @@
       "depth": 0,
       "rarity": 3,
       "cost": 20000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "hold_life",
           "free_act"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "back"
@@ -5006,10 +4411,7 @@
       "depth": 0,
       "rarity": 8,
       "cost": 250000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -5022,9 +4424,7 @@
         ],
         "activations": [
           "RESIST"
-        ],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "back"
@@ -5059,10 +4459,7 @@
       "depth": 0,
       "rarity": 4,
       "cost": 35000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
-        "capability_ids": [],
         "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
@@ -5072,10 +4469,7 @@
           "res_elec",
           "res_fire",
           "res_cold"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "back"
@@ -5103,7 +4497,6 @@
       "depth": 0,
       "rarity": 15,
       "cost": 50000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -5118,9 +4511,6 @@
         "capability_ids": [
           "free_act"
         ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
         "display_flags": [
           "show_mods",
           "hide_type"
@@ -5152,18 +4542,13 @@
       "depth": 0,
       "rarity": 12,
       "cost": 15000,
-      "combat_modifiers": [],
       "effects": {
-        "affixes": [],
         "capability_ids": [
           "free_act"
         ],
         "resistance_ids": [
           "res_pois"
-        ],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "feet"
@@ -5191,7 +4576,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 50000,
-      "combat_modifiers": [],
       "effects": {
         "affixes": [
           {
@@ -5201,11 +4585,7 @@
         ],
         "capability_ids": [
           "regen"
-        ],
-        "resistance_ids": [],
-        "activations": [],
-        "curses": [],
-        "display_flags": []
+        ]
       },
       "slots": [
         "ranged"

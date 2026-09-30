@@ -212,7 +212,7 @@ internal static class ItemValidator
                 report.Add(EgoItemsDocument, egoId, "legacy_source_serial", "duplicate_legacy_source_serial", $"MAngband ego source serial {sourceSerial} is already used.");
             }
 
-            var references = egoItem[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
+            var references = EgoItemEffectsReader.ReadCombatModifiers(egoItem).ToArray();
             ValidateReferences(EgoItemsDocument, egoId, references, modifierIds, report);
         }
     }
@@ -411,9 +411,20 @@ internal static class ItemValidator
         foreach (var egoItem in documents[EgoItemsProperty][EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
-            var effects = egoItem[EffectsProperty]?.AsObject();
-            ValidateCapabilityGrantReferences(effects?[CapabilitiesProperty]?.AsArray(), capabilities, egoId, EgoItemsDocument, report);
-            ValidateResistanceGrantReferences(effects?[ResistancesProperty]?.AsArray(), resistances, egoId, EgoItemsDocument, report);
+            var effects = EgoItemEffectsReader.ReadEffects(egoItem);
+            foreach (var capabilityId in effects.CapabilityIds)
+            {
+                ValidateCapabilityGrant(capabilityId, capabilities, EgoItemsDocument, egoId, $"{EffectsProperty}.{CapabilitiesProperty}", report);
+            }
+
+            foreach (var resistanceId in effects.ResistanceIds)
+            {
+                ValidationHelpers.ValidateReference(resistanceId, resistances, EgoItemsDocument, egoId, ResistancesProperty, "unknown_resistance", report);
+                if (resistances.TryGet(resistanceId, out var resistance) && resistance.SemanticKind == ResistanceSemanticKind.Oppose)
+                {
+                    report.Add(EgoItemsDocument, egoId, $"{EffectsProperty}.{ResistancesProperty}", "invalid_item_resistance_semantics", $"Item '{egoId}' cannot grant timed Oppose resistance '{resistanceId}' as a permanent item property.");
+                }
+            }
         }
     }
 

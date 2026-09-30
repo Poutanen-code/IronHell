@@ -44,9 +44,9 @@ describe("ego item combat modifier references", () => {
 
   it("references only known combat modifier IDs without duplicates", () => {
     for (const ego of egoData.ego_items) {
-      assert.ok(Array.isArray(ego.combat_modifiers), `${ego.id} is missing combat_modifiers`);
-      assert.equal(new Set(ego.combat_modifiers).size, ego.combat_modifiers.length, `${ego.id} has duplicate references`);
-      for (const id of ego.combat_modifiers) {
+      const combatModifiers = ego.combat_modifiers ?? [];
+      assert.equal(new Set(combatModifiers).size, combatModifiers.length, `${ego.id} has duplicate references`);
+      for (const id of combatModifiers) {
         assert.ok(combatIds.has(id), `${ego.id} references unknown combat modifier ${id}`);
       }
     }

@@ -16,7 +16,7 @@
         "required": [
           "id", "legacy_source_serial", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
           "max_to_ac", "pval", "depth", "rarity", "cost", "applicability",
-          "slots", "item_categories", "combat_modifiers", "effects"
+          "slots", "item_categories"
         ],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
@@ -98,7 +98,6 @@
           "effects": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["affixes", "capability_ids", "resistance_ids", "activations", "curses", "display_flags"],
             "properties": {
               "affixes": {
                 "type": "array",
