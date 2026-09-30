@@ -31,11 +31,9 @@ internal static class FlavorDefinitionReader
 
             var legacyNode = entry?["legacy"];
             var mangbandIndex = legacyNode?["mangband_index"]?.GetValue<int>();
-            var tval = legacyNode?["tval"]?.GetValue<int>();
-            var sval = legacyNode?["sval"]?.GetValue<int?>();
-            if (mangbandIndex is null || tval is null)
+            if (mangbandIndex is null)
             {
-                report.Add(DocumentPath, id, "legacy", "missing_legacy_metadata", "Flavor legacy metadata (mangband_index, tval) is required.");
+                report.Add(DocumentPath, id, "legacy", "missing_legacy_metadata", "Flavor legacy metadata (mangband_index) is required.");
                 continue;
             }
 
@@ -71,7 +69,7 @@ internal static class FlavorDefinitionReader
                 displayName,
                 glyph,
                 color ?? string.Empty,
-                new FlavorLegacyMetadata(mangbandIndex.Value, tval.Value, sval),
+                new FlavorLegacyMetadata(mangbandIndex.Value),
                 provenanceStatus ?? "unverified"));
         }
 

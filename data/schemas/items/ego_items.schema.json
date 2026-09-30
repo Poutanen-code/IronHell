@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "_meta", "ego_items"],
   "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
+    "schema_version": { "type": "integer", "const": 2 },
     "_meta": { "type": "object" },
     "ego_items": {
       "type": "array",
@@ -14,12 +14,13 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "id", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
-          "max_to_ac", "pval", "depth", "rarity", "cost", "applicable_types",
+          "id", "legacy_source_serial", "name", "rating", "xtra", "max_to_hit", "max_to_dam",
+          "max_to_ac", "pval", "depth", "rarity", "cost", "applicability",
           "slots", "item_categories", "combat_modifiers", "effects"
         ],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "legacy_source_serial": { "type": "integer", "minimum": 1 },
           "name": { "type": "string" },
           "rating": { "type": "integer" },
           "xtra": { "type": "integer" },
@@ -30,17 +31,52 @@
           "depth": { "type": "integer" },
           "rarity": { "type": "integer" },
           "cost": { "type": "integer" },
-          "applicable_types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": ["tval", "min_sval", "max_sval", "tval_name"],
-              "properties": {
-                "tval": { "type": "integer" },
-                "min_sval": { "type": "integer" },
-                "max_sval": { "type": "integer" },
-                "tval_name": { "type": "string", "minLength": 1 }
+          "applicability": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "weapon_families": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["sword", "dagger", "axe", "mace", "polearm", "staff", "sling", "bow", "crossbow", "shot", "arrow", "bolt", "shovel", "pick", "mattock"] }
+              },
+              "weapon_classes": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["blade", "hafted", "polearm_and_axe", "launcher", "ammunition", "digging_tool"] }
+              },
+              "weapon_handling": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["one_handed", "two_handed", "ranged", "ammo", "digging"] }
+              },
+              "armor_forms": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["chest", "helmet", "crown", "gloves", "boots", "shield", "cloak"] }
+              },
+              "armor_materials": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["cloth", "leather", "mail", "plate"] }
+              },
+              "armor_body_families": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "type": "string", "enum": ["soft", "hard", "dragon_scale"] }
+              },
+              "item_ids": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": { "$ref": "common_item.schema.json#/$defs/Id" }
               }
             }
           },

@@ -12,9 +12,9 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_SameSeed_ProducesIdenticalAssignments()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_b", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_c", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
+            new ItemDefinition("ring_b", ItemCategory.Ring),
+            new ItemDefinition("ring_c", ItemCategory.Ring),
         ]);
         var flavors = ThreeRingFlavors();
 
@@ -28,9 +28,9 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_DifferentSeed_ProducesDifferentAssignments()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_b", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_c", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
+            new ItemDefinition("ring_b", ItemCategory.Ring),
+            new ItemDefinition("ring_c", ItemCategory.Ring),
         ]);
         var flavors = ThreeRingFlavors();
 
@@ -44,12 +44,12 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_AssignsOnlyFlavorsFromTheMatchingCategory()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
-            new ItemDefinition("amulet_a", ItemCategory.Amulet, "amulet"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
+            new ItemDefinition("amulet_a", ItemCategory.Amulet),
         ]);
         var flavors = new TestRegistry<FlavorDefinition>([
-            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28, 45, null), "verified"),
-            new FlavorDefinition("amulet_amber", FlavorCategory.Amulet, "Amber", "\"", "y", new FlavorLegacyMetadata(44, 40, null), "verified"),
+            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28), "verified"),
+            new FlavorDefinition("amulet_amber", FlavorCategory.Amulet, "Amber", "\"", "y", new FlavorLegacyMetadata(44), "verified"),
         ]);
 
         var service = new FlavorAssignmentService(items, flavors, new FlavorSeed(7));
@@ -62,7 +62,7 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_ItemsNotEligibleForFlavors_AreIgnored()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("sword_a", ItemCategory.Weapon, "sword"),
+            new ItemDefinition("sword_a", ItemCategory.Weapon),
         ]);
         var flavors = new TestRegistry<FlavorDefinition>([]);
 
@@ -76,7 +76,7 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_NoFlavorsForRequiredCategory_ThrowsAggregatedError()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
         ]);
         var flavors = new TestRegistry<FlavorDefinition>([]);
 
@@ -88,8 +88,8 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_MorePoolFlavorsThanItems_NoDuplicateAssignments()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_b", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
+            new ItemDefinition("ring_b", ItemCategory.Ring),
         ]);
         var flavors = ThreeRingFlavors();
 
@@ -103,14 +103,14 @@ public sealed class FlavorAssignmentServiceTests
     public void Constructor_MoreItemsThanPoolFlavors_RepeatsOnlyAfterFullPass()
     {
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_a", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_b", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_c", ItemCategory.Ring, "ring"),
-            new ItemDefinition("ring_d", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_a", ItemCategory.Ring),
+            new ItemDefinition("ring_b", ItemCategory.Ring),
+            new ItemDefinition("ring_c", ItemCategory.Ring),
+            new ItemDefinition("ring_d", ItemCategory.Ring),
         ]);
         var flavors = new TestRegistry<FlavorDefinition>([
-            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28, 45, null), "verified"),
-            new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16, 45, null), "verified"),
+            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28), "verified"),
+            new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16), "verified"),
         ]);
 
         var service = new FlavorAssignmentService(items, flavors, new FlavorSeed(5));
@@ -132,7 +132,7 @@ public sealed class FlavorAssignmentServiceTests
     [Fact]
     public void ItemInstanceFactory_Create_ResolvesFlavorIdFromAssignment()
     {
-        var items = new TestRegistry<ItemDefinition>([new ItemDefinition("ring_a", ItemCategory.Ring, "ring")]);
+        var items = new TestRegistry<ItemDefinition>([new ItemDefinition("ring_a", ItemCategory.Ring)]);
         var flavors = ThreeRingFlavors();
         var service = new FlavorAssignmentService(items, flavors, new FlavorSeed(3));
         var definition = items.GetRequired("ring_a");
@@ -145,7 +145,7 @@ public sealed class FlavorAssignmentServiceTests
     [Fact]
     public void ItemInstanceFactory_Create_WithoutAssignmentService_LeavesFlavorIdNull()
     {
-        var definition = new ItemDefinition("ring_a", ItemCategory.Ring, "ring");
+        var definition = new ItemDefinition("ring_a", ItemCategory.Ring);
 
         var instance = ItemInstanceFactory.Create("char-1:item:1", definition);
 
@@ -154,9 +154,9 @@ public sealed class FlavorAssignmentServiceTests
 
     private static TestRegistry<FlavorDefinition> ThreeRingFlavors() => new(
     [
-        new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28, 45, null), "verified"),
-        new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16, 45, null), "verified"),
-        new FlavorDefinition("ring_opal", FlavorCategory.Ring, "Opal", "=", "W", new FlavorLegacyMetadata(23, 45, null), "verified"),
+        new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28), "verified"),
+        new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16), "verified"),
+        new FlavorDefinition("ring_opal", FlavorCategory.Ring, "Opal", "=", "W", new FlavorLegacyMetadata(23), "verified"),
     ]);
 
     private sealed class TestRegistry<T>(IReadOnlyCollection<T> all) : IDefinitionRegistry<T>

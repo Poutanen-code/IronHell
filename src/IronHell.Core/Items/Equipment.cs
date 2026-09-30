@@ -44,15 +44,15 @@ public sealed class Equipment
 
     private static EquipmentSlot GetSlot(ItemDefinition definition) => definition.Category switch
     {
-        ItemCategory.Weapon when definition.Type is "bow" or "crossbow" => EquipmentSlot.Bow,
-        ItemCategory.Weapon => EquipmentSlot.Weapon,
+        ItemCategory.Weapon when definition.WeaponClass == WeaponClass.Launcher => EquipmentSlot.Bow,
+        ItemCategory.Weapon when definition.WeaponHandling != WeaponHandling.Ammunition => EquipmentSlot.Weapon,
         ItemCategory.Light => EquipmentSlot.Light,
-        ItemCategory.Armor when definition.Type == "chest" => EquipmentSlot.Body,
-        ItemCategory.Armor when definition.Type is "helmet" or "crown" => EquipmentSlot.Head,
-        ItemCategory.Armor when definition.Type == "cloak" => EquipmentSlot.Cloak,
-        ItemCategory.Armor when definition.Type == "shield" => EquipmentSlot.Shield,
-        ItemCategory.Armor when definition.Type == "gloves" => EquipmentSlot.Gloves,
-        ItemCategory.Armor when definition.Type == "boots" => EquipmentSlot.Boots,
+        ItemCategory.Armor when definition.ArmorForm == ArmorForm.Chest => EquipmentSlot.Body,
+        ItemCategory.Armor when definition.ArmorForm is ArmorForm.Helmet or ArmorForm.Crown => EquipmentSlot.Head,
+        ItemCategory.Armor when definition.ArmorForm == ArmorForm.Cloak => EquipmentSlot.Cloak,
+        ItemCategory.Armor when definition.ArmorForm == ArmorForm.Shield => EquipmentSlot.Shield,
+        ItemCategory.Armor when definition.ArmorForm == ArmorForm.Gloves => EquipmentSlot.Gloves,
+        ItemCategory.Armor when definition.ArmorForm == ArmorForm.Boots => EquipmentSlot.Boots,
         _ => throw new InvalidOperationException($"Item definition '{definition.Id}' has no supported equipment slot."),
     };
 }

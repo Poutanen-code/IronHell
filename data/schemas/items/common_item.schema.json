@@ -50,18 +50,6 @@
         "value": { "type": "number" }
       }
     },
-    "Tval": {
-      "anyOf": [
-        { "type": "null" },
-        { "type": "integer", "minimum": 0 }
-      ]
-    },
-    "Sval": {
-      "anyOf": [
-        { "type": "null" },
-        { "type": "integer", "minimum": 0 }
-      ]
-    },
     "EffectId": {
       "description": "Primitive effect type discriminator. Must be one of the known effect types defined in effects.schema.json.",
       "type": "string",

@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ironhell.local/schemas/spell_books.schema.json",
   "title": "Gameplay Architecture V2 Spell Book Definition Layer",
-  "description": "Spell book catalog. Books reference spells by ID and declare verified realm and tval/sval metadata.",
+  "description": "Spell book catalog. Books reference spells by stable ID and declare verified realm and generation quality.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "books"],
   "properties": {
     "schema_version": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "books": {
       "type": "array",
@@ -31,8 +31,7 @@
         "id",
         "name",
         "realm",
-        "book_tval",
-        "book_sval",
+        "generation_quality",
         "spell_ids",
         "provenance_status"
       ],
@@ -47,14 +46,9 @@
         "realm": {
           "$ref": "#/$defs/Realm"
         },
-        "book_tval": {
-          "type": "integer",
-          "enum": [90, 91]
-        },
-        "book_sval": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 8
+        "generation_quality": {
+          "type": "string",
+          "enum": ["normal", "good"]
         },
         "spell_ids": {
           "type": "array",
@@ -70,43 +64,7 @@
         "provenance_status": {
           "$ref": "common.schema.json#/$defs/ProvenanceStatus"
         }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "realm": {
-                "const": "magic"
-              }
-            },
-            "required": ["realm"]
-          },
-          "then": {
-            "properties": {
-              "book_tval": {
-                "const": 90
-              }
-            }
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "realm": {
-                "const": "prayer"
-              }
-            },
-            "required": ["realm"]
-          },
-          "then": {
-            "properties": {
-              "book_tval": {
-                "const": 91
-              }
-            }
-          }
-        }
-      ]
+      }
     }
   }
 }

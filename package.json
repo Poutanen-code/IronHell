@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/schema-validation/validate.test.js",
+    "test:ego-applicability": "node --test tests/schema-validation/ego-applicability-golden.test.js",
+    "test:ego-applicability-representation": "node --test tests/schema-validation/ego-applicability-representation.test.js",
+    "test:rods-parity": "node --test tests/schema-validation/rods-parity.test.js",
     "test:wands-parity": "node --test tests/schema-validation/wands-parity.test.js",
     "test:flavors-parity": "node --test tests/schema-validation/flavors-parity.test.js",
     "test:monster-blow-migration": "node --test tests/schema-validation/monster-blow-migration.test.js",

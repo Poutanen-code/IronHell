@@ -4,8 +4,6 @@
         {
             "id": "wand_of_heal_monster",
             "name": "Heal Monster",
-            "tval": 65,
-            "sval": 0,
             "weight": 10,
             "sell_value": 0,
             "pval": 10,
@@ -34,8 +32,6 @@
         {
             "id": "wand_of_haste_monster",
             "name": "Haste Monster",
-            "tval": 65,
-            "sval": 1,
             "weight": 10,
             "sell_value": 0,
             "pval": 10,
@@ -60,8 +56,6 @@
         {
             "id": "wand_of_clone_monster",
             "name": "Clone Monster",
-            "tval": 65,
-            "sval": 2,
             "weight": 10,
             "sell_value": 0,
             "pval": 10,
@@ -85,8 +79,6 @@
         {
             "id": "wand_of_teleport_other",
             "name": "Teleport Other",
-            "tval": 65,
-            "sval": 3,
             "weight": 10,
             "sell_value": 350,
             "pval": 10,
@@ -112,8 +104,6 @@
         {
             "id": "wand_of_disarming",
             "name": "Disarming",
-            "tval": 65,
-            "sval": 4,
             "weight": 10,
             "sell_value": 700,
             "pval": 10,
@@ -142,8 +132,6 @@
         {
             "id": "wand_of_trap_door_destruction",
             "name": "Trap/Door Destruction",
-            "tval": 65,
-            "sval": 5,
             "weight": 10,
             "sell_value": 100,
             "pval": 10,
@@ -172,8 +160,6 @@
         {
             "id": "wand_of_stone_to_mud",
             "name": "Stone to Mud",
-            "tval": 65,
-            "sval": 6,
             "weight": 10,
             "sell_value": 300,
             "pval": 10,
@@ -198,8 +184,6 @@
         {
             "id": "wand_of_light",
             "name": "Light",
-            "tval": 65,
-            "sval": 7,
             "weight": 10,
             "sell_value": 200,
             "pval": 10,
@@ -235,8 +219,6 @@
         {
             "id": "wand_of_sleep_monster",
             "name": "Sleep Monster",
-            "tval": 65,
-            "sval": 8,
             "weight": 10,
             "sell_value": 500,
             "pval": 10,
@@ -262,8 +244,6 @@
         {
             "id": "wand_of_slow_monster",
             "name": "Slow Monster",
-            "tval": 65,
-            "sval": 9,
             "weight": 10,
             "sell_value": 500,
             "pval": 10,
@@ -288,8 +268,6 @@
         {
             "id": "wand_of_confuse_monster",
             "name": "Confuse Monster",
-            "tval": 65,
-            "sval": 10,
             "weight": 10,
             "sell_value": 500,
             "pval": 10,
@@ -315,8 +293,6 @@
         {
             "id": "wand_of_fear_monster",
             "name": "Fear Monster",
-            "tval": 65,
-            "sval": 11,
             "weight": 10,
             "sell_value": 500,
             "pval": 10,
@@ -342,8 +318,6 @@
         {
             "id": "wand_of_drain_life",
             "name": "Drain Life",
-            "tval": 65,
-            "sval": 12,
             "weight": 10,
             "sell_value": 1200,
             "pval": 10,
@@ -371,8 +345,6 @@
         {
             "id": "wand_of_polymorph",
             "name": "Polymorph",
-            "tval": 65,
-            "sval": 13,
             "weight": 10,
             "sell_value": 400,
             "pval": 10,
@@ -397,8 +369,6 @@
         {
             "id": "wand_of_stinking_cloud",
             "name": "Stinking Cloud",
-            "tval": 65,
-            "sval": 14,
             "weight": 10,
             "sell_value": 400,
             "pval": 10,
@@ -429,8 +399,6 @@
         {
             "id": "wand_of_magic_missile",
             "name": "Magic Missile",
-            "tval": 65,
-            "sval": 15,
             "weight": 10,
             "sell_value": 200,
             "pval": 10,
@@ -460,8 +428,6 @@
         {
             "id": "wand_of_acid_bolt",
             "name": "Acid Bolt",
-            "tval": 65,
-            "sval": 16,
             "weight": 10,
             "sell_value": 950,
             "pval": 10,
@@ -491,8 +457,6 @@
         {
             "id": "wand_of_lightning_bolt",
             "name": "Lightning Bolt",
-            "tval": 65,
-            "sval": 17,
             "weight": 10,
             "sell_value": 600,
             "pval": 10,
@@ -522,8 +486,6 @@
         {
             "id": "wand_of_fire_bolt",
             "name": "Fire Bolt",
-            "tval": 65,
-            "sval": 18,
             "weight": 10,
             "sell_value": 1000,
             "pval": 10,
@@ -553,8 +515,6 @@
         {
             "id": "wand_of_cold_bolt",
             "name": "Cold Bolt",
-            "tval": 65,
-            "sval": 19,
             "weight": 10,
             "sell_value": 800,
             "pval": 10,
@@ -584,8 +544,6 @@
         {
             "id": "wand_of_acid_ball",
             "name": "Acid Ball",
-            "tval": 65,
-            "sval": 20,
             "weight": 10,
             "sell_value": 1650,
             "pval": 10,
@@ -616,8 +574,6 @@
         {
             "id": "wand_of_lightning_ball",
             "name": "Lightning Ball",
-            "tval": 65,
-            "sval": 21,
             "weight": 10,
             "sell_value": 1200,
             "pval": 10,
@@ -648,8 +604,6 @@
         {
             "id": "wand_of_fire_ball",
             "name": "Fire Ball",
-            "tval": 65,
-            "sval": 22,
             "weight": 10,
             "sell_value": 1800,
             "pval": 10,
@@ -680,8 +634,6 @@
         {
             "id": "wand_of_cold_ball",
             "name": "Cold Ball",
-            "tval": 65,
-            "sval": 23,
             "weight": 10,
             "sell_value": 1500,
             "pval": 10,
@@ -712,8 +664,6 @@
         {
             "id": "wand_of_wonder",
             "name": "Wonder",
-            "tval": 65,
-            "sval": 24,
             "weight": 10,
             "sell_value": 250,
             "pval": 10,
@@ -739,8 +689,6 @@
         {
             "id": "wand_of_annihilation",
             "name": "Annihilation",
-            "tval": 65,
-            "sval": 25,
             "weight": 10,
             "sell_value": 3000,
             "pval": 10,
@@ -768,8 +716,6 @@
         {
             "id": "wand_of_dragon_fire",
             "name": "Dragon Fire",
-            "tval": 65,
-            "sval": 26,
             "weight": 10,
             "sell_value": 2400,
             "pval": 10,
@@ -800,8 +746,6 @@
         {
             "id": "wand_of_dragon_cold",
             "name": "Dragon Cold",
-            "tval": 65,
-            "sval": 27,
             "weight": 10,
             "sell_value": 2400,
             "pval": 10,
@@ -832,8 +776,6 @@
         {
             "id": "wand_of_dragon_breath",
             "name": "Dragon Breath",
-            "tval": 65,
-            "sval": 28,
             "weight": 10,
             "sell_value": 2400,
             "pval": 10,

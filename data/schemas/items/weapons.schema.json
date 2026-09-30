@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "weapons"],
   "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
+    "schema_version": { "type": "integer", "const": 2 },
     "weapons": {
       "type": "array",
       "minItems": 1,
@@ -18,7 +18,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "type", "subtype", "tval", "sval",
+        "id", "name", "type", "subtype",
         "damage_dice", "to_hit_bonus", "to_damage_bonus",
         "weight", "sell_value", "stats",
         "allocation_table", "capability_ids", "resistance_ids", "description", "provenance_status"
@@ -28,14 +28,12 @@
         "name": { "type": "string", "minLength": 1 },
         "subtype": {
           "type": "string",
-          "enum": ["sword", "dagger", "axe", "mace", "polearm", "staff", "bow", "crossbow", "shot", "arrow", "bolt", "digger"]
+          "enum": ["sword", "dagger", "axe", "mace", "polearm", "staff", "sling", "bow", "crossbow", "shot", "arrow", "bolt", "shovel", "pick", "mattock"]
         },
         "type": {
           "type": "string",
           "enum": ["one_handed", "two_handed", "ranged", "ammo", "digging"]
         },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "damage_dice": {
           "anyOf": [
             { "type": "null" },
@@ -52,7 +50,10 @@
           "properties": {
             "attack_speed": { "type": "number", "exclusiveMinimum": 0 },
             "range": { "type": "integer", "minimum": 1 },
+            "compatible_ammo_family": { "type": "string", "enum": ["shot", "arrow", "bolt"] },
             "tunnel_power": { "type": "integer", "minimum": 0 },
+            "tree_cutting_effectiveness": { "type": "integer", "minimum": 1, "maximum": 4 },
+            "launcher_power_multiplier": { "type": "integer", "minimum": 2, "maximum": 4 },
             "durability_max": { "type": "integer", "minimum": 0 }
           }
         },

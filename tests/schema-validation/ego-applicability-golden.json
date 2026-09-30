@@ -1,0 +1,3090 @@
+{
+    "schema_version": 1,
+    "patterns": {
+        "36:0:99": [
+            "filthy_rag",
+            "hard_leather_armor",
+            "hard_studded_leather",
+            "leather_scale_mail",
+            "robe",
+            "soft_leather_armor",
+            "soft_studded_leather"
+        ],
+        "37:0:99": [
+            "adamantite_plate_mail",
+            "augmented_chain_mail",
+            "bar_chain_mail",
+            "chain_mail",
+            "double_chain_mail",
+            "full_plate_armor",
+            "metal_brigandine_armor",
+            "metal_lamellar_armor",
+            "metal_scale_mail",
+            "mithril_chain_mail",
+            "mithril_plate_mail",
+            "partial_plate_armor",
+            "ribbed_plate_armor",
+            "rusty_chain_mail"
+        ],
+        "36:2:2": [
+            "robe"
+        ],
+        "37:3:99": [
+            "adamantite_plate_mail",
+            "augmented_chain_mail",
+            "bar_chain_mail",
+            "chain_mail",
+            "double_chain_mail",
+            "full_plate_armor",
+            "metal_brigandine_armor",
+            "metal_lamellar_armor",
+            "metal_scale_mail",
+            "mithril_chain_mail",
+            "mithril_plate_mail",
+            "partial_plate_armor",
+            "ribbed_plate_armor"
+        ],
+        "34:0:99": [
+            "large_leather_shield",
+            "large_metal_shield",
+            "orcish_shield",
+            "shield_of_deflection",
+            "small_leather_shield",
+            "small_metal_shield"
+        ],
+        "32:0:99": [
+            "hard_leather_cap",
+            "iron_helm",
+            "metal_cap",
+            "steel_helm"
+        ],
+        "33:0:99": [
+            "golden_crown",
+            "iron_crown",
+            "jewel_encrusted_crown",
+            "massive_iron_crown"
+        ],
+        "35:0:99": [
+            "cloak",
+            "kolla",
+            "shadow_cloak"
+        ],
+        "31:0:99": [
+            "gauntlets",
+            "set_of_cesti",
+            "set_of_elven_gloves",
+            "set_of_leather_gloves"
+        ],
+        "31:1:1": [
+            "set_of_leather_gloves"
+        ],
+        "31:2:99": [
+            "gauntlets",
+            "set_of_cesti",
+            "set_of_elven_gloves"
+        ],
+        "30:0:99": [
+            "pair_of_hard_leather_boots",
+            "pair_of_metal_shod_boots",
+            "pair_of_soft_leather_boots",
+            "pair_of_witan_boots"
+        ],
+        "30:2:3": [
+            "pair_of_hard_leather_boots",
+            "pair_of_soft_leather_boots"
+        ],
+        "21:0:99": [
+            "ball_and_chain",
+            "flail",
+            "lead_filled_mace",
+            "lucerne_hammer",
+            "mace",
+            "mace_of_disruption",
+            "mighty_hammer",
+            "morning_star",
+            "quarterstaff",
+            "two_handed_flail",
+            "war_hammer",
+            "whip"
+        ],
+        "22:0:99": [
+            "awl_pike",
+            "battle_axe",
+            "beaked_axe",
+            "broad_axe",
+            "glaive",
+            "great_axe",
+            "halberd",
+            "lance",
+            "lochaber_axe",
+            "pike",
+            "scythe",
+            "scythe_of_slicing",
+            "spear",
+            "trident"
+        ],
+        "23:0:99": [
+            "bastard_sword",
+            "blade_of_chaos",
+            "broad_sword",
+            "broken_dagger",
+            "broken_sword",
+            "cutlass",
+            "dagger",
+            "executioners_sword",
+            "katana",
+            "long_sword",
+            "main_gauche",
+            "rapier",
+            "sabre",
+            "scimitar",
+            "short_sword",
+            "small_sword",
+            "tulwar",
+            "two_handed_sword"
+        ],
+        "21:12:99": [
+            "flail",
+            "lead_filled_mace",
+            "mace_of_disruption",
+            "mighty_hammer",
+            "morning_star",
+            "two_handed_flail"
+        ],
+        "22:10:99": [
+            "battle_axe",
+            "beaked_axe",
+            "broad_axe",
+            "glaive",
+            "great_axe",
+            "halberd",
+            "lance",
+            "lochaber_axe",
+            "scythe",
+            "scythe_of_slicing"
+        ],
+        "23:16:99": [
+            "bastard_sword",
+            "blade_of_chaos",
+            "broad_sword",
+            "executioners_sword",
+            "katana",
+            "long_sword",
+            "scimitar",
+            "two_handed_sword"
+        ],
+        "21:0:18": [
+            "ball_and_chain",
+            "flail",
+            "lead_filled_mace",
+            "lucerne_hammer",
+            "mace",
+            "morning_star",
+            "quarterstaff",
+            "two_handed_flail",
+            "war_hammer",
+            "whip"
+        ],
+        "20:0:99": [
+            "dwarven_pick",
+            "dwarven_shovel",
+            "gnomish_shovel",
+            "mattock",
+            "orcish_pick",
+            "pick",
+            "shovel"
+        ],
+        "19:0:99": [
+            "heavy_crossbow",
+            "light_crossbow",
+            "long_bow",
+            "short_bow",
+            "sling"
+        ],
+        "19:12:13": [
+            "long_bow",
+            "short_bow"
+        ],
+        "19:23:23": [
+            "light_crossbow"
+        ],
+        "19:2:2": [
+            "sling"
+        ],
+        "16:0:99": [
+            "iron_shot",
+            "mithril_shot",
+            "rounded_pebble"
+        ],
+        "17:0:99": [
+            "arrow",
+            "mithril_arrow",
+            "seeker_arrow"
+        ],
+        "18:0:99": [
+            "bolt",
+            "mithril_bolt",
+            "seeker_bolt"
+        ],
+        "16:0:2": [
+            "iron_shot",
+            "mithril_shot",
+            "rounded_pebble"
+        ],
+        "17:0:2": [
+            "arrow",
+            "seeker_arrow"
+        ],
+        "18:0:2": [
+            "bolt",
+            "seeker_bolt"
+        ],
+        "16:2:99": [
+            "mithril_shot"
+        ],
+        "17:2:99": [
+            "mithril_arrow",
+            "seeker_arrow"
+        ],
+        "18:2:99": [
+            "mithril_bolt",
+            "seeker_bolt"
+        ]
+    },
+    "egos": {
+        "of_resist_acid": {
+            "legacy_source_serial": 4,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_resist_lightning": {
+            "legacy_source_serial": 5,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_resist_fire_body_armor": {
+            "legacy_source_serial": 6,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_resist_cold_body_armor": {
+            "legacy_source_serial": 7,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_resistance_body_armor": {
+            "legacy_source_serial": 8,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_elvenkind_body_armor": {
+            "legacy_source_serial": 9,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_vulnerability": {
+            "legacy_source_serial": 10,
+            "rules": [
+                "36:0:99",
+                "37:0:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "filthy_rag",
+                "full_plate_armor",
+                "hard_leather_armor",
+                "hard_studded_leather",
+                "leather_scale_mail",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor",
+                "robe",
+                "rusty_chain_mail",
+                "soft_leather_armor",
+                "soft_studded_leather"
+            ]
+        },
+        "of_permanence": {
+            "legacy_source_serial": 11,
+            "rules": [
+                "36:2:2"
+            ],
+            "included_item_ids": [
+                "robe"
+            ]
+        },
+        "of_dwarven": {
+            "legacy_source_serial": 12,
+            "rules": [
+                "37:3:99"
+            ],
+            "included_item_ids": [
+                "adamantite_plate_mail",
+                "augmented_chain_mail",
+                "bar_chain_mail",
+                "chain_mail",
+                "double_chain_mail",
+                "full_plate_armor",
+                "metal_brigandine_armor",
+                "metal_lamellar_armor",
+                "metal_scale_mail",
+                "mithril_chain_mail",
+                "mithril_plate_mail",
+                "partial_plate_armor",
+                "ribbed_plate_armor"
+            ]
+        },
+        "of_resist_acid_shield": {
+            "legacy_source_serial": 16,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_resist_lightning_shield": {
+            "legacy_source_serial": 17,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_resist_fire_shield": {
+            "legacy_source_serial": 18,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_resist_cold_shield": {
+            "legacy_source_serial": 19,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_resistance_shield": {
+            "legacy_source_serial": 20,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_elvenkind_shield": {
+            "legacy_source_serial": 21,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_preservation": {
+            "legacy_source_serial": 22,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_vulnerability_shield": {
+            "legacy_source_serial": 23,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_intelligence": {
+            "legacy_source_serial": 24,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_wisdom": {
+            "legacy_source_serial": 25,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_beauty": {
+            "legacy_source_serial": 26,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_the_magi_crown": {
+            "legacy_source_serial": 27,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_might": {
+            "legacy_source_serial": 28,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_lordliness": {
+            "legacy_source_serial": 29,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_seeing": {
+            "legacy_source_serial": 30,
+            "rules": [
+                "33:0:99",
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "hard_leather_cap",
+                "iron_crown",
+                "iron_helm",
+                "jewel_encrusted_crown",
+                "massive_iron_crown",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_infravision": {
+            "legacy_source_serial": 31,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_light": {
+            "legacy_source_serial": 32,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_telepathy": {
+            "legacy_source_serial": 33,
+            "rules": [
+                "32:0:99",
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "hard_leather_cap",
+                "iron_crown",
+                "iron_helm",
+                "jewel_encrusted_crown",
+                "massive_iron_crown",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_regeneration": {
+            "legacy_source_serial": 34,
+            "rules": [
+                "32:0:99",
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "hard_leather_cap",
+                "iron_crown",
+                "iron_helm",
+                "jewel_encrusted_crown",
+                "massive_iron_crown",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_teleportation": {
+            "legacy_source_serial": 35,
+            "rules": [
+                "32:0:99"
+            ],
+            "included_item_ids": [
+                "hard_leather_cap",
+                "iron_helm",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_serenity": {
+            "legacy_source_serial": 36,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_night_and_day": {
+            "legacy_source_serial": 37,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_dullness": {
+            "legacy_source_serial": 38,
+            "rules": [
+                "32:0:99",
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "hard_leather_cap",
+                "iron_crown",
+                "iron_helm",
+                "jewel_encrusted_crown",
+                "massive_iron_crown",
+                "metal_cap",
+                "steel_helm"
+            ]
+        },
+        "of_sickliness": {
+            "legacy_source_serial": 39,
+            "rules": [
+                "33:0:99"
+            ],
+            "included_item_ids": [
+                "golden_crown",
+                "iron_crown",
+                "jewel_encrusted_crown",
+                "massive_iron_crown"
+            ]
+        },
+        "of_protection": {
+            "legacy_source_serial": 40,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_stealth": {
+            "legacy_source_serial": 41,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_aman": {
+            "legacy_source_serial": 42,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_the_magi_cloak": {
+            "legacy_source_serial": 43,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_enveloping": {
+            "legacy_source_serial": 44,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_vulnerability_cloak": {
+            "legacy_source_serial": 45,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_irritation": {
+            "legacy_source_serial": 46,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_free_action": {
+            "legacy_source_serial": 48,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_slaying": {
+            "legacy_source_serial": 49,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_agility": {
+            "legacy_source_serial": 50,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_power_gloves": {
+            "legacy_source_serial": 51,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_thievery": {
+            "legacy_source_serial": 52,
+            "rules": [
+                "31:1:1"
+            ],
+            "included_item_ids": [
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_combat": {
+            "legacy_source_serial": 53,
+            "rules": [
+                "31:2:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves"
+            ]
+        },
+        "of_weakness": {
+            "legacy_source_serial": 54,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_clumsiness": {
+            "legacy_source_serial": 55,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_slow_descent": {
+            "legacy_source_serial": 56,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_stealth_boots": {
+            "legacy_source_serial": 57,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_free_action_boots": {
+            "legacy_source_serial": 58,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_speed": {
+            "legacy_source_serial": 59,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_stability": {
+            "legacy_source_serial": 60,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_elvenkind_boots": {
+            "legacy_source_serial": 61,
+            "rules": [
+                "30:2:3"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_soft_leather_boots"
+            ]
+        },
+        "of_slowness": {
+            "legacy_source_serial": 62,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_annoyance": {
+            "legacy_source_serial": 63,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "holy_avenger": {
+            "legacy_source_serial": 64,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "defender": {
+            "legacy_source_serial": 65,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "blessed": {
+            "legacy_source_serial": 66,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_gondolin": {
+            "legacy_source_serial": 67,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_westernesse": {
+            "legacy_source_serial": 68,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_extra_attacks": {
+            "legacy_source_serial": 69,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_fury": {
+            "legacy_source_serial": 70,
+            "rules": [
+                "21:12:99",
+                "22:10:99",
+                "23:16:99"
+            ],
+            "included_item_ids": [
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "mace_of_disruption",
+                "mighty_hammer",
+                "morning_star",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "two_handed_flail",
+                "two_handed_sword"
+            ]
+        },
+        "of_acid": {
+            "legacy_source_serial": 72,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_lightning": {
+            "legacy_source_serial": 73,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_flame_melee": {
+            "legacy_source_serial": 74,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_frost_melee": {
+            "legacy_source_serial": 75,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_venom_melee": {
+            "legacy_source_serial": 76,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_animal": {
+            "legacy_source_serial": 80,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_evil": {
+            "legacy_source_serial": 81,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_undead": {
+            "legacy_source_serial": 82,
+            "rules": [
+                "21:0:18",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "main_gauche",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_demon": {
+            "legacy_source_serial": 83,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_orc": {
+            "legacy_source_serial": 84,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_troll": {
+            "legacy_source_serial": 85,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_giant": {
+            "legacy_source_serial": 86,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_dragon": {
+            "legacy_source_serial": 87,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_animal_int": {
+            "legacy_source_serial": 88,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_evil_greater": {
+            "legacy_source_serial": 89,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_undead_greater": {
+            "legacy_source_serial": 90,
+            "rules": [
+                "21:0:18",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "main_gauche",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_demon_int": {
+            "legacy_source_serial": 91,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_orc_greater": {
+            "legacy_source_serial": 92,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_troll_str": {
+            "legacy_source_serial": 93,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_giant_str": {
+            "legacy_source_serial": 94,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_slay_dragon_con": {
+            "legacy_source_serial": 95,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_digging": {
+            "legacy_source_serial": 100,
+            "rules": [
+                "20:0:99"
+            ],
+            "included_item_ids": [
+                "dwarven_pick",
+                "dwarven_shovel",
+                "gnomish_shovel",
+                "mattock",
+                "orcish_pick",
+                "pick",
+                "shovel"
+            ]
+        },
+        "of_earthquakes": {
+            "legacy_source_serial": 101,
+            "rules": [
+                "20:0:99"
+            ],
+            "included_item_ids": [
+                "dwarven_pick",
+                "dwarven_shovel",
+                "gnomish_shovel",
+                "mattock",
+                "orcish_pick",
+                "pick",
+                "shovel"
+            ]
+        },
+        "of_morgul": {
+            "legacy_source_serial": 102,
+            "rules": [
+                "21:0:99",
+                "22:0:99",
+                "23:0:99"
+            ],
+            "included_item_ids": [
+                "awl_pike",
+                "ball_and_chain",
+                "bastard_sword",
+                "battle_axe",
+                "beaked_axe",
+                "blade_of_chaos",
+                "broad_axe",
+                "broad_sword",
+                "broken_dagger",
+                "broken_sword",
+                "cutlass",
+                "dagger",
+                "executioners_sword",
+                "flail",
+                "glaive",
+                "great_axe",
+                "halberd",
+                "katana",
+                "lance",
+                "lead_filled_mace",
+                "lochaber_axe",
+                "long_sword",
+                "lucerne_hammer",
+                "mace",
+                "mace_of_disruption",
+                "main_gauche",
+                "mighty_hammer",
+                "morning_star",
+                "pike",
+                "quarterstaff",
+                "rapier",
+                "sabre",
+                "scimitar",
+                "scythe",
+                "scythe_of_slicing",
+                "short_sword",
+                "small_sword",
+                "spear",
+                "trident",
+                "tulwar",
+                "two_handed_flail",
+                "two_handed_sword",
+                "war_hammer",
+                "whip"
+            ]
+        },
+        "of_accuracy": {
+            "legacy_source_serial": 104,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        },
+        "of_power_bow": {
+            "legacy_source_serial": 105,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        },
+        "of_lothlorien": {
+            "legacy_source_serial": 106,
+            "rules": [
+                "19:12:13"
+            ],
+            "included_item_ids": [
+                "long_bow",
+                "short_bow"
+            ]
+        },
+        "of_the_haradrim": {
+            "legacy_source_serial": 107,
+            "rules": [
+                "19:23:23"
+            ],
+            "included_item_ids": [
+                "light_crossbow"
+            ]
+        },
+        "of_extra_might": {
+            "legacy_source_serial": 108,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        },
+        "of_extra_shots": {
+            "legacy_source_serial": 109,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        },
+        "of_buckland": {
+            "legacy_source_serial": 110,
+            "rules": [
+                "19:2:2"
+            ],
+            "included_item_ids": [
+                "sling"
+            ]
+        },
+        "of_the_nazgul": {
+            "legacy_source_serial": 111,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        },
+        "of_slay_animal_ammo": {
+            "legacy_source_serial": 112,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_slay_evil_ammo": {
+            "legacy_source_serial": 113,
+            "rules": [
+                "16:0:2",
+                "17:0:2",
+                "18:0:2"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_slay_undead_ammo": {
+            "legacy_source_serial": 114,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_slay_demon_ammo": {
+            "legacy_source_serial": 115,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_acid_ammo": {
+            "legacy_source_serial": 116,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_lightning_ammo": {
+            "legacy_source_serial": 117,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_slay_giant_ammo": {
+            "legacy_source_serial": 118,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_slay_dragon_ammo": {
+            "legacy_source_serial": 119,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_holy_might": {
+            "legacy_source_serial": 120,
+            "rules": [
+                "16:2:99",
+                "17:2:99",
+                "18:2:99"
+            ],
+            "included_item_ids": [
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_venom_ammunition": {
+            "legacy_source_serial": 121,
+            "rules": [
+                "16:0:2",
+                "17:0:2",
+                "18:0:2"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_flame_ammunition": {
+            "legacy_source_serial": 122,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_frost_ammunition": {
+            "legacy_source_serial": 123,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_wounding": {
+            "legacy_source_serial": 124,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_backbiting": {
+            "legacy_source_serial": 125,
+            "rules": [
+                "16:0:99",
+                "17:0:99",
+                "18:0:99"
+            ],
+            "included_item_ids": [
+                "arrow",
+                "bolt",
+                "iron_shot",
+                "mithril_arrow",
+                "mithril_bolt",
+                "mithril_shot",
+                "rounded_pebble",
+                "seeker_arrow",
+                "seeker_bolt"
+            ]
+        },
+        "of_the_avari": {
+            "legacy_source_serial": 128,
+            "rules": [
+                "34:0:99"
+            ],
+            "included_item_ids": [
+                "large_leather_shield",
+                "large_metal_shield",
+                "orcish_shield",
+                "shield_of_deflection",
+                "small_leather_shield",
+                "small_metal_shield"
+            ]
+        },
+        "of_the_teleri": {
+            "legacy_source_serial": 129,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_lordly_resistance": {
+            "legacy_source_serial": 130,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_resistance_cloak": {
+            "legacy_source_serial": 131,
+            "rules": [
+                "35:0:99"
+            ],
+            "included_item_ids": [
+                "cloak",
+                "kolla",
+                "shadow_cloak"
+            ]
+        },
+        "of_the_istari": {
+            "legacy_source_serial": 132,
+            "rules": [
+                "31:0:99"
+            ],
+            "included_item_ids": [
+                "gauntlets",
+                "set_of_cesti",
+                "set_of_elven_gloves",
+                "set_of_leather_gloves"
+            ]
+        },
+        "of_mirkwood": {
+            "legacy_source_serial": 133,
+            "rules": [
+                "30:0:99"
+            ],
+            "included_item_ids": [
+                "pair_of_hard_leather_boots",
+                "pair_of_metal_shod_boots",
+                "pair_of_soft_leather_boots",
+                "pair_of_witan_boots"
+            ]
+        },
+        "of_numenor": {
+            "legacy_source_serial": 135,
+            "rules": [
+                "19:0:99"
+            ],
+            "included_item_ids": [
+                "heavy_crossbow",
+                "light_crossbow",
+                "long_bow",
+                "short_bow",
+                "sling"
+            ]
+        }
+    }
+}

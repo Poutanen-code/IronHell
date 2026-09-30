@@ -4,8 +4,6 @@
         {
             "id": "staff_of_darkness",
             "name": "Darkness",
-            "tval": 55,
-            "sval": 0,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -47,8 +45,6 @@
         {
             "id": "staff_of_slowness",
             "name": "Slowness",
-            "tval": 55,
-            "sval": 1,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -81,8 +77,6 @@
         {
             "id": "staff_of_haste_monsters",
             "name": "Haste Monsters",
-            "tval": 55,
-            "sval": 2,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -107,8 +101,6 @@
         {
             "id": "staff_of_summoning",
             "name": "Summoning",
-            "tval": 55,
-            "sval": 3,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -142,8 +134,6 @@
         {
             "id": "staff_of_teleportation",
             "name": "Teleportation",
-            "tval": 55,
-            "sval": 4,
             "weight": 50,
             "sell_value": 2000,
             "pval": 0,
@@ -168,8 +158,6 @@
         {
             "id": "staff_of_perception",
             "name": "Perception",
-            "tval": 55,
-            "sval": 5,
             "weight": 50,
             "sell_value": 400,
             "pval": 0,
@@ -193,8 +181,6 @@
         {
             "id": "staff_of_remove_curse",
             "name": "Remove Curse",
-            "tval": 55,
-            "sval": 6,
             "weight": 50,
             "sell_value": 500,
             "pval": 0,
@@ -218,8 +204,6 @@
         {
             "id": "staff_of_starlight",
             "name": "Starlight",
-            "tval": 55,
-            "sval": 7,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -249,8 +233,6 @@
         {
             "id": "staff_of_light",
             "name": "Light",
-            "tval": 55,
-            "sval": 8,
             "weight": 50,
             "sell_value": 250,
             "pval": 0,
@@ -280,8 +262,6 @@
         {
             "id": "staff_of_enlightenment",
             "name": "Enlightenment",
-            "tval": 55,
-            "sval": 9,
             "weight": 50,
             "sell_value": 750,
             "pval": 0,
@@ -305,8 +285,6 @@
         {
             "id": "staff_of_treasure_location",
             "name": "Treasure Location",
-            "tval": 55,
-            "sval": 10,
             "weight": 50,
             "sell_value": 200,
             "pval": 0,
@@ -332,8 +310,6 @@
         {
             "id": "staff_of_object_location",
             "name": "Object Location",
-            "tval": 55,
-            "sval": 11,
             "weight": 50,
             "sell_value": 200,
             "pval": 0,
@@ -359,8 +335,6 @@
         {
             "id": "staff_of_trap_location",
             "name": "Trap Location",
-            "tval": 55,
-            "sval": 12,
             "weight": 50,
             "sell_value": 350,
             "pval": 0,
@@ -386,8 +360,6 @@
         {
             "id": "staff_of_door_stair_location",
             "name": "Door/Stair Location",
-            "tval": 55,
-            "sval": 13,
             "weight": 50,
             "sell_value": 350,
             "pval": 0,
@@ -414,8 +386,6 @@
         {
             "id": "staff_of_detect_invisible",
             "name": "Detect Invisible",
-            "tval": 55,
-            "sval": 14,
             "weight": 50,
             "sell_value": 200,
             "pval": 0,
@@ -441,8 +411,6 @@
         {
             "id": "staff_of_detect_evil",
             "name": "Detect Evil",
-            "tval": 55,
-            "sval": 15,
             "weight": 50,
             "sell_value": 350,
             "pval": 0,
@@ -468,8 +436,6 @@
         {
             "id": "staff_of_cure_light_wounds",
             "name": "Cure Light Wounds",
-            "tval": 55,
-            "sval": 16,
             "weight": 50,
             "sell_value": 350,
             "pval": 0,
@@ -498,8 +464,6 @@
         {
             "id": "staff_of_curing",
             "name": "Curing",
-            "tval": 55,
-            "sval": 17,
             "weight": 50,
             "sell_value": 1000,
             "pval": 0,
@@ -531,8 +495,6 @@
         {
             "id": "staff_of_healing",
             "name": "Healing",
-            "tval": 55,
-            "sval": 18,
             "weight": 50,
             "sell_value": 5000,
             "pval": 0,
@@ -571,8 +533,6 @@
         {
             "id": "staff_of_the_magi",
             "name": "The Magi",
-            "tval": 55,
-            "sval": 19,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -605,8 +565,6 @@
         {
             "id": "staff_of_sleep_monsters",
             "name": "Sleep Monsters",
-            "tval": 55,
-            "sval": 20,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -631,8 +589,6 @@
         {
             "id": "staff_of_slow_monsters",
             "name": "Slow Monsters",
-            "tval": 55,
-            "sval": 21,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -657,8 +613,6 @@
         {
             "id": "staff_of_speed",
             "name": "Speed",
-            "tval": 55,
-            "sval": 22,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -691,8 +645,6 @@
         {
             "id": "staff_of_probing",
             "name": "Probing",
-            "tval": 55,
-            "sval": 23,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -718,8 +670,6 @@
         {
             "id": "staff_of_dispel_evil",
             "name": "Dispel Evil",
-            "tval": 55,
-            "sval": 24,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -751,8 +701,6 @@
         {
             "id": "staff_of_power",
             "name": "Power",
-            "tval": 55,
-            "sval": 25,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -783,8 +731,6 @@
         {
             "id": "staff_of_holiness",
             "name": "Holiness",
-            "tval": 55,
-            "sval": 26,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -853,8 +799,6 @@
         {
             "id": "staff_of_banishment",
             "name": "Banishment",
-            "tval": 55,
-            "sval": 27,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -880,8 +824,6 @@
         {
             "id": "staff_of_earthquakes",
             "name": "Earthquakes",
-            "tval": 55,
-            "sval": 28,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,
@@ -906,8 +848,6 @@
         {
             "id": "staff_of_destruction",
             "name": "Destruction",
-            "tval": 55,
-            "sval": 29,
             "weight": 50,
             "sell_value": 0,
             "pval": 0,

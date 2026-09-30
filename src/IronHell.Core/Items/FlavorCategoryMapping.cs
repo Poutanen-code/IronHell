@@ -30,7 +30,7 @@ public static class FlavorCategoryMapping
             case ItemCategory.Scroll:
                 category = FlavorCategory.Scroll;
                 return true;
-            case ItemCategory.Consumable when item.Type == "mushroom":
+            case ItemCategory.Consumable when item.ConsumableKind == ConsumableKind.Mushroom:
                 category = FlavorCategory.Mushroom;
                 return true;
             default:

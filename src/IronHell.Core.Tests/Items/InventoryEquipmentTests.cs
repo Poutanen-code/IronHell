@@ -24,7 +24,7 @@ public sealed class InventoryEquipmentTests
     {
         var equipment = new Equipment();
         var item = new ItemInstance("character-1:item:1", "dagger");
-        var definition = new ItemDefinition("dagger", ItemCategory.Weapon, "dagger");
+        var definition = new ItemDefinition("dagger", ItemCategory.Weapon, WeaponHandling: WeaponHandling.OneHanded, WeaponFamily: WeaponFamily.Dagger, WeaponClass: WeaponClass.Blade);
 
         equipment.Equip(EquipmentSlot.Weapon, item, definition);
 
@@ -40,7 +40,7 @@ public sealed class InventoryEquipmentTests
     {
         var equipment = new Equipment();
         var item = new ItemInstance("character-1:item:1", "dagger");
-        var definition = new ItemDefinition("dagger", ItemCategory.Weapon, "dagger");
+        var definition = new ItemDefinition("dagger", ItemCategory.Weapon, WeaponHandling: WeaponHandling.OneHanded, WeaponFamily: WeaponFamily.Dagger, WeaponClass: WeaponClass.Blade);
 
         Assert.Throws<InvalidOperationException>(() => { equipment.Equip(EquipmentSlot.Body, item, definition); });
     }
@@ -51,13 +51,38 @@ public sealed class InventoryEquipmentTests
         var equipment = new Equipment();
         var first = new ItemInstance("character-1:item:1", "dagger");
         var second = new ItemInstance("character-1:item:2", "short_sword");
-        var firstDefinition = new ItemDefinition("dagger", ItemCategory.Weapon, "dagger");
-        var secondDefinition = new ItemDefinition("short_sword", ItemCategory.Weapon, "sword");
+        var firstDefinition = new ItemDefinition("dagger", ItemCategory.Weapon, WeaponHandling: WeaponHandling.OneHanded, WeaponFamily: WeaponFamily.Dagger, WeaponClass: WeaponClass.Blade);
+        var secondDefinition = new ItemDefinition("short_sword", ItemCategory.Weapon, WeaponHandling: WeaponHandling.OneHanded, WeaponFamily: WeaponFamily.Sword, WeaponClass: WeaponClass.Blade);
 
         equipment.Equip(EquipmentSlot.Weapon, first, firstDefinition);
         var replaced = equipment.Equip(EquipmentSlot.Weapon, second, secondDefinition);
 
         Assert.Equal(first, replaced);
         Assert.Equal(second, equipment.GetEquipped(EquipmentSlot.Weapon));
+    }
+
+    [Theory]
+    [InlineData("sling", WeaponFamily.Sling)]
+    [InlineData("short_bow", WeaponFamily.Bow)]
+    [InlineData("light_crossbow", WeaponFamily.Crossbow)]
+    public void Equipment_EquipsLaunchersInBowSlot(string id, WeaponFamily family)
+    {
+        var equipment = new Equipment();
+        var item = new ItemInstance($"character-1:item:{id}", id);
+        var definition = new ItemDefinition(id, ItemCategory.Weapon, WeaponHandling.Ranged, family, WeaponClass.Launcher);
+
+        equipment.Equip(EquipmentSlot.Bow, item, definition);
+
+        Assert.Equal(item, equipment.GetEquipped(EquipmentSlot.Bow));
+    }
+
+    [Fact]
+    public void Equipment_RejectsAmmunitionAsEquippableWeapon()
+    {
+        var equipment = new Equipment();
+        var item = new ItemInstance("character-1:item:arrow", "arrow");
+        var definition = new ItemDefinition("arrow", ItemCategory.Weapon, WeaponHandling.Ammunition, WeaponFamily.Arrow, WeaponClass.Ammunition);
+
+        Assert.Throws<InvalidOperationException>(() => equipment.Equip(EquipmentSlot.Weapon, item, definition));
     }
 }

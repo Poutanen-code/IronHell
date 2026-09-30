@@ -25,11 +25,9 @@
           "legacy": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["mangband_index", "tval"],
+            "required": ["mangband_index"],
             "properties": {
-              "mangband_index": { "type": "integer" },
-              "tval": { "type": "integer" },
-              "sval": { "type": ["integer", "null"] }
+              "mangband_index": { "type": "integer" }
             }
           },
           "provenance_status": { "type": "string" }

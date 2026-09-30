@@ -66,6 +66,9 @@ const statuses = byLabel.get("statuses").statuses;
 const activations = byLabel.get("activations").activations;
 const spellBooks = byLabel.get("spell books").books;
 const artifactData = byLabel.get("artifacts").artifacts;
+const shopRules = loadJSON("data/definitions/stores/shop_rules.json");
+const itemIds = new Set(["weapons", "armor", "lights", "consumables", "potions", "scrolls", "accessories", "staves", "wands", "rods"]
+  .flatMap((catalog) => byLabel.get(catalog)[catalog].map((item) => item.id)));
 
 function walk(value, visit) {
   if (Array.isArray(value)) {
@@ -303,4 +306,15 @@ test("schemas reject unknown fields and invalid flat duration dice", () => {
   const legacy = structuredClone(artifactContract.data);
   legacy.artifacts[0].flags = {};
   assert.equal(artifactContract.validate(legacy), false);
+});
+
+test("store template references resolve or use an explicit generated-template ID", () => {
+  for (const [poolId, entries] of Object.entries(shopRules.stockPools)) {
+    for (const entry of entries.filter((candidate) => candidate.kind === "template")) {
+      assert.ok(
+        itemIds.has(entry.templateId) || /^generated_(magic|prayer)_book_[0-3]$/.test(entry.templateId),
+        `${poolId} references unknown item template '${entry.templateId}'`,
+      );
+    }
+  }
 });

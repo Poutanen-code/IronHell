@@ -31,6 +31,10 @@ internal static class ItemValidator
     {
         "light_curse", "heavy_curse", "perma_curse",
     };
+    private static readonly IReadOnlySet<string> AbstractArtifactBaseKindIds = new HashSet<string>(StringComparer.Ordinal)
+    {
+        "phial", "star", "stone", "orb", "ring", "amulet", "jewel", "leather_gloves",
+    };
     private readonly record struct ItemReferenceContext(
         string Document,
         string ItemId,
@@ -38,7 +42,8 @@ internal static class ItemValidator
         IDefinitionRegistry<StatusDefinition> Statuses,
         IDefinitionRegistry<CapabilityDefinition> Capabilities,
         IDefinitionRegistry<ResistanceDefinition> Resistances,
-        IReadOnlySet<string> CombatModifierIds);
+        IReadOnlySet<string> CombatModifierIds,
+        ActionSourceFamily? SourceFamily);
 
     public static void Validate(
         FrozenDictionary<string, JsonObject> documents,
@@ -60,7 +65,8 @@ internal static class ItemValidator
                     statuses,
                     capabilities,
                     resistances,
-                    combatModifierIds), report);
+                    combatModifierIds,
+                    GetActionSourceFamily(catalog.Category)), report);
             }
         }
     }
@@ -73,7 +79,7 @@ internal static class ItemValidator
         ValidateItemCapabilityReferences(item[CapabilityIdsProperty]?.AsArray(), context.Capabilities, context.Document, context.ItemId, report);
         ValidateItemResistanceReferences(item[ResistanceIdsProperty]?.AsArray(), context.Resistances, context.Document, context.ItemId, report);
         ValidateItemCombatModifierReferences(item[CombatModifiersProperty]?.AsArray(), context.CombatModifierIds, context.Document, context.ItemId, report);
-        ValidateItemActionReferences(item["actions"]?.AsArray(), context.Actions, context.Statuses, context.Document, context.ItemId, report);
+        ValidateItemActionReferences(item["actions"]?.AsArray(), context.Actions, context.Statuses, context.SourceFamily, context.Document, context.ItemId, report);
     }
 
     private static void ValidateItemCapabilityReferences(
@@ -124,6 +130,7 @@ internal static class ItemValidator
         JsonArray? actions,
         IDefinitionRegistry<ActionDefinition> actionRegistry,
         IDefinitionRegistry<StatusDefinition> statuses,
+        ActionSourceFamily? sourceFamily,
         string document,
         string itemId,
         DefinitionValidationReport report)
@@ -131,8 +138,28 @@ internal static class ItemValidator
         foreach (var action in actions?.OfType<JsonObject>() ?? [])
         {
             ValidationHelpers.ValidateActionReference(action, actionRegistry, statuses, document, itemId, report);
+            var actionId = action["action_id"]?.GetValue<string>();
+            if (sourceFamily is { } expectedFamily &&
+                actionId is not null &&
+                actionRegistry.TryGet(actionId, out var definition) &&
+                definition.AllowedSourceFamilies is { } allowedFamilies &&
+                !allowedFamilies.Contains(expectedFamily))
+            {
+                report.Add(document, itemId, "actions.action_id", "invalid_action_source_family", $"Action '{actionId}' does not allow item source family '{expectedFamily}'.");
+            }
         }
     }
+
+    private static ActionSourceFamily? GetActionSourceFamily(ItemCategory? category) => category switch
+    {
+        ItemCategory.Consumable => ActionSourceFamily.Consumable,
+        ItemCategory.Potion => ActionSourceFamily.Potion,
+        ItemCategory.Scroll => ActionSourceFamily.Scroll,
+        ItemCategory.Staff => ActionSourceFamily.Staff,
+        ItemCategory.Wand => ActionSourceFamily.Wand,
+        ItemCategory.Rod => ActionSourceFamily.Rod,
+        _ => null,
+    };
 
     private static readonly IReadOnlyDictionary<ItemCategory, FlavorCategory> FlavorAlignedItemCategories = new Dictionary<ItemCategory, FlavorCategory>
     {
@@ -169,13 +196,123 @@ internal static class ItemValidator
             .Where(modifier => modifier["id"] is not null)
             .Select(modifier => modifier["id"]!.GetValue<string>())
             .ToHashSet(StringComparer.Ordinal);
+        var egoIds = new HashSet<string>(StringComparer.Ordinal);
+        var sourceSerials = new HashSet<int>();
         foreach (var egoItem in egoDocument[EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
         {
             var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
+            if (!egoIds.Add(egoId))
+            {
+                report.Add(EgoItemsDocument, egoId, "id", "duplicate_id", $"Ego item identifier '{egoId}' is already used.");
+            }
+
+            if (egoItem["legacy_source_serial"]?.GetValue<int>() is { } sourceSerial &&
+                !sourceSerials.Add(sourceSerial))
+            {
+                report.Add(EgoItemsDocument, egoId, "legacy_source_serial", "duplicate_legacy_source_serial", $"MAngband ego source serial {sourceSerial} is already used.");
+            }
+
             var references = egoItem[CombatModifiersProperty]?.AsArray().Select(reference => reference?.GetValue<string>()).ToArray() ?? [];
             ValidateReferences(EgoItemsDocument, egoId, references, modifierIds, report);
         }
     }
+
+    public static void ValidateEgoApplicability(FrozenDictionary<string, JsonObject> documents, DefinitionValidationReport report)
+    {
+        var items = ItemDefinitionReader.ItemCatalogs
+            .Where(catalog => catalog.Category is not null)
+            .SelectMany(catalog => (documents[catalog.DocumentName][catalog.CollectionName]?.AsArray().OfType<JsonObject>() ?? []).Select(item => (Catalog: catalog.DocumentName, Item: item)))
+            .ToArray();
+        var itemIds = items.Select(entry => entry.Item["id"]?.GetValue<string>()).Where(id => id is not null).ToHashSet(StringComparer.Ordinal)!;
+        foreach (var egoItem in documents["ego_items"][EgoItemsProperty]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var egoId = egoItem["id"]?.GetValue<string>() ?? string.Empty;
+            var applicability = egoItem["applicability"] as JsonObject;
+            if (applicability is null || applicability.Count == 0)
+            {
+                report.Add(EgoItemsDocument, egoId, "applicability", "empty_ego_applicability", "Ego applicability must contain a semantic selector or explicit item IDs.");
+                continue;
+            }
+
+            foreach (var itemId in applicability["item_ids"]?.AsArray().Select(node => node?.GetValue<string>()) ?? [])
+            {
+                if (string.IsNullOrWhiteSpace(itemId) || !itemIds.Contains(itemId))
+                {
+                    report.Add(EgoItemsDocument, egoId, "applicability.item_ids", "unknown_ego_item", $"Reference '{itemId}' does not resolve to an active item.");
+                }
+            }
+
+            var hasExplicitItems = applicability["item_ids"] is JsonArray;
+            var hasSemanticSelectors = applicability.Any(property => property.Key != "item_ids");
+            if (hasSemanticSelectors)
+            {
+                var matches = items.Count(entry => MatchesSemanticSelectors(entry.Catalog, entry.Item, applicability));
+                if (matches == 0 && !hasExplicitItems)
+                {
+                    report.Add(EgoItemsDocument, egoId, "applicability", "zero_match_ego_applicability", "Ego semantic applicability does not match any active item.");
+                }
+            }
+            else if (!hasExplicitItems)
+            {
+                report.Add(EgoItemsDocument, egoId, "applicability", "empty_ego_applicability", "Ego applicability must contain a semantic selector or explicit item IDs.");
+            }
+        }
+    }
+
+    private static bool MatchesSemanticSelectors(string catalog, JsonObject item, JsonObject applicability)
+    {
+        if (applicability["weapon_families"] is JsonArray weaponFamilies &&
+            (catalog != "weapons" || !ContainsValue(weaponFamilies, item["subtype"]?.GetValue<string>())))
+        {
+            return false;
+        }
+
+        if (applicability["weapon_classes"] is JsonArray weaponClasses &&
+            (catalog != "weapons" || !ContainsValue(weaponClasses, ResolveWeaponClass(item["subtype"]?.GetValue<string>()))))
+        {
+            return false;
+        }
+
+        if (applicability["weapon_handling"] is JsonArray weaponHandling &&
+            (catalog != "weapons" || !ContainsValue(weaponHandling, item["type"]?.GetValue<string>())))
+        {
+            return false;
+        }
+
+        if (applicability["armor_forms"] is JsonArray armorForms &&
+            (catalog != "armor" || !ContainsValue(armorForms, item["type"]?.GetValue<string>())))
+        {
+            return false;
+        }
+
+        if (applicability["armor_materials"] is JsonArray armorMaterials &&
+            (catalog != "armor" || !ContainsValue(armorMaterials, item["armor_weight"]?.GetValue<string>())))
+        {
+            return false;
+        }
+
+        if (applicability["armor_body_families"] is JsonArray armorBodyFamilies &&
+            (catalog != "armor" || !ContainsValue(armorBodyFamilies, item["armor_family"]?.GetValue<string>())))
+        {
+            return false;
+        }
+
+        return applicability.Any(property => property.Key != "item_ids");
+    }
+
+    private static bool ContainsValue(JsonArray values, string? candidate) =>
+        candidate is not null && values.Any(value => string.Equals(value?.GetValue<string>(), candidate, StringComparison.Ordinal));
+
+    private static string ResolveWeaponClass(string? family) => family switch
+    {
+        "sling" or "bow" or "crossbow" => "launcher",
+        "shot" or "arrow" or "bolt" => "ammunition",
+        "sword" or "dagger" => "blade",
+        "mace" or "staff" => "hafted",
+        "axe" or "polearm" => "polearm_and_axe",
+        "shovel" or "pick" or "mattock" => "digging_tool",
+        _ => string.Empty,
+    };
 
     public static void ValidateArtifactCombatModifiers(
         JsonObject artifactDocument,
@@ -239,6 +376,29 @@ internal static class ItemValidator
             ValidateEffectReferences(effects?[ActivationsProperty]?.AsArray(), activationIds, artifactId, ActivationsProperty, "unknown_activation", report);
             ValidateEffectReferences(effects?[CursesProperty]?.AsArray(), CurseIds, artifactId, CursesProperty, "unknown_curse", report);
             ValidateArtifactActivationReference(artifact, artifactId, effects, report);
+        }
+    }
+
+    public static void ValidateArtifactBaseItemReferences(
+        FrozenDictionary<string, JsonObject> documents,
+        DefinitionValidationReport report)
+    {
+        var itemIds = ItemDefinitionReader.ItemCatalogs
+            .SelectMany(catalog => documents[catalog.DocumentName][catalog.CollectionName]?.AsArray().OfType<JsonObject>() ?? [])
+            .Select(item => item["id"]?.GetValue<string>())
+            .Where(id => !string.IsNullOrWhiteSpace(id))
+            .ToHashSet(StringComparer.Ordinal);
+
+        foreach (var artifact in documents[ArtifactsProperty][ArtifactsProperty]?.AsArray().OfType<JsonObject>() ?? [])
+        {
+            var artifactId = artifact["id"]?.GetValue<string>() ?? string.Empty;
+            var baseItemId = artifact["baseItemId"]?.GetValue<string>();
+            if (!string.IsNullOrWhiteSpace(baseItemId) &&
+                !itemIds.Contains(baseItemId) &&
+                !AbstractArtifactBaseKindIds.Contains(baseItemId))
+            {
+                report.Add(ArtifactsDocument, artifactId, "baseItemId", "unknown_artifact_base_kind", $"Artifact base kind '{baseItemId}' is neither an item definition ID nor a registered abstract source kind.");
+            }
         }
     }
 

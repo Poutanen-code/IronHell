@@ -70,11 +70,11 @@ public sealed class WorldRuntimeStateTests
             new ClassDefinition("warrior", "Warrior", default, default, default, 9, 100, null, 0, 0, 1, 0, 1, 0, 0, [], [new StartingEquipmentEntry("ring_of_feather_falling", 1, 1)]),
         ]);
         var items = new TestRegistry<ItemDefinition>([
-            new ItemDefinition("ring_of_feather_falling", ItemCategory.Ring, "ring"),
+            new ItemDefinition("ring_of_feather_falling", ItemCategory.Ring),
         ]);
         var flavors = new TestRegistry<FlavorDefinition>([
-            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28, 45, null), "verified"),
-            new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16, 45, null), "verified"),
+            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28), "verified"),
+            new FlavorDefinition("ring_jade", FlavorCategory.Ring, "Jade", "=", "G", new FlavorLegacyMetadata(16), "verified"),
         ]);
         var rules = new[] { new RaceClassRule("human", "warrior") };
 

@@ -325,10 +325,126 @@ public enum ItemCategory
 	Rod,
 }
 
+public enum WeaponHandling
+{
+	OneHanded,
+	TwoHanded,
+	Ranged,
+	Ammunition,
+	Digging,
+}
+
+public enum WeaponFamily
+{
+	Sword,
+	Dagger,
+	Axe,
+	Mace,
+	Polearm,
+	Staff,
+	Sling,
+	Bow,
+	Crossbow,
+	Shot,
+	Arrow,
+	Bolt,
+	Shovel,
+	Pick,
+	Mattock,
+}
+
+public enum WeaponClass
+{
+	Blade,
+	Hafted,
+	PolearmAndAxe,
+	Launcher,
+	Ammunition,
+	DiggingTool,
+}
+
+public enum AmmunitionFamily
+{
+	Shot,
+	Arrow,
+	Bolt,
+}
+
+public enum ArmorForm
+{
+	Chest,
+	Helmet,
+	Crown,
+	Gloves,
+	Boots,
+	Shield,
+	Cloak,
+}
+
+public enum BodyArmorFamily
+{
+	Soft,
+	Hard,
+	DragonScale,
+}
+
+public enum ArmorMaterial
+{
+	Cloth,
+	Leather,
+	Mail,
+	Plate,
+}
+
+public enum ConsumableKind
+{
+	Mushroom,
+	Food,
+}
+
+public enum LightSourceKind
+{
+	Torch,
+	Lantern,
+}
+
+public enum LightFuelPolicy
+{
+	Finite,
+	Inexhaustible,
+}
+
+public enum SpellBookRealm
+{
+	Magic,
+	Prayer,
+}
+
+public enum GoodGenerationQuality
+{
+	Normal,
+	Good,
+}
+
 public sealed record ItemDefinition(
 	string Id,
 	ItemCategory Category,
-	string? Type,
+	WeaponHandling? WeaponHandling = null,
+	WeaponFamily? WeaponFamily = null,
+	WeaponClass? WeaponClass = null,
+	AmmunitionFamily? CompatibleAmmunitionFamily = null,
+	ArmorForm? ArmorForm = null,
+	BodyArmorFamily? BodyArmorFamily = null,
+	ArmorMaterial? ArmorMaterial = null,
+	ConsumableKind? ConsumableKind = null,
+	LightSourceKind? LightSourceKind = null,
+	LightFuelPolicy? LightFuelPolicy = null,
+	SpellBookRealm? SpellBookRealm = null,
+	GoodGenerationQuality? GenerationQuality = null,
+	IReadOnlyList<string>? SpellIds = null,
+	IReadOnlyList<ItemActionReference>? Actions = null,
+	int TreeCuttingEffectiveness = 0,
+	int? LauncherPowerMultiplier = null,
 	IReadOnlyList<string>? CombatModifierIds = null,
 	IReadOnlyList<string>? CapabilityIds = null,
 	IReadOnlyList<string>? ResistanceIds = null,
@@ -340,6 +456,8 @@ public sealed record ItemDefinition(
 	int? StackSize = null,
 	double? Weight = null,
 	int? SellValue = null) : IIdentifiedDefinition;
+
+public sealed record ItemActionReference(string ActionId, JsonElement? Parameters = null);
 
 public sealed record ItemAffixDefinition(string Type, double Value);
 
@@ -357,7 +475,7 @@ public enum FlavorCategory
 	Scroll,
 }
 
-public sealed record FlavorLegacyMetadata(int MangbandIndex, int Tval, int? Sval);
+public sealed record FlavorLegacyMetadata(int MangbandIndex);
 
 public sealed record FlavorDefinition(
 	string Id,

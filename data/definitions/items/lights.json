@@ -1,10 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "lights": [
     {
       "id": "wooden_torch",
       "name": "Wooden Torch",
       "type": "torch",
+      "fuel_policy": "finite",
       "fuel_pval": 4000,
       "light_radius": 1,
       "stack_size": 7,
@@ -22,6 +23,7 @@
       "id": "brass_lantern",
       "name": "Brass Lantern",
       "type": "lantern",
+      "fuel_policy": "finite",
       "fuel_pval": 7500,
       "light_radius": 2,
       "stack_size": 1,
@@ -38,6 +40,7 @@
       "id": "dwarven_lantern",
       "name": "Dwarven Lantern",
       "type": "lantern",
+      "fuel_policy": "inexhaustible",
       "fuel_pval": 10000,
       "light_radius": 2,
       "stack_size": 1,
@@ -54,6 +57,7 @@
       "id": "feanorian_lamp",
       "name": "Feanorian Lamp",
       "type": "lantern",
+      "fuel_policy": "inexhaustible",
       "fuel_pval": 10000,
       "light_radius": 3,
       "stack_size": 1,

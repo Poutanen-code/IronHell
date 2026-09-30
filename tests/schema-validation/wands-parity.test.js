@@ -25,35 +25,7 @@ const validateWands = ajv.compile(wandsSchema);
 const actionById = new Map(actionsData.actions.map((action) => [action.action_id, action]));
 
 const expectedWands = [
-  [0, "Heal Monster", "HealHP"],
-  [1, "Haste Monster", "ModifyMonsterSpeed"],
-  [2, "Clone Monster", "CloneMonster"],
-  [3, "Teleport Other", "TeleportTarget"],
-  [4, "Disarming", "AlterTerrain"],
-  [5, "Trap/Door Destruction", "AlterTerrain"],
-  [6, "Stone to Mud", "AlterTerrain"],
-  [7, "Light", "BeamDamage"],
-  [8, "Sleep Monster", "SleepControl"],
-  [9, "Slow Monster", "ModifyMonsterSpeed"],
-  [10, "Confuse Monster", "ConfuseControl"],
-  [11, "Fear Monster", "FearControl"],
-  [12, "Drain Life", "DrainLife"],
-  [13, "Polymorph", "TransformEntity"],
-  [14, "Stinking Cloud", "BallDamage"],
-  [15, "Magic Missile", "BoltDamage"],
-  [16, "Acid Bolt", "BoltDamage"],
-  [17, "Lightning Bolt", "BoltDamage"],
-  [18, "Fire Bolt", "BoltDamage"],
-  [19, "Cold Bolt", "BoltDamage"],
-  [20, "Acid Ball", "BallDamage"],
-  [21, "Lightning Ball", "BallDamage"],
-  [22, "Fire Ball", "BallDamage"],
-  [23, "Cold Ball", "BallDamage"],
-  [24, "Wonder", "RandomActionSelection"],
-  [25, "Annihilation", "DrainLife"],
-  [26, "Dragon Fire", "BallDamage"],
-  [27, "Dragon Cold", "BallDamage"],
-  [28, "Dragon Breath", "RandomActionSelection"],
+  ["Heal Monster", "HealHP"], ["Haste Monster", "ModifyMonsterSpeed"], ["Clone Monster", "CloneMonster"], ["Teleport Other", "TeleportTarget"], ["Disarming", "AlterTerrain"], ["Trap/Door Destruction", "AlterTerrain"], ["Stone to Mud", "AlterTerrain"], ["Light", "BeamDamage"], ["Sleep Monster", "SleepControl"], ["Slow Monster", "ModifyMonsterSpeed"], ["Confuse Monster", "ConfuseControl"], ["Fear Monster", "FearControl"], ["Drain Life", "DrainLife"], ["Polymorph", "TransformEntity"], ["Stinking Cloud", "BallDamage"], ["Magic Missile", "BoltDamage"], ["Acid Bolt", "BoltDamage"], ["Lightning Bolt", "BoltDamage"], ["Fire Bolt", "BoltDamage"], ["Cold Bolt", "BoltDamage"], ["Acid Ball", "BallDamage"], ["Lightning Ball", "BallDamage"], ["Fire Ball", "BallDamage"], ["Cold Ball", "BallDamage"], ["Wonder", "RandomActionSelection"], ["Annihilation", "DrainLife"], ["Dragon Fire", "BallDamage"], ["Dragon Cold", "BallDamage"], ["Dragon Breath", "RandomActionSelection"],
 ];
 
 function assertActionContracts(catalog) {
@@ -103,17 +75,17 @@ describe("MAngband 1.5.3 wand parity", () => {
     assert.equal(validateWands(wandsData), true, JSON.stringify(validateWands.errors, null, 2));
   });
 
-  it("contains exactly the canonical svals and names", () => {
+  it("contains exactly the canonical stable names", () => {
     assert.deepEqual(
-      wandsData.wands.map((wand) => [wand.sval, wand.name]),
-      expectedWands.map(([sval, name]) => [sval, name])
+      wandsData.wands.map((wand) => wand.name),
+      expectedWands.map(([name]) => name)
     );
   });
 
   it("maps every wand to a valid wand-capable action contract", () => {
     assert.deepEqual(
-      wandsData.wands.map((wand) => [wand.sval, wand.actions[0].action_id]),
-      expectedWands.map(([sval, , actionId]) => [sval, actionId])
+      wandsData.wands.map((wand) => [wand.name, wand.actions[0].action_id]),
+      expectedWands
     );
     assertActionContracts(wandsData);
   });

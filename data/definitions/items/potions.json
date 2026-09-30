@@ -4,8 +4,6 @@
     {
       "id": "potion_of_water",
       "name": "Potion of Water",
-      "tval": 75,
-      "sval": 0,
       "weight": 4,
       "sell_value": 1,
       "allocation_table": [
@@ -31,8 +29,6 @@
     {
       "id": "potion_of_apple_juice",
       "name": "Potion of Apple Juice",
-      "tval": 75,
-      "sval": 1,
       "weight": 4,
       "sell_value": 1,
       "allocation_table": [
@@ -58,8 +54,6 @@
     {
       "id": "potion_of_slime_mold_juice",
       "name": "Potion of Slime Mold Juice",
-      "tval": 75,
-      "sval": 2,
       "weight": 4,
       "sell_value": 2,
       "allocation_table": [
@@ -85,8 +79,6 @@
     {
       "id": "potion_of_slowness",
       "name": "Potion of Slowness",
-      "tval": 75,
-      "sval": 4,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -117,8 +109,6 @@
     {
       "id": "potion_of_salt_water",
       "name": "Potion of Salt Water",
-      "tval": 75,
-      "sval": 5,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -157,8 +147,6 @@
     {
       "id": "potion_of_poison",
       "name": "Potion of Poison",
-      "tval": 75,
-      "sval": 6,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -190,8 +178,6 @@
     {
       "id": "potion_of_blindness",
       "name": "Potion of Blindness",
-      "tval": 75,
-      "sval": 7,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -223,8 +209,6 @@
     {
       "id": "potion_of_confusion",
       "name": "Potion of Confusion",
-      "tval": 75,
-      "sval": 9,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -255,8 +239,6 @@
     {
       "id": "potion_of_sleep",
       "name": "Potion of Sleep",
-      "tval": 75,
-      "sval": 11,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -288,8 +270,6 @@
     {
       "id": "potion_of_lose_memories",
       "name": "Potion of Lose Memories",
-      "tval": 75,
-      "sval": 13,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -318,8 +298,6 @@
     {
       "id": "potion_of_weakness",
       "name": "Potion of Weakness",
-      "tval": 75,
-      "sval": 16,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -347,8 +325,6 @@
     {
       "id": "potion_of_stupidity",
       "name": "Potion of Stupidity",
-      "tval": 75,
-      "sval": 17,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -376,8 +352,6 @@
     {
       "id": "potion_of_naivety",
       "name": "Potion of Naivety",
-      "tval": 75,
-      "sval": 18,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -405,8 +379,6 @@
     {
       "id": "potion_of_clumsiness",
       "name": "Potion of Clumsiness",
-      "tval": 75,
-      "sval": 19,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -434,8 +406,6 @@
     {
       "id": "potion_of_sickliness",
       "name": "Potion of Sickliness",
-      "tval": 75,
-      "sval": 20,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -463,8 +433,6 @@
     {
       "id": "potion_of_ugliness",
       "name": "Potion of Ugliness",
-      "tval": 75,
-      "sval": 21,
       "weight": 4,
       "sell_value": 0,
       "is_harmful": true,
@@ -492,8 +460,6 @@
     {
       "id": "potion_of_infravision",
       "name": "Potion of Infravision",
-      "tval": 75,
-      "sval": 24,
       "weight": 4,
       "sell_value": 20,
       "allocation_table": [
@@ -523,8 +489,6 @@
     {
       "id": "potion_of_detect_invisible",
       "name": "Potion of Detect Invisible",
-      "tval": 75,
-      "sval": 25,
       "weight": 4,
       "sell_value": 50,
       "allocation_table": [
@@ -554,8 +518,6 @@
     {
       "id": "potion_of_slow_poison",
       "name": "Potion of Slow Poison",
-      "tval": 75,
-      "sval": 26,
       "weight": 4,
       "sell_value": 25,
       "allocation_table": [
@@ -582,8 +544,6 @@
     {
       "id": "potion_of_neutralize_poison",
       "name": "Potion of Neutralize Poison",
-      "tval": 75,
-      "sval": 27,
       "weight": 4,
       "sell_value": 75,
       "allocation_table": [
@@ -610,8 +570,6 @@
     {
       "id": "potion_of_boldness",
       "name": "Potion of Boldness",
-      "tval": 75,
-      "sval": 28,
       "weight": 4,
       "sell_value": 10,
       "allocation_table": [
@@ -638,8 +596,6 @@
     {
       "id": "potion_of_speed",
       "name": "Potion of Speed",
-      "tval": 75,
-      "sval": 29,
       "weight": 4,
       "sell_value": 75,
       "allocation_table": [
@@ -673,8 +629,6 @@
     {
       "id": "potion_of_resist_heat",
       "name": "Potion of Resist Heat",
-      "tval": 75,
-      "sval": 30,
       "weight": 4,
       "sell_value": 30,
       "allocation_table": [
@@ -706,8 +660,6 @@
     {
       "id": "potion_of_resist_cold",
       "name": "Potion of Resist Cold",
-      "tval": 75,
-      "sval": 31,
       "weight": 4,
       "sell_value": 30,
       "allocation_table": [
@@ -739,8 +691,6 @@
     {
       "id": "potion_of_heroism",
       "name": "Potion of Heroism",
-      "tval": 75,
-      "sval": 32,
       "weight": 4,
       "sell_value": 35,
       "allocation_table": [
@@ -790,8 +740,6 @@
     {
       "id": "potion_of_berserk_strength",
       "name": "Potion of Berserk Strength",
-      "tval": 75,
-      "sval": 33,
       "weight": 4,
       "sell_value": 100,
       "allocation_table": [
@@ -832,8 +780,6 @@
     {
       "id": "potion_of_cure_light_wounds",
       "name": "Potion of Cure Light Wounds",
-      "tval": 75,
-      "sval": 34,
       "weight": 4,
       "sell_value": 15,
       "allocation_table": [
@@ -899,8 +845,6 @@
     {
       "id": "potion_of_cure_serious_wounds",
       "name": "Potion of Cure Serious Wounds",
-      "tval": 75,
-      "sval": 35,
       "weight": 4,
       "sell_value": 40,
       "allocation_table": [
@@ -959,8 +903,6 @@
     {
       "id": "potion_of_cure_critical_wounds",
       "name": "Potion of Cure Critical Wounds",
-      "tval": 75,
-      "sval": 36,
       "weight": 4,
       "sell_value": 100,
       "allocation_table": [
@@ -1039,8 +981,6 @@
     {
       "id": "potion_of_healing",
       "name": "Potion of Healing",
-      "tval": 75,
-      "sval": 37,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1121,8 +1061,6 @@
     {
       "id": "potion_of_restore_mana",
       "name": "Potion of Restore Mana",
-      "tval": 75,
-      "sval": 40,
       "weight": 4,
       "sell_value": 350,
       "allocation_table": [
@@ -1150,8 +1088,6 @@
     {
       "id": "potion_of_restore_life_levels",
       "name": "Potion of Restore Life Levels",
-      "tval": 75,
-      "sval": 41,
       "weight": 4,
       "sell_value": 400,
       "allocation_table": [
@@ -1175,8 +1111,6 @@
     {
       "id": "potion_of_restore_strength",
       "name": "Potion of Restore Strength",
-      "tval": 75,
-      "sval": 42,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1201,8 +1135,6 @@
     {
       "id": "potion_of_restore_intelligence",
       "name": "Potion of Restore Intelligence",
-      "tval": 75,
-      "sval": 43,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1227,8 +1159,6 @@
     {
       "id": "potion_of_restore_wisdom",
       "name": "Potion of Restore Wisdom",
-      "tval": 75,
-      "sval": 44,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1253,8 +1183,6 @@
     {
       "id": "potion_of_restore_dexterity",
       "name": "Potion of Restore Dexterity",
-      "tval": 75,
-      "sval": 45,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1279,8 +1207,6 @@
     {
       "id": "potion_of_restore_constitution",
       "name": "Potion of Restore Constitution",
-      "tval": 75,
-      "sval": 46,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1305,8 +1231,6 @@
     {
       "id": "potion_of_restore_charisma",
       "name": "Potion of Restore Charisma",
-      "tval": 75,
-      "sval": 47,
       "weight": 4,
       "sell_value": 300,
       "allocation_table": [
@@ -1331,8 +1255,6 @@
     {
       "id": "potion_of_strength",
       "name": "Potion of Strength",
-      "tval": 75,
-      "sval": 48,
       "weight": 4,
       "sell_value": 8000,
       "allocation_table": [
@@ -1367,8 +1289,6 @@
     {
       "id": "potion_of_intelligence",
       "name": "Potion of Intelligence",
-      "tval": 75,
-      "sval": 49,
       "weight": 4,
       "sell_value": 8000,
       "allocation_table": [
@@ -1403,8 +1323,6 @@
     {
       "id": "potion_of_wisdom",
       "name": "Potion of Wisdom",
-      "tval": 75,
-      "sval": 50,
       "weight": 4,
       "sell_value": 8000,
       "allocation_table": [
@@ -1439,8 +1357,6 @@
     {
       "id": "potion_of_dexterity",
       "name": "Potion of Dexterity",
-      "tval": 75,
-      "sval": 51,
       "weight": 4,
       "sell_value": 8000,
       "allocation_table": [
@@ -1475,8 +1391,6 @@
     {
       "id": "potion_of_constitution",
       "name": "Potion of Constitution",
-      "tval": 75,
-      "sval": 52,
       "weight": 4,
       "sell_value": 8000,
       "allocation_table": [
@@ -1511,8 +1425,6 @@
     {
       "id": "potion_of_charisma",
       "name": "Potion of Charisma",
-      "tval": 75,
-      "sval": 53,
       "weight": 4,
       "sell_value": 1000,
       "allocation_table": [
@@ -1547,8 +1459,6 @@
     {
       "id": "potion_of_enlightenment",
       "name": "Potion of Enlightenment",
-      "tval": 75,
-      "sval": 56,
       "weight": 4,
       "sell_value": 800,
       "allocation_table": [
@@ -1578,8 +1488,6 @@
     {
       "id": "potion_of_experience",
       "name": "Potion of Experience",
-      "tval": 75,
-      "sval": 59,
       "weight": 4,
       "sell_value": 25000,
       "allocation_table": [

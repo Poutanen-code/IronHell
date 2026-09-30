@@ -13,8 +13,8 @@ public sealed class FlavorServiceTests
     {
         var registry = new TestFlavorRegistry(
         [
-            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28, 45, null), "verified"),
-            new FlavorDefinition("amulet_amber", FlavorCategory.Amulet, "Amber", "\"", "y", new FlavorLegacyMetadata(44, 40, null), "verified"),
+            new FlavorDefinition("ring_ruby", FlavorCategory.Ring, "Ruby", "=", "r", new FlavorLegacyMetadata(28), "verified"),
+            new FlavorDefinition("amulet_amber", FlavorCategory.Amulet, "Amber", "\"", "y", new FlavorLegacyMetadata(44), "verified"),
         ]);
         var service = new FlavorService(registry);
 

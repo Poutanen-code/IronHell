@@ -169,6 +169,7 @@
         "prayer",
         "monster_ability",
         "potion",
+        "consumable",
         "rod",
         "staff",
         "wand",
@@ -228,6 +229,7 @@
         "spell",
         "prayer",
         "potion",
+        "consumable",
         "rod",
         "staff",
         "activation"
@@ -289,6 +291,7 @@
         "spell",
         "prayer",
         "potion",
+        "consumable",
         "activation",
         "scroll",
         "rod",
@@ -453,6 +456,7 @@
       "allowed_source_families": [
         "spell",
         "prayer",
+        "potion",
         "scroll",
         "rod",
         "staff",
@@ -561,6 +565,7 @@
       "allowed_source_families": [
         "spell",
         "staff",
+        "potion",
         "scroll",
         "rod",
         "activation"
@@ -1986,6 +1991,8 @@
       "allowed_source_families": [
         "prayer",
         "potion",
+        "consumable",
+        "rod",
         "scroll",
         "staff",
         "activation"
@@ -2156,6 +2163,7 @@
       "confidence": "medium",
       "allowed_source_families": [
         "potion",
+        "consumable",
         "monster_attack",
         "monster_ability",
         "trap",
@@ -2298,7 +2306,8 @@
       "allowed_source_families": [
         "spell",
         "monster_ability",
-        "wand"
+        "wand",
+        "rod"
       ],
       "parameter_contract": {
         "closed": true,

@@ -66,10 +66,10 @@ describe("MAngband 1.5.3 staff parity", () => {
     assert.equal(validateStaves(stavesData), true, JSON.stringify(validateStaves.errors, null, 2));
   });
 
-  it("contains every canonical staff sval exactly once", () => {
-    const svals = stavesData.staves.map((staff) => staff.sval);
+  it("contains every canonical staff exactly once by stable ID", () => {
+    const ids = stavesData.staves.map((staff) => staff.id);
     assert.equal(stavesData.staves.length, 30);
-    assert.deepEqual(svals, Array.from({ length: 30 }, (_, sval) => sval));
+    assert.equal(new Set(ids).size, ids.length);
     assert.deepEqual(stavesData.staves.map((staff) => staff.name), expectedStaffNames);
   });
 
@@ -78,11 +78,11 @@ describe("MAngband 1.5.3 staff parity", () => {
   });
 
   it("preserves the corrected Slowness and Healing semantics", () => {
-    const slowness = stavesData.staves.find((staff) => staff.sval === 1);
+    const slowness = stavesData.staves.find((staff) => staff.id === "staff_of_slowness");
     assert.equal(slowness.actions[0].action_id, "ModifyPlayerSpeed");
     assert.equal(slowness.actions[0].parameters.target_mode, "self");
 
-    const healing = stavesData.staves.find((staff) => staff.sval === 18);
+    const healing = stavesData.staves.find((staff) => staff.id === "staff_of_healing");
     assert.equal(healing.actions[0].action_id, "HealHP");
     assert.deepEqual(healing.actions[0].parameters.amount, { kind: "flat", value: 300 });
     assert.equal(healing.actions[0].parameters.cut_effect, "clear");

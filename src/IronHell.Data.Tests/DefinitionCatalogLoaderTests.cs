@@ -430,6 +430,72 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_DuplicateEgoId_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"id\": \"of_resist_lightning\"", "\"id\": \"of_resist_acid\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_id");
+    }
+
+    [Fact]
+    public async Task LoadAsync_DuplicateEgoSourceSerial_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"legacy_source_serial\": 18", "\"legacy_source_serial\": 6");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "duplicate_legacy_source_serial");
+    }
+
+    [Fact]
+    public async Task LoadAsync_InvalidEgoApplicabilitySelector_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "ego_items.json"), "\"armor_body_families\": [", "\"unknown_selector\": [");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_InvalidBookGenerationQuality_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "magic", "spell_books.json"), "\"generation_quality\": \"good\"", "\"generation_quality\": \"invalid\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
+    public async Task LoadAsync_ItemActionDisallowedForCatalogFamily_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "rods.json"), "\"action_id\": \"BeamDamage\"", "\"action_id\": \"ModifyAttribute\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "invalid_action_source_family");
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownArtifactBaseKind_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(Path.Combine(root, "items", "artifacts.json"), "\"baseItemId\": \"phial\"", "\"baseItemId\": \"missing_base_kind\"");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "unknown_artifact_base_kind");
+    }
+
+    [Fact]
     public async Task LoadAsync_UnknownStartingEquipmentItem_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();
@@ -466,7 +532,7 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     public async Task LoadAsync_InvalidItemCategory_ReturnsValidationReport()
     {
         var root = CreateDefinitionsCopy();
-        ReplaceFirst(Path.Combine(root, "items", "weapons.json"), "\"type\": \"dagger\"", "\"type\": \"invalid_weapon\"");
+        ReplaceFirst(Path.Combine(root, "items", "weapons.json"), "\"subtype\": \"dagger\"", "\"subtype\": \"invalid_weapon\"");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 

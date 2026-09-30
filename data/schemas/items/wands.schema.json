@@ -18,15 +18,13 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id", "name", "tval", "sval",
+        "id", "name",
         "weight", "sell_value", "pval",
         "allocation_table", "description", "provenance_status"
       ],
       "properties": {
         "id": { "$ref": "common_item.schema.json#/$defs/Id" },
         "name": { "type": "string", "minLength": 1 },
-        "tval": { "$ref": "common_item.schema.json#/$defs/Tval" },
-        "sval": { "$ref": "common_item.schema.json#/$defs/Sval" },
         "weight": { "type": "integer", "minimum": 0 },
         "sell_value": { "type": "integer", "minimum": 0 },
         "pval": {

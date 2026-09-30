@@ -1,72 +1,14 @@
-﻿{
-  "schema_version": 1,
+{
+  "schema_version": 2,
   "_meta": {
     "source": "MAngband 1.5.3 lib/edit/ego_item.txt",
-    "generated_from": "reference-mangband-1_5_3/lib/edit/ego_item.txt",
-    "description": "Ego item templates. Each entry describes modifiers applied to a base item when it rolls as \"great\" quality during generation. Fields: serial (MAngband ego index), name (suffix/prefix added to item name), rating (affects dungeon level \"feeling\" score), xtra (0=none, 1-3=random bonus pool), max_to_hit/dam/ac (max random bonus; not yet applied at runtime), pval (magnitude for stat/skill flags), depth/rarity/cost (generation parameters), applicable_types (tval+sval range filter), slots (derived equipment slots), item_categories (derived category), flags (MAngband flag strings).",
-    "tval_names": {
-      "16": "shot",
-      "17": "arrow",
-      "18": "bolt",
-      "19": "bow",
-      "20": "digger",
-      "21": "hafted",
-      "22": "polearm",
-      "23": "sword",
-      "30": "boots",
-      "31": "gloves",
-      "32": "helm",
-      "33": "crown",
-      "34": "shield",
-      "35": "cloak",
-      "36": "soft_armor",
-      "37": "hard_armor"
-    },
-    "xtra_pools": {
-      "0": "No random bonus",
-      "1": "Random sustain: one of SUST_STR/DEX/CON/INT/WIS/CHR chosen at item generation",
-      "2": "Random resistance: one of RES_BLIND/CONFU/SOUND/SHARD/NEXUS/NETHR/CHAOS/DISEN/LITE/DARK",
-      "3": "Random ability: one of FREE_ACT/HOLD_LIFE/FEATHER/LITE/SEE_INVIS/TELEPATHY/SLOW_DIGEST/REGEN"
-    },
-    "combat_modifiers": {
-      "concepts": [
-        "SLAY_*",
-        "KILL_*",
-        "BRAND_*"
-      ],
-      "sources": {
-        "slay_kill_brand_flags": "item flags from ego/artifact/base item definitions",
-        "multiplier_runtime": "ref-mangband/src/server/cmd1.c::tot_dam_aux"
-      },
-      "precedence": [
-        "KILL_* supersedes matching SLAY_*",
-        "Highest resulting multiplier wins"
-      ],
-      "immunity_interaction": "BRAND_* applies multiplier only when target immunity flag for that element is absent.",
-      "multiplier_source": {
-        "SLAY_ANIMAL": 2,
-        "SLAY_EVIL": 2,
-        "SLAY_UNDEAD": 3,
-        "SLAY_DEMON": 3,
-        "SLAY_ORC": 3,
-        "SLAY_TROLL": 3,
-        "SLAY_GIANT": 3,
-        "SLAY_DRAGON": 3,
-        "KILL_UNDEAD": 5,
-        "KILL_DEMON": 5,
-        "KILL_DRAGON": 5,
-        "BRAND_ACID": 3,
-        "BRAND_ELEC": 3,
-        "BRAND_FIRE": 3,
-        "BRAND_COLD": 3,
-        "BRAND_POIS": 3
-      },
-      "notes": "Formalization only; no gameplay changes."
-    }
+    "generated_from": "ref-mangband/lib/edit/ego_item.txt",
+    "description": "Ego item templates with typed semantic applicability selectors or explicit stable item IDs."
   },
   "ego_items": [
     {
       "id": "of_resist_acid",
+      "legacy_source_serial": 4,
       "name": "of Resist Acid",
       "rating": 16,
       "xtra": 0,
@@ -77,20 +19,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -109,10 +37,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and ignores acid damage."
+      "description": "Grants resistance to acid and ignores acid damage.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
       "id": "of_resist_lightning",
+      "legacy_source_serial": 5,
       "name": "of Resist Lightning",
       "rating": 10,
       "xtra": 0,
@@ -123,20 +58,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 400,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -155,10 +76,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to lightning and ignores lightning damage."
+      "description": "Grants resistance to lightning and ignores lightning damage.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
-      "id": "of_resist_fire",
+      "id": "of_resist_fire_body_armor",
+      "legacy_source_serial": 6,
       "name": "of Resist Fire",
       "rating": 14,
       "xtra": 0,
@@ -169,20 +97,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 800,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -201,10 +115,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to fire and ignores fire damage."
+      "description": "Grants resistance to fire and ignores fire damage.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
-      "id": "of_resist_cold",
+      "id": "of_resist_cold_body_armor",
+      "legacy_source_serial": 7,
       "name": "of Resist Cold",
       "rating": 12,
       "xtra": 0,
@@ -215,20 +136,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 600,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -247,10 +154,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to cold and ignores cold damage."
+      "description": "Grants resistance to cold and ignores cold damage.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
-      "id": "of_resistance",
+      "id": "of_resistance_body_armor",
+      "legacy_source_serial": 8,
       "name": "of Resistance",
       "rating": 20,
       "xtra": 0,
@@ -261,20 +175,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 12500,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -299,10 +199,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
+      "description": "Grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
-      "id": "of_elvenkind",
+      "id": "of_elvenkind_body_armor",
+      "legacy_source_serial": 9,
       "name": "of Elvenkind",
       "rating": 25,
       "xtra": 2,
@@ -313,20 +220,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 15000,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -356,10 +249,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
+      "description": "Grants stealth and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
       "id": "of_vulnerability",
+      "legacy_source_serial": 10,
       "name": "of Vulnerability",
       "rating": 0,
       "xtra": 0,
@@ -370,20 +270,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "soft_armor"
-        },
-        {
-          "tval": 37,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -403,10 +289,17 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Cursed armor that aggravates enemies."
+      "description": "Cursed armor that aggravates enemies.",
+      "applicability": {
+        "armor_body_families": [
+          "soft",
+          "hard"
+        ]
+      }
     },
     {
       "id": "of_permanence",
+      "legacy_source_serial": 11,
       "name": "of Permanence",
       "rating": 30,
       "xtra": 2,
@@ -417,14 +310,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 30000,
-      "applicable_types": [
-        {
-          "tval": 36,
-          "min_sval": 2,
-          "max_sval": 2,
-          "tval_name": "soft_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -457,10 +342,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants various stat sustains, hold life, and resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
+      "description": "Grants various stat sustains, hold life, and resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
+      "applicability": {
+        "item_ids": [
+          "robe"
+        ]
+      }
     },
     {
       "id": "of_dwarven",
+      "legacy_source_serial": 12,
       "name": "(Dwarven)",
       "rating": 18,
       "xtra": 0,
@@ -471,14 +362,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 37,
-          "min_sval": 3,
-          "max_sval": 99,
-          "tval_name": "hard_armor"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -514,10 +397,28 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and fire, free action, increased strength and constitution, infravision, and hides the type of armor."
+      "description": "Grants resistance to acid and fire, free action, increased strength and constitution, infravision, and hides the type of armor.",
+      "applicability": {
+        "item_ids": [
+          "adamantite_plate_mail",
+          "augmented_chain_mail",
+          "bar_chain_mail",
+          "chain_mail",
+          "double_chain_mail",
+          "full_plate_armor",
+          "metal_brigandine_armor",
+          "metal_lamellar_armor",
+          "metal_scale_mail",
+          "mithril_chain_mail",
+          "mithril_plate_mail",
+          "partial_plate_armor",
+          "ribbed_plate_armor"
+        ]
+      }
     },
     {
       "id": "of_resist_acid_shield",
+      "legacy_source_serial": 16,
       "name": "of Resist Acid",
       "rating": 16,
       "xtra": 0,
@@ -528,14 +429,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -554,10 +447,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to acid and ignores acid damage."
+      "description": "Grants resistance to acid and ignores acid damage.",
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
       "id": "of_resist_lightning_shield",
+      "legacy_source_serial": 17,
       "name": "of Resist Lightning",
       "rating": 10,
       "xtra": 0,
@@ -568,14 +467,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 400,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -594,10 +485,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Grants resistance to lightning and ignores lightning damage."
+      "description": "Grants resistance to lightning and ignores lightning damage.",
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
-      "id": "of_resist_fire",
+      "id": "of_resist_fire_shield",
+      "legacy_source_serial": 18,
       "name": "of Resist Fire",
       "rating": 14,
       "xtra": 0,
@@ -608,14 +505,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 800,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "description": "Grants resistance to fire and ignores fire damage.",
       "combat_modifiers": [],
       "effects": {
@@ -634,10 +523,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
-      "id": "of_resist_cold",
+      "id": "of_resist_cold_shield",
+      "legacy_source_serial": 19,
       "name": "of Resist Cold",
       "rating": 12,
       "xtra": 0,
@@ -648,14 +543,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 600,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "description": "Grants resistance to cold and ignores cold damage.",
       "combat_modifiers": [],
       "effects": {
@@ -674,10 +561,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
-      "id": "of_resistance",
+      "id": "of_resistance_shield",
+      "legacy_source_serial": 20,
       "name": "of Resistance",
       "rating": 20,
       "xtra": 0,
@@ -688,14 +581,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 12500,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -720,10 +605,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
-      "id": "of_elvenkind",
+      "id": "of_elvenkind_shield",
+      "legacy_source_serial": 21,
       "name": "of Elvenkind",
       "rating": 25,
       "xtra": 2,
@@ -734,14 +625,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 18000,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -771,10 +654,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
       "id": "of_preservation",
+      "legacy_source_serial": 22,
       "name": "of Preservation",
       "rating": 25,
       "xtra": 2,
@@ -785,14 +674,6 @@
       "depth": 60,
       "rarity": 4,
       "cost": 24000,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -819,10 +700,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
       "id": "of_vulnerability_shield",
+      "legacy_source_serial": 23,
       "name": "of Vulnerability",
       "rating": 0,
       "xtra": 0,
@@ -833,14 +720,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -860,10 +739,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
       "id": "of_intelligence",
+      "legacy_source_serial": 24,
       "name": "of Intelligence",
       "rating": 13,
       "xtra": 0,
@@ -874,14 +759,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -904,10 +781,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_wisdom",
+      "legacy_source_serial": 25,
       "name": "of Wisdom",
       "rating": 13,
       "xtra": 0,
@@ -918,14 +801,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -948,10 +823,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_beauty",
+      "legacy_source_serial": 26,
       "name": "of Beauty",
       "rating": 8,
       "xtra": 0,
@@ -962,14 +843,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -992,10 +865,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
-      "id": "of_the_magi",
+      "id": "of_the_magi_crown",
+      "legacy_source_serial": 27,
       "name": "of the Magi",
       "rating": 15,
       "xtra": 3,
@@ -1006,14 +885,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 7500,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1045,10 +916,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Crown that increases intelligence, sustains the intelligence stat, grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements."
+      "description": "Crown that increases intelligence, sustains the intelligence stat, grants resistance to acid, electricity, fire, and cold, and ignores damage from these elements.",
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_might",
+      "legacy_source_serial": 28,
       "name": "of Might",
       "rating": 19,
       "xtra": 0,
@@ -1059,14 +936,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 7500,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1105,10 +974,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Crown that increases strength, dexterity, and constitution, sustains these stats, grants free action, and ignores damage from acid, electricity, fire, and cold."
+      "description": "Crown that increases strength, dexterity, and constitution, sustains these stats, grants free action, and ignores damage from acid, electricity, fire, and cold.",
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_lordliness",
+      "legacy_source_serial": 29,
       "name": "of Lordliness",
       "rating": 17,
       "xtra": 3,
@@ -1119,14 +994,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 7500,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1143,7 +1010,7 @@
           "sust_wis",
           "sust_chr"
         ],
-        "resistance_ids": [          
+        "resistance_ids": [
           "ignore_acid",
           "ignore_elec",
           "ignore_fire",
@@ -1160,10 +1027,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_seeing",
+      "legacy_source_serial": 30,
       "name": "of Seeing",
       "rating": 8,
       "xtra": 0,
@@ -1174,20 +1047,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 2000,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        },
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1212,10 +1071,17 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "crown",
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_infravision",
+      "legacy_source_serial": 31,
       "name": "of Infravision",
       "rating": 11,
       "xtra": 0,
@@ -1226,14 +1092,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1256,10 +1114,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_light",
+      "legacy_source_serial": 32,
       "name": "of Light",
       "rating": 6,
       "xtra": 0,
@@ -1270,14 +1134,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1300,10 +1156,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_telepathy",
+      "legacy_source_serial": 33,
       "name": "of Telepathy",
       "rating": 20,
       "xtra": 0,
@@ -1314,20 +1176,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 50000,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        },
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1345,10 +1193,17 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet",
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_regeneration",
+      "legacy_source_serial": 34,
       "name": "of Regeneration",
       "rating": 10,
       "xtra": 0,
@@ -1359,20 +1214,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1500,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        },
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1390,10 +1231,17 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet",
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_teleportation",
+      "legacy_source_serial": 35,
       "name": "of Teleportation",
       "rating": 0,
       "xtra": 0,
@@ -1404,14 +1252,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1431,10 +1271,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet"
+        ]
+      }
     },
     {
       "id": "of_serenity",
+      "legacy_source_serial": 36,
       "name": "of Serenity",
       "rating": 20,
       "xtra": 0,
@@ -1445,14 +1291,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1472,10 +1310,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_night_and_day",
+      "legacy_source_serial": 37,
       "name": "of Night and Day",
       "rating": 18,
       "xtra": 0,
@@ -1486,14 +1330,6 @@
       "depth": 35,
       "rarity": 6,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1521,10 +1357,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_dullness",
+      "legacy_source_serial": 38,
       "name": "of Dullness",
       "rating": 0,
       "xtra": 0,
@@ -1535,20 +1377,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 32,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "helm"
-        },
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1579,10 +1407,17 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "helmet",
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_sickliness",
+      "legacy_source_serial": 39,
       "name": "of Sickliness",
       "rating": 0,
       "xtra": 0,
@@ -1593,14 +1428,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 33,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "crown"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1631,10 +1458,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "crown"
+        ]
+      }
     },
     {
       "id": "of_protection",
+      "legacy_source_serial": 40,
       "name": "of Protection",
       "rating": 10,
       "xtra": 0,
@@ -1645,14 +1478,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 1500,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1674,10 +1499,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_stealth",
+      "legacy_source_serial": 41,
       "name": "of Stealth",
       "rating": 10,
       "xtra": 0,
@@ -1688,14 +1519,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1716,10 +1539,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_aman",
+      "legacy_source_serial": 42,
       "name": "of Aman",
       "rating": 20,
       "xtra": 2,
@@ -1730,14 +1559,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1763,10 +1584,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
-      "id": "of_the_magi",
+      "id": "of_the_magi_cloak",
+      "legacy_source_serial": 43,
       "name": "of the Magi",
       "rating": 15,
       "xtra": 3,
@@ -1777,14 +1604,6 @@
       "depth": 30,
       "rarity": 3,
       "cost": 2000,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -1815,10 +1634,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_enveloping",
+      "legacy_source_serial": 44,
       "name": "of Enveloping",
       "rating": 0,
       "xtra": 0,
@@ -1829,14 +1654,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1856,10 +1673,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_vulnerability_cloak",
+      "legacy_source_serial": 45,
       "name": "of Vulnerability",
       "rating": 0,
       "xtra": 0,
@@ -1870,14 +1693,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1897,10 +1712,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_irritation",
+      "legacy_source_serial": 46,
       "name": "of Irritation",
       "rating": 0,
       "xtra": 0,
@@ -1911,14 +1732,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1940,10 +1753,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_free_action",
+      "legacy_source_serial": 48,
       "name": "of Free Action",
       "rating": 11,
       "xtra": 0,
@@ -1954,14 +1773,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -1979,10 +1790,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_slaying",
+      "legacy_source_serial": 49,
       "name": "of Slaying",
       "rating": 17,
       "xtra": 0,
@@ -1993,14 +1810,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 1500,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2018,10 +1827,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_agility",
+      "legacy_source_serial": 50,
       "name": "of Agility",
       "rating": 14,
       "xtra": 0,
@@ -2032,14 +1847,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2062,10 +1869,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
-      "id": "of_power",
+      "id": "of_power_gloves",
+      "legacy_source_serial": 51,
       "name": "of Power",
       "rating": 22,
       "xtra": 0,
@@ -2076,14 +1889,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 2500,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2107,10 +1912,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_thievery",
+      "legacy_source_serial": 52,
       "name": "of Thievery",
       "rating": 22,
       "xtra": 0,
@@ -2121,14 +1932,6 @@
       "depth": 40,
       "rarity": 12,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 1,
-          "max_sval": 1,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2159,10 +1962,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "item_ids": [
+          "set_of_leather_gloves"
+        ]
+      }
     },
     {
       "id": "of_combat",
+      "legacy_source_serial": 53,
       "name": "of Combat",
       "rating": 22,
       "xtra": 0,
@@ -2173,14 +1982,6 @@
       "depth": 50,
       "rarity": 12,
       "cost": 7000,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 2,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2210,10 +2011,18 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "item_ids": [
+          "gauntlets",
+          "set_of_cesti",
+          "set_of_elven_gloves"
+        ]
+      }
     },
     {
       "id": "of_weakness",
+      "legacy_source_serial": 54,
       "name": "of Weakness",
       "rating": 0,
       "xtra": 0,
@@ -2224,14 +2033,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2256,10 +2057,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_clumsiness",
+      "legacy_source_serial": 55,
       "name": "of Clumsiness",
       "rating": 0,
       "xtra": 0,
@@ -2270,14 +2077,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2302,10 +2101,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_slow_descent",
+      "legacy_source_serial": 56,
       "name": "of Slow Descent",
       "rating": 7,
       "xtra": 0,
@@ -2316,14 +2121,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 250,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2341,10 +2138,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_stealth_boots",
+      "legacy_source_serial": 57,
       "name": "of Stealth",
       "rating": 16,
       "xtra": 0,
@@ -2355,14 +2158,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2385,10 +2180,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_free_action_boots",
+      "legacy_source_serial": 58,
       "name": "of Free Action",
       "rating": 15,
       "xtra": 0,
@@ -2399,14 +2200,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2424,10 +2217,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_speed",
+      "legacy_source_serial": 59,
       "name": "of Speed",
       "rating": 25,
       "xtra": 0,
@@ -2438,14 +2237,6 @@
       "depth": 0,
       "rarity": 24,
       "cost": 100000,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2468,10 +2259,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_stability",
+      "legacy_source_serial": 60,
       "name": "of Stability",
       "rating": 20,
       "xtra": 0,
@@ -2482,14 +2279,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -2509,10 +2298,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
-      "id": "of_elvenkind",
+      "id": "of_elvenkind_boots",
+      "legacy_source_serial": 61,
       "name": "of Elvenkind",
       "rating": 30,
       "xtra": 0,
@@ -2523,14 +2318,6 @@
       "depth": 60,
       "rarity": 30,
       "cost": 200000,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 2,
-          "max_sval": 3,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2562,10 +2349,19 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ],
+        "armor_materials": [
+          "leather"
+        ]
+      }
     },
     {
       "id": "of_slowness",
+      "legacy_source_serial": 62,
       "name": "of Slowness",
       "rating": 0,
       "xtra": 0,
@@ -2576,14 +2372,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2608,10 +2396,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_annoyance",
+      "legacy_source_serial": 63,
       "name": "of Annoyance",
       "rating": 0,
       "xtra": 0,
@@ -2622,14 +2416,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2660,10 +2446,16 @@
       ],
       "item_categories": [
         "armor"
-      ]
+      ],
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "holy_avenger",
+      "legacy_source_serial": 64,
       "name": "(Holy Avenger)",
       "rating": 30,
       "xtra": 1,
@@ -2674,26 +2466,6 @@
       "depth": 0,
       "rarity": 12,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_evil",
         "slay_undead",
@@ -2724,10 +2496,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "defender",
+      "legacy_source_serial": 65,
       "name": "(Defender)",
       "rating": 25,
       "xtra": 1,
@@ -2738,26 +2521,6 @@
       "depth": 0,
       "rarity": 12,
       "cost": 15000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2793,10 +2556,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "blessed",
+      "legacy_source_serial": 66,
       "name": "(Blessed)",
       "rating": 20,
       "xtra": 3,
@@ -2807,26 +2581,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -2850,10 +2604,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_gondolin",
+      "legacy_source_serial": 67,
       "name": "of Gondolin",
       "rating": 30,
       "xtra": 3,
@@ -2864,26 +2629,6 @@
       "depth": 30,
       "rarity": 20,
       "cost": 25000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_demon",
         "slay_orc",
@@ -2917,10 +2662,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_westernesse",
+      "legacy_source_serial": 68,
       "name": "of Westernesse",
       "rating": 20,
       "xtra": 0,
@@ -2931,26 +2687,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_orc",
         "slay_troll",
@@ -2987,10 +2723,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_extra_attacks",
+      "legacy_source_serial": 69,
       "name": "of Extra Attacks",
       "rating": 20,
       "xtra": 0,
@@ -3001,26 +2748,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 10000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3044,10 +2771,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_fury",
+      "legacy_source_serial": 70,
       "name": "of Fury",
       "rating": 30,
       "xtra": 0,
@@ -3058,26 +2796,6 @@
       "depth": 40,
       "rarity": 20,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 12,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 10,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 16,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -3111,10 +2829,39 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "item_ids": [
+          "flail",
+          "lead_filled_mace",
+          "mace_of_disruption",
+          "mighty_hammer",
+          "morning_star",
+          "two_handed_flail",
+          "battle_axe",
+          "beaked_axe",
+          "broad_axe",
+          "glaive",
+          "great_axe",
+          "halberd",
+          "lance",
+          "lochaber_axe",
+          "scythe",
+          "scythe_of_slicing",
+          "bastard_sword",
+          "blade_of_chaos",
+          "broad_sword",
+          "executioners_sword",
+          "katana",
+          "long_sword",
+          "scimitar",
+          "two_handed_sword"
+        ]
+      }
     },
     {
       "id": "of_acid",
+      "legacy_source_serial": 72,
       "name": "of Acid",
       "rating": 20,
       "xtra": 0,
@@ -3125,26 +2872,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "brand_acid"
       ],
@@ -3166,10 +2893,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_lightning",
+      "legacy_source_serial": 73,
       "name": "of Lightning",
       "rating": 20,
       "xtra": 0,
@@ -3180,26 +2918,6 @@
       "depth": 0,
       "rarity": 10,
       "cost": 4500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "brand_elec"
       ],
@@ -3221,10 +2939,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_flame",
+      "id": "of_flame_melee",
+      "legacy_source_serial": 74,
       "name": "of Flame",
       "rating": 15,
       "xtra": 0,
@@ -3235,26 +2964,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 3500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "brand_fire"
       ],
@@ -3276,10 +2985,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_frost",
+      "id": "of_frost_melee",
+      "legacy_source_serial": 75,
       "name": "of Frost",
       "rating": 15,
       "xtra": 0,
@@ -3290,26 +3010,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 3000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "brand_cold"
       ],
@@ -3331,10 +3031,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_venom",
+      "id": "of_venom_melee",
+      "legacy_source_serial": 76,
       "name": "of Venom",
       "rating": 15,
       "xtra": 0,
@@ -3345,26 +3056,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "brand_pois"
       ],
@@ -3383,10 +3074,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_animal",
+      "legacy_source_serial": 80,
       "name": "of Slay Animal",
       "rating": 18,
       "xtra": 0,
@@ -3397,26 +3099,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 3000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_animal"
       ],
@@ -3435,10 +3117,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_evil",
+      "legacy_source_serial": 81,
       "name": "of Slay Evil",
       "rating": 18,
       "xtra": 0,
@@ -3449,26 +3142,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 3000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -3487,10 +3160,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_undead",
+      "legacy_source_serial": 82,
       "name": "of Slay Undead",
       "rating": 18,
       "xtra": 0,
@@ -3501,26 +3185,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 3500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 18,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_undead"
       ],
@@ -3539,10 +3203,31 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "item_ids": [
+          "ball_and_chain",
+          "flail",
+          "lead_filled_mace",
+          "lucerne_hammer",
+          "mace",
+          "morning_star",
+          "quarterstaff",
+          "two_handed_flail",
+          "war_hammer",
+          "whip"
+        ],
+        "weapon_families": [
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_demon",
+      "legacy_source_serial": 83,
       "name": "of Slay Demon",
       "rating": 14,
       "xtra": 0,
@@ -3553,26 +3238,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 3500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_demon"
       ],
@@ -3591,10 +3256,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_orc",
+      "legacy_source_serial": 84,
       "name": "of Slay Orc",
       "rating": 10,
       "xtra": 0,
@@ -3605,26 +3281,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 2500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_orc"
       ],
@@ -3643,10 +3299,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_troll",
+      "legacy_source_serial": 85,
       "name": "of Slay Troll",
       "rating": 10,
       "xtra": 0,
@@ -3657,26 +3324,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 2500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_troll"
       ],
@@ -3695,10 +3342,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_giant",
+      "legacy_source_serial": 86,
       "name": "of Slay Giant",
       "rating": 14,
       "xtra": 0,
@@ -3709,26 +3367,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 2500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_giant"
       ],
@@ -3747,10 +3385,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_dragon",
+      "legacy_source_serial": 87,
       "name": "of Slay Dragon",
       "rating": 18,
       "xtra": 0,
@@ -3761,26 +3410,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 3500,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_dragon"
       ],
@@ -3799,10 +3428,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_animal_int",
+      "legacy_source_serial": 88,
       "name": "of *Slay Animal*",
       "rating": 20,
       "xtra": 0,
@@ -3813,26 +3453,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 6000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_animal"
       ],
@@ -3858,10 +3478,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_slay_undead_wis",
+      "id": "of_slay_evil_greater",
+      "legacy_source_serial": 89,
       "name": "of *Slay Evil*",
       "rating": 20,
       "xtra": 3,
@@ -3872,26 +3503,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 5000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -3917,10 +3528,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_slay_undead_wis",
+      "id": "of_slay_undead_greater",
+      "legacy_source_serial": 90,
       "name": "of *Slay Undead*",
       "rating": 24,
       "xtra": 0,
@@ -3931,26 +3553,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 8000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 18,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "kill_undead"
       ],
@@ -3976,10 +3578,31 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "item_ids": [
+          "ball_and_chain",
+          "flail",
+          "lead_filled_mace",
+          "lucerne_hammer",
+          "mace",
+          "morning_star",
+          "quarterstaff",
+          "two_handed_flail",
+          "war_hammer",
+          "whip"
+        ],
+        "weapon_families": [
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_demon_int",
+      "legacy_source_serial": 91,
       "name": "of *Slay Demon*",
       "rating": 16,
       "xtra": 0,
@@ -3990,26 +3613,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 8000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "description": "Weapons that are extra effective against demons, grant intelligence, and provide fire resistance.",
       "combat_modifiers": [
         "kill_demon"
@@ -4035,10 +3638,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
-      "id": "of_slay_orc",
+      "id": "of_slay_orc_greater",
+      "legacy_source_serial": 92,
       "name": "of *Slay Orc*",
       "rating": 14,
       "xtra": 0,
@@ -4049,26 +3663,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_orc"
       ],
@@ -4094,10 +3688,21 @@
       ],
       "item_categories": [
         "weapon"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_troll_str",
+      "legacy_source_serial": 93,
       "name": "of *Slay Troll*",
       "rating": 14,
       "xtra": 0,
@@ -4108,26 +3713,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_troll"
       ],
@@ -4153,10 +3738,21 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against trolls, grant strength, and provide regeneration."
+      "description": "Weapons that are extra effective against trolls, grant strength, and provide regeneration.",
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_giant_str",
+      "legacy_source_serial": 94,
       "name": "of *Slay Giant*",
       "rating": 16,
       "xtra": 0,
@@ -4167,26 +3763,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 4000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_giant"
       ],
@@ -4212,10 +3788,21 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against giants, grant strength, and sustain strength."
+      "description": "Weapons that are extra effective against giants, grant strength, and sustain strength.",
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_slay_dragon_con",
+      "legacy_source_serial": 95,
       "name": "of *Slay Dragon*",
       "rating": 24,
       "xtra": 0,
@@ -4226,26 +3813,6 @@
       "depth": 0,
       "rarity": 20,
       "cost": 8000,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "kill_dragon"
       ],
@@ -4271,10 +3838,21 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are extra effective against dragons, grant constitution, and provide fear resistance."
+      "description": "Weapons that are extra effective against dragons, grant constitution, and provide fear resistance.",
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_digging",
+      "legacy_source_serial": 100,
       "name": "of Digging",
       "rating": 4,
       "xtra": 0,
@@ -4285,14 +3863,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 500,
-      "applicable_types": [
-        {
-          "tval": 20,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "digger"
-        }
-      ],
       "combat_modifiers": [
         "brand_acid"
       ],
@@ -4315,10 +3885,16 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that enhance tunneling capability_ids and deal acid damage."
+      "description": "Weapons that enhance tunneling capability_ids and deal acid damage.",
+      "applicability": {
+        "weapon_handling": [
+          "digging"
+        ]
+      }
     },
     {
       "id": "of_earthquakes",
+      "legacy_source_serial": 101,
       "name": "of Earthquakes",
       "rating": 8,
       "xtra": 0,
@@ -4329,14 +3905,6 @@
       "depth": 20,
       "rarity": 4,
       "cost": 3000,
-      "applicable_types": [
-        {
-          "tval": 20,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "digger"
-        }
-      ],
       "combat_modifiers": [
         "brand_acid",
         "impact"
@@ -4366,10 +3934,16 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that can cause earthquakes, enhance tunneling capability_ids, deal acid damage and grant increased strength."
+      "description": "Weapons that can cause earthquakes, enhance tunneling capability_ids, deal acid damage and grant increased strength.",
+      "applicability": {
+        "weapon_handling": [
+          "digging"
+        ]
+      }
     },
     {
       "id": "of_morgul",
+      "legacy_source_serial": 102,
       "name": "of Morgul",
       "rating": 0,
       "xtra": 0,
@@ -4380,26 +3954,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 1,
-      "applicable_types": [
-        {
-          "tval": 21,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "hafted"
-        },
-        {
-          "tval": 22,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "polearm"
-        },
-        {
-          "tval": 23,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "sword"
-        }
-      ],
       "combat_modifiers": [
         "slay_undead",
         "brand_pois"
@@ -4427,10 +3981,21 @@
       "item_categories": [
         "weapon"
       ],
-      "description": "Weapons that are cursed, aggravate the wielder, and have various detrimental effects."
+      "description": "Weapons that are cursed, aggravate the wielder, and have various detrimental effects.",
+      "applicability": {
+        "weapon_families": [
+          "mace",
+          "staff",
+          "axe",
+          "polearm",
+          "sword",
+          "dagger"
+        ]
+      }
     },
     {
       "id": "of_accuracy",
+      "legacy_source_serial": 104,
       "name": "of Accuracy",
       "rating": 10,
       "xtra": 0,
@@ -4441,14 +4006,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -4464,10 +4021,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "It has no special abilities, but its to-hit value may be unusually high."
+      "description": "It has no special abilities, but its to-hit value may be unusually high.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     },
     {
-      "id": "of_power",
+      "id": "of_power_bow",
+      "legacy_source_serial": 105,
       "name": "of Power",
       "rating": 10,
       "xtra": 0,
@@ -4478,14 +4041,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 1000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -4501,10 +4056,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "It has no special abilities, but its to-dam value may be unusually high."
+      "description": "It has no special abilities, but its to-dam value may be unusually high.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     },
     {
       "id": "of_lothlorien",
+      "legacy_source_serial": 106,
       "name": "of Lothlorien",
       "rating": 30,
       "xtra": 3,
@@ -4515,14 +4076,6 @@
       "depth": 50,
       "rarity": 4,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 12,
-          "max_sval": 13,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -4554,10 +4107,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow imbued with the powers of Lothlorien, enhancing dexterity and might. It resists acid and fire."
+      "description": "A bow imbued with the powers of Lothlorien, enhancing dexterity and might. It resists acid and fire.",
+      "applicability": {
+        "weapon_families": [
+          "bow"
+        ]
+      }
     },
     {
       "id": "of_the_haradrim",
+      "legacy_source_serial": 107,
       "name": "of the Haradrim",
       "rating": 30,
       "xtra": 0,
@@ -4568,14 +4127,6 @@
       "depth": 50,
       "rarity": 4,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 23,
-          "max_sval": 23,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -4605,10 +4156,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow favored by the Haradrim, enhancing might and providing extra shot. It resists acid and fire."
+      "description": "A bow favored by the Haradrim, enhancing might and providing extra shot. It resists acid and fire.",
+      "applicability": {
+        "item_ids": [
+          "light_crossbow"
+        ]
+      }
     },
     {
       "id": "of_extra_might",
+      "legacy_source_serial": 108,
       "name": "of Extra Might",
       "rating": 20,
       "xtra": 0,
@@ -4619,14 +4176,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 10000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -4649,10 +4198,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants extra might to its wielder."
+      "description": "A bow that grants extra might to its wielder.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     },
     {
       "id": "of_extra_shots",
+      "legacy_source_serial": 109,
       "name": "of Extra Shots",
       "rating": 20,
       "xtra": 0,
@@ -4663,14 +4218,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 10000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -4693,10 +4240,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants extra shots to its wielder."
+      "description": "A bow that grants extra shots to its wielder.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     },
     {
       "id": "of_buckland",
+      "legacy_source_serial": 110,
       "name": "of Buckland",
       "rating": 25,
       "xtra": 0,
@@ -4707,14 +4260,6 @@
       "depth": 40,
       "rarity": 4,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 2,
-          "max_sval": 2,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -4748,10 +4293,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow favored by the people of Buckland, enhancing dexterity, might, and providing extra shots. It resists acid and fire."
+      "description": "A bow favored by the people of Buckland, enhancing dexterity, might, and providing extra shots. It resists acid and fire.",
+      "applicability": {
+        "weapon_families": [
+          "sling"
+        ]
+      }
     },
     {
       "id": "of_the_nazgul",
+      "legacy_source_serial": 111,
       "name": "of the Nazgul",
       "rating": 0,
       "xtra": 0,
@@ -4762,14 +4313,6 @@
       "depth": 0,
       "rarity": 2,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -4790,10 +4333,16 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow cursed by the influence of the Nazgul, draining experience and revealing invisible entities."
+      "description": "A bow cursed by the influence of the Nazgul, draining experience and revealing invisible entities.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     },
     {
       "id": "of_slay_animal_ammo",
+      "legacy_source_serial": 112,
       "name": "of Slay Animal",
       "rating": 10,
       "xtra": 0,
@@ -4804,26 +4353,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 20,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_animal"
       ],
@@ -4841,10 +4370,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against animals."
+      "description": "Ammunition that is particularly effective against animals.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_slay_evil_ammo",
+      "legacy_source_serial": 113,
       "name": "of Slay Evil",
       "rating": 10,
       "xtra": 0,
@@ -4855,26 +4392,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 20,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_evil"
       ],
@@ -4891,10 +4408,22 @@
       ],
       "item_categories": [
         "ammo"
-      ]
+      ],
+      "applicability": {
+        "weapon_families": [
+          "shot"
+        ],
+        "item_ids": [
+          "arrow",
+          "seeker_arrow",
+          "bolt",
+          "seeker_bolt"
+        ]
+      }
     },
     {
       "id": "of_slay_undead_ammo",
+      "legacy_source_serial": 114,
       "name": "of Slay Undead",
       "rating": 10,
       "xtra": 0,
@@ -4905,26 +4434,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 25,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_undead"
       ],
@@ -4942,10 +4451,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against undead."
+      "description": "Ammunition that is particularly effective against undead.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_slay_demon_ammo",
+      "legacy_source_serial": 115,
       "name": "of Slay Demon",
       "rating": 10,
       "xtra": 0,
@@ -4956,26 +4473,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 25,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_demon"
       ],
@@ -4993,10 +4490,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against demons."
+      "description": "Ammunition that is particularly effective against demons.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_acid_ammo",
+      "legacy_source_serial": 116,
       "name": "of Acid",
       "rating": 10,
       "xtra": 0,
@@ -5007,26 +4512,6 @@
       "depth": 0,
       "rarity": 9,
       "cost": 50,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "brand_acid"
       ],
@@ -5046,10 +4531,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals acid damage and ignores acid."
+      "description": "Ammunition that deals acid damage and ignores acid.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_lightning_ammo",
+      "legacy_source_serial": 117,
       "name": "of Lightning",
       "rating": 10,
       "xtra": 0,
@@ -5060,26 +4553,6 @@
       "depth": 0,
       "rarity": 9,
       "cost": 45,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "brand_elec"
       ],
@@ -5099,10 +4572,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals lightning damage and ignores lightning."
+      "description": "Ammunition that deals lightning damage and ignores lightning.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_slay_giant_ammo",
+      "legacy_source_serial": 118,
       "name": "of Slay Giant",
       "rating": 10,
       "xtra": 0,
@@ -5113,26 +4594,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 25,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_giant"
       ],
@@ -5150,10 +4611,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against giants."
+      "description": "Ammunition that is particularly effective against giants.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_slay_dragon_ammo",
+      "legacy_source_serial": 119,
       "name": "of Slay Dragon",
       "rating": 10,
       "xtra": 0,
@@ -5164,26 +4633,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 40,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_dragon"
       ],
@@ -5201,10 +4650,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against dragons."
+      "description": "Ammunition that is particularly effective against dragons.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_holy_might",
+      "legacy_source_serial": 120,
       "name": "of Holy Might",
       "rating": 20,
       "xtra": 0,
@@ -5215,26 +4672,6 @@
       "depth": 40,
       "rarity": 15,
       "cost": 60,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 2,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 2,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 2,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "slay_evil",
         "slay_demon",
@@ -5257,10 +4694,20 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that is particularly effective against evil creatures, demons and undead. Ignores fire and acid."
+      "description": "Ammunition that is particularly effective against evil creatures, demons and undead. Ignores fire and acid.",
+      "applicability": {
+        "item_ids": [
+          "mithril_shot",
+          "mithril_arrow",
+          "seeker_arrow",
+          "mithril_bolt",
+          "seeker_bolt"
+        ]
+      }
     },
     {
-      "id": "of_venom",
+      "id": "of_venom_ammunition",
+      "legacy_source_serial": 121,
       "name": "of Venom",
       "rating": 10,
       "xtra": 0,
@@ -5271,26 +4718,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 40,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 2,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "brand_pois"
       ],
@@ -5308,10 +4735,22 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals poison damage."
+      "description": "Ammunition that deals poison damage.",
+      "applicability": {
+        "weapon_families": [
+          "shot"
+        ],
+        "item_ids": [
+          "arrow",
+          "seeker_arrow",
+          "bolt",
+          "seeker_bolt"
+        ]
+      }
     },
     {
-      "id": "of_flame",
+      "id": "of_flame_ammunition",
+      "legacy_source_serial": 122,
       "name": "of Flame",
       "rating": 10,
       "xtra": 0,
@@ -5322,26 +4761,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 35,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "brand_fire"
       ],
@@ -5361,10 +4780,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals fire damage and ignores fire."
+      "description": "Ammunition that deals fire damage and ignores fire.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
-      "id": "of_frost",
+      "id": "of_frost_ammunition",
+      "legacy_source_serial": 123,
       "name": "of Frost",
       "rating": 10,
       "xtra": 0,
@@ -5375,26 +4802,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 30,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [
         "brand_cold"
       ],
@@ -5414,10 +4821,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition that deals cold damage and ignores cold."
+      "description": "Ammunition that deals cold damage and ignores cold.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_wounding",
+      "legacy_source_serial": 124,
       "name": "of Wounding",
       "rating": 5,
       "xtra": 0,
@@ -5428,26 +4843,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 20,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5463,10 +4858,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values."
+      "description": "Ammunition of Wounding often has unusually high to-hit and to-dam values.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_backbiting",
+      "legacy_source_serial": 125,
       "name": "of Backbiting",
       "rating": 0,
       "xtra": 0,
@@ -5477,26 +4880,6 @@
       "depth": 0,
       "rarity": 1,
       "cost": 0,
-      "applicable_types": [
-        {
-          "tval": 16,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shot"
-        },
-        {
-          "tval": 17,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "arrow"
-        },
-        {
-          "tval": 18,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bolt"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5514,10 +4897,18 @@
       "item_categories": [
         "ammo"
       ],
-      "description": "Ammunition of Backbiting often has unusually low to-hit and to-dam values."
+      "description": "Ammunition of Backbiting often has unusually low to-hit and to-dam values.",
+      "applicability": {
+        "weapon_families": [
+          "shot",
+          "arrow",
+          "bolt"
+        ]
+      }
     },
     {
       "id": "of_the_avari",
+      "legacy_source_serial": 128,
       "name": "of the Avari",
       "rating": 32,
       "xtra": 2,
@@ -5528,14 +4919,6 @@
       "depth": 0,
       "rarity": 6,
       "cost": 80000,
-      "applicable_types": [
-        {
-          "tval": 34,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "shield"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5565,10 +4948,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A shield that provides resistance to various elements and boosts constitution."
+      "description": "A shield that provides resistance to various elements and boosts constitution.",
+      "applicability": {
+        "armor_forms": [
+          "shield"
+        ]
+      }
     },
     {
       "id": "of_the_teleri",
+      "legacy_source_serial": 129,
       "name": "of the Teleri",
       "rating": 31,
       "xtra": 0,
@@ -5579,14 +4968,6 @@
       "depth": 0,
       "rarity": 3,
       "cost": 20000,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5605,10 +4986,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A cloak that grants the wearer the abilities of free action and life preservation."
+      "description": "A cloak that grants the wearer the abilities of free action and life preservation.",
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_lordly_resistance",
+      "legacy_source_serial": 130,
       "name": "of Lordly Resistance",
       "rating": 31,
       "xtra": 0,
@@ -5619,14 +5006,6 @@
       "depth": 0,
       "rarity": 8,
       "cost": 250000,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5660,10 +5039,16 @@
           "base": 100,
           "dice": 0
         }
+      },
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
       }
     },
     {
-      "id": "of_resistance",
+      "id": "of_resistance_cloak",
+      "legacy_source_serial": 131,
       "name": "of Resistance",
       "rating": 31,
       "xtra": 0,
@@ -5674,14 +5059,6 @@
       "depth": 0,
       "rarity": 4,
       "cost": 35000,
-      "applicable_types": [
-        {
-          "tval": 35,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "cloak"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5706,10 +5083,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "A cloak that provides basic resistance to various elements."
+      "description": "A cloak that provides basic resistance to various elements.",
+      "applicability": {
+        "armor_forms": [
+          "cloak"
+        ]
+      }
     },
     {
       "id": "of_the_istari",
+      "legacy_source_serial": 132,
       "name": "of the Istari",
       "rating": 34,
       "xtra": 2,
@@ -5720,14 +5103,6 @@
       "depth": 0,
       "rarity": 15,
       "cost": 50000,
-      "applicable_types": [
-        {
-          "tval": 31,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "gloves"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5757,10 +5132,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Gloves that enhance the wearer\u0027s intelligence and wisdom, and provide free action."
+      "description": "Gloves that enhance the wearer's intelligence and wisdom, and provide free action.",
+      "applicability": {
+        "armor_forms": [
+          "gloves"
+        ]
+      }
     },
     {
       "id": "of_mirkwood",
+      "legacy_source_serial": 133,
       "name": "of Mirkwood",
       "rating": 35,
       "xtra": 0,
@@ -5771,14 +5152,6 @@
       "depth": 0,
       "rarity": 12,
       "cost": 15000,
-      "applicable_types": [
-        {
-          "tval": 30,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "boots"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [],
@@ -5798,10 +5171,16 @@
       "item_categories": [
         "armor"
       ],
-      "description": "Boots that provide free action and resistance to poison."
+      "description": "Boots that provide free action and resistance to poison.",
+      "applicability": {
+        "armor_forms": [
+          "boots"
+        ]
+      }
     },
     {
       "id": "of_numenor",
+      "legacy_source_serial": 135,
       "name": "of Numenor",
       "rating": 25,
       "xtra": 0,
@@ -5812,14 +5191,6 @@
       "depth": 0,
       "rarity": 5,
       "cost": 50000,
-      "applicable_types": [
-        {
-          "tval": 19,
-          "min_sval": 0,
-          "max_sval": 99,
-          "tval_name": "bow"
-        }
-      ],
       "combat_modifiers": [],
       "effects": {
         "affixes": [
@@ -5842,7 +5213,12 @@
       "item_categories": [
         "ranged"
       ],
-      "description": "A bow that grants regeneration and might."
+      "description": "A bow that grants regeneration and might.",
+      "applicability": {
+        "weapon_classes": [
+          "launcher"
+        ]
+      }
     }
   ]
 }

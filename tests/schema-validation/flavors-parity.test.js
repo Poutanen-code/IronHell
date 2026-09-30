@@ -60,21 +60,19 @@ describe("MAngband 1.5.3 flavor parity", () => {
     assert.deepEqual(actual, expectedCategoryCounts);
   });
 
-  it("does not carry top-level tval/sval fields (legacy metadata only)", () => {
+  it("does not carry legacy numeric metadata", () => {
     for (const flavor of flavorsData.flavors) {
-      assert.equal(flavor.tval, undefined, `${flavor.id}: unexpected top-level tval`);
-      assert.equal(flavor.sval, undefined, `${flavor.id}: unexpected top-level sval`);
-      assert.ok(flavor.legacy && typeof flavor.legacy.tval === "number", `${flavor.id}: missing legacy.tval`);
+      assert.deepEqual(Object.keys(flavor.legacy), ["mangband_index"], `${flavor.id}: unexpected legacy metadata`);
     }
   });
 
-  it("preserves the fixed MAngband rings and potions (The One Ring, water, apple juice, slime mold juice)", () => {
+  it("preserves stable identity for fixed MAngband flavors", () => {
     const byId = new Map(flavorsData.flavors.map((flavor) => [flavor.id, flavor]));
 
-    assert.equal(byId.get("ring_plain_gold").legacy.sval, 37);
-    assert.equal(byId.get("potion_clear").legacy.sval, 0);
-    assert.equal(byId.get("potion_light_brown").legacy.sval, 1);
-    assert.equal(byId.get("potion_icky_green").legacy.sval, 2);
+    assert.ok(byId.has("ring_plain_gold"));
+    assert.ok(byId.has("potion_clear"));
+    assert.ok(byId.has("potion_light_brown"));
+    assert.ok(byId.has("potion_icky_green"));
   });
 
   it("preserves original MAngband flavor text, glyph, and color for a sample of entries", () => {

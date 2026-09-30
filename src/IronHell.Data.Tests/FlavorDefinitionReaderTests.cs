@@ -46,15 +46,15 @@ public sealed class FlavorDefinitionReaderTests
     }
 
     [Fact]
-    public void Read_RepositoryFlavors_PreservesFixedRingAndPotionSvals()
+    public void Read_RepositoryFlavors_PreservesStableSourceIndices()
     {
         var (flavors, _) = ReadRepositoryFlavors();
 
         var theOneRing = flavors.Single(flavor => flavor.Id == "ring_plain_gold");
-        Assert.Equal(37, theOneRing.Legacy.Sval);
+        Assert.Equal(1, theOneRing.Legacy.MangbandIndex);
 
         var water = flavors.Single(flavor => flavor.Id == "potion_clear");
-        Assert.Equal(0, water.Legacy.Sval);
+        Assert.Equal(193, water.Legacy.MangbandIndex);
     }
 
     [Fact]
@@ -63,8 +63,8 @@ public sealed class FlavorDefinitionReaderTests
         var document = (JsonNode.Parse("""
             {
               "flavors": [
-                { "id": "ring_a", "category": "ring", "display_name": "A", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1, "tval": 45, "sval": null }, "provenance_status": "verified" },
-                { "id": "ring_b", "category": "ring", "display_name": "B", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1, "tval": 45, "sval": null }, "provenance_status": "verified" }
+                { "id": "ring_a", "category": "ring", "display_name": "A", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1 }, "provenance_status": "verified" },
+                { "id": "ring_b", "category": "ring", "display_name": "B", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1 }, "provenance_status": "verified" }
               ]
             }
             """) as JsonObject)!;
@@ -81,7 +81,7 @@ public sealed class FlavorDefinitionReaderTests
         var document = (JsonNode.Parse("""
             {
               "flavors": [
-                { "id": "ring_a", "category": "chest", "display_name": "A", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1, "tval": 45, "sval": null }, "provenance_status": "verified" }
+                { "id": "ring_a", "category": "chest", "display_name": "A", "glyph": "=", "color": "w", "legacy": { "mangband_index": 1 }, "provenance_status": "verified" }
               ]
             }
             """) as JsonObject)!;

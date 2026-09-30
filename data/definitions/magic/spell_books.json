@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "books": [
     {
       "id": "magic_for_beginners",
       "name": "Magic for Beginners",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 0,
+      "generation_quality": "normal",
       "spell_ids": [
         "magic_magic_missile",
         "magic_detect_monsters",
@@ -24,8 +23,7 @@
       "id": "conjurings_and_tricks",
       "name": "Conjurings and Tricks",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 1,
+      "generation_quality": "normal",
       "spell_ids": [
         "magic_confuse_monster",
         "magic_lightning_bolt",
@@ -43,8 +41,7 @@
       "id": "incantations_and_illusions",
       "name": "Incantations and Illusions",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 2,
+      "generation_quality": "normal",
       "spell_ids": [
         "magic_satisfy_hunger",
         "magic_recharge_item_i",
@@ -62,8 +59,7 @@
       "id": "sorcery_and_evocations",
       "name": "Sorcery and Evocations",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 3,
+      "generation_quality": "normal",
       "spell_ids": [
         "magic_frost_ball",
         "magic_teleport_other",
@@ -78,8 +74,7 @@
       "id": "resistances_of_scarabtarices",
       "name": "Resistances of Scarabtarices",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 4,
+      "generation_quality": "good",
       "spell_ids": [
         "magic_resist_cold",
         "magic_resist_fire",
@@ -93,8 +88,7 @@
       "id": "raal_s_tome_of_destruction",
       "name": "Raal's Tome of Destruction",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 5,
+      "generation_quality": "good",
       "spell_ids": [
         "magic_shock_wave",
         "magic_explosion",
@@ -110,8 +104,7 @@
       "id": "mordenkainen_s_escapes",
       "name": "Mordenkainen's Escapes",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 6,
+      "generation_quality": "good",
       "spell_ids": [
         "magic_door_creation",
         "magic_stair_creation",
@@ -125,8 +118,7 @@
       "id": "tenser_s_transformations",
       "name": "Tenser's transformations",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 7,
+      "generation_quality": "good",
       "spell_ids": [
         "magic_heroism",
         "magic_berserker",
@@ -141,8 +133,7 @@
       "id": "kelek_s_grimoire_of_power",
       "name": "Kelek's Grimoire of Power",
       "realm": "magic",
-      "book_tval": 90,
-      "book_sval": 8,
+      "generation_quality": "good",
       "spell_ids": [
         "magic_earthquake",
         "magic_bedlam",
@@ -159,8 +150,7 @@
       "id": "beginners_handbook",
       "name": "Beginners Handbook",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 0,
+      "generation_quality": "normal",
       "spell_ids": [
         "prayer_detect_evil",
         "prayer_cure_light_wounds",
@@ -177,8 +167,7 @@
       "id": "words_of_wisdom",
       "name": "Words of Wisdom",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 1,
+      "generation_quality": "normal",
       "spell_ids": [
         "prayer_scare_monster",
         "prayer_portal",
@@ -195,8 +184,7 @@
       "id": "chants_and_blessings",
       "name": "Chants and Blessings",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 2,
+      "generation_quality": "normal",
       "spell_ids": [
         "prayer_neutralize_poison",
         "prayer_orb_of_draining",
@@ -214,8 +202,7 @@
       "id": "exorcism_and_dispelling",
       "name": "Exorcism and Dispelling",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 3,
+      "generation_quality": "normal",
       "spell_ids": [
         "prayer_prayer",
         "prayer_dispel_undead",
@@ -230,8 +217,7 @@
       "id": "ethereal_openings",
       "name": "Ethereal openings",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 4,
+      "generation_quality": "good",
       "spell_ids": [
         "prayer_blink",
         "prayer_teleport_self",
@@ -246,8 +232,7 @@
       "id": "godly_insights",
       "name": "Godly Insights",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 5,
+      "generation_quality": "good",
       "spell_ids": [
         "prayer_detect_monsters",
         "prayer_detection",
@@ -261,8 +246,7 @@
       "id": "purifications_and_healing",
       "name": "Purifications and Healing",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 6,
+      "generation_quality": "good",
       "spell_ids": [
         "prayer_cure_serious_wounds2",
         "prayer_cure_mortal_wounds2",
@@ -276,8 +260,7 @@
       "id": "holy_infusions",
       "name": "Holy Infusions",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 7,
+      "generation_quality": "good",
       "spell_ids": [
         "prayer_unbarring_ways",
         "prayer_recharging",
@@ -292,8 +275,7 @@
       "id": "wrath_of_god",
       "name": "Wrath of God",
       "realm": "prayer",
-      "book_tval": 91,
-      "book_sval": 8,
+      "generation_quality": "good",
       "spell_ids": [
         "prayer_dispel_undead2",
         "prayer_dispel_evil2",
