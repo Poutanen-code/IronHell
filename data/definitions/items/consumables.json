@@ -5,11 +5,9 @@
       "id": "mushroom_blindness",
       "name": "Mushroom of Blindness",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 5,
@@ -38,11 +36,9 @@
       "id": "mushroom_paranoia",
       "name": "Mushroom of Paranoia",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 5,
@@ -71,11 +67,9 @@
       "id": "mushroom_confusion",
       "name": "Mushroom of Confusion",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 5,
@@ -104,11 +98,9 @@
       "id": "mushroom_hallucination",
       "name": "Mushroom of Hallucination",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -137,11 +129,9 @@
       "id": "mushroom_paralysis",
       "name": "Mushroom of Paralysis",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 20,
@@ -170,11 +160,9 @@
       "id": "mushroom_weakness",
       "name": "Mushroom of Weakness",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -212,11 +200,9 @@
       "id": "mushroom_sickness",
       "name": "Mushroom of Sickness",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -254,11 +240,9 @@
       "id": "mushroom_stupidity",
       "name": "Mushroom of Stupidity",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 15,
@@ -296,11 +280,9 @@
       "id": "mushroom_naivety",
       "name": "Mushroom of Naivety",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 15,
@@ -338,11 +320,9 @@
       "id": "mushroom_unhealth",
       "name": "Mushroom of Unhealth",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 50,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 15,
@@ -380,11 +360,9 @@
       "id": "mushroom_disease",
       "name": "Mushroom of Disease",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 50,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 20,
@@ -422,11 +400,9 @@
       "id": "mushroom_cure_poison",
       "name": "Mushroom of Cure Poison",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 60,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -452,11 +428,9 @@
       "id": "mushroom_cure_blindness",
       "name": "Mushroom of Cure Blindness",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 50,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -482,11 +456,9 @@
       "id": "mushroom_cure_paranoia",
       "name": "Mushroom of Cure Paranoia",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 25,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -512,11 +484,9 @@
       "id": "mushroom_cure_confusion",
       "name": "Mushroom of Cure Confusion",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 50,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 10,
@@ -542,11 +512,9 @@
       "id": "mushroom_cure_serious_wounds",
       "name": "Mushroom of Cure Serious Wounds",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 75,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 15,
@@ -573,11 +541,9 @@
       "id": "mushroom_restore_strength",
       "name": "Mushroom of Restore Strength",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 350,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 20,
@@ -601,11 +567,9 @@
       "id": "mushroom_restore_constitution",
       "name": "Mushroom of Restore Constitution",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 350,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 20,
@@ -629,11 +593,9 @@
       "id": "mushroom_restoring",
       "name": "Mushroom of Restoring",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 1000,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 20,
@@ -664,11 +626,9 @@
       "id": "mushroom_poison",
       "name": "Mushroom of Poison",
       "type": "mushroom",
-      "cooldown_ticks": 0,
-      "stack_size": 1,
+      "stack_size": 10,
       "weight": 1,
       "sell_value": 0,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 5,
@@ -697,11 +657,9 @@
       "id": "ration_of_food",
       "name": "Ration of Food",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 10,
       "sell_value": 3,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 0,
@@ -734,11 +692,9 @@
       "id": "hard_biscuit",
       "name": "Hard Biscuit",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 2,
       "sell_value": 1,
-      "capability_ids": [],
       "allocation_table": [],
       "description": "Hard Biscuit.",
       "provenance_status": "verified",
@@ -758,11 +714,9 @@
       "id": "strip_of_beef_jerky",
       "name": "Strip of Beef Jerky",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 2,
       "sell_value": 2,
-      "capability_ids": [],
       "allocation_table": [],
       "description": "Strip of Beef Jerky.",
       "provenance_status": "verified",
@@ -782,18 +736,16 @@
       "id": "slime_mold",
       "name": "Slime Mold",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 5,
       "sell_value": 2,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 1,
           "rarity": 1
         }
       ],
-      "description": "Slime Mold.",
+      "description": "It's a Mold. It's slime.",
       "provenance_status": "verified",
       "actions": [
         {
@@ -811,11 +763,9 @@
       "id": "piece_of_elvish_waybread",
       "name": "Piece of Elvish Waybread",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 3,
       "sell_value": 10,
-      "capability_ids": [],
       "allocation_table": [
         {
           "depth": 5,
@@ -869,11 +819,9 @@
       "id": "pint_of_fine_ale",
       "name": "Pint of Fine Ale",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 5,
       "sell_value": 1,
-      "capability_ids": [],
       "allocation_table": [],
       "description": "Pint of Fine Ale.",
       "provenance_status": "verified",
@@ -893,11 +841,9 @@
       "id": "pint_of_fine_wine",
       "name": "Pint of Fine Wine",
       "type": "food",
-      "cooldown_ticks": 0,
       "stack_size": 10,
       "weight": 10,
       "sell_value": 2,
-      "capability_ids": [],
       "allocation_table": [],
       "description": "Pint of Fine Wine.",
       "provenance_status": "verified",

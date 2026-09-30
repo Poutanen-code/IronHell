@@ -25,7 +25,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Cracked edge, but still pointy enough for close work.",
       "provenance_status": "verified"
@@ -62,7 +61,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A short, quick blade favored by scouts and thieves.",
       "provenance_status": "verified"
@@ -87,7 +85,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A broad parrying dagger with a wicked thrust.",
       "provenance_status": "verified"
@@ -112,7 +109,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Narrow and elegant, made for precision strikes.",
       "provenance_status": "verified"
@@ -138,7 +134,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A dependable sidearm for militia and delvers alike.",
       "provenance_status": "verified"
@@ -164,7 +159,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Compact and balanced, ideal in cramped corridors.",
       "provenance_status": "verified"
@@ -190,7 +184,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Curved steel made for fast cutting strokes.",
       "provenance_status": "verified"
@@ -216,7 +209,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A heavy naval blade that bites deep.",
       "provenance_status": "verified"
@@ -242,7 +234,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A broad curved sword prized by caravan guards.",
       "provenance_status": "observed"
@@ -272,7 +263,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A wide blade with brutal chopping force.",
       "provenance_status": "verified"
@@ -302,7 +292,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A knightly standard with excellent reach and weight.",
       "provenance_status": "verified"
@@ -328,7 +317,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A sweeping curved blade favored by desert raiders.",
       "provenance_status": "verified"
@@ -354,7 +342,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A masterwork curved blade with a terrifying draw-cut.",
       "provenance_status": "verified"
@@ -380,7 +367,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Versatile and heavy, used by veterans in deep halls.",
       "provenance_status": "verified"
@@ -410,7 +396,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A great slab of steel that ends fights quickly.",
       "provenance_status": "verified"
@@ -436,7 +421,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A massive blade designed for finishing blows.",
       "provenance_status": "verified"
@@ -462,7 +446,6 @@
           "rarity": 5
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [
         "res_chaos"
       ],
@@ -493,7 +476,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A blade snapped near the hilt — still useful as a last resort.",
       "provenance_status": "verified"
@@ -518,7 +500,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Snaps fast and stings through light armor.",
       "provenance_status": "verified"
@@ -543,7 +524,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A solid iron head that crushes with each swing.",
       "provenance_status": "verified"
@@ -568,7 +548,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A spiked iron ball on a chain — difficult to parry.",
       "provenance_status": "verified"
@@ -593,7 +572,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A double-ended fighting staff for monks and scholars.",
       "provenance_status": "verified"
@@ -618,7 +596,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Dense iron head for crushing plate and bone alike.",
       "provenance_status": "verified"
@@ -643,7 +620,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A polearm hybrid with hammerhead and spike.",
       "provenance_status": "verified"
@@ -668,7 +644,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Flanged and spiked, penetrating mail with ease.",
       "provenance_status": "verified"
@@ -693,7 +668,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A chained head that punishes those behind shields.",
       "provenance_status": "verified"
@@ -718,7 +692,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Filled with lead for devastating skull-cracking weight.",
       "provenance_status": "verified"
@@ -743,7 +716,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Swings with lethal momentum, impossible to deflect.",
       "provenance_status": "verified"
@@ -768,7 +740,6 @@
           "rarity": 5
         }
       ],
-      "capability_ids": [],
       "combat_modifiers": [
         "slay_undead"
       ],
@@ -796,7 +767,6 @@
           "rarity": 6
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Mighty Hammer.",
       "provenance_status": "ironhell_specific"
@@ -821,7 +791,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Reach and speed — a classic infantry weapon.",
       "provenance_status": "verified"
@@ -846,7 +815,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Three-pronged, capable of trapping and piercing.",
       "provenance_status": "verified"
@@ -871,7 +839,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A pole-mounted spike designed to pierce heavy armor.",
       "provenance_status": "verified"
@@ -896,7 +863,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A long thrusting weapon used in formation combat.",
       "provenance_status": "verified"
@@ -922,7 +888,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Hook-shaped pick for rending mail.",
       "provenance_status": "verified"
@@ -948,7 +913,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Wide-bladed for powerful cleaving strikes.",
       "provenance_status": "verified"
@@ -974,7 +938,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A single-edged blade mounted on a long pole.",
       "provenance_status": "verified"
@@ -1000,7 +963,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Axe, spike, and hook combined into one vicious weapon.",
       "provenance_status": "verified"
@@ -1026,7 +988,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Repurposed harvest blade, terrifying in close quarters.",
       "provenance_status": "verified"
@@ -1052,7 +1013,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Made for mounted charges — unwieldy underground.",
       "provenance_status": "verified"
@@ -1078,7 +1038,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Built for split mail and shattered shields.",
       "provenance_status": "verified"
@@ -1104,7 +1063,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A towering axehead that can fell ogres in two swings.",
       "provenance_status": "verified"
@@ -1130,7 +1088,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A highland war-axe with hook for pulling riders down.",
       "provenance_status": "verified"
@@ -1156,7 +1113,6 @@
           "rarity": 3
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "An artifact-grade harvest blade that cuts through almost anything.",
       "provenance_status": "verified"
@@ -1188,7 +1144,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A simple sling. In skilled hands, stones become lethal.",
       "provenance_status": "verified"
@@ -1220,7 +1175,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A basic short bow. Fast and dependable for dungeon skirmishes.",
       "provenance_status": "verified"
@@ -1252,7 +1206,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A long bow with stronger draw and better range.",
       "provenance_status": "verified"
@@ -1284,7 +1237,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A light crossbow that fires bolts with strong penetration.",
       "provenance_status": "verified"
@@ -1316,7 +1268,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A heavy crossbow with tremendous draw force and reach.",
       "provenance_status": "verified"
@@ -1345,7 +1296,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A smooth pebble for sling fire.",
       "provenance_status": "verified"
@@ -1374,7 +1324,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Dense metal shot for slings.",
       "provenance_status": "verified"
@@ -1407,7 +1356,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Standard wooden arrow for bows.",
       "provenance_status": "verified"
@@ -1436,7 +1384,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A heavier war arrow designed for deep penetration.",
       "provenance_status": "verified"
@@ -1469,7 +1416,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A standard quarrel for crossbows.",
       "provenance_status": "verified"
@@ -1498,7 +1444,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A heavy bolt built to pierce thick hides and plate.",
       "provenance_status": "verified"
@@ -1527,7 +1472,6 @@
           "rarity": 1
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [
         "ignore_acid"
       ],
@@ -1558,7 +1502,6 @@
           "rarity": 3
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [
         "ignore_acid",
         "ignore_fire"
@@ -1590,7 +1533,6 @@
           "rarity": 3
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [
         "ignore_acid",
         "ignore_fire"
@@ -1619,7 +1561,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Can move rubble and dig through soft earth.",
       "provenance_status": "verified"
@@ -1645,7 +1586,6 @@
           "rarity": 3
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Gnomish engineering for faster tunnel work.",
       "provenance_status": "verified"
@@ -1671,7 +1611,6 @@
           "rarity": 4
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Dwarven-forged to cut through solid granite.",
       "provenance_status": "verified"
@@ -1697,7 +1636,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "A mining pick — slow but effective against stone.",
       "provenance_status": "verified"
@@ -1723,7 +1661,6 @@
           "rarity": 3
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Crude orcish tool but surprisingly effective at digging.",
       "provenance_status": "verified"
@@ -1749,7 +1686,6 @@
           "rarity": 4
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Master dwarven craft that chews through bedrock.",
       "provenance_status": "verified"
@@ -1775,7 +1711,6 @@
           "rarity": 2
         }
       ],
-      "capability_ids": [],
       "resistance_ids": [],
       "description": "Heavy digging blade — also viable as a weapon in desperation.",
       "provenance_status": "verified"

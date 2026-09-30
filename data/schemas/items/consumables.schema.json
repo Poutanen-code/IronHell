@@ -19,8 +19,8 @@
       "additionalProperties": false,
       "required": [
         "id", "name", "type",
-        "cooldown_ticks", "stack_size", "weight", "sell_value",
-        "capability_ids", "allocation_table",
+        "stack_size", "weight", "sell_value",
+        "allocation_table",
         "description", "provenance_status"
       ],
       "properties": {
@@ -30,15 +30,9 @@
           "type": "string",
           "enum": ["mushroom", "food"]
         },
-        "cooldown_ticks": { "type": "integer", "minimum": 0 },
         "stack_size": { "type": "integer", "minimum": 1 },
         "weight": { "type": "number", "minimum": 0 },
         "sell_value": { "type": "integer", "minimum": 0 },
-        "capability_ids": {
-          "type": "array",
-          "items": { "$ref": "common_item.schema.json#/$defs/Id" },
-          "uniqueItems": true
-        },
         "allocation_table": { "$ref": "common_item.schema.json#/$defs/AllocationTable" },
         "actions": { "$ref": "common_item.schema.json#/$defs/Actions" },
         "description": { "type": "string", "minLength": 1 },
