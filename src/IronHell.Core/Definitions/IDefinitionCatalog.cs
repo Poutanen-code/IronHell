@@ -1,3 +1,5 @@
+using IronHell.Core.Dungeon;
+
 namespace IronHell.Core.Definitions;
 
 public interface IDefinitionCatalog
@@ -35,6 +37,8 @@ public interface IDefinitionCatalog
     IDefinitionRegistry<TerrainDefinition> Terrain { get; }
 
     IDefinitionRegistry<TrapDefinition> Traps { get; }
+
+    IDefinitionRegistry<VaultDefinition> Vaults { get; }
 
     IReadOnlyCollection<RaceClassRule> RaceClassRules { get; }
 }

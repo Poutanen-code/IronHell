@@ -1,6 +1,7 @@
 using System.Collections.Frozen;
 using System.Text.Json.Nodes;
 using IronHell.Core.Definitions;
+using IronHell.Core.Dungeon;
 using IronHell.Data.Registries;
 using IronHell.Data.Serialization;
 using IronHell.Data.Validation;
@@ -26,6 +27,7 @@ internal static class DefinitionCatalogBuilder
         var monsters = MonsterDefinitionReader.ReadMonsters(documents["monsters"], report);
         var terrain = TerrainDefinitionReader.Read(documents["terrain"], report);
         var traps = TrapDefinitionReader.Read(documents["traps"], report);
+        var vaults = VaultDefinitionReader.Read(documents["vaults"], report);
         var races = CharacterDefinitionReader.ReadRaces(documents["races"], report);
         var classes = CharacterDefinitionReader.ReadClasses(documents["classes"], report);
         var rules = CharacterDefinitionReader.ReadRules(documents["race_class_rules"], report);
@@ -52,6 +54,7 @@ internal static class DefinitionCatalogBuilder
         var monsterRegistry = new DefinitionRegistry<MonsterDefinition>(monsters);
         var terrainRegistry = new DefinitionRegistry<TerrainDefinition>(terrain);
         var trapRegistry = new DefinitionRegistry<TrapDefinition>(traps);
+        var vaultRegistry = new DefinitionRegistry<VaultDefinition>(vaults);
 
         var characterDefinitions = new CharacterDefinitionSet(rules, races, classes);
         CharacterValidator.Validate(raceRegistry, classRegistry, capabilityRegistry, resistanceRegistry, itemRegistry, characterDefinitions, report);
@@ -101,6 +104,7 @@ internal static class DefinitionCatalogBuilder
             monsterRegistry,
             terrainRegistry,
             trapRegistry,
+            vaultRegistry,
             Array.AsReadOnly(rules.OrderBy(rule => rule.RaceId, StringComparer.Ordinal).ThenBy(rule => rule.ClassId, StringComparer.Ordinal).ToArray()));
     }
 }

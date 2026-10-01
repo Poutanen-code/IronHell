@@ -1,4 +1,5 @@
 using IronHell.Core.Definitions;
+using IronHell.Core.Dungeon;
 
 namespace IronHell.Data;
 
@@ -20,4 +21,5 @@ internal sealed record DefinitionCatalog(
     IDefinitionRegistry<MonsterDefinition> Monsters,
     IDefinitionRegistry<TerrainDefinition> Terrain,
     IDefinitionRegistry<TrapDefinition> Traps,
+    IDefinitionRegistry<VaultDefinition> Vaults,
     IReadOnlyCollection<RaceClassRule> RaceClassRules) : IDefinitionCatalog;

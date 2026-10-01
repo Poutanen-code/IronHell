@@ -1,4 +1,5 @@
 using IronHell.Core.Randomness;
+using IronHell.Core.Monsters;
 
 namespace IronHell.Core.Dungeon;
 
@@ -17,6 +18,99 @@ public static class RoomGeometryBuilder
     public const string OpenFloorFeatureId = "open_floor";
     public const string OuterWallFeatureId = "granite_wall_outer";
     public const string InnerWallFeatureId = "granite_wall_inner";
+
+    public static RoomBuildResult TryBuildNest(
+        DungeonGrid grid,
+        RoomBlockPosition startBlock,
+        MonsterNestPreparationResult preparation,
+        IRandomSource randomSource)
+    {
+        ArgumentNullException.ThrowIfNull(grid);
+        ArgumentNullException.ThrowIfNull(preparation);
+        ArgumentNullException.ThrowIfNull(randomSource);
+
+        var family = RoomFamily.Nest;
+        var center = CenterFromBlocks(startBlock, RoomFamilies.Get(family).Footprint);
+        if (!grid.TryCommitRoom(startBlock, RoomFamilies.Get(family).Footprint, center))
+        {
+            return Failed(family);
+        }
+
+        WriteDoubleRectangle(grid, center.Row - 4, center.Row + 4, center.Column - 11, center.Column + 11, light: false);
+        var attempts = new List<RoomContentAttempt>
+        {
+            new(RoomContentAttemptKind.SecretDoor, SelectSpecialRoomDoor(center, randomSource)),
+        };
+
+        for (var row = center.Row - 2; row <= center.Row + 2; row++)
+        {
+            for (var column = center.Column - 9; column <= center.Column + 9; column++)
+            {
+                var definitionId = preparation.CandidateDefinitionIds[randomSource.Next(0, preparation.CandidateDefinitionIds.Count)];
+                attempts.Add(new RoomContentAttempt(
+                    RoomContentAttemptKind.Monster,
+                    new DungeonPosition(row, column),
+                    DefinitionId: definitionId,
+                    AllowGroupExpansion: false));
+            }
+        }
+
+        return Succeeded(family, center, 0, attempts);
+    }
+
+    public static RoomBuildResult TryBuildPit(
+        DungeonGrid grid,
+        RoomBlockPosition startBlock,
+        MonsterPitPreparationResult preparation,
+        IRandomSource randomSource)
+    {
+        ArgumentNullException.ThrowIfNull(grid);
+        ArgumentNullException.ThrowIfNull(preparation);
+        ArgumentNullException.ThrowIfNull(randomSource);
+
+        var family = RoomFamily.Pit;
+        var center = CenterFromBlocks(startBlock, RoomFamilies.Get(family).Footprint);
+        if (!grid.TryCommitRoom(startBlock, RoomFamilies.Get(family).Footprint, center))
+        {
+            return Failed(family);
+        }
+
+        WriteDoubleRectangle(grid, center.Row - 4, center.Row + 4, center.Column - 11, center.Column + 11, light: false);
+        var attempts = new List<RoomContentAttempt>
+        {
+            new(RoomContentAttemptKind.SecretDoor, SelectSpecialRoomDoor(center, randomSource)),
+        };
+
+        AddPitTier(attempts, preparation.TierDefinitionIds[0], center, rowOffset: -2, columnStart: -9, columnEnd: 9);
+        AddPitTier(attempts, preparation.TierDefinitionIds[0], center, rowOffset: 2, columnStart: -9, columnEnd: 9);
+        for (var rowOffset = -1; rowOffset <= 1; rowOffset++)
+        {
+            AddPitMonster(attempts, preparation.TierDefinitionIds[0], center, rowOffset, -9);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[0], center, rowOffset, 9);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[1], center, rowOffset, -8);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[1], center, rowOffset, 8);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[1], center, rowOffset, -7);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[1], center, rowOffset, 7);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[2], center, rowOffset, -6);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[2], center, rowOffset, 6);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[2], center, rowOffset, -5);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[2], center, rowOffset, 5);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[3], center, rowOffset, -4);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[3], center, rowOffset, 4);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[3], center, rowOffset, -3);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[3], center, rowOffset, 3);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[4], center, rowOffset, -2);
+            AddPitMonster(attempts, preparation.TierDefinitionIds[4], center, rowOffset, 2);
+        }
+
+        AddPitTier(attempts, preparation.TierDefinitionIds[5], center, -1, -1, 1);
+        AddPitTier(attempts, preparation.TierDefinitionIds[5], center, 1, -1, 1);
+        AddPitMonster(attempts, preparation.TierDefinitionIds[6], center, 0, -1);
+        AddPitMonster(attempts, preparation.TierDefinitionIds[6], center, 0, 1);
+        AddPitMonster(attempts, preparation.TierDefinitionIds[7], center, 0, 0);
+
+        return Succeeded(family, center, 0, attempts);
+    }
 
     public static RoomBuildResult TryBuildSimple(
         DungeonGrid grid,
@@ -369,6 +463,41 @@ public static class RoomGeometryBuilder
 
     private static void AddSecretDoor(List<RoomContentAttempt> attempts, int row, int column) =>
         attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.SecretDoor, new DungeonPosition(row, column)));
+
+    private static DungeonPosition SelectSpecialRoomDoor(DungeonPosition center, IRandomSource randomSource) =>
+        randomSource.Next(1, 5) switch
+        {
+            1 => new DungeonPosition(center.Row - 3, center.Column),
+            2 => new DungeonPosition(center.Row + 3, center.Column),
+            3 => new DungeonPosition(center.Row, center.Column - 10),
+            _ => new DungeonPosition(center.Row, center.Column + 10),
+        };
+
+    private static void AddPitTier(
+        List<RoomContentAttempt> attempts,
+        string definitionId,
+        DungeonPosition center,
+        int rowOffset,
+        int columnStart,
+        int columnEnd)
+    {
+        for (var columnOffset = columnStart; columnOffset <= columnEnd; columnOffset++)
+        {
+            AddPitMonster(attempts, definitionId, center, rowOffset, columnOffset);
+        }
+    }
+
+    private static void AddPitMonster(
+        List<RoomContentAttempt> attempts,
+        string definitionId,
+        DungeonPosition center,
+        int rowOffset,
+        int columnOffset) =>
+        attempts.Add(new RoomContentAttempt(
+            RoomContentAttemptKind.Monster,
+            new DungeonPosition(center.Row + rowOffset, center.Column + columnOffset),
+            DefinitionId: definitionId,
+            AllowGroupExpansion: false));
 
     private static void AddAttempts(
         List<RoomContentAttempt> attempts,

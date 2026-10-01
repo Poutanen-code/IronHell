@@ -18,4 +18,6 @@ public sealed record RoomContentAttempt(
     int RadiusRows = 0,
     int RadiusColumns = 0,
     int GenerationDepthOffset = 0,
-    bool Special = false);
+    bool Special = false,
+    string? DefinitionId = null,
+    bool AllowGroupExpansion = true);

@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using IronHell.Core.Actions;
 using IronHell.Core.Characters;
 using IronHell.Core.Definitions;
+using IronHell.Core.Dungeon;
 using IronHell.Core.Randomness;
 using IronHell.Core.Spells;
 using Xunit;
@@ -254,6 +255,7 @@ public sealed class SpellExecutionServiceTests
         public IDefinitionRegistry<MonsterDefinition> Monsters { get; } = TestRegistry<MonsterDefinition>.Empty;
         public IDefinitionRegistry<TerrainDefinition> Terrain { get; } = TestRegistry<TerrainDefinition>.Empty;
         public IDefinitionRegistry<TrapDefinition> Traps { get; } = TestRegistry<TrapDefinition>.Empty;
+        public IDefinitionRegistry<VaultDefinition> Vaults { get; } = TestRegistry<VaultDefinition>.Empty;
         public IReadOnlyCollection<RaceClassRule> RaceClassRules { get; } = Array.Empty<RaceClassRule>();
     }
 
