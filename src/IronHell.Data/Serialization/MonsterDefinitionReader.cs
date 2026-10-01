@@ -92,8 +92,15 @@ internal static class MonsterDefinitionReader
             var resistances = monster["resistances"]?.AsArray()
                 .Select(resistance => resistance?.GetValue<string>() ?? string.Empty)
                 .ToArray() ?? [];
+            var categories = monster["categories"]?.AsArray()
+                .Select(category => category?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
+            var abilities = monster["abilities"]?.AsArray()
+                .Select(ability => ability?.GetValue<string>() ?? string.Empty)
+                .ToArray() ?? [];
             var senses = monster["senses"]?.AsObject();
             var spawnPolicy = monster["spawn_policy"] as JsonObject;
+            var stats = monster["stats"]?.AsObject();
             definitions.Add(new MonsterDefinition(id, new DiceRollDefinition(
                 hpRoll?["kind"]?.GetValue<string>() ?? string.Empty,
                 hpRoll?["count"]?.GetValue<int>() ?? 0,
@@ -118,7 +125,12 @@ internal static class MonsterDefinitionReader
                     ReadBoolean(spawnPolicy, "escorts"),
                     ReadBoolean(spawnPolicy, "friends"),
                     ReadBoolean(spawnPolicy, "wanderer")),
-                monster["loot_profile"]?.GetValue<string>()));
+                monster["loot_profile"]?.GetValue<string>(),
+                stats?["level"]?.GetValue<int>() ?? 0,
+                stats?["rarity"]?.GetValue<int>() ?? 1,
+                monster["symbol"]?.GetValue<string>() ?? string.Empty,
+                Array.AsReadOnly(categories),
+                Array.AsReadOnly(abilities)));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);

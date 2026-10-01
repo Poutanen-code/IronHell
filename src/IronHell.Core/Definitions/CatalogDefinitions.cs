@@ -303,7 +303,12 @@ public sealed record MonsterDefinition(
 	IReadOnlyList<string> Resistances,
 	MonsterSensesDefinition Senses,
 	SpawnPolicy SpawnPolicy,
-	string? LootProfileId = null) : IIdentifiedDefinition;
+	string? LootProfileId = null,
+	int NativeLevel = 0,
+	int Rarity = 1,
+	string Symbol = "",
+	IReadOnlyList<string>? Categories = null,
+	IReadOnlyList<string>? Abilities = null) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 

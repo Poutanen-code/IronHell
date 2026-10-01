@@ -24,6 +24,31 @@ public sealed class FlavorServiceTests
     }
 
     [Fact]
+    public void GetRandomFlavorForCategory_UsesScriptedBoundaryValuesInOrder()
+    {
+        var registry = new TestFlavorRegistry(
+            Enumerable.Range(0, 50)
+                .Select(index => new FlavorDefinition(
+                    $"ring_{index:D2}",
+                    FlavorCategory.Ring,
+                    $"Flavor {index}",
+                    "=",
+                    "r",
+                    new FlavorLegacyMetadata(index),
+                    "test"))
+                .ToArray());
+        var random = new ScriptedRandomSource(0, 49);
+        var service = new FlavorService(registry);
+
+        var first = service.GetRandomFlavorForCategory(FlavorCategory.Ring, random);
+        var second = service.GetRandomFlavorForCategory(FlavorCategory.Ring, random);
+
+        Assert.Equal("ring_00", first.Id);
+        Assert.Equal("ring_49", second.Id);
+        Assert.Equal([(0, 50), (0, 50)], random.Requests);
+    }
+
+    [Fact]
     public void GetRandomFlavorForCategory_NoFlavorsForCategory_Throws()
     {
         var service = new FlavorService(new TestFlavorRegistry([]));
@@ -42,5 +67,30 @@ public sealed class FlavorServiceTests
         }
 
         public FlavorDefinition GetRequired(string id) => All.First(flavor => flavor.Id == id);
+    }
+
+    private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
+    {
+        private readonly Queue<int> _values = new(values);
+
+        public List<(int MinInclusive, int MaxExclusive)> Requests { get; } = [];
+
+        public int Next(int minInclusive, int maxExclusive)
+        {
+            Requests.Add((minInclusive, maxExclusive));
+            if (!_values.TryDequeue(out var value))
+            {
+                throw new InvalidOperationException("The scripted random source ran out of values.");
+            }
+
+            if (value < minInclusive || value >= maxExclusive)
+            {
+                throw new InvalidOperationException($"Scripted value {value} is outside [{minInclusive}, {maxExclusive}).");
+            }
+
+            return value;
+        }
+
+        public int RollDice(int count, int sides) => throw new NotSupportedException();
     }
 }
