@@ -40,6 +40,7 @@ public enum DungeonCellStates
 public sealed class DungeonGrid
 {
     public const string GraniteWallBasicFeatureId = "granite_wall_basic";
+    public const string ClosedDoorFeatureId = "door_closed_base";
     public const int DungeonWidth = 198;
     public const int DungeonHeight = 66;
     public const int BlockWidth = 11;
@@ -49,6 +50,7 @@ public sealed class DungeonGrid
 
     private readonly DungeonCellStates[,] _cellFlags = new DungeonCellStates[DungeonHeight, DungeonWidth];
     private readonly string?[,] _featureIds = new string?[DungeonHeight, DungeonWidth];
+    private readonly DoorState?[,] _doorStates = new DoorState?[DungeonHeight, DungeonWidth];
     private readonly bool[,] _reservedBlocks = new bool[BlockRows, BlockColumns];
     private readonly List<DungeonPosition> _roomCenters = [];
     private bool _rockInitialized;
@@ -103,11 +105,27 @@ public sealed class DungeonGrid
         return _featureIds[position.Row, position.Column];
     }
 
+    public DoorState? GetDoorState(DungeonPosition position)
+    {
+        EnsureInBounds(position);
+        return _doorStates[position.Row, position.Column];
+    }
+
+    public void SetClosedDoor(DungeonPosition position, DoorState state)
+    {
+        EnsureInBounds(position);
+        _featureIds[position.Row, position.Column] = ClosedDoorFeatureId;
+        _doorStates[position.Row, position.Column] = state;
+    }
+
     public void SetFeatureId(DungeonPosition position, string featureId)
     {
         EnsureInBounds(position);
         ArgumentException.ThrowIfNullOrWhiteSpace(featureId);
         _featureIds[position.Row, position.Column] = featureId;
+        _doorStates[position.Row, position.Column] = featureId == ClosedDoorFeatureId
+            ? new DoorState(DoorCondition.Closed, 0)
+            : null;
     }
 
     public bool IsBlockReserved(RoomBlockPosition position)

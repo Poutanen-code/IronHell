@@ -341,7 +341,7 @@ public static class RoomGeometryBuilder
             case 2:
                 AddSecretDoorAttempt(attempts, center, innerTop, innerBottom, innerLeft, innerRight, randomSource);
                 WriteInnerRoom(grid, center);
-                AddLockedDoorAttempt(attempts, center, randomSource);
+                var lockedDoor = AddLockedDoorAttempt(attempts, center, randomSource);
                 AddAttempts(attempts, RoomContentAttemptKind.Monster, center, randomSource.Next(1, 4) + 2, 1, 1, 2);
                 if (randomSource.Next(0, 100) < 80)
                 {
@@ -352,6 +352,7 @@ public static class RoomGeometryBuilder
                     attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.RandomStair, center));
                 }
                 AddAttempts(attempts, RoomContentAttemptKind.Trap, center, randomSource.Next(1, 4) + 2, 4, 10);
+                DungeonDoorGenerator.PlaceLockedDoor(grid, lockedDoor, randomSource);
                 break;
             case 3:
                 AddSecretDoorAttempt(attempts, center, innerTop, innerBottom, innerLeft, innerRight, randomSource);
@@ -449,7 +450,10 @@ public static class RoomGeometryBuilder
             _ => new DungeonPosition(center.Row, right),
         };
 
-    private static void AddLockedDoorAttempt(List<RoomContentAttempt> attempts, DungeonPosition center, IRandomSource randomSource)
+    private static DungeonPosition AddLockedDoorAttempt(
+        List<RoomContentAttempt> attempts,
+        DungeonPosition center,
+        IRandomSource randomSource)
     {
         var door = randomSource.Next(1, 5) switch
         {
@@ -459,6 +463,7 @@ public static class RoomGeometryBuilder
             _ => new DungeonPosition(center.Row, center.Column + 1),
         };
         attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.LockedDoor, door));
+        return door;
     }
 
     private static void AddSecretDoor(List<RoomContentAttempt> attempts, int row, int column) =>

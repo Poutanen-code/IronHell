@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ironhell.local/schemas/environment/terrain_visuals.schema.json",
+  "title": "Terrain Visual Mappings",
+  "description": "Sprite filenames are relative to data/art/environment. Unmapped terrain definitions are allowed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mappings"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["terrain_id", "sprite_path"],
+        "properties": {
+          "terrain_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "sprite_path": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*\\.png$"
+          }
+        }
+      }
+    }
+  }
+}
