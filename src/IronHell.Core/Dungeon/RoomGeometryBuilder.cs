@@ -341,7 +341,7 @@ public static class RoomGeometryBuilder
             case 2:
                 AddSecretDoorAttempt(attempts, center, innerTop, innerBottom, innerLeft, innerRight, randomSource);
                 WriteInnerRoom(grid, center);
-                var lockedDoor = AddLockedDoorAttempt(attempts, center, randomSource);
+                AddLockedDoorAttempt(attempts, center, randomSource);
                 AddAttempts(attempts, RoomContentAttemptKind.Monster, center, randomSource.Next(1, 4) + 2, 1, 1, 2);
                 if (randomSource.Next(0, 100) < 80)
                 {
@@ -352,7 +352,6 @@ public static class RoomGeometryBuilder
                     attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.RandomStair, center));
                 }
                 AddAttempts(attempts, RoomContentAttemptKind.Trap, center, randomSource.Next(1, 4) + 2, 4, 10);
-                DungeonDoorGenerator.PlaceLockedDoor(grid, lockedDoor, randomSource);
                 break;
             case 3:
                 AddSecretDoorAttempt(attempts, center, innerTop, innerBottom, innerLeft, innerRight, randomSource);
@@ -450,7 +449,7 @@ public static class RoomGeometryBuilder
             _ => new DungeonPosition(center.Row, right),
         };
 
-    private static DungeonPosition AddLockedDoorAttempt(
+    private static void AddLockedDoorAttempt(
         List<RoomContentAttempt> attempts,
         DungeonPosition center,
         IRandomSource randomSource)
@@ -462,8 +461,8 @@ public static class RoomGeometryBuilder
             3 => new DungeonPosition(center.Row, center.Column - 1),
             _ => new DungeonPosition(center.Row, center.Column + 1),
         };
-        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.LockedDoor, door));
-        return door;
+        var state = DungeonDoorGenerator.CreateLockedDoorState(randomSource);
+        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.LockedDoor, door, PreparedDoorState: state));
     }
 
     private static void AddSecretDoor(List<RoomContentAttempt> attempts, int row, int column) =>

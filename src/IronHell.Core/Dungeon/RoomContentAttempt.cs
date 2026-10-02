@@ -20,4 +20,5 @@ public sealed record RoomContentAttempt(
     int GenerationDepthOffset = 0,
     bool Special = false,
     string? DefinitionId = null,
-    bool AllowGroupExpansion = true);
+    bool AllowGroupExpansion = true,
+    DoorState? PreparedDoorState = null);

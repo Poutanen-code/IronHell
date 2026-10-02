@@ -7,7 +7,9 @@ public readonly record struct RoomConnection(DungeonPosition From, DungeonPositi
 public sealed record RoomConnectivityResult(
     IReadOnlyList<DungeonPosition> WorkingCenters,
     IReadOnlyList<RoomConnection> Connections,
-    IReadOnlyList<TunnelBuildResult> Tunnels);
+    IReadOnlyList<TunnelBuildResult> Tunnels,
+    IReadOnlyList<DungeonPosition> EntranceDoorPositions,
+    IReadOnlyList<DungeonPosition> JunctionDoorPositions);
 
 public static class RoomConnectivityBuilder
 {
@@ -26,19 +28,32 @@ public static class RoomConnectivityBuilder
 
         if (centers.Count == 0)
         {
-            return new RoomConnectivityResult([], [], []);
+            return new RoomConnectivityResult([], [], [], [], []);
         }
 
         var connections = new List<RoomConnection>(centers.Count);
         var tunnels = new List<TunnelBuildResult>(centers.Count);
+        var entranceDoors = new List<DungeonPosition>();
         var previous = centers[^1];
         foreach (var center in centers)
         {
             connections.Add(new RoomConnection(center, previous));
-            tunnels.Add(DungeonTunnelBuilder.Build(grid, center, previous, randomSource));
+            var tunnel = DungeonTunnelBuilder.Build(grid, center, previous, randomSource);
+            tunnels.Add(tunnel);
+            entranceDoors.AddRange(DungeonTunnelDoorBuilder.PlaceEntranceDoors(grid, tunnel.PiercedWallPositions, randomSource));
             previous = center;
         }
 
-        return new RoomConnectivityResult(centers.AsReadOnly(), connections.AsReadOnly(), tunnels.AsReadOnly());
+        var junctionCandidates = tunnels
+            .SelectMany(tunnel => tunnel.DoorCandidatePositions)
+            .Take(DungeonTunnelBuilder.DoorCandidatePositionCapacity)
+            .ToArray();
+        var junctionDoors = DungeonTunnelDoorBuilder.PlaceJunctionDoors(grid, junctionCandidates, randomSource);
+        return new RoomConnectivityResult(
+            centers.AsReadOnly(),
+            connections.AsReadOnly(),
+            tunnels.AsReadOnly(),
+            entranceDoors.AsReadOnly(),
+            junctionDoors);
     }
 }

@@ -211,7 +211,7 @@ public sealed class RoomGeometryBuilderTests
     public void LargeRoom_Variant2_PreservesObjectStairBoundaryAndCounts()
     {
         var grid = new DungeonGrid();
-        var random = new ScriptedRandomSource(1, 2, 1, 1, 1, 0, 1, 7);
+        var random = new ScriptedRandomSource(1, 2, 1, 1, 7, 1, 0, 1);
         var result = RoomGeometryBuilder.TryBuildLarge(grid, new RoomBlockPosition(0, 0), 1, random);
 
         Assert.Equal(RoomContentAttemptKind.SpecialObject, result.Attempts[5].Kind);
@@ -219,10 +219,10 @@ public sealed class RoomGeometryBuilderTests
         Assert.Equal(3, result.Attempts.Count(attempt => attempt.Kind == RoomContentAttemptKind.Trap));
         Assert.DoesNotContain(result.Attempts, attempt => attempt.Kind == RoomContentAttemptKind.RandomStair);
         var lockedDoor = Assert.Single(result.Attempts.Where(attempt => attempt.Kind == RoomContentAttemptKind.LockedDoor));
-        Assert.Equal(DungeonGrid.ClosedDoorFeatureId, grid.GetFeatureId(lockedDoor.Origin));
-        Assert.Equal(new DoorState(DoorCondition.Locked, 7), grid.GetDoorState(lockedDoor.Origin));
+        Assert.Equal(RoomGeometryBuilder.InnerWallFeatureId, grid.GetFeatureId(lockedDoor.Origin));
+        Assert.Equal(new DoorState(DoorCondition.Locked, 7), lockedDoor.PreparedDoorState);
         Assert.Equal(
-            [(1, 26), (1, 6), (1, 5), (1, 5), (1, 4), (0, 100), (1, 4), (1, 8)],
+            [(1, 26), (1, 6), (1, 5), (1, 5), (1, 8), (1, 4), (0, 100), (1, 4)],
             random.Requests);
     }
 

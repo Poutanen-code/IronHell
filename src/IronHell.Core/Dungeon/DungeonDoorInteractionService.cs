@@ -19,8 +19,8 @@ public enum DoorInteractionResult
 
 public static class DungeonDoorInteractionService
 {
-    public const string OpenDoorFeatureId = "open_door";
-    public const string BrokenDoorFeatureId = "broken_door";
+    public const string OpenDoorFeatureId = DungeonGrid.OpenDoorFeatureId;
+    public const string BrokenDoorFeatureId = DungeonGrid.BrokenDoorFeatureId;
 
     public static DoorInteractionResult Open(
         DungeonGrid grid,

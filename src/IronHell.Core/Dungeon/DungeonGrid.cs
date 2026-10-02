@@ -41,6 +41,9 @@ public sealed class DungeonGrid
 {
     public const string GraniteWallBasicFeatureId = "granite_wall_basic";
     public const string ClosedDoorFeatureId = "door_closed_base";
+    public const string OpenDoorFeatureId = "open_door";
+    public const string BrokenDoorFeatureId = "broken_door";
+    public const string SecretDoorFeatureId = "secret_door";
     public const int DungeonWidth = 198;
     public const int DungeonHeight = 66;
     public const int BlockWidth = 11;
@@ -86,6 +89,10 @@ public sealed class DungeonGrid
     public static bool IsInBounds(DungeonPosition position) =>
         position.Row >= 0 && position.Row < Height &&
         position.Column >= 0 && position.Column < Width;
+
+    public static bool IsInInterior(DungeonPosition position) =>
+        position.Row > 0 && position.Row < Height - 1 &&
+        position.Column > 0 && position.Column < Width - 1;
 
     public DungeonCellStates GetCellFlags(DungeonPosition position)
     {

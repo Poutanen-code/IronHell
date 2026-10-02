@@ -23,6 +23,22 @@ public sealed class ConnectivityAndTunnelTests
     }
 
     [Fact]
+    public void TunnelBuilder_UsesSourceInteriorBounds()
+    {
+        var grid = new DungeonGrid();
+        grid.InitializeRock();
+        var random = new RepeatingRandomSource(99);
+
+        var result = DungeonTunnelBuilder.Build(grid, new DungeonPosition(10, 10), new DungeonPosition(0, 10), random);
+
+        Assert.False(result.Completed);
+        Assert.Empty(random.Requests);
+        Assert.Equal(DungeonGrid.GraniteWallBasicFeatureId, grid.GetFeatureId(new DungeonPosition(0, 10)));
+        Assert.True(DungeonGrid.IsInBounds(new DungeonPosition(0, 10)));
+        Assert.False(DungeonGrid.IsInInterior(new DungeonPosition(0, 10)));
+    }
+
+    [Fact]
     public void Connectivity_ZeroRoomCenters_DoesNothing()
     {
         var grid = new DungeonGrid();
@@ -151,6 +167,28 @@ public sealed class ConnectivityAndTunnelTests
 
         Assert.True(result.Completed);
         Assert.Equal(VaultRoomBuilder.PermanentInnerWallFeatureId, grid.GetFeatureId(new DungeonPosition(10, 11)));
+    }
+
+    [Fact]
+    public void TunnelBuilder_IterationGuard_MatchesSourcePostIncrementBoundary()
+    {
+        var grid = new DungeonGrid();
+        grid.InitializeRock();
+        grid.SetFeatureId(new DungeonPosition(10, 11), VaultRoomBuilder.PermanentInnerWallFeatureId);
+        var random = new RepeatingRandomSource(99);
+
+        var result = DungeonTunnelBuilder.Build(grid, new DungeonPosition(10, 10), new DungeonPosition(10, 12), random);
+
+        Assert.False(result.Completed);
+        Assert.Equal(DungeonTunnelBuilder.TunnelIterationLimit + 1, random.Requests.Count);
+    }
+
+    [Fact]
+    public void TunnelBuilder_BufferLimits_MatchVerifiedSourceCapacities()
+    {
+        Assert.Equal(1800, DungeonTunnelBuilder.TunnelPositionCapacity);
+        Assert.Equal(1000, DungeonTunnelBuilder.PiercedWallPositionCapacity);
+        Assert.Equal(400, DungeonTunnelBuilder.DoorCandidatePositionCapacity);
     }
 
     [Fact]

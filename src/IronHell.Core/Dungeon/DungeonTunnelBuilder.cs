@@ -14,6 +14,9 @@ public static class DungeonTunnelBuilder
     public const int RandomDirectionPercent = 10;
     public const int ExtraTunnelingPercent = 15;
     public const int TunnelIterationLimit = 2000;
+    public const int TunnelPositionCapacity = 1800;
+    public const int PiercedWallPositionCapacity = 1000;
+    public const int DoorCandidatePositionCapacity = 400;
 
     public static TunnelBuildResult Build(
         DungeonGrid grid,
@@ -23,9 +26,9 @@ public static class DungeonTunnelBuilder
     {
         ArgumentNullException.ThrowIfNull(grid);
         ArgumentNullException.ThrowIfNull(randomSource);
-        if (!DungeonGrid.IsInBounds(start) || !DungeonGrid.IsInBounds(target))
+        if (!DungeonGrid.IsInInterior(start) || !DungeonGrid.IsInInterior(target))
         {
-            throw new ArgumentOutOfRangeException(nameof(start));
+            return Empty(false);
         }
 
         if (!grid.IsRockInitialized)
@@ -60,7 +63,7 @@ public static class DungeonTunnelBuilder
             }
 
             var next = new DungeonPosition(row + rowDirection, column + columnDirection);
-            while (!DungeonGrid.IsInBounds(next))
+            while (!DungeonGrid.IsInInterior(next))
             {
                 CorrectDirection(ref rowDirection, ref columnDirection, row, column, target.Row, target.Column, randomSource);
                 TryRandomDirection(ref rowDirection, ref columnDirection, randomSource);
@@ -76,7 +79,7 @@ public static class DungeonTunnelBuilder
             if (featureId == RoomGeometryBuilder.OuterWallFeatureId)
             {
                 var beyond = new DungeonPosition(next.Row + rowDirection, next.Column + columnDirection);
-                if (!DungeonGrid.IsInBounds(beyond) ||
+                if (!DungeonGrid.IsInInterior(beyond) ||
                     grid.GetCellFlags(beyond).HasFlag(DungeonCellStates.TunnelSolid) ||
                     IsPermanent(grid.GetFeatureId(beyond)) ||
                     grid.GetFeatureId(beyond) == RoomGeometryBuilder.OuterWallFeatureId)
@@ -86,7 +89,11 @@ public static class DungeonTunnelBuilder
 
                 row = next.Row;
                 column = next.Column;
-                piercedWalls.Add(next);
+                if (piercedWalls.Count < PiercedWallPositionCapacity)
+                {
+                    piercedWalls.Add(next);
+                }
+
                 MarkAdjacentOuterWallsSolid(grid, next);
                 continue;
             }
@@ -102,7 +109,10 @@ public static class DungeonTunnelBuilder
             {
                 row = next.Row;
                 column = next.Column;
-                tunnelPositions.Add(next);
+                if (tunnelPositions.Count < TunnelPositionCapacity)
+                {
+                    tunnelPositions.Add(next);
+                }
                 doorFlag = false;
                 continue;
             }
@@ -111,7 +121,10 @@ public static class DungeonTunnelBuilder
             column = next.Column;
             if (!doorFlag)
             {
-                doorCandidates.Add(next);
+                if (doorCandidates.Count < DoorCandidatePositionCapacity)
+                {
+                    doorCandidates.Add(next);
+                }
                 doorFlag = true;
             }
 
