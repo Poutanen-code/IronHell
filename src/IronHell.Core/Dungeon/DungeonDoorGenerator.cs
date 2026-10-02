@@ -33,6 +33,20 @@ public static class DungeonDoorGenerator
         }
     }
 
+    public static bool TryDiscoverSecretDoor(DungeonGrid grid, DungeonPosition position, IRandomSource randomSource)
+    {
+        ArgumentNullException.ThrowIfNull(grid);
+        ArgumentNullException.ThrowIfNull(randomSource);
+
+        if (grid.GetFeatureId(position) != DungeonGrid.SecretDoorFeatureId)
+        {
+            return false;
+        }
+
+        PlaceRandomClosedDoor(grid, position, randomSource);
+        return true;
+    }
+
     public static void PlaceRandomClosedDoor(DungeonGrid grid, DungeonPosition position, IRandomSource randomSource)
     {
         ArgumentNullException.ThrowIfNull(grid);

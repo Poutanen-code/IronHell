@@ -127,6 +127,76 @@ public sealed class DungeonDoorGeneratorTests
     }
 
     [Fact]
+    public void TryDiscoverSecretDoor_ConvertsSecretDoorToRandomClosedDoorState()
+    {
+        var grid = new DungeonGrid();
+        var position = new DungeonPosition(10, 20);
+        var random = new ScriptedRandomSource(399, 7);
+
+        grid.SetFeatureId(position, DungeonGrid.SecretDoorFeatureId);
+
+        var discovered = DungeonDoorGenerator.TryDiscoverSecretDoor(grid, position, random);
+
+        Assert.True(discovered);
+        Assert.Equal(DungeonGrid.ClosedDoorFeatureId, grid.GetFeatureId(position));
+        Assert.Equal(new DoorState(DoorCondition.Stuck, 7), grid.GetDoorState(position));
+        Assert.Equal([(0, 400), (0, 8)], random.Requests);
+    }
+
+    [Theory]
+    [InlineData(0, DoorCondition.Closed, 0)]
+    [InlineData(299, DoorCondition.Closed, 0)]
+    [InlineData(300, DoorCondition.Locked, 1)]
+    [InlineData(398, DoorCondition.Locked, 7)]
+    [InlineData(399, DoorCondition.Stuck, 0)]
+    [InlineData(399, DoorCondition.Stuck, 7)]
+    public void TryDiscoverSecretDoor_UsesOrdinaryClosedDoorDistributionBoundaries(int conditionRoll, DoorCondition expectedCondition, int expectedPower)
+    {
+        var grid = new DungeonGrid();
+        var position = new DungeonPosition(10, 20);
+        var random = expectedCondition == DoorCondition.Closed
+            ? new ScriptedRandomSource(conditionRoll)
+            : new ScriptedRandomSource(conditionRoll, expectedPower);
+
+        grid.SetFeatureId(position, DungeonGrid.SecretDoorFeatureId);
+
+        var discovered = DungeonDoorGenerator.TryDiscoverSecretDoor(grid, position, random);
+
+        Assert.True(discovered);
+        Assert.Equal(DungeonGrid.ClosedDoorFeatureId, grid.GetFeatureId(position));
+        Assert.Equal(new DoorState(expectedCondition, expectedPower), grid.GetDoorState(position));
+
+        if (expectedCondition == DoorCondition.Closed)
+        {
+            Assert.Equal([(0, 400)], random.Requests);
+        }
+        else
+        {
+            Assert.Equal([(0, 400), expectedCondition == DoorCondition.Locked ? (1, 8) : (0, 8)], random.Requests);
+        }
+    }
+
+    [Theory]
+    [InlineData(RoomGeometryBuilder.OpenFloorFeatureId)]
+    [InlineData(DungeonGrid.GraniteWallBasicFeatureId)]
+    [InlineData(DungeonGrid.OpenDoorFeatureId)]
+    [InlineData(DungeonGrid.ClosedDoorFeatureId)]
+    public void TryDiscoverSecretDoor_IgnoresNonSecretFeaturesWithoutMutatingState(string featureId)
+    {
+        var grid = new DungeonGrid();
+        var position = new DungeonPosition(10, 20);
+        var random = new ScriptedRandomSource();
+
+        grid.SetFeatureId(position, featureId);
+
+        var discovered = DungeonDoorGenerator.TryDiscoverSecretDoor(grid, position, random);
+
+        Assert.False(discovered);
+        Assert.Equal(featureId, grid.GetFeatureId(position));
+        Assert.Empty(random.Requests);
+    }
+
+    [Fact]
     public void PlaceRandomClosedDoor_ReplaysIdenticallyForSeed()
     {
         const int seed = 731942;
