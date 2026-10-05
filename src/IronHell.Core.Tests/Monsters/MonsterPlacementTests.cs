@@ -187,6 +187,148 @@ public sealed class MonsterPlacementTests
         Assert.Equal([(0, 37500)], random.Requests);
     }
 
+    [Fact]
+    public void Place_SlpFalseLeavesSleepDurationAtDefaultWithoutSleepDraw()
+    {
+        var random = new ScriptedRandomSource(42);
+        var definition = CreateMonster("alert_monster", options: new SpawnFixtureOptions(Alertness: 40));
+
+        var result = MonsterPlacementService.Place(
+            new MonsterRuntimeState(),
+            definition,
+            new MonsterPosition(1, 1),
+            random,
+            slp: false);
+
+        Assert.True(result.Success);
+        Assert.Equal(0, result.Monster?.SpawnState.SleepDuration);
+        Assert.Equal(42, result.Monster?.SpawnState.Energy);
+        Assert.Equal([(0, 37500)], random.Requests);
+    }
+
+    [Fact]
+    public void Place_SlpTrueWithZeroSleepStrengthLeavesDurationAtDefaultWithoutSleepDraw()
+    {
+        var random = new ScriptedRandomSource(42);
+        var definition = CreateMonster("no_sleep_strength");
+
+        var result = MonsterPlacementService.Place(
+            new MonsterRuntimeState(),
+            definition,
+            new MonsterPosition(1, 1),
+            random,
+            slp: true);
+
+        Assert.True(result.Success);
+        Assert.Equal(0, result.Monster?.SpawnState.SleepDuration);
+        Assert.Equal([(0, 37500)], random.Requests);
+    }
+
+    [Fact]
+    public void Place_SlpTrueInitializesDurationAfterHpSpeedEnergyAndForceSleep()
+    {
+        var state = new MonsterRuntimeState();
+        var definition = CreateMonster(
+            "sleeping_force_sleep",
+            hpDiceCount: 2,
+            hpDiceSides: 6,
+            options: new SpawnFixtureOptions(MovementSpeed: 120, ForceSleep: true, Alertness: 40));
+        var random = new ScriptedRandomSource(3, 6, 1, 7000, 467, 19);
+
+        var result = MonsterPlacementService.Place(
+            state,
+            definition,
+            new MonsterPosition(2, 3),
+            random,
+            slp: true);
+
+        Assert.True(result.Success);
+        Assert.Equal(9, result.Monster?.SpawnState.MaxHp);
+        Assert.Equal(121, result.Monster?.SpawnState.MovementSpeed);
+        Assert.Equal(467, result.Monster?.SpawnState.Energy);
+        Assert.Equal(99, result.Monster?.SpawnState.SleepDuration);
+        Assert.Equal([(1, 7), (1, 7), (-2, 3), (0, 37500), (0, 2343), (1, 401)], random.Requests);
+        Assert.True(state.Contains(result.Monster!));
+    }
+
+    [Fact]
+    public void Place_FailedSpawnInitializationDoesNotRegisterRuntimeMonster()
+    {
+        var state = new MonsterRuntimeState();
+        var definition = CreateMonster(
+            "incomplete_spawn_rng",
+            hpDiceCount: 2,
+            hpDiceSides: 6,
+            options: new SpawnFixtureOptions(Alertness: 40));
+        var random = new ScriptedRandomSource(3);
+
+        Assert.Throws<InvalidOperationException>(() => MonsterPlacementService.Place(
+            state,
+            definition,
+            new MonsterPosition(1, 1),
+            random,
+            slp: true));
+
+        Assert.Empty(state.Monsters);
+        Assert.False(state.IsOccupied(new MonsterPosition(1, 1)));
+    }
+
+    [Fact]
+    public void Place_SleepStateReplaysDeterministically()
+    {
+        var first = MonsterPlacementService.Place(
+            new MonsterRuntimeState(),
+            CreateMonster("sleeping", options: new SpawnFixtureOptions(Alertness: 12)),
+            new MonsterPosition(1, 1),
+            new SeededRandomSource(12345),
+            slp: true);
+        var second = MonsterPlacementService.Place(
+            new MonsterRuntimeState(),
+            CreateMonster("sleeping", options: new SpawnFixtureOptions(Alertness: 12)),
+            new MonsterPosition(1, 1),
+            new SeededRandomSource(12345),
+            slp: true);
+
+        Assert.Equal(first.Monster, second.Monster);
+    }
+
+    [Theory]
+    [InlineData(1)]
+    [InlineData(199)]
+    public void Place_AcceptsSourceMovementSpeedBoundaries(int movementSpeed)
+    {
+        var random = new ScriptedRandomSource(0, 42);
+        var definition = CreateMonster("speed_boundary", options: new SpawnFixtureOptions(MovementSpeed: movementSpeed));
+
+        var result = MonsterPlacementService.Place(
+            new MonsterRuntimeState(),
+            definition,
+            new MonsterPosition(1, 1),
+            random);
+
+        Assert.True(result.Success);
+        Assert.Equal(movementSpeed, result.Monster?.SpawnState.MovementSpeed);
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(200)]
+    public void Place_RejectsMovementSpeedOutsideSourceTableDomain(int movementSpeed)
+    {
+        var state = new MonsterRuntimeState();
+        var random = new ScriptedRandomSource();
+        var definition = CreateMonster("invalid_speed", options: new SpawnFixtureOptions(MovementSpeed: movementSpeed));
+
+        Assert.Throws<InvalidOperationException>(() => MonsterPlacementService.Place(
+            state,
+            definition,
+            new MonsterPosition(1, 1),
+            random));
+
+        Assert.Empty(state.Monsters);
+        Assert.Empty(random.Requests);
+    }
+
     [Theory]
     [InlineData(90, 0)]
     [InlineData(100, 0)]
@@ -280,7 +422,7 @@ public sealed class MonsterPlacementTests
             new MonsterAiDefinition("wanderer", 0, false, false),
             [],
             [],
-            new MonsterSensesDefinition(0, MonsterTelepathyProfile.Normal),
+            new MonsterSensesDefinition(options.Alertness, MonsterTelepathyProfile.Normal),
             new SpawnPolicy(options.Unique, false, options.ForceDepth, options.ForceMaxHp, options.ForceSleep, false, false, false, false),
             null,
             NativeLevel: options.NativeLevel,
@@ -294,7 +436,8 @@ public sealed class MonsterPlacementTests
         bool ForceMaxHp = false,
         bool ForceSleep = false,
         bool ForceDepth = false,
-        int NativeLevel = 1);
+        int NativeLevel = 1,
+        int Alertness = 0);
 
     private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
     {

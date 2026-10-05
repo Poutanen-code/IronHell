@@ -29,7 +29,8 @@ public static class MonsterPlacementService
         MonsterPosition position,
         IRandomSource randomSource,
         MonsterPlacementSpace? space = null,
-        int? depth = null)
+        int? depth = null,
+        bool slp = false)
     {
         ArgumentNullException.ThrowIfNull(state);
         ArgumentNullException.ThrowIfNull(definition);
@@ -80,7 +81,7 @@ public static class MonsterPlacementService
                 MonsterPlacementFailureReason.ForceDepth);
         }
 
-        var spawnState = InitializeSpawnState(definition, randomSource);
+        var spawnState = InitializeSpawnState(definition, randomSource, slp);
         var monster = state.Register(definition.Id, position, spawnState);
         return new MonsterPlacementResult(
             Success: true,
@@ -90,7 +91,8 @@ public static class MonsterPlacementService
 
     private static MonsterSpawnState InitializeSpawnState(
         MonsterDefinition definition,
-        IRandomSource randomSource)
+        IRandomSource randomSource,
+        bool slp)
     {
         var hpRoll = definition.HpRoll;
         if (hpRoll.Kind != "dice" || hpRoll.Count <= 0 || hpRoll.Sides <= 0)
@@ -99,7 +101,7 @@ public static class MonsterPlacementService
         }
 
         if (definition.MovementSpeed is not { } baseSpeed ||
-            baseSpeed < 0 || baseSpeed >= ExtractEnergyTableLength)
+            baseSpeed < 1 || baseSpeed >= ExtractEnergyTableLength)
         {
             throw new InvalidOperationException($"Monster '{definition.Id}' has no valid source movement speed.");
         }
@@ -123,7 +125,14 @@ public static class MonsterPlacementService
             energy = randomSource.Next(0, LevelSpeedAtTown >> 4);
         }
 
-        return new MonsterSpawnState(maxHp, maxHp, movementSpeed, energy);
+        var sleepDuration = 0;
+        var sleepStrength = definition.Senses.Alertness;
+        if (slp && sleepStrength > 0)
+        {
+            sleepDuration = (sleepStrength * 2) + randomSource.Next(1, (sleepStrength * 10) + 1);
+        }
+
+        return new MonsterSpawnState(maxHp, maxHp, movementSpeed, energy, sleepDuration);
     }
 
     // Source Rand_div returns zero without advancing RNG when the divisor is one.

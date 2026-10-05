@@ -12,7 +12,8 @@ public sealed record MonsterSpawnState(
     int MaxHp,
     int CurrentHp,
     int MovementSpeed,
-    int Energy);
+    int Energy,
+    int SleepDuration);
 
 public sealed class MonsterRuntimeState
 {

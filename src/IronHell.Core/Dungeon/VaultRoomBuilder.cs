@@ -104,23 +104,23 @@ public static class VaultRoomBuilder
                 switch (definition.Layout[row][column])
                 {
                     case '&':
-                        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.Monster, position, GenerationDepthOffset: 5, Special: true));
+                        attempts.Add(CreateMonsterAttempt(position, 5));
                         break;
                     case '@':
-                        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.Monster, position, GenerationDepthOffset: 11, Special: true));
+                        attempts.Add(CreateMonsterAttempt(position, 11));
                         break;
                     case '9':
-                        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.Monster, position, GenerationDepthOffset: 9, Special: true));
+                        attempts.Add(CreateMonsterAttempt(position, 9));
                         attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.SpecialObject, position, GenerationDepthOffset: 7, Special: true));
                         break;
                     case '8':
-                        attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.Monster, position, GenerationDepthOffset: 40, Special: true));
+                        attempts.Add(CreateMonsterAttempt(position, 40));
                         attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.SpecialObject, position, GenerationDepthOffset: 20, Special: true));
                         break;
                     case ',':
                         if (randomSource.Next(0, 100) < 50)
                         {
-                            attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.Monster, position, GenerationDepthOffset: 3, Special: true));
+                            attempts.Add(CreateMonsterAttempt(position, 3));
                         }
 
                         if (randomSource.Next(0, 100) < 50)
@@ -132,6 +132,16 @@ public static class VaultRoomBuilder
             }
         }
     }
+
+    private static RoomContentAttempt CreateMonsterAttempt(DungeonPosition position, int depthOffset) =>
+        new(
+            RoomContentAttemptKind.Monster,
+            position,
+            GenerationDepthOffset: depthOffset,
+            Special: true,
+            AllowGroupExpansion: true,
+            MonsterSource: RoomMonsterAttemptSource.VaultGlyph,
+            SleepOnSpawn: true);
 
     private static int TypeFor(RoomFamily family) => family switch
     {

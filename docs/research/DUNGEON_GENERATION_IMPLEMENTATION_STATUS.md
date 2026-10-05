@@ -14,7 +14,7 @@ The requested `DUNGEON_GENERATION_COMPENDIUM.md` is not present in the current c
 
 ### Current milestone
 
-**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Placement Foundations**
+**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Spawn-State Foundations**
 
 IronHell can now execute this bounded path in Core:
 
@@ -30,7 +30,7 @@ MonsterDefinition
     -> escort filtering, selection, and placement
 ```
 
-The current implementation is deterministic, Godot-independent, and tested through Core xUnit tests. It is not a complete dungeon generator. The verified 50-attempt dispatcher orchestrates all eight room families, room centers connect through the bounded source-style tunnel foundation, and tunnel/room/vault doors execute. Global stairs and room `RandomStair` requests execute for the represented scope; prepared nest/pit monsters now place at their recorded coordinates. Ordinary/vault monster content, objects, gold, artifacts, traps, and dungeon lifecycle behavior remain incomplete.
+The current implementation is deterministic, Godot-independent, and tested through Core xUnit tests. It is not a complete dungeon generator. The verified 50-attempt dispatcher orchestrates all eight room families, room centers connect through the bounded source-style tunnel foundation, and tunnel/room/vault doors execute. Global stairs and room `RandomStair` requests execute for the represented scope; prepared nest/pit monsters place at their recorded coordinates and initialize represented spawn state. Ordinary/vault monster content, mimic state, objects, gold, artifacts, traps, and dungeon lifecycle behavior remain incomplete.
 
 Completed foundation areas are REPO-CONFIRMED:
 
@@ -52,6 +52,8 @@ Completed foundation areas are REPO-CONFIRMED:
 - pit family selection, dragon mask selection, 16-candidate preparation, sorting, and tier extraction.
 - nest and pit candidate preparation remains authoritative and is now consumed by spatial room builders.
 - prepared nest/pit monster attempts flow from spatial builders into exact-position runtime placement with occupancy and group expansion suppressed.
+- deferred monster requests now identify prepared nest/pit, ordinary `vault_monsters`, and direct vault-glyph producers, with explicit sleep intent; only prepared nest/pit requests execute.
+- successful placement initializes source-ordered HP, movement-speed variance, energy, and represented conditional sleep state only after legality checks.
 - authoritative 198x66 dungeon grid, 11x11 room blocks, atomic reservation, cell flags, and room centers;
 - type-3 cross and type-4 large room geometry, all verified internal variants, and ordered deferred room-content attempts.
 - source-order 50-attempt room dispatcher for all simple, overlapping, cross, large, nest, pit, and vault builders.
@@ -283,11 +285,54 @@ Stair legality remains partial: nest/pit monster occupancy is now authoritative 
 - **Coordinate bridge:** `DungeonPosition.Row -> MonsterPosition.Y`; `DungeonPosition.Column -> MonsterPosition.X`, through `RoomMonsterAttemptExecutor.ToMonsterPosition`.
 - **Placement legality:** the executor requires represented `open_floor`; `MonsterPlacementService` retains placement-space bounds/static illegality, occupied-position, unique-capacity, and actual-depth `ForceDepth` rejection. Source player/level unique checks and object occupancy are unavailable. Room flags are preserved, not used as a source placement predicate; positive-depth nest/pit placement does not reject `Icky`.
 - **Group behavior:** the supported request contract requires `AllowGroupExpansion = false`. The executor calls neither FRIENDS expansion nor escort placement, regardless of definition flags.
-- **RNG:** prepared identity and position consume zero allocation/OOD/selection RNG; the executor has no RNG parameter. Narrow source inspection found `place_monster_one` does consume runtime-state RNG for HP, speed variance, and energy (plus conditional force-sleep/mimic behavior). Those values are not represented by current `MonsterDefinition`/`MonsterRuntimeInstance` fields, so IronHell does not consume those source spawn-state draws yet; complete stream parity remains partial.
+- **RNG at the 6A checkpoint:** prepared identity and position consume zero allocation/OOD/selection RNG. Source successful-placement state RNG was deferred to Slice 6B; it is now integrated at `MonsterPlacementService`.
 - **Upstream geometry correction:** source `place_double_wall` places inner walls one cell outside the requested nest/pit region. `WriteDoubleRectangle` had placed them on the requested perimeter, making 44 nest and pit targets wall terrain. The shared border offset now matches source and a regression verifies all prepared targets are room floor.
 - **Stair follow-up:** `MonsterRuntimeState` now contains authoritative occupancy for successfully placed nest/pit monsters, providing a concrete future input for stair legality. `DungeonStairAllocator` was not changed and does not yet consult this occupancy; object occupancy and level-entry coordinates remain gaps.
 - **Narrow research:** `generate.c::build_type5`, `build_type6`, `place_double_room`, `place_double_wall`, and `place_wall`; `monster2.c::place_monster_aux` and `place_monster_one`; `mdefines.h::cave_empty_bold`.
-- **Status:** bounded exact prepared placement is implemented. DG-MON-004/005 remain partial; DG-RNG-001 remains partial.
+- **Status at the 6A checkpoint:** bounded exact prepared placement was implemented. DG-MON-004/005 remained partial; DG-RNG-001 remained partial.
+
+### Slice 6B — Monster spawn-state RNG foundation
+
+- **Outcome:** successful placements now create immutable `MonsterSpawnState` containing max/current HP, final movement speed, and starting energy inside `MonsterRuntimeInstance`. `MonsterPlacementService` consumes the existing injected RNG only after bounds, terrain/static legality, occupancy, uniqueness, and actual-depth ForceDepth checks succeed.
+- **Inputs:** `MonsterDefinition.HpRoll`, `SpawnPolicy.ForceMaxHp`, `SpawnPolicy.ForceSleep`, `SpawnPolicy.Unique`, and existing JSON `stats.movement_speed` are used. Movement speed is now mapped by `MonsterDefinitionReader`; its existing schema field is tightened to indexes 1..199. No definition data values or dependencies changed.
+- **RNG order:** non-ForceMaxHp HP uses `damroll`, one `Next(1,sides+1)` per die when `sides > 1`; `Rand_div(1)` consumes no draw. ForceMaxHp uses `count * sides` without HP RNG. Non-unique monsters then use `Next(-variance, variance + 1)` only when the reduced source `extract_energy[speed]` variance is positive. Every successful spawn draws `Next(0,37500)` energy; ForceSleep then draws `Next(0,2343)` and replaces that value.
+- **Speed variance:** exact integer source reductions are speed `<110:0`, `110..119:1`, `120..129:2`, `130..143:3`, and `144..199:4`. Unique monsters skip the speed draw.
+- **Failure atomicity:** illegal/out-of-bounds, occupied, unique-capacity, and ForceDepth failures consume zero spawn RNG, allocate no runtime ID, and do not mutate occupancy. Spawn initialization completes before runtime registration.
+- **6A integration:** `RoomMonsterAttemptExecutor` passes the same injected stream to placement. Prepared DefinitionId, position, request order, no-relocation behavior, and `AllowGroupExpansion = false` remain unchanged; successful 1d1 nest/pit placements consume one energy draw each and no HP draw.
+- **Mimics:** source `RF1_CHAR_MULTI` and `rand_mimic_kind`/`rand_tval_kind` state are not represented by current `MonsterDefinition` or `MonsterRuntimeInstance`. Mimic eligibility/target selection and its conditional draw remain unimplemented; no condition is inferred from IDs or symbols.
+- **Sleeping duration:** source initializes `csleep = 0`, then consumes `randint1(sleep * 10)` only when the caller passes `slp = true` and the race has sleep strength. Prepared nest/pit placement passes `slp = false`; the current placement API does not represent this caller flag or sleep strength, so that conditional branch remains unsupported.
+- **Narrow research:** `monster2.c::place_monster_one`; `tables.c::extract_energy` and `level_speeds`; `xtra2.c::level_speed`; `common/z-rand.c::Rand_div`, `damroll`, `maxroll`; `common/z-rand.h::rand_spread`; `monster1.c::rand_mimic_kind`; `object2.c::rand_tval_kind`.
+- **Status:** PARTIAL. DG-RNG-001 remains partial because mimic state, slp-driven sleep duration, and whole-generation replay remain; DG-MON-004/005 remain partial.
+
+### Slice 6C — Conditional monster spawn-state completion
+
+- **Outcome:** implemented caller-controlled sleep-duration initialization and made Core movement-speed validation intentionally match the existing 1..199 monster schema. Mimic state remains explicitly blocked by incomplete, unordered object-kind representation and absent monster mimic-flag data.
+- **Sleep input:** `MonsterDefinition.Senses.Alertness` carries the source monster `I:` line's final value; `MonsterDefinitionReader` maps it without transformation, and the reference parser stores that value as `monster_race.sleep`. `MonsterPlacementService.Place` now accepts explicit `slp` intent, defaulting to `false`; `SpawnPolicy.ForceSleep` remains exclusively the energy override.
+- **Sleep state:** `MonsterSpawnState.SleepDuration` starts at zero. Only `slp == true && sleepStrength > 0` consumes `Next(1, sleepStrength * 10 + 1)` and sets `2 * sleepStrength + roll`, matching `csleep = (sleep * 2) + randint1(sleep * 10)`. Zero strength and `slp == false` consume no sleep-duration RNG.
+- **Caller semantics:** source `place_monster_aux` propagates its `slp` argument through FRIENDS and escorts. Current source dungeon/nest/pit placement call sites pass `FALSE`; IronHell's existing placement consumers omit the new optional argument and therefore retain `slp = false`.
+- **Movement speed:** source `extract_energy` has 200 indexes (0..199), but that is not evidence that speed zero is a valid race definition. All 616 source monster definitions use 90..140; zero is absent. The monster schema already requires 1..199, so Core now rejects 0 and 200 while accepting 1 and 199. No schema or content change was needed.
+- **Mimic blocker:** source `RF1_CHAR_MULTI` appears on four races, and `rand_mimic_kind` dispatches by source display character to scroll, potion, ring, or chest kinds. Source `rand_tval_kind` selects from the `k_info` array in source order. Current IronHell catalogs contain 45 scrolls, 46 potions, 32 rings, and 7 chests versus source counts of 45, 54, 38, and 7; potion and ring candidates are missing, and current definitions do not retain global `k_info` ordering or `RF1_CHAR_MULTI`. Eligibility is not inferred from symbol/name/ID. Exact selection remains blocked rather than substituted.
+- **Mimic RNG impact:** each of the four source tval buckets has more than one candidate, so an eligible source mimic consumes one `randint0(candidateCount)` draw after ForceSleep energy initialization and before sleep initialization. Source returns kind 0 without a draw for unsupported characters or an empty candidate bucket; those cases are not present in the four current source mimic buckets. IronHell currently consumes no mimic draw; this advances later RNG differently for those races. No dummy draw is added.
+- **Represented successful-placement call order:** HP (ForceMaxHp skips the roll; one-sided dice consume no draw), non-unique speed variance (only when positive), normal energy, ForceSleep energy override (conditional), mimic selection (conditional source branch currently unsupported and skipped), then `csleep = 0`, followed by conditional sleep duration (`slp && sleepStrength > 0`). Placement rejection consumes no spawn-state RNG; registration follows complete represented initialization.
+- **Implementation:** `MonsterPlacementService` remains the sole successful-placement initialization boundary; one injected RNG is used, runtime state is immutable, and failed initialization does not register occupancy or allocate an instance ID.
+- **Tests:** deterministic coverage added for `slp=false`, zero-strength `slp=true`, positive-strength range/value/order, replay, initialization atomicity, and speed boundaries. Data schema regression rejects both speed 0 and 200. Existing ordinary population, FRIENDS, escorts, and nest/pit callers retain the same placement boundary.
+- **Traceability:** DG-RNG-001 advances for represented spawn state; DG-MON-004/005, DG-GROUP-001/002, and DG-NEST-001/002 / DG-PIT-001/002 retain their existing partial/satisfied classifications and shared placement boundary.
+- **Status:** PARTIAL. Sleep-duration initialization and the Core/schema movement-speed boundary are implemented. Mimic state/RNG and whole-generation replay remain incomplete; DG-MON-004/005 remain partial.
+
+### Slice 7A — Ordinary/vault monster execution boundary
+
+- **Outcome:** PARTIAL. Source producers are classified and their execution contract is documented, but no ordinary-room or vault runtime path is enabled. Current request scheduling, local LOS, escort scatter, and per-player unique state are required to preserve behavior; approximating them would change placements or RNG.
+- **Producer classification:** `RoomMonsterAttemptSource.PreparedNestPit` identifies exact prepared IDs/positions with `grp=false, slp=false`; `OrdinaryRoomVaultMonsters` identifies ordinary type-3/type-4 helper requests; `VaultGlyph` identifies exact-coordinate vault glyph requests. `RoomMonsterAttemptExecutor` still executes only prepared nest/pit requests and returns unsupported requests in original order.
+- **MANGBAND-VERIFIED ordinary helper:** all current type-3/type-4 ordinary monster producers call `generate.c::vault_monsters(Depth,y,x,num)`. The room-specific caller rolls `num`; helper order is one loop per requested count, then nine location attempts per count. Each attempt calls `scatter(Depth,...,d=1,m=0)`, which draws row then column with `rand_spread(center,1)` (`randint0(3)` each), repeating without a fixed limit until `in_bounds` and LOS pass. It then checks `cave_empty_bold`; occupied/non-floor candidates skip allocation. For each accepted floor candidate it temporarily sets `monster_level = Depth + 2`, calls `place_monster(Depth,y,x,TRUE,TRUE)`, restores `monster_level`, and continues even after successful placement. Failed allocation or placement does not select another race at that coordinate; the next scatter iteration proceeds.
+- **Ordinary count/order:** type-3 variant 2 requests `randint0(2)+3` at center after the special object and before traps. Type-4 variant 1 requests 1 at center; variant 2 requests `randint1(3)+2` at center; variant 3 makes independent `randint1(2)` left/right requests; variant 4 makes independent `randint1(3)` left/right requests; variant 5 makes four independent `randint1(4)` requests after its object helper. Each count draw occurs at its source call site, before that helper's monster attempts.
+- **MANGBAND-VERIFIED vault glyphs:** `generate.c::build_vault` first processes terrain and `*`, `+`, `^` effects row-major, then performs a second row-major content pass. `&`, `@`, `9`, `8`, and a successful `,` monster branch call `place_monster` exactly at the glyph coordinate with `slp=TRUE, grp=TRUE`, at `Depth+5`, `+11`, `+9`, `+40`, and `+3` respectively. `9` and `8` then place their object at the same coordinate; `,` performs its object 50% roll after its monster attempt. Monster selection is one `get_mon_num(monster_level)` call before placement validation; failure does not reselect at that coordinate.
+- **RNG contract:** `place_monster` invokes `get_mon_num` only after the source helper has selected a legal scatter coordinate, or immediately for a vault glyph. `get_mon_num` consumes the existing two OOD rolls, weighted selection, one comparison-control roll, and conditional comparison picks. Successful `place_monster_aux` then performs shared placement spawn RNG followed by FRIENDS and escort behavior because all these callers pass `grp=TRUE`; failed placement consumes allocation RNG but no spawn RNG. `vault_monsters` continues through all nine iterations after success. Vault comma's 50% monster roll precedes its monster allocation, then the 50% object roll. All calls share the generation stream.
+- **REPO-CONFIRMED API change:** `RoomContentAttempt` now carries explicit producer classification and `SleepOnSpawn`; ordinary requests are tagged as `OrdinaryRoomVaultMonsters` with depth offset 2, radius 1x1, `grp=true`, `slp=true`; vault glyphs are tagged `VaultGlyph` with exact origin, glyph depth offset, `grp=true`, `slp=true`; prepared nest/pit requests are tagged `PreparedNestPit`, `grp=false`, `slp=false`. These are metadata only, not successful execution claims.
+- **Execution blockers:** ordinary helpers require source LOS and scatter retry order, which `DungeonGrid` does not model; reusing proposed `MonsterLocationSearch` would be wrong. Room/vault builders currently finish later geometry and consume its RNG before deferred monster allocation, while source calls execute inline; the vault comma object roll would therefore move before its monster selection. All supported calls use `grp=true`; FRIENDS is represented, but escorts require source LOS scatter. Unique placement also calls `allow_unique_level`, which depends on per-player killed-unique history absent from Core. A selected unique may therefore need rejection after allocation, changing runtime result and whether spawn RNG runs. No request subset is safely executable with current state and ordering.
+- **Predicate note:** source `cave_empty_bold` in the inspected build checks floor terrain and absence of a monster; despite its comment, that macro does not check object or player occupancy. The distinct missing legality inputs for this path are LOS and per-player unique eligibility.
+- **Tests:** producer tests verify all three classifications, depth/origin/group/sleep metadata, prepared nest/pit behavior, and preservation of unsupported requests. Focused room, vault, special-builder, and executor regressions pass.
+- **Traceability:** DG-MON-002/003 selection primitives exist but are not wired into room/vault execution; DG-MON-004/005 remain PARTIAL; DG-GROUP-001 remains SATISFIED and is not changed; DG-GROUP-002 remains PARTIAL due LOS; DG-VAULT-001/002 remain satisfied for represented build/request production, with monster execution partial; DG-ROOM-005/006/009/010 remain satisfied for geometry/request production, not downstream monster effects; DG-RNG-001 remains PARTIAL.
+- **Status:** PARTIAL. The verified execution boundary is explicit; ordinary/vault monsters remain deferred until the blockers above are represented without RNG reordering.
 
 ## 3. Current Monster Generation Architecture
 
@@ -319,7 +364,7 @@ MonsterDefinition catalog
     -> MonsterNestPreparationResult
 ```
 
-The nest branch produces candidate definition IDs for the spatial builder. Those prepared IDs and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement; placement failures do not trigger selection or relocation.
+The nest branch produces candidate definition IDs for the spatial builder. Those prepared IDs and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement and represented spawn-state initialization; placement failures do not trigger selection or relocation.
 
 Pit preparation is a parallel pre-spatial branch:
 
@@ -335,7 +380,7 @@ MonsterDefinition catalog
     -> MonsterPitPreparationResult
 ```
 
-The pit preparation branch produces candidate identities and tiers; the spatial builder's prepared identities and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement.
+The pit preparation branch produces candidate identities and tiers; the spatial builder's prepared identities and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement and represented spawn-state initialization.
 
 Dungeon spatial foundation is now a separate authoritative Core branch:
 
@@ -374,12 +419,12 @@ RoomGeometryBuilder
     -> ordinary/vault Monster and trap/object/object-gold/special-object requests remain deferred
 ```
 
-`RoomContentAttempt` preserves verified request kind, source position/context, order, stable `DefinitionId`, explicit group-expansion intent, and prepared door/stair decisions where source RNG occurs at request creation. Door, stair, and prepared-monster executors return handled attempts separately from remaining content. `MonsterRuntimeState` owns occupancy for successfully placed monsters; object occupancy and full source terrain semantics are not modeled.
+`RoomContentAttempt` preserves request kind, source position/context, order, stable `DefinitionId`, explicit group-expansion intent, prepared door/stair decisions, and now explicit monster producer/sleep metadata. Door, stair, and prepared nest/pit monster executors return handled attempts separately from remaining content. Ordinary-room helper and vault-glyph monster requests are classified but remain deferred because source LOS, per-player unique state, and inline RNG ordering are not represented.
 
 Definitions and runtime instances remain separate:
 
-- `MonsterDefinition` is static content, including `Id`, `Symbol`, `NativeLevel`, `Rarity`, and `SpawnPolicy`.
-- `MonsterRuntimeInstance` is minimal runtime identity: instance ID, definition ID, and position.
+- `MonsterDefinition` is static content, including `Id`, `Symbol`, `NativeLevel`, `Rarity`, `MovementSpeed`, and `SpawnPolicy`.
+- `MonsterRuntimeInstance` owns runtime identity, position, and an immutable `MonsterSpawnState` (max/current HP, final speed, energy, and sleep duration).
 - `MonsterRuntimeState` owns runtime instances, occupancy, deterministic IDs, and represented unique presence.
 - `MonsterPlacementSpace` owns current finite bounds and explicit static illegal cells.
 - `MonsterPlacementService` validates and atomically commits one explicit placement.
@@ -413,7 +458,7 @@ Important current consumers:
 - type-4 rooms: fixed outer offsets, lighting `Next(1,26)`, variant `Next(1,6)`, then variant-specific door/count/nested rolls in source order. The object/stair branch uses `Next(0,100)` with `< 80` selecting special object and the remainder selecting random stair.
 - room `RandomStair`: the selected branch prepares depth/quest direction immediately; ordinary positive non-quest depths consume `Next(0,100)` (`< 50` down, otherwise up) before the subsequent trap-count roll. The attempt stores the prepared feature and execution does not reroll.
 - global stairs: `Next(3,5)` down count, then per candidate `Next(0,66)` row and `Next(0,198)` column, then `Next(1,3)` up count and its candidates. Each stair relaxes the cardinal-wall requirement after 3,001 rejected candidates; the source loop has no terminal retry limit.
-- prepared nest/pit monster execution: zero allocation/OOD/selection RNG; `RoomMonsterAttemptExecutor` accepts no random source. Source `place_monster_one` separately rolls runtime HP (`damroll` unless force-max-HP), possible speed variance, and starting energy, plus conditional force-sleep/mimic state. These runtime fields/rolls are not represented and are an explicit RNG parity gap.
+- successful placement spawn state: after all represented placement checks, HP uses `RollDice(count,sides)` only when not ForceMaxHp and `sides > 1`; ForceMaxHp calculates `count * sides`, and source `Rand_div(1)` consumes no draw. Non-unique speed variance uses `Next(-i,i+1)` when reduced `extract_energy[speed]` variance `i > 0`. Every successful placement consumes `Next(0,37500)` for energy; ForceSleep then consumes `Next(0,2343)` and overrides it. Mimic selection remains unrepresented and consumes no mimic draw in IronHell. After that source branch, sleep starts at zero; only explicit `slp=true` and positive source sleep strength consumes `Next(1,sleepStrength*10+1)` and stores `2*sleepStrength + roll`.
 - deferred content attempts retain source helper origins/radii and counts without executing downstream helper RNG or placement.
 - room dispatch: each attempt consumes `Next(0,6)` for row, `Next(0,18)` for column, then `Next(0,200)` for unusual; unusual attempts consume `Next(0,100)` for the family roll and a conditional second `Next(0,200)` for very-unusual selection. Builder RNG remains delegated after footprint preflight.
 - connectivity/tunnels: each center-shuffle iteration consumes two `Next(0, centerCount)` calls; each tunnel consumes `Next(0,100)` for direction change, conditional `Next(0,100)` for diagonal correction and `Next(0,100)`/`Next(0,4)` for random direction, plus `Next(0,100)` for source continuation at existing-floor intersections.
@@ -426,16 +471,16 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 
 | Requirement | Status | Current Implementation | Remaining Work / Caveat |
 |---|---|---|---|
-| DG-RNG-001 | PARTIAL | Deterministic injected RNG; prepared nest/pit execution uses no allocation/OOD/selection draws | Source `place_monster_one` runtime-stat draws are not represented; full replay awaits a complete generator and golden fixtures |
+| DG-RNG-001 | PARTIAL | Deterministic injected RNG; successful placements consume represented HP/speed/energy/sleep draws in source order, with no spawn RNG on pre-commit failure | Mimic target selection/draw and whole-generation replay/golden fixtures remain |
 | DG-MON-001 | SATISFIED | Immutable allocation entries, integer rarity weights, level ordering | No known remaining allocation-table gap |
 | DG-MON-002 | SATISFIED | Hook filtering, effective weights, weighted selection, comparison | Placement remains a separate boundary |
 | DG-MON-003 | SATISFIED | Two independent OOD transformations | No whole-dungeon consumer yet |
-| DG-MON-004 | PARTIAL | Runtime occupancy, bounds/static legality, grid open-floor gate for prepared nest/pit positions, unique capacity, actual-depth `ForceDepth` rejection | Player/level unique eligibility, object occupancy, and full source terrain/player legality are absent |
-| DG-MON-005 | PARTIAL | Formula, bounded requests, failure-aware counts, current location infrastructure | Exact ordinary `alloc_monster` spatial search/call order remains proposed |
+| DG-MON-004 | PARTIAL | Runtime occupancy, represented spawn state, bounds/static legality, grid open-floor gate for prepared nest/pit positions, unique capacity, actual-depth `ForceDepth` rejection | Per-player unique eligibility and full room-scatter LOS legality are absent |
+| DG-MON-005 | PARTIAL | Formula, bounded requests, failure-aware counts, producer-classified ordinary room requests | `vault_monsters` nine-location scatter and inline allocation/placement ordering are documented but not executed |
 | DG-GROUP-001 | SATISFIED | Exact size adjustment, 32 cap, BFS, adjacency order, suppression | Group expansion remains separate from dungeon room/tunnel placement |
 | DG-GROUP-002 | PARTIAL | Symbol predicate, weighted escort selection, 50 attempts, scatter, Escort/Escorts, escort FRIENDS | Full LOS/terrain legality unavailable |
-| DG-NEST-001/002 | SATISFIED | `MonsterNestPreparer` plus spatial builder select the verified family, prepare 64 candidates with replacement, and execute the fixed-position requests without group expansion | Source runtime-stat RNG and player/object placement state are not represented |
-| DG-PIT-001/002 | PARTIAL | `MonsterPitPreparer` plus spatial builder select family/mask, prepare 16 candidates, sort/extract eight tiers, and execute fixed-position requests without group expansion | Exact source `flags4` equivalence remains represented through `breath_*`; source runtime-stat RNG and player/object placement state are not represented |
+| DG-NEST-001/002 | SATISFIED | `MonsterNestPreparer` plus spatial builder select the verified family, prepare 64 candidates with replacement, execute exact-position requests, and suppress groups | Mimic state is outside the nest request subset; player/object placement state is not represented |
+| DG-PIT-001/002 | PARTIAL | `MonsterPitPreparer` plus spatial builder select family/mask, prepare 16 candidates, sort/extract eight tiers, execute exact-position requests, and suppress groups | Exact source `flags4` equivalence remains represented through `breath_*`; player/object placement state is not represented |
 | DG-ROOM-001 | SATISFIED | `DungeonGrid` exposes verified 198x66 dimensions, explicit `InitializeRock`, 11x11 blocks, 6x18 reservation, bounds, overlap checks, and atomic footprints | Full cave initialization remains out of scope |
 | DG-ROOM-006 | SATISFIED | `DungeonCellStates.Room/Icky/Glow`, stable floor/wall feature IDs, ordered centers, ordinary/nest/pit/vault commits, and one-center semantics exist | Full lifecycle remains |
 | DG-ROOM-002 | SATISFIED | `RoomDispatcher` processes exactly 50 attempts with verified coordinate/unusual branch order and dispatches all eight room families | Non-door content execution and whole-dungeon lifecycle remain separate |
@@ -481,27 +526,27 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 ### Placement/runtime
 
 - `src/IronHell.Core/Monsters/MonsterPosition.cs` — minimal coordinate value.
-- `src/IronHell.Core/Monsters/MonsterRuntimeState.cs` — runtime instances, occupancy, unique presence, deterministic IDs.
+- `src/IronHell.Core/Monsters/MonsterRuntimeState.cs` — runtime instances, immutable spawn state, occupancy, unique presence, deterministic IDs.
 - `src/IronHell.Core/Monsters/MonsterPlacementEligibility.cs` — lower-level unique eligibility result.
 - `src/IronHell.Core/Monsters/MonsterPlacementSpace.cs` — finite bounds/static illegal cells.
 - `src/IronHell.Core/Monsters/MonsterLocationSearch.cs` — bounded proposed coordinate search.
-- `src/IronHell.Core/Monsters/MonsterPlacementService.cs` — atomic one-monster placement.
+- `src/IronHell.Core/Monsters/MonsterPlacementService.cs` — atomic one-monster placement plus source-ordered HP/speed/energy initialization.
 
 ### Dungeon grid/reservation
 
 - `src/IronHell.Core/Dungeon/DungeonGrid.cs` — authoritative 198x66 cell grid, composable room/icky/glow cell state, 6x18 room-block reservation, feature IDs, and ordered room centers.
 - `src/IronHell.Core/Dungeon/RoomFamilyMetadata.cs` — verified family minimum-depth and rectangular block-footprint metadata.
-- `src/IronHell.Core/Dungeon/RoomContentAttempt.cs` — immutable ordered content request representation with prepared door/stair decisions.
-- `src/IronHell.Core/Dungeon/RoomGeometryBuilder.cs` — ordinary geometry plus verified nest/pit shells and deferred spatial monster requests.
+- `src/IronHell.Core/Dungeon/RoomContentAttempt.cs` — immutable ordered content request representation with prepared door/stair decisions and explicit monster producer/sleep metadata.
+- `src/IronHell.Core/Dungeon/RoomGeometryBuilder.cs` — ordinary geometry plus verified nest/pit shells; monster requests carry ordinary-helper or prepared nest/pit classification.
 - `src/IronHell.Core/Dungeon/VaultDefinition.cs` — immutable stable-ID vault definition and type normalization.
-- `src/IronHell.Core/Dungeon/VaultRoomBuilder.cs` — vault eligibility, selection, coordinate mapping, terrain/state writes, and deferred glyph attempts.
+- `src/IronHell.Core/Dungeon/VaultRoomBuilder.cs` — vault eligibility, selection, coordinate mapping, terrain/state writes, and classified deferred glyph attempts.
 - `src/IronHell.Core/Dungeon/RoomDispatcher.cs` — 50-attempt source-order room selection and all-eight-family orchestration.
 - `src/IronHell.Core/Dungeon/RoomConnectivityBuilder.cs` — working-center shuffle, cyclic pair ordering, and tunnel aggregation.
 - `src/IronHell.Core/Dungeon/DungeonTunnelBuilder.cs` — bounded source-style tunnel progression, carving, wall piercing, and deferred candidates.
 - `src/IronHell.Core/Dungeon/DungeonTunnelDoorBuilder.cs` — ordered 25% entrance-door and 90% eligible junction-door passes.
 - `src/IronHell.Core/Dungeon/DungeonDoorGenerator.cs` — verified random door feature/state distribution plus existing room-specific door helpers.
 - `src/IronHell.Core/Dungeon/RoomDoorAttemptExecutor.cs` — ordered room/vault secret/locked request execution with non-door attempts retained.
-- `src/IronHell.Core/Dungeon/RoomMonsterAttemptExecutor.cs` — exact-position execution of prepared, group-suppressed nest/pit requests; all unsupported attempts remain ordered.
+- `src/IronHell.Core/Dungeon/RoomMonsterAttemptExecutor.cs` — exact-position execution of explicitly classified prepared, group-suppressed nest/pit requests; ordinary-room and vault-glyph attempts remain ordered and deferred.
 - `src/IronHell.Core/Dungeon/DungeonStairAllocator.cs` — ordinary global stair counts, candidate order, and wall-requirement relaxation.
 - `src/IronHell.Core/Dungeon/DungeonStairGenerator.cs` — verified depth/quest direction selection and floor-only stair feature writes.
 - `src/IronHell.Core/Dungeon/RoomStairAttemptExecutor.cs` — ordered RandomStair execution with remaining room content retained.
@@ -521,7 +566,9 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 
 ### Definition/Data mapping
 
-- `src/IronHell.Data/Serialization/MonsterDefinitionReader.cs` — maps existing monster JSON fields including `stats.level`, `stats.rarity`, `symbol`, `categories`, and `abilities`.
+- `src/IronHell.Data/Serialization/MonsterDefinitionReader.cs` — maps existing monster JSON fields including `stats.level`, `stats.rarity`, `stats.movement_speed`, `symbol`, `categories`, and `abilities`.
+- `src/IronHell.Core/Definitions/CatalogDefinitions.cs` — `MonsterDefinition` carries nullable source `MovementSpeed`.
+- `data/schemas/monsters/monsters.schema.json` — constrains the movement-speed field to 1..199, within the source table index range.
 - `src/IronHell.Data/Validation/MonsterValidator.cs` — validates current monster definition structure and references.
 
 ### Tests
@@ -529,7 +576,7 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 - `src/IronHell.Core.Tests/Monsters/MonsterAllocationTableTests.cs` — allocation construction, preparation, selection, and comparison.
 - `src/IronHell.Core.Tests/Monsters/MonsterAllocationEligibilityTests.cs` — OOD/effective eligibility.
 - `src/IronHell.Core.Tests/Monsters/MonsterPlacementEligibilityTests.cs` — post-allocation unique boundary.
-- `src/IronHell.Core.Tests/Monsters/MonsterPlacementTests.cs` — runtime placement/occupancy/unique state.
+- `src/IronHell.Core.Tests/Monsters/MonsterPlacementTests.cs` — runtime placement, spawn RNG order, speed bands, failure atomicity, occupancy, and unique state.
 - `src/IronHell.Core.Tests/Monsters/MonsterPlacementSpaceTests.cs` — bounds/static legality/location search.
 - `src/IronHell.Core.Tests/Monsters/OrdinaryMonsterPopulationTests.cs` — DG-MON-005 accounting and replay.
 - `src/IronHell.Core.Tests/Monsters/MonsterGroupExpansionTests.cs` — FRIENDS rules/BFS/cap/suppression.
@@ -755,16 +802,15 @@ Stair placement is implemented for the represented ordinary/global and room-requ
 
 ## 11. Test and Build Baseline
 
-Fresh validation on 2026-10-05:
+Fresh Slice 7A validation on 2026-10-05:
 
-- Focused Slice 6A executor tests: **14 passed, 0 failed, 0 skipped**.
-- Focused room geometry, nest/pit, prepared executor, placement, eligibility, group, and escort regressions: **71 passed, 0 failed, 0 skipped**.
-- Focused Slice 5D stair tests: **15 passed, 0 failed, 0 skipped**.
-- Focused Slice 6A plus nest/pit preparation, room/door/stair/tunnel/grid, monster placement/group/escort regressions: **185 passed, 0 failed, 0 skipped**.
-- Full Core tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore` — **420 passed, 0 failed, 0 skipped**.
-- Full Data tests: `dotnet test src/IronHell.Data.Tests/IronHell.Data.Tests.csproj --no-restore` — **155 passed, 0 failed, 0 skipped** in 159.5 seconds after schema registry isolation. Earlier attempts were stopped at 120 seconds without a final result; a prior Slice 5D run surfaced the `SchemaRegistry.CopyFrom` collection-modified race.
-- Data concurrency fix: definition and terrain loaders now register schemas in their per-call `EvaluationOptions.SchemaRegistry`, never `SchemaRegistry.Global`; a concurrent cross-loader regression passes.
-- Solution build: `dotnet build IronHell.sln --no-restore` — **PASS**.
+- Focused producer-classification, room, vault, prepared nest/pit, and monster-executor tests: **50 passed, 0 failed, 0 skipped**.
+- Related monster allocation/OOD/selection, placement, population, FRIENDS, escorts, nest/pit, room, vault, and dispatcher regressions: **189 passed, 0 failed, 0 skipped**.
+- Full Core tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore` — **440 passed, 0 failed, 0 skipped**.
+- Full Data tests: `dotnet test src/IronHell.Data.Tests/IronHell.Data.Tests.csproj --no-restore` — **157 passed, 0 failed, 0 skipped** in 161.5 seconds.
+- Solution build: `dotnet build IronHell.sln --no-restore` — **PASS** using the installed .NET 9 SDK executable path.
+- `git diff --check` — **PASS**.
+- Data concurrency fix: definition and terrain loaders register schemas in their per-call `EvaluationOptions.SchemaRegistry`, never `SchemaRegistry.Global`; the concurrent cross-loader regression passes.
 - Full solution/workspace test suite: not run; no workspace-wide test result is claimed.
 
 Historical Slice 5C validation on 2026-10-02:
@@ -810,11 +856,11 @@ Static definitions for some of these domains exist, but definitions/catalogs are
 
 ## 13. Recommended Next Implementation Sequence
 
-### Next: Slice 6B — Monster spawn-state RNG foundation
+### Next: Slice 7B — Source-compatible monster scatter LOS
 
-**Requirements:** DG-RNG-001; DG-MON-004.
+**Requirements:** DG-MON-004/005; DG-GROUP-002; DG-RNG-001.
 
-**Bounded outcome:** model and consume the verified `place_monster_one` runtime initialization decisions required by `MonsterRuntimeInstance` before any further monster-placement execution expands. Resolve represented HP/speed/energy fields and keep ordinary allocation, room/vault content selection, groups, objects, and traps out of scope.
+**Bounded outcome:** model and test the source `los`/`scatter` acceptance predicate over represented dungeon features, without enabling monster execution. Per-player unique state and builder/content RNG interleaving remain separate prerequisites.
 
 ## 14. Golden-Seed Status
 
@@ -860,7 +906,7 @@ No new technical debt was introduced by this checkpoint. The minimal placement s
 
 ## 17. Current Milestone
 
-**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Placement Foundations**
+**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Spawn-State Foundations**
 
 The repository can execute and test:
 
@@ -888,7 +934,8 @@ definitions
     -> DungeonStairAllocator places ordinary global stairs
     -> RoomStairAttemptExecutor executes room RandomStair requests
     -> RoomMonsterAttemptExecutor places prepared nest/pit monsters
+    -> MonsterPlacementService initializes represented HP/speed/energy/sleep spawn state
     -> deferred ordinary/vault monsters and object/gold/artifact/trap content
 ```
 
-It is not yet correct to call this complete dungeon-generation parity. All eight current room families, the 50-attempt dispatcher, connectivity/tunnels, doors, represented stair paths, and prepared nest/pit monster placement now execute deterministically. Ordinary/vault monster generation, monster spawn-stat RNG, object/gold/artifact/trap content, drops, rating/feelings, lifecycle retries, town, quest/static levels, wilderness, missing source vault content, complete stair occupancy/entry state, and whole-generation golden evidence remain incomplete or conditional.
+It is not yet correct to call this complete dungeon-generation parity. All eight current room families, the 50-attempt dispatcher, connectivity/tunnels, doors, represented stair paths, and prepared nest/pit monster placement with HP/speed/energy and conditional sleep initialization now execute deterministically. Mimic state/RNG, ordinary/vault monster generation, object/gold/artifact/trap content, drops, rating/feelings, lifecycle retries, town, quest/static levels, wilderness, missing source vault content, complete stair occupancy/entry state, and whole-generation golden evidence remain incomplete or conditional.

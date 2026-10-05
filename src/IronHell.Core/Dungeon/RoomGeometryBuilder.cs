@@ -51,7 +51,8 @@ public static class RoomGeometryBuilder
                     RoomContentAttemptKind.Monster,
                     new DungeonPosition(row, column),
                     DefinitionId: definitionId,
-                    AllowGroupExpansion: false));
+                    AllowGroupExpansion: false,
+                    MonsterSource: RoomMonsterAttemptSource.PreparedNestPit));
             }
         }
 
@@ -508,7 +509,8 @@ public static class RoomGeometryBuilder
             RoomContentAttemptKind.Monster,
             new DungeonPosition(center.Row + rowOffset, center.Column + columnOffset),
             DefinitionId: definitionId,
-            AllowGroupExpansion: false));
+            AllowGroupExpansion: false,
+            MonsterSource: RoomMonsterAttemptSource.PreparedNestPit));
 
     private static void AddAttempts(
         List<RoomContentAttempt> attempts,
@@ -521,7 +523,17 @@ public static class RoomGeometryBuilder
     {
         for (var index = 0; index < count; index++)
         {
-            attempts.Add(new RoomContentAttempt(kind, origin, radiusRows, radiusColumns, generationDepthOffset, kind == RoomContentAttemptKind.SpecialObject));
+            attempts.Add(new RoomContentAttempt(
+                kind,
+                origin,
+                radiusRows,
+                radiusColumns,
+                generationDepthOffset,
+                kind == RoomContentAttemptKind.SpecialObject,
+                MonsterSource: kind == RoomContentAttemptKind.Monster
+                    ? RoomMonsterAttemptSource.OrdinaryRoomVaultMonsters
+                    : RoomMonsterAttemptSource.Unspecified,
+                SleepOnSpawn: kind == RoomContentAttemptKind.Monster));
         }
     }
 

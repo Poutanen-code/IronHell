@@ -178,6 +178,15 @@ public sealed class RoomGeometryBuilderTests
                 RoomContentAttemptKind.Trap,
             ],
             result.Attempts.Select(attempt => attempt.Kind));
+        Assert.All(result.Attempts.Where(attempt => attempt.Kind == RoomContentAttemptKind.Monster), attempt =>
+        {
+            Assert.Equal(RoomMonsterAttemptSource.OrdinaryRoomVaultMonsters, attempt.MonsterSource);
+            Assert.Equal(2, attempt.GenerationDepthOffset);
+            Assert.Equal(1, attempt.RadiusRows);
+            Assert.Equal(1, attempt.RadiusColumns);
+            Assert.True(attempt.AllowGroupExpansion);
+            Assert.True(attempt.SleepOnSpawn);
+        });
         Assert.Equal(new DungeonPosition(4, 16), result.Attempts[0].Origin);
         Assert.Equal(4, result.Attempts[5].RadiusRows);
     }

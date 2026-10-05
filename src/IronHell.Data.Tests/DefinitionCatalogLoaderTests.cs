@@ -213,14 +213,16 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
         AssertError(result, "schema_validation");
     }
 
-    [Fact]
-    public async Task LoadAsync_MovementSpeedOutsideSourceEnergyTable_ReturnsValidationReport()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(200)]
+    public async Task LoadAsync_MovementSpeedOutsideSourceEnergyTable_ReturnsValidationReport(int invalidSpeed)
     {
         var root = CreateDefinitionsCopy();
         ReplaceFirst(
             Path.Combine(root, "monsters", "monsters.json"),
             "\"movement_speed\": 110",
-            "\"movement_speed\": 200");
+            $"\"movement_speed\": {invalidSpeed}");
 
         var result = await DefinitionCatalogLoader.LoadAsync(root);
 

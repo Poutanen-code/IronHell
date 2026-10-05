@@ -12,6 +12,14 @@ public enum RoomContentAttemptKind
     RandomStair,
 }
 
+public enum RoomMonsterAttemptSource
+{
+    Unspecified,
+    PreparedNestPit,
+    OrdinaryRoomVaultMonsters,
+    VaultGlyph,
+}
+
 public sealed record RoomContentAttempt(
     RoomContentAttemptKind Kind,
     DungeonPosition Origin,
@@ -22,4 +30,6 @@ public sealed record RoomContentAttempt(
     string? DefinitionId = null,
     bool AllowGroupExpansion = true,
     DoorState? PreparedDoorState = null,
-    string? PreparedStairFeatureId = null);
+    string? PreparedStairFeatureId = null,
+    RoomMonsterAttemptSource MonsterSource = RoomMonsterAttemptSource.Unspecified,
+    bool SleepOnSpawn = false);

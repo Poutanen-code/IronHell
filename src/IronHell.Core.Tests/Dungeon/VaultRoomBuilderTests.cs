@@ -114,6 +114,14 @@ public sealed class VaultRoomBuilderTests
             ],
             result.Attempts.Select(attempt => (attempt.Kind, attempt.GenerationDepthOffset, attempt.RadiusRows)));
         Assert.Equal(result.Attempts[1].Origin, result.Attempts[2].Origin);
+            Assert.All(result.Attempts.Where(attempt => attempt.Kind == RoomContentAttemptKind.Monster), attempt =>
+            {
+                Assert.Equal(RoomMonsterAttemptSource.VaultGlyph, attempt.MonsterSource);
+                Assert.True(attempt.AllowGroupExpansion);
+                Assert.True(attempt.SleepOnSpawn);
+                Assert.Equal(0, attempt.RadiusRows);
+                Assert.Equal(0, attempt.RadiusColumns);
+            });
     }
 
     [Fact]

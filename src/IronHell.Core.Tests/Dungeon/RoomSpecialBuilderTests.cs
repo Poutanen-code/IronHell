@@ -23,6 +23,8 @@ public sealed class RoomSpecialBuilderTests
         {
             Assert.Equal("jelly", attempt.DefinitionId);
             Assert.False(attempt.AllowGroupExpansion);
+            Assert.Equal(RoomMonsterAttemptSource.PreparedNestPit, attempt.MonsterSource);
+            Assert.False(attempt.SleepOnSpawn);
         });
         Assert.Single(grid.RoomCenters);
         Assert.True(grid.IsBlockReserved(new RoomBlockPosition(0, 2)));
@@ -43,6 +45,8 @@ public sealed class RoomSpecialBuilderTests
         {
             Assert.Equal("orc", attempt.DefinitionId);
             Assert.False(attempt.AllowGroupExpansion);
+            Assert.Equal(RoomMonsterAttemptSource.PreparedNestPit, attempt.MonsterSource);
+            Assert.False(attempt.SleepOnSpawn);
         });
         Assert.Equal(new DungeonPosition(3, 7), monsters[0].Origin);
         Assert.Equal(new DungeonPosition(3, 25), monsters[18].Origin);

@@ -52,13 +52,12 @@ public static class RoomMonsterAttemptExecutor
                     $"Prepared monster definition '{attempt.DefinitionId}' was not found.");
             }
 
-            var position = ToMonsterPosition(attempt.Origin);
             var placement = PlaceAtRequestedPosition(
                 grid,
                 runtimeState,
                 placementSpace,
                 definition,
-                position,
+                attempt,
                 randomSource,
                 depth);
             processed.Add(new RoomMonsterAttemptPlacement(attempt, placement));
@@ -72,6 +71,7 @@ public static class RoomMonsterAttemptExecutor
 
     private static bool IsPreparedPositionMonster(RoomContentAttempt attempt) =>
         attempt.Kind == RoomContentAttemptKind.Monster &&
+        attempt.MonsterSource == RoomMonsterAttemptSource.PreparedNestPit &&
         attempt.DefinitionId is not null &&
         !attempt.AllowGroupExpansion;
 
@@ -80,10 +80,11 @@ public static class RoomMonsterAttemptExecutor
         MonsterRuntimeState runtimeState,
         MonsterPlacementSpace placementSpace,
         MonsterDefinition definition,
-        MonsterPosition position,
+        RoomContentAttempt attempt,
         IRandomSource randomSource,
         int depth)
     {
+        var position = ToMonsterPosition(attempt.Origin);
         var dungeonPosition = new DungeonPosition(position.Y, position.X);
         if (!DungeonGrid.IsInBounds(dungeonPosition))
         {
@@ -95,6 +96,13 @@ public static class RoomMonsterAttemptExecutor
             return new MonsterPlacementResult(false, null, MonsterPlacementFailureReason.IllegalCell);
         }
 
-        return MonsterPlacementService.Place(runtimeState, definition, position, randomSource, placementSpace, depth);
+        return MonsterPlacementService.Place(
+            runtimeState,
+            definition,
+            position,
+            randomSource,
+            placementSpace,
+            depth,
+            slp: attempt.SleepOnSpawn);
     }
 }

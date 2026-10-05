@@ -340,7 +340,12 @@ public sealed class RoomMonsterAttemptExecutorTests
     }
 
     private static RoomContentAttempt PreparedMonster(DungeonPosition position, string definitionId) =>
-        new(RoomContentAttemptKind.Monster, position, DefinitionId: definitionId, AllowGroupExpansion: false);
+        new(
+            RoomContentAttemptKind.Monster,
+            position,
+            DefinitionId: definitionId,
+            AllowGroupExpansion: false,
+            MonsterSource: RoomMonsterAttemptSource.PreparedNestPit);
 
     private static IReadOnlyDictionary<string, MonsterDefinition> Definitions(params MonsterDefinition[] definitions) =>
         definitions.ToDictionary(definition => definition.Id, StringComparer.Ordinal);
