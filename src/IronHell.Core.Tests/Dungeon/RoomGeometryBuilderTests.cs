@@ -203,7 +203,8 @@ public sealed class RoomGeometryBuilderTests
         Assert.Equal(RoomFamily.Large, result.Family);
         Assert.Equal(new DungeonPosition(5, 16), result.Center);
         Assert.Equal(RoomGeometryBuilder.OuterWallFeatureId, grid.GetFeatureId(new DungeonPosition(0, 16)));
-        Assert.Equal(RoomGeometryBuilder.InnerWallFeatureId, grid.GetFeatureId(new DungeonPosition(3, 7)));
+        Assert.Equal(RoomGeometryBuilder.InnerWallFeatureId, grid.GetFeatureId(new DungeonPosition(2, 6)));
+        Assert.Equal(RoomGeometryBuilder.OpenFloorFeatureId, grid.GetFeatureId(new DungeonPosition(3, 7)));
         Assert.True(grid.GetCellFlags(new DungeonPosition(5, 16)).HasFlag(DungeonCellStates.Room));
     }
 

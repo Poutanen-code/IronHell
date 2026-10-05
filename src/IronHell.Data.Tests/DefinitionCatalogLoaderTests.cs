@@ -6,6 +6,7 @@ using IronHell.Core.Items;
 using IronHell.Data.Registries;
 using IronHell.Data.Serialization;
 using IronHell.Data.Validation;
+using IronHell.Data.Visuals;
 using Xunit;
 
 namespace IronHell.Data.Tests;
@@ -36,6 +37,30 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
         Assert.Equal("human", character.RaceId);
         Assert.Equal("warrior", character.ClassId);
         Assert.Equal(19, character.HitDie);
+    }
+
+    [Fact]
+    public async Task LoadAsync_ConcurrentDefinitionAndTerrainCatalogs_UsesIsolatedSchemaRegistries()
+    {
+        var dataRoot = Path.Combine(RepositoryRoot, "data");
+        var terrainDocument = JsonNode.Parse(await File.ReadAllTextAsync(
+            Path.Combine(dataRoot, "definitions", "environment", "terrain_definitions.json")))!;
+        var terrainIds = terrainDocument["terrain_definitions"]!.AsArray()
+            .Select(definition => definition!["id"]!.GetValue<string>())
+            .ToArray();
+
+        var loads = Enumerable.Range(0, 4).Select(async _ =>
+        {
+            var definitionsTask = DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);
+            var terrainTask = TerrainVisualCatalogLoader.LoadAsync(dataRoot, terrainIds);
+            await Task.WhenAll(definitionsTask, terrainTask);
+
+            Assert.IsType<DefinitionLoadSuccess>(definitionsTask.Result);
+            Assert.True(terrainTask.Result.Succeeded,
+                string.Join(Environment.NewLine, terrainTask.Result.Report.Errors.Select(error => error.Message)));
+        });
+
+        await Task.WhenAll(loads);
     }
 
     [Fact]

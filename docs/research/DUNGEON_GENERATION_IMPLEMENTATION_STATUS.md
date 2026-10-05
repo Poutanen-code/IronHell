@@ -1,6 +1,6 @@
 # Dungeon Generation Implementation Status
 
-**Checkpoint date:** 2026-10-02
+**Checkpoint date:** 2026-10-05
 
 This document is the repository-tracked implementation handoff for IronHell dungeon-generation work. It records current implementation status, not new parity research.
 
@@ -14,7 +14,7 @@ The requested `DUNGEON_GENERATION_COMPENDIUM.md` is not present in the current c
 
 ### Current milestone
 
-**Room Generation, Connectivity, and Door Foundation Complete**
+**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Placement Foundations**
 
 IronHell can now execute this bounded path in Core:
 
@@ -30,7 +30,7 @@ MonsterDefinition
     -> escort filtering, selection, and placement
 ```
 
-The current implementation is deterministic, Godot-independent, and tested through Core xUnit tests. It is not a complete dungeon generator. The verified 50-attempt dispatcher orchestrates all eight room families, room centers connect through the bounded source-style tunnel foundation, and both tunnel-origin and room/vault-origin door generation are executable. Non-door room content, stairs, and dungeon lifecycle remain incomplete.
+The current implementation is deterministic, Godot-independent, and tested through Core xUnit tests. It is not a complete dungeon generator. The verified 50-attempt dispatcher orchestrates all eight room families, room centers connect through the bounded source-style tunnel foundation, and tunnel/room/vault doors execute. Global stairs and room `RandomStair` requests execute for the represented scope; prepared nest/pit monsters now place at their recorded coordinates. Ordinary/vault monster content, objects, gold, artifacts, traps, and dungeon lifecycle behavior remain incomplete.
 
 Completed foundation areas are REPO-CONFIRMED:
 
@@ -51,14 +51,18 @@ Completed foundation areas are REPO-CONFIRMED:
 - nest family selection, family predicates, and 64-candidate preparation.
 - pit family selection, dragon mask selection, 16-candidate preparation, sorting, and tier extraction.
 - nest and pit candidate preparation remains authoritative and is now consumed by spatial room builders.
+- prepared nest/pit monster attempts flow from spatial builders into exact-position runtime placement with occupancy and group expansion suppressed.
 - authoritative 198x66 dungeon grid, 11x11 room blocks, atomic reservation, cell flags, and room centers;
 - type-3 cross and type-4 large room geometry, all verified internal variants, and ordered deferred room-content attempts.
 - source-order 50-attempt room dispatcher for all simple, overlapping, cross, large, nest, pit, and vault builders.
 - explicit granite initialization, cyclic room-center connectivity, bounded tunnel carving, outer-wall piercing, and deferred junction candidates.
 - distinct source-order tunnel entrance and junction door passes using stable door terrain IDs and the injected RNG stream.
-- ordered room/vault-local secret and locked door request execution; non-door requests remain deferred.
+- ordered room/vault door execution, stair execution, and prepared nest/pit monster placement; unsupported content requests remain deferred.
+- ordinary global stair allocation with source count, candidate, wall-relaxation, and direction order.
+- source-time prepared room `RandomStair` direction plus ordered stair-only request execution; other content remains deferred.
+- prepared nest/pit monster requests now place exact runtime definitions at their recorded positions without allocation or group expansion.
 
-Likely next parity area: stair placement from the existing deferred random-stair requests.
+Stair legality remains partial: nest/pit monster occupancy is now authoritative but `DungeonStairAllocator` does not consult it; object occupancy and level-entry coordinates are still absent. Town generation and complete quest lifecycle remain conditional.
 
 ## 2. Completed Implementation Slices
 
@@ -260,6 +264,31 @@ Likely next parity area: stair placement from the existing deferred random-stair
 - **Content boundary:** only door attempts execute. Monster, trap, object, object/gold, special-object, and random-stair attempts remain deferred.
 - **Status:** DG-DOOR-002 SATISFIED for all current verified room/vault door request producers. Tunnel door processing remains distinct.
 
+### Slice 5D — Stair placement foundation and deferred RandomStair execution
+
+- **Outcome:** added ordinary global stair count/allocation behavior and an ordered room stair executor. The type-4 variant-2 producer prepares the source direction roll when `RandomStair` is created, before the subsequent trap-count roll.
+- **Requirements:** DG-STAIR-001/002 represented scope; DG-RNG-001; DG-ROOM-005/006/009/010; DG-DOOR-001/002; DG-CONN-001; DG-TUN-001/002.
+- **Implementation:** `DungeonStairAllocator`, `DungeonStairGenerator`, and `RoomStairAttemptExecutor`; the dispatcher carries an optional quest-level flag. Existing terrain IDs `up_staircase` and `down_staircase` are reused.
+- **Global RNG:** `Next(3,5)` for down count, then each candidate uses `Next(0,66)` row followed by `Next(0,198)` column. After all down requests, `Next(1,3)` selects the up count. Each request tries 3,001 candidates at the current cardinal-wall requirement, then decrements the requirement and continues without a source failure limit.
+- **Room RNG:** after the producer's `Next(0,100)` 80/20 object/stair choice, ordinary positive non-quest depths consume `Next(0,100)` in `place_random_stairs` order; `< 50` prepares down, otherwise up. Town prepares down, quest/bottom prepares up, without a direction roll. Prepared direction is not rerolled by the executor.
+- **Cell behavior:** only represented `open_floor` cells are eligible. Stair placement changes the feature ID and preserves `Room`, `Icky`, `Glow`, and `TunnelSolid`; permanent/non-floor terrain is not overwritten.
+- **Content boundary:** doors execute in their existing executor; stair attempts execute in original order; monster, trap, object, object/gold, and special-object attempts remain deferred and ordered.
+- **Status:** DG-STAIR-001 PARTIAL because object/monster occupancy and source level-entry coordinates are not represented. DG-STAIR-002 PARTIAL/CONDITIONAL because town generation and lifecycle callers are absent; quest/bottom direction overrides are available when the caller supplies the level flag.
+- **Narrow research:** `generate.c::cave_gen`, `alloc_stairs`, `place_random_stairs`, `next_to_walls`; `mdefines.h::cave_naked_bold` and `cave_clean_bold`; `common/defines.h::MAX_DEPTH`.
+
+### Slice 6A — Prepared nest/pit monster execution
+
+- **Outcome:** added exact-position execution for prepared nest/pit `Monster` requests. Requests with a prepared `DefinitionId` and `AllowGroupExpansion = false` resolve through the stable definition map and pass through `MonsterPlacementService` into `MonsterRuntimeState`; failures are recorded once and are not relocated or retried.
+- **Producer classification:** nest (`TryBuildNest`) and pit (`TryBuildPit`) are the only current producers with both prepared definition IDs and explicit group suppression. Ordinary type-1 through type-4 room monster requests (`RoomGeometryBuilder.AddAttempts`) and vault glyph monster requests (`VaultRoomBuilder`) have no prepared `DefinitionId`, so they remain deferred. No other Monster producer is in scope.
+- **Coordinate bridge:** `DungeonPosition.Row -> MonsterPosition.Y`; `DungeonPosition.Column -> MonsterPosition.X`, through `RoomMonsterAttemptExecutor.ToMonsterPosition`.
+- **Placement legality:** the executor requires represented `open_floor`; `MonsterPlacementService` retains placement-space bounds/static illegality, occupied-position, unique-capacity, and actual-depth `ForceDepth` rejection. Source player/level unique checks and object occupancy are unavailable. Room flags are preserved, not used as a source placement predicate; positive-depth nest/pit placement does not reject `Icky`.
+- **Group behavior:** the supported request contract requires `AllowGroupExpansion = false`. The executor calls neither FRIENDS expansion nor escort placement, regardless of definition flags.
+- **RNG:** prepared identity and position consume zero allocation/OOD/selection RNG; the executor has no RNG parameter. Narrow source inspection found `place_monster_one` does consume runtime-state RNG for HP, speed variance, and energy (plus conditional force-sleep/mimic behavior). Those values are not represented by current `MonsterDefinition`/`MonsterRuntimeInstance` fields, so IronHell does not consume those source spawn-state draws yet; complete stream parity remains partial.
+- **Upstream geometry correction:** source `place_double_wall` places inner walls one cell outside the requested nest/pit region. `WriteDoubleRectangle` had placed them on the requested perimeter, making 44 nest and pit targets wall terrain. The shared border offset now matches source and a regression verifies all prepared targets are room floor.
+- **Stair follow-up:** `MonsterRuntimeState` now contains authoritative occupancy for successfully placed nest/pit monsters, providing a concrete future input for stair legality. `DungeonStairAllocator` was not changed and does not yet consult this occupancy; object occupancy and level-entry coordinates remain gaps.
+- **Narrow research:** `generate.c::build_type5`, `build_type6`, `place_double_room`, `place_double_wall`, and `place_wall`; `monster2.c::place_monster_aux` and `place_monster_one`; `mdefines.h::cave_empty_bold`.
+- **Status:** bounded exact prepared placement is implemented. DG-MON-004/005 remain partial; DG-RNG-001 remains partial.
+
 ## 3. Current Monster Generation Architecture
 
 The current repository-confirmed pipeline is:
@@ -290,7 +319,7 @@ MonsterDefinition catalog
     -> MonsterNestPreparationResult
 ```
 
-The nest branch produces candidate definition IDs only. It does not create runtime monsters, mutate occupancy, or invoke placement.
+The nest branch produces candidate definition IDs for the spatial builder. Those prepared IDs and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement; placement failures do not trigger selection or relocation.
 
 Pit preparation is a parallel pre-spatial branch:
 
@@ -306,7 +335,7 @@ MonsterDefinition catalog
     -> MonsterPitPreparationResult
 ```
 
-The pit branch also produces candidate identities only. It does not create runtime monsters or construct pit geometry.
+The pit preparation branch produces candidate identities and tiers; the spatial builder's prepared identities and exact positions now flow through `RoomMonsterAttemptExecutor` into runtime placement.
 
 Dungeon spatial foundation is now a separate authoritative Core branch:
 
@@ -327,6 +356,10 @@ DungeonGrid
     -> per-tunnel pierced-wall entrance door pass
     -> after all tunnels, ordered junction candidate neighbor pass
     -> RoomDoorAttemptExecutor executes room/vault SecretDoor and LockedDoor requests
+    -> DungeonStairAllocator places ordinary global stairs
+    -> RoomStairAttemptExecutor executes ordered RandomStair requests
+    -> RoomMonsterAttemptExecutor executes prepared nest/pit Monster requests
+    -> ordinary/vault Monster and all object/gold/artifact/trap attempts stay deferred
 ```
 
 Room builders now expose a bounded deferred-content boundary:
@@ -335,11 +368,13 @@ Room builders now expose a bounded deferred-content boundary:
 RoomGeometryBuilder
     -> DungeonGrid geometry/state
     + ordered RoomContentAttempt requests
-    -> RoomDoorAttemptExecutor executes only SecretDoor/LockedDoor
-    -> monster/trap/object/stair requests remain deferred
+    -> RoomDoorAttemptExecutor executes SecretDoor/LockedDoor
+    -> RoomStairAttemptExecutor executes RandomStair
+    -> RoomMonsterAttemptExecutor executes only prepared nest/pit Monster requests
+    -> ordinary/vault Monster and trap/object/object-gold/special-object requests remain deferred
 ```
 
-`RoomContentAttempt` preserves verified request kind, source position/context, order, stable `DefinitionId`, and explicit group-expansion intent. The door executor returns executed door requests separately from still-deferred non-door requests. It does not claim successful monster/object/trap placement or mutate runtime population state. The grid is not yet a complete terrain feature map.
+`RoomContentAttempt` preserves verified request kind, source position/context, order, stable `DefinitionId`, explicit group-expansion intent, and prepared door/stair decisions where source RNG occurs at request creation. Door, stair, and prepared-monster executors return handled attempts separately from remaining content. `MonsterRuntimeState` owns occupancy for successfully placed monsters; object occupancy and full source terrain semantics are not modeled.
 
 Definitions and runtime instances remain separate:
 
@@ -376,6 +411,9 @@ Important current consumers:
 - type-2 rooms: one shared lighting `Next(1,26)`, followed by the verified eight asymmetric rectangle-extent rolls.
 - type-3 rooms: lighting `Next(1,26)`, vertical half-height `Next(3,5)`, horizontal half-width `Next(3,12)`, variant `Next(0,4)`, then variant-specific door/count/nested rolls in source order.
 - type-4 rooms: fixed outer offsets, lighting `Next(1,26)`, variant `Next(1,6)`, then variant-specific door/count/nested rolls in source order. The object/stair branch uses `Next(0,100)` with `< 80` selecting special object and the remainder selecting random stair.
+- room `RandomStair`: the selected branch prepares depth/quest direction immediately; ordinary positive non-quest depths consume `Next(0,100)` (`< 50` down, otherwise up) before the subsequent trap-count roll. The attempt stores the prepared feature and execution does not reroll.
+- global stairs: `Next(3,5)` down count, then per candidate `Next(0,66)` row and `Next(0,198)` column, then `Next(1,3)` up count and its candidates. Each stair relaxes the cardinal-wall requirement after 3,001 rejected candidates; the source loop has no terminal retry limit.
+- prepared nest/pit monster execution: zero allocation/OOD/selection RNG; `RoomMonsterAttemptExecutor` accepts no random source. Source `place_monster_one` separately rolls runtime HP (`damroll` unless force-max-HP), possible speed variance, and starting energy, plus conditional force-sleep/mimic state. These runtime fields/rolls are not represented and are an explicit RNG parity gap.
 - deferred content attempts retain source helper origins/radii and counts without executing downstream helper RNG or placement.
 - room dispatch: each attempt consumes `Next(0,6)` for row, `Next(0,18)` for column, then `Next(0,200)` for unusual; unusual attempts consume `Next(0,100)` for the family roll and a conditional second `Next(0,200)` for very-unusual selection. Builder RNG remains delegated after footprint preflight.
 - connectivity/tunnels: each center-shuffle iteration consumes two `Next(0, centerCount)` calls; each tunnel consumes `Next(0,100)` for direction change, conditional `Next(0,100)` for diagonal correction and `Next(0,100)`/`Next(0,4)` for random direction, plus `Next(0,100)` for source continuation at existing-floor intersections.
@@ -388,16 +426,16 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 
 | Requirement | Status | Current Implementation | Remaining Work / Caveat |
 |---|---|---|---|
-| DG-RNG-001 | PARTIAL | Deterministic injected RNG and focused stream tests | Full whole-dungeon replay awaits a complete generator and golden fixtures |
+| DG-RNG-001 | PARTIAL | Deterministic injected RNG; prepared nest/pit execution uses no allocation/OOD/selection draws | Source `place_monster_one` runtime-stat draws are not represented; full replay awaits a complete generator and golden fixtures |
 | DG-MON-001 | SATISFIED | Immutable allocation entries, integer rarity weights, level ordering | No known remaining allocation-table gap |
 | DG-MON-002 | SATISFIED | Hook filtering, effective weights, weighted selection, comparison | Placement remains a separate boundary |
 | DG-MON-003 | SATISFIED | Two independent OOD transformations | No whole-dungeon consumer yet |
-| DG-MON-004 | PARTIAL | Occupancy, bounds/static legality, unique runtime capacity, post-allocation rejection | Player/level eligibility and full terrain legality are absent |
+| DG-MON-004 | PARTIAL | Runtime occupancy, bounds/static legality, grid open-floor gate for prepared nest/pit positions, unique capacity, actual-depth `ForceDepth` rejection | Player/level unique eligibility, object occupancy, and full source terrain/player legality are absent |
 | DG-MON-005 | PARTIAL | Formula, bounded requests, failure-aware counts, current location infrastructure | Exact ordinary `alloc_monster` spatial search/call order remains proposed |
 | DG-GROUP-001 | SATISFIED | Exact size adjustment, 32 cap, BFS, adjacency order, suppression | Group expansion remains separate from dungeon room/tunnel placement |
 | DG-GROUP-002 | PARTIAL | Symbol predicate, weighted escort selection, 50 attempts, scatter, Escort/Escorts, escort FRIENDS | Full LOS/terrain legality unavailable |
-| DG-NEST-001/002 | SATISFIED | `MonsterNestPreparer` plus the spatial nest builder select the verified family, prepare 64 candidates with replacement, and emit fixed-region deferred requests | Runtime monster placement remains deferred |
-| DG-PIT-001/002 | PARTIAL | `MonsterPitPreparer` plus the spatial pit builder select families/masks, prepare 16 candidates, sort by native level, extract eight tiers, and emit the fixed pattern | Exact source `flags4` equivalence is represented through existing `breath_*` abilities; runtime monster placement remains deferred |
+| DG-NEST-001/002 | SATISFIED | `MonsterNestPreparer` plus spatial builder select the verified family, prepare 64 candidates with replacement, and execute the fixed-position requests without group expansion | Source runtime-stat RNG and player/object placement state are not represented |
+| DG-PIT-001/002 | PARTIAL | `MonsterPitPreparer` plus spatial builder select family/mask, prepare 16 candidates, sort/extract eight tiers, and execute fixed-position requests without group expansion | Exact source `flags4` equivalence remains represented through `breath_*`; source runtime-stat RNG and player/object placement state are not represented |
 | DG-ROOM-001 | SATISFIED | `DungeonGrid` exposes verified 198x66 dimensions, explicit `InitializeRock`, 11x11 blocks, 6x18 reservation, bounds, overlap checks, and atomic footprints | Full cave initialization remains out of scope |
 | DG-ROOM-006 | SATISFIED | `DungeonCellStates.Room/Icky/Glow`, stable floor/wall feature IDs, ordered centers, ordinary/nest/pit/vault commits, and one-center semantics exist | Full lifecycle remains |
 | DG-ROOM-002 | SATISFIED | `RoomDispatcher` processes exactly 50 attempts with verified coordinate/unusual branch order and dispatches all eight room families | Non-door content execution and whole-dungeon lifecycle remain separate |
@@ -408,12 +446,13 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 | DG-ROOM-010 | SATISFIED | All five type-4 variants, inner geometry, nested branches, and ordered requests are implemented | Non-door content execution remains deferred |
 | DG-ROOM-007 | SATISFIED | Type-1 asymmetric extents, lighting, pillar/ragged ordering, and feature writes are implemented | Non-door content execution remains deferred |
 | DG-ROOM-008 | SATISFIED | Type-2 asymmetric rectangles, one reservation/center, overlap, and shared lighting are implemented | Non-door content execution remains deferred |
-| DG-STAIR-* | NOT IMPLEMENTED | No stairs | Requires grid/features |
+| DG-STAIR-001 | PARTIAL | Ordinary global counts, candidate order, wall relaxation, stair terrain, and room-stair execution; nest/pit monsters now create authoritative runtime occupancy | `DungeonStairAllocator` does not yet consult monster occupancy; object occupancy and source level-entry coordinates remain unrepresented |
+| DG-STAIR-002 | PARTIAL / CONDITIONAL | Quest and bottom direction overrides are implemented when level context is supplied; town RandomStair direction is down | Town generation, town terrain, and quest/static-level lifecycle are absent |
 | DG-VAULT-001/002 | SATISFIED / CONTENT-PARTIAL | `VaultRoomBuilder` selects eligible definitions, normalizes type 9, maps layouts, writes stable terrain/state, and records ordered deferred attempts | Current catalog contains 10 migrated records versus 149 source records; missing source content and downstream execution remain |
 | DG-CONN-001 | SATISFIED | `RoomConnectivityBuilder` copies, shuffles, and cyclically connects authoritative room centers without mutating `DungeonGrid.RoomCenters` | Whole-dungeon golden replay remains deferred |
 | DG-TUN-001 | SATISFIED | `DungeonTunnelBuilder` implements verified direction correction, random turns, rock carving, existing-floor handling, strict-interior bounds, source buffer capacities, and the 2,000-step guard | Whole-generation golden replay remains deferred |
-| DG-TUN-002 | SATISFIED | Ordered wall piercings, adjacent outer-wall protection, permanent-wall rejection, 25% entrance doors, and 90% eligible junction-door processing are implemented | Room-local door attempts remain separate |
-| DG-DOOR-001 | SATISFIED | `DungeonDoorGenerator.PlaceRandomDoor` maps the verified 0..999 source distribution to stable open/broken/secret/closed/locked/stuck door state | Room-local door attempts remain separately deferred |
+| DG-TUN-002 | SATISFIED | Ordered wall piercings, adjacent outer-wall protection, permanent-wall rejection, 25% entrance doors, and 90% eligible junction-door processing are implemented | No additional tunnel-door gap is known |
+| DG-DOOR-001 | SATISFIED | `DungeonDoorGenerator.PlaceRandomDoor` maps the verified 0..999 source distribution to stable open/broken/secret/closed/locked/stuck door state | No additional tunnel-door gap is known |
 | DG-DOOR-002 | SATISFIED | Tunnel doors plus ordered room/vault `SecretDoor` and `LockedDoor` request execution are implemented | Other room-content kinds remain deferred under their own requirements |
 | DG-DROP-* | NOT IMPLEMENTED | Loot definitions exist, no death-drop runtime | Requires monster lifecycle |
 | DG-OBJ-* | NOT IMPLEMENTED | Item definitions exist, no dungeon object generation | Requires object allocation/runtime |
@@ -452,7 +491,7 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 
 - `src/IronHell.Core/Dungeon/DungeonGrid.cs` — authoritative 198x66 cell grid, composable room/icky/glow cell state, 6x18 room-block reservation, feature IDs, and ordered room centers.
 - `src/IronHell.Core/Dungeon/RoomFamilyMetadata.cs` — verified family minimum-depth and rectangular block-footprint metadata.
-- `src/IronHell.Core/Dungeon/RoomContentAttempt.cs` — immutable ordered deferred room-content request representation.
+- `src/IronHell.Core/Dungeon/RoomContentAttempt.cs` — immutable ordered content request representation with prepared door/stair decisions.
 - `src/IronHell.Core/Dungeon/RoomGeometryBuilder.cs` — ordinary geometry plus verified nest/pit shells and deferred spatial monster requests.
 - `src/IronHell.Core/Dungeon/VaultDefinition.cs` — immutable stable-ID vault definition and type normalization.
 - `src/IronHell.Core/Dungeon/VaultRoomBuilder.cs` — vault eligibility, selection, coordinate mapping, terrain/state writes, and deferred glyph attempts.
@@ -462,6 +501,12 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 - `src/IronHell.Core/Dungeon/DungeonTunnelDoorBuilder.cs` — ordered 25% entrance-door and 90% eligible junction-door passes.
 - `src/IronHell.Core/Dungeon/DungeonDoorGenerator.cs` — verified random door feature/state distribution plus existing room-specific door helpers.
 - `src/IronHell.Core/Dungeon/RoomDoorAttemptExecutor.cs` — ordered room/vault secret/locked request execution with non-door attempts retained.
+- `src/IronHell.Core/Dungeon/RoomMonsterAttemptExecutor.cs` — exact-position execution of prepared, group-suppressed nest/pit requests; all unsupported attempts remain ordered.
+- `src/IronHell.Core/Dungeon/DungeonStairAllocator.cs` — ordinary global stair counts, candidate order, and wall-requirement relaxation.
+- `src/IronHell.Core/Dungeon/DungeonStairGenerator.cs` — verified depth/quest direction selection and floor-only stair feature writes.
+- `src/IronHell.Core/Dungeon/RoomStairAttemptExecutor.cs` — ordered RandomStair execution with remaining room content retained.
+- `src/IronHell.Data/Loading/DefinitionDocumentLoader.cs` — loads and evaluates definition schemas with a per-load registry.
+- `src/IronHell.Data/Visuals/TerrainVisualCatalogLoader.cs` — evaluates terrain visuals with a per-load registry.
 - `src/IronHell.Data/Serialization/VaultDefinitionReader.cs` — maps `environment/vaults.json` into validated Core definitions.
 
 ### Population and formations
@@ -492,6 +537,7 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 - `src/IronHell.Core.Tests/Monsters/MonsterNestPreparationTests.cs` — nest family thresholds, predicates, 64-sample replacement, abort, isolation, and replay.
 - `src/IronHell.Core.Tests/Monsters/MonsterPitPreparationTests.cs` — pit family/mask thresholds, predicates, 16-sample replacement, sorting, tiers, abort, and isolation.
 - `src/IronHell.Data.Tests/MonsterDefinitionReaderTests.cs` — monster field mapping, including symbol.
+- `src/IronHell.Data.Tests/DefinitionCatalogLoaderTests.cs` — concurrent definition/terrain schema loading regression.
 - `src/IronHell.Core.Tests/Dungeon/DungeonGridTests.cs` — dimensions, 11x11 block mapping, atomic reservations, flags, and room-center order.
 - `src/IronHell.Core.Tests/Dungeon/RoomGeometryBuilderTests.cs` — family metadata, ordinary geometry, RNG ordering, variants, deferred attempts, replay, lighting, overlap, and failure behavior.
 - `src/IronHell.Core.Tests/Dungeon/VaultRoomBuilderTests.cs` — vault eligibility, type-9 normalization, coordinates, footprints, atomic failure, flags, glyph ordering, depth offsets, and replay.
@@ -500,12 +546,14 @@ Failed randomized attempts remain consumed. Zero-attempt and zero-total paths co
 - `src/IronHell.Core.Tests/Dungeon/ConnectivityAndTunnelTests.cs` — rock prerequisite, center ordering, cyclic connections, carving, piercing, junction candidates, permanent terrain, and replay.
 - `src/IronHell.Core.Tests/Dungeon/DungeonTunnelDoorBuilderTests.cs` — entrance/junction ordering and thresholds, doorway eligibility, duplicate semantics, feature distribution, flags, replay, and composed connectivity integration.
 - `src/IronHell.Core.Tests/Dungeon/RoomDoorAttemptExecutorTests.cs` — secret/locked behavior, mixed ordering/filtering, same-cell attempts, vault flags, large-room deferred integration, no-door behavior, and replay.
+- `src/IronHell.Core.Tests/Dungeon/RoomMonsterAttemptExecutorTests.cs` — prepared nest/pit execution, coordinates, order, failures, terrain, ForceDepth, suppression, deferred producers, and replay.
+- `src/IronHell.Core.Tests/Dungeon/DungeonStairTests.cs` — stair direction thresholds, source-time preparation, global counts/candidates/retries, legality, flags, mixed attempts, and replay.
 
 ## 7. Verified Parity vs IronHell Infrastructure
 
 ### `MonsterPlacementSpace`
 
-IRONHELL-PROPOSED INFRASTRUCTURE: finite bounds plus explicit illegal cells. It exists because the full MAngband feature grid is not implemented. It is not the final dungeon terrain representation.
+IRONHELL-PROPOSED INFRASTRUCTURE: finite bounds plus explicit illegal cells. It exists because the full MAngband feature grid is not implemented. `RoomMonsterAttemptExecutor` composes it with the current dungeon-grid `open_floor` check for prepared nest/pit positions; it is not the final terrain or occupancy representation for all dungeon content.
 
 ### `DungeonGrid`
 
@@ -517,7 +565,7 @@ REPO-CONFIRMED LIMITED TERRAIN FOUNDATION: type-1/type-2 builders write the exis
 
 ### `RoomContentAttempt`
 
-IRONHELL-PROPOSED INFRASTRUCTURE: this immutable ordered request record preserves MAngband-verified room-local effects until future door, monster, object, trap, and stair execution subsystems exist. It records requests, origins, radii, depth context, and special intent where verified. It does not create runtime entities, claim placement success, or replace those future subsystems.
+IRONHELL-PROPOSED INFRASTRUCTURE: this immutable ordered request record preserves MAngband-verified room-local effects. Door and RandomStair execution consume their request kinds; prepared nest/pit Monster requests also execute. Ordinary/vault monsters, objects, gold, artifacts, and traps remain deferred. It records requests, origins, radii, depth context, special intent, and prepared source-time decisions where verified; unsupported requests do not create runtime entities or claim placement success.
 
 ### `MonsterLocationSearch`
 
@@ -699,15 +747,27 @@ DG-ROOM-002 is satisfied for the current verified family-dispatch boundary: `Roo
 
 ### Room-content execution
 
-Room/vault `SecretDoor` and `LockedDoor` requests execute in attempt order. Monster, trap, object, object/gold, special-object, and random-stair requests remain deferred. Requested attempts are intentionally distinct from successful placements.
+Room/vault `SecretDoor`, `LockedDoor`, and `RandomStair` requests execute through focused executors. Prepared nest/pit `Monster` requests execute at their exact positions in source order; failed positions do not relocate or retry. Ordinary room and vault `Monster` requests remain deferred, as do trap, object, object/gold, and special-object requests. Requested attempts remain distinct from successful placements.
 
 ### Remaining spatial and lifecycle work
 
-Stairs, object generation, traps, rating, and the complete dungeon lifecycle remain deferred. Tunnel entrance/junction and room/vault-local doors are generated. Missing source vault content and downstream non-door vault-content execution are explicit parity gaps.
+Stair placement is implemented for the represented ordinary/global and room-request boundaries. Nest/pit placement now updates authoritative monster occupancy, but `DungeonStairAllocator` does not consume it; object occupancy and level-entry side effects remain unrepresented. Ordinary/vault monster allocation, object generation, traps, rating, and the complete dungeon lifecycle remain deferred. Tunnel entrance/junction and room/vault-local doors execute. Missing source vault content and downstream non-door vault-content execution are explicit parity gaps.
 
 ## 11. Test and Build Baseline
 
-Fresh validation on 2026-10-02:
+Fresh validation on 2026-10-05:
+
+- Focused Slice 6A executor tests: **14 passed, 0 failed, 0 skipped**.
+- Focused room geometry, nest/pit, prepared executor, placement, eligibility, group, and escort regressions: **71 passed, 0 failed, 0 skipped**.
+- Focused Slice 5D stair tests: **15 passed, 0 failed, 0 skipped**.
+- Focused Slice 6A plus nest/pit preparation, room/door/stair/tunnel/grid, monster placement/group/escort regressions: **185 passed, 0 failed, 0 skipped**.
+- Full Core tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore` — **420 passed, 0 failed, 0 skipped**.
+- Full Data tests: `dotnet test src/IronHell.Data.Tests/IronHell.Data.Tests.csproj --no-restore` — **155 passed, 0 failed, 0 skipped** in 159.5 seconds after schema registry isolation. Earlier attempts were stopped at 120 seconds without a final result; a prior Slice 5D run surfaced the `SchemaRegistry.CopyFrom` collection-modified race.
+- Data concurrency fix: definition and terrain loaders now register schemas in their per-call `EvaluationOptions.SchemaRegistry`, never `SchemaRegistry.Global`; a concurrent cross-loader regression passes.
+- Solution build: `dotnet build IronHell.sln --no-restore` — **PASS**.
+- Full solution/workspace test suite: not run; no workspace-wide test result is claimed.
+
+Historical Slice 5C validation on 2026-10-02:
 
 - Focused vault tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore --filter FullyQualifiedName~VaultRoomBuilderTests` — **9 passed, 0 failed, 0 skipped**.
 - Focused dispatcher tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore --filter FullyQualifiedName~RoomDispatcherTests` — **6 passed, 0 failed, 0 skipped**.
@@ -722,25 +782,19 @@ Fresh validation on 2026-10-02:
 - Focused dungeon-grid tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore --filter FullyQualifiedName~DungeonGridTests` — **13 passed, 0 failed, 0 skipped**.
 - Focused room-geometry tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore --filter FullyQualifiedName~RoomGeometryBuilderTests` — **20 passed, 0 failed, 0 skipped**.
 - Data project compilation: `dotnet build IronHell.sln --no-restore` compiled `IronHell.Data` and `IronHell.Data.Tests` successfully; no isolated vault-reader test was added.
-- Full Core tests: `dotnet test src/IronHell.Core.Tests/IronHell.Core.Tests.csproj --no-restore` — **379 passed, 0 failed, 0 skipped**.
-- Full Data tests: `dotnet test src/IronHell.Data.Tests/IronHell.Data.Tests.csproj --no-restore` — **STALLED / INTERRUPTED WITHOUT FINAL RESULT** after 120 seconds at `IronHell.Data.Tests Testing`; project compilation succeeded, no test verdict was produced.
-- Full solution test suite: not run after Slice 5C; no workspace-wide result is claimed.
-- Full workspace test runner: not run after Slice 5C; no workspace-wide result is claimed.
-- Solution build: `dotnet build IronHell.sln --no-restore` — **PASS**.
-
-The previously observed direct full-suite failures remain unrelated to Slice 4C:
+The Data test issue is outside the 5D changes and matches the previously observed schema-registry concurrency failure:
 
 - `IronHell.Data.Tests.SpellExecutionBootstrapTests.LoadAsync_RepositorySpells_PublishActionReferences`
 - `Json.Schema.SchemaRegistry.RegisterSchema` / `DefinitionDocumentLoader.LoadSchemas`
 - failure pattern: concurrent mutation of the schema registry dictionary and related schema-registration errors
 
-No workspace-wide result is claimed after Slice 5C. No production or test changes were made to address the Data test stall.
+No production or test changes were made to address the Data test failure/stall.
 
 ## 12. Major Dungeon Generation Areas Not Yet Implemented
 
 The repository contains some static catalogs and validators, but executable runtime behavior remains absent for:
 
-- room-local deferred secret/locked door execution and stairs;
+- remaining dungeon-generation subsystems, content execution, and lifecycle behavior;
 - complete vault content migration and deferred-content execution;
 - object allocation, quality, artifacts, and gold;
 - monster drops;
@@ -756,11 +810,11 @@ Static definitions for some of these domains exist, but definitions/catalogs are
 
 ## 13. Recommended Next Implementation Sequence
 
-### Next: Slice 5D — Stair placement foundation
+### Next: Slice 6B — Monster spawn-state RNG foundation
 
-**Requirements:** DG-STAIR-001; conditional DG-STAIR-002.
+**Requirements:** DG-RNG-001; DG-MON-004.
 
-**Bounded outcome:** implement verified stair terrain placement from the existing ordinary/random-stair contracts. Keep all other deferred room-content, object, trap, rating, and lifecycle behavior out of scope.
+**Bounded outcome:** model and consume the verified `place_monster_one` runtime initialization decisions required by `MonsterRuntimeInstance` before any further monster-placement execution expands. Resolve represented HP/speed/energy fields and keep ordinary allocation, room/vault content selection, groups, objects, and traps out of scope.
 
 ## 14. Golden-Seed Status
 
@@ -797,7 +851,7 @@ Current deterministic unit tests are not substitutes for verified whole-generati
 - player/level unique eligibility;
 - full terrain/LOS legality;
 - monster removal/death lifecycle;
-- all unimplemented dungeon-generation families;
+- remaining dungeon-generation subsystems, content execution, and lifecycle behavior;
 - golden-seed whole-generation evidence.
 
 ### Technical debt
@@ -806,7 +860,7 @@ No new technical debt was introduced by this checkpoint. The minimal placement s
 
 ## 17. Current Milestone
 
-**Room Generation, Connectivity, and Tunnel-Door Foundation Complete**
+**Room, Connectivity, Door, Stair, and Prepared Nest/Pit Placement Foundations**
 
 The repository can execute and test:
 
@@ -831,6 +885,10 @@ definitions
     -> bounded tunnel carving, wall piercing, and deferred junction candidates
     -> generated tunnel entrance and junction doors
     -> RoomDoorAttemptExecutor executes room/vault secret and locked doors
+    -> DungeonStairAllocator places ordinary global stairs
+    -> RoomStairAttemptExecutor executes room RandomStair requests
+    -> RoomMonsterAttemptExecutor places prepared nest/pit monsters
+    -> deferred ordinary/vault monsters and object/gold/artifact/trap content
 ```
 
-It is not yet correct to call this complete dungeon-generation parity. All eight current room families, the 50-attempt dispatcher, connectivity/tunnels, and current tunnel/room/vault door paths now execute deterministically, but non-door room content, stairs, traps, objects, drops, rating/feelings, lifecycle retries, town, quests, static levels, wilderness, missing source vault content, and whole-generation golden evidence remain incomplete or conditional.
+It is not yet correct to call this complete dungeon-generation parity. All eight current room families, the 50-attempt dispatcher, connectivity/tunnels, doors, represented stair paths, and prepared nest/pit monster placement now execute deterministically. Ordinary/vault monster generation, monster spawn-stat RNG, object/gold/artifact/trap content, drops, rating/feelings, lifecycle retries, town, quest/static levels, wilderness, missing source vault content, complete stair occupancy/entry state, and whole-generation golden evidence remain incomplete or conditional.

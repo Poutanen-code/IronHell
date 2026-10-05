@@ -551,7 +551,7 @@ public static class RoomGeometryBuilder
     private static void WriteDoubleRectangle(DungeonGrid grid, int y1, int y2, int x1, int x2, bool light)
     {
         WriteRectangle(grid, y1, y2, x1, x2, light);
-        WriteInnerBorder(grid, y1 + 2, y2 - 2, x1 + 2, x2 - 2);
+        WriteInnerBorder(grid, y1 + 1, y2 - 1, x1 + 1, x2 - 1);
     }
 
     private static void WriteInnerBorder(DungeonGrid grid, int y1, int y2, int x1, int x2)

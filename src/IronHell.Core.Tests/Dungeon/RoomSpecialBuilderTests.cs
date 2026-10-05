@@ -51,6 +51,39 @@ public sealed class RoomSpecialBuilderTests
     }
 
     [Fact]
+    public void NestAndPitMonsterRequests_TargetRoomFloor()
+    {
+        var nestGrid = new DungeonGrid();
+        var nest = RoomGeometryBuilder.TryBuildNest(
+            nestGrid,
+            new RoomBlockPosition(0, 0),
+            new MonsterNestPreparationResult(true, MonsterNestFamily.Jelly, Enumerable.Repeat("orc", 64).ToArray()),
+            new RepeatingRandomSource());
+        var pitGrid = new DungeonGrid();
+        var pit = RoomGeometryBuilder.TryBuildPit(
+            pitGrid,
+            new RoomBlockPosition(0, 0),
+            new MonsterPitPreparationResult(
+                true,
+                new MonsterPitSelection(MonsterPitFamily.Orc, null),
+                Enumerable.Repeat("orc", 16).ToArray(),
+                Enumerable.Repeat("orc", 16).ToArray(),
+                Enumerable.Repeat("orc", 8).ToArray()),
+            new RepeatingRandomSource());
+
+        Assert.All(nest.Attempts.Where(attempt => attempt.Kind == RoomContentAttemptKind.Monster), attempt =>
+        {
+            Assert.Equal(RoomGeometryBuilder.OpenFloorFeatureId, nestGrid.GetFeatureId(attempt.Origin));
+            Assert.True(nestGrid.GetCellFlags(attempt.Origin).HasFlag(DungeonCellStates.Room));
+        });
+        Assert.All(pit.Attempts.Where(attempt => attempt.Kind == RoomContentAttemptKind.Monster), attempt =>
+        {
+            Assert.Equal(RoomGeometryBuilder.OpenFloorFeatureId, pitGrid.GetFeatureId(attempt.Origin));
+            Assert.True(pitGrid.GetCellFlags(attempt.Origin).HasFlag(DungeonCellStates.Room));
+        });
+    }
+
+    [Fact]
     public void RoomDispatcher_NestPreparationFailure_CountsOneFailedAttempt()
     {
         var grid = new DungeonGrid();

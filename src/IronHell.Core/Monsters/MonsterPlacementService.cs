@@ -9,6 +9,7 @@ public enum MonsterPlacementFailureReason
     IllegalCell,
     Occupied,
     UniqueUnavailable,
+    ForceDepth,
 }
 
 public sealed record MonsterPlacementResult(
@@ -22,7 +23,8 @@ public static class MonsterPlacementService
         MonsterRuntimeState state,
         MonsterDefinition definition,
         MonsterPosition position,
-        MonsterPlacementSpace? space = null)
+        MonsterPlacementSpace? space = null,
+        int? depth = null)
     {
         ArgumentNullException.ThrowIfNull(state);
         ArgumentNullException.ThrowIfNull(definition);
@@ -60,6 +62,16 @@ public static class MonsterPlacementService
                 Success: false,
                 Monster: null,
                 MapFailureReason(eligibility.RejectionReason));
+        }
+
+        if (depth is { } placementDepth &&
+            definition.SpawnPolicy.ForceDepth &&
+            placementDepth < definition.NativeLevel)
+        {
+            return new MonsterPlacementResult(
+                Success: false,
+                Monster: null,
+                MonsterPlacementFailureReason.ForceDepth);
         }
 
         var monster = state.Register(definition.Id, position);

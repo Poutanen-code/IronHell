@@ -15,7 +15,11 @@ internal static class DefinitionDocumentLoader
         CancellationToken cancellationToken)
     {
         var documents = new Dictionary<string, JsonObject>(StringComparer.Ordinal);
-        var schemas = LoadSchemas(definitionsRoot, manifest, report);
+        var evaluationOptions = new EvaluationOptions
+        {
+            OutputFormat = OutputFormat.List,
+        };
+        var schemas = LoadSchemas(definitionsRoot, manifest, evaluationOptions.SchemaRegistry, report);
         foreach (var entry in manifest.OrderBy(entry => entry.JsonPath, StringComparer.Ordinal))
         {
             var document = await TryLoadDocumentAsync(definitionsRoot, entry, report, cancellationToken);
@@ -26,10 +30,7 @@ internal static class DefinitionDocumentLoader
 
             if (schemas.TryGetValue(entry.Name, out var schema))
             {
-                var evaluation = schema.Evaluate(document, new EvaluationOptions
-                {
-                    OutputFormat = OutputFormat.List,
-                });
+                var evaluation = schema.Evaluate(document, evaluationOptions);
                 foreach (var error in GetSchemaErrors(evaluation).Where(error => !IsSchemaBranchNoise(entry, error)))
                 {
                     report.Add(entry.JsonPath, null, error.InstancePath, "schema_validation", error.Message);
@@ -88,6 +89,7 @@ internal static class DefinitionDocumentLoader
     private static FrozenDictionary<string, JsonSchema> LoadSchemas(
         string definitionsRoot,
         IReadOnlyList<DefinitionManifestEntry> manifest,
+        SchemaRegistry schemaRegistry,
         DefinitionValidationReport report)
     {
         var schemas = new Dictionary<string, JsonSchema>(StringComparer.Ordinal);
@@ -113,10 +115,10 @@ internal static class DefinitionDocumentLoader
                 var schema = IsItemSchema(schemaPath)
                     ? JsonSchema.FromText(BundleCommonItemDefinitions(absolutePath, commonItemDefinitions))
                     : JsonSchema.FromFile(absolutePath);
-                SchemaRegistry.Global.Register(schema);
+                schemaRegistry.Register(schema);
                 if (IsItemSchema(schemaPath))
                 {
-                    SchemaRegistry.Global.Register(new Uri($"https://ironhell.local/schemas/items/{Path.GetFileName(schemaPath)}"), schema);
+                    schemaRegistry.Register(new Uri($"https://ironhell.local/schemas/items/{Path.GetFileName(schemaPath)}"), schema);
                 }
                 foreach (var entry in manifest.Where(candidate => candidate.SchemaPath == schemaPath))
                 {
