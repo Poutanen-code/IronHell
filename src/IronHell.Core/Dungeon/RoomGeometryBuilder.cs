@@ -307,7 +307,8 @@ public static class RoomGeometryBuilder
         DungeonGrid grid,
         RoomBlockPosition startBlock,
         int depth,
-        IRandomSource randomSource)
+        IRandomSource randomSource,
+        bool isQuestLevel = false)
     {
         ArgumentNullException.ThrowIfNull(grid);
         ArgumentNullException.ThrowIfNull(randomSource);
@@ -349,7 +350,13 @@ public static class RoomGeometryBuilder
                 }
                 else
                 {
-                    attempts.Add(new RoomContentAttempt(RoomContentAttemptKind.RandomStair, center));
+                    var preparedStairFeatureId = grid.GetFeatureId(center) == OpenFloorFeatureId
+                        ? DungeonStairGenerator.PrepareRandomStairFeature(depth, isQuestLevel, randomSource)
+                        : null;
+                    attempts.Add(new RoomContentAttempt(
+                        RoomContentAttemptKind.RandomStair,
+                        center,
+                        PreparedStairFeatureId: preparedStairFeatureId));
                 }
                 AddAttempts(attempts, RoomContentAttemptKind.Trap, center, randomSource.Next(1, 4) + 2, 4, 10);
                 break;

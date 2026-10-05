@@ -17,7 +17,8 @@ public sealed record RoomDispatchResult(
 public sealed record RoomDispatchInputs(
     IReadOnlyList<VaultDefinition> VaultDefinitions,
     IReadOnlyList<MonsterDefinition> MonsterDefinitions,
-    IReadOnlyList<MonsterAllocationEntry> MonsterAllocationEntries);
+    IReadOnlyList<MonsterAllocationEntry> MonsterAllocationEntries,
+    bool IsQuestLevel = false);
 
 public static class RoomDispatcher
 {
@@ -66,7 +67,7 @@ public static class RoomDispatcher
     {
         if (randomSource.Next(0, UnusualThreshold) >= depth)
         {
-            return TryBuildFamily(grid, start, depth, RoomFamily.Simple, null, randomSource);
+            return TryBuildFamily(grid, start, depth, RoomFamily.Simple, null, randomSource, inputs.IsQuestLevel);
         }
 
         var familyRoll = randomSource.Next(0, 100);
@@ -81,7 +82,7 @@ public static class RoomDispatcher
 
         if (familyRoll < 25)
         {
-            var large = TryBuildFamily(grid, start, depth, RoomFamily.Large, null, randomSource);
+            var large = TryBuildFamily(grid, start, depth, RoomFamily.Large, null, randomSource, inputs.IsQuestLevel);
             if (large.Succeeded)
             {
                 return large;
@@ -90,7 +91,7 @@ public static class RoomDispatcher
 
         if (familyRoll < 50)
         {
-            var cross = TryBuildFamily(grid, start, depth, RoomFamily.Cross, null, randomSource);
+            var cross = TryBuildFamily(grid, start, depth, RoomFamily.Cross, null, randomSource, inputs.IsQuestLevel);
             if (cross.Succeeded)
             {
                 return cross;
@@ -99,14 +100,14 @@ public static class RoomDispatcher
 
         if (familyRoll < 100)
         {
-            var overlapping = TryBuildFamily(grid, start, depth, RoomFamily.Overlapping, null, randomSource);
+            var overlapping = TryBuildFamily(grid, start, depth, RoomFamily.Overlapping, null, randomSource, inputs.IsQuestLevel);
             if (overlapping.Succeeded)
             {
                 return overlapping;
             }
         }
 
-        return TryBuildFamily(grid, start, depth, RoomFamily.Simple, null, randomSource);
+        return TryBuildFamily(grid, start, depth, RoomFamily.Simple, null, randomSource, inputs.IsQuestLevel);
     }
 
     private static RoomBuildResult? TrySpecialFamily(
@@ -146,7 +147,8 @@ public static class RoomDispatcher
         int depth,
         RoomFamily family,
         VaultDefinition? definition,
-        IRandomSource randomSource)
+        IRandomSource randomSource,
+        bool isQuestLevel = false)
     {
         var metadata = RoomFamilies.Get(family);
         if (depth < metadata.MinimumDepth || !grid.IsRoomFootprintAvailable(start, metadata.Footprint))
@@ -159,7 +161,7 @@ public static class RoomDispatcher
             RoomFamily.Simple => RoomGeometryBuilder.TryBuildSimple(grid, start, depth, randomSource),
             RoomFamily.Overlapping => RoomGeometryBuilder.TryBuildOverlapping(grid, start, depth, randomSource),
             RoomFamily.Cross => RoomGeometryBuilder.TryBuildCross(grid, start, depth, randomSource),
-            RoomFamily.Large => RoomGeometryBuilder.TryBuildLarge(grid, start, depth, randomSource),
+            RoomFamily.Large => RoomGeometryBuilder.TryBuildLarge(grid, start, depth, randomSource, isQuestLevel),
             RoomFamily.LesserVault or RoomFamily.GreaterVault => VaultRoomBuilder.TryBuild(grid, start, depth, definition!, randomSource),
             _ => Failed(family),
         };

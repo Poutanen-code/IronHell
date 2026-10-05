@@ -21,4 +21,5 @@ public sealed record RoomContentAttempt(
     bool Special = false,
     string? DefinitionId = null,
     bool AllowGroupExpansion = true,
-    DoorState? PreparedDoorState = null);
+    DoorState? PreparedDoorState = null,
+    string? PreparedStairFeatureId = null);

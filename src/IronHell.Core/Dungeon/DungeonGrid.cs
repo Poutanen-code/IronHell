@@ -44,6 +44,8 @@ public sealed class DungeonGrid
     public const string OpenDoorFeatureId = "open_door";
     public const string BrokenDoorFeatureId = "broken_door";
     public const string SecretDoorFeatureId = "secret_door";
+    public const string UpStairFeatureId = "up_staircase";
+    public const string DownStairFeatureId = "down_staircase";
     public const int DungeonWidth = 198;
     public const int DungeonHeight = 66;
     public const int BlockWidth = 11;
