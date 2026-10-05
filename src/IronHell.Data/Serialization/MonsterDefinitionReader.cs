@@ -130,7 +130,8 @@ internal static class MonsterDefinitionReader
                 stats?["rarity"]?.GetValue<int>() ?? 1,
                 monster["symbol"]?.GetValue<string>() ?? string.Empty,
                 Array.AsReadOnly(categories),
-                Array.AsReadOnly(abilities)));
+                Array.AsReadOnly(abilities),
+                stats?["movement_speed"]?.GetValue<int>()));
         }
 
         ValidationHelpers.ValidateDuplicates("monsters", definitions, report);

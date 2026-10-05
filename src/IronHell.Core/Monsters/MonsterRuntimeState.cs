@@ -5,7 +5,14 @@ namespace IronHell.Core.Monsters;
 public sealed record MonsterRuntimeInstance(
     string InstanceId,
     string DefinitionId,
-    MonsterPosition Position);
+    MonsterPosition Position,
+    MonsterSpawnState SpawnState);
+
+public sealed record MonsterSpawnState(
+    int MaxHp,
+    int CurrentHp,
+    int MovementSpeed,
+    int Energy);
 
 public sealed class MonsterRuntimeState
 {
@@ -28,11 +35,14 @@ public sealed class MonsterRuntimeState
             !_monstersById.Values.Any(monster => monster.DefinitionId == definition.Id);
     }
 
-    internal MonsterRuntimeInstance Register(string definitionId, MonsterPosition position)
+    internal MonsterRuntimeInstance Register(
+        string definitionId,
+        MonsterPosition position,
+        MonsterSpawnState spawnState)
     {
         var instanceId = $"monster-{_nextInstanceNumber}";
         _nextInstanceNumber++;
-        var monster = new MonsterRuntimeInstance(instanceId, definitionId, position);
+        var monster = new MonsterRuntimeInstance(instanceId, definitionId, position, spawnState);
         _monstersById.Add(instanceId, monster);
         _monsterIdByPosition.Add(position, instanceId);
         return monster;

@@ -67,7 +67,7 @@ public static class MonsterGroupExpander
                 }
 
                 var target = new MonsterPosition(origin.X + offset.X, origin.Y + offset.Y);
-                var placement = MonsterPlacementService.Place(state, definition, target, space);
+                var placement = MonsterPlacementService.Place(state, definition, target, randomSource, space, depth);
                 if (placement.Success)
                 {
                     successfulGroupSize++;

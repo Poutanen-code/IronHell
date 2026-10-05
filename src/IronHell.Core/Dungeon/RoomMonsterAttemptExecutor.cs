@@ -1,5 +1,6 @@
 using IronHell.Core.Definitions;
 using IronHell.Core.Monsters;
+using IronHell.Core.Randomness;
 
 namespace IronHell.Core.Dungeon;
 
@@ -24,12 +25,14 @@ public static class RoomMonsterAttemptExecutor
         int depth,
         IReadOnlyDictionary<string, MonsterDefinition> definitions,
         MonsterRuntimeState runtimeState,
+        IRandomSource randomSource,
         MonsterPlacementSpace placementSpace)
     {
         ArgumentNullException.ThrowIfNull(grid);
         ArgumentNullException.ThrowIfNull(attempts);
         ArgumentNullException.ThrowIfNull(definitions);
         ArgumentNullException.ThrowIfNull(runtimeState);
+        ArgumentNullException.ThrowIfNull(randomSource);
         ArgumentNullException.ThrowIfNull(placementSpace);
         ArgumentOutOfRangeException.ThrowIfNegative(depth);
 
@@ -50,7 +53,14 @@ public static class RoomMonsterAttemptExecutor
             }
 
             var position = ToMonsterPosition(attempt.Origin);
-            var placement = PlaceAtRequestedPosition(grid, runtimeState, placementSpace, definition, position, depth);
+            var placement = PlaceAtRequestedPosition(
+                grid,
+                runtimeState,
+                placementSpace,
+                definition,
+                position,
+                randomSource,
+                depth);
             processed.Add(new RoomMonsterAttemptPlacement(attempt, placement));
         }
 
@@ -71,6 +81,7 @@ public static class RoomMonsterAttemptExecutor
         MonsterPlacementSpace placementSpace,
         MonsterDefinition definition,
         MonsterPosition position,
+        IRandomSource randomSource,
         int depth)
     {
         var dungeonPosition = new DungeonPosition(position.Y, position.X);
@@ -84,6 +95,6 @@ public static class RoomMonsterAttemptExecutor
             return new MonsterPlacementResult(false, null, MonsterPlacementFailureReason.IllegalCell);
         }
 
-        return MonsterPlacementService.Place(runtimeState, definition, position, placementSpace, depth);
+        return MonsterPlacementService.Place(runtimeState, definition, position, randomSource, placementSpace, depth);
     }
 }

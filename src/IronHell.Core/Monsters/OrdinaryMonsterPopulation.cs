@@ -68,7 +68,7 @@ public static class OrdinaryMonsterPopulation
                 throw new KeyNotFoundException($"Monster definition '{definitionId}' was not provided.");
             }
 
-            var placement = MonsterPlacementService.Place(state, definition, position.Value, space);
+            var placement = MonsterPlacementService.Place(state, definition, position.Value, randomSource, space, depth);
             if (placement.Success)
             {
                 successfulPlacements++;

@@ -64,7 +64,13 @@ public static class MonsterEscortExpander
                 throw new KeyNotFoundException($"Monster definition '{definitionId}' was not provided.");
             }
 
-            var placement = MonsterPlacementService.Place(state, escortDefinition, target, options.Space);
+            var placement = MonsterPlacementService.Place(
+                state,
+                escortDefinition,
+                target,
+                options.RandomSource,
+                options.Space,
+                options.Depth);
             if (!placement.Success)
             {
                 continue;

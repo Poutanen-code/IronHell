@@ -308,7 +308,8 @@ public sealed record MonsterDefinition(
 	int Rarity = 1,
 	string Symbol = "",
 	IReadOnlyList<string>? Categories = null,
-	IReadOnlyList<string>? Abilities = null) : IIdentifiedDefinition;
+	IReadOnlyList<string>? Abilities = null,
+	int? MovementSpeed = null) : IIdentifiedDefinition;
 
 public sealed record TerrainDefinition(string Id) : IIdentifiedDefinition;
 

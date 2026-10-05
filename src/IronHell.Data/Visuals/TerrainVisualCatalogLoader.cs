@@ -34,7 +34,13 @@ public static class TerrainVisualCatalogLoader
             return Failure(report);
         }
 
-        return BuildCatalog(loaded.Value.Document, loaded.Value.Schema, terrainDefinitionIds, artRoot, report);
+        return BuildCatalog(
+            loaded.Value.Document,
+            loaded.Value.Schema,
+            loaded.Value.EvaluationOptions,
+            terrainDefinitionIds,
+            artRoot,
+            report);
     }
 
     private static bool ValidateRequiredFiles(
@@ -58,7 +64,7 @@ public static class TerrainVisualCatalogLoader
         return valid;
     }
 
-    private static async Task<(JsonObject Document, JsonSchema Schema)?> TryLoadCatalogAsync(
+    private static async Task<(JsonObject Document, JsonSchema Schema, EvaluationOptions EvaluationOptions)?> TryLoadCatalogAsync(
         string catalogPath,
         string schemaPath,
         DefinitionValidationReport report,
@@ -74,7 +80,10 @@ public static class TerrainVisualCatalogLoader
 
             var document = JsonNode.Parse(catalogJson) as JsonObject
                 ?? throw new JsonException("Root JSON value must be an object.");
-            return (document, JsonSchema.FromFile(schemaPath));
+            var schema = JsonSchema.FromFile(schemaPath);
+            var evaluationOptions = new EvaluationOptions();
+            evaluationOptions.SchemaRegistry.Register(schema);
+            return (document, schema, evaluationOptions);
         }
         catch (JsonException exception)
         {
@@ -91,11 +100,12 @@ public static class TerrainVisualCatalogLoader
     private static TerrainVisualCatalogLoadResult BuildCatalog(
         JsonObject document,
         JsonSchema schema,
+        EvaluationOptions evaluationOptions,
         IEnumerable<string> terrainDefinitionIds,
         string artRoot,
         DefinitionValidationReport report)
     {
-        if (!schema.Evaluate(document).IsValid)
+        if (!schema.Evaluate(document, evaluationOptions).IsValid)
         {
             report.Add(CatalogRelativePath, null, "$", "schema_validation", "Terrain visual catalog does not match its schema.");
             return Failure(report);

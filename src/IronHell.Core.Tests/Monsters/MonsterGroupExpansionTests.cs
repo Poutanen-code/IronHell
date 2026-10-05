@@ -12,7 +12,7 @@ public sealed class MonsterGroupExpansionTests
     {
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("friend", friends: true);
-        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2));
+        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2), new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
 
@@ -35,7 +35,7 @@ public sealed class MonsterGroupExpansionTests
     {
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("ordinary", friends: false);
-        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2));
+        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2), new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
 
@@ -100,7 +100,7 @@ public sealed class MonsterGroupExpansionTests
     {
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("friend", friends: true);
-        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2));
+        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2), new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
 
@@ -123,7 +123,7 @@ public sealed class MonsterGroupExpansionTests
     {
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("friend", friends: true);
-        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2));
+        var leader = MonsterPlacementService.Place(state, definition, new MonsterPosition(2, 2), new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
 
@@ -134,7 +134,7 @@ public sealed class MonsterGroupExpansionTests
             new MonsterPlacementSpace(5, 5),
             depth: 1,
             allowGroupExpansion: true,
-            new ScriptedRandomSource(3));
+            new ScriptedRandomSource(3, 0, 0));
 
         Assert.Equal(3, result.DesiredGroupSize);
         Assert.Equal(3, result.SuccessfulGroupSize);
@@ -156,7 +156,7 @@ public sealed class MonsterGroupExpansionTests
                 .Except(legal));
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("friend", friends: true);
-        var leader = MonsterPlacementService.Place(state, definition, leaderPosition);
+        var leader = MonsterPlacementService.Place(state, definition, leaderPosition, new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
 
@@ -167,7 +167,7 @@ public sealed class MonsterGroupExpansionTests
             space,
             depth: 1,
             allowGroupExpansion: true,
-            new ScriptedRandomSource(3));
+            new ScriptedRandomSource(3, 0, 0));
 
         Assert.Equal(3, result.SuccessfulGroupSize);
         Assert.Contains(state.Monsters, monster => monster.Position == firstFriendPosition);
@@ -180,7 +180,7 @@ public sealed class MonsterGroupExpansionTests
         var position = new MonsterPosition(1, 1);
         var state = new MonsterRuntimeState();
         var definition = CreateMonster("friend", friends: true);
-        var leader = MonsterPlacementService.Place(state, definition, position);
+        var leader = MonsterPlacementService.Place(state, definition, position, new SeededRandomSource(1));
         var leaderMonster = leader.Monster;
         Assert.NotNull(leaderMonster);
         var space = new MonsterPlacementSpace(
@@ -214,7 +214,8 @@ public sealed class MonsterGroupExpansionTests
             new SpawnPolicy(false, false, false, false, false, false, false, friends, false),
             null,
             NativeLevel: 1,
-            Rarity: 1);
+            Rarity: 1,
+            MovementSpeed: 100);
 
     private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
     {
@@ -235,6 +236,15 @@ public sealed class MonsterGroupExpansionTests
             return value;
         }
 
-        public int RollDice(int count, int sides) => throw new NotSupportedException();
+        public int RollDice(int count, int sides)
+        {
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
+        }
     }
 }

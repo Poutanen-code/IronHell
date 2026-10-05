@@ -46,7 +46,7 @@ public sealed class MonsterPlacementSpaceTests
     {
         var state = new MonsterRuntimeState();
         var position = new MonsterPosition(1, 1);
-        MonsterPlacementService.Place(state, CreateMonster("orc"), position);
+        MonsterPlacementService.Place(state, CreateMonster("orc"), position, new SeededRandomSource(1));
         var space = new MonsterPlacementSpace(3, 3);
 
         Assert.False(space.IsAvailable(position, state));
@@ -83,7 +83,7 @@ public sealed class MonsterPlacementSpaceTests
     {
         var space = new MonsterPlacementSpace(3, 3);
         var state = new MonsterRuntimeState();
-        MonsterPlacementService.Place(state, CreateMonster("orc"), new MonsterPosition(0, 0));
+        MonsterPlacementService.Place(state, CreateMonster("orc"), new MonsterPosition(0, 0), new SeededRandomSource(1));
         var random = new ScriptedRandomSource(0, 0, 1, 2);
 
         var position = MonsterLocationSearch.FindPosition(space, state, random, maxAttempts: 2);
@@ -143,7 +143,7 @@ public sealed class MonsterPlacementSpaceTests
             maxAttempts: 1);
 
         Assert.NotNull(position);
-        var result = MonsterPlacementService.Place(state, definition, position.Value, space);
+        var result = MonsterPlacementService.Place(state, definition, position.Value, new SeededRandomSource(1), space);
 
         Assert.True(result.Success);
         Assert.Equal(position, result.Monster?.Position);
@@ -155,7 +155,12 @@ public sealed class MonsterPlacementSpaceTests
         var space = new MonsterPlacementSpace(2, 2);
         var state = new MonsterRuntimeState();
 
-        var result = MonsterPlacementService.Place(state, CreateMonster("orc"), new MonsterPosition(2, 0), space);
+        var result = MonsterPlacementService.Place(
+            state,
+            CreateMonster("orc"),
+            new MonsterPosition(2, 0),
+            new SeededRandomSource(1),
+            space);
 
         Assert.False(result.Success);
         Assert.Equal(MonsterPlacementFailureReason.OutOfBounds, result.FailureReason);
@@ -169,7 +174,7 @@ public sealed class MonsterPlacementSpaceTests
         var space = new MonsterPlacementSpace(2, 2, [illegal]);
         var state = new MonsterRuntimeState();
 
-        var result = MonsterPlacementService.Place(state, CreateMonster("orc"), illegal, space);
+        var result = MonsterPlacementService.Place(state, CreateMonster("orc"), illegal, new SeededRandomSource(1), space);
 
         Assert.False(result.Success);
         Assert.Equal(MonsterPlacementFailureReason.IllegalCell, result.FailureReason);
@@ -187,7 +192,8 @@ public sealed class MonsterPlacementSpaceTests
             new SpawnPolicy(false, false, false, false, false, false, false, false, false),
             null,
             NativeLevel: 1,
-            Rarity: 1);
+            Rarity: 1,
+            MovementSpeed: 100);
 
     private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
     {

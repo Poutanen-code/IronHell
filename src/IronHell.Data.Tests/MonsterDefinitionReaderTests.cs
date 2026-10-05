@@ -25,6 +25,7 @@ public sealed class MonsterDefinitionReaderTests
         Assert.NotEmpty(Get(monsters, "white_icky_thing").Symbol);
         Assert.Equal(1, Get(monsters, "white_icky_thing").NativeLevel);
         Assert.Equal(1, Get(monsters, "white_icky_thing").Rarity);
+        Assert.Equal(110, Get(monsters, "filthy_street_urchin").MovementSpeed);
         Assert.Equal(40, Get(monsters, "ancient_green_dragon").NativeLevel);
         Assert.Equal(1, Get(monsters, "ancient_green_dragon").Rarity);
         Assert.True(Get(monsters, "grey_mold").Ai.Stupid);

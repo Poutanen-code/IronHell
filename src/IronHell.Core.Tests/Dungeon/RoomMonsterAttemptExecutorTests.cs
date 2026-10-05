@@ -78,9 +78,14 @@ public sealed class RoomMonsterAttemptExecutorTests
         var definition = CreateMonster("orc");
         var runtime = new MonsterRuntimeState();
         var position = RoomMonsterAttemptExecutor.ToMonsterPosition(attempt.Origin);
-        Assert.True(MonsterPlacementService.Place(runtime, CreateMonster("occupant"), position).Success);
+        Assert.True(MonsterPlacementService.Place(
+            runtime,
+            CreateMonster("occupant"),
+            position,
+            new SeededRandomSource(1)).Success);
+        var random = new RecordingRandomSource();
 
-        var result = Execute(grid, [attempt], Definitions(definition), runtime);
+        var result = Execute(grid, [attempt], Definitions(definition), runtime, randomSource: random);
 
         var placement = Assert.Single(result.ProcessedAttempts).Placement;
         Assert.False(placement.Success);
@@ -90,6 +95,7 @@ public sealed class RoomMonsterAttemptExecutorTests
         Assert.Single(runtime.Monsters);
         Assert.True(runtime.IsOccupied(position));
         Assert.False(runtime.IsOccupied(new MonsterPosition(position.X + 1, position.Y)));
+        Assert.Empty(random.Requests);
     }
 
     [Fact]
@@ -137,7 +143,8 @@ public sealed class RoomMonsterAttemptExecutorTests
             5,
             definitions,
             new MonsterRuntimeState(),
-            space);
+            new RecordingRandomSource(),
+            placementSpace: space);
 
         Assert.Equal(MonsterPlacementFailureReason.OutOfBounds, result.ProcessedAttempts[0].Placement.FailureReason);
         Assert.Equal(MonsterPlacementFailureReason.IllegalCell, result.ProcessedAttempts[1].Placement.FailureReason);
@@ -217,7 +224,13 @@ public sealed class RoomMonsterAttemptExecutorTests
         var drawsBeforeExecution = random.DrawCount;
         var runtime = new MonsterRuntimeState();
 
-        var result = Execute(grid, attempts, Definitions(CreateMonster("nest_monster")), runtime, PlacementSpace());
+        var result = Execute(
+            grid,
+            attempts,
+            Definitions(CreateMonster("nest_monster")),
+            runtime,
+            randomSource: random,
+            placementSpace: PlacementSpace());
 
         Assert.Equal(95, result.RequestedCount);
         Assert.Equal(95, result.SuccessfulPlacementCount);
@@ -227,7 +240,7 @@ public sealed class RoomMonsterAttemptExecutorTests
             Assert.Equal(RoomMonsterAttemptExecutor.ToMonsterPosition(placement.Attempt.Origin), placement.Placement.Monster?.Position);
             Assert.True(grid.GetCellFlags(placement.Attempt.Origin).HasFlag(DungeonCellStates.Room));
         });
-        Assert.Equal(drawsBeforeExecution, random.DrawCount);
+        Assert.Equal(drawsBeforeExecution + 95, random.DrawCount);
         Assert.Equal(95, runtime.Monsters.Count);
     }
 
@@ -247,11 +260,17 @@ public sealed class RoomMonsterAttemptExecutorTests
         var drawsBeforeExecution = random.DrawCount;
         var runtime = new MonsterRuntimeState();
 
-        var result = Execute(grid, attempts, Definitions(CreateMonster("pit_monster")), runtime, PlacementSpace());
+        var result = Execute(
+            grid,
+            attempts,
+            Definitions(CreateMonster("pit_monster")),
+            runtime,
+            randomSource: random,
+            placementSpace: PlacementSpace());
 
         Assert.Equal(95, result.RequestedCount);
         Assert.Equal(95, result.SuccessfulPlacementCount);
-        Assert.Equal(drawsBeforeExecution, random.DrawCount);
+        Assert.Equal(drawsBeforeExecution + 95, random.DrawCount);
         Assert.Equal(95, runtime.Monsters.Count);
         Assert.Equal(attempts.Select(attempt => RoomMonsterAttemptExecutor.ToMonsterPosition(attempt.Origin)),
             runtime.Monsters.Select(monster => monster.Position));
@@ -283,8 +302,16 @@ public sealed class RoomMonsterAttemptExecutorTests
         IReadOnlyDictionary<string, MonsterDefinition> definitions,
         MonsterRuntimeState runtime,
         MonsterPlacementSpace? placementSpace = null,
+        IRandomSource? randomSource = null,
         int depth = 5) =>
-        RoomMonsterAttemptExecutor.Execute(grid, attempts, depth, definitions, runtime, placementSpace ?? PlacementSpace());
+        RoomMonsterAttemptExecutor.Execute(
+            grid,
+            attempts,
+            depth,
+            definitions,
+            runtime,
+            randomSource ?? new SeededRandomSource(1),
+            placementSpace ?? PlacementSpace());
 
     private static MonsterPlacementSpace PlacementSpace() =>
         new(DungeonGrid.Width, DungeonGrid.Height);
@@ -335,22 +362,31 @@ public sealed class RoomMonsterAttemptExecutorTests
             new MonsterSensesDefinition(0, MonsterTelepathyProfile.Normal),
             new SpawnPolicy(unique, false, forceDepth, false, false, escort, escorts, friends, false),
             NativeLevel: nativeLevel,
-            Rarity: 1);
+            Rarity: 1,
+            MovementSpeed: 100);
 
     private sealed class RecordingRandomSource : IRandomSource
     {
         public int DrawCount { get; private set; }
 
+        public List<(int MinInclusive, int MaxExclusive)> Requests { get; } = [];
+
         public int Next(int minInclusive, int maxExclusive)
         {
             DrawCount++;
+            Requests.Add((minInclusive, maxExclusive));
             return minInclusive;
         }
 
         public int RollDice(int count, int sides)
         {
-            DrawCount += count;
-            return count;
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
         }
     }
 }

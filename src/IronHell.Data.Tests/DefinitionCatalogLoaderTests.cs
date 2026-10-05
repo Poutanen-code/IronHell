@@ -214,6 +214,20 @@ public sealed class DefinitionCatalogLoaderTests : IDisposable
     }
 
     [Fact]
+    public async Task LoadAsync_MovementSpeedOutsideSourceEnergyTable_ReturnsValidationReport()
+    {
+        var root = CreateDefinitionsCopy();
+        ReplaceFirst(
+            Path.Combine(root, "monsters", "monsters.json"),
+            "\"movement_speed\": 110",
+            "\"movement_speed\": 200");
+
+        var result = await DefinitionCatalogLoader.LoadAsync(root);
+
+        AssertError(result, "schema_validation");
+    }
+
+    [Fact]
     public async Task CharacterBootstrapService_Create_IsDeterministicAndOwnsMutableState()
     {
         var result = await DefinitionCatalogLoader.LoadAsync(RepositoryDefinitionsRoot);

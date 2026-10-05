@@ -133,8 +133,11 @@ public sealed class OrdinaryMonsterPopulationTests
         var definition = CreateMonster("unique_orc", unique: true);
         var space = new MonsterPlacementSpace(2, 1);
         var state = new MonsterRuntimeState();
-        MonsterPlacementService.Place(state, definition, new MonsterPosition(1, 0));
-        var random = new ScriptedRandomSource(PopulationValues(1, Enumerable.Repeat(new MonsterPosition(0, 0), 17).ToArray()));
+        MonsterPlacementService.Place(state, definition, new MonsterPosition(1, 0), new SeededRandomSource(1));
+        var random = new ScriptedRandomSource(PopulationValues(
+            1,
+            Enumerable.Repeat(new MonsterPosition(0, 0), 17).ToArray(),
+            includeSpawnStateDraws: false));
 
         var result = OrdinaryMonsterPopulation.Populate(
             depth: 1,
@@ -203,9 +206,14 @@ public sealed class OrdinaryMonsterPopulationTests
             MonsterAllocationTableBuilder.Build([definition]),
             [definition]);
 
-    private static int[] PopulationValues(int countRoll, IReadOnlyList<MonsterPosition> positions) =>
+    private static int[] PopulationValues(
+        int countRoll,
+        IReadOnlyList<MonsterPosition> positions,
+        bool includeSpawnStateDraws = true) =>
         new[] { countRoll }
-            .Concat(positions.SelectMany(position => new[] { position.X, position.Y, 1, 1, 0, 60 }))
+            .Concat(positions.SelectMany(position => includeSpawnStateDraws
+                ? new[] { position.X, position.Y, 1, 1, 0, 60, 0 }
+                : new[] { position.X, position.Y, 1, 1, 0, 60 }))
             .ToArray();
 
     private static MonsterDefinition CreateMonster(string id, bool unique = false, bool friends = false) =>
@@ -219,7 +227,8 @@ public sealed class OrdinaryMonsterPopulationTests
             new SpawnPolicy(unique, false, false, false, false, false, false, friends, false),
             null,
             NativeLevel: 1,
-            Rarity: 1);
+            Rarity: 1,
+            MovementSpeed: 100);
 
     private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
     {
@@ -243,7 +252,16 @@ public sealed class OrdinaryMonsterPopulationTests
             return value;
         }
 
-        public int RollDice(int count, int sides) => throw new NotSupportedException();
+        public int RollDice(int count, int sides)
+        {
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
+        }
     }
 
     private sealed class GroupPopulationRandomSource : IRandomSource
@@ -258,6 +276,8 @@ public sealed class OrdinaryMonsterPopulationTests
             {
                 9 => 1,
                 50 => 1,
+                2 => minInclusive,
+                37_500 => minInclusive,
                 14 => _groupDraw++ == 0 ? 2 : 1,
                 100 => _selectionDraw++ % 2 == 0 ? 0 : 60,
                 20 => NextCoordinate(),
@@ -272,7 +292,16 @@ public sealed class OrdinaryMonsterPopulationTests
             return value;
         }
 
-        public int RollDice(int count, int sides) => throw new NotSupportedException();
+        public int RollDice(int count, int sides)
+        {
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
+        }
 
         private int NextCoordinate()
         {

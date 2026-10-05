@@ -322,7 +322,7 @@
         "level": { "type": "integer", "minimum": 0 },
         "armor": { "type": "integer", "minimum": 0 },
         "attack_speed": { "type": "number", "exclusiveMinimum": 0 },
-        "movement_speed": { "type": "integer", "minimum": 1 },
+        "movement_speed": { "type": "integer", "minimum": 1, "maximum": 199 },
         "xp_reward": { "type": "integer", "minimum": 0 },
         "vision": { "type": "integer", "minimum": 0 },
         "rarity": { "type": "integer", "minimum": 1 }

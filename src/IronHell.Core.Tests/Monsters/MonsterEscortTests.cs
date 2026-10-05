@@ -47,7 +47,7 @@ public sealed class MonsterEscortTests
         var state = new MonsterRuntimeState();
         var leaderDefinition = CreateMonster("leader", symbol: "o", nativeLevel: 10, options: new MonsterSpawnOptions(Escort: true));
         var escortDefinition = CreateMonster("escort", symbol: "o", nativeLevel: 5);
-        var leaderPlacement = MonsterPlacementService.Place(state, leaderDefinition, new MonsterPosition(3, 3));
+        var leaderPlacement = MonsterPlacementService.Place(state, leaderDefinition, new MonsterPosition(3, 3), new SeededRandomSource(1));
         var entries = MonsterAllocationTableBuilder.Build([leaderDefinition, escortDefinition]);
 
         var result = MonsterEscortExpander.Expand(
@@ -73,7 +73,7 @@ public sealed class MonsterEscortTests
         var state = new MonsterRuntimeState();
         var leaderDefinition = CreateMonster("leader", symbol: "o", nativeLevel: 10, options: new MonsterSpawnOptions(Escort: true));
         var escortDefinition = CreateMonster("escort", symbol: "o", nativeLevel: 5, rarity: 2);
-        var leaderPlacement = MonsterPlacementService.Place(state, leaderDefinition, new MonsterPosition(3, 3));
+        var leaderPlacement = MonsterPlacementService.Place(state, leaderDefinition, new MonsterPosition(3, 3), new SeededRandomSource(1));
         var entries = MonsterAllocationTableBuilder.Build([leaderDefinition, escortDefinition]);
         var result = MonsterEscortExpander.Expand(
             state,
@@ -141,7 +141,8 @@ public sealed class MonsterEscortTests
             null,
             nativeLevel,
             rarity,
-            symbol);
+            symbol,
+            MovementSpeed: 100);
 
     private sealed class ScriptedRandomSource(params int[] values) : IRandomSource
     {
@@ -162,7 +163,16 @@ public sealed class MonsterEscortTests
             return value;
         }
 
-        public int RollDice(int count, int sides) => throw new NotSupportedException();
+        public int RollDice(int count, int sides)
+        {
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
+        }
     }
 
     private sealed class RepeatingEscortRandomSource : IRandomSource
@@ -175,6 +185,15 @@ public sealed class MonsterEscortTests
             _ => minInclusive,
         };
 
-        public int RollDice(int count, int sides) => throw new NotSupportedException();
+        public int RollDice(int count, int sides)
+        {
+            var total = 0;
+            for (var index = 0; index < count; index++)
+            {
+                total += Next(1, sides + 1);
+            }
+
+            return total;
+        }
     }
 }
